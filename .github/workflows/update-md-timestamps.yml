@@ -18,13 +18,28 @@ jobs:
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
-      - name: Zeitstempel in Markdown-Dateien aktualisieren
+      - name: Zeitstempel nur in geänderten Markdown-Dateien aktualisieren
         run: |
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- '*.md')
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "Keine geänderten Markdown-Dateien gefunden."
+            exit 0
+          fi
+
           python3 << 'PY'
+          import subprocess
           from pathlib import Path
           from datetime import datetime
           from zoneinfo import ZoneInfo
+
+          changed_files = subprocess.check_output(
+              ["git", "diff", "--name-only", "HEAD~1", "HEAD", "--", "*.md"],
+              text=True
+          ).splitlines()
 
           now = datetime.now(ZoneInfo("Europe/Berlin")).strftime("%d.%m.%Y, %H:%M Uhr")
 
@@ -35,8 +50,10 @@ jobs:
           > **Zuletzt aktualisiert:** {now}
           {end}"""
 
-          for file in Path(".").rglob("*.md"):
-              if ".git" in file.parts:
+          for file_name in changed_files:
+              file = Path(file_name)
+
+              if not file.exists():
                   continue
 
               text = file.read_text(encoding="utf-8")
