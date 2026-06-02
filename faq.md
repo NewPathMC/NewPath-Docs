@@ -1,5 +1,5 @@
 <!-- AUTO_UPDATED_START -->
-> **Zuletzt aktualisiert:** 02.06.2026, 20:43 Uhr
+> **Zuletzt aktualisiert:** 02.06.2026, 21:27 Uhr
 <!-- AUTO_UPDATED_END -->
 
 # NewPath FAQ
