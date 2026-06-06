@@ -52,4 +52,4 @@ Kein klassisches „Everything-Pack“, sondern eine stimmige Welt mit Natur, Te
 Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt, in der Technik, Natur, Abenteuer und Community sinnvoll zusammenkommen.
 ---
 
-> **Zuletzt aktualisiert:** 07.06.2026 00:31 Uhr
+> **Zuletzt aktualisiert:** 07.06.2026 00:49 Uhr
