@@ -23,3 +23,6 @@ Hier findest du alle wichtigen Informationen rund um unser Minecraft-Modpack, de
 **NewPath – Echoes of the Wild** ist ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung, Gemeinschaft und entschleunigtem Fortschritt.
 
 Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt, in der Technik, Natur, Abenteuer und Community sinnvoll zusammenkommen.
+---
+
+> **Zuletzt aktualisiert:** 07.06.2026 00:13 Uhr
