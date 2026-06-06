@@ -23,3 +23,5 @@ back_to_top: true
 back_to_top_text: "Zurück nach oben"
 
 footer_content: "NewPath – Echoes of the Wild"
+last_edit_timestamp: false
+gh_edit_link: false
