@@ -1,3 +1,9 @@
+---
+layout: home
+title: Startseite
+nav_order: 1
+---
+
 <!-- AUTO_UPDATED_START -->
 > **Zuletzt aktualisiert:** 06.06.2026 22:43 Uhr
 <!-- AUTO_UPDATED_END -->

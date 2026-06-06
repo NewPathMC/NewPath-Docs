@@ -1,3 +1,9 @@
+---
+layout: default
+title: Regelwerk
+nav_order: 2
+---
+
 <!-- AUTO_UPDATED_START -->
 > **Zuletzt aktualisiert:** 02.06.2026, 21:27 Uhr
 <!-- AUTO_UPDATED_END -->

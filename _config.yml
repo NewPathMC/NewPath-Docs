@@ -1,0 +1,19 @@
+title: NewPath Docs
+description: Öffentliche Dokumentation für NewPath – Echoes of the Wild
+theme: just-the-docs
+
+url: "https://m4ximumtv.github.io"
+baseurl: "/NewPath-Docs"
+
+aux_links:
+  "NewPath auf GitHub":
+    - "https://github.com/m4ximumtv/NewPath-Docs"
+
+color_scheme: dark
+
+search_enabled: true
+
+back_to_top: true
+back_to_top_text: "Zurück nach oben"
+
+footer_content: "NewPath – Echoes of the Wild"
