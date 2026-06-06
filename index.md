@@ -22,22 +22,22 @@ Kein klassisches „Everything-Pack“, sondern eine stimmige Welt mit Natur, Te
 <div class="np-card-grid">
 
 <div class="np-card">
-  <a class="np-card-title" href="{{ site.baseurl }}/regelwerk/">Regelwerk</a>
+  <a class="np-card-title" href="{{ site.baseurl }}/regelwerk.html">Regelwerk</a>
   <p class="np-card-text">Alle wichtigen Regeln für Server, Community, Verhalten und Gameplay.</p>
 </div>
 
 <div class="np-card">
-  <a class="np-card-title" href="{{ site.baseurl }}/philosophie/">Philosophie</a>
+  <a class="np-card-title" href="{{ site.baseurl }}/philosophie.html">Philosophie</a>
   <p class="np-card-text">Wofür NewPath steht und welche Richtung Echoes of the Wild verfolgt.</p>
 </div>
 
 <div class="np-card">
-  <a class="np-card-title" href="{{ site.baseurl }}/faq/">FAQ</a>
+  <a class="np-card-title" href="{{ site.baseurl }}/faq.html">FAQ</a>
   <p class="np-card-text">Häufige Fragen rund um Installation, Zugang, Technik und Server.</p>
 </div>
 
 <div class="np-card">
-  <a class="np-card-title" href="{{ site.baseurl }}/serverinfos/">Serverinfos</a>
+  <a class="np-card-title" href="{{ site.baseurl }}/serverinfos.html">Serverinfos</a>
   <p class="np-card-text">Wichtige technische Infos, Verbindungen und Hinweise zum Server.</p>
 </div>
 
