@@ -5,7 +5,7 @@ nav_order: 4
 ---
 
 <!-- AUTO_UPDATED_START -->
-> **Zuletzt aktualisiert:** 07.06.2026 00:19 Uhr
+> **Zuletzt aktualisiert:** 07.06.2026 01:19 Uhr
 <!-- AUTO_UPDATED_END -->
 
 # FAQ – Häufig gestellte Fragen
