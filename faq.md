@@ -2,7 +2,7 @@
 
 <!-- AUTO_UPDATED_START -->
 
-> **Zuletzt aktualisiert:** 03.06.2026 14:29 Uhr
+> **Zuletzt aktualisiert:** 06.06.2026 23:29 Uhr
 
 <!-- AUTO_UPDATED_END -->
 
@@ -111,4 +111,4 @@ Bei Bedarf können weitere Spieler zum Ticket hinzugefügt werden.
 
 ---
 
-> **Zuletzt aktualisiert:** 06.06.2026 23:28 Uhr
+> **Zuletzt aktualisiert:** 06.06.2026 23:29 Uhr
