@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Regelwerk
+title: Philosophie
 nav_order: 2
 ---
 

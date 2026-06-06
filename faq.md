@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Regelwerk
+title: FAQ
 nav_order: 2
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Regelwerk
+title: Serverinfos
 nav_order: 2
 ---
 
