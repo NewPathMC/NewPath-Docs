@@ -74,7 +74,7 @@
 
 .np-corner-logo {
   position: absolute;
-  top: 0.5rem;
+  top: -0.25rem;
   right: 0;
   display: block;
   width: 96px;
