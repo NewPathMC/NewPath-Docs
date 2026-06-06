@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 <!-- AUTO_UPDATED_START -->
-> **Zuletzt aktualisiert:** 02.06.2026, 21:27 Uhr
+> **Zuletzt aktualisiert:** 07.06.2026 00:08 Uhr
 <!-- AUTO_UPDATED_END -->
 
 # NewPath Serverinfos
