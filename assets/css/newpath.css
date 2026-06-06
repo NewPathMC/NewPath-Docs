@@ -43,10 +43,15 @@ body {
 }
 
 .main-content-wrap {
-  max-width: 1040px;
+  max-width: 1120px;
+  background: rgba(7, 24, 39, 0.42);
+  border-left: 1px solid rgba(53, 101, 125, 0.25);
+  border-right: 1px solid rgba(53, 101, 125, 0.18);
 }
 
 .main-content {
+  position: relative;
+  padding-top: 2.25rem;
   line-height: 1.65;
   color: var(--np-text);
 }
@@ -105,6 +110,7 @@ body {
 /* Typografie */
 
 .main-content h1 {
+  max-width: 760px;
   color: var(--np-gold);
   font-size: 2.25rem;
   font-weight: 500;
@@ -129,6 +135,10 @@ body {
   font-size: 0.98rem;
 }
 
+.main-content > p {
+  max-width: 860px;
+}
+
 .main-content strong {
   color: var(--np-gold-soft);
 }
@@ -146,6 +156,7 @@ body {
 /* Startseiten-Highlight */
 
 .highlight-box {
+  max-width: 860px;
   margin: 1.5rem 0;
   padding: 1.1rem 1.25rem;
   border: 1px solid var(--np-border);
@@ -178,6 +189,7 @@ body {
     var(--np-bg-card);
   text-decoration: none;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(4px);
   transition:
     transform 0.16s ease,
     border-color 0.16s ease,
@@ -197,14 +209,15 @@ body {
 .np-card-title {
   display: block;
   margin-bottom: 0.45rem;
-  color: var(--np-gold);
+  color: var(--np-cyan);
   font-weight: 800;
   font-size: 1.05rem;
   text-decoration: none;
 }
 
-.np-card-title:hover {
-  color: var(--np-cyan);
+.np-card-title:hover,
+.np-card:hover .np-card-title {
+  color: var(--np-gold);
   text-decoration: none;
 }
 
@@ -217,10 +230,6 @@ body {
 }
 
 /* Logo oben rechts */
-
-.main-content {
-  position: relative;
-}
 
 .np-corner-logo {
   position: absolute;
