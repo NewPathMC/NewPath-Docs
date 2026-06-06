@@ -5,7 +5,7 @@ nav_order: 2
 ---
 
 <!-- AUTO_UPDATED_START -->
-> **Zuletzt aktualisiert:** 07.06.2026 00:08 Uhr
+> **Zuletzt aktualisiert:** 07.06.2026 00:19 Uhr
 <!-- AUTO_UPDATED_END -->
 
 # NewPath Philosophie
