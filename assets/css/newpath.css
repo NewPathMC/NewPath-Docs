@@ -340,3 +340,102 @@ body {
     max-width: 980px !important;
   }
 }
+/* Modern hero */
+
+.np-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 0 2.25rem;
+  padding: 2rem;
+  border: 1px solid var(--np-border-soft);
+  border-radius: 1.1rem;
+  background:
+    radial-gradient(circle at top right, rgba(0, 230, 246, 0.14), transparent 16rem),
+    linear-gradient(135deg, rgba(13, 42, 59, 0.95), rgba(7, 24, 39, 0.95));
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
+}
+
+.np-kicker {
+  margin: 0 0 0.55rem;
+  color: var(--np-cyan);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.np-hero h1 {
+  margin: 0 0 0.9rem;
+  padding: 0;
+  border: 0;
+  color: var(--np-gold);
+  font-size: 2.45rem;
+  line-height: 1.1;
+}
+
+.np-hero-text {
+  max-width: 760px;
+  margin: 0 0 1.25rem;
+  color: var(--np-text);
+  font-size: 1rem;
+}
+
+.np-hero-highlight {
+  max-width: 820px;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--np-border);
+  border-left: 4px solid var(--np-cyan);
+  border-radius: 0.75rem;
+  background: rgba(6, 21, 34, 0.72);
+  color: var(--np-text-muted);
+}
+
+.np-hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 112px;
+  justify-self: end;
+  opacity: 0.96;
+  transition: transform 0.16s ease, opacity 0.16s ease, filter 0.16s ease;
+}
+
+.np-hero-logo:hover {
+  transform: scale(1.04);
+  opacity: 1;
+  filter: drop-shadow(0 0 14px rgba(0, 230, 246, 0.28));
+}
+
+.np-hero-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 0;
+  background: transparent;
+}
+
+/* Hide old corner-logo behavior if still present */
+.np-corner-logo {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .np-hero {
+    grid-template-columns: 1fr;
+    padding: 1.35rem;
+  }
+
+  .np-hero-logo {
+    justify-self: start;
+    width: 86px;
+    height: 86px;
+  }
+
+  .np-hero h1 {
+    font-size: 1.9rem;
+  }
+}

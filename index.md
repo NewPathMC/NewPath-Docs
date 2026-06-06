@@ -5,19 +5,35 @@ nav_order: 1
 permalink: /
 ---
 
-<a class="np-corner-logo" href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener">
-  <img src="{{ site.baseurl }}/assets/images/logo.png" alt="NewPath Logo">
-</a>
+<section class="np-hero">
 
-# NewPath – Echoes of the Wild
+  <div class="np-hero-content">
 
-Willkommen in der offiziellen Dokumentation von **NewPath – Echoes of the Wild**.
+    <p class="np-kicker">Offizielle Dokumentation</p>
 
-Diese Seite bündelt alle wichtigen Informationen rund um unser Minecraft-Modpack, den Server, unsere Regeln, unsere Philosophie und häufig gestellte Fragen.
+    <h1>NewPath – Echoes of the Wild</h1>
 
-{: .highlight-box }
-**NewPath – Echoes of the Wild** steht für eine atmosphärische Minecraft-Erfahrung mit Fokus auf Immersion, Erkundung, Gemeinschaft und entschleunigten Fortschritt.  
-Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt, in der Natur, Technik, Abenteuer und Community sinnvoll zusammenkommen.
+    <p class="np-hero-text">
+      Willkommen in der offiziellen Dokumentation von <strong>NewPath – Echoes of the Wild</strong>.
+      Diese Seite bündelt alle wichtigen Informationen rund um unser Minecraft-Modpack, den Server,
+      unsere Regeln, unsere Philosophie und häufig gestellte Fragen.
+    </p>
+
+    <div class="np-hero-highlight">
+      <strong>NewPath – Echoes of the Wild</strong> steht für eine atmosphärische Minecraft-Erfahrung mit Fokus auf
+      Immersion, Erkundung, Gemeinschaft und entschleunigten Fortschritt.
+      <br>
+      Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt, in der Natur, Technik,
+      Abenteuer und Community sinnvoll zusammenkommen.
+    </div>
+
+  </div>
+
+  <a class="np-hero-logo" href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener">
+    <img src="{{ site.baseurl }}/assets/images/logo.png" alt="NewPath Logo">
+  </a>
+
+</section>
 ---
 
 ## Schnellzugriff
