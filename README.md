@@ -1,38 +1,18 @@
-<!-- AUTO_UPDATED_START -->
-> **Zuletzt aktualisiert:** 07.06.2026 00:16 Uhr
-<!-- AUTO_UPDATED_END -->
-
 # NewPath Docs
 
-Dieses Repository enthält öffentliche Dokumente für das Minecraft-Projekt **NewPath**.
+Dieses Repository enthält die öffentliche Dokumentation für **NewPath – Echoes of the Wild**.
 
-Hier werden zentrale Informationen gepflegt, die für Community, Team und Spieler relevant sind.
+Die GitHub-Pages-Webseite ist hier erreichbar:
 
----
+https://newpathmc.github.io/NewPath-Docs/
 
 ## Inhalte
 
-- [Regelwerk](regelwerk.md)
-- [Philosophie](philosophie.md)
-- [FAQ](faq.md)
-- [Serverinfos](serverinfos.md)
-
----
-
-## Zweck
-
-Dieses Repository dient dazu, wichtige NewPath-Dokumente übersichtlich und nachvollziehbar zu verwalten.
-
-Dazu gehören vor allem:
-
-- Regeln
-- Projektphilosophie
-- häufige Fragen
-- Serverinformationen
-- öffentliche Hinweise für Spieler
-
----
+- Regelwerk
+- Philosophie
+- FAQ
+- Serverinfos
 
 ## Hinweis
 
-Die Inhalte können sich während der Entwicklung von NewPath - EoTw 1.0 noch ändern.
+Die eigentliche Startseite der Webseite liegt in `index.md`.
