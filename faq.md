@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FAQ
-nav_order: 2
+nav_order: 4
 ---
 
 <!-- AUTO_UPDATED_START -->

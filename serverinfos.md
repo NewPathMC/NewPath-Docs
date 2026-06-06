@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Serverinfos
-nav_order: 2
+nav_order: 5
 ---
 
 <!-- AUTO_UPDATED_START -->

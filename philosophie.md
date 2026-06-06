@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Philosophie
-nav_order: 2
+nav_order: 3
 ---
 
 <!-- AUTO_UPDATED_START -->
