@@ -108,3 +108,7 @@ Bei Bedarf können weitere Spieler zum Ticket hinzugefügt werden.
   * **NewPath – Beyond Lands**
 * Wenn ihr regelmäßig Inhalte zu NewPath streamen oder veröffentlichen möchtet, könnt ihr im Discord ein Ticket öffnen und uns euren Twitch-, YouTube- oder sonstigen Kanal schicken.
 * Anschließend können wir euch die **Streamer-Rolle** sowie weitere Informationen geben.
+
+---
+
+> **Zuletzt aktualisiert:** 06.06.2026 23:28 Uhr
