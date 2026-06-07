@@ -954,17 +954,35 @@ body:not(.home) .main-content > :not(.np-home),
 }
 
 /* =========================================================
-   Schritt 19: Landingpage breiter über die Fläche verteilen
-   - Inhalt nicht mehr in der Mitte bündeln
-   - Hero, Status, Dashboard und About linksbreiter ausrichten
-   - Dashboard-Spalten deutlich verbreitern
+   Schritt 20: Breites Layout ohne horizontales Überlaufen
+   - kein horizontaler Scrollbalken
+   - Inhalte breiter verteilt, aber sicher im Viewport
+   - Hero/Status/Dashboard näher an der Vorlage ausgerichtet
    ========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 @media (min-width: 66.5rem) {
   :root {
-    --np-content-width: 2260px;
-    --np-stage-left: clamp(7rem, 10vw, 15rem);
-    --np-stage-right: clamp(2rem, 4vw, 5rem);
+    --np-content-width: 1680px;
+    --np-stage-left: clamp(2rem, 10vw, 13.5rem);
+    --np-stage-right: clamp(2rem, 5vw, 7rem);
+    --np-stage-width: min(
+      var(--np-content-width),
+      calc(100vw - var(--np-stage-left) - var(--np-stage-right))
+    );
+  }
+
+  .np-home,
+  .main,
+  .main-content-wrap,
+  .main-content {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
   }
 
   .np-last-updated,
@@ -972,107 +990,162 @@ body:not(.home) .main-content > :not(.np-home),
   .np-status-bar,
   .np-dashboard-grid,
   .np-about-grid {
-    width: calc(100vw - var(--np-stage-left) - var(--np-stage-right)) !important;
-    max-width: var(--np-content-width) !important;
+    width: var(--np-stage-width) !important;
+    max-width: var(--np-stage-width) !important;
     margin-left: var(--np-stage-left) !important;
     margin-right: var(--np-stage-right) !important;
+    box-sizing: border-box !important;
   }
 
   .np-last-updated {
-    margin-top: 2rem !important;
-    margin-bottom: -1.1rem !important;
+    margin-top: 1.65rem !important;
+    margin-bottom: -0.85rem !important;
   }
 
   .np-hero {
-    min-height: clamp(470px, 37vw, 650px) !important;
-    grid-template-columns: minmax(620px, 780px) minmax(340px, 470px) minmax(0, 1fr) !important;
-    gap: clamp(3.5rem, 5vw, 7rem) !important;
+    min-height: clamp(430px, 36vw, 590px) !important;
+    grid-template-columns: minmax(0, 620px) minmax(260px, 390px) minmax(0, 1fr) !important;
+    gap: clamp(2rem, 4.2vw, 5.2rem) !important;
     align-items: center !important;
-    padding-top: clamp(3.2rem, 5.2vw, 6.2rem) !important;
-    padding-bottom: clamp(2.4rem, 4.2vw, 4.8rem) !important;
+    padding-top: clamp(2.8rem, 4.8vw, 5.4rem) !important;
+    padding-bottom: clamp(2rem, 3.8vw, 4.2rem) !important;
   }
 
   .np-hero-content {
-    max-width: 780px !important;
+    max-width: 620px !important;
+    min-width: 0 !important;
   }
 
   .np-hero h1 {
-    font-size: clamp(5.3rem, 5.8vw, 8.1rem) !important;
-    line-height: 0.88 !important;
+    font-size: clamp(4.2rem, 5.0vw, 6.8rem) !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.052em !important;
   }
 
   .np-hero-text {
-    max-width: 700px !important;
-    font-size: clamp(1.02rem, 1.03vw, 1.18rem) !important;
+    max-width: 580px !important;
+    font-size: clamp(0.96rem, 0.92vw, 1.08rem) !important;
   }
 
   .np-hero-highlight {
-    max-width: 720px !important;
+    max-width: 600px !important;
   }
 
   .np-hero-logo {
-    width: clamp(330px, 20vw, 460px) !important;
-    height: clamp(330px, 20vw, 460px) !important;
+    width: clamp(260px, 19vw, 390px) !important;
+    height: clamp(260px, 19vw, 390px) !important;
     justify-self: center !important;
   }
 
   .np-status-bar {
     grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-    max-width: 1340px !important;
+    max-width: min(1180px, var(--np-stage-width)) !important;
     margin-top: 0 !important;
-    margin-bottom: 1.55rem !important;
+    margin-bottom: 1.35rem !important;
   }
 
   .np-status-item {
-    min-height: 4.35rem !important;
-    padding: 0.8rem 1.05rem !important;
+    min-width: 0 !important;
+    min-height: 4rem !important;
+    padding: 0.72rem 0.86rem !important;
+  }
+
+  .np-status-item > div,
+  .np-status-item small,
+  .np-status-item strong {
+    min-width: 0 !important;
+    overflow-wrap: anywhere;
   }
 
   .np-dashboard-grid {
-    grid-template-columns: minmax(900px, 1.62fr) minmax(350px, 0.68fr) minmax(350px, 0.68fr) !important;
-    gap: 1.25rem !important;
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.66fr) minmax(0, 0.66fr) !important;
+    gap: 1rem !important;
     align-items: stretch !important;
   }
 
+  .np-panel,
+  .np-news-panel,
+  .np-roadmap-panel,
+  .np-panel-large,
+  .np-about-panel,
+  .np-echo-panel {
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
   .np-card-grid {
-    grid-template-columns: repeat(4, minmax(190px, 1fr)) !important;
-    gap: 1rem !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.85rem !important;
   }
 
   .np-card {
-    min-height: 12.8rem !important;
-    padding: 1.1rem 1rem 1rem !important;
+    min-width: 0 !important;
+    min-height: 12.2rem !important;
+    padding: 1rem 0.85rem 0.95rem !important;
   }
 
-  .np-news-panel,
-  .np-roadmap-panel,
-  .np-panel-large {
-    min-width: 0 !important;
+  .np-card-icon {
+    width: 3.35rem !important;
+    height: 3.35rem !important;
+    margin-bottom: 0.72rem !important;
+  }
+
+  .np-card-title {
+    font-size: 1.05rem !important;
+  }
+
+  .np-card-text {
+    font-size: 0.8rem !important;
   }
 
   .np-about-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 420px) !important;
-    gap: 1.25rem !important;
-    margin-top: 1.25rem !important;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr) !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
   }
 }
 
-@media (min-width: 66.5rem) and (max-width: 1700px) {
+@media (min-width: 66.5rem) and (max-width: 1550px) {
   :root {
-    --np-stage-left: clamp(4.5rem, 8vw, 8rem);
-    --np-stage-right: clamp(1.5rem, 3vw, 3.5rem);
+    --np-stage-left: clamp(1.5rem, 6vw, 5.5rem);
+    --np-stage-right: clamp(1.25rem, 3vw, 3rem);
   }
 
   .np-hero {
-    grid-template-columns: minmax(500px, 650px) minmax(280px, 380px) minmax(0, 1fr) !important;
-    gap: clamp(2.4rem, 4vw, 4.5rem) !important;
+    grid-template-columns: minmax(0, 530px) minmax(230px, 330px) minmax(0, 1fr) !important;
+    gap: clamp(1.7rem, 3vw, 3.4rem) !important;
   }
 
-  .np-dashboard-grid {
-    grid-template-columns: minmax(680px, 1.45fr) minmax(290px, 0.62fr) minmax(290px, 0.62fr) !important;
+  .np-hero h1 {
+    font-size: clamp(3.7rem, 5vw, 5.7rem) !important;
+  }
+
+  .np-hero-logo {
+    width: clamp(230px, 18vw, 320px) !important;
+    height: clamp(230px, 18vw, 320px) !important;
+  }
+
+  .np-status-bar {
+    max-width: min(980px, var(--np-stage-width)) !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1280px) {
+  .np-dashboard-grid,
+  .np-about-grid {
+    grid-template-columns: 1fr !important;
   }
 
   .np-card-grid {
-    grid-template-columns: repeat(4, minmax(145px, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .np-status-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .np-status-item:nth-child(2n) {
+    border-right: 0 !important;
   }
 }
+
