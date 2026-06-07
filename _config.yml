@@ -10,8 +10,9 @@ url: "https://newpathmc.github.io"
 baseurl: "/NewPath-Docs"
 
 aux_links:
-  "NewPath auf GitHub":
-    - "https://github.com/NewPathMC/NewPath-Docs"
+  "Discord beitreten": "https://discord.gg/DEIN-CODE"
+
+aux_links_new_tab: true
 
 color_scheme: newpath
 
