@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 
-<section class="np-hero">
+<section class="np-hero np-hero-with-echo">
 
   <div class="np-hero-content">
 
@@ -29,11 +29,18 @@ permalink: /
 
   </div>
 
-  <a class="np-hero-logo" href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener">
-    <img src="{{ site.baseurl }}/assets/images/logo.png" alt="NewPath Logo">
-  </a>
+  <div class="np-hero-side">
+
+    <a class="np-hero-logo" href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener" aria-label="NewPath Discord beitreten">
+      <img src="{{ site.baseurl }}/assets/images/logo.png" alt="NewPath – Echoes of the Wild Logo">
+    </a>
+
+    <img class="np-hero-echo" src="{{ site.baseurl }}/assets/images/echo/echo-guide.png" alt="ECHO – Der Wegbegleiter">
+
+  </div>
 
 </section>
+
 ---
 
 ## Schnellzugriff
@@ -69,5 +76,3 @@ permalink: /
 **NewPath – Echoes of the Wild** ist ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung, Gemeinschaft und entschleunigtem Fortschritt.
 
 Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt, in der Technik, Natur, Abenteuer und Community sinnvoll zusammenkommen.
----
-

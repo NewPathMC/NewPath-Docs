@@ -270,8 +270,6 @@ body {
     0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
-/* Input selbst transparent, damit der Wrapper komplett rund bleibt */
-
 .search-input {
   width: 100%;
   min-height: 2.35rem;
@@ -294,13 +292,11 @@ body {
   color: rgba(242, 234, 220, 0.56);
 }
 
-/* Such-Icon dezenter und passender */
-
 .search-label .search-icon {
   color: rgba(0, 230, 246, 0.72);
 }
 
-/* Suchergebnisse optisch einpassen */
+/* Suchergebnisse */
 
 .search-results {
   background: rgba(7, 19, 27, 0.98);
@@ -522,9 +518,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
-  height: 140px;
-  justify-self: end;
+  width: 118px;
+  height: 118px;
+  justify-self: center;
   opacity: 0.96;
   transition: transform 0.16s ease, opacity 0.16s ease, filter 0.16s ease;
 }
@@ -543,7 +539,50 @@ body {
   background: transparent;
 }
 
-/* Alte Corner-Logo-Variante ausblenden, falls noch vorhanden */
+/* ECHO – Wegbegleiter im Hero */
+
+.np-hero-with-echo {
+  grid-template-columns: minmax(0, 1fr) 210px;
+}
+
+.np-hero-side {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.np-hero-side .np-hero-logo {
+  width: 96px;
+  height: 96px;
+  justify-self: center;
+}
+
+.np-hero-echo {
+  width: 145px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 14px rgba(0, 230, 246, 0.2))
+    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.34));
+  transform: translateY(0.1rem);
+  transition:
+    transform 0.18s ease,
+    filter 0.18s ease;
+}
+
+.np-hero-echo:hover {
+  transform: translateY(-0.15rem) scale(1.025);
+  filter:
+    drop-shadow(0 0 18px rgba(0, 230, 246, 0.3))
+    drop-shadow(0 16px 26px rgba(0, 0, 0, 0.4));
+}
+
+/* Alte Corner-Logo-Variante ausblenden */
 
 .np-corner-logo {
   display: none;
@@ -724,10 +763,23 @@ body {
     padding: 1.35rem;
   }
 
-  .np-hero-logo {
-    justify-self: start;
+  .np-hero-with-echo {
+    grid-template-columns: 1fr;
+  }
+
+  .np-hero-side {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .np-hero-side .np-hero-logo {
+    width: 82px;
+    height: 82px;
+  }
+
+  .np-hero-echo {
     width: 96px;
-    height: 96px;
   }
 
   .np-hero h1 {
