@@ -1208,3 +1208,278 @@ body:not(.home) .main-content > :not(.np-home),
     transform: translateX(clamp(0.2rem, 1.7vw, 1.8rem)) !important;
   }
 }
+
+/* =========================================================
+   Schritt 25: Kopfzeile + Unterseiten-Karten angleichen
+   - Suche/Discord in der Topbar sauberer skalieren
+   - Schnellzugriff-Karten näher an die Landingpage-Vorlage
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  body .main-header {
+    min-height: 4.35rem !important;
+    height: 4.35rem !important;
+    padding-left: 1.55rem !important;
+    padding-right: 1.65rem !important;
+    gap: 0.95rem !important;
+  }
+
+  body .main-header .np-topbar-brand {
+    flex: 0 0 220px !important;
+    min-width: 220px !important;
+    max-width: 220px !important;
+  }
+
+  body .main-header .np-top-nav {
+    flex: 1 1 auto !important;
+    justify-content: center !important;
+    gap: 0.22rem !important;
+  }
+
+  body .main-header .np-top-nav a {
+    min-height: 2.08rem !important;
+    padding: 0.4rem 0.78rem !important;
+    border-radius: 999px !important;
+    font-size: 0.82rem !important;
+  }
+
+  body .main-header .search {
+    order: 3 !important;
+    flex: 0 0 255px !important;
+    width: 255px !important;
+    max-width: 255px !important;
+    min-width: 255px !important;
+    height: 2.35rem !important;
+    margin: 0 0 0 0.55rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  body .main-header .search-input-wrap {
+    width: 255px !important;
+    max-width: 255px !important;
+    height: 2.35rem !important;
+    min-height: 2.35rem !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 999px !important;
+    background:
+      linear-gradient(180deg, rgba(7, 24, 32, 0.82), rgba(3, 14, 21, 0.78)) !important;
+    border: 1px solid rgba(0, 230, 246, 0.38) !important;
+    box-shadow:
+      inset 0 0 18px rgba(0, 230, 246, 0.06),
+      0 0 18px rgba(0, 0, 0, 0.16) !important;
+  }
+
+  body .main-header .search-label {
+    left: 0.9rem !important;
+    width: 0.92rem !important;
+    height: 0.92rem !important;
+  }
+
+  body .main-header .search-label .search-icon {
+    width: 0.92rem !important;
+    height: 0.92rem !important;
+  }
+
+  body .main-header .search-input {
+    height: 2.25rem !important;
+    min-height: 2.25rem !important;
+    padding: 0 0.9rem 0 2.35rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  body .main-header .aux-nav {
+    order: 4 !important;
+    flex: 0 0 auto !important;
+    margin-left: 0.25rem !important;
+    height: 2.45rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  body .main-header .aux-nav-list,
+  body .main-header .aux-nav-list-item {
+    height: 2.45rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  body .main-header .aux-nav a {
+    min-width: 9.35rem !important;
+    height: 2.45rem !important;
+    min-height: 2.45rem !important;
+    padding: 0 1rem !important;
+    border-radius: 0.55rem !important;
+    border: 1px solid rgba(0, 230, 246, 0.70) !important;
+    color: var(--np-cyan) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 230, 246, 0.13), rgba(0, 230, 246, 0.045)) !important;
+    box-shadow:
+      inset 0 0 18px rgba(0, 230, 246, 0.08),
+      0 0 22px rgba(0, 230, 246, 0.06) !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.01em !important;
+  }
+
+  body .main-header .aux-nav a::before {
+    content: "🎮" !important;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.15rem !important;
+    font-size: 0.86rem !important;
+    line-height: 1 !important;
+  }
+
+  body .main-header .aux-nav a:hover {
+    color: #ffffff !important;
+    border-color: rgba(0, 230, 246, 0.95) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 230, 246, 0.22), rgba(0, 230, 246, 0.08)) !important;
+    box-shadow:
+      inset 0 0 22px rgba(0, 230, 246, 0.12),
+      0 0 26px rgba(0, 230, 246, 0.12) !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1320px) {
+  body .main-header .np-topbar-brand {
+    flex-basis: 190px !important;
+    min-width: 190px !important;
+  }
+
+  body .main-header .search {
+    flex-basis: 220px !important;
+    width: 220px !important;
+    max-width: 220px !important;
+    min-width: 220px !important;
+  }
+
+  body .main-header .search-input-wrap {
+    width: 220px !important;
+    max-width: 220px !important;
+  }
+
+  body .main-header .aux-nav a {
+    min-width: 8.4rem !important;
+    padding: 0 0.8rem !important;
+    font-size: 0.76rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) {
+  body .main-content .np-home .np-panel-large {
+    padding: 1.25rem !important;
+  }
+
+  body .main-content .np-home .np-card-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.9rem !important;
+  }
+
+  body .main-content .np-home .np-card {
+    min-height: 10.75rem !important;
+    padding: 1.05rem 0.95rem 0.95rem !important;
+    border-radius: 0.68rem !important;
+    border: 1px solid rgba(72, 122, 146, 0.42) !important;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(0, 230, 246, 0.07), transparent 6.5rem),
+      linear-gradient(180deg, rgba(22, 58, 68, 0.74), rgba(7, 24, 31, 0.86)) !important;
+    box-shadow:
+      inset 0 0 26px rgba(0, 230, 246, 0.035),
+      0 12px 26px rgba(0, 0, 0, 0.16) !important;
+  }
+
+  body .main-content .np-home .np-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(0, 230, 246, 0.55) !important;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(0, 230, 246, 0.12), transparent 7.5rem),
+      linear-gradient(180deg, rgba(28, 72, 83, 0.86), rgba(9, 31, 39, 0.92)) !important;
+    box-shadow:
+      inset 0 0 30px rgba(0, 230, 246, 0.055),
+      0 16px 30px rgba(0, 0, 0, 0.24) !important;
+  }
+
+  body .main-content .np-home .np-card-icon {
+    width: 3.05rem !important;
+    height: 3.05rem !important;
+    margin-bottom: 0.75rem !important;
+    border-radius: 0 !important;
+    clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0 50%) !important;
+    font-size: 1.28rem !important;
+    border: 0 !important;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.16),
+      0 0 24px rgba(0, 230, 246, 0.11),
+      inset 0 0 20px rgba(255, 255, 255, 0.09) !important;
+  }
+
+  body .main-content .np-home .np-card-title {
+    margin-bottom: 0.4rem !important;
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+    line-height: 1.18 !important;
+  }
+
+  body .main-content .np-home .np-card-text {
+    max-width: 13.5rem !important;
+    margin: 0 auto !important;
+    color: rgba(245, 234, 220, 0.82) !important;
+    font-size: 0.8rem !important;
+    line-height: 1.42 !important;
+  }
+
+  body .main-content .np-home .np-card-link {
+    margin-top: 0.65rem !important;
+    color: var(--np-cyan) !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.01em !important;
+  }
+}
+
+/* =========================================================
+   Schritt 26: Hero-Abstand zur Kopfzeile reduzieren
+   - Bereich "Offizielles Modpack" deutlich weiter nach oben
+   - Hero bleibt linksbündig und ohne neue Buttons
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  body .main-content .np-home .np-last-updated {
+    margin-top: 0.55rem !important;
+    margin-bottom: -0.95rem !important;
+  }
+
+  body .main-content .np-home .np-hero {
+    min-height: clamp(345px, 27vw, 490px) !important;
+    padding-top: clamp(0.85rem, 1.55vw, 1.75rem) !important;
+    padding-bottom: clamp(1.4rem, 2.35vw, 2.55rem) !important;
+    align-items: start !important;
+  }
+
+  body .main-content .np-home .np-hero-content {
+    align-self: start !important;
+    padding-top: clamp(0.15rem, 0.55vw, 0.55rem) !important;
+  }
+
+  body .main-content .np-home .np-hero-logo {
+    align-self: start !important;
+    margin-top: clamp(0.55rem, 1.35vw, 1.35rem) !important;
+  }
+
+  body .main-content .np-home .np-kicker {
+    margin-top: 0 !important;
+  }
+
+  body .main-content .np-home .np-status-bar {
+    margin-top: 0.05rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1320px) {
+  body .main-content .np-home .np-hero {
+    min-height: clamp(330px, 29vw, 455px) !important;
+    padding-top: 0.75rem !important;
+  }
+}
