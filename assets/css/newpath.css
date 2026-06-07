@@ -2210,3 +2210,181 @@ body {
     height: 230px !important;
   }
 }
+
+/* =========================================================
+   CLEANUP FIX: finaler Layout-Stabilisator nach CSS-Kürzung
+   - korrigiert Hero-Typografie
+   - hält Hero frei auf dem Hintergrund
+   - zentriert alle folgenden Inhaltsbereiche wieder sauber
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .main,
+  .main-content-wrap,
+  .main-content,
+  .main-content .page-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .np-last-updated {
+    width: min(1500px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-right: 0 !important;
+    text-align: right !important;
+  }
+
+  .np-hero {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: clamp(360px, 36vw, 520px) !important;
+    margin: 0 0 1.15rem 0 !important;
+    padding-top: clamp(2.4rem, 4.4vw, 4.9rem) !important;
+    padding-bottom: clamp(2.1rem, 3.8vw, 4.15rem) !important;
+    padding-left: clamp(9.5rem, 11.7vw, 13.2rem) !important;
+    padding-right: clamp(2.7rem, 6vw, 7rem) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 620px) minmax(250px, 350px) !important;
+    justify-content: start !important;
+    justify-items: start !important;
+    align-items: center !important;
+    gap: clamp(4.8rem, 8.8vw, 10.5rem) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .np-hero::before,
+  .np-hero::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .np-hero-content {
+    width: 100% !important;
+    max-width: 620px !important;
+    justify-self: start !important;
+  }
+
+  .np-kicker {
+    margin-bottom: 0.7rem !important;
+    color: var(--np-cyan) !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.13em !important;
+    text-shadow: 0 3px 16px rgba(0, 0, 0, 0.72) !important;
+  }
+
+  .np-hero h1 {
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: var(--np-gold) !important;
+    font-size: clamp(3.7rem, 5.05vw, 5.75rem) !important;
+    line-height: 0.91 !important;
+    letter-spacing: -0.045em !important;
+    text-wrap: balance !important;
+    text-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.68),
+      0 12px 34px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .np-hero-title-main,
+  .np-hero-title-sub {
+    display: block !important;
+  }
+
+  .np-hero-title-main {
+    color: #f4cf7f !important;
+  }
+
+  .np-hero-title-sub {
+    margin-top: 0.14rem !important;
+    color: var(--np-gold) !important;
+    font-size: 0.66em !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .np-hero-text {
+    max-width: 610px !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.02rem !important;
+    line-height: 1.58 !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75) !important;
+  }
+
+  .np-hero-highlight {
+    max-width: 560px !important;
+    padding: 0.88rem 1.08rem !important;
+    border-radius: 0.35rem !important;
+    border: 1px solid rgba(236, 183, 110, 0.24) !important;
+    border-left: 4px solid rgba(236, 183, 110, 0.84) !important;
+    background: rgba(0, 8, 13, 0.30) !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+    box-shadow: none !important;
+  }
+
+  .np-hero-logo {
+    width: clamp(255px, 18vw, 330px) !important;
+    height: clamp(255px, 18vw, 330px) !important;
+    justify-self: start !important;
+    align-self: center !important;
+    transform: none !important;
+    filter:
+      drop-shadow(0 18px 28px rgba(0, 0, 0, 0.46))
+      drop-shadow(0 0 20px rgba(0, 230, 246, 0.17)) !important;
+  }
+
+  .np-hero-logo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  .main-content > *:not(.np-hero):not(.np-last-updated),
+  .main-content .page-content > *:not(.np-hero):not(.np-last-updated) {
+    width: min(1500px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .echo-guide-box {
+    margin-top: 0.2rem !important;
+    margin-bottom: 2.1rem !important;
+    background:
+      linear-gradient(90deg, rgba(0, 15, 22, 0.42), rgba(8, 28, 36, 0.24) 55%, rgba(0, 10, 15, 0.32)),
+      radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.075), transparent 13rem) !important;
+  }
+
+  .np-card-grid {
+    margin-top: 1.15rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1220px) {
+  .np-hero {
+    padding-left: 2.4rem !important;
+    padding-right: 2.4rem !important;
+    grid-template-columns: minmax(0, 1fr) 230px !important;
+    gap: 2.8rem !important;
+  }
+
+  .np-hero-logo {
+    width: 230px !important;
+    height: 230px !important;
+  }
+}
