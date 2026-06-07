@@ -425,7 +425,7 @@ body {
 .np-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
+  grid-template-columns: minmax(0, 1fr) 240px;
   gap: 1.75rem;
   align-items: center;
   margin: 0 0 1.4rem;
@@ -513,17 +513,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 176px;
-  height: 176px;
+  width: 205px;
+  height: 205px;
   justify-self: center;
   opacity: 0.98;
-  transition: transform 0.16s ease, opacity 0.16s ease, filter 0.16s ease;
+  transition: transform 0.18s ease, opacity 0.18s ease, filter 0.18s ease;
 }
 
 .np-hero-logo:hover {
-  transform: scale(1.04);
+  transform: scale(1.055) translateY(-2px);
   opacity: 1;
-  filter: drop-shadow(0 0 14px rgba(0, 230, 246, 0.28));
+  filter:
+    drop-shadow(0 0 16px rgba(0, 230, 246, 0.32))
+    drop-shadow(0 12px 22px rgba(0, 0, 0, 0.34));
 }
 
 .np-hero-logo img {
@@ -550,7 +552,7 @@ body {
   border: 1px solid rgba(53, 101, 125, 0.56);
   border-radius: 0.95rem;
   background:
-    linear-gradient(var(--echo-accent), var(--echo-accent)) left 0.95rem top 0.95rem / 4px calc(100% - 1.9rem) no-repeat,
+    linear-gradient(var(--echo-accent), var(--echo-accent)) left 1.05rem top 1.2rem / 3px calc(100% - 2.4rem) no-repeat,
     radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.11), transparent 12rem),
     radial-gradient(circle at 100% 50%, rgba(95, 122, 66, 0.08), transparent 16rem),
     linear-gradient(135deg, rgba(17, 46, 64, 0.84), rgba(7, 19, 27, 0.86));
@@ -596,9 +598,18 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.18s ease, filter 0.18s ease, opacity 0.18s ease;
   filter:
     drop-shadow(0 0 14px rgba(0, 230, 246, 0.22))
     drop-shadow(0 13px 22px rgba(0, 0, 0, 0.36));
+}
+
+.echo-guide-image img:hover {
+  transform: scale(1.08) translateY(-2px);
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 18px rgba(0, 230, 246, 0.38))
+    drop-shadow(0 16px 26px rgba(0, 0, 0, 0.42));
 }
 
 .echo-guide-content {
@@ -652,7 +663,7 @@ body {
   border: 1px solid rgba(53, 101, 125, 0.58);
   border-radius: 1rem;
   background:
-    linear-gradient(var(--echo-accent), var(--echo-accent)) left 1rem top 1rem / 4px calc(100% - 2rem) no-repeat,
+    linear-gradient(var(--echo-accent), var(--echo-accent)) left 1.1rem top 1.2rem / 3px calc(100% - 2.4rem) no-repeat,
     radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.1), transparent 13rem),
     radial-gradient(circle at 96% 18%, rgba(53, 101, 125, 0.16), transparent 18rem),
     linear-gradient(135deg, rgba(17, 46, 64, 0.88), rgba(7, 19, 27, 0.86));
@@ -701,9 +712,18 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  transition: transform 0.18s ease, filter 0.18s ease, opacity 0.18s ease;
   filter:
     drop-shadow(0 0 14px rgba(0, 230, 246, 0.22))
     drop-shadow(0 14px 24px rgba(0, 0, 0, 0.36));
+}
+
+.echo-page-image img:hover {
+  transform: scale(1.08) translateY(-2px);
+  opacity: 1;
+  filter:
+    drop-shadow(0 0 18px rgba(0, 230, 246, 0.38))
+    drop-shadow(0 16px 26px rgba(0, 0, 0, 0.42));
 }
 
 .echo-page-content {
@@ -979,8 +999,8 @@ body {
 
   .np-hero-logo {
     justify-self: start;
-    width: 132px;
-    height: 132px;
+    width: 150px;
+    height: 150px;
   }
 
   .np-hero h1 {
@@ -993,7 +1013,7 @@ body {
     padding: 0.9rem 1rem 0.9rem 1.2rem;
     min-height: 132px;
     background:
-      linear-gradient(var(--echo-accent), var(--echo-accent)) left 0.8rem top 0.8rem / 4px calc(100% - 1.6rem) no-repeat,
+      linear-gradient(var(--echo-accent), var(--echo-accent)) left 0.9rem top 1rem / 3px calc(100% - 2rem) no-repeat,
       radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.11), transparent 12rem),
       radial-gradient(circle at 100% 50%, rgba(95, 122, 66, 0.08), transparent 16rem),
       linear-gradient(135deg, rgba(17, 46, 64, 0.84), rgba(7, 19, 27, 0.86));
@@ -1013,7 +1033,7 @@ body {
     padding: 0.95rem 1rem 0.95rem 1.2rem;
     min-height: 128px;
     background:
-      linear-gradient(var(--echo-accent), var(--echo-accent)) left 0.85rem top 0.85rem / 4px calc(100% - 1.7rem) no-repeat,
+      linear-gradient(var(--echo-accent), var(--echo-accent)) left 0.95rem top 1rem / 3px calc(100% - 2rem) no-repeat,
       radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.1), transparent 13rem),
       radial-gradient(circle at 96% 18%, rgba(53, 101, 125, 0.16), transparent 18rem),
       linear-gradient(135deg, rgba(17, 46, 64, 0.88), rgba(7, 19, 27, 0.86));
