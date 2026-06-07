@@ -1812,7 +1812,7 @@ body {
   font-weight: 700 !important;
 }
 
-/* Startseite: Zeitstempel komplett ausblenden, egal ob Blockquote oder Update-Box */
+/* Startseite: Zeitstempel genauso dezent anzeigen wie auf Unterseiten */
 .main-content h1#newpath--echoes-of-the-wild ~ blockquote:has(strong),
 .main-content h1#newpath--echoes-of-the-wild ~ .np-update-box,
 .main-content h2#was-ist-newpath ~ blockquote:has(strong),
@@ -1821,5 +1821,20 @@ body {
 .main-content .page-content h1#newpath--echoes-of-the-wild ~ .np-update-box,
 .main-content .page-content h2#was-ist-newpath ~ blockquote:has(strong),
 .main-content .page-content h2#was-ist-newpath ~ .np-update-box {
-  display: none !important;
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 0 1.05rem 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-align: right !important;
+  color: rgba(219, 234, 238, 0.46) !important;
+  font-size: 0.69rem !important;
+  line-height: 1.25 !important;
+  font-style: normal !important;
 }
