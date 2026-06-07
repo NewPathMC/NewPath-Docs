@@ -1542,3 +1542,55 @@ body {
     margin-right: 0 !important;
   }
 }
+
+/* =========================================================
+   Zeitstempel-Anpassung
+   - Startseite: Zeitstempel ausblenden
+   - Unterseiten: Zeitstempel oben dezent und ohne Box darstellen
+   ========================================================= */
+
+/* Der automatische Markdown-Zeitstempel wird als Blockquote gerendert.
+   Auf Unterseiten soll er nur als kleine, dezente Info erscheinen. */
+.main-content > blockquote:has(> p:first-child > strong:first-child),
+.main-content > .np-update-box {
+  display: block !important;
+  margin: 0 0 1.35rem 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: rgba(219, 234, 238, 0.58) !important;
+  font-size: 0.72rem !important;
+  line-height: 1.35 !important;
+}
+
+.main-content > blockquote:has(> p:first-child > strong:first-child) p,
+.main-content > .np-update-box p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.main-content > blockquote:has(> p:first-child > strong:first-child) strong,
+.main-content > .np-update-box strong {
+  color: rgba(236, 183, 110, 0.72) !important;
+  font-weight: 700 !important;
+}
+
+/* Auf der Startseite steht der Zeitstempel aktuell nach dem Abschnitt
+   „Was ist NewPath?“ – dort soll er gar nicht angezeigt werden. */
+.main-content h2#was-ist-newpath ~ blockquote:has(> p:first-child > strong:first-child),
+.main-content h2#was-ist-newpath ~ .np-update-box {
+  display: none !important;
+}
+
+/* Falls der Zeitstempel auf der Startseite in Zukunft wieder direkt als
+   Update-Box ausgegeben wird, bleibt auch diese Variante unsichtbar. */
+.main-content h1#newpath--echoes-of-the-wild ~ blockquote:has(> p:first-child > strong:first-child),
+.main-content h1#newpath--echoes-of-the-wild ~ .np-update-box {
+  display: none !important;
+}
