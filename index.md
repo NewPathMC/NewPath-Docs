@@ -85,9 +85,10 @@ permalink: /
   </div>
 </section>
 
-<section class="np-dashboard-grid">
-  <div class="np-panel np-panel-large">
-    <h2>Schnellzugriff</h2>
+<section class="np-main-grid">
+  <div class="np-panel np-quick-panel">
+    <p class="np-section-kicker">Schnellzugriff</p>
+    <h2>Alles Wichtige auf einen Blick</h2>
 
     <div class="np-card-grid">
       <a class="np-card" href="{{ site.baseurl }}/regelwerk.html">
@@ -114,97 +115,57 @@ permalink: /
       <a class="np-card" href="{{ site.baseurl }}/serverinfos.html">
         <span class="np-card-icon np-card-icon-green">◆</span>
         <span class="np-card-title">Serverinfos</span>
-        <span class="np-card-text">Wichtige technische Infos, Verbindungen und Hinweise zum Server.</span>
+        <span class="np-card-text">Technische Infos, Verbindungen und Hinweise zum Server.</span>
         <span class="np-card-link">Mehr lesen →</span>
       </a>
     </div>
   </div>
 
-  <aside class="np-panel np-news-panel">
-    <h2>Neuigkeiten</h2>
+  <aside class="np-panel np-echo-feature" aria-label="ECHO – Der Wegbegleiter">
+    <div class="np-echo-orb"></div>
 
-    <div class="np-news-list">
-      <div class="np-news-item">
-        <span class="np-news-icon">?</span>
-        <span>
-          <strong>FAQ wurde aktualisiert</strong>
-          <small>07.06.2026</small>
-        </span>
-      </div>
-
-      <div class="np-news-item">
-        <span class="np-news-icon">§</span>
-        <span>
-          <strong>Regelwerk überarbeitet</strong>
-          <small>05.06.2026</small>
-        </span>
-      </div>
-
-      <div class="np-news-item">
-        <span class="np-news-icon">✦</span>
-        <span>
-          <strong>Designsystem EOTW integriert</strong>
-          <small>02.06.2026</small>
-        </span>
-      </div>
+    <div class="np-echo-image-wrap">
+      <img
+        src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
+        alt="ECHO – Der Wegbegleiter"
+        width="512"
+        height="512"
+        loading="lazy"
+        decoding="async">
     </div>
-  </aside>
 
-  <aside class="np-panel np-roadmap-panel">
-    <h2>Roadmap</h2>
+    <div class="np-echo-content">
+      <p class="np-section-kicker">ECHO – Der Wegbegleiter</p>
+      <h2>Ich begleite dich durch NewPath.</h2>
+      <p>
+        ECHO ist deine neutrale Orientierung auf dieser Dokumentationsseite:
+        Er führt dich zu Regeln, Einstiegshilfen, FAQ und Serverinfos.
+      </p>
 
-    <div class="np-roadmap-list">
-      <div class="np-roadmap-item done">
-        <span></span>
-        <p><strong>Juni 2026</strong><br>Dokumentation & Design</p>
-      </div>
-
-      <div class="np-roadmap-item active">
-        <span></span>
-        <p><strong>Juli 2026</strong><br>Alpha-Phase & Tests</p>
-      </div>
-
-      <div class="np-roadmap-item">
-        <span></span>
-        <p><strong>August 2026</strong><br>Feinschliff & Balancing</p>
-      </div>
-
-      <div class="np-roadmap-item">
-        <span></span>
-        <p><strong>Q3 2026</strong><br>Release – NewPath EOTW</p>
+      <div class="np-echo-links" aria-label="ECHO Schnellhilfe">
+        <a href="{{ site.baseurl }}/regelwerk.html">Regeln</a>
+        <a href="{{ site.baseurl }}/faq.html">FAQ</a>
+        <a href="{{ site.baseurl }}/serverinfos.html">Serverinfos</a>
       </div>
     </div>
   </aside>
 </section>
 
-<section class="np-about-grid">
-  <div class="np-panel np-about-panel">
-    <h2>Über NewPath</h2>
+<section class="np-panel np-about-panel">
+  <div>
+    <p class="np-section-kicker">Über NewPath</p>
+    <h2>Eine Welt mit Richtung statt ein weiteres Everything-Pack.</h2>
+  </div>
+
+  <div class="np-about-text">
     <p>
       <strong>NewPath – Echoes of the Wild</strong> ist ein atmosphärisches Minecraft-Modpack
       mit Fokus auf Immersion, Erkundung, Gemeinschaft und entschleunigten Fortschritt.
     </p>
     <p>
-      Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt,
-      in der Technik, Natur, Abenteuer und Community sinnvoll zusammenkommen.
+      Unser Ziel ist eine stimmige Welt, in der Technik, Natur, Abenteuer und Community
+      sinnvoll zusammenkommen und Fortschritt nicht nur schneller, sondern bewusster erlebt wird.
     </p>
-  </div>
-
-  <div class="np-panel np-echo-panel">
-    <img
-      src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
-      alt="ECHO – Der Wegbegleiter"
-      width="512"
-      height="512"
-      loading="lazy"
-      decoding="async">
-    <div>
-      <p class="np-kicker">ECHO – Der Wegbegleiter</p>
-      <h2>Ich begleite dich durch NewPath.</h2>
-      <p>
-        ECHO hilft dir dabei, Regeln, häufige Fragen und Serverinfos schnell zu finden.
-      </p>
-    </div>
   </div>
 </section>
 
