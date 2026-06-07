@@ -3400,3 +3400,82 @@ body {
     margin-top: 0.2rem !important;
   }
 }
+
+/* =========================================================
+   Schritt 15: Hero wirklich frei auf den Hintergrund legen
+   - alten Seiten-/Hero-Mittelstreifen entfernen
+   - Hauptbereich wieder volle Browserbreite
+   - Hero-Inhalte weiter links wie in der Vorlage
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .main {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .main-content-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .main-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .np-last-updated {
+    width: min(1500px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .np-hero {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.15rem !important;
+    padding-left: max(2.7rem, calc((100vw - 1500px) / 2)) !important;
+    padding-right: max(2.7rem, calc((100vw - 1500px) / 2)) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .np-hero::before,
+  .np-hero::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .echo-guide-box,
+  .np-card-grid,
+  .main-content > h2,
+  .main-content > p,
+  .main-content > hr {
+    width: min(1500px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .echo-guide-box {
+    background:
+      linear-gradient(90deg, rgba(0, 15, 22, 0.42), rgba(8, 28, 36, 0.24) 55%, rgba(0, 10, 15, 0.32)),
+      radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.075), transparent 13rem) !important;
+  }
+}
