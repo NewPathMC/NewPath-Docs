@@ -122,7 +122,12 @@ body {
 }
 
 .site-header {
-  min-height: 4.2rem;
+  min-height: 4.45rem;
+  height: 4.45rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid rgba(53, 101, 125, 0.42);
   background:
     radial-gradient(circle at top right, rgba(0, 230, 246, 0.08), transparent 12rem),
@@ -178,7 +183,9 @@ body {
 
 .main-header {
   min-height: 4.45rem;
+  height: 4.45rem;
   padding: 0.45rem 1.2rem 0.55rem;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -681,6 +688,7 @@ body {
 
   .main-header {
     min-height: auto;
+    height: auto;
     padding: 0.6rem;
   }
 
