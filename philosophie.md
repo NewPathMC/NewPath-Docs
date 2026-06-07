@@ -5,7 +5,7 @@ nav_order: 3
 ---
 
 <!-- AUTO_UPDATED_START -->
-> **Zuletzt aktualisiert:** 07.06.2026 13:07 Uhr
+<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 14:16 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-philosophy">
