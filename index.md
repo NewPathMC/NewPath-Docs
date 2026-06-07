@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 14:16 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 13:07 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="np-hero">
@@ -33,7 +33,12 @@ permalink: /
   </div>
 
   <a class="np-hero-logo" href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener" aria-label="NewPath Discord beitreten">
-    <img src="{{ site.baseurl }}/assets/images/logo.png" alt="NewPath – Echoes of the Wild Logo">
+    <img
+      src="{{ site.baseurl }}/assets/images/logo.png"
+      alt="NewPath – Echoes of the Wild Logo"
+      width="512"
+      height="512"
+      decoding="async">
   </a>
 
 </section>
@@ -41,7 +46,13 @@ permalink: /
 <section class="echo-guide-box">
 
   <div class="echo-guide-image">
-    <img src="{{ site.baseurl }}/assets/images/echo/echo-guide.png" alt="ECHO – Der Wegbegleiter">
+    <img
+      src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
+      alt="ECHO – Der Wegbegleiter"
+      width="512"
+      height="512"
+      loading="lazy"
+      decoding="async">
   </div>
 
   <div class="echo-guide-content">
@@ -93,4 +104,3 @@ permalink: /
 **NewPath – Echoes of the Wild** ist ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung, Gemeinschaft und entschleunigtem Fortschritt.
 
 Unser Ziel ist kein klassisches „Everything-Pack“, sondern eine stimmige Welt, in der Technik, Natur, Abenteuer und Community sinnvoll zusammenkommen.
----
