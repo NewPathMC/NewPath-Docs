@@ -2521,3 +2521,144 @@ body {
     line-height: 1.82rem !important;
   }
 }
+
+/* =========================================================
+   Schritt 8: Hero-Bereich breiter und moderner
+   - Startseite bekommt mehr Landingpage-Gefühl
+   - Hero wird größer, breiter und bildhafter
+   - ECHO/Schnellzugriff bleiben noch unverändert
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .main-content {
+    width: min(1500px, calc(100% - 4.4rem)) !important;
+    max-width: 1500px !important;
+    padding-top: 1.35rem !important;
+  }
+
+  .np-last-updated {
+    margin: 0 0 1rem 0 !important;
+    padding-right: 0.25rem !important;
+    text-align: right !important;
+  }
+
+  .np-hero {
+    min-height: 335px !important;
+    grid-template-columns: minmax(0, 1.08fr) minmax(280px, 410px) !important;
+    gap: 2.5rem !important;
+    align-items: center !important;
+    margin: 0 0 1.55rem 0 !important;
+    padding: 3.05rem 3.35rem !important;
+    border-radius: 1.25rem !important;
+    border: 1px solid rgba(0, 230, 246, 0.24) !important;
+    border-top-color: rgba(236, 183, 110, 0.34) !important;
+    background:
+      radial-gradient(circle at 78% 24%, rgba(0, 230, 246, 0.14), transparent 18rem),
+      radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.10), transparent 19rem),
+      linear-gradient(90deg, rgba(0, 9, 15, 0.18), rgba(0, 18, 33, 0.46) 38%, rgba(0, 9, 15, 0.22)),
+      linear-gradient(135deg, rgba(17, 46, 64, 0.76), rgba(5, 18, 25, 0.90) 62%, rgba(0, 9, 15, 0.88)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.045),
+      0 18px 34px rgba(0, 0, 0, 0.24) !important;
+  }
+
+  .np-hero::before {
+    left: 1.35rem !important;
+    right: 1.35rem !important;
+    height: 2px !important;
+    opacity: 0.72 !important;
+  }
+
+  .np-hero::after {
+    right: -5rem !important;
+    bottom: -6rem !important;
+    width: 22rem !important;
+    height: 22rem !important;
+    background: radial-gradient(circle, rgba(0, 230, 246, 0.105), transparent 62%) !important;
+  }
+
+  .np-kicker {
+    margin-bottom: 0.55rem !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 0.14em !important;
+  }
+
+  .np-hero h1 {
+    max-width: 820px !important;
+    margin-bottom: 0.95rem !important;
+    font-size: clamp(3rem, 4.15vw, 4.85rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+    color: var(--np-gold) !important;
+    text-shadow: 0 10px 24px rgba(0, 0, 0, 0.34) !important;
+  }
+
+  .np-hero-text {
+    max-width: 690px !important;
+    margin-bottom: 1.25rem !important;
+    color: rgba(245, 234, 220, 0.92) !important;
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .np-hero-highlight {
+    max-width: 790px !important;
+    padding: 1rem 1.2rem !important;
+    border-radius: 0.85rem !important;
+    border: 1px solid rgba(72, 122, 146, 0.58) !important;
+    border-left: 4px solid rgba(236, 183, 110, 0.82) !important;
+    background:
+      linear-gradient(135deg, rgba(236, 183, 110, 0.075), transparent 44%),
+      rgba(0, 9, 15, 0.42) !important;
+    color: rgba(245, 234, 220, 0.86) !important;
+  }
+
+  .np-hero-logo {
+    width: 310px !important;
+    height: 310px !important;
+    justify-self: center !important;
+    align-self: center !important;
+    opacity: 1 !important;
+    filter:
+      drop-shadow(0 18px 24px rgba(0, 0, 0, 0.34))
+      drop-shadow(0 0 16px rgba(0, 230, 246, 0.18)) !important;
+  }
+
+  .np-hero-logo img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1220px) {
+  .np-hero {
+    grid-template-columns: minmax(0, 1fr) 250px !important;
+    padding: 2.35rem 2.25rem !important;
+  }
+
+  .np-hero-logo {
+    width: 230px !important;
+    height: 230px !important;
+  }
+
+  .np-hero h1 {
+    font-size: clamp(2.45rem, 4vw, 3.5rem) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .np-hero {
+    min-height: auto !important;
+    padding: 1.45rem !important;
+  }
+
+  .np-hero h1 {
+    font-size: 2rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .np-hero-logo {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
