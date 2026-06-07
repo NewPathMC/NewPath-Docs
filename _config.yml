@@ -6,8 +6,8 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
 
-url: "https://newpathmc.github.io"
-baseurl: "/NewPath-Docs"
+url: "https://www.newpath-mc.de"
+baseurl: ""
 
 aux_links:
   "Discord beitreten": "https://discord.gg/R4HwKRbZ5e"

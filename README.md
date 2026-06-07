@@ -4,7 +4,7 @@ Dieses Repository enthält die öffentliche Dokumentation für **NewPath – Ech
 
 Die GitHub-Pages-Webseite ist hier erreichbar:
 
-https://newpathmc.github.io/NewPath-Docs/
+https://www.newpath-mc.de/
 
 ## Inhalte
 
