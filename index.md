@@ -5,7 +5,7 @@ nav_order: 1
 permalink: /
 ---
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 22:11 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 22:19 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="np-hero">
