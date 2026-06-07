@@ -2306,3 +2306,123 @@ body {
     max-width: 165px !important;
   }
 }
+
+/* =========================================================
+   Schritt 5: Topbar Balance – Suche & Discord etwas größer,
+   aber weiterhin kompakt und sauber zentriert
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .main-header,
+  .main-header.nav-open {
+    min-height: 4.45rem !important;
+    height: 4.45rem !important;
+    max-height: 4.45rem !important;
+    padding: 0 1.55rem !important;
+    gap: 0.62rem !important;
+  }
+
+  .np-topbar-brand {
+    flex-basis: 230px !important;
+    min-width: 230px !important;
+    max-width: 230px !important;
+  }
+
+  .np-topbar-logo {
+    width: 3.45rem !important;
+    height: 3.45rem !important;
+    flex-basis: 3.45rem !important;
+  }
+
+  .np-topbar-title span:first-child {
+    font-size: 1.34rem !important;
+  }
+
+  .np-topbar-title span:last-child {
+    font-size: 0.72rem !important;
+  }
+
+  .np-top-nav a {
+    min-height: 2rem !important;
+    padding: 0.32rem 0.58rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .main-header .search {
+    flex: 0 0 230px !important;
+    width: 230px !important;
+    min-width: 230px !important;
+    max-width: 230px !important;
+    height: 2.1rem !important;
+    min-height: 2.1rem !important;
+    margin-left: 0.35rem !important;
+  }
+
+  .main-header .search-input-wrap {
+    width: 230px !important;
+    min-width: 230px !important;
+    max-width: 230px !important;
+    min-height: 1.82rem !important;
+    height: 1.82rem !important;
+    padding: 0 0.66rem !important;
+  }
+
+  .main-header .search-label .search-icon {
+    width: 0.78rem !important;
+    height: 0.78rem !important;
+    margin-right: 0.34rem !important;
+    flex-basis: 0.78rem !important;
+  }
+
+  .main-header .search-input {
+    min-height: 1.72rem !important;
+    height: 1.72rem !important;
+    font-size: 0.70rem !important;
+  }
+
+  .main-header .aux-nav,
+  .main-header .aux-nav-list,
+  .main-header .aux-nav-list-item {
+    height: 2.1rem !important;
+    min-height: 2.1rem !important;
+  }
+
+  .main-header .aux-nav {
+    margin-left: 0.3rem !important;
+  }
+
+  .main-header .aux-nav a {
+    min-height: 1.82rem !important;
+    height: 1.82rem !important;
+    padding: 0.22rem 0.74rem !important;
+    gap: 0.34rem !important;
+    font-size: 0.70rem !important;
+  }
+
+  .main-header .aux-nav a::before {
+    width: 0.78rem !important;
+    height: 0.78rem !important;
+    flex-basis: 0.78rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1280px) {
+  .np-topbar-brand {
+    flex-basis: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+  }
+
+  .main-header .search,
+  .main-header .search-input-wrap {
+    flex-basis: 190px !important;
+    width: 190px !important;
+    min-width: 190px !important;
+    max-width: 190px !important;
+  }
+
+  .main-header .aux-nav a {
+    padding-left: 0.62rem !important;
+    padding-right: 0.62rem !important;
+  }
+}
