@@ -1110,3 +1110,74 @@ body {
     display: none;
   }
 }
+
+/* Feinschliff: weichere Kanten + kompakte linke Navigation */
+@media (min-width: 66.5rem) {
+  .side-bar {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100vh - 1.5rem) !important;
+    bottom: auto !important;
+    top: 0.75rem !important;
+    overflow: hidden !important;
+    border-radius: 0 0 1rem 1rem;
+    background:
+      radial-gradient(circle at 18% 18%, rgba(53, 101, 125, 0.16), transparent 18rem),
+      radial-gradient(circle at 92% 46%, rgba(0, 230, 246, 0.045), transparent 17rem),
+      linear-gradient(180deg, rgba(20, 52, 67, 0.78), rgba(14, 34, 43, 0.82));
+    border: 1px solid rgba(72, 122, 146, 0.16);
+    box-shadow:
+      18px 0 44px rgba(5, 16, 21, 0.16),
+      -18px 0 44px rgba(5, 8, 9, 0.18),
+      inset 0 0 28px rgba(0, 230, 246, 0.025);
+  }
+
+  .side-bar .site-header {
+    border-radius: 0.9rem 0.9rem 0 0;
+  }
+
+  .site-footer {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+.main-content-wrap {
+  border-radius: 1.05rem;
+  overflow: hidden;
+}
+
+.main-header {
+  border-radius: 1.05rem 1.05rem 0 0;
+}
+
+.main-content {
+  border-radius: 0 0 1.05rem 1.05rem;
+}
+
+.np-hero,
+.echo-callout,
+.echo-page-box,
+.echo-guide-card,
+.np-card,
+.search-input-wrap,
+.aux-nav-list-item a,
+.nav-list .nav-list-item .nav-list-link,
+.main-content blockquote,
+.main-content table,
+.main-content code {
+  border-radius: 0.85rem;
+}
+
+.search-input-wrap,
+.aux-nav-list-item a,
+.np-card,
+.np-hero,
+.echo-callout,
+.echo-page-box,
+.echo-guide-card {
+  overflow: hidden;
+}
+
+.nav-list .nav-list-item .nav-list-link.active {
+  border-radius: 0.8rem;
+}
