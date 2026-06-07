@@ -3147,3 +3147,167 @@ body {
     height: 250px !important;
   }
 }
+
+/* =========================================================
+   Schritt 13: Näher an die Layout-Vorlage
+   - kein harter dunkler Hero-Balken
+   - Inhalt beginnt weiter links
+   - Hintergrund bleibt sichtbar und wirkt wie Bühne
+   - Hero/Content weniger als Kasten, mehr als Landingpage-Fläche
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  body {
+    background:
+      linear-gradient(90deg, rgba(0, 5, 9, 0.58) 0%, rgba(2, 9, 13, 0.10) 19%, rgba(2, 9, 13, 0.08) 72%, rgba(0, 5, 9, 0.52) 100%),
+      linear-gradient(180deg, rgba(0, 7, 12, 0.16) 0%, rgba(3, 10, 15, 0.24) 52%, rgba(2, 7, 10, 0.68) 100%),
+      radial-gradient(circle at 22% 18%, rgba(236, 183, 110, 0.040), transparent 34rem),
+      radial-gradient(circle at 82% 24%, rgba(0, 230, 246, 0.050), transparent 36rem),
+      url("../images/background-site.webp"),
+      linear-gradient(180deg, #0b1218 0%, #071016 52%, #030608 100%) !important;
+    background-size: auto, auto, auto, auto, cover, auto !important;
+    background-position: center, center, center, center, center top, center !important;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat !important;
+    background-attachment: fixed !important;
+  }
+
+  .main-content-wrap {
+    background:
+      linear-gradient(180deg, rgba(0, 10, 16, 0.04), rgba(0, 12, 18, 0.16) 62%, rgba(0, 7, 10, 0.42)) !important;
+  }
+
+  .main-content {
+    width: min(1680px, calc(100% - 4.8rem)) !important;
+    max-width: 1680px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .np-last-updated {
+    width: min(1540px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-right: 0.2rem !important;
+  }
+
+  .np-hero {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    min-height: clamp(360px, 36vw, 520px) !important;
+    padding-top: clamp(2.4rem, 4.4vw, 4.9rem) !important;
+    padding-bottom: clamp(2.1rem, 3.8vw, 4.1rem) !important;
+    padding-left: max(2.8rem, calc((100vw - 1540px) / 2 + 1.2rem)) !important;
+    padding-right: max(2.8rem, calc((100vw - 1540px) / 2 + 1.2rem)) !important;
+    grid-template-columns: minmax(0, 610px) minmax(280px, 390px) !important;
+    justify-content: start !important;
+    align-items: center !important;
+    gap: clamp(7rem, 13vw, 17rem) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background:
+      linear-gradient(90deg, rgba(0, 8, 13, 0.26) 0%, rgba(0, 10, 16, 0.12) 38%, rgba(0, 8, 13, 0.05) 65%, rgba(0, 8, 13, 0.10) 100%),
+      radial-gradient(circle at 67% 46%, rgba(0, 230, 246, 0.075), transparent 22rem),
+      radial-gradient(circle at 18% 24%, rgba(236, 183, 110, 0.045), transparent 18rem) !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .np-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.22), transparent 42%, rgba(0, 0, 0, 0.10)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.05), transparent 46%, rgba(0, 0, 0, 0.14)) !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .np-hero::after {
+    content: none !important;
+  }
+
+  .np-hero-content {
+    max-width: 610px !important;
+    justify-self: start !important;
+  }
+
+  .np-hero h1 {
+    font-size: clamp(3.55rem, 5.0vw, 5.65rem) !important;
+    line-height: 0.91 !important;
+    margin-bottom: 1.05rem !important;
+    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.40) !important;
+  }
+
+  .np-hero-title-sub {
+    font-size: 0.60em !important;
+    margin-top: 0.28rem !important;
+  }
+
+  .np-hero-text {
+    max-width: 610px !important;
+    color: rgba(245, 249, 248, 0.94) !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.46) !important;
+  }
+
+  .np-hero-highlight {
+    max-width: 610px !important;
+    border-radius: 0.45rem !important;
+    border: 1px solid rgba(72, 122, 146, 0.44) !important;
+    border-left: 4px solid rgba(236, 183, 110, 0.82) !important;
+    background:
+      linear-gradient(135deg, rgba(236, 183, 110, 0.08), rgba(0, 230, 246, 0.025) 58%, transparent),
+      rgba(0, 8, 13, 0.30) !important;
+    backdrop-filter: blur(4px) !important;
+    box-shadow: none !important;
+  }
+
+  .np-hero-logo {
+    width: clamp(260px, 20vw, 345px) !important;
+    height: clamp(260px, 20vw, 345px) !important;
+    justify-self: start !important;
+    transform: translateX(0) !important;
+    filter:
+      drop-shadow(0 20px 28px rgba(0, 0, 0, 0.38))
+      drop-shadow(0 0 22px rgba(0, 230, 246, 0.18)) !important;
+  }
+
+  .echo-guide-box {
+    width: min(1540px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0.4rem !important;
+    margin-bottom: 1.8rem !important;
+    border-radius: 0.65rem !important;
+    background:
+      linear-gradient(90deg, rgba(0, 15, 22, 0.46), rgba(8, 28, 36, 0.28) 55%, rgba(0, 10, 15, 0.36)),
+      radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.08), transparent 13rem) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .np-card-grid,
+  .main-content > h2,
+  .main-content > p,
+  .main-content > hr {
+    width: min(1540px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1220px) {
+  .np-hero {
+    grid-template-columns: minmax(0, 1fr) 230px !important;
+    gap: 2.6rem !important;
+    padding-left: 2.1rem !important;
+    padding-right: 2.1rem !important;
+  }
+
+  .np-hero-logo {
+    width: 230px !important;
+    height: 230px !important;
+  }
+}
