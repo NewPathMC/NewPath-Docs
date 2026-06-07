@@ -49,12 +49,12 @@ body {
     ),
     radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.012), transparent 34rem),
     radial-gradient(circle at 84% 22%, rgba(0, 230, 246, 0.018), transparent 36rem),
-    url("../images/background-site.png"),
+    url("../images/background-site.webp"),
     linear-gradient(180deg, #181b1d 0%, #121516 48%, #0b0d0e 100%);
   background-size: cover, auto, auto, cover, auto;
   background-position: center top, center, center, center top, center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   color: var(--np-text);
 }
 
@@ -1279,7 +1279,7 @@ body {
 
 /* =========================================================
    Performance-Optimierung
-   - kein fixed background beim Scrollen
+   - fixed background wieder aktiviert, aber Bild optimiert
    - keine Blur-/Glass-Effekte
    - reduzierte Schatten/Filter auf großen Elementen
    ========================================================= */
@@ -1289,7 +1289,13 @@ html {
 }
 
 body {
-  background-attachment: scroll !important;
+  background-attachment: fixed !important;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  body {
+    background-attachment: scroll !important;
+  }
 }
 
 .main,
