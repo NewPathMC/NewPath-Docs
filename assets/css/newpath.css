@@ -3479,3 +3479,100 @@ body {
       radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.075), transparent 13rem) !important;
   }
 }
+
+/* =========================================================
+   Schritt 16: Hero stärker an Vorlage ausrichten
+   - Hero-Inhalt weiter links statt zentriert
+   - kein Hero-Balken/keine Bühne als Fläche
+   - Logo bleibt frei auf dem Hintergrund
+   - ECHO/Schnellzugriff bleiben auf ruhiger Content-Breite
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .main-content-wrap,
+  .main-content,
+  .main-content .page-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .np-hero {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 1.15rem 0 !important;
+    padding-top: clamp(2.25rem, 4.2vw, 4.6rem) !important;
+    padding-bottom: clamp(2rem, 3.7vw, 4rem) !important;
+    padding-left: clamp(9.5rem, 11.7vw, 13.2rem) !important;
+    padding-right: clamp(2.7rem, 6vw, 7rem) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 610px) minmax(250px, 350px) !important;
+    justify-content: start !important;
+    justify-items: start !important;
+    align-items: center !important;
+    gap: clamp(4.8rem, 8.8vw, 10.5rem) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .np-hero::before,
+  .np-hero::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .np-hero-content {
+    max-width: 610px !important;
+    justify-self: start !important;
+  }
+
+  .np-hero-logo {
+    width: clamp(255px, 18vw, 330px) !important;
+    height: clamp(255px, 18vw, 330px) !important;
+    justify-self: start !important;
+    transform: none !important;
+  }
+
+  .np-hero-highlight {
+    max-width: 560px !important;
+    background: rgba(0, 8, 13, 0.30) !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+  }
+
+  .echo-guide-box,
+  .np-card-grid,
+  .main-content > h2,
+  .main-content > p,
+  .main-content > hr,
+  .main-content .page-content > h2,
+  .main-content .page-content > p,
+  .main-content .page-content > hr {
+    width: min(1500px, calc(100% - 4.8rem)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1220px) {
+  .np-hero {
+    padding-left: 2.4rem !important;
+    padding-right: 2.4rem !important;
+    grid-template-columns: minmax(0, 1fr) 230px !important;
+    gap: 2.8rem !important;
+  }
+
+  .np-hero-logo {
+    width: 230px !important;
+    height: 230px !important;
+  }
+}
