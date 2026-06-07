@@ -15,29 +15,66 @@ permissions:
   contents: write
 
 jobs:
-  update-timestamps:
+  update-md-timestamps:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Git konfigurieren
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Geänderte Website-Markdown-Dateien ermitteln
+        id: changed-files
+        shell: bash
+        run: |
+          CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRT "${{ github.event.before }}" "${{ github.sha }}" -- index.md regelwerk.md philosophie.md faq.md serverinfos.md || true)
+
+          echo "Geänderte Website-Dateien:"
+          echo "$CHANGED_FILES"
+
+          {
+            echo "files<<EOF"
+            echo "$CHANGED_FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Zeitstempel aktualisieren
+        if: steps.changed-files.outputs.files != ''
+        shell: bash
         run: |
-          DATE=$(TZ="Europe/Berlin" date +"%d.%m.%Y %H:%M Uhr")
+          TIMESTAMP=$(TZ="Europe/Berlin" date +"%d.%m.%Y %H:%M Uhr")
 
-          FILES="index.md regelwerk.md philosophie.md faq.md serverinfos.md"
+          echo "${{ steps.changed-files.outputs.files }}" | while IFS= read -r file; do
+            if [ -z "$file" ]; then
+              continue
+            fi
 
-          for file in $FILES; do
-            if [ -f "$file" ]; then
-              if grep -q "<!-- AUTO_UPDATED_START -->" "$file"; then
-                sed -i "/<!-- AUTO_UPDATED_START -->/,/<!-- AUTO_UPDATED_END -->/c\\<!-- AUTO_UPDATED_START -->\n<p class=\"np-last-updated\">Zuletzt aktualisiert: $DATE</p>\n<!-- AUTO_UPDATED_END -->" "$file"
-              fi
+            if [ ! -f "$file" ]; then
+              continue
+            fi
+
+            echo "Aktualisiere Zeitstempel in: $file"
+
+            if grep -q "<!-- AUTO_UPDATED_START -->" "$file"; then
+              sed -i "/<!-- AUTO_UPDATED_START -->/,/<!-- AUTO_UPDATED_END -->/c\\<!-- AUTO_UPDATED_START -->\n<p class=\"np-last-updated\">Zuletzt aktualisiert: $TIMESTAMP</p>\n<!-- AUTO_UPDATED_END -->" "$file"
             fi
           done
 
       - name: Änderungen committen
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Doku: Zeitstempel aktualisiert"
-          file_pattern: "index.md regelwerk.md philosophie.md faq.md serverinfos.md"
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "Keine Zeitstempel-Änderungen vorhanden."
+            exit 0
+          fi
+
+          git add index.md regelwerk.md philosophie.md faq.md serverinfos.md
+          git commit -m "Doku: Zeitstempel aktualisiert"
+          git push
