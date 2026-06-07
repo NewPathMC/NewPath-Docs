@@ -43,14 +43,14 @@ body {
   background:
     linear-gradient(
       180deg,
-      rgba(8, 10, 11, 0.30) 0%,
-      rgba(8, 10, 11, 0.40) 46%,
-      rgba(6, 8, 9, 0.56) 100%
+      rgba(3, 8, 12, 0.10) 0%,
+      rgba(3, 10, 15, 0.20) 42%,
+      rgba(4, 10, 13, 0.48) 100%
     ),
-    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.012), transparent 34rem),
-    radial-gradient(circle at 84% 22%, rgba(0, 230, 246, 0.018), transparent 36rem),
+    radial-gradient(circle at 18% 16%, rgba(236, 183, 110, 0.045), transparent 34rem),
+    radial-gradient(circle at 84% 22%, rgba(0, 230, 246, 0.045), transparent 36rem),
     url("../images/background-site.webp"),
-    linear-gradient(180deg, #181b1d 0%, #121516 48%, #0b0d0e 100%);
+    linear-gradient(180deg, #101820 0%, #0b1116 48%, #06090b 100%);
   background-size: cover, auto, auto, cover, auto;
   background-position: center top, center, center, center top, center;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
@@ -68,18 +68,14 @@ body {
 }
 
 .main-content-wrap {
-  max-width: 1120px;
+  max-width: none;
   min-height: calc(100vh - 4.45rem);
   background:
-    radial-gradient(circle at 100% 12%, rgba(53, 101, 125, 0.13), transparent 24rem),
-    radial-gradient(circle at 50% 100%, rgba(53, 101, 125, 0.09), transparent 34rem),
-    linear-gradient(180deg, rgba(20, 52, 67, 0.88), rgba(14, 34, 43, 0.90) 68%, rgba(12, 28, 35, 0.90));
-  border-left: 1px solid rgba(72, 122, 146, 0.12);
-  border-right: 1px solid rgba(72, 122, 146, 0.14);
-  box-shadow:
-    24px 0 46px rgba(5, 11, 14, 0.24),
-    -24px 0 46px rgba(5, 11, 14, 0.22),
-    0 22px 42px rgba(0, 0, 0, 0.16);
+    linear-gradient(90deg, rgba(2, 8, 12, 0.74), rgba(8, 23, 30, 0.18) 18%, rgba(9, 25, 33, 0.16) 82%, rgba(2, 8, 12, 0.72)),
+    linear-gradient(180deg, rgba(5, 16, 22, 0.16), rgba(5, 16, 22, 0.38) 74%, rgba(5, 13, 17, 0.62));
+  border-left: 0;
+  border-right: 0;
+  box-shadow: none;
 }
 
 .main-content {
@@ -580,44 +576,43 @@ body {
 .np-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 2.25rem;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
-  margin: 0 0 1.35rem;
-  padding: 1.75rem 2.35rem;
-  border: 1px solid var(--np-border-soft);
-  border-top: 1px solid rgba(236, 183, 110, 0.28);
-  border-radius: 1.1rem;
+  margin: 0 0 1.05rem;
+  padding: clamp(1.65rem, 4.3vw, 4.15rem) clamp(1.4rem, 3.9vw, 3.6rem);
+  min-height: clamp(330px, 35vw, 465px);
+  border: 0;
+  border-top: 1px solid rgba(0, 230, 246, 0.12);
+  border-bottom: 1px solid rgba(0, 230, 246, 0.10);
+  border-radius: 0;
   background:
-    radial-gradient(circle at 78% 42%, rgba(0, 230, 246, 0.13), transparent 18rem),
-    radial-gradient(circle at 0% 0%, rgba(236, 183, 110, 0.08), transparent 18rem),
-    linear-gradient(90deg, rgba(111, 130, 75, 0.08), transparent 24%),
-    linear-gradient(135deg, rgba(72, 122, 146, 0.44), rgba(21, 56, 74, 0.88) 46%, rgba(4, 13, 18, 0.96));
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
-  overflow: hidden;
+    radial-gradient(circle at 76% 45%, rgba(0, 230, 246, 0.12), transparent 19rem),
+    radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.075), transparent 18rem),
+    linear-gradient(90deg, rgba(2, 10, 16, 0.50), rgba(4, 18, 24, 0.23) 48%, rgba(3, 10, 14, 0.56));
+  box-shadow: none;
+  overflow: visible;
 }
 
 .np-hero::before {
   content: "";
   position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  top: 0;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--np-moss), rgba(236, 183, 110, 0.86), rgba(0, 230, 246, 0.72));
-  opacity: 0.62;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.36), transparent 44%, rgba(0, 0, 0, 0.20)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.10), transparent 42%, rgba(0, 0, 0, 0.18));
+  pointer-events: none;
 }
 
 .np-hero::after {
   content: "";
   position: absolute;
-  right: -4rem;
-  bottom: -4rem;
-  width: 16rem;
-  height: 16rem;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(0, 230, 246, 0.08), transparent 62%);
+  left: clamp(1.4rem, 3.9vw, 3.6rem);
+  right: clamp(1.4rem, 3.9vw, 3.6rem);
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 230, 246, 0.45), rgba(236, 183, 110, 0.28), transparent 78%);
   pointer-events: none;
 }
 
@@ -675,10 +670,10 @@ body {
   padding: 0.82rem 1rem;
   border: 1px solid rgba(72, 122, 146, 0.78);
   border-left: 4px solid var(--np-moss);
-  border-radius: 0.75rem;
+  border-radius: 0.35rem;
   background:
-    linear-gradient(135deg, rgba(111, 130, 75, 0.08), transparent 42%),
-    rgba(11, 24, 30, 0.66);
+    linear-gradient(135deg, rgba(111, 130, 75, 0.06), transparent 42%),
+    rgba(4, 14, 20, 0.46);
   color: var(--np-text-muted);
 }
 
@@ -688,8 +683,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: min(285px, 100%);
-  height: 285px;
+  width: min(310px, 100%);
+  height: 310px;
   justify-self: center;
   opacity: 0.98;
   transition: transform 0.16s ease, opacity 0.16s ease;
@@ -718,20 +713,20 @@ body {
 
   position: relative;
   display: grid;
-  grid-template-columns: 166px minmax(0, 1fr);
+  grid-template-columns: 170px minmax(0, 1fr);
   gap: 0.95rem;
   align-items: center;
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.55rem;
   padding: 0.95rem 1.35rem 0.95rem 1.55rem;
-  min-height: 152px;
-  border: 1px solid rgba(72, 122, 146, 0.56);
-  border-radius: 0.95rem;
+  min-height: 150px;
+  border: 1px solid rgba(0, 230, 246, 0.20);
+  border-left: 3px solid rgba(0, 230, 246, 0.78);
+  border-radius: 0;
   background:
-    linear-gradient(var(--echo-accent), var(--echo-accent)) left 1.05rem top 1.2rem / 3px calc(100% - 2.4rem) no-repeat,
     radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.10), transparent 12rem),
-    radial-gradient(circle at 100% 50%, rgba(111, 130, 75, 0.08), transparent 16rem),
-    linear-gradient(135deg, rgba(21, 56, 74, 0.82), rgba(11, 24, 30, 0.86));
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.20);
+    radial-gradient(circle at 100% 50%, rgba(111, 130, 75, 0.06), transparent 16rem),
+    linear-gradient(90deg, rgba(5, 20, 27, 0.54), rgba(7, 20, 26, 0.36));
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -2826,6 +2821,164 @@ body {
   .echo-guide-content h2 {
     margin-bottom: 0.2rem !important;
     font-size: 1.45rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1220px) {
+  .np-hero {
+    grid-template-columns: minmax(0, 1fr) 245px !important;
+    padding: 2.25rem 2.25rem !important;
+  }
+
+  .np-hero-logo {
+    width: 245px !important;
+    height: 245px !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   Schritt 11: Hero näher an die Vorlage bringen
+   - weniger Card/Bögen
+   - Hintergrundbild stärker sichtbar
+   - dunkler Overlay-Schleier reduziert
+   - Hero wirkt mehr wie breite Bühne
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  body {
+    background:
+      linear-gradient(180deg, rgba(3, 8, 12, 0.10) 0%, rgba(3, 10, 15, 0.20) 42%, rgba(4, 10, 13, 0.48) 100%),
+      radial-gradient(circle at 18% 16%, rgba(236, 183, 110, 0.045), transparent 34rem),
+      radial-gradient(circle at 84% 22%, rgba(0, 230, 246, 0.045), transparent 36rem),
+      url("../images/background-site.webp"),
+      linear-gradient(180deg, #101820 0%, #0b1116 48%, #06090b 100%) !important;
+    background-size: cover, auto, auto, cover, auto !important;
+    background-position: center top, center, center, center top, center !important;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat !important;
+    background-attachment: fixed !important;
+  }
+
+  .main-content-wrap {
+    background:
+      linear-gradient(90deg, rgba(2, 8, 12, 0.68), rgba(8, 23, 30, 0.12) 18%, rgba(9, 25, 33, 0.12) 82%, rgba(2, 8, 12, 0.68)),
+      linear-gradient(180deg, rgba(5, 16, 22, 0.10), rgba(5, 16, 22, 0.30) 74%, rgba(5, 13, 17, 0.56)) !important;
+    box-shadow: none !important;
+  }
+
+  .main-content {
+    width: min(1540px, calc(100% - 4.2rem)) !important;
+    max-width: 1540px !important;
+  }
+
+  .np-hero {
+    min-height: clamp(330px, 35vw, 465px) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 430px) !important;
+    gap: clamp(2rem, 5vw, 4.5rem) !important;
+    align-items: center !important;
+    margin: 0 0 1.1rem 0 !important;
+    padding: clamp(1.65rem, 4.3vw, 4.15rem) clamp(1.4rem, 3.9vw, 3.6rem) !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(0, 230, 246, 0.12) !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.10) !important;
+    border-radius: 0 !important;
+    background:
+      radial-gradient(circle at 76% 45%, rgba(0, 230, 246, 0.12), transparent 19rem),
+      radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.075), transparent 18rem),
+      linear-gradient(90deg, rgba(2, 10, 16, 0.50), rgba(4, 18, 24, 0.23) 48%, rgba(3, 10, 14, 0.56)) !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    isolation: isolate !important;
+  }
+
+  .np-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.36), transparent 44%, rgba(0, 0, 0, 0.20)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.10), transparent 42%, rgba(0, 0, 0, 0.18)) !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .np-hero::after {
+    content: "" !important;
+    position: absolute !important;
+    left: clamp(1.4rem, 3.9vw, 3.6rem) !important;
+    right: clamp(1.4rem, 3.9vw, 3.6rem) !important;
+    top: auto !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: 1px !important;
+    border-radius: 0 !important;
+    opacity: 1 !important;
+    z-index: 0 !important;
+    background: linear-gradient(90deg, rgba(0, 230, 246, 0.45), rgba(236, 183, 110, 0.28), transparent 78%) !important;
+    pointer-events: none !important;
+  }
+
+  .np-hero-content {
+    max-width: 760px !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .np-hero h1 {
+    margin-bottom: 0.82rem !important;
+    font-size: clamp(3.45rem, 4.7vw, 5.25rem) !important;
+    line-height: 0.93 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .np-hero-title-sub {
+    margin-top: 0.2rem !important;
+    font-size: 0.66em !important;
+  }
+
+  .np-hero-text {
+    max-width: 680px !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.02rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .np-hero-highlight {
+    max-width: 740px !important;
+    padding: 0.88rem 1.08rem !important;
+    border-radius: 0.35rem !important;
+    border: 1px solid rgba(72, 122, 146, 0.52) !important;
+    border-left: 4px solid rgba(236, 183, 110, 0.82) !important;
+    background:
+      linear-gradient(135deg, rgba(236, 183, 110, 0.06), transparent 48%),
+      rgba(0, 9, 15, 0.34) !important;
+    box-shadow: none !important;
+  }
+
+  .np-hero-logo {
+    width: 330px !important;
+    height: 330px !important;
+    justify-self: center !important;
+    align-self: center !important;
+    transform: translateX(0.2rem) !important;
+    filter:
+      drop-shadow(0 20px 28px rgba(0, 0, 0, 0.36))
+      drop-shadow(0 0 22px rgba(0, 230, 246, 0.22))
+      drop-shadow(0 0 18px rgba(236, 183, 110, 0.10)) !important;
+  }
+
+  .echo-guide-box {
+    border-radius: 0 !important;
+    border: 1px solid rgba(0, 230, 246, 0.20) !important;
+    border-left: 3px solid rgba(0, 230, 246, 0.78) !important;
+    background:
+      radial-gradient(circle at 8% 50%, rgba(0, 230, 246, 0.10), transparent 12rem),
+      radial-gradient(circle at 100% 50%, rgba(111, 130, 75, 0.06), transparent 16rem),
+      linear-gradient(90deg, rgba(5, 20, 27, 0.54), rgba(7, 20, 26, 0.36)) !important;
+    box-shadow: none !important;
   }
 }
 
