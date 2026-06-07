@@ -14,7 +14,10 @@ permalink: /
 
     <p class="np-kicker">Offizielles Modpack</p>
 
-    <h1>NewPath – Echoes of the Wild</h1>
+    <h1>
+      NewPath<br>
+      Echoes of the Wild
+    </h1>
 
     <p class="np-hero-text">
       Ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung,
