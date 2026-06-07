@@ -430,7 +430,7 @@ body {
 .np-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
+  grid-template-columns: minmax(0, 1fr) 190px;
   gap: 1.75rem;
   align-items: center;
   margin: 0 0 1.4rem;
@@ -518,10 +518,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 118px;
-  height: 118px;
+  width: 158px;
+  height: 158px;
   justify-self: center;
-  opacity: 0.96;
+  opacity: 0.98;
   transition: transform 0.16s ease, opacity 0.16s ease, filter 0.16s ease;
 }
 
@@ -544,12 +544,12 @@ body {
 .echo-guide-box {
   position: relative;
   display: grid;
-  grid-template-columns: 118px minmax(0, 1fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   gap: 1rem;
   align-items: center;
   margin: 0 0 1.75rem;
   padding: 0.95rem 1.35rem;
-  min-height: 132px;
+  min-height: 142px;
   border: 1px solid rgba(53, 101, 125, 0.56);
   border-left: 4px solid var(--np-cyan);
   border-radius: 0.95rem;
@@ -588,14 +588,14 @@ body {
 .echo-guide-image {
   position: relative;
   z-index: 1;
-  height: 112px;
+  height: 124px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .echo-guide-image img {
-  width: 116px;
+  width: 124px;
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -715,18 +715,57 @@ body {
 }
 
 .np-card-title {
-  display: block;
-  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.45rem;
   color: var(--np-cyan);
-  font-weight: 800;
-  font-size: 1.03rem;
+  font-weight: 900;
+  font-size: 1.14rem;
+  line-height: 1.2;
   text-decoration: none;
+}
+
+.np-card-title::before {
+  content: "";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  color: var(--np-cyan);
+  text-shadow: 0 0 10px rgba(0, 230, 246, 0.28);
+  filter: drop-shadow(0 0 5px rgba(0, 230, 246, 0.22));
+}
+
+.np-card:nth-child(1) .np-card-title::before {
+  content: "⚖";
+}
+
+.np-card:nth-child(2) .np-card-title::before {
+  content: "✦";
+}
+
+.np-card:nth-child(3) .np-card-title::before {
+  content: "?";
+  font-weight: 900;
+}
+
+.np-card:nth-child(4) .np-card-title::before {
+  content: "◆";
 }
 
 .np-card-title:hover,
 .np-card:hover .np-card-title {
   color: var(--np-gold);
   text-decoration: none;
+}
+
+.np-card:hover .np-card-title::before {
+  color: var(--np-gold);
+  text-shadow: 0 0 10px rgba(236, 183, 110, 0.28);
+  filter: drop-shadow(0 0 5px rgba(236, 183, 110, 0.22));
 }
 
 .np-card-text {
@@ -822,8 +861,8 @@ body {
 
   .np-hero-logo {
     justify-self: start;
-    width: 96px;
-    height: 96px;
+    width: 120px;
+    height: 120px;
   }
 
   .np-hero h1 {
@@ -831,18 +870,18 @@ body {
   }
 
   .echo-guide-box {
-    grid-template-columns: 84px minmax(0, 1fr);
+    grid-template-columns: 104px minmax(0, 1fr);
     gap: 0.85rem;
     padding: 0.9rem 1rem;
-    min-height: 112px;
+    min-height: 122px;
   }
 
   .echo-guide-image {
-    height: 88px;
+    height: 102px;
   }
 
   .echo-guide-image img {
-    width: 78px;
+    width: 98px;
   }
 
   .echo-guide-content h2 {
@@ -855,6 +894,10 @@ body {
 
   .np-card {
     min-height: auto;
+  }
+
+  .np-card-title {
+    font-size: 1.08rem;
   }
 
   .main-content h1 {
