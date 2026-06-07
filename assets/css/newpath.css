@@ -1746,3 +1746,80 @@ body {
     border-radius: 0 0 0.75rem 0.75rem !important;
   }
 }
+
+/* =========================================================
+   Fix: Zeitstempel auf Unterseiten wirklich dezent anzeigen
+   - Keine Box, kein Rahmen, kein Hintergrund
+   - Rechtsbündig als kleine Infozeile
+   - Startseite bleibt ohne Zeitstempel
+   ========================================================= */
+
+.main-content blockquote:has(strong),
+.main-content .page-content blockquote:has(strong),
+.main-content .np-update-box,
+.main-content .page-content .np-update-box {
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 0 1.05rem 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-align: right !important;
+  color: rgba(219, 234, 238, 0.46) !important;
+  font-size: 0.69rem !important;
+  line-height: 1.25 !important;
+  font-style: normal !important;
+}
+
+.main-content blockquote:has(strong)::before,
+.main-content blockquote:has(strong)::after,
+.main-content .page-content blockquote:has(strong)::before,
+.main-content .page-content blockquote:has(strong)::after,
+.main-content .np-update-box::before,
+.main-content .np-update-box::after,
+.main-content .page-content .np-update-box::before,
+.main-content .page-content .np-update-box::after {
+  content: none !important;
+  display: none !important;
+}
+
+.main-content blockquote:has(strong) p,
+.main-content .page-content blockquote:has(strong) p,
+.main-content .np-update-box p,
+.main-content .page-content .np-update-box p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-style: normal !important;
+}
+
+.main-content blockquote:has(strong) strong,
+.main-content .page-content blockquote:has(strong) strong,
+.main-content .np-update-box strong,
+.main-content .page-content .np-update-box strong {
+  color: rgba(236, 183, 110, 0.52) !important;
+  font-weight: 700 !important;
+}
+
+/* Startseite: Zeitstempel komplett ausblenden, egal ob Blockquote oder Update-Box */
+.main-content h1#newpath--echoes-of-the-wild ~ blockquote:has(strong),
+.main-content h1#newpath--echoes-of-the-wild ~ .np-update-box,
+.main-content h2#was-ist-newpath ~ blockquote:has(strong),
+.main-content h2#was-ist-newpath ~ .np-update-box,
+.main-content .page-content h1#newpath--echoes-of-the-wild ~ blockquote:has(strong),
+.main-content .page-content h1#newpath--echoes-of-the-wild ~ .np-update-box,
+.main-content .page-content h2#was-ist-newpath ~ blockquote:has(strong),
+.main-content .page-content h2#was-ist-newpath ~ .np-update-box {
+  display: none !important;
+}
