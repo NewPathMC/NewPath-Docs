@@ -2352,3 +2352,47 @@ body:not(.home) .main-content th {
     justify-content: flex-start !important;
   }
 }
+/* =========================================================
+   Step 75: ECHO-Bildrahmen auf allen Unterseiten entfernen
+   - ECHO steht frei in der Box
+   - gilt für Modpack Hilfe, Streamer, Team, FAQ, Philosophie, Regelwerk usw.
+   - Header/Footer bleiben unangetastet
+   ========================================================= */
+
+.echo-page-box .echo-page-image img,
+.echo-page-box-team .echo-page-image img,
+.echo-page-box-philosophy .echo-page-image img,
+.echo-page-box-faq .echo-page-image img,
+.echo-page-box-rules .echo-page-image img,
+.echo-page-box-streamer .echo-page-image img,
+.echo-page-box-help .echo-page-image img,
+.np-error-echo img {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+.echo-page-box .echo-page-image,
+.echo-page-box-team .echo-page-image,
+.echo-page-box-philosophy .echo-page-image,
+.echo-page-box-faq .echo-page-image,
+.echo-page-box-rules .echo-page-image,
+.echo-page-box-streamer .echo-page-image,
+.echo-page-box-help .echo-page-image {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ECHO darf weiterhin einen leichten Schatten haben, aber keinen Rahmen/Kasten */
+.echo-page-box .echo-page-image img,
+.echo-page-box-team .echo-page-image img,
+.echo-page-box-philosophy .echo-page-image img,
+.echo-page-box-faq .echo-page-image img,
+.echo-page-box-rules .echo-page-image img,
+.echo-page-box-streamer .echo-page-image img,
+.echo-page-box-help .echo-page-image img {
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34)) !important;
+}
