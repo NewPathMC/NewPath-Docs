@@ -2977,3 +2977,132 @@ body.np-page-sub .main-content > h2,
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+/* =========================================================
+   Step 83: Einheitliches Schriftarten-Gerüst
+   Vorgabe:
+   1. Große Hero-/Fantasy-Titel = Georgia
+   2. Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI
+   3. Fließtext = Segoe UI
+   4. Kicker / Labels / kleine Kategoriezeilen = Segoe UI
+   ========================================================= */
+
+:root {
+  --np-font-hero: Georgia, "Times New Roman", serif;
+  --np-font-heading: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --np-font-body: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --np-font-label: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 1. Große Hero-/Fantasy-Titel = Georgia */
+.np-hero h1,
+.np-home-v2 .np-hero h1,
+.np-hero-title-main,
+.np-hero-title-sub {
+  font-family: var(--np-font-hero) !important;
+}
+
+/* 2. Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+body.np-page-sub .main-content > h1,
+body.np-page-sub .main-content > h2,
+body.np-page-sub .main-content > h3,
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2,
+.np-section-header h1,
+.np-section-header h2,
+.np-section-header h3,
+.np-title,
+.np-card-title,
+.np-route-title,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2,
+.np-pathfinder-copy h2,
+.np-info-card h2,
+.np-info-card h3,
+.np-team-card h2,
+.np-team-member-card h3,
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-asset-card h2,
+.np-asset-card h3,
+.np-faq-details summary,
+.np-help-details summary,
+.np-accordion summary {
+  font-family: var(--np-font-heading) !important;
+}
+
+/* 3. Fließtext = Segoe UI */
+body,
+.main-content,
+.main-content p,
+.main-content li,
+.main-content td,
+.main-content th,
+.main-content blockquote,
+.np-lead,
+.np-card-text,
+.np-route-text,
+.np-about-text p,
+.np-origin-teaser p,
+.np-info-card p,
+.np-team-card p,
+.np-team-member-card p,
+.np-streamer-card p,
+.np-asset-card p,
+.np-faq-details p,
+.np-help-details p,
+.np-accordion p,
+.np-note,
+.np-help-note,
+.np-rules-note,
+.echo-page-box p:not(.echo-page-kicker),
+.echo-page-box-team p:not(.echo-page-kicker),
+.echo-page-box-philosophy p:not(.echo-page-kicker),
+.echo-page-box-faq p:not(.echo-page-kicker),
+.echo-page-box-rules p:not(.echo-page-kicker),
+.echo-page-box-streamer p:not(.echo-page-kicker),
+.echo-page-box-help p:not(.echo-page-kicker) {
+  font-family: var(--np-font-body) !important;
+}
+
+/* 4. Kicker / Labels / kleine Kategoriezeilen = Segoe UI */
+.np-kicker,
+.np-section-kicker,
+.echo-page-kicker,
+.np-eyebrow,
+.np-card-kicker,
+.np-team-role,
+.np-streamer-label,
+.np-status-item small,
+.np-server-brief-grid strong,
+.np-last-updated,
+.np-page-meta,
+.np-site-footer-brand,
+.np-site-footer-links,
+.np-topbar-title,
+.np-top-nav a,
+.main-header .search-input,
+.main-header .aux-nav a {
+  font-family: var(--np-font-label) !important;
+}
+
+/* Sicherheitsregel:
+   Nur der Hero/Fantasy-Titel darf Georgia nutzen.
+   Alle normalen Unterseiten-H1 bleiben bewusst Segoe UI. */
+body.np-page-sub .main-content > h1,
+.np-page-section > h1,
+.np-section-header > h1,
+.np-title {
+  font-family: var(--np-font-heading) !important;
+}
