@@ -21,10 +21,10 @@ permalink: /philosophie.html
 
   <div class="echo-page-content">
     <p class="echo-page-kicker">ECHO – Der Wegbegleiter</p>
-    <h2>Warum NewPath anders gedacht ist.</h2>
+    <h2>Philosophie – NewPath · Echoes of the Wild</h2>
     <p>
-      NewPath ist eine Welt für Spieler, die Minecraft in ihrem eigenen Tempo erleben
-      möchten. Entdeckung, Kreativität und Gemeinschaft stehen im Mittelpunkt.
+      NewPath ist eine bewusst gestaltete Welt für Spieler, die Minecraft in ihrem
+      eigenen Tempo erleben möchten.
     </p>
   </div>
 </section>
@@ -34,20 +34,17 @@ permalink: /philosophie.html
     <p class="np-eyebrow">Philosophie</p>
     <h1 class="np-title">NewPath · Echoes of the Wild</h1>
     <p class="np-lead">
-      NewPath ist bewusst gestaltet und unterscheidet sich deutlich von klassischen
-      „Alles-drin“-Ansätzen. Das Ziel ist kein Übermaß an Funktionen, sondern ein
-      stimmiges Gesamtbild, das sich wie aus einem Guss anfühlt.
+      NewPath steht für eine stimmige Minecraft-Erfahrung, in der Entdeckung,
+      Kreativität, Gemeinschaft und ein eigener Weg im Mittelpunkt stehen.
     </p>
   </div>
 
-  <div class="np-card-grid np-card-grid-4 np-philosophy-grid">
+  <div class="np-card-grid np-card-grid-1 np-philosophy-grid">
     <article class="np-info-card">
       <span class="np-card-kicker">01</span>
       <h2 class="np-card-title">Im eigenen Tempo</h2>
       <p class="np-card-text">
-        NewPath ist eine Welt für Spieler, die Minecraft in ihrem eigenen Tempo erleben
-        möchten. Es geht nicht darum, möglichst schnell alles zu erreichen, sondern darum,
-        den eigenen Weg bewusst zu gehen.
+        NewPath ist eine Welt für Spieler, die Minecraft in ihrem eigenen Tempo erleben möchten.
       </p>
     </article>
 
@@ -63,39 +60,19 @@ permalink: /philosophie.html
 
     <article class="np-info-card">
       <span class="np-card-kicker">03</span>
-      <h2 class="np-card-title">Klare Identität</h2>
+      <h2 class="np-card-title">Bewusst gestaltet</h2>
       <p class="np-card-text">
-        Viele Inhalte sind speziell auf das Projekt abgestimmt, um eine klare Identität
-        und Wiedererkennbarkeit zu schaffen. NewPath soll sich nicht beliebig anfühlen,
-        sondern als eigene Welt erkennbar bleiben.
+        NewPath ist bewusst gestaltet und unterscheidet sich deutlich von klassischen
+        „Alles-drin“-Ansätzen. Viele Inhalte sind speziell auf das Projekt abgestimmt,
+        um eine klare Identität und Wiedererkennbarkeit zu schaffen. Das Ziel ist kein
+        Übermaß an Funktionen, sondern ein stimmiges Gesamtbild, das sich wie aus einem
+        Guss anfühlt.
       </p>
     </article>
 
     <article class="np-info-card">
       <span class="np-card-kicker">04</span>
-      <h2 class="np-card-title">Ein stimmiges Gesamtbild</h2>
-      <p class="np-card-text">
-        Das Ziel ist kein Übermaß an Funktionen. Stattdessen entsteht ein bewusst
-        abgestimmtes Gesamtbild, bei dem Inhalte, Atmosphäre und Spielgefühl zusammenpassen.
-      </p>
-    </article>
-  </div>
-</section>
-
-<section class="np-page-section np-origin-section">
-  <div class="np-section-header">
-    <p class="np-eyebrow">Community</p>
-    <h1 class="np-title">Gemeinsam weiterentwickeln</h1>
-    <p class="np-lead">
-      NewPath lebt nicht nur vom Modpack selbst, sondern von den Menschen, die die Welt
-      gemeinsam füllen, gestalten und weiterentwickeln.
-    </p>
-  </div>
-
-  <div class="np-card-grid np-card-grid-3 np-origin-timeline">
-    <article class="np-info-card">
-      <span class="np-card-kicker">Miteinander</span>
-      <h2 class="np-card-title">Respekt und Fairness</h2>
+      <h2 class="np-card-title">Respektvolles Miteinander</h2>
       <p class="np-card-text">
         Respekt, Fairness und gegenseitige Rücksichtnahme bilden die Grundlage unserer
         Community. Die Regeln dienen dabei nicht als Hindernis, sondern als Rahmen für
@@ -104,20 +81,12 @@ permalink: /philosophie.html
     </article>
 
     <article class="np-info-card">
-      <span class="np-card-kicker">Entwicklung</span>
-      <h2 class="np-card-title">Feedback und Ideen</h2>
+      <span class="np-card-kicker">05</span>
+      <h2 class="np-card-title">Gemeinsam weiterentwickeln</h2>
       <p class="np-card-text">
         NewPath entwickelt sich gemeinsam mit seiner Community weiter. Feedback, Ideen
-        und Vorschläge helfen dabei, das Projekt kontinuierlich zu verbessern.
-      </p>
-    </article>
-
-    <article class="np-info-card">
-      <span class="np-card-kicker">Charakter</span>
-      <h2 class="np-card-title">Den eigenen Weg bewahren</h2>
-      <p class="np-card-text">
-        Jede Weiterentwicklung soll den eigenen Charakter von NewPath bewahren. Neue
-        Inhalte sollen das Projekt ergänzen, nicht seine Richtung verwässern.
+        und Vorschläge helfen dabei, das Projekt kontinuierlich zu verbessern und seinen
+        eigenen Charakter zu bewahren.
       </p>
     </article>
   </div>
