@@ -6768,3 +6768,343 @@ html body .np-help-details:not([open]) > :not(summary) {
 html body .np-help-details summary {
   cursor: pointer !important;
 }
+
+/* =========================================================
+   STEP 55 – ECHO/Einstieg stabilisieren + Footer global fixen
+   ========================================================= */
+
+/* Grundraster wieder etwas breiter, aber nicht bis an die Ränder ziehen */
+:root {
+  --np-fixed-footer-height: 54px !important;
+  --np-home-content-max: 1180px !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+/* Header/Footer sollen immer zur Viewport-Breite gehören */
+.site-header,
+.np-site-footer {
+  width: 100vw !important;
+  max-width: 100vw !important;
+}
+
+/* Gemeinsame Breite für Startseiten-Blöcke */
+html body.home .np-home .np-status-grid,
+html body.home .np-home .np-meta-row,
+html body.home .np-home .np-main-grid-echo-first,
+html body.home .np-home .np-about-strip,
+html body.home .np-home .np-server-strip,
+html body .np-home .np-status-grid,
+html body .np-home .np-meta-row,
+html body .np-home .np-main-grid-echo-first,
+html body .np-home .np-about-strip,
+html body .np-home .np-server-strip {
+  width: min(var(--np-home-content-max), calc(100vw - clamp(8rem, 15vw, 18rem))) !important;
+  max-width: var(--np-home-content-max) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ECHO + Einstieg: gemeinsame Höhe, keine Verschiebungen, lesbarer */
+html body.home .np-main-grid-echo-first,
+html body .np-home .np-main-grid-echo-first {
+  display: grid !important;
+  grid-template-columns: minmax(430px, 0.95fr) minmax(540px, 1.05fr) !important;
+  gap: 1rem !important;
+  align-items: stretch !important;
+  margin-top: 1.05rem !important;
+  margin-bottom: 1.28rem !important;
+  overflow: visible !important;
+}
+
+html body.home .np-main-grid-echo-first .np-echo-feature,
+html body.home .np-main-grid-echo-first .np-quick-panel,
+html body .np-home .np-main-grid-echo-first .np-echo-feature,
+html body .np-home .np-main-grid-echo-first .np-quick-panel {
+  height: 210px !important;
+  min-height: 210px !important;
+  max-height: 210px !important;
+  overflow: hidden !important;
+  transform: none !important;
+  transition: none !important;
+  filter: none !important;
+}
+
+html body.home .np-main-grid-echo-first .np-echo-feature,
+html body .np-home .np-main-grid-echo-first .np-echo-feature {
+  display: grid !important;
+  grid-template-columns: 138px minmax(0, 1fr) !important;
+  gap: 1rem !important;
+  align-items: center !important;
+  padding: 1rem 1.15rem !important;
+}
+
+html body .np-echo-feature,
+html body .np-echo-feature *,
+html body .np-echo-feature:hover,
+html body .np-echo-feature:focus-within,
+html body .np-echo-feature *:hover,
+html body .np-echo-feature *:focus,
+html body .np-echo-feature *:focus-visible {
+  transform: none !important;
+  translate: none !important;
+  scale: 1 !important;
+  filter: none !important;
+  text-shadow: none !important;
+  transition: none !important;
+}
+
+html body .np-echo-image-wrap {
+  width: 132px !important;
+  min-width: 132px !important;
+  height: 178px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+html body .np-echo-image-wrap::before,
+html body .np-echo-image-wrap::after,
+html body .np-echo-feature::before,
+html body .np-echo-feature::after {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+html body .np-echo-image-wrap img {
+  width: 128px !important;
+  height: 168px !important;
+  max-width: 128px !important;
+  max-height: 168px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+html body .np-echo-content {
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+html body .np-echo-content .np-section-kicker,
+html body .np-echo-content .np-eyebrow {
+  font-size: 0.7rem !important;
+  letter-spacing: 0.1em !important;
+  line-height: 1.1 !important;
+  white-space: normal !important;
+}
+
+html body .np-echo-content h2 {
+  font-size: clamp(1.18rem, 1.12vw, 1.42rem) !important;
+  line-height: 1.08 !important;
+  max-width: 24rem !important;
+  margin: 0.12rem 0 0.42rem !important;
+}
+
+html body .np-echo-content p {
+  font-size: 0.72rem !important;
+  line-height: 1.38 !important;
+  max-width: 29rem !important;
+  margin-bottom: 0 !important;
+}
+
+html body .np-echo-steps {
+  gap: 0.32rem !important;
+  margin-top: 0.52rem !important;
+  flex-wrap: wrap !important;
+}
+
+html body .np-echo-steps span {
+  font-size: 0.58rem !important;
+  line-height: 1 !important;
+  padding: 0.26rem 0.44rem !important;
+  transform: none !important;
+}
+
+/* Einstieg: wieder richtig breit, 4 Karten, keine abgeschnittene Box */
+html body.home .np-main-grid-echo-first .np-quick-panel,
+html body .np-home .np-main-grid-echo-first .np-quick-panel {
+  padding: 1rem 1rem 1.05rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+html body .np-quick-panel .np-section-kicker,
+html body .np-quick-panel .np-eyebrow {
+  font-size: 0.68rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 0.28rem !important;
+}
+
+html body .np-quick-panel h2 {
+  font-size: clamp(1.05rem, 1vw, 1.25rem) !important;
+  margin: 0 0 0.82rem !important;
+}
+
+html body .np-card-grid-guides {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0.62rem !important;
+  align-items: stretch !important;
+  min-width: 0 !important;
+}
+
+html body .np-card-grid-guides .np-card,
+html body .np-card-grid-guides .np-card:hover,
+html body .np-card-grid-guides .np-card:focus-within {
+  height: 106px !important;
+  min-height: 106px !important;
+  max-height: 106px !important;
+  padding: 0.65rem 0.48rem 0.52rem !important;
+  overflow: hidden !important;
+  transform: none !important;
+  transition: none !important;
+  filter: none !important;
+}
+
+html body .np-card-grid-guides .np-card-icon {
+  width: 1.86rem !important;
+  height: 1.86rem !important;
+  margin-bottom: 0.34rem !important;
+}
+
+html body .np-card-grid-guides .np-card-title {
+  font-size: 0.68rem !important;
+  line-height: 1.05 !important;
+  margin-bottom: 0.22rem !important;
+}
+
+html body .np-card-grid-guides .np-card-text {
+  display: none !important;
+}
+
+html body .np-card-grid-guides .np-card-link {
+  font-size: 0.6rem !important;
+  line-height: 1.05 !important;
+}
+
+/* Abschnittsabstände etwas ruhiger */
+html body .np-section-divider,
+html body .np-home > hr {
+  margin: 1.18rem auto !important;
+}
+
+html body.home .np-about-strip,
+html body.home .np-server-strip,
+html body .np-home .np-about-strip,
+html body .np-home .np-server-strip {
+  margin-top: 1.18rem !important;
+}
+
+/* Footer: wirklich global fixed, auch wenn das Theme ihn in main-content rendert */
+html body,
+html body:not(.home) {
+  padding-bottom: calc(var(--np-fixed-footer-height, 54px) + 1.25rem) !important;
+}
+
+html body:not(.home) .main,
+html body:not(.home) .main-content,
+html body:not(.home) .page-content,
+html body:not(.home) .main-content-wrap,
+html body:not(.home) .page-wrap {
+  transform: none !important;
+  filter: none !important;
+  perspective: none !important;
+  contain: none !important;
+}
+
+html body .np-site-footer,
+html body:not(.home) .np-site-footer,
+html body .main-content .np-site-footer,
+html body:not(.home) .main-content .np-site-footer,
+html body .main .np-site-footer,
+html body:not(.home) .main .np-site-footer,
+html body .page-content .np-site-footer,
+html body:not(.home) .page-content .np-site-footer {
+  position: fixed !important;
+  inset: auto 0 0 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: auto !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  min-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  z-index: 99999 !important;
+  min-height: var(--np-fixed-footer-height, 54px) !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+}
+
+html body .np-site-footer-inner,
+html body:not(.home) .np-site-footer-inner,
+html body .main-content .np-site-footer-inner,
+html body:not(.home) .main-content .np-site-footer-inner {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  min-height: var(--np-fixed-footer-height, 54px) !important;
+  margin: 0 !important;
+  padding-left: clamp(1rem, 2.2vw, 2.25rem) !important;
+  padding-right: clamp(1rem, 2.2vw, 2.25rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+}
+
+html body:not(.home) .main-content:not(:has(.np-home)) {
+  margin-bottom: calc(var(--np-fixed-footer-height, 54px) + 2rem) !important;
+}
+
+/* Team-Platzhalter sichtbar und alte Bereichssektionen sicher verstecken */
+html body .np-team-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  margin: 1.25rem 0 0 !important;
+}
+
+html body .np-team-member-card {
+  display: block !important;
+}
+
+html body .np-team-area-grid,
+html body .np-team-areas,
+html body .np-area-grid {
+  display: none !important;
+}
+
+/* Akkordeons bleiben zu, solange kein open-Attribut gesetzt ist */
+html body details:not([open]) > :not(summary),
+html body .np-help-details:not([open]) > :not(summary) {
+  display: none !important;
+}
+
+@media (max-width: 1180px) {
+  html body.home .np-main-grid-echo-first,
+  html body .np-home .np-main-grid-echo-first {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body.home .np-main-grid-echo-first .np-echo-feature,
+  html body.home .np-main-grid-echo-first .np-quick-panel,
+  html body .np-home .np-main-grid-echo-first .np-echo-feature,
+  html body .np-home .np-main-grid-echo-first .np-quick-panel {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  html body .np-card-grid-guides {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
