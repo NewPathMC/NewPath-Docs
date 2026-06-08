@@ -3057,3 +3057,114 @@ body.np-page-sub .main-content > h3,
 .np-topbar-title span:last-child {
   font-family: var(--np-font-ui) !important;
 }
+/* =========================================================
+   Step 81: Streamer-Seite typografisch an restliche Unterseiten angleichen
+   - Streamer-Seite nutzt nun dieselbe Überschriften-/Kartenlogik
+   - behebt abweichenden Look bei Streamer-Übersicht, Assets und Akkordeons
+   - Header/Footer-Positionierung bleibt unangetastet
+   ========================================================= */
+
+/* Streamer-Seite: Haupt-Abschnittstitel wie Modpack Hilfe / FAQ */
+.np-streamer-section > h1,
+.np-streamer-section > h2,
+body.np-page-sub .main-content > h2:has(+ .np-streamer-grid),
+body.np-page-sub .main-content > h2:has(+ .np-asset-grid),
+body.np-page-sub .main-content > h2:has(+ .np-help-details) {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-section-title) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.16 !important;
+}
+
+/* Streamer-Karten: gleiche Hierarchie wie Team-Karten */
+.np-streamer-card .np-streamer-label,
+.np-streamer-card .np-team-role,
+.np-asset-card .np-streamer-label,
+.np-asset-card .np-team-role {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-kicker) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.095em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+}
+
+.np-streamer-card h3,
+.np-streamer-card h2,
+.np-asset-card h3,
+.np-asset-card h2,
+.np-streamer-card strong,
+.np-asset-card strong {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-card-title) !important;
+  font-size: 1.02rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.22 !important;
+}
+
+.np-streamer-card p,
+.np-asset-card p,
+.np-streamer-card span,
+.np-asset-card span {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-color-body) !important;
+  font-size: 0.88rem !important;
+  font-weight: 400 !important;
+  line-height: 1.58 !important;
+}
+
+.np-streamer-card a,
+.np-asset-card a {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-link) !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+}
+
+/* Streamer-Asset-Karten optisch wie restliche Cards */
+.np-streamer-card,
+.np-asset-card {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
+    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86)) !important;
+  border-color: rgba(72, 122, 146, 0.34) !important;
+}
+
+.np-streamer-card:hover,
+.np-asset-card:hover {
+  border-color: rgba(0, 221, 235, 0.48) !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.085), transparent 9rem),
+    linear-gradient(180deg, rgba(20, 58, 70, 0.78), rgba(5, 22, 30, 0.90)) !important;
+}
+
+/* Streamer-Akkordeons wie FAQ/Modpack-Hilfe */
+.np-streamer-section .np-help-details summary,
+body.np-page-sub .main-content .np-help-details summary {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-section-title) !important;
+  font-size: 0.92rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.005em !important;
+  line-height: 1.35 !important;
+}
+
+.np-streamer-section .np-help-details p,
+.np-streamer-section .np-help-details li {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-color-body) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.58 !important;
+}
+
+/* Streamer-Bildplatzhalter wie Team-Platzhalter */
+.np-streamer-avatar-placeholder,
+.np-streamer-image,
+.np-asset-card .np-card-icon,
+.np-asset-card .np-card-icon-blue {
+  color: var(--np-color-link) !important;
+}
