@@ -30,66 +30,60 @@ permalink: /team.html
   </div>
 </section>
 
-<section class="np-team-section">
-  <p class="np-section-kicker">NewPath Team</p>
-  <h1>Das Team hinter NewPath</h1>
-  <p>
-    Hier findest du später eine Übersicht der Personen, die NewPath organisatorisch,
-    technisch, kreativ und im Community-Alltag betreuen. Die Platzhalter können später
-    durch echte Namen, Rollen, Bilder und kurze Beschreibungen ersetzt werden.
-  </p>
+<section class="np-page-section np-team-section">
+  <div class="np-section-header">
+    <p class="np-eyebrow">NewPath Team</p>
+    <h1 class="np-title">Das Team hinter NewPath</h1>
+    <p class="np-lead">
+      Hier findest du später eine Übersicht der Personen, die NewPath organisatorisch,
+      technisch, kreativ und im Community-Alltag betreuen. Die Platzhalter können später
+      durch echte Namen, Rollen, Bilder und kurze Beschreibungen ersetzt werden.
+    </p>
+  </div>
 
-  <div class="np-team-grid np-team-grid-four">
-    <article class="np-team-card">
-      <div class="np-team-image-placeholder">
-        <span>Bild</span>
-      </div>
-      <p class="np-team-role">Projektleitung</p>
-      <h2>Teammitglied 1</h2>
-      <p>
+  <div class="np-card-grid np-card-grid-4 np-team-grid">
+    <article class="np-info-card np-team-card">
+      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <p class="np-card-kicker np-team-role">Projektleitung</p>
+      <h2 class="np-card-title">Teammitglied 1</h2>
+      <p class="np-card-text">
         Kurze Beschreibung zur Rolle, zu Aufgaben im Projekt und dazu, wofür diese Person
         in der Community Ansprechpartner ist.
       </p>
     </article>
 
-    <article class="np-team-card">
-      <div class="np-team-image-placeholder">
-        <span>Bild</span>
-      </div>
-      <p class="np-team-role">Community & Support</p>
-      <h2>Teammitglied 2</h2>
-      <p>
+    <article class="np-info-card np-team-card">
+      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <p class="np-card-kicker np-team-role">Community & Support</p>
+      <h2 class="np-card-title">Teammitglied 2</h2>
+      <p class="np-card-text">
         Kurze Beschreibung zur Rolle, zu Support-Aufgaben, Community-Betreuung oder
         organisatorischen Themen.
       </p>
     </article>
 
-    <article class="np-team-card">
-      <div class="np-team-image-placeholder">
-        <span>Bild</span>
-      </div>
-      <p class="np-team-role">Technik & Modpack</p>
-      <h2>Teammitglied 3</h2>
-      <p>
+    <article class="np-info-card np-team-card">
+      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <p class="np-card-kicker np-team-role">Technik & Modpack</p>
+      <h2 class="np-card-title">Teammitglied 3</h2>
+      <p class="np-card-text">
         Kurze Beschreibung zur technischen Rolle, Modpack-Pflege, Tests, Fehleranalyse
         oder Server-/GitHub-Themen.
       </p>
     </article>
 
-    <article class="np-team-card">
-      <div class="np-team-image-placeholder">
-        <span>Bild</span>
-      </div>
-      <p class="np-team-role">Event & Community</p>
-      <h2>Teammitglied 4</h2>
-      <p>
+    <article class="np-info-card np-team-card">
+      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <p class="np-card-kicker np-team-role">Event & Community</p>
+      <h2 class="np-card-title">Teammitglied 4</h2>
+      <p class="np-card-text">
         Kurze Beschreibung zur Rolle, z. B. Events, Spielerbetreuung, Kommunikation oder
         besondere Community-Aufgaben.
       </p>
     </article>
   </div>
 
-  <div class="np-help-note">
+  <div class="np-note np-help-note">
     <strong>Hinweis:</strong> Die Platzhalter können später durch echte Namen, Rollen,
     Bilder und kurze Beschreibungen ersetzt werden.
   </div>

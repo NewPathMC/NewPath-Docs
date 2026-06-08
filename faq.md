@@ -29,12 +29,14 @@ permalink: /faq.html
   </div>
 </section>
 
-<section class="np-faq-section">
-  <p class="np-section-kicker">FAQ</p>
-  <h1>Alle wichtigen Fragen gesammelt</h1>
+<section class="np-page-section np-faq-section">
+  <div class="np-section-header">
+    <p class="np-eyebrow">FAQ</p>
+    <h1 class="np-title">Alle wichtigen Fragen gesammelt</h1>
+  </div>
 
-  <div class="np-faq-grid">
-    <details class="np-faq-details">
+  <div class="np-card-grid np-card-grid-2 np-faq-grid">
+    <details class="np-accordion np-faq-details">
       <summary>Welche Minecraft-Version nutzt NewPath?</summary>
       <div>
         <p>
@@ -44,7 +46,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Wie komme ich auf den Server?</summary>
       <div>
         <p>
@@ -54,7 +56,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Wo bekomme ich das Modpack?</summary>
       <div>
         <p>
@@ -64,7 +66,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Wie viel RAM sollte ich zuweisen?</summary>
       <div>
         <p>
@@ -74,7 +76,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Gibt es Voice Chat?</summary>
       <div>
         <p>
@@ -84,7 +86,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Ist Roleplay Pflicht?</summary>
       <div>
         <p>
@@ -94,7 +96,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Warum gibt es nicht einfach alle Mods?</summary>
       <div>
         <p>
@@ -104,7 +106,7 @@ permalink: /faq.html
       </div>
     </details>
 
-    <details class="np-faq-details">
+    <details class="np-accordion np-faq-details">
       <summary>Wo finde ich Hilfe bei Problemen?</summary>
       <div>
         <p>

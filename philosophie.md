@@ -30,12 +30,11 @@ permalink: /philosophie.html
   </div>
 </section>
 
-<section class="np-story-section">
-  <p class="np-section-kicker">Philosophie</p>
-  <h1>Eine Welt mit Richtung.</h1>
-
-  <div class="np-story-lead">
-    <p>
+<section class="np-page-section np-story-section">
+  <div class="np-section-header">
+    <p class="np-eyebrow">Philosophie</p>
+    <h1 class="np-title">Eine Welt mit Richtung.</h1>
+    <p class="np-lead">
       NewPath – Echoes of the Wild verbindet Natur, Technik, Abenteuer und Community
       zu einer stimmigen Minecraft-Erfahrung. Der Fokus liegt nicht darauf, möglichst
       schnell alles zu erreichen, sondern auf einer Welt, die sich lebendig,
@@ -43,38 +42,38 @@ permalink: /philosophie.html
     </p>
   </div>
 
-  <div class="np-philosophy-grid">
-    <article>
-      <span>01</span>
-      <h2>Atmosphäre vor Masse</h2>
-      <p>
+  <div class="np-card-grid np-card-grid-4 np-philosophy-grid">
+    <article class="np-info-card">
+      <span class="np-card-kicker">01</span>
+      <h2 class="np-card-title">Atmosphäre vor Masse</h2>
+      <p class="np-card-text">
         Nicht jede Mod muss ins Pack, nur weil sie existiert. NewPath setzt auf Inhalte,
         die zur Welt passen und das Gesamtgefühl stärken.
       </p>
     </article>
 
-    <article>
-      <span>02</span>
-      <h2>Gemeinschaft statt Inseln</h2>
-      <p>
+    <article class="np-info-card">
+      <span class="np-card-kicker">02</span>
+      <h2 class="np-card-title">Gemeinschaft statt Inseln</h2>
+      <p class="np-card-text">
         Spieler sollen sich begegnen, austauschen, handeln, helfen und gemeinsam Orte
         erschaffen. Die Welt soll verbinden, nicht auseinanderziehen.
       </p>
     </article>
 
-    <article>
-      <span>03</span>
-      <h2>Technik mit Verantwortung</h2>
-      <p>
+    <article class="np-info-card">
+      <span class="np-card-kicker">03</span>
+      <h2 class="np-card-title">Technik mit Verantwortung</h2>
+      <p class="np-card-text">
         Technik ist erlaubt und gewollt, aber nicht als reiner Selbstzweck. Fortschritt
         soll eingebettet sein und die Welt nicht in eine reine Maschinenhalle verwandeln.
       </p>
     </article>
 
-    <article>
-      <span>04</span>
-      <h2>Entschleunigter Fortschritt</h2>
-      <p>
+    <article class="np-info-card">
+      <span class="np-card-kicker">04</span>
+      <h2 class="np-card-title">Entschleunigter Fortschritt</h2>
+      <p class="np-card-text">
         NewPath soll Raum für Geschichten, Bauprojekte, Erkundung und eigene Ziele lassen.
         Es geht nicht um den schnellsten Weg zum Endgame.
       </p>
@@ -82,33 +81,35 @@ permalink: /philosophie.html
   </div>
 </section>
 
-<section class="np-origin-section">
-  <p class="np-section-kicker">Entstehung</p>
-  <h1>Der Ursprung von NewPath</h1>
+<section class="np-page-section np-origin-section">
+  <div class="np-section-header">
+    <p class="np-eyebrow">Entstehung</p>
+    <h1 class="np-title">Der Ursprung von NewPath</h1>
+  </div>
 
-  <div class="np-origin-timeline">
-    <article>
-      <span>Startpunkt</span>
-      <h2>Eine neue Richtung</h2>
-      <p>
+  <div class="np-card-grid np-card-grid-3 np-origin-timeline">
+    <article class="np-info-card">
+      <span class="np-card-kicker">Startpunkt</span>
+      <h2 class="np-card-title">Eine neue Richtung</h2>
+      <p class="np-card-text">
         NewPath entstand aus dem Wunsch, ein Modpack nicht nur als Sammlung von Mods zu
         verstehen, sondern als gemeinsame Welt mit eigener Identität.
       </p>
     </article>
 
-    <article>
-      <span>Weiterentwicklung</span>
-      <h2>Aus Erfahrungen lernen</h2>
-      <p>
+    <article class="np-info-card">
+      <span class="np-card-kicker">Weiterentwicklung</span>
+      <h2 class="np-card-title">Aus Erfahrungen lernen</h2>
+      <p class="np-card-text">
         Jede Version brachte neue Erkenntnisse: Was funktioniert gut? Was überfordert?
         Was fühlt sich nach NewPath an – und was nicht?
       </p>
     </article>
 
-    <article>
-      <span>Echoes of the Wild</span>
-      <h2>Ein bewusster Neuanfang</h2>
-      <p>
+    <article class="np-info-card">
+      <span class="np-card-kicker">Echoes of the Wild</span>
+      <h2 class="np-card-title">Ein bewusster Neuanfang</h2>
+      <p class="np-card-text">
         Echoes of the Wild steht für einen neuen Abschnitt: klarere Gestaltung,
         stärkere Atmosphäre, bessere Hilfen und ein gemeinsamer Blick auf die Zukunft
         des Projekts.
