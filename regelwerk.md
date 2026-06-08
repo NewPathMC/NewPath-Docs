@@ -6,13 +6,13 @@ permalink: /regelwerk.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 21:05 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 16:51 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-rules">
   <div class="echo-page-image">
     <img
-      src="{{ site.baseurl }}/assets/images/echo/echo-rules.png"
+      src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
       alt="ECHO erklärt das NewPath-Regelwerk"
       width="512"
       height="512"
@@ -70,7 +70,7 @@ permalink: /regelwerk.html
       <li><strong>2.4.</strong> Item-Erstattungen sind nur mit Nachweis, z. B. Video oder Screenshot mit Timestamp, und im Einzelfall nach Ermessen durch das Team möglich.</li>
       <li><strong>2.5.</strong> Das Team kann in Ausnahmefällen Entscheidungen treffen, die zum Schutz von Server, Community oder Spielbetrieb erforderlich sind.</li>
       <li><strong>2.6.</strong> Unangemeldet inaktive Accounts werden nach ca. 90 Tagen von der Whitelist entfernt. Grundstücke werden dann gecleart und sämtliche Daten werden unwiderruflich gelöscht.</li>
-      <li><strong>2.6.1.</strong> Nach Absprache kann die Whitelist auf „ruhend“ gestellt werden. Dann erfolgt keine Löschung.</li>
+      <li class="np-rule-subitem"><strong>2.6.1.</strong> Nach Absprache kann die Whitelist auf „ruhend“ gestellt werden. Dann erfolgt keine Löschung.</li>
       <li><strong>2.7.</strong> Supportanfragen sind nur über die vorgesehenen Discord-Kanäle oder Tickets zu stellen.</li>
       <li><strong>2.8.</strong> Verstöße gegen dieses Regelwerk werden nach Schweregrad geahndet, zum Beispiel durch Verwarnungen, temporäre Sperren oder dauerhafte Sperren.</li>
     </ol>
@@ -85,13 +85,13 @@ permalink: /regelwerk.html
       <li><strong>3.1.</strong> Man kann maximal 150 Claims pro Spieler oder Team in Anspruch nehmen. Darüber hinaus darf trotzdem gebaut werden.</li>
       <li><strong>3.2.</strong> Verbotene Claim-Nutzung: Lootstrukturen für andere blockieren, andere Teams einkreisen, Spawn blockieren oder öffentliche Bereiche beanspruchen.</li>
       <li><strong>3.3.</strong> Erlaubt ist maximal ein Claim-Gebiet pro Spieler oder Team.</li>
-      <li><strong>3.3.1.</strong> Verlassene Grundstücke sind in einem angemessenen Zustand zu hinterlassen.</li>
+      <li class="np-rule-subitem"><strong>3.3.1.</strong> Verlassene Grundstücke sind in einem angemessenen Zustand zu hinterlassen.</li>
       <li><strong>3.4.</strong> Teamnamen müssen einzigartig sein.</li>
-      <li><strong>3.4.1.</strong> Bei Bündnissen sind Zusätze wie „Nord“, „Ost“ etc. hinzuzufügen.</li>
+      <li class="np-rule-subitem"><strong>3.4.1.</strong> Bei Bündnissen sind Zusätze wie „Nord“, „Ost“ etc. hinzuzufügen.</li>
       <li><strong>3.5.</strong> Die Sichtbarkeitseinstellung muss immer auf Public stehen.</li>
       <li><strong>3.6.</strong> Bei Teamauflösung oder Inaktivität werden Claims zurückgesetzt und gecleart.</li>
       <li><strong>3.7.</strong> Jeder Claim beziehungsweise jedes Team sollte einen unclaimed Chunk mit Waystone haben, damit ein Besuch durch andere Spieler möglich ist.</li>
-      <li><strong>3.7.1.</strong> Waystones dürfen nicht missbräuchlich gesetzt werden, z. B. für Fallen, Trollnamen etc.</li>
+      <li class="np-rule-subitem"><strong>3.7.1.</strong> Waystones dürfen nicht missbräuchlich gesetzt werden, z. B. für Fallen, Trollnamen etc.</li>
       <li><strong>3.8.</strong> Claimeigentümer sind für alles innerhalb ihres Claims verantwortlich – auch für Aktionen von Teammitgliedern.</li>
     </ol>
   </article>
@@ -106,7 +106,7 @@ permalink: /regelwerk.html
       <li><strong>4.2.</strong> Türen, Tore, Fenster etc. dürfen nicht per Bug geöffnet werden. Gebäude dürfen nur mit Erlaubnis betreten werden.</li>
       <li><strong>4.3.</strong> PvP ist nur im Roleplay-Kontext oder mit Zustimmung erlaubt.</li>
       <li><strong>4.4.</strong> Roleplay ist erlaubt und erwünscht – aber niemand wird dazu gezwungen.</li>
-      <li><strong>4.4.1.</strong> Rüstungen müssen im Roleplay-Kontext ausgezogen oder optisch deaktiviert werden, außer sie passen optisch zum Charakter oder dessen aktuellem Roleplay-Hintergrund.</li>
+      <li class="np-rule-subitem"><strong>4.4.1.</strong> Rüstungen müssen im Roleplay-Kontext ausgezogen oder optisch deaktiviert werden, außer sie passen optisch zum Charakter oder dessen aktuellem Roleplay-Hintergrund.</li>
       <li><strong>4.5.</strong> Eigene Dorfbewohner dürfen gezüchtet werden. Dörfer sollen weiterhin bewohnt bleiben, nehmt euch also nicht alle.</li>
       <li><strong>4.6.</strong> Kein Trolling, kein Spammen im Ingame-Chat.</li>
       <li><strong>4.7.</strong> Quarries und automatisierte Minen dürfen nur auf eigenen Claims und in anderen Dimensionen verwendet werden. Diese müssen jedoch abschaltbar sein.</li>
@@ -161,12 +161,12 @@ permalink: /regelwerk.html
     </header>
     <ol class="np-rule-list">
       <li><strong>8.1.</strong> Auf dem Server sind folgende Bauwerke und Strukturen nicht gestattet:</li>
-      <li><strong>8.1.1.</strong> Pixel Arts</li>
-      <li><strong>8.1.2.</strong> Nachbauten realer Gebäude oder Orte</li>
-      <li><strong>8.1.3.</strong> Schriftzüge jeglicher Art</li>
-      <li><strong>8.1.4.</strong> Gebäude oder Inhalte im Zusammenhang mit Casinos oder Glücksspiel</li>
-      <li><strong>8.1.5.</strong> Anstößige oder unangemessene Inhalte</li>
-      <li><strong>8.1.6.</strong> Politisch motivierte Inhalte oder Darstellungen</li>
+      <li class="np-rule-subitem"><strong>8.1.1.</strong> Pixel Arts</li>
+      <li class="np-rule-subitem"><strong>8.1.2.</strong> Nachbauten realer Gebäude oder Orte</li>
+      <li class="np-rule-subitem"><strong>8.1.3.</strong> Schriftzüge jeglicher Art</li>
+      <li class="np-rule-subitem"><strong>8.1.4.</strong> Gebäude oder Inhalte im Zusammenhang mit Casinos oder Glücksspiel</li>
+      <li class="np-rule-subitem"><strong>8.1.5.</strong> Anstößige oder unangemessene Inhalte</li>
+      <li class="np-rule-subitem"><strong>8.1.6.</strong> Politisch motivierte Inhalte oder Darstellungen</li>
     </ol>
   </article>
 </section>

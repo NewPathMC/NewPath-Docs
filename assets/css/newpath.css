@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v13
+   Konsolidierte CSS-Version v14
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -3754,11 +3754,11 @@ a[href="#main-content"],
     flex-basis: 2.55rem;
   }
 }
-/* =========================================================
-   Regelwerk: automatische OL-Nummerierung ausblenden
-   - entfernt die zusätzlichen Browser-Zahlen vor 7.1 / 7.2 etc.
-   - die manuell eingetragenen Regelnummern bleiben erhalten
-   ========================================================= */
+
+/* 15. Regelwerk-Unterpunkte und Nummerierung
+   Die Regelnummern stehen manuell im Inhalt.
+   Deshalb wird die automatische OL-Nummerierung ausgeblendet.
+   Echte Unterpunkte wie 2.6.1 oder 8.1.1 werden optisch eingerückt. */
 
 .np-rule-list,
 .np-rule-list ol {
@@ -3785,3 +3785,38 @@ a[href="#main-content"],
 .np-rule-list ol > li::before {
   content: none !important;
 }
+
+.np-rule-list > li.np-rule-subitem {
+  position: relative;
+  margin-left: clamp(1rem, 1.8vw, 1.6rem) !important;
+  padding-left: clamp(0.85rem, 1.2vw, 1.1rem) !important;
+  color: rgba(247, 236, 220, 0.78);
+}
+
+.np-rule-list > li.np-rule-subitem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28rem;
+  bottom: 0.28rem;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 230, 246, 0.38),
+    rgba(236, 183, 110, 0.24)
+  );
+  box-shadow: 0 0 12px rgba(0, 230, 246, 0.10);
+}
+
+.np-rule-list > li.np-rule-subitem strong {
+  color: rgba(244, 207, 127, 0.92);
+}
+
+@media (max-width: 66.499rem) {
+  .np-rule-list > li.np-rule-subitem {
+    margin-left: 0.65rem !important;
+    padding-left: 0.75rem !important;
+  }
+}
+
