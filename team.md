@@ -5,7 +5,7 @@ nav_order: 6
 permalink: /team.html
 ---
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 13:00 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 13:22 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-team">
