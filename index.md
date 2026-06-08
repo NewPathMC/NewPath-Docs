@@ -25,9 +25,9 @@ permalink: /
       Richtung, Atmosphäre und gemeinschaftlichem Fortschritt.
     </div>
 
-    <!-- AUTO_UPDATED_START -->
-    <p class="np-hero-updated">Zuletzt aktualisiert: 08.06.2026 16:12 Uhr</p>
-    <!-- AUTO_UPDATED_END -->
+<!-- AUTO_UPDATED_START -->
+<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 20:42 Uhr</p>
+<!-- AUTO_UPDATED_END -->
   </div>
 
   <div class="np-hero-logo" aria-label="NewPath – Echoes of the Wild Logo">
