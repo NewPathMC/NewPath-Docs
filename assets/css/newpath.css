@@ -4537,3 +4537,79 @@ a[href="#main-content"],
     gap: 0.55rem !important;
   }
 }
+
+/* =========================================================
+   Step 45: Trennlinie vom Footer lösen und in Inhaltsbereiche verlagern
+   - keine harte Linie direkt über dem fixierten Footer
+   - dezente Trenner unter ECHO/Einstieg und unter Über-NewPath
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .np-site-footer {
+    border-top: 0 !important;
+    box-shadow:
+      0 -14px 34px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(0, 230, 246, 0.06) !important;
+  }
+
+  .np-main-grid-echo-first,
+  .np-about-panel {
+    position: relative !important;
+  }
+
+  .np-main-grid-echo-first::after,
+  .np-about-panel::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: -0.72rem !important;
+    height: 1px !important;
+    pointer-events: none !important;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 230, 246, 0.20) 10%,
+      rgba(0, 230, 246, 0.34) 28%,
+      rgba(236, 189, 119, 0.18) 58%,
+      rgba(0, 230, 246, 0.18) 82%,
+      transparent 100%
+    ) !important;
+    box-shadow: 0 0 14px rgba(0, 230, 246, 0.08) !important;
+  }
+
+  .np-main-grid-echo-first {
+    margin-bottom: 1.28rem !important;
+  }
+
+  .np-about-panel {
+    margin-bottom: 1.28rem !important;
+  }
+
+  .np-server-brief {
+    margin-bottom: 1.15rem !important;
+  }
+}
+
+@media (max-width: 66.49rem) {
+  .np-site-footer {
+    border-top: 0 !important;
+  }
+
+  .np-main-grid-echo-first,
+  .np-about-panel {
+    position: relative !important;
+    margin-bottom: 1.2rem !important;
+  }
+
+  .np-main-grid-echo-first::after,
+  .np-about-panel::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: -0.65rem !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, rgba(0, 230, 246, 0.28), transparent) !important;
+  }
+}
