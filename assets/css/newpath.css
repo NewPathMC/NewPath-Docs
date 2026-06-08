@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v9
+   Konsolidierte CSS-Version v10
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -3124,18 +3124,28 @@ body.np-page-sub .main-content > h3,
 }
 
 /* 11. Dynamischer Zurück-nach-oben-Button
-   Der eigentliche Button wird per JS nur erzeugt, wenn die Seite wirklich scrollbar ist.
-   Der Just-the-Docs-Standardlink bleibt zusätzlich ausgeblendet, falls er durch Cache
-   oder Theme-Update doch noch gerendert wird. */
+   Theme-Link wird vollständig ausgeblendet.
+   Der eigene .np-back-to-top Button wird per JS nur erzeugt,
+   wenn die Seite wirklich scrollbar ist. */
 
+/* Just-the-Docs / Markdown / alte Varianten hart ausblenden.
+   Unser eigener Button ist ein <button class="np-back-to-top"> und wird davon nicht betroffen. */
 .back-to-top,
-.main-content > p:has(a[href="#top"]),
-.main-content > p:has(a[href="#"]),
-.main-content > a[href="#top"],
-.main-content > a[href="#"] {
+.back-to-top-nav,
+.site-button[href="#top"],
+.site-button[href="#main-content"],
+a[href="#top"],
+a[href="#main-content"],
+.main-content .back-to-top,
+.main-content [class*="back-to-top"],
+.main-content p:has(a[href="#top"]),
+.main-content p:has(a[href="#main-content"]),
+.main-content p:has(a[href="#"]),
+.main-content > hr:last-of-type {
   display: none !important;
 }
 
+/* Eigener dynamischer Button */
 .np-back-to-top {
   position: fixed;
   right: clamp(1rem, 2.4vw, 2.6rem);
