@@ -2393,3 +2393,128 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* =========================================================
+   Step 71: FAQ-Seite mit ECHO und Akkordeons ausbauen
+   Header/Footer bleiben unangetastet
+   ========================================================= */
+
+.echo-page-box-faq {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: clamp(1.4rem, 2.2vw, 2.4rem);
+  align-items: center;
+  padding: clamp(1.25rem, 2vw, 2rem) !important;
+  margin-bottom: 1.35rem !important;
+}
+
+.echo-page-box-faq .echo-page-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.echo-page-box-faq .echo-page-image img {
+  width: clamp(7.5rem, 10vw, 12rem);
+  height: clamp(7.5rem, 10vw, 12rem);
+  object-fit: contain;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34));
+}
+
+.echo-page-box-faq h2 {
+  margin: 0 0 0.65rem !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.75rem, 2vw, 2.35rem) !important;
+  line-height: 1.12 !important;
+}
+
+.echo-page-box-faq p:not(.echo-page-kicker) {
+  margin: 0 !important;
+  color: rgba(245, 234, 220, 0.9);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.np-faq-section {
+  width: min(1180px, calc(100% - 3rem));
+  max-width: 1180px;
+  margin: 0 auto 6.5rem;
+  padding: clamp(1.2rem, 2vw, 1.8rem);
+  border: 1px solid rgba(72, 122, 146, 0.32);
+  border-radius: 0.78rem;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(0, 230, 246, 0.065), transparent 18rem),
+    linear-gradient(180deg, rgba(5, 20, 27, 0.76), rgba(4, 16, 22, 0.86));
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24), inset 0 0 34px rgba(0, 230, 246, 0.025);
+  backdrop-filter: blur(8px);
+}
+
+.np-faq-section > h1 {
+  margin: 0 0 1.2rem !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(2rem, 2.4vw, 2.8rem) !important;
+  line-height: 1.1 !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.np-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.np-faq-details {
+  border: 1px solid rgba(72, 122, 146, 0.34);
+  border-radius: 0.68rem;
+  background: linear-gradient(180deg, rgba(17, 46, 64, 0.62), rgba(5, 20, 27, 0.72));
+  box-shadow: inset 0 0 24px rgba(0, 230, 246, 0.025);
+  overflow: hidden;
+}
+
+.np-faq-details summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.95rem 1rem;
+  color: var(--np-gold-soft);
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.np-faq-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.np-faq-details summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.55rem;
+  color: var(--np-cyan);
+  transition: transform 160ms ease;
+}
+
+.np-faq-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.np-faq-details > div {
+  padding: 0 1rem 1rem 1rem;
+  color: rgba(245, 234, 220, 0.84);
+}
+
+.np-faq-details p {
+  margin: 0 !important;
+  font-size: 0.9rem;
+  line-height: 1.58;
+}
+
+@media (max-width: 66.499rem) {
+  .echo-page-box-faq,
+  .np-faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .echo-page-box-faq .echo-page-image {
+    justify-content: flex-start;
+  }
+}
