@@ -3754,4 +3754,34 @@ a[href="#main-content"],
     flex-basis: 2.55rem;
   }
 }
+/* =========================================================
+   Regelwerk: automatische OL-Nummerierung ausblenden
+   - entfernt die zusätzlichen Browser-Zahlen vor 7.1 / 7.2 etc.
+   - die manuell eingetragenen Regelnummern bleiben erhalten
+   ========================================================= */
 
+.np-rule-list,
+.np-rule-list ol {
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-reset: none !important;
+}
+
+.np-rule-list > li,
+.np-rule-list ol > li {
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  padding-left: 0 !important;
+}
+
+.np-rule-list > li::marker,
+.np-rule-list ol > li::marker {
+  content: "" !important;
+  font-size: 0 !important;
+}
+
+.np-rule-list > li::before,
+.np-rule-list ol > li::before {
+  content: none !important;
+}
