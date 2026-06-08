@@ -2515,3 +2515,292 @@ body.np-page-sub .main-content h3 {
   outline-offset: 3px !important;
   border-radius: 0.35rem;
 }
+/* =========================================================
+   Step 79: Schriftarten und Farbwelt stärker an EOTW-Referenz angleichen
+   - Hero bekommt hochwertigeren Serif-Look
+   - Navigation, Karten und Unterseiten werden typografisch ruhiger
+   - Cyan/Gold werden gezielter eingesetzt
+   - Header/Footer-Positionierung bleibt unangetastet
+   ========================================================= */
+
+:root {
+  --np-font-body: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --np-font-display: "Georgia", "Times New Roman", serif;
+  --np-font-ui: "Segoe UI", "Inter", system-ui, sans-serif;
+
+  --np-gold-display: #f6c77e;
+  --np-gold-title: #f4cf7f;
+  --np-gold-warm: #ecb76e;
+  --np-cyan-ui: #00ddeb;
+  --np-cyan-muted: #5feaf1;
+  --np-text-main: #f7ecdc;
+  --np-text-soft: rgba(247, 236, 220, 0.84);
+  --np-text-dim: rgba(247, 236, 220, 0.66);
+}
+
+/* Grundschrift: ruhiger, weniger Theme-Default */
+body,
+.main-content {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-text-main);
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+}
+
+/* Header bleibt technisch stabil, bekommt aber einheitlicheres UI-Schriftbild */
+.np-topbar-title span:first-child,
+.np-top-nav a,
+.main-header .search-input,
+.main-header .aux-nav a,
+.np-site-footer-brand,
+.np-site-footer-links {
+  font-family: var(--np-font-ui) !important;
+}
+
+.np-top-nav a {
+  letter-spacing: 0.01em;
+}
+
+.np-top-nav a.active {
+  color: var(--np-gold-title) !important;
+}
+
+.main-header .aux-nav a {
+  color: var(--np-text-main) !important;
+}
+
+.main-header .aux-nav a::before {
+  background: var(--np-cyan-ui) !important;
+}
+
+/* Hero wie in der alten Vorlage: stärkerer Fantasy-/Doku-Titel */
+.np-hero h1,
+.np-home-v2 .np-hero h1 {
+  font-family: var(--np-font-display) !important;
+  font-weight: 700 !important;
+  color: var(--np-gold-display) !important;
+  letter-spacing: -0.045em !important;
+  text-shadow:
+    0 3px 0 rgba(58, 40, 20, 0.24),
+    0 8px 24px rgba(0, 0, 0, 0.72) !important;
+}
+
+.np-hero-title-main {
+  font-size: 1.05em;
+}
+
+.np-hero-title-sub {
+  color: var(--np-gold-title);
+  font-size: 0.56em !important;
+  letter-spacing: -0.035em;
+}
+
+/* Kicker weniger grell, aber weiterhin ECHO/Tech */
+.np-kicker,
+.np-section-kicker,
+.echo-page-kicker,
+.np-team-role,
+.np-streamer-label,
+.np-help-flow span + strong,
+.np-status-item small,
+.np-server-brief-grid strong {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-cyan-ui) !important;
+  letter-spacing: 0.105em !important;
+  text-transform: uppercase;
+  text-shadow: 0 0 14px rgba(0, 221, 235, 0.13);
+}
+
+/* Hero-Textbox: mehr Vorlage, weniger Standardbox */
+.np-hero-highlight {
+  color: var(--np-text-soft) !important;
+  border-left-color: rgba(246, 199, 126, 0.92) !important;
+  background:
+    linear-gradient(90deg, rgba(0, 9, 15, 0.68), rgba(5, 18, 25, 0.48)) !important;
+}
+
+.np-hero-highlight strong {
+  color: var(--np-gold-display) !important;
+}
+
+/* Überschriften auf allen Unterseiten: Gold/Serif stärker, aber lesbar */
+body.np-page-sub .main-content h1,
+.np-story-section > h1,
+.np-origin-section > h1,
+.np-faq-section > h1,
+.np-team-section > h1,
+.np-content-box > h1,
+.np-error-content h1 {
+  font-family: var(--np-font-display) !important;
+  color: var(--np-gold-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+}
+
+body.np-page-sub .main-content h2,
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2 {
+  color: var(--np-gold-title) !important;
+  letter-spacing: -0.018em;
+}
+
+body.np-page-sub .main-content h3,
+.np-team-card h2,
+.np-streamer-card h3,
+.np-faq-details summary,
+.np-help-details summary {
+  color: var(--np-gold-warm) !important;
+}
+
+/* Fließtext etwas weicher und einheitlicher */
+body.np-page-sub .main-content p,
+body.np-page-sub .main-content li,
+.echo-page-box p:not(.echo-page-kicker),
+.np-about-text p,
+.np-origin-teaser p,
+.np-route-text,
+.np-team-card p,
+.np-streamer-card p,
+.np-faq-details p,
+.np-help-details p {
+  color: var(--np-text-soft) !important;
+}
+
+/* Karten-Look näher an der Vorlage: weniger grell, klarere Gold/Cyan-Hierarchie */
+.np-card,
+.np-route-card,
+.np-help-tile,
+.np-community-card,
+.np-team-card,
+.np-team-member-card,
+.np-streamer-card,
+.np-asset-card,
+.np-faq-details,
+.np-help-details,
+.np-server-brief-grid div {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
+    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86)) !important;
+  border-color: rgba(72, 122, 146, 0.34) !important;
+}
+
+.np-card:hover,
+.np-route-card:hover,
+.np-help-tile:hover,
+.np-community-card:hover,
+.np-team-card:hover,
+.np-streamer-card:hover,
+.np-asset-card:hover {
+  border-color: rgba(0, 221, 235, 0.48) !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.085), transparent 9rem),
+    linear-gradient(180deg, rgba(20, 58, 70, 0.78), rgba(5, 22, 30, 0.90)) !important;
+}
+
+/* Kartentitel weiß/creme, Links cyan */
+.np-card-title,
+.np-route-title,
+.np-help-tile strong,
+.np-community-card strong,
+.np-team-card h2,
+.np-streamer-card h3,
+.np-asset-card h3 {
+  color: var(--np-text-main) !important;
+}
+
+.np-card-link,
+.np-route-link,
+.main-content a {
+  color: var(--np-cyan-muted) !important;
+  font-weight: 800;
+}
+
+.main-content a:hover,
+.np-card-link:hover,
+.np-route-link:hover {
+  color: var(--np-gold-title) !important;
+}
+
+/* Statusleiste wie Vorlage: Info klarer, Werte warm */
+.np-status-item strong {
+  color: var(--np-gold-title) !important;
+  font-weight: 900;
+}
+
+.np-status-icon {
+  color: var(--np-cyan-ui) !important;
+  border-color: rgba(0, 221, 235, 0.34) !important;
+  background: rgba(0, 221, 235, 0.08) !important;
+}
+
+/* Startseite: ECHO und Pfadfinder typografisch stärker */
+.np-pathfinder-copy h2 {
+  color: var(--np-gold-title) !important;
+  font-family: var(--np-font-ui) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.025em;
+}
+
+.np-pathfinder-copy p {
+  color: var(--np-text-soft) !important;
+}
+
+/* Unterseiten-Boxen: mehr Lesbarkeit auf hellem Hintergrund */
+body.np-page-sub .main-content,
+.echo-page-box,
+.np-content-box,
+.np-story-section,
+.np-origin-section,
+.np-faq-section,
+.np-team-section {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 221, 235, 0.045), transparent 18rem),
+    linear-gradient(180deg, rgba(5, 20, 27, 0.88), rgba(4, 16, 22, 0.94)) !important;
+}
+
+/* Hinweise: Gold-Akzent wie Referenz */
+.np-help-note,
+.np-rules-note,
+.np-help-warning {
+  border-left-color: rgba(246, 199, 126, 0.86) !important;
+}
+
+.np-help-note strong,
+.np-rules-note strong,
+.np-help-warning strong {
+  color: var(--np-gold-display) !important;
+}
+
+/* Bild-/Avatar-Platzhalter weniger technisch, mehr edel */
+.np-team-image-placeholder,
+.np-team-avatar-placeholder,
+.np-streamer-avatar-placeholder,
+.np-help-image-placeholder {
+  color: var(--np-cyan-muted) !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
+    rgba(0, 9, 15, 0.34) !important;
+  border-color: rgba(0, 221, 235, 0.28) !important;
+}
+
+/* Kleine Texte / Meta */
+.np-last-updated,
+.np-site-footer-brand span,
+.np-site-footer-links a,
+.np-site-footer-links span {
+  color: var(--np-text-dim) !important;
+}
+
+/* Icon-Farben bleiben pro Kategorie, aber etwas näher an der Referenz */
+.np-card-icon-blue { background: linear-gradient(135deg, #075a78, #00c8e5) !important; }
+.np-card-icon-purple { background: linear-gradient(135deg, #3a2b68, #8b5be8) !important; }
+.np-card-icon-gold { background: linear-gradient(135deg, #7a5418, #f3b742) !important; }
+.np-card-icon-green { background: linear-gradient(135deg, #255f35, #66bd51) !important; }
