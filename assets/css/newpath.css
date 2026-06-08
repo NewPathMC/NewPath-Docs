@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v8
+   Konsolidierte CSS-Version v9
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -13,6 +13,7 @@
    8. Responsive
    9. Einheitliches Schriftarten-, Farb- und Komponentensystem
    10. Globale Inhaltsbreite & automatisches Spacing
+   11. Dynamischer Zurück-nach-oben-Button
 */
 
 :root {
@@ -3121,13 +3122,13 @@ body.np-page-sub .main-content > h3,
     --np-space-lg: 0.62rem;
   }
 }
-/* =========================================================
-   Step 87: Dynamischer Zurück-nach-oben-Button
-   - Button wird per JS nur angezeigt, wenn wirklich gescrollt werden kann
-   - alte Markdown-Links werden ausgeblendet
-   - sitzt fest über dem Footer und nicht mehr lose im Content
-   ========================================================= */
 
+/* 11. Dynamischer Zurück-nach-oben-Button
+   Der eigentliche Button wird per JS nur erzeugt, wenn die Seite wirklich scrollbar ist.
+   Der Just-the-Docs-Standardlink bleibt zusätzlich ausgeblendet, falls er durch Cache
+   oder Theme-Update doch noch gerendert wird. */
+
+.back-to-top,
 .main-content > p:has(a[href="#top"]),
 .main-content > p:has(a[href="#"]),
 .main-content > a[href="#top"],

@@ -1,49 +1,76 @@
 (() => {
   const SCROLL_THRESHOLD = 180;
   const SCROLLABLE_OFFSET = 24;
+  let button = null;
+
+  function pageIsScrollable() {
+    const documentHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    return documentHeight > viewportHeight + SCROLLABLE_OFFSET;
+  }
 
   function createBackToTopButton() {
-    const button = document.createElement("button");
-    button.className = "np-back-to-top";
-    button.type = "button";
-    button.setAttribute("aria-label", "Zurück nach oben");
-    button.innerHTML = '<span aria-hidden="true">↑</span><span>Nach oben</span>';
+    const element = document.createElement("button");
+    element.className = "np-back-to-top";
+    element.type = "button";
+    element.setAttribute("aria-label", "Zurück nach oben");
+    element.innerHTML = '<span aria-hidden="true">↑</span><span>Nach oben</span>';
 
-    button.addEventListener("click", () => {
+    element.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
     });
 
-    document.body.appendChild(button);
-    return button;
+    document.body.appendChild(element);
+    return element;
   }
 
-  const button = createBackToTopButton();
+  function removeBackToTopButton() {
+    if (!button) {
+      return;
+    }
+
+    button.remove();
+    button = null;
+  }
 
   function updateBackToTopButton() {
-    const documentHeight = Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight
-    );
+    const isScrollable = pageIsScrollable();
 
-    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-    const isScrollable = documentHeight > viewportHeight + SCROLLABLE_OFFSET;
-    const isScrolledEnough = window.scrollY > SCROLL_THRESHOLD;
+    if (!isScrollable) {
+      removeBackToTopButton();
+      return;
+    }
 
-    button.classList.toggle("is-visible", isScrollable && isScrolledEnough);
-    button.classList.toggle("is-scrollable", isScrollable);
+    if (!button) {
+      button = createBackToTopButton();
+    }
+
+    button.classList.toggle("is-visible", window.scrollY > SCROLL_THRESHOLD);
   }
 
-  window.addEventListener("scroll", updateBackToTopButton, { passive: true });
-  window.addEventListener("resize", updateBackToTopButton);
+  function scheduleUpdate() {
+    window.requestAnimationFrame(updateBackToTopButton);
+  }
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate);
+  window.addEventListener("load", scheduleUpdate);
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", updateBackToTopButton);
+    document.addEventListener("DOMContentLoaded", scheduleUpdate);
   } else {
-    updateBackToTopButton();
+    scheduleUpdate();
   }
 
-  window.addEventListener("load", updateBackToTopButton);
+  if ("ResizeObserver" in window) {
+    const observer = new ResizeObserver(scheduleUpdate);
+    observer.observe(document.body);
+  }
 })();
