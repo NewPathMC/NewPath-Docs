@@ -2895,3 +2895,161 @@ body.np-page-sub .main-content > h3,
     grid-template-columns: 1fr !important;
   }
 }
+/* =========================================================
+   Step 82: Streamer-Seite an Team-/Unterseiten-Kartenlayout angleichen
+   - erzwingt vertikale Karten wie auf der Team-Seite
+   - entfernt den eigenen seitlichen Streamer-Kartenlook
+   - Header/Footer bleiben unangetastet
+   ========================================================= */
+
+/* Streamer-Seite insgesamt wie normale Unterseiten-Sections behandeln */
+.np-streamer-section,
+.np-streamer-overview,
+.np-streamer-assets,
+.np-streamer-notes {
+  width: 100%;
+}
+
+/* Streamer-Übersicht: Kartenraster wie Team, nicht eigener Sonderlook */
+.np-streamer-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  margin: 1.25rem 0 1.8rem !important;
+}
+
+/* Streamer-Karten vertikal statt seitlich */
+.np-streamer-card {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto auto auto 1fr auto !important;
+  align-items: start !important;
+  gap: 0 !important;
+  min-height: 100% !important;
+  padding: 1rem !important;
+  border: 1px solid rgba(72, 122, 146, 0.34) !important;
+  border-radius: 0.72rem !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
+    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86)) !important;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.25),
+    inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
+  text-align: left !important;
+}
+
+/* Egal ob Bildklasse alt oder neu: Bildfläche oben groß wie bei Team */
+.np-streamer-card .np-streamer-image,
+.np-streamer-card .np-streamer-avatar-placeholder,
+.np-streamer-card .np-team-image,
+.np-streamer-card .np-team-avatar-placeholder,
+.np-streamer-image,
+.np-streamer-avatar-placeholder {
+  width: 100% !important;
+  aspect-ratio: 1.35 / 1 !important;
+  min-height: 8.8rem !important;
+  max-height: 11rem !important;
+  display: grid !important;
+  place-items: center !important;
+  margin: 0 0 1rem !important;
+  border: 1px dashed rgba(0, 221, 235, 0.30) !important;
+  border-radius: 0.62rem !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
+    rgba(0, 9, 15, 0.34) !important;
+  color: var(--np-color-link, #5feaf1) !important;
+  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Labels, Titel und Text exakt wie Team-/Card-System */
+.np-streamer-card .np-streamer-label,
+.np-streamer-card .np-team-role {
+  margin: 0 0 0.35rem !important;
+  color: var(--np-color-kicker, #00ddeb) !important;
+  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.095em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+}
+
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-streamer-card strong {
+  margin: 0 0 0.55rem !important;
+  color: var(--np-color-card-title, #f7ecdc) !important;
+  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
+  font-size: 1.06rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.22 !important;
+}
+
+.np-streamer-card p {
+  margin: 0 0 0.9rem !important;
+  color: var(--np-color-body, rgba(247, 236, 220, 0.86)) !important;
+  font-family: var(--np-font-body, "Segoe UI", system-ui, sans-serif) !important;
+  font-size: 0.88rem !important;
+  font-weight: 400 !important;
+  line-height: 1.58 !important;
+}
+
+.np-streamer-card a {
+  align-self: end !important;
+  margin-top: 0.25rem !important;
+  color: var(--np-color-link, #5feaf1) !important;
+  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+}
+
+/* Streamer-Assets als normale 3er-Karten */
+.np-asset-grid,
+.np-streamer-assets-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+  margin: 1rem 0 1.8rem !important;
+}
+
+.np-asset-card {
+  min-height: 8rem !important;
+  padding: 1rem !important;
+  border: 1px solid rgba(72, 122, 146, 0.34) !important;
+  border-radius: 0.72rem !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
+    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86)) !important;
+}
+
+/* Streamer-Unterseitenüberschriften nicht abweichend behandeln */
+body.np-page-sub .main-content .np-streamer-section h2,
+body.np-page-sub .main-content > h2 {
+  color: var(--np-color-section-title, #ecb76e) !important;
+  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.018em !important;
+}
+
+/* Responsive */
+@media (max-width: 66.499rem) {
+  .np-streamer-grid,
+  .np-asset-grid,
+  .np-streamer-assets-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-streamer-grid,
+  .np-asset-grid,
+  .np-streamer-assets-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
