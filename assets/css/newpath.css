@@ -11,7 +11,7 @@
    6. Modpack-Hilfe / Team / Streamer / FAQ / Philosophie / Regelwerk
    7. Fixierter Footer
    8. Responsive
-   9. Einheitliches Typografie- und Farb-System
+   9. Einheitliches Schriftarten-, Farb- und Komponentensystem
 */
 
 :root {
@@ -37,6 +37,11 @@
   --np-page-left: clamp(4.2rem, 5vw, 6.8rem);
   --np-page-right: clamp(4.2rem, 5vw, 6.8rem);
   --np-content-width: calc(100vw - var(--np-page-left) - var(--np-page-right));
+
+  --np-font-hero: Georgia, serif;
+  --np-font-heading: "Segoe UI", sans-serif;
+  --np-font-body: "Segoe UI", sans-serif;
+  --np-font-label: "Segoe UI", sans-serif;
 }
 
 * {
@@ -2345,149 +2350,16 @@ body:not(.home) .main-content th {
   }
 }
 
-/* 9. Visueller Feinschliff / Kontraste / Accessibility */
+/* 9. Einheitliches Schriftarten-, Farb- und Komponentensystem
+   Festlegung:
+   1. Große Hero-/Fantasy-Titel = Georgia
+   2. Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI
+   3. Fließtext = Segoe UI
+   4. Kicker / Labels / kleine Kategoriezeilen = Segoe UI
+*/
 
-body.np-page-sub .main-content {
-  color: var(--np-muted);
-  margin-bottom: calc(var(--np-footer-height) + 3rem) !important;
-}
-
-body.np-page-sub .main-content p,
-body.np-page-sub .main-content li {
-  font-size: 0.96rem;
-  line-height: 1.72;
-}
-
-body.np-page-sub .main-content h1 {
-  color: var(--np-gold-soft) !important;
-  letter-spacing: -0.025em;
-}
-
-body.np-page-sub .main-content h2 {
-  margin-top: 1.8rem !important;
-  color: var(--np-gold-soft) !important;
-  letter-spacing: -0.01em;
-}
-
-body.np-page-sub .main-content h3 {
-  color: var(--np-gold) !important;
-}
-
-.main-content a {
-  color: #64eaf2 !important;
-  text-underline-offset: 0.18em;
-}
-
-.main-content a:hover {
-  color: var(--np-gold-soft) !important;
-}
-
-.echo-page-box,
-.np-content-box,
-.np-help-note,
-.np-help-details,
-.np-help-tile,
-.np-community-card,
-.np-team-card,
-.np-team-member-card,
-.np-streamer-card,
-.np-story-section,
-.np-origin-section,
-.np-faq-section,
-.np-team-section {
-  border-color: rgba(72, 122, 146, 0.38) !important;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.045), transparent 18rem),
-    linear-gradient(180deg, rgba(7, 24, 31, 0.84), rgba(4, 16, 22, 0.90)) !important;
-  box-shadow:
-    0 18px 38px rgba(0, 0, 0, 0.28),
-    inset 0 0 34px rgba(0, 230, 246, 0.020) !important;
-}
-
-.np-kicker,
-.np-section-kicker,
-.echo-page-kicker {
-  color: #5feaf1 !important;
-  text-shadow: 0 0 14px rgba(0, 230, 246, 0.12);
-}
-
-.np-help-details,
-.np-faq-details {
-  background:
-    linear-gradient(180deg, rgba(17, 46, 64, 0.64), rgba(5, 20, 27, 0.78)) !important;
-}
-
-.np-help-details summary,
-.np-faq-details summary {
-  color: var(--np-gold-soft) !important;
-  background: rgba(0, 9, 15, 0.18);
-}
-
-.np-help-details[open],
-.np-faq-details[open] {
-  border-color: rgba(0, 230, 246, 0.36) !important;
-  box-shadow:
-    0 16px 34px rgba(0, 0, 0, 0.25),
-    inset 0 0 28px rgba(0, 230, 246, 0.030) !important;
-}
-
-.np-help-tile,
-.np-community-card,
-.np-team-card,
-.np-team-member-card,
-.np-streamer-card,
-.np-card,
-.np-route-card {
-  transition: border-color 140ms ease, background 140ms ease, box-shadow 140ms ease !important;
-}
-
-.np-help-tile:hover,
-.np-community-card:hover,
-.np-team-card:hover,
-.np-team-member-card:hover,
-.np-streamer-card:hover,
-.np-card:hover,
-.np-route-card:hover {
-  transform: none !important;
-  border-color: rgba(0, 230, 246, 0.46) !important;
-  box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.26),
-    inset 0 0 32px rgba(0, 230, 246, 0.04) !important;
-}
-
-.np-team-image-placeholder,
-.np-team-avatar-placeholder,
-.np-team-image,
-.np-streamer-image,
-.np-help-image-placeholder {
-  background:
-    radial-gradient(circle at 50% 35%, rgba(0, 230, 246, 0.10), transparent 9rem),
-    rgba(0, 9, 15, 0.30) !important;
-  border-color: rgba(0, 230, 246, 0.30) !important;
-}
-
-.main-content a:focus-visible,
-.np-help-details summary:focus-visible,
-.np-faq-details summary:focus-visible {
-  outline: 2px solid rgba(0, 230, 246, 0.75) !important;
-  outline-offset: 3px !important;
-  border-radius: 0.35rem;
-}
-
-/* =========================================================
-   9. NewPath Designsystem v7
-   Ziel:
-   - gleiche Typografie/Farben für gleiche Elementarten
-   - wiederverwendbare Komponenten statt Seiten-Sonderlooks
-   - alte Seitenklassen werden auf dieselben Rollen gemappt
-   - Header/Footer-Positionierung bleibt unangetastet
-   ========================================================= */
-
+/* 9.1 Farbrollen */
 :root {
-  --np-font-body: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --np-font-display: "Georgia", "Times New Roman", serif;
-  --np-font-ui: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-
   --np-type-hero: #f4cf7f;
   --np-type-title: #ecb76e;
   --np-type-card: #f7ecdc;
@@ -2507,542 +2379,7 @@ body.np-page-sub .main-content h3 {
   --np-system-border: rgba(72, 122, 146, 0.38);
 }
 
-/* 9.1 Grundtypografie */
-body,
-.main-content,
-.main-content p,
-.main-content li,
-.main-content details,
-.main-content summary,
-.np-body-text,
-.np-lead,
-.np-card-text,
-.np-info-card p,
-.np-page-section p,
-.np-page-section li {
-  font-family: var(--np-font-body) !important;
-  color: var(--np-type-body) !important;
-  font-weight: 400 !important;
-  line-height: 1.62 !important;
-}
-
-.main-content a,
-.np-card-link {
-  font-family: var(--np-font-ui) !important;
-  color: var(--np-type-link) !important;
-  font-weight: 900 !important;
-  text-decoration-thickness: 1px !important;
-  text-underline-offset: 0.18em !important;
-}
-
-.main-content a:hover,
-.np-card-link:hover {
-  color: var(--np-type-hero) !important;
-}
-
-/* 9.2 Rollen: Kicker, Titel, Leads */
-.np-eyebrow,
-.np-kicker,
-.np-section-kicker,
-.echo-page-kicker,
-.np-card-kicker,
-.np-team-role,
-.np-streamer-label,
-.np-status-item small,
-.np-server-brief-grid strong,
-.np-philosophy-grid article > span,
-.np-origin-timeline article > span,
-.np-help-flow > div > span {
-  margin: 0 0 0.5rem !important;
-  font-family: var(--np-font-ui) !important;
-  color: var(--np-type-kicker) !important;
-  font-size: 0.72rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.095em !important;
-  line-height: 1.15 !important;
-  text-transform: uppercase !important;
-  text-shadow: 0 0 14px rgba(0, 221, 235, 0.12) !important;
-}
-
-.np-title,
-body.np-page-sub .main-content > h1,
-.np-page-section > h1,
-.np-story-section > h1,
-.np-origin-section > h1,
-.np-faq-section > h1,
-.np-team-section > h1 {
-  margin: 0 0 0.75rem !important;
-  padding: 0 !important;
-  border: 0 !important;
-  font-family: var(--np-font-display) !important;
-  color: var(--np-type-hero) !important;
-  font-size: clamp(2rem, 2.35vw, 3rem) !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.035em !important;
-  line-height: 1.08 !important;
-}
-
-.np-section-title,
-.np-page-section > h2,
-body.np-page-sub .main-content > h2,
-.np-help-section h2,
-.np-streamer-section h2,
-.np-panel h2,
-.np-about-panel h2,
-.np-server-brief h2,
-.np-pathfinder-copy h2 {
-  margin: 0 0 0.75rem !important;
-  padding: 0 !important;
-  border: 0 !important;
-  font-family: var(--np-font-ui) !important;
-  color: var(--np-type-title) !important;
-  font-size: clamp(1.35rem, 1.55vw, 1.85rem) !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.018em !important;
-  line-height: 1.16 !important;
-}
-
-.np-lead {
-  max-width: 58rem;
-  margin: 0 0 1.1rem !important;
-  font-size: 0.98rem !important;
-}
-
-/* 9.3 Hero bleibt die einzige große Display-Ausnahme */
-.np-hero h1,
-.np-home-v2 .np-hero h1 {
-  font-family: var(--np-font-display) !important;
-  color: var(--np-type-hero) !important;
-  font-weight: 700 !important;
-  letter-spacing: -0.045em !important;
-  line-height: 0.92 !important;
-  text-shadow:
-    0 3px 0 rgba(58, 40, 20, 0.20),
-    0 8px 24px rgba(0, 0, 0, 0.72) !important;
-}
-
-.np-hero-title-sub {
-  color: var(--np-type-hero) !important;
-}
-
-/* 9.4 ECHO-Introboxen */
-.echo-page-box,
-.echo-page-box-team,
-.echo-page-box-philosophy,
-.echo-page-box-faq,
-.echo-page-box-rules,
-.echo-page-box-streamer,
-.echo-page-box-help {
-  border-color: var(--np-system-border) !important;
-  background: var(--np-section-bg) !important;
-}
-
-.echo-page-box h1,
-.echo-page-box h2,
-.echo-page-box-team h1,
-.echo-page-box-team h2,
-.echo-page-box-philosophy h1,
-.echo-page-box-philosophy h2,
-.echo-page-box-faq h1,
-.echo-page-box-faq h2,
-.echo-page-box-rules h1,
-.echo-page-box-rules h2,
-.echo-page-box-streamer h1,
-.echo-page-box-streamer h2,
-.echo-page-box-help h1,
-.echo-page-box-help h2 {
-  margin: 0 0 0.65rem !important;
-  padding: 0 !important;
-  border: 0 !important;
-  font-family: var(--np-font-ui) !important;
-  color: var(--np-type-title) !important;
-  font-size: clamp(1.75rem, 2vw, 2.35rem) !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.018em !important;
-  line-height: 1.12 !important;
-}
-
-.echo-page-box p:not(.echo-page-kicker),
-.echo-page-box-team p:not(.echo-page-kicker),
-.echo-page-box-philosophy p:not(.echo-page-kicker),
-.echo-page-box-faq p:not(.echo-page-kicker),
-.echo-page-box-rules p:not(.echo-page-kicker),
-.echo-page-box-streamer p:not(.echo-page-kicker),
-.echo-page-box-help p:not(.echo-page-kicker) {
-  margin: 0 !important;
-  color: var(--np-type-body) !important;
-  font-size: 0.98rem !important;
-  line-height: 1.62 !important;
-}
-
-/* 9.5 Einheitliche Inhaltssektionen */
-.np-page-section,
-.np-story-section,
-.np-origin-section,
-.np-faq-section,
-.np-team-section {
-  width: 100%;
-  margin: 0 0 1.35rem !important;
-  padding: clamp(1rem, 1.6vw, 1.45rem) !important;
-  border: 1px solid var(--np-system-border) !important;
-  border-radius: 0.72rem !important;
-  background: var(--np-section-bg) !important;
-  box-shadow:
-    0 16px 36px rgba(0, 0, 0, 0.25),
-    inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
-  backdrop-filter: blur(8px);
-}
-
-.np-section-header {
-  margin: 0 0 1.15rem !important;
-}
-
-/* 9.6 Einheitliche Karten */
-.np-card-grid,
-.np-help-grid,
-.np-community-grid,
-.np-team-grid,
-.np-streamer-grid,
-.np-asset-grid,
-.np-philosophy-grid,
-.np-origin-timeline,
-.np-help-flow,
-.np-help-topic-list,
-.np-faq-grid {
-  display: grid !important;
-  gap: 0.9rem !important;
-  margin: 1.1rem 0 1.4rem !important;
-}
-
-.np-card-grid-2,
-.np-faq-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-}
-
-.np-card-grid-3,
-.np-streamer-grid,
-.np-asset-grid,
-.np-origin-timeline {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-
-.np-card-grid-4,
-.np-help-grid,
-.np-community-grid,
-.np-team-grid,
-.np-philosophy-grid,
-.np-help-flow {
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-}
-
-.np-info-card,
-.np-card,
-.np-route-card,
-.np-help-tile,
-.np-community-card,
-.np-team-card,
-.np-team-member-card,
-.np-streamer-card,
-.np-asset-card,
-.np-philosophy-grid article,
-.np-origin-timeline article,
-.np-help-flow > div,
-.np-help-topic-list > div,
-.np-server-brief-grid div {
-  min-width: 0;
-  padding: 1rem !important;
-  border: 1px solid rgba(72, 122, 146, 0.34) !important;
-  border-radius: 0.68rem !important;
-  background: var(--np-card-bg) !important;
-  box-shadow: inset 0 0 24px rgba(0, 230, 246, 0.025) !important;
-  color: var(--np-type-body) !important;
-}
-
-.np-card-media,
-.np-team-image-placeholder,
-.np-team-avatar-placeholder,
-.np-team-image,
-.np-streamer-avatar-placeholder,
-.np-streamer-image,
-.np-help-image-placeholder {
-  width: 100% !important;
-  min-height: 8.6rem !important;
-  aspect-ratio: 1.35 / 1 !important;
-  display: grid !important;
-  place-items: center !important;
-  margin: 0 0 1rem !important;
-  border: 1px dashed rgba(0, 221, 235, 0.30) !important;
-  border-radius: 0.62rem !important;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
-    rgba(0, 9, 15, 0.34) !important;
-  color: var(--np-type-link) !important;
-  font-family: var(--np-font-ui) !important;
-  font-size: 0.72rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
-
-.np-card-title,
-.np-info-card h2,
-.np-info-card h3,
-.np-help-tile strong,
-.np-community-card strong,
-.np-team-card h2,
-.np-team-member-card h3,
-.np-streamer-card h2,
-.np-streamer-card h3,
-.np-streamer-card strong,
-.np-asset-card h2,
-.np-asset-card h3,
-.np-asset-card strong,
-.np-philosophy-grid h2,
-.np-origin-timeline h2,
-.np-help-flow strong,
-.np-help-topic-list strong,
-.np-server-brief-grid span,
-.np-status-item strong {
-  margin: 0 0 0.5rem !important;
-  padding: 0 !important;
-  border: 0 !important;
-  font-family: var(--np-font-ui) !important;
-  color: var(--np-type-card) !important;
-  font-size: 1.02rem !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.01em !important;
-  line-height: 1.22 !important;
-}
-
-.np-card-text,
-.np-info-card p,
-.np-help-tile span,
-.np-community-card span,
-.np-team-card p:not(.np-team-role),
-.np-team-member-card p,
-.np-streamer-card p,
-.np-asset-card p,
-.np-philosophy-grid p,
-.np-origin-timeline p,
-.np-help-flow p,
-.np-help-topic-list span {
-  margin: 0 !important;
-  color: var(--np-type-body) !important;
-  font-family: var(--np-font-body) !important;
-  font-size: 0.88rem !important;
-  font-weight: 400 !important;
-  line-height: 1.58 !important;
-}
-
-/* 9.7 Akkordeons und Hinweise */
-.np-accordion,
-.np-help-details,
-.np-faq-details {
-  margin: 0.75rem 0 !important;
-  overflow: hidden !important;
-  border: 1px solid rgba(72, 122, 146, 0.34) !important;
-  border-radius: 0.68rem !important;
-  background:
-    linear-gradient(180deg, rgba(17, 46, 64, 0.64), rgba(5, 20, 27, 0.78)) !important;
-}
-
-.np-accordion summary,
-.np-help-details summary,
-.np-faq-details summary {
-  cursor: pointer;
-  list-style: none;
-  padding: 0.92rem 1.1rem !important;
-  color: var(--np-type-title) !important;
-  font-family: var(--np-font-ui) !important;
-  font-size: 0.92rem !important;
-  font-weight: 900 !important;
-  line-height: 1.35 !important;
-  border-left: 3px solid rgba(0, 230, 246, 0.58);
-}
-
-.np-accordion summary::-webkit-details-marker,
-.np-help-details summary::-webkit-details-marker,
-.np-faq-details summary::-webkit-details-marker {
-  display: none;
-}
-
-.np-accordion summary::before,
-.np-help-details summary::before,
-.np-faq-details summary::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: 0.55rem;
-  color: var(--np-type-kicker);
-}
-
-.np-accordion[open] summary::before,
-.np-help-details[open] summary::before,
-.np-faq-details[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.np-accordion > div,
-.np-help-details > div,
-.np-faq-details > div {
-  padding: 0 1.1rem 1rem !important;
-}
-
-.np-note,
-.np-help-note,
-.np-rules-note,
-.np-help-warning {
-  margin: 1rem 0 !important;
-  padding: 0.85rem 1rem !important;
-  border: 1px solid rgba(72, 122, 146, 0.34) !important;
-  border-left: 3px solid rgba(246, 199, 126, 0.86) !important;
-  border-radius: 0.62rem !important;
-  background: rgba(0, 9, 15, 0.36) !important;
-  color: var(--np-type-body) !important;
-}
-
-.np-note strong,
-.np-help-note strong,
-.np-rules-note strong,
-.np-help-warning strong {
-  color: var(--np-type-hero) !important;
-}
-
-/* 9.8 Streamer nutzt keine Sondertypografie mehr */
-.np-streamer-card {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  align-content: start !important;
-  gap: 0 !important;
-  min-height: 100% !important;
-}
-
-.np-streamer-card > div:not(.np-streamer-avatar-placeholder):not(.np-streamer-image) {
-  display: block !important;
-}
-
-.np-asset-icon {
-  width: 2rem;
-  height: 2rem;
-  display: inline-grid;
-  place-items: center;
-  margin-bottom: 0.8rem;
-  border-radius: 999px;
-  color: #061014;
-  background: var(--np-type-kicker);
-  font-size: 0.9rem;
-  font-weight: 900;
-}
-
-/* 9.9 Meta */
-.np-last-updated,
-.np-site-footer-brand span,
-.np-site-footer-links a,
-.np-site-footer-links span,
-.np-page-meta {
-  font-family: var(--np-font-ui) !important;
-  color: var(--np-type-muted) !important;
-}
-
-/* 9.10 Responsive Komponenten */
-@media (max-width: 66.499rem) {
-  .np-card-grid,
-  .np-card-grid-2,
-  .np-card-grid-3,
-  .np-card-grid-4,
-  .np-help-grid,
-  .np-community-grid,
-  .np-team-grid,
-  .np-streamer-grid,
-  .np-asset-grid,
-  .np-philosophy-grid,
-  .np-origin-timeline,
-  .np-help-flow,
-  .np-help-topic-list,
-  .np-faq-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (min-width: 66.5rem) and (max-width: 1220px) {
-  .np-card-grid-3,
-  .np-card-grid-4,
-  .np-help-grid,
-  .np-community-grid,
-  .np-team-grid,
-  .np-streamer-grid,
-  .np-asset-grid,
-  .np-philosophy-grid,
-  .np-origin-timeline,
-  .np-help-flow {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-/* =========================================================
-   Step 83: Einheitliches Schriftarten-Gerüst
-   Vorgabe:
-   1. Große Hero-/Fantasy-Titel = Georgia
-   2. Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI
-   3. Fließtext = Segoe UI
-   4. Kicker / Labels / kleine Kategoriezeilen = Segoe UI
-   ========================================================= */
-
-:root {
-  --np-font-hero: Georgia, "Times New Roman", serif;
-  --np-font-heading: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --np-font-body: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  --np-font-label: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-/* 1. Große Hero-/Fantasy-Titel = Georgia */
-.np-hero h1,
-.np-home-v2 .np-hero h1,
-.np-hero-title-main,
-.np-hero-title-sub {
-  font-family: var(--np-font-hero) !important;
-}
-
-/* 2. Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI */
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6,
-body.np-page-sub .main-content > h1,
-body.np-page-sub .main-content > h2,
-body.np-page-sub .main-content > h3,
-.echo-page-box h2,
-.echo-page-box-team h2,
-.echo-page-box-philosophy h2,
-.echo-page-box-faq h2,
-.echo-page-box-rules h2,
-.echo-page-box-streamer h2,
-.echo-page-box-help h2,
-.np-section-header h1,
-.np-section-header h2,
-.np-section-header h3,
-.np-title,
-.np-card-title,
-.np-route-title,
-.np-panel h2,
-.np-about-panel h2,
-.np-server-brief h2,
-.np-pathfinder-copy h2,
-.np-info-card h2,
-.np-info-card h3,
-.np-team-card h2,
-.np-team-member-card h3,
-.np-streamer-card h2,
-.np-streamer-card h3,
-.np-asset-card h2,
-.np-asset-card h3,
-.np-faq-details summary,
-.np-help-details summary,
-.np-accordion summary {
-  font-family: var(--np-font-heading) !important;
-}
-
-/* 3. Fließtext = Segoe UI */
+/* 9.2 Fließtext = Segoe UI */
 body,
 .main-content,
 .main-content p,
@@ -3050,12 +2387,17 @@ body,
 .main-content td,
 .main-content th,
 .main-content blockquote,
+.main-content details,
+.main-content summary,
+.np-body-text,
 .np-lead,
 .np-card-text,
 .np-route-text,
+.np-info-card p,
+.np-page-section p,
+.np-page-section li,
 .np-about-text p,
 .np-origin-teaser p,
-.np-info-card p,
 .np-team-card p,
 .np-team-member-card p,
 .np-streamer-card p,
@@ -3074,18 +2416,24 @@ body,
 .echo-page-box-streamer p:not(.echo-page-kicker),
 .echo-page-box-help p:not(.echo-page-kicker) {
   font-family: var(--np-font-body) !important;
+  color: var(--np-type-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.62 !important;
 }
 
-/* 4. Kicker / Labels / kleine Kategoriezeilen = Segoe UI */
+/* 9.3 Kicker / Labels / kleine Kategoriezeilen = Segoe UI */
+.np-eyebrow,
 .np-kicker,
 .np-section-kicker,
 .echo-page-kicker,
-.np-eyebrow,
 .np-card-kicker,
 .np-team-role,
 .np-streamer-label,
 .np-status-item small,
 .np-server-brief-grid strong,
+.np-philosophy-grid article > span,
+.np-origin-timeline article > span,
+.np-help-flow > div > span,
 .np-last-updated,
 .np-page-meta,
 .np-site-footer-brand,
@@ -3094,15 +2442,456 @@ body,
 .np-top-nav a,
 .main-header .search-input,
 .main-header .aux-nav a {
+  margin: 0 0 0.5rem !important;
   font-family: var(--np-font-label) !important;
+  color: var(--np-type-kicker) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.095em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 14px rgba(0, 221, 235, 0.12) !important;
 }
 
-/* Sicherheitsregel:
-   Nur der Hero/Fantasy-Titel darf Georgia nutzen.
-   Alle normalen Unterseiten-H1 bleiben bewusst Segoe UI. */
+.np-topbar-title,
+.np-top-nav a,
+.main-header .search-input,
+.main-header .aux-nav a,
+.np-site-footer-brand,
+.np-site-footer-links {
+  margin: 0 !important;
+}
+
+/* 9.4 Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
 body.np-page-sub .main-content > h1,
+body.np-page-sub .main-content > h2,
+body.np-page-sub .main-content > h3,
+.np-title,
+.np-section-title,
 .np-page-section > h1,
-.np-section-header > h1,
-.np-title {
+.np-page-section > h2,
+.np-section-header h1,
+.np-section-header h2,
+.np-section-header h3,
+.np-story-section > h1,
+.np-origin-section > h1,
+.np-faq-section > h1,
+.np-team-section > h1,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2,
+.np-pathfinder-copy h2,
+.echo-page-box h1,
+.echo-page-box h2,
+.echo-page-box-team h1,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h1,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h1,
+.echo-page-box-faq h2,
+.echo-page-box-rules h1,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h1,
+.echo-page-box-streamer h2,
+.echo-page-box-help h1,
+.echo-page-box-help h2,
+.np-info-card h2,
+.np-info-card h3,
+.np-team-card h2,
+.np-team-member-card h3,
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-asset-card h2,
+.np-asset-card h3,
+.np-card-title,
+.np-route-title,
+.np-faq-details summary,
+.np-help-details summary,
+.np-accordion summary {
   font-family: var(--np-font-heading) !important;
 }
+
+/* 9.5 Überschriftenrollen */
+.np-title,
+body.np-page-sub .main-content > h1,
+.np-page-section > h1,
+.np-story-section > h1,
+.np-origin-section > h1,
+.np-faq-section > h1,
+.np-team-section > h1 {
+  margin: 0 0 0.75rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--np-type-hero) !important;
+  font-size: clamp(2rem, 2.35vw, 3rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.08 !important;
+}
+
+.np-section-title,
+.np-page-section > h2,
+body.np-page-sub .main-content > h2,
+.np-help-section h2,
+.np-streamer-section h2,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2,
+.np-pathfinder-copy h2,
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2 {
+  margin: 0 0 0.75rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--np-type-title) !important;
+  font-size: clamp(1.35rem, 1.55vw, 1.85rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.16 !important;
+}
+
+body.np-page-sub .main-content > h3,
+.np-faq-details summary,
+.np-help-details summary,
+.np-accordion summary {
+  color: var(--np-type-title) !important;
+  font-size: 0.96rem !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+}
+
+/* 9.6 Große Hero-/Fantasy-Titel = Georgia */
+.np-hero h1,
+.np-home-v2 .np-hero h1,
+.np-hero-title-main,
+.np-hero-title-sub {
+  font-family: var(--np-font-hero) !important;
+}
+
+.np-hero h1,
+.np-home-v2 .np-hero h1 {
+  color: var(--np-type-hero) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 0.92 !important;
+  text-shadow:
+    0 3px 0 rgba(58, 40, 20, 0.20),
+    0 8px 24px rgba(0, 0, 0, 0.72) !important;
+}
+
+/* 9.7 Links */
+.main-content a,
+.np-card-link,
+.np-route-link {
+  font-family: var(--np-font-label) !important;
+  color: var(--np-type-link) !important;
+  font-weight: 900 !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.18em !important;
+}
+
+.main-content a:hover,
+.np-card-link:hover,
+.np-route-link:hover {
+  color: var(--np-type-hero) !important;
+}
+
+/* 9.8 Einheitliche Inhaltssektionen */
+.np-page-section,
+.np-story-section,
+.np-origin-section,
+.np-faq-section,
+.np-team-section,
+.np-content-box {
+  width: min(1180px, calc(100% - 3rem));
+  max-width: 1180px;
+  margin: 0 auto 1.35rem;
+  padding: clamp(1.2rem, 2vw, 1.8rem);
+  border: 1px solid var(--np-system-border);
+  border-radius: 0.78rem;
+  background: var(--np-section-bg) !important;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.28),
+    inset 0 0 34px rgba(0, 230, 246, 0.020);
+  backdrop-filter: blur(8px);
+}
+
+.np-page-section:last-child {
+  margin-bottom: 6.5rem;
+}
+
+.np-section-header {
+  max-width: 62rem;
+  margin-bottom: 1.2rem;
+}
+
+.np-lead {
+  max-width: 58rem;
+  margin: 0 0 1.1rem !important;
+  font-size: 0.98rem !important;
+}
+
+/* 9.9 Einheitliche Karten */
+.np-card-grid,
+.np-help-grid,
+.np-community-grid,
+.np-team-grid,
+.np-streamer-grid,
+.np-asset-grid,
+.np-faq-grid,
+.np-philosophy-grid,
+.np-origin-timeline {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.1rem 0 1.4rem;
+}
+
+.np-card-grid-2,
+.np-faq-grid,
+.np-help-topic-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.np-card-grid-3,
+.np-streamer-grid,
+.np-asset-grid,
+.np-origin-timeline {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.np-card-grid-4,
+.np-help-grid,
+.np-community-grid,
+.np-team-grid,
+.np-philosophy-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.np-info-card,
+.np-card,
+.np-route-card,
+.np-help-tile,
+.np-community-card,
+.np-team-card,
+.np-team-member-card,
+.np-streamer-card,
+.np-asset-card,
+.np-faq-details,
+.np-help-details,
+.np-accordion,
+.np-philosophy-grid article,
+.np-origin-timeline article,
+.np-server-brief-grid div {
+  min-width: 0;
+  border: 1px solid rgba(72, 122, 146, 0.34) !important;
+  border-radius: 0.72rem !important;
+  background: var(--np-card-bg) !important;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.22),
+    inset 0 0 28px rgba(0, 230, 246, 0.020) !important;
+}
+
+.np-info-card,
+.np-card,
+.np-help-tile,
+.np-community-card,
+.np-team-card,
+.np-team-member-card,
+.np-streamer-card,
+.np-asset-card,
+.np-philosophy-grid article,
+.np-origin-timeline article {
+  padding: 1rem !important;
+}
+
+.np-card-media,
+.np-team-image-placeholder,
+.np-team-avatar-placeholder,
+.np-team-image,
+.np-streamer-image,
+.np-streamer-avatar-placeholder,
+.np-help-image-placeholder {
+  width: 100%;
+  min-height: 8.5rem;
+  display: grid;
+  place-items: center;
+  margin: 0 0 1rem;
+  border: 1px dashed rgba(0, 221, 235, 0.30) !important;
+  border-radius: 0.62rem !important;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
+    rgba(0, 9, 15, 0.34) !important;
+  color: var(--np-type-link) !important;
+  font-family: var(--np-font-label) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+.np-card-title,
+.np-route-title,
+.np-help-tile strong,
+.np-community-card strong,
+.np-team-card h2,
+.np-team-member-card h3,
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-asset-card h2,
+.np-asset-card h3,
+.np-philosophy-grid h2,
+.np-origin-timeline h2,
+.np-status-item strong,
+.np-server-brief-grid span {
+  margin: 0 0 0.5rem !important;
+  color: var(--np-type-card) !important;
+  font-size: 1.02rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.22 !important;
+}
+
+/* 9.10 ECHO-Introboxen */
+.echo-page-box,
+.echo-page-box-team,
+.echo-page-box-philosophy,
+.echo-page-box-faq,
+.echo-page-box-rules,
+.echo-page-box-streamer,
+.echo-page-box-help {
+  border-color: var(--np-system-border) !important;
+  background: var(--np-section-bg) !important;
+}
+
+/* 9.11 Akkordeons und Hinweise */
+.np-faq-details,
+.np-help-details,
+.np-accordion {
+  overflow: hidden;
+}
+
+.np-faq-details summary,
+.np-help-details summary,
+.np-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.95rem 1rem !important;
+  background: rgba(0, 9, 15, 0.18);
+}
+
+.np-faq-details summary::-webkit-details-marker,
+.np-help-details summary::-webkit-details-marker,
+.np-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.np-faq-details summary::before,
+.np-help-details summary::before,
+.np-accordion summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.55rem;
+  color: var(--np-type-kicker);
+}
+
+.np-faq-details[open] summary::before,
+.np-help-details[open] summary::before,
+.np-accordion[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.np-faq-details > div,
+.np-help-details > div,
+.np-accordion > div {
+  padding: 0 1rem 1rem;
+}
+
+.np-note,
+.np-help-note,
+.np-rules-note {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid rgba(246, 199, 126, 0.86) !important;
+  border-radius: 0.55rem;
+  background: rgba(0, 9, 15, 0.34);
+}
+
+/* 9.12 Meta */
+.np-last-updated,
+.np-page-meta,
+.np-site-footer-brand span,
+.np-site-footer-links a,
+.np-site-footer-links span {
+  color: var(--np-type-muted) !important;
+  font-size: 0.68rem !important;
+  text-transform: none !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* 9.13 Accessibility */
+.main-content a:focus-visible,
+.np-faq-details summary:focus-visible,
+.np-help-details summary:focus-visible,
+.np-accordion summary:focus-visible {
+  outline: 2px solid rgba(0, 230, 246, 0.75) !important;
+  outline-offset: 3px !important;
+  border-radius: 0.35rem;
+}
+
+/* 9.14 Responsive Komponenten */
+@media (max-width: 66.499rem) {
+  .np-page-section,
+  .np-story-section,
+  .np-origin-section,
+  .np-faq-section,
+  .np-team-section,
+  .np-content-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .np-card-grid,
+  .np-card-grid-2,
+  .np-card-grid-3,
+  .np-card-grid-4,
+  .np-help-grid,
+  .np-community-grid,
+  .np-team-grid,
+  .np-streamer-grid,
+  .np-asset-grid,
+  .np-faq-grid,
+  .np-philosophy-grid,
+  .np-origin-timeline,
+  .np-help-topic-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-card-grid-4,
+  .np-help-grid,
+  .np-community-grid,
+  .np-team-grid,
+  .np-philosophy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .np-card-grid-3,
+  .np-streamer-grid,
+  .np-asset-grid,
+  .np-origin-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
