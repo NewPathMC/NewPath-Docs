@@ -1350,3 +1350,126 @@ blockquote {
     font-size: 0.8rem !important;
   }
 }
+
+/* =========================================================
+   Schritt 30: Breite besser nutzen
+   - ECHO/Einstieg/Infoflächen laufen weiter nach rechts
+   - weniger ungenutzter rechter Bereich
+   - kein horizontaler Scroll
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  :root {
+    --np-page-left: clamp(3.8rem, 4.4vw, 5.2rem);
+    --np-page-right: clamp(2.2rem, 3vw, 3.6rem);
+    --np-content-width: calc(100vw - var(--np-page-left) - var(--np-page-right));
+  }
+
+  .np-home {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: clip !important;
+  }
+
+  .np-last-updated,
+  .np-hero,
+  .np-status-bar,
+  .np-main-grid,
+  .np-about-panel,
+  .np-server-brief {
+    margin-left: var(--np-page-left) !important;
+    margin-right: var(--np-page-right) !important;
+  }
+
+  .np-hero {
+    width: var(--np-content-width) !important;
+    max-width: var(--np-content-width) !important;
+    grid-template-columns: minmax(410px, 520px) minmax(300px, 390px) minmax(0, 1fr) !important;
+    gap: clamp(2rem, 4.2vw, 5.25rem) !important;
+  }
+
+  .np-hero-content {
+    max-width: 520px !important;
+  }
+
+  .np-hero-logo {
+    justify-self: start !important;
+    transform: translateX(clamp(0.8rem, 2vw, 2.4rem)) !important;
+  }
+
+  .np-status-bar {
+    width: min(1320px, var(--np-content-width)) !important;
+    max-width: min(1320px, var(--np-content-width)) !important;
+  }
+
+  .np-main-grid,
+  .np-main-grid-echo-first {
+    width: var(--np-content-width) !important;
+    max-width: var(--np-content-width) !important;
+    grid-template-columns: minmax(520px, 0.43fr) minmax(760px, 0.57fr) !important;
+    gap: 1.05rem !important;
+  }
+
+  .np-main-grid-echo-first .np-echo-feature,
+  .np-main-grid-echo-first .np-quick-panel {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .np-quick-panel {
+    padding: clamp(1.05rem, 1.35vw, 1.45rem) !important;
+  }
+
+  .np-card-grid-guides {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.9rem !important;
+  }
+
+  .np-card-grid-guides .np-card {
+    min-height: 9.5rem !important;
+  }
+
+  .np-about-panel,
+  .np-server-brief {
+    width: var(--np-content-width) !important;
+    max-width: var(--np-content-width) !important;
+  }
+
+  .np-about-panel {
+    grid-template-columns: minmax(320px, 0.32fr) minmax(0, 0.68fr) !important;
+  }
+
+  .np-server-brief {
+    grid-template-columns: minmax(330px, 0.34fr) minmax(0, 0.66fr) !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1500px) {
+  :root {
+    --np-page-left: clamp(2.4rem, 4.2vw, 4.6rem);
+    --np-page-right: clamp(1.8rem, 2.6vw, 3rem);
+  }
+
+  .np-main-grid,
+  .np-main-grid-echo-first {
+    grid-template-columns: minmax(470px, 0.43fr) minmax(600px, 0.57fr) !important;
+  }
+
+  .np-hero {
+    grid-template-columns: minmax(350px, 470px) minmax(245px, 320px) minmax(0, 1fr) !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1220px) {
+  :root {
+    --np-page-left: 2rem;
+    --np-page-right: 2rem;
+  }
+
+  .np-main-grid,
+  .np-main-grid-echo-first,
+  .np-about-panel,
+  .np-server-brief {
+    grid-template-columns: 1fr !important;
+  }
+}
