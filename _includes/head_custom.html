@@ -61,3 +61,45 @@
     header.prepend(brand);
   });
 </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const existing = document.querySelectorAll("#np-global-window-footer");
+    existing.forEach(function (item, index) {
+      if (index > 0) item.remove();
+    });
+
+    let footer = document.getElementById("np-global-window-footer");
+
+    if (!footer) {
+      footer = document.createElement("footer");
+      footer.id = "np-global-window-footer";
+      footer.className = "np-site-footer";
+      footer.setAttribute("aria-label", "NewPath Fußzeile");
+      footer.innerHTML = `
+        <div class="np-site-footer-inner">
+          <div class="np-site-footer-brand">
+            <strong>NewPath – Echoes of the Wild</strong>
+            <span>Offizielle Dokumentation · Community · Modpack-Hilfe</span>
+          </div>
+          <nav class="np-site-footer-links" aria-label="Footer Navigation">
+            <a href="{{ site.baseurl }}/">Startseite</a>
+            <a href="{{ site.baseurl }}/modpack-hilfe.html">Modpack Hilfe</a>
+            <a href="{{ site.baseurl }}/team.html">Team</a>
+            <a href="{{ site.baseurl }}/streamer.html">Streamer</a>
+            <a href="{{ site.baseurl }}/regelwerk.html">Regelwerk</a>
+            <a href="{{ site.baseurl }}/faq.html">FAQ</a>
+            <a href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener">Discord</a>
+            <span>© 2026 NewPath</span>
+          </nav>
+        </div>
+      `;
+      document.body.appendChild(footer);
+    }
+
+    document.querySelectorAll(".np-site-footer:not(#np-global-window-footer)").forEach(function (oldFooter) {
+      oldFooter.remove();
+    });
+  });
+</script>

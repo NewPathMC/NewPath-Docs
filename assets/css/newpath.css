@@ -7978,3 +7978,285 @@ html body:not(.home) .np-content-box {
     gap: 0.45rem !important;
   }
 }
+
+
+/* =========================================================
+   STEP 61 – STABIL: Header oben, Footer unten, Einstieg sauber
+   Wichtig: Diese Regeln stehen absichtlich ganz am Ende.
+   ========================================================= */
+
+:root {
+  --np-header-fixed-height: 64px !important;
+  --np-footer-fixed-height: 50px !important;
+}
+
+html,
+body {
+  min-height: 100% !important;
+  overflow-x: hidden !important;
+}
+
+body {
+  padding-top: var(--np-header-fixed-height) !important;
+  padding-bottom: calc(var(--np-footer-fixed-height) + 18px) !important;
+}
+
+/* Header wirklich an den oberen Fensterrand kleben */
+@media (min-width: 66.5rem) {
+  html body .main-header {
+    position: fixed !important;
+    inset: 0 0 auto 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100vw !important;
+    height: var(--np-header-fixed-height) !important;
+    min-height: var(--np-header-fixed-height) !important;
+    max-height: var(--np-header-fixed-height) !important;
+    margin: 0 !important;
+    padding: 0 1.25rem !important;
+    border-radius: 0 !important;
+    transform: none !important;
+    translate: none !important;
+    z-index: 99990 !important;
+    display: flex !important;
+    align-items: center !important;
+    overflow: visible !important;
+  }
+
+  html body .main-header::before,
+  html body .main-header::after {
+    display: none !important;
+  }
+
+  html body .main,
+  html body .main-content-wrap,
+  html body .main-content,
+  html body .page-content,
+  html body .np-home {
+    margin-top: 0 !important;
+  }
+}
+
+/* Footer: nur der per head_custom erzeugte globale Footer zählt. */
+html body .np-site-footer:not(#np-global-window-footer),
+html body .main-content .np-site-footer:not(#np-global-window-footer),
+html body .echo-page-box .np-site-footer:not(#np-global-window-footer),
+html body .np-content-box .np-site-footer:not(#np-global-window-footer) {
+  display: none !important;
+}
+
+html body #np-global-window-footer {
+  position: fixed !important;
+  inset: auto 0 0 0 !important;
+  top: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  min-width: 100vw !important;
+  max-width: 100vw !important;
+  height: var(--np-footer-fixed-height) !important;
+  min-height: var(--np-footer-fixed-height) !important;
+  max-height: var(--np-footer-fixed-height) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(0, 230, 246, 0.2) !important;
+  border-radius: 0 !important;
+  background: linear-gradient(180deg, rgba(0, 9, 18, 0.96), rgba(0, 13, 24, 0.99)) !important;
+  box-shadow: 0 -0.75rem 2.25rem rgba(0, 0, 0, 0.42) !important;
+  z-index: 99980 !important;
+  transform: none !important;
+  translate: none !important;
+  overflow: hidden !important;
+}
+
+html body #np-global-window-footer .np-site-footer-inner {
+  width: 100vw !important;
+  min-width: 100vw !important;
+  max-width: 100vw !important;
+  height: var(--np-footer-fixed-height) !important;
+  min-height: var(--np-footer-fixed-height) !important;
+  max-height: var(--np-footer-fixed-height) !important;
+  margin: 0 !important;
+  padding: 0 clamp(1rem, 2.4vw, 2.6rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1.2rem !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+html body #np-global-window-footer .np-site-footer-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.08rem !important;
+  min-width: 0 !important;
+}
+
+html body #np-global-window-footer .np-site-footer-brand strong {
+  color: #f4cf7f !important;
+  font-size: 0.68rem !important;
+  line-height: 1.05 !important;
+}
+
+html body #np-global-window-footer .np-site-footer-brand span {
+  color: rgba(235, 246, 248, 0.72) !important;
+  font-size: 0.58rem !important;
+  line-height: 1.05 !important;
+}
+
+html body #np-global-window-footer .np-site-footer-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 0.72rem !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  min-width: 0 !important;
+}
+
+html body #np-global-window-footer .np-site-footer-links a,
+html body #np-global-window-footer .np-site-footer-links span {
+  color: rgba(235, 246, 248, 0.86) !important;
+  font-size: 0.62rem !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+}
+
+html body #np-global-window-footer .np-site-footer-links a:hover,
+html body #np-global-window-footer .np-site-footer-links a:focus {
+  color: #00e6f6 !important;
+  text-decoration: none !important;
+}
+
+/* Unterseiten: Abstand unten erzwingen, damit der fixed Footer nie Text verdeckt. */
+html body:not(.home) .main-content,
+html body:not(.home) .main-content-wrap,
+html body:not(.home) .page-content,
+html body:not(.home) .echo-page-box,
+html body:not(.home) .np-content-box {
+  padding-bottom: calc(var(--np-footer-fixed-height) + 2.1rem) !important;
+}
+
+/* Einstieg: wieder ruhiger, flacher und auf ECHO abgestimmt */
+@media (min-width: 66.5rem) {
+  html body.home .np-main-grid-echo-first,
+  html body .np-home .np-main-grid-echo-first {
+    grid-template-columns: minmax(430px, 0.47fr) minmax(610px, 0.53fr) !important;
+    gap: 0.95rem !important;
+    align-items: stretch !important;
+  }
+
+  html body.home .np-main-grid-echo-first .np-echo-feature,
+  html body .np-home .np-main-grid-echo-first .np-echo-feature,
+  html body.home .np-main-grid-echo-first .np-quick-panel,
+  html body .np-home .np-main-grid-echo-first .np-quick-panel {
+    height: 190px !important;
+    min-height: 190px !important;
+    max-height: 190px !important;
+    overflow: hidden !important;
+  }
+
+  html body .np-quick-panel {
+    padding: 0.82rem 0.9rem 0.86rem !important;
+  }
+
+  html body .np-quick-panel .np-kicker,
+  html body .np-quick-panel > p:first-child {
+    margin: 0 0 0.2rem !important;
+    font-size: 0.72rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  html body .np-quick-panel h2 {
+    margin: 0 0 0.72rem !important;
+    font-size: 1.06rem !important;
+    line-height: 1.08 !important;
+  }
+
+  html body .np-card-grid-guides {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.56rem !important;
+    align-items: stretch !important;
+  }
+
+  html body .np-card-grid-guides .np-card,
+  html body .np-card-grid-guides .np-card:hover,
+  html body .np-card-grid-guides .np-card:focus,
+  html body .np-card-grid-guides .np-card:focus-within {
+    height: 90px !important;
+    min-height: 90px !important;
+    max-height: 90px !important;
+    padding: 0.52rem 0.42rem 0.46rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    overflow: hidden !important;
+    transform: none !important;
+    translate: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+
+  html body .np-card-grid-guides .np-card-icon {
+    width: 1.72rem !important;
+    height: 1.72rem !important;
+    min-width: 1.72rem !important;
+    margin: 0 0 0.28rem !important;
+    flex: 0 0 auto !important;
+  }
+
+  html body .np-card-grid-guides .np-card-title {
+    margin: 0 0 0.22rem !important;
+    min-height: 1.18rem !important;
+    font-size: 0.66rem !important;
+    line-height: 1.02 !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: normal !important;
+  }
+
+  html body .np-card-grid-guides .np-card-text {
+    display: none !important;
+  }
+
+  html body .np-card-grid-guides .np-card-link {
+    margin: 0 !important;
+    font-size: 0.6rem !important;
+    line-height: 1 !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 66.49rem) {
+  body {
+    padding-top: 0 !important;
+    padding-bottom: 6.6rem !important;
+  }
+
+  html body #np-global-window-footer {
+    height: 6rem !important;
+    min-height: 6rem !important;
+    max-height: 6rem !important;
+  }
+
+  html body #np-global-window-footer .np-site-footer-inner {
+    height: 6rem !important;
+    min-height: 6rem !important;
+    max-height: 6rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0.45rem !important;
+  }
+}
