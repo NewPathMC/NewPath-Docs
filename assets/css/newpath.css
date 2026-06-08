@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v5
+   Konsolidierte CSS-Version v6
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -1839,7 +1839,9 @@ blockquote {
 }
 
 
-/* 6c. Streamer-Seite */
+/* 6c. Streamer-Seite
+   Struktur bewusst an Team-/Kartenlayout angeglichen.
+   Die typografischen Farben/Schriften werden final in Abschnitt 9 geregelt. */
 
 .echo-page-box-streamer {
   align-items: center;
@@ -1847,9 +1849,9 @@ blockquote {
 
 .np-streamer-grid,
 .np-asset-grid {
-  width: min(1180px, calc(100% - 3rem));
-  max-width: 1180px;
-  margin: 1.25rem auto 1.8rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 1.25rem 0 1.8rem;
   display: grid;
   gap: 1rem;
 }
@@ -1867,69 +1869,36 @@ blockquote {
   border: 1px solid rgba(72, 122, 146, 0.34);
   border-radius: 0.72rem;
   background:
-    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.06), transparent 11rem),
-    linear-gradient(180deg, rgba(12, 39, 50, 0.78), rgba(5, 18, 25, 0.84));
+    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
+    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86));
   box-shadow:
-    0 14px 30px rgba(0, 0, 0, 0.22),
-    inset 0 0 24px rgba(0, 230, 246, 0.025);
+    0 16px 36px rgba(0, 0, 0, 0.25),
+    inset 0 0 34px rgba(0, 230, 246, 0.025);
 }
 
 .np-streamer-card {
+  min-height: 100%;
   display: grid;
-  grid-template-columns: 5.2rem minmax(0, 1fr);
-  gap: 0.95rem;
-  align-items: start;
-  min-height: 11.5rem;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 0;
   padding: 1rem;
 }
 
-.np-streamer-avatar-placeholder {
-  width: 5.2rem;
-  height: 5.2rem;
+.np-streamer-avatar-placeholder,
+.np-streamer-image {
+  width: 100%;
+  min-height: 8.6rem;
+  aspect-ratio: 1.35 / 1;
   display: grid;
   place-items: center;
-  border-radius: 0.66rem;
+  margin: 0 0 1rem;
+  border-radius: 0.62rem;
   color: rgba(245, 234, 220, 0.72);
-  font-size: 0.74rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   background:
-    linear-gradient(135deg, rgba(0, 230, 246, 0.12), rgba(236, 183, 110, 0.10)),
-    rgba(0, 9, 15, 0.45);
-  border: 1px dashed rgba(0, 230, 246, 0.34);
-}
-
-.np-streamer-label {
-  margin: 0 0 0.2rem !important;
-  color: var(--np-cyan) !important;
-  font-size: 0.7rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.np-streamer-card h3,
-.np-asset-card h3 {
-  margin-top: 0 !important;
-  margin-bottom: 0.45rem !important;
-  color: var(--np-gold-soft) !important;
-}
-
-.np-streamer-card p,
-.np-asset-card p {
-  color: rgba(245, 234, 220, 0.82);
-  font-size: 0.86rem;
-  line-height: 1.5;
-}
-
-.np-streamer-card a {
-  display: inline-flex;
-  margin-top: 0.25rem;
-  color: var(--np-cyan) !important;
-  font-size: 0.78rem;
-  font-weight: 900;
-  text-decoration: none !important;
+    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
+    rgba(0, 9, 15, 0.34);
+  border: 1px dashed rgba(0, 221, 235, 0.30);
 }
 
 .np-asset-card {
@@ -1954,25 +1923,14 @@ blockquote {
 @media (max-width: 66.499rem) {
   .np-streamer-grid,
   .np-asset-grid {
-    width: 100%;
-    max-width: 100%;
     grid-template-columns: 1fr;
-  }
-
-  .np-streamer-card {
-    grid-template-columns: 4.5rem minmax(0, 1fr);
-  }
-
-  .np-streamer-avatar-placeholder {
-    width: 4.5rem;
-    height: 4.5rem;
   }
 }
 
 @media (min-width: 66.5rem) and (max-width: 1220px) {
   .np-streamer-grid,
   .np-asset-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2518,9 +2476,10 @@ body.np-page-sub .main-content h3 {
 
 /* =========================================================
    9. Einheitliches Typografie- und Farb-System
-   Konsolidiert Step 79–81:
-   - klare Rollen für Titel, Kicker, Karten und Fließtext
-   - Streamer-Seite wird an Team/Modpack-Hilfe/FAQ angeglichen
+   Ziel:
+   - gleiche Schriftarten/Farben für gleiche Elementarten auf allen Seiten
+   - keine seitenweisen Sonderfarben für Streamer/Team/FAQ/Modpack-Hilfe
+   - klare Rollen statt Einzelkorrekturen
    - Header/Footer-Positionierung bleibt unangetastet
    ========================================================= */
 
@@ -2529,29 +2488,43 @@ body.np-page-sub .main-content h3 {
   --np-font-display: Georgia, "Times New Roman", serif;
   --np-font-ui: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  --np-color-page-title: #f4cf7f;
-  --np-color-section-title: #ecb76e;
-  --np-color-card-title: #f7ecdc;
-  --np-color-body: rgba(247, 236, 220, 0.86);
-  --np-color-muted: rgba(247, 236, 220, 0.68);
-  --np-color-kicker: #00ddeb;
-  --np-color-link: #5feaf1;
+  --np-type-hero: #f4cf7f;
+  --np-type-section: #ecb76e;
+  --np-type-card: #f7ecdc;
+  --np-type-body: rgba(247, 236, 220, 0.86);
+  --np-type-muted: rgba(247, 236, 220, 0.68);
+  --np-type-kicker: #00ddeb;
+  --np-type-link: #5feaf1;
 }
 
-/* Grundschrift */
+/* 9.1 Basis: alle normalen Texte */
 body,
 .main-content,
 .main-content p,
 .main-content li,
+.main-content td,
+.main-content th,
 .main-content summary,
-.main-content details {
+.main-content details,
+.np-route-text,
+.np-card-text,
+.np-help-tile span,
+.np-community-card span,
+.np-team-member-card p,
+.np-team-card p,
+.np-streamer-card p,
+.np-asset-card p,
+.np-faq-details p,
+.np-help-details p,
+.np-about-text p,
+.np-origin-teaser p {
   font-family: var(--np-font-body) !important;
-  color: var(--np-color-body) !important;
+  color: var(--np-type-body) !important;
   font-weight: 400 !important;
   line-height: 1.62 !important;
 }
 
-/* Kicker / Labels / Kategorien */
+/* 9.2 Kicker / Labels / Rollen / kleine Kategorien: immer Cyan */
 .np-kicker,
 .np-section-kicker,
 .echo-page-kicker,
@@ -2562,9 +2535,17 @@ body,
 .np-help-flow article > span,
 .np-help-flow > div > span,
 .np-philosophy-grid article > span,
-.np-origin-timeline article > span {
+.np-origin-timeline article > span,
+.np-team-section .np-section-kicker,
+.np-faq-section .np-section-kicker,
+.np-story-section .np-section-kicker,
+.np-origin-section .np-section-kicker,
+.np-streamer-card .np-streamer-label,
+.np-streamer-card .np-team-role,
+.np-asset-card .np-streamer-label,
+.np-asset-card .np-team-role {
   font-family: var(--np-font-ui) !important;
-  color: var(--np-color-kicker) !important;
+  color: var(--np-type-kicker) !important;
   font-size: 0.72rem !important;
   font-weight: 900 !important;
   letter-spacing: 0.095em !important;
@@ -2573,24 +2554,20 @@ body,
   text-shadow: 0 0 14px rgba(0, 221, 235, 0.12) !important;
 }
 
-/* Hero-Titel: bewusste Fantasy-/Serif-Ausnahme */
+/* 9.3 Hero-Titel: einzige bewusst starke Serif/Fantasy-Fläche auf der Startseite */
 .np-hero h1,
 .np-home-v2 .np-hero h1 {
   font-family: var(--np-font-display) !important;
-  color: var(--np-color-page-title) !important;
+  color: var(--np-type-hero) !important;
   font-weight: 700 !important;
   letter-spacing: -0.045em !important;
   line-height: 0.92 !important;
   text-shadow:
-    0 3px 0 rgba(58, 40, 20, 0.20),
+    0 3px 0 rgba(58, 40, 20, 0.24),
     0 8px 24px rgba(0, 0, 0, 0.72) !important;
 }
 
-.np-hero-title-sub {
-  color: var(--np-color-page-title) !important;
-}
-
-/* Unterseiten-Haupttitel */
+/* 9.4 Haupttitel in großen Inhaltsblöcken: Serif, Gold */
 body.np-page-sub .main-content > h1,
 .np-story-section > h1,
 .np-origin-section > h1,
@@ -2598,13 +2575,13 @@ body.np-page-sub .main-content > h1,
 .np-team-section > h1,
 .np-content-box > h1 {
   font-family: var(--np-font-display) !important;
-  color: var(--np-color-page-title) !important;
+  color: var(--np-type-hero) !important;
   font-weight: 700 !important;
   letter-spacing: -0.035em !important;
   line-height: 1.08 !important;
 }
 
-/* ECHO-Intro-Titel und Section-Titel */
+/* 9.5 ECHO-Intro- und Section-Titel: UI-Schrift, Warmgold */
 .echo-page-box h2,
 .echo-page-box-team h2,
 .echo-page-box-philosophy h2,
@@ -2624,76 +2601,70 @@ body.np-page-sub .main-content > h2,
 .np-streamer-section h2,
 .np-help-section h2 {
   font-family: var(--np-font-ui) !important;
-  color: var(--np-color-section-title) !important;
+  color: var(--np-type-section) !important;
   font-weight: 900 !important;
   letter-spacing: -0.018em !important;
   line-height: 1.16 !important;
 }
 
-/* Card-Titel */
+/* 9.6 Card-Titel: auf allen Karten gleich */
 .np-card-title,
 .np-route-title,
 .np-help-tile strong,
 .np-community-card strong,
-.np-team-card h2,
 .np-team-member-card h3,
+.np-team-card h2,
+.np-streamer-card h2,
 .np-streamer-card h3,
+.np-streamer-card strong,
+.np-asset-card h2,
 .np-asset-card h3,
+.np-asset-card strong,
 .np-philosophy-grid h2,
 .np-origin-timeline h2,
 .np-server-brief-grid span,
 .np-status-item strong {
   font-family: var(--np-font-ui) !important;
-  color: var(--np-color-card-title) !important;
+  color: var(--np-type-card) !important;
   font-weight: 900 !important;
   letter-spacing: -0.01em !important;
   line-height: 1.22 !important;
 }
 
-/* Untertitel / Akkordeon-Fragen */
+/* 9.7 Untertitel / Akkordeon-Fragen */
 body.np-page-sub .main-content > h3,
 .np-faq-details summary,
 .np-help-details summary {
   font-family: var(--np-font-ui) !important;
-  color: var(--np-color-section-title) !important;
+  color: var(--np-type-section) !important;
   font-weight: 900 !important;
   letter-spacing: -0.005em !important;
+  line-height: 1.35 !important;
 }
 
-/* Fließtexte in Komponenten */
+/* 9.8 ECHO-Fließtext überall identisch */
 .echo-page-box p:not(.echo-page-kicker),
 .echo-page-box-team p:not(.echo-page-kicker),
 .echo-page-box-philosophy p:not(.echo-page-kicker),
 .echo-page-box-faq p:not(.echo-page-kicker),
 .echo-page-box-rules p:not(.echo-page-kicker),
 .echo-page-box-streamer p:not(.echo-page-kicker),
-.echo-page-box-help p:not(.echo-page-kicker),
-.np-route-text,
-.np-card-text,
-.np-help-tile span,
-.np-community-card span,
-.np-team-card p,
-.np-team-member-card p,
-.np-streamer-card p,
-.np-asset-card p,
-.np-faq-details p,
-.np-help-details p,
-.np-about-text p,
-.np-origin-teaser p {
+.echo-page-box-help p:not(.echo-page-kicker) {
   font-family: var(--np-font-body) !important;
-  color: var(--np-color-body) !important;
+  color: var(--np-type-body) !important;
+  font-size: 0.98rem !important;
   font-weight: 400 !important;
   line-height: 1.62 !important;
 }
 
-/* Links */
+/* 9.9 Links */
 .main-content a,
 .np-route-link,
 .np-card-link,
 .np-streamer-card a,
 .np-asset-card a {
   font-family: var(--np-font-ui) !important;
-  color: var(--np-color-link) !important;
+  color: var(--np-type-link) !important;
   font-weight: 900 !important;
   text-decoration-thickness: 1px !important;
   text-underline-offset: 0.18em !important;
@@ -2704,20 +2675,20 @@ body.np-page-sub .main-content > h3,
 .np-card-link:hover,
 .np-streamer-card a:hover,
 .np-asset-card a:hover {
-  color: var(--np-color-page-title) !important;
+  color: var(--np-type-hero) !important;
 }
 
-/* Meta/Timestamps/Footer-Texte */
+/* 9.10 Meta/Timestamps/Footer */
 .np-last-updated,
 .np-site-footer-brand span,
 .np-site-footer-links a,
 .np-site-footer-links span,
 .np-page-meta {
   font-family: var(--np-font-ui) !important;
-  color: var(--np-color-muted) !important;
+  color: var(--np-type-muted) !important;
 }
 
-/* Startseiten-Karten */
+/* 9.11 Komponenten-Größen vereinheitlichen */
 .np-route-title {
   font-size: 0.88rem !important;
 }
@@ -2732,11 +2703,9 @@ body.np-page-sub .main-content > h3,
   line-height: 1.2 !important;
 }
 
-/* Akkordeons */
 .np-faq-details summary,
 .np-help-details summary {
   font-size: 0.92rem !important;
-  line-height: 1.35 !important;
 }
 
 .np-faq-details p,
@@ -2745,7 +2714,27 @@ body.np-page-sub .main-content > h3,
   font-size: 0.92rem !important;
 }
 
-/* Card-Grundoptik einheitlich */
+.np-team-member-card p,
+.np-team-card p,
+.np-streamer-card p,
+.np-asset-card p {
+  font-size: 0.88rem !important;
+}
+
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-asset-card h2,
+.np-asset-card h3 {
+  font-size: 1.02rem !important;
+  margin: 0 0 0.45rem !important;
+}
+
+.np-streamer-label,
+.np-team-role {
+  margin: 0 0 0.35rem !important;
+}
+
+/* 9.12 Card-Grundoptik: alle Kartenfamilien nutzen denselben Grundlook */
 .np-card,
 .np-route-card,
 .np-help-tile,
@@ -2778,87 +2767,7 @@ body.np-page-sub .main-content > h3,
     linear-gradient(180deg, rgba(20, 58, 70, 0.78), rgba(5, 22, 30, 0.90)) !important;
 }
 
-/* Streamer-Seite: an Team-/Kartenlogik angleichen */
-.np-streamer-grid,
-.np-asset-grid {
-  width: min(1180px, calc(100% - 3rem)) !important;
-  max-width: 1180px !important;
-  margin: 1.25rem auto 1.8rem !important;
-  display: grid !important;
-  gap: 1rem !important;
-}
-
-.np-streamer-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-
-.np-asset-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
-
-.np-streamer-card {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  gap: 0.85rem !important;
-  align-items: start !important;
-  min-height: 0 !important;
-  padding: 1rem !important;
-}
-
-.np-streamer-avatar-placeholder,
-.np-streamer-image {
-  width: 100% !important;
-  min-height: 8.4rem !important;
-  height: auto !important;
-  aspect-ratio: 16 / 9 !important;
-  display: grid !important;
-  place-items: center !important;
-  margin: 0 0 0.15rem !important;
-  border-radius: 0.6rem !important;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
-    rgba(0, 9, 15, 0.34) !important;
-  border: 1px dashed rgba(0, 221, 235, 0.30) !important;
-  color: var(--np-color-link) !important;
-  font-family: var(--np-font-ui) !important;
-  font-size: 0.74rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
-
-.np-streamer-card h3,
-.np-asset-card h3 {
-  margin: 0 0 0.45rem !important;
-  color: var(--np-color-card-title) !important;
-  font-size: 1.02rem !important;
-}
-
-.np-streamer-label {
-  margin: 0 0 0.28rem !important;
-}
-
-.np-streamer-card p,
-.np-asset-card p {
-  margin: 0 0 0.6rem !important;
-  font-size: 0.88rem !important;
-  line-height: 1.58 !important;
-}
-
-/* Streamer-Assets etwas näher an Modpack-Hilfe/Team-Karten */
-.np-asset-card {
-  min-height: 10.5rem !important;
-  padding: 1.05rem !important;
-}
-
-.np-asset-icon {
-  width: 2.45rem !important;
-  height: 2.45rem !important;
-  margin-bottom: 0.75rem !important;
-  background: linear-gradient(135deg, #075a78, #00c8e5) !important;
-}
-
-/* Bild-/Platzhalter allgemein */
+/* 9.13 Bild-/Platzhalter einheitlich */
 .np-team-image-placeholder,
 .np-team-avatar-placeholder,
 .np-team-image,
@@ -2871,7 +2780,7 @@ body.np-page-sub .main-content > h3,
   border-color: rgba(0, 221, 235, 0.30) !important;
 }
 
-/* Fokus sichtbar */
+/* 9.14 Fokus sichtbar */
 .main-content a:focus-visible,
 .np-help-details summary:focus-visible,
 .np-faq-details summary:focus-visible {
@@ -2880,176 +2789,13 @@ body.np-page-sub .main-content > h3,
   border-radius: 0.35rem;
 }
 
-@media (min-width: 66.5rem) and (max-width: 1220px) {
-  .np-streamer-grid,
-  .np-asset-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-@media (max-width: 66.499rem) {
-  .np-streamer-grid,
-  .np-asset-grid {
-    width: 100% !important;
-    max-width: 100% !important;
-    grid-template-columns: 1fr !important;
-  }
-}
-/* =========================================================
-   Step 82: Streamer-Seite an Team-/Unterseiten-Kartenlayout angleichen
-   - erzwingt vertikale Karten wie auf der Team-Seite
-   - entfernt den eigenen seitlichen Streamer-Kartenlook
-   - Header/Footer bleiben unangetastet
-   ========================================================= */
-
-/* Streamer-Seite insgesamt wie normale Unterseiten-Sections behandeln */
-.np-streamer-section,
-.np-streamer-overview,
-.np-streamer-assets,
-.np-streamer-notes {
-  width: 100%;
-}
-
-/* Streamer-Übersicht: Kartenraster wie Team, nicht eigener Sonderlook */
-.np-streamer-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 1rem !important;
-  margin: 1.25rem 0 1.8rem !important;
-}
-
-/* Streamer-Karten vertikal statt seitlich */
-.np-streamer-card {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  grid-template-rows: auto auto auto 1fr auto !important;
-  align-items: start !important;
-  gap: 0 !important;
-  min-height: 100% !important;
-  padding: 1rem !important;
-  border: 1px solid rgba(72, 122, 146, 0.34) !important;
-  border-radius: 0.72rem !important;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
-    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86)) !important;
-  box-shadow:
-    0 16px 36px rgba(0, 0, 0, 0.25),
-    inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
-  text-align: left !important;
-}
-
-/* Egal ob Bildklasse alt oder neu: Bildfläche oben groß wie bei Team */
-.np-streamer-card .np-streamer-image,
-.np-streamer-card .np-streamer-avatar-placeholder,
-.np-streamer-card .np-team-image,
-.np-streamer-card .np-team-avatar-placeholder,
-.np-streamer-image,
-.np-streamer-avatar-placeholder {
-  width: 100% !important;
-  aspect-ratio: 1.35 / 1 !important;
-  min-height: 8.8rem !important;
-  max-height: 11rem !important;
-  display: grid !important;
-  place-items: center !important;
-  margin: 0 0 1rem !important;
-  border: 1px dashed rgba(0, 221, 235, 0.30) !important;
-  border-radius: 0.62rem !important;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(0, 221, 235, 0.11), transparent 8rem),
-    rgba(0, 9, 15, 0.34) !important;
-  color: var(--np-color-link, #5feaf1) !important;
-  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
-  font-size: 0.72rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
-
-/* Labels, Titel und Text exakt wie Team-/Card-System */
-.np-streamer-card .np-streamer-label,
-.np-streamer-card .np-team-role {
-  margin: 0 0 0.35rem !important;
-  color: var(--np-color-kicker, #00ddeb) !important;
-  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
-  font-size: 0.72rem !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.095em !important;
-  line-height: 1.15 !important;
-  text-transform: uppercase !important;
-}
-
-.np-streamer-card h2,
-.np-streamer-card h3,
-.np-streamer-card strong {
-  margin: 0 0 0.55rem !important;
-  color: var(--np-color-card-title, #f7ecdc) !important;
-  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
-  font-size: 1.06rem !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.01em !important;
-  line-height: 1.22 !important;
-}
-
-.np-streamer-card p {
-  margin: 0 0 0.9rem !important;
-  color: var(--np-color-body, rgba(247, 236, 220, 0.86)) !important;
-  font-family: var(--np-font-body, "Segoe UI", system-ui, sans-serif) !important;
-  font-size: 0.88rem !important;
-  font-weight: 400 !important;
-  line-height: 1.58 !important;
-}
-
-.np-streamer-card a {
-  align-self: end !important;
-  margin-top: 0.25rem !important;
-  color: var(--np-color-link, #5feaf1) !important;
-  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
-  font-size: 0.82rem !important;
-  font-weight: 900 !important;
-  text-decoration: none !important;
-}
-
-/* Streamer-Assets als normale 3er-Karten */
-.np-asset-grid,
-.np-streamer-assets-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 1rem !important;
-  margin: 1rem 0 1.8rem !important;
-}
-
-.np-asset-card {
-  min-height: 8rem !important;
-  padding: 1rem !important;
-  border: 1px solid rgba(72, 122, 146, 0.34) !important;
-  border-radius: 0.72rem !important;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(0, 221, 235, 0.055), transparent 9rem),
-    linear-gradient(180deg, rgba(17, 46, 64, 0.72), rgba(5, 20, 27, 0.86)) !important;
-}
-
-/* Streamer-Unterseitenüberschriften nicht abweichend behandeln */
-body.np-page-sub .main-content .np-streamer-section h2,
-body.np-page-sub .main-content > h2 {
-  color: var(--np-color-section-title, #ecb76e) !important;
-  font-family: var(--np-font-ui, "Segoe UI", system-ui, sans-serif) !important;
-  font-weight: 900 !important;
-  letter-spacing: -0.018em !important;
-}
-
-/* Responsive */
-@media (max-width: 66.499rem) {
-  .np-streamer-grid,
-  .np-asset-grid,
-  .np-streamer-assets-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-@media (min-width: 66.5rem) and (max-width: 1180px) {
-  .np-streamer-grid,
-  .np-asset-grid,
-  .np-streamer-assets-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
+/* 9.15 Header-Marke ausdrücklich nicht Serif */
+.np-topbar-title span:first-child,
+.np-topbar-title span:last-child,
+.np-top-nav a,
+.main-header .search-input,
+.main-header .aux-nav a,
+.np-site-footer-brand,
+.np-site-footer-links {
+  font-family: var(--np-font-ui) !important;
 }
