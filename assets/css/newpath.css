@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version
+   Konsolidierte CSS-Version v3
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -7,23 +7,25 @@
    4. Startseite
    4b. ECHO-Pfadfinder / Startseitenstruktur
    5. Unterseiten / Inhaltsboxen
+   5b. Einheitliche ECHO-Unterseitenboxen
    6. Modpack-Hilfe / Team / Streamer / FAQ / Philosophie / Regelwerk
    7. Fixierter Footer
    8. Responsive
+   9. Visueller Feinschliff / Kontraste / Accessibility
 */
 
 :root {
   --np-bg-deep: #000915;
   --np-bg-dark: #001221;
-  --np-panel: rgba(5, 20, 27, 0.76);
-  --np-panel-strong: rgba(5, 18, 25, 0.88);
-  --np-card: rgba(17, 46, 64, 0.78);
+  --np-panel: rgba(5, 20, 27, 0.82);
+  --np-panel-strong: rgba(5, 18, 25, 0.92);
+  --np-card: rgba(17, 46, 64, 0.82);
   --np-card-hover: rgba(24, 72, 86, 0.9);
-  --np-border: rgba(72, 122, 146, 0.42);
-  --np-border-soft: rgba(72, 122, 146, 0.22);
-  --np-text: #f5eadc;
-  --np-muted: rgba(245, 234, 220, 0.78);
-  --np-faint: rgba(245, 234, 220, 0.56);
+  --np-border: rgba(72, 122, 146, 0.46);
+  --np-border-soft: rgba(72, 122, 146, 0.26);
+  --np-text: #f7ecdc;
+  --np-muted: rgba(247, 236, 220, 0.82);
+  --np-faint: rgba(247, 236, 220, 0.60);
   --np-gold: #ecb76e;
   --np-gold-soft: #f4cf7f;
   --np-cyan: #00e6f6;
@@ -55,10 +57,10 @@ body {
   padding-bottom: var(--np-footer-height);
   color: var(--np-text);
   background:
-    linear-gradient(90deg, rgba(0, 4, 8, 0.72), rgba(3, 10, 14, 0.12) 24%, rgba(3, 10, 14, 0.12) 72%, rgba(0, 4, 8, 0.66)),
-    linear-gradient(180deg, rgba(0, 8, 14, 0.12), rgba(0, 8, 14, 0.22) 46%, rgba(0, 6, 10, 0.78) 100%),
-    radial-gradient(circle at 82% 20%, rgba(0, 230, 246, 0.08), transparent 34rem),
-    radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.055), transparent 28rem),
+    linear-gradient(90deg, rgba(0, 4, 8, 0.78), rgba(3, 10, 14, 0.20) 24%, rgba(3, 10, 14, 0.22) 72%, rgba(0, 4, 8, 0.72)),
+    linear-gradient(180deg, rgba(0, 8, 14, 0.20), rgba(0, 8, 14, 0.30) 46%, rgba(0, 6, 10, 0.84) 100%),
+    radial-gradient(circle at 82% 20%, rgba(0, 230, 246, 0.06), transparent 34rem),
+    radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.05), transparent 28rem),
     url("../images/background-site.webp"),
     linear-gradient(180deg, #101820, #05080a);
   background-size: cover, cover, auto, auto, cover, auto;
@@ -546,6 +548,94 @@ body::selection {
 .np-server-brief,
 .echo-page-box,
 .np-content-box,
+
+/* 5b. Einheitliche ECHO-Unterseitenboxen */
+
+.echo-page-box,
+.echo-page-box-team,
+.echo-page-box-philosophy,
+.echo-page-box-faq,
+.echo-page-box-rules,
+.echo-page-box-streamer,
+.echo-page-box-help {
+  display: grid !important;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr) !important;
+  gap: clamp(1.4rem, 2.2vw, 2.4rem) !important;
+  align-items: center !important;
+  padding: clamp(1.25rem, 2vw, 2rem) !important;
+  margin-bottom: 1.35rem !important;
+  border-left: 3px solid rgba(0, 230, 246, 0.64) !important;
+}
+
+.echo-page-box .echo-page-image,
+.echo-page-box-team .echo-page-image,
+.echo-page-box-philosophy .echo-page-image,
+.echo-page-box-faq .echo-page-image,
+.echo-page-box-rules .echo-page-image,
+.echo-page-box-streamer .echo-page-image,
+.echo-page-box-help .echo-page-image {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.echo-page-box .echo-page-image img,
+.echo-page-box-team .echo-page-image img,
+.echo-page-box-philosophy .echo-page-image img,
+.echo-page-box-faq .echo-page-image img,
+.echo-page-box-rules .echo-page-image img,
+.echo-page-box-streamer .echo-page-image img,
+.echo-page-box-help .echo-page-image img {
+  width: clamp(7.5rem, 10vw, 12rem) !important;
+  height: clamp(7.5rem, 10vw, 12rem) !important;
+  object-fit: contain !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34)) !important;
+}
+
+.echo-page-box .echo-page-content,
+.echo-page-box-team .echo-page-content,
+.echo-page-box-philosophy .echo-page-content,
+.echo-page-box-faq .echo-page-content,
+.echo-page-box-rules .echo-page-content,
+.echo-page-box-streamer .echo-page-content,
+.echo-page-box-help .echo-page-content {
+  max-width: 54rem !important;
+}
+
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2 {
+  margin: 0 0 0.65rem !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.75rem, 2vw, 2.35rem) !important;
+  line-height: 1.12 !important;
+}
+
+.echo-page-box p:not(.echo-page-kicker),
+.echo-page-box-team p:not(.echo-page-kicker),
+.echo-page-box-philosophy p:not(.echo-page-kicker),
+.echo-page-box-faq p:not(.echo-page-kicker),
+.echo-page-box-rules p:not(.echo-page-kicker),
+.echo-page-box-streamer p:not(.echo-page-kicker),
+.echo-page-box-help p:not(.echo-page-kicker) {
+  margin: 0 !important;
+  color: rgba(247, 236, 220, 0.9) !important;
+  font-size: 0.98rem !important;
+  line-height: 1.65 !important;
+}
+
 .np-help-note,
 .np-help-tile,
 .np-help-details,
@@ -869,82 +959,6 @@ body.np-page-sub .main-content h3 {
 .echo-page-content h2 {
   margin-top: 0;
   color: var(--np-gold-soft);
-}
-
-/* Einheitliche ECHO-Introboxen auf Unterseiten */
-
-.echo-page-box-team,
-.echo-page-box-philosophy,
-.echo-page-box-faq,
-.echo-page-box-rules {
-  display: grid;
-  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
-  gap: clamp(1.4rem, 2.2vw, 2.4rem);
-  align-items: center;
-  padding: clamp(1.25rem, 2vw, 2rem) !important;
-  margin-bottom: 1.35rem !important;
-}
-
-.echo-page-box-team .echo-page-image,
-.echo-page-box-philosophy .echo-page-image,
-.echo-page-box-faq .echo-page-image,
-.echo-page-box-rules .echo-page-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.echo-page-box-team .echo-page-image img,
-.echo-page-box-philosophy .echo-page-image img,
-.echo-page-box-faq .echo-page-image img,
-.echo-page-box-rules .echo-page-image img {
-  width: clamp(7.5rem, 10vw, 12rem);
-  height: clamp(7.5rem, 10vw, 12rem);
-  object-fit: contain;
-  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34));
-}
-
-.echo-page-box-team .echo-page-content,
-.echo-page-box-philosophy .echo-page-content,
-.echo-page-box-faq .echo-page-content,
-.echo-page-box-rules .echo-page-content {
-  max-width: 54rem;
-}
-
-.echo-page-box-team h2,
-.echo-page-box-philosophy h2,
-.echo-page-box-faq h2,
-.echo-page-box-rules h2 {
-  margin: 0 0 0.65rem !important;
-  color: var(--np-gold-soft) !important;
-  font-size: clamp(1.75rem, 2vw, 2.35rem) !important;
-  line-height: 1.12 !important;
-}
-
-.echo-page-box-team p:not(.echo-page-kicker),
-.echo-page-box-philosophy p:not(.echo-page-kicker),
-.echo-page-box-faq p:not(.echo-page-kicker),
-.echo-page-box-rules p:not(.echo-page-kicker) {
-  margin: 0 !important;
-  color: rgba(245, 234, 220, 0.9);
-  font-size: 0.98rem;
-  line-height: 1.65;
-}
-
-@media (max-width: 66.499rem) {
-  .echo-page-box-team,
-  .echo-page-box-philosophy,
-  .echo-page-box-faq,
-  .echo-page-box-rules {
-    grid-template-columns: 1fr;
-  }
-
-  .echo-page-box-team .echo-page-image,
-  .echo-page-box-philosophy .echo-page-image,
-  .echo-page-box-faq .echo-page-image,
-  .echo-page-box-rules .echo-page-image {
-    justify-content: flex-start;
-  }
 }
 
 .np-help-note {
@@ -2247,192 +2261,12 @@ body:not(.home) .main-content th {
     max-width: 100%;
   }
 }
-/* =========================================================
-   Step 74: ECHO-Boxen auf allen Unterseiten vereinheitlichen
-   - Modpack Hilfe und Streamer nutzen jetzt dieselbe ECHO-Größe
-   - ersetzt die kleineren Basiswerte aus .echo-page-box
-   - Header/Footer bleiben unangetastet
-   ========================================================= */
 
-.echo-page-box,
-.echo-page-box-team,
-.echo-page-box-philosophy,
-.echo-page-box-faq,
-.echo-page-box-rules,
-.echo-page-box-streamer,
-.echo-page-box-help {
-  display: grid !important;
-  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr) !important;
-  gap: clamp(1.4rem, 2.2vw, 2.4rem) !important;
-  align-items: center !important;
-  padding: clamp(1.25rem, 2vw, 2rem) !important;
-  margin-bottom: 1.35rem !important;
-  border-left: 3px solid rgba(0, 230, 246, 0.64) !important;
-}
+/* 9. Visueller Feinschliff / Kontraste / Accessibility */
 
-.echo-page-box .echo-page-image,
-.echo-page-box-team .echo-page-image,
-.echo-page-box-philosophy .echo-page-image,
-.echo-page-box-faq .echo-page-image,
-.echo-page-box-rules .echo-page-image,
-.echo-page-box-streamer .echo-page-image,
-.echo-page-box-help .echo-page-image {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.echo-page-box .echo-page-image img,
-.echo-page-box-team .echo-page-image img,
-.echo-page-box-philosophy .echo-page-image img,
-.echo-page-box-faq .echo-page-image img,
-.echo-page-box-rules .echo-page-image img,
-.echo-page-box-streamer .echo-page-image img,
-.echo-page-box-help .echo-page-image img {
-  width: clamp(7.5rem, 10vw, 12rem) !important;
-  height: clamp(7.5rem, 10vw, 12rem) !important;
-  object-fit: contain !important;
-  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34)) !important;
-}
-
-.echo-page-box .echo-page-content,
-.echo-page-box-team .echo-page-content,
-.echo-page-box-philosophy .echo-page-content,
-.echo-page-box-faq .echo-page-content,
-.echo-page-box-rules .echo-page-content,
-.echo-page-box-streamer .echo-page-content,
-.echo-page-box-help .echo-page-content {
-  max-width: 54rem !important;
-}
-
-.echo-page-box h2,
-.echo-page-box-team h2,
-.echo-page-box-philosophy h2,
-.echo-page-box-faq h2,
-.echo-page-box-rules h2,
-.echo-page-box-streamer h2,
-.echo-page-box-help h2 {
-  margin: 0 0 0.65rem !important;
-  color: var(--np-gold-soft) !important;
-  font-size: clamp(1.75rem, 2vw, 2.35rem) !important;
-  line-height: 1.12 !important;
-}
-
-.echo-page-box p:not(.echo-page-kicker),
-.echo-page-box-team p:not(.echo-page-kicker),
-.echo-page-box-philosophy p:not(.echo-page-kicker),
-.echo-page-box-faq p:not(.echo-page-kicker),
-.echo-page-box-rules p:not(.echo-page-kicker),
-.echo-page-box-streamer p:not(.echo-page-kicker),
-.echo-page-box-help p:not(.echo-page-kicker) {
-  margin: 0 !important;
-  color: rgba(245, 234, 220, 0.9) !important;
-  font-size: 0.98rem !important;
-  line-height: 1.65 !important;
-}
-
-@media (max-width: 66.499rem) {
-  .echo-page-box,
-  .echo-page-box-team,
-  .echo-page-box-philosophy,
-  .echo-page-box-faq,
-  .echo-page-box-rules,
-  .echo-page-box-streamer,
-  .echo-page-box-help {
-    grid-template-columns: 1fr !important;
-  }
-
-  .echo-page-box .echo-page-image,
-  .echo-page-box-team .echo-page-image,
-  .echo-page-box-philosophy .echo-page-image,
-  .echo-page-box-faq .echo-page-image,
-  .echo-page-box-rules .echo-page-image,
-  .echo-page-box-streamer .echo-page-image,
-  .echo-page-box-help .echo-page-image {
-    justify-content: flex-start !important;
-  }
-}
-/* =========================================================
-   Step 75: ECHO-Bildrahmen auf allen Unterseiten entfernen
-   - ECHO steht frei in der Box
-   - gilt für Modpack Hilfe, Streamer, Team, FAQ, Philosophie, Regelwerk usw.
-   - Header/Footer bleiben unangetastet
-   ========================================================= */
-
-.echo-page-box .echo-page-image img,
-.echo-page-box-team .echo-page-image img,
-.echo-page-box-philosophy .echo-page-image img,
-.echo-page-box-faq .echo-page-image img,
-.echo-page-box-rules .echo-page-image img,
-.echo-page-box-streamer .echo-page-image img,
-.echo-page-box-help .echo-page-image img,
-.np-error-echo img {
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  border-radius: 0 !important;
-}
-
-.echo-page-box .echo-page-image,
-.echo-page-box-team .echo-page-image,
-.echo-page-box-philosophy .echo-page-image,
-.echo-page-box-faq .echo-page-image,
-.echo-page-box-rules .echo-page-image,
-.echo-page-box-streamer .echo-page-image,
-.echo-page-box-help .echo-page-image {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-
-/* ECHO darf weiterhin einen leichten Schatten haben, aber keinen Rahmen/Kasten */
-.echo-page-box .echo-page-image img,
-.echo-page-box-team .echo-page-image img,
-.echo-page-box-philosophy .echo-page-image img,
-.echo-page-box-faq .echo-page-image img,
-.echo-page-box-rules .echo-page-image img,
-.echo-page-box-streamer .echo-page-image img,
-.echo-page-box-help .echo-page-image img {
-  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34)) !important;
-}
-/* =========================================================
-   Step 76: Farb-/Kontrast- und Schriftbild-Feinschliff
-   - Hintergrund minimal dunkler
-   - Unterseiten-Texte ruhiger/lesbarer
-   - Karten, Akkordeons und Hinweise optisch vereinheitlicht
-   - Header/Footer bleiben unangetastet
-   ========================================================= */
-
-:root {
-  --np-text: #f7ecdc;
-  --np-muted: rgba(247, 236, 220, 0.82);
-  --np-faint: rgba(247, 236, 220, 0.60);
-  --np-panel: rgba(5, 20, 27, 0.82);
-  --np-panel-strong: rgba(5, 18, 25, 0.92);
-  --np-card: rgba(17, 46, 64, 0.82);
-  --np-border: rgba(72, 122, 146, 0.46);
-  --np-border-soft: rgba(72, 122, 146, 0.26);
-}
-
-/* Hintergrund minimal abdunkeln, damit Cyan/Creme-Texte nicht auf hellen Bildbereichen verschwimmen */
-body {
-  background:
-    linear-gradient(90deg, rgba(0, 4, 8, 0.78), rgba(3, 10, 14, 0.20) 24%, rgba(3, 10, 14, 0.22) 72%, rgba(0, 4, 8, 0.72)),
-    linear-gradient(180deg, rgba(0, 8, 14, 0.20), rgba(0, 8, 14, 0.30) 46%, rgba(0, 6, 10, 0.84) 100%),
-    radial-gradient(circle at 82% 20%, rgba(0, 230, 246, 0.06), transparent 34rem),
-    radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.05), transparent 28rem),
-    url("../images/background-site.webp"),
-    linear-gradient(180deg, #101820, #05080a) !important;
-  background-size: cover, cover, auto, auto, cover, auto !important;
-  background-position: center top, center top, center, center, center top, center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
-}
-
-/* Einheitlichere Typografie auf Unterseiten */
 body.np-page-sub .main-content {
   color: var(--np-muted);
+  margin-bottom: calc(var(--np-footer-height) + 3rem) !important;
 }
 
 body.np-page-sub .main-content p,
@@ -2456,7 +2290,6 @@ body.np-page-sub .main-content h3 {
   color: var(--np-gold) !important;
 }
 
-/* Links: weniger grelles Cyan im Fließtext, aber weiterhin klar erkennbar */
 .main-content a {
   color: #64eaf2 !important;
   text-underline-offset: 0.18em;
@@ -2466,7 +2299,6 @@ body.np-page-sub .main-content h3 {
   color: var(--np-gold-soft) !important;
 }
 
-/* Einheitliche Box-Optik für wiederkehrende Inhaltsflächen */
 .echo-page-box,
 .np-content-box,
 .np-help-note,
@@ -2489,7 +2321,6 @@ body.np-page-sub .main-content h3 {
     inset 0 0 34px rgba(0, 230, 246, 0.020) !important;
 }
 
-/* Kicker/Meta-Zeilen einheitlich */
 .np-kicker,
 .np-section-kicker,
 .echo-page-kicker {
@@ -2497,7 +2328,6 @@ body.np-page-sub .main-content h3 {
   text-shadow: 0 0 14px rgba(0, 230, 246, 0.12);
 }
 
-/* Akkordeons: geschlossener Zustand ruhiger, geöffneter Zustand klarer */
 .np-help-details,
 .np-faq-details {
   background:
@@ -2518,7 +2348,6 @@ body.np-page-sub .main-content h3 {
     inset 0 0 28px rgba(0, 230, 246, 0.030) !important;
 }
 
-/* Karten allgemein etwas hochwertiger, aber ohne Bewegungs-/Performance-Effekte */
 .np-help-tile,
 .np-community-card,
 .np-team-card,
@@ -2543,7 +2372,6 @@ body.np-page-sub .main-content h3 {
     inset 0 0 32px rgba(0, 230, 246, 0.04) !important;
 }
 
-/* Bildplatzhalter einheitlicher */
 .np-team-image-placeholder,
 .np-team-avatar-placeholder,
 .np-team-image,
@@ -2555,16 +2383,10 @@ body.np-page-sub .main-content h3 {
   border-color: rgba(0, 230, 246, 0.30) !important;
 }
 
-/* Fokus für Tastatur-Navigation sichtbar, aber passend zum Design */
 .main-content a:focus-visible,
 .np-help-details summary:focus-visible,
 .np-faq-details summary:focus-visible {
   outline: 2px solid rgba(0, 230, 246, 0.75) !important;
   outline-offset: 3px !important;
   border-radius: 0.35rem;
-}
-
-/* Footer-Abstand für längere Unterseiten vorsichtig stabilisieren, ohne Footer selbst anzufassen */
-body.np-page-sub .main-content {
-  margin-bottom: calc(var(--np-footer-height) + 3rem) !important;
 }
