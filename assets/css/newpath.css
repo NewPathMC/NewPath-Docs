@@ -3146,4 +3146,179 @@ body.np-page-sub .main-content > h3,
     margin-bottom: 0.65rem !important;
   }
 }
+/* =========================================================
+   Step 86: Automatisches vertikales Spacing-System
+   - zentrale Grundwerte statt seitenweiser Einzelabstände
+   - entfernt künstliche Mindesthöhe, die unnötiges Scrollen erzeugen kann
+   - Header/Footer bleiben unangetastet
+   ========================================================= */
+
+:root {
+  --np-space-xs: clamp(0.35rem, 0.45vw, 0.55rem);
+  --np-space-sm: clamp(0.55rem, 0.70vw, 0.80rem);
+  --np-space-md: clamp(0.75rem, 0.95vw, 1.05rem);
+  --np-space-lg: clamp(0.95rem, 1.25vw, 1.35rem);
+  --np-section-gap: var(--np-space-md);
+  --np-box-padding-y: var(--np-space-lg);
+  --np-box-padding-x: clamp(1rem, 1.55vw, 1.65rem);
+  --np-grid-gap: var(--np-space-md);
+}
+
+/* Wichtig:
+   Keine künstliche Mindesthöhe für den Content erzwingen.
+   Sonst entsteht Scrollen, obwohl der echte Inhalt eigentlich passen würde. */
+@media (min-width: 66.5rem) {
+  .main-content {
+    min-height: auto !important;
+  }
+
+  body.np-page-sub .main-content {
+    min-height: auto !important;
+    height: auto !important;
+    margin-top: var(--np-section-gap) !important;
+    margin-bottom: var(--np-section-gap) !important;
+    padding-top: var(--np-box-padding-y) !important;
+    padding-bottom: var(--np-box-padding-y) !important;
+    padding-left: var(--np-box-padding-x) !important;
+    padding-right: var(--np-box-padding-x) !important;
+  }
+
+  .echo-page-box,
+  .echo-page-box-team,
+  .echo-page-box-philosophy,
+  .echo-page-box-faq,
+  .echo-page-box-rules,
+  .echo-page-box-streamer,
+  .echo-page-box-help,
+  .np-page-section,
+  .np-content-box,
+  .np-story-section,
+  .np-origin-section,
+  .np-faq-section,
+  .np-team-section,
+  .np-streamer-section {
+    margin-top: 0 !important;
+    margin-bottom: var(--np-section-gap) !important;
+    padding-top: var(--np-box-padding-y) !important;
+    padding-bottom: var(--np-box-padding-y) !important;
+    padding-left: var(--np-box-padding-x) !important;
+    padding-right: var(--np-box-padding-x) !important;
+  }
+
+  .echo-page-box:last-child,
+  .echo-page-box-team:last-child,
+  .echo-page-box-philosophy:last-child,
+  .echo-page-box-faq:last-child,
+  .echo-page-box-rules:last-child,
+  .echo-page-box-streamer:last-child,
+  .echo-page-box-help:last-child,
+  .np-page-section:last-child,
+  .np-content-box:last-child,
+  .np-story-section:last-child,
+  .np-origin-section:last-child,
+  .np-faq-section:last-child,
+  .np-team-section:last-child,
+  .np-streamer-section:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .np-section-header {
+    margin-bottom: var(--np-space-md) !important;
+  }
+
+  .np-card-grid,
+  .np-help-grid,
+  .np-community-grid,
+  .np-team-grid,
+  .np-streamer-grid,
+  .np-asset-grid,
+  .np-origin-timeline,
+  .np-philosophy-grid {
+    gap: var(--np-grid-gap) !important;
+    margin-top: var(--np-space-md) !important;
+    margin-bottom: 0 !important;
+  }
+
+  .np-info-card,
+  .np-team-member-card,
+  .np-streamer-card,
+  .np-help-tile,
+  .np-community-card,
+  .np-asset-card,
+  .np-route-card {
+    padding-top: var(--np-space-md) !important;
+    padding-bottom: var(--np-space-md) !important;
+  }
+
+  .np-help-note,
+  .np-note,
+  .np-rules-note {
+    margin-top: var(--np-space-sm) !important;
+    margin-bottom: var(--np-space-sm) !important;
+    padding-top: var(--np-space-sm) !important;
+    padding-bottom: var(--np-space-sm) !important;
+  }
+
+  .np-help-details,
+  .np-faq-details,
+  .np-accordion {
+    margin-top: var(--np-space-sm) !important;
+    margin-bottom: var(--np-space-sm) !important;
+  }
+
+  .np-help-details:last-child,
+  .np-faq-details:last-child,
+  .np-accordion:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* Startseite: ebenfalls zentral über Variablen steuern */
+  .np-home-v2 .np-hero {
+    min-height: auto !important;
+    padding-top: var(--np-space-md) !important;
+    padding-bottom: var(--np-space-sm) !important;
+  }
+
+  .np-home-v2 .np-status-bar-v2 {
+    margin-top: 0 !important;
+    margin-bottom: var(--np-space-sm) !important;
+  }
+
+  .np-home-v2 .np-page-meta .np-last-updated {
+    margin-bottom: var(--np-space-sm) !important;
+  }
+
+  .np-home-v2 .np-pathfinder,
+  .np-home-v2 .np-about-panel-v2,
+  .np-home-v2 .np-server-brief-v2 {
+    margin-top: 0 !important;
+    margin-bottom: var(--np-section-gap) !important;
+    padding-top: var(--np-box-padding-y) !important;
+    padding-bottom: var(--np-box-padding-y) !important;
+  }
+
+  .np-home-v2 .np-server-brief-v2 {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Bei niedriger Fensterhöhe wird alles automatisch enger,
+   ohne pro Seite eigene Werte zu brauchen. */
+@media (min-width: 66.5rem) and (max-height: 860px) {
+  :root {
+    --np-space-xs: 0.28rem;
+    --np-space-sm: 0.42rem;
+    --np-space-md: 0.58rem;
+    --np-space-lg: 0.78rem;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-height: 760px) {
+  :root {
+    --np-space-xs: 0.22rem;
+    --np-space-sm: 0.34rem;
+    --np-space-md: 0.46rem;
+    --np-space-lg: 0.62rem;
+  }
+}
 
