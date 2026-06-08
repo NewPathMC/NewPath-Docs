@@ -4380,4 +4380,68 @@ img {
     animation-iteration-count: 1 !important;
   }
 }
+/* =========================================================
+   Fix: Startseite minimalen Scrollbalken entfernen
+   - reduziert nur auf der Startseite die vertikale Resthöhe
+   - Header/Footer bleiben fixiert
+   - Unterseiten bleiben unverändert
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  body.np-page-home {
+    padding-top: calc(var(--np-header-height) - 0.18rem);
+    padding-bottom: calc(var(--np-footer-height) - 0.18rem);
+  }
+
+  body.np-page-home .main-content {
+    min-height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .np-home-v2 .np-hero {
+    padding-top: 0 !important;
+    padding-bottom: 0.15rem !important;
+  }
+
+  .np-home-v2 .np-status-bar-showcase {
+    min-height: 3.95rem !important;
+  }
+
+  .np-home-v2 .np-status-bar-showcase .np-status-item {
+    min-height: 3.95rem !important;
+    padding-top: 0.58rem !important;
+    padding-bottom: 0.58rem !important;
+  }
+
+  .np-home-section-separator {
+    margin-top: clamp(1rem, 1.7vw, 1.65rem) !important;
+    margin-bottom: clamp(1rem, 1.7vw, 1.65rem) !important;
+  }
+
+  .np-home-v2 .np-pathfinder {
+    padding-top: clamp(0.85rem, 1.2vw, 1.15rem) !important;
+    padding-bottom: clamp(0.85rem, 1.2vw, 1.15rem) !important;
+  }
+
+  .np-home-v2 .np-history-panel {
+    padding-top: clamp(0.95rem, 1.35vw, 1.35rem) !important;
+    padding-bottom: clamp(0.95rem, 1.35vw, 1.35rem) !important;
+  }
+}
+
+/* Bei niedrigeren Desktop-Fenstern noch etwas kompakter,
+   damit die Startseite ohne unnötigen Scrollbalken auskommt. */
+@media (min-width: 66.5rem) and (max-height: 860px) {
+  .np-home-section-separator {
+    margin-top: 0.85rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .np-home-v2 .np-pathfinder,
+  .np-home-v2 .np-history-panel {
+    padding-top: 0.82rem !important;
+    padding-bottom: 0.82rem !important;
+  }
+}
 
