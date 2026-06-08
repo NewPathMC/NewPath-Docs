@@ -2390,3 +2390,101 @@ body.np-page-sub .main-content h3 {
   outline-offset: 3px !important;
   border-radius: 0.35rem;
 }
+/* =========================================================
+   Hotfix Step 77: Startseite ECHO-Pfadfinder reparieren
+   - behebt vertikal gequetschten ECHO-Text auf der Startseite
+   - betrifft nur Startseite / .np-pathfinder
+   - Header/Footer und Unterseiten-ECHO bleiben unangetastet
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-pathfinder {
+    grid-template-columns: minmax(420px, 0.48fr) minmax(560px, 0.52fr) !important;
+    align-items: stretch !important;
+  }
+
+  .np-home-v2 .np-pathfinder > * {
+    min-width: 0 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-echo {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1.25rem !important;
+    min-width: 0 !important;
+    min-height: 12rem !important;
+    padding: 0 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image {
+    flex: 0 0 clamp(8.5rem, 9.8vw, 11rem) !important;
+    width: clamp(8.5rem, 9.8vw, 11rem) !important;
+    min-width: clamp(8.5rem, 9.8vw, 11rem) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image img {
+    width: clamp(8.5rem, 9.8vw, 11rem) !important;
+    height: clamp(8.5rem, 9.8vw, 11rem) !important;
+    max-width: none !important;
+    object-fit: contain !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy {
+    flex: 1 1 auto !important;
+    min-width: 260px !important;
+    max-width: 38rem !important;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy .np-kicker,
+  .np-home-v2 .np-pathfinder-copy h2,
+  .np-home-v2 .np-pathfinder-copy p {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy .np-kicker {
+    margin-bottom: 0.45rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.095em !important;
+    line-height: 1.15 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy h2 {
+    margin: 0 0 0.5rem !important;
+    font-size: clamp(1.48rem, 1.55vw, 1.9rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy p {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-home-v2 .np-pathfinder {
+    grid-template-columns: 1fr !important;
+  }
+
+  .np-home-v2 .np-pathfinder-routes {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
