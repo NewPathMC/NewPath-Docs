@@ -1,11 +1,11 @@
 ---
-layout: default
 title: Streamer
 nav_order: 7
 permalink: /streamer.html
 ---
+
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 13:22 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: wird automatisch gesetzt</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-streamer">
@@ -13,7 +13,7 @@ permalink: /streamer.html
   <div class="echo-page-image">
     <img
       src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
-      alt="ECHO begleitet NewPath-Streamer"
+      alt="ECHO begleitet die NewPath-Streamer"
       width="512"
       height="512"
       loading="lazy"
@@ -21,82 +21,95 @@ permalink: /streamer.html
   </div>
 
   <div class="echo-page-content">
-    <p class="echo-page-kicker">ECHO zeigt dir NewPath live</p>
-    <h2>Streamer aus der Community.</h2>
+    <p class="echo-page-kicker">Streamer</p>
+    <h1>NewPath live erleben.</h1>
     <p>
-      Hier entsteht die Übersicht für NewPath-Streamer, Streamer-Materialien und Hinweise,
-      wie Streams in der Community angekündigt werden können.
+      Auf dieser Seite sollen später alle registrierten NewPath-Streamer gesammelt werden.
+      Außerdem findest du hier Hinweise und Assets, die für Streams, Overlays, Ankündigungen
+      oder Social-Media-Beiträge genutzt werden können.
     </p>
   </div>
 
 </section>
 
-# Streamer
+## Streamer-Übersicht
 
-Auf dieser Seite sammeln wir Streamer aus der NewPath-Community und Material, das für Streams,
-Overlays, Panels oder Ankündigungen genutzt werden kann.
+<div class="np-streamer-grid">
 
-<div class="np-help-note">
-  <strong>Geplant:</strong> Die Inhalte aus dem Discord-Channel für Streamer-Bilder können später hier
-  als geordnete Asset-Bibliothek eingebunden werden.
-</div>
-
-## NewPath live erleben
-
-<div class="np-community-grid">
-  <article class="np-community-card">
-    <span class="np-community-icon">▶</span>
-    <h3>Registrierte Streamer</h3>
-    <p>Übersicht der Streamer, die NewPath regelmäßig oder gelegentlich zeigen.</p>
-  </article>
-
-  <article class="np-community-card">
-    <span class="np-community-icon">▣</span>
-    <h3>Streamer-Material</h3>
-    <p>Grafiken, Banner, Panels und Assets, die für NewPath-Streams genutzt werden können.</p>
-  </article>
-
-  <article class="np-community-card">
-    <span class="np-community-icon">●</span>
-    <h3>Stream-Ankündigungen</h3>
-    <p>Hinweise, wann Streams automatisch oder manuell im Discord angekündigt werden.</p>
-  </article>
-</div>
-
-## Registrierte Streamer
-
-<div class="np-streamer-list">
   <article class="np-streamer-card">
-    <h3>Streamer-Name</h3>
-    <p class="np-team-role">Twitch / YouTube / Plattform</p>
-    <p>Kurzer Beschreibungstext, Streaming-Schwerpunkt oder Hinweis zum Kanal.</p>
+    <div class="np-streamer-avatar-placeholder">Bild</div>
+    <div>
+      <p class="np-streamer-label">Streamer</p>
+      <h3>Name / Kanal</h3>
+      <p>Kurze Beschreibung, Streaming-Zeiten, bevorzugte Inhalte oder Rolle innerhalb von NewPath.</p>
+      <a href="#" aria-disabled="true">Kanal später ergänzen</a>
+    </div>
   </article>
 
-  <article class="np-streamer-card np-team-card-placeholder">
-    <h3>Weitere Streamer</h3>
-    <p>Hier können registrierte NewPath-Streamer nach und nach ergänzt werden.</p>
+  <article class="np-streamer-card">
+    <div class="np-streamer-avatar-placeholder">Bild</div>
+    <div>
+      <p class="np-streamer-label">Streamer</p>
+      <h3>Name / Kanal</h3>
+      <p>Kurze Beschreibung, Streaming-Zeiten, bevorzugte Inhalte oder Rolle innerhalb von NewPath.</p>
+      <a href="#" aria-disabled="true">Kanal später ergänzen</a>
+    </div>
   </article>
+
+  <article class="np-streamer-card">
+    <div class="np-streamer-avatar-placeholder">Bild</div>
+    <div>
+      <p class="np-streamer-label">Streamer</p>
+      <h3>Name / Kanal</h3>
+      <p>Kurze Beschreibung, Streaming-Zeiten, bevorzugte Inhalte oder Rolle innerhalb von NewPath.</p>
+      <a href="#" aria-disabled="true">Kanal später ergänzen</a>
+    </div>
+  </article>
+
 </div>
 
-## Streamer-Material
+## Streamer-Assets
 
-<details class="np-help-details" open>
-  <summary>Welche Assets können hier rein?</summary>
+<div class="np-asset-grid">
+
+  <article class="np-asset-card">
+    <span class="np-asset-icon">▣</span>
+    <h3>Overlay-Bilder</h3>
+    <p>Hier können später Bilder für Twitch, OBS oder Social Media verlinkt werden.</p>
+  </article>
+
+  <article class="np-asset-card">
+    <span class="np-asset-icon">✦</span>
+    <h3>Banner & Panels</h3>
+    <p>Platz für Streamer-Banner, Infografiken oder kleine Projektgrafiken.</p>
+  </article>
+
+  <article class="np-asset-card">
+    <span class="np-asset-icon">⌁</span>
+    <h3>Hinweise zur Nutzung</h3>
+    <p>Kurze Regeln, wie NewPath-Bilder, Logos und Texte genutzt werden sollen.</p>
+  </article>
+
+</div>
+
+## Hinweise für Streams
+
+<details class="np-help-details">
+  <summary>Was darf gezeigt werden?</summary>
   <div>
     <p>
-      Geeignet sind zum Beispiel Banner, Panels, Logos, Overlay-Grafiken oder kleine
-      „Ich spiele NewPath“-Motive. Die Dateien sollten später möglichst einheitlich benannt
-      und mit kurzer Nutzungsbeschreibung eingebunden werden.
+      Grundsätzlich dürfen Streams und Screenshots rund um NewPath gezeigt werden,
+      solange keine privaten Daten, Team-Interna, Ticket-Inhalte oder vertraulichen Gespräche sichtbar sind.
     </p>
   </div>
 </details>
 
 <details class="np-help-details">
-  <summary>Wie werde ich als Streamer gelistet?</summary>
+  <summary>Wie werde ich als Streamer eingetragen?</summary>
   <div>
     <p>
-      Die genaue Regelung wird später ergänzt. Sinnvoll wäre ein kurzer Hinweis auf den Discord,
-      die Streamer-Rolle und die Bedingungen für Stream-Ankündigungen.
+      Die Eintragung erfolgt später über das NewPath-Team. Geplant ist eine Übersicht mit Namen,
+      Kanal-Link und kurzer Beschreibung.
     </p>
   </div>
 </details>
