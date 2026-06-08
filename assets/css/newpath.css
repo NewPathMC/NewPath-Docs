@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v3
+   Konsolidierte CSS-Version v4
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -548,6 +548,22 @@ body::selection {
 .np-server-brief,
 .echo-page-box,
 .np-content-box,
+.np-help-note,
+.np-help-tile,
+.np-help-details,
+.np-team-member-card,
+.np-streamer-card,
+.np-community-card {
+  border: 1px solid rgba(72, 122, 146, 0.34);
+  border-radius: 0.72rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 18rem),
+    linear-gradient(180deg, rgba(8, 26, 34, 0.78), rgba(4, 16, 22, 0.82));
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.25),
+    inset 0 0 34px rgba(0, 230, 246, 0.025);
+  backdrop-filter: blur(8px);
+}
 
 /* 5b. Einheitliche ECHO-Unterseitenboxen */
 
@@ -634,21 +650,6 @@ body::selection {
   color: rgba(247, 236, 220, 0.9) !important;
   font-size: 0.98rem !important;
   line-height: 1.65 !important;
-}
-
-.np-help-note,
-.np-help-tile,
-.np-help-details,
-.np-team-member-card,
-.np-streamer-card,
-.np-community-card {
-  border: 1px solid rgba(72, 122, 146, 0.34);
-  border-radius: 0.72rem;
-  background:
-    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 18rem),
-    linear-gradient(180deg, rgba(8, 26, 34, 0.78), rgba(4, 16, 22, 0.82));
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25), inset 0 0 34px rgba(0, 230, 246, 0.025);
-  backdrop-filter: blur(8px);
 }
 
 .np-panel h2,
@@ -939,27 +940,6 @@ body.np-page-sub .main-content h3 {
   color: var(--np-gold-soft);
 }
 
-.echo-page-box {
-  display: grid;
-  grid-template-columns: minmax(120px, 0.24fr) minmax(0, 0.76fr);
-  gap: 1.2rem;
-  align-items: center;
-  margin: 0 0 1.35rem;
-  padding: 1rem 1.2rem;
-  border-left: 3px solid rgba(0, 230, 246, 0.64);
-}
-
-.echo-page-image img {
-  width: min(130px, 100%);
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.35));
-}
-
-.echo-page-content h2 {
-  margin-top: 0;
-  color: var(--np-gold-soft);
-}
 
 .np-help-note {
   margin: 1rem 0;
@@ -1594,6 +1574,151 @@ blockquote {
     justify-content: flex-start;
   }
 }
+
+/* 4c. Startseite: ECHO-Pfadfinder stabilisiert */
+
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-pathfinder {
+    grid-template-columns: minmax(420px, 0.48fr) minmax(560px, 0.52fr) !important;
+    align-items: stretch !important;
+    border: 1px solid rgba(72, 122, 146, 0.34) !important;
+    border-radius: 0.78rem !important;
+    overflow: hidden !important;
+    background:
+      radial-gradient(circle at 12% 58%, rgba(0, 230, 246, 0.13), transparent 16rem),
+      radial-gradient(circle at 88% 8%, rgba(236, 183, 110, 0.10), transparent 18rem),
+      linear-gradient(135deg, rgba(4, 18, 25, 0.82), rgba(7, 28, 36, 0.74)) !important;
+    box-shadow:
+      0 18px 38px rgba(0, 0, 0, 0.28),
+      inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
+  }
+
+  .np-home-v2 .np-pathfinder > * {
+    min-width: 0 !important;
+  }
+
+  .np-home-v2 .np-pathfinder::before,
+  .np-home-v2 .np-pathfinder::after {
+    border-radius: inherit !important;
+  }
+
+  .np-home-v2 .np-pathfinder-echo {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 1.25rem !important;
+    min-width: 0 !important;
+    min-height: 12rem !important;
+    padding: 0 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-echo::before {
+    inset: 0 auto 0 -0.25rem !important;
+    border-radius: 999px !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image {
+    flex: 0 0 clamp(8.5rem, 9.8vw, 11rem) !important;
+    width: clamp(8.5rem, 9.8vw, 11rem) !important;
+    min-width: clamp(8.5rem, 9.8vw, 11rem) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image img {
+    width: clamp(8.5rem, 9.8vw, 11rem) !important;
+    height: clamp(8.5rem, 9.8vw, 11rem) !important;
+    max-width: none !important;
+    object-fit: contain !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy {
+    flex: 1 1 auto !important;
+    min-width: 260px !important;
+    max-width: 38rem !important;
+    display: block !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy .np-kicker,
+  .np-home-v2 .np-pathfinder-copy h2,
+  .np-home-v2 .np-pathfinder-copy p {
+    display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    white-space: normal !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy .np-kicker {
+    margin-bottom: 0.45rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.095em !important;
+    line-height: 1.15 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy h2 {
+    margin: 0 0 0.5rem !important;
+    font-size: clamp(1.48rem, 1.55vw, 1.9rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy p {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .np-home-v2 .np-about-panel-v2,
+  .np-home-v2 .np-server-brief-v2 {
+    border: 1px solid rgba(72, 122, 146, 0.34) !important;
+    border-radius: 0.72rem !important;
+    overflow: hidden !important;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 18rem),
+      linear-gradient(180deg, rgba(8, 26, 34, 0.78), rgba(4, 16, 22, 0.82)) !important;
+    box-shadow:
+      0 16px 36px rgba(0, 0, 0, 0.25),
+      inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  .np-home-v2 .np-about-panel-v2,
+  .np-home-v2 .np-server-brief-v2 {
+    padding: 0.9rem 1rem !important;
+  }
+
+  .np-home-v2 .np-server-brief-grid div {
+    border: 1px solid rgba(72, 122, 146, 0.28) !important;
+    border-radius: 0.56rem !important;
+    background: rgba(17, 46, 64, 0.62) !important;
+    box-shadow: inset 0 0 18px rgba(0, 230, 246, 0.018) !important;
+  }
+
+  .np-home-v2 .np-origin-teaser {
+    border-left: 1px solid rgba(0, 230, 246, 0.22) !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-home-v2 .np-pathfinder {
+    grid-template-columns: 1fr !important;
+  }
+
+  .np-home-v2 .np-pathfinder-routes {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
 /* 6b. Modpack-Hilfe: erweiterte Hilfekomponenten */
 
 .np-help-flow {
@@ -2389,167 +2514,4 @@ body.np-page-sub .main-content h3 {
   outline: 2px solid rgba(0, 230, 246, 0.75) !important;
   outline-offset: 3px !important;
   border-radius: 0.35rem;
-}
-/* =========================================================
-   Hotfix Step 77: Startseite ECHO-Pfadfinder reparieren
-   - behebt vertikal gequetschten ECHO-Text auf der Startseite
-   - betrifft nur Startseite / .np-pathfinder
-   - Header/Footer und Unterseiten-ECHO bleiben unangetastet
-   ========================================================= */
-
-@media (min-width: 66.5rem) {
-  .np-home-v2 .np-pathfinder {
-    grid-template-columns: minmax(420px, 0.48fr) minmax(560px, 0.52fr) !important;
-    align-items: stretch !important;
-  }
-
-  .np-home-v2 .np-pathfinder > * {
-    min-width: 0 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-echo {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    gap: 1.25rem !important;
-    min-width: 0 !important;
-    min-height: 12rem !important;
-    padding: 0 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image {
-    flex: 0 0 clamp(8.5rem, 9.8vw, 11rem) !important;
-    width: clamp(8.5rem, 9.8vw, 11rem) !important;
-    min-width: clamp(8.5rem, 9.8vw, 11rem) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image img {
-    width: clamp(8.5rem, 9.8vw, 11rem) !important;
-    height: clamp(8.5rem, 9.8vw, 11rem) !important;
-    max-width: none !important;
-    object-fit: contain !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy {
-    flex: 1 1 auto !important;
-    min-width: 260px !important;
-    max-width: 38rem !important;
-    display: block !important;
-    writing-mode: horizontal-tb !important;
-    text-orientation: mixed !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    white-space: normal !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy .np-kicker,
-  .np-home-v2 .np-pathfinder-copy h2,
-  .np-home-v2 .np-pathfinder-copy p {
-    display: block !important;
-    width: auto !important;
-    max-width: 100% !important;
-    writing-mode: horizontal-tb !important;
-    text-orientation: mixed !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-    white-space: normal !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy .np-kicker {
-    margin-bottom: 0.45rem !important;
-    font-size: 0.72rem !important;
-    letter-spacing: 0.095em !important;
-    line-height: 1.15 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy h2 {
-    margin: 0 0 0.5rem !important;
-    font-size: clamp(1.48rem, 1.55vw, 1.9rem) !important;
-    line-height: 1.1 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy p {
-    margin: 0 !important;
-    font-size: 0.88rem !important;
-    line-height: 1.5 !important;
-  }
-}
-
-@media (min-width: 66.5rem) and (max-width: 1180px) {
-  .np-home-v2 .np-pathfinder {
-    grid-template-columns: 1fr !important;
-  }
-
-  .np-home-v2 .np-pathfinder-routes {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  }
-}
-/* =========================================================
-   Hotfix Step 78: Startseiten-Boxen wieder als echte Karten darstellen
-   - ECHO-Box bekommt Rundung/Rahmen zurück
-   - Über-NewPath- und Server-Kurzinfos-Elemente werden wieder als Boxen sichtbar
-   - betrifft nur Startseite / .np-home-v2
-   - Header/Footer und Unterseiten bleiben unangetastet
-   ========================================================= */
-
-@media (min-width: 66.5rem) {
-  .np-home-v2 .np-pathfinder {
-    border: 1px solid rgba(72, 122, 146, 0.34) !important;
-    border-radius: 0.78rem !important;
-    overflow: hidden !important;
-    background:
-      radial-gradient(circle at 12% 58%, rgba(0, 230, 246, 0.13), transparent 16rem),
-      radial-gradient(circle at 88% 8%, rgba(236, 183, 110, 0.10), transparent 18rem),
-      linear-gradient(135deg, rgba(4, 18, 25, 0.82), rgba(7, 28, 36, 0.74)) !important;
-    box-shadow:
-      0 18px 38px rgba(0, 0, 0, 0.28),
-      inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
-  }
-
-  .np-home-v2 .np-pathfinder::before,
-  .np-home-v2 .np-pathfinder::after {
-    border-radius: inherit !important;
-  }
-
-  .np-home-v2 .np-pathfinder-echo::before {
-    inset: 0 auto 0 -0.25rem !important;
-    border-radius: 999px !important;
-  }
-
-  .np-home-v2 .np-about-panel-v2,
-  .np-home-v2 .np-server-brief-v2 {
-    border: 1px solid rgba(72, 122, 146, 0.34) !important;
-    border-radius: 0.72rem !important;
-    overflow: hidden !important;
-    background:
-      radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 18rem),
-      linear-gradient(180deg, rgba(8, 26, 34, 0.78), rgba(4, 16, 22, 0.82)) !important;
-    box-shadow:
-      0 16px 36px rgba(0, 0, 0, 0.25),
-      inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
-    backdrop-filter: blur(8px) !important;
-  }
-
-  .np-home-v2 .np-about-panel-v2 {
-    padding: 0.9rem 1rem !important;
-  }
-
-  .np-home-v2 .np-server-brief-v2 {
-    padding: 0.9rem 1rem !important;
-  }
-
-  .np-home-v2 .np-server-brief-grid div {
-    border: 1px solid rgba(72, 122, 146, 0.28) !important;
-    border-radius: 0.56rem !important;
-    background: rgba(17, 46, 64, 0.62) !important;
-    box-shadow: inset 0 0 18px rgba(0, 230, 246, 0.018) !important;
-  }
-
-  .np-home-v2 .np-origin-teaser {
-    border-left: 1px solid rgba(0, 230, 246, 0.22) !important;
-  }
 }
