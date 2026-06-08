@@ -1,19 +1,18 @@
 ---
-layout: default
 title: Philosophie
 nav_order: 3
+permalink: /philosophie.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 17:17 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 16:28 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-philosophy">
-
   <div class="echo-page-image">
     <img
-      src="{{ site.baseurl }}/assets/images/echo/echo-philosophy.png"
-      alt="ECHO erklärt die Philosophie"
+      src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
+      alt="ECHO erklärt die Philosophie von NewPath"
       width="512"
       height="512"
       loading="lazy"
@@ -21,95 +20,99 @@ nav_order: 3
   </div>
 
   <div class="echo-page-content">
-    <p class="echo-page-kicker">ECHO erklärt die Philosophie</p>
-    <h2>NewPath ist bewusst kein klassisches Everything-Pack.</h2>
+    <p class="echo-page-kicker">ECHO – Der Wegbegleiter</p>
+    <h2>Warum NewPath anders gedacht ist.</h2>
     <p>
-      Hier erfährst du, wofür NewPath steht, welche Richtung Echoes of the Wild verfolgt
-      und warum Immersion, Gemeinschaft und entschleunigter Fortschritt im Mittelpunkt stehen.
+      NewPath soll kein weiteres „Everything-Pack“ sein. Es geht um Atmosphäre,
+      Entdeckung, Gemeinschaft und einen Fortschritt, der bewusst erlebt wird.
+      ECHO hilft dir dabei, diese Richtung schneller zu verstehen.
+    </p>
+  </div>
+</section>
+
+<section class="np-story-section">
+  <p class="np-section-kicker">Philosophie</p>
+  <h1>Eine Welt mit Richtung.</h1>
+
+  <div class="np-story-lead">
+    <p>
+      NewPath – Echoes of the Wild verbindet Natur, Technik, Abenteuer und Community
+      zu einer stimmigen Minecraft-Erfahrung. Der Fokus liegt nicht darauf, möglichst
+      schnell alles zu erreichen, sondern auf einer Welt, die sich lebendig,
+      nachvollziehbar und gemeinsam anfühlt.
     </p>
   </div>
 
+  <div class="np-philosophy-grid">
+    <article>
+      <span>01</span>
+      <h2>Atmosphäre vor Masse</h2>
+      <p>
+        Nicht jede Mod muss ins Pack, nur weil sie existiert. NewPath setzt auf Inhalte,
+        die zur Welt passen und das Gesamtgefühl stärken.
+      </p>
+    </article>
+
+    <article>
+      <span>02</span>
+      <h2>Gemeinschaft statt Inseln</h2>
+      <p>
+        Spieler sollen sich begegnen, austauschen, handeln, helfen und gemeinsam Orte
+        erschaffen. Die Welt soll verbinden, nicht auseinanderziehen.
+      </p>
+    </article>
+
+    <article>
+      <span>03</span>
+      <h2>Technik mit Verantwortung</h2>
+      <p>
+        Technik ist erlaubt und gewollt, aber nicht als reiner Selbstzweck. Fortschritt
+        soll eingebettet sein und die Welt nicht in eine reine Maschinenhalle verwandeln.
+      </p>
+    </article>
+
+    <article>
+      <span>04</span>
+      <h2>Entschleunigter Fortschritt</h2>
+      <p>
+        NewPath soll Raum für Geschichten, Bauprojekte, Erkundung und eigene Ziele lassen.
+        Es geht nicht um den schnellsten Weg zum Endgame.
+      </p>
+    </article>
+  </div>
 </section>
 
-# NewPath Philosophie
+<section class="np-origin-section">
+  <p class="np-section-kicker">Entstehung</p>
+  <h1>Der Ursprung von NewPath</h1>
 
-Dieses Dokument beschreibt die Grundidee und Ausrichtung des Minecraft-Projekts **NewPath – Beyond Lands**.
+  <div class="np-origin-timeline">
+    <article>
+      <span>Startpunkt</span>
+      <h2>Eine neue Richtung</h2>
+      <p>
+        NewPath entstand aus dem Wunsch, ein Modpack nicht nur als Sammlung von Mods zu
+        verstehen, sondern als gemeinsame Welt mit eigener Identität.
+      </p>
+    </article>
 
----
+    <article>
+      <span>Weiterentwicklung</span>
+      <h2>Aus Erfahrungen lernen</h2>
+      <p>
+        Jede Version brachte neue Erkenntnisse: Was funktioniert gut? Was überfordert?
+        Was fühlt sich nach NewPath an – und was nicht?
+      </p>
+    </article>
 
-## 🌿 Philosophie – NewPath · Beyond Lands
-
-> **NewPath ist ein Ort für Spieler, die eine ruhige, immersive und gemeinschaftliche Survival-Erfahrung suchen.**
-
-NewPath versteht sich nicht als Wettlauf und nicht als Versuch, möglichst schnell alles zu erreichen.<br>
-Das Modpack bietet Raum, die Welt in eigenem Tempo zu entdecken, Projekte zu entwickeln und gemeinsam eine stimmige Umgebung aufzubauen.<br>
-
-Im Mittelpunkt steht das Spielerlebnis:<br>
-das Erkunden abwechslungsreicher Landschaften, das Bauen atmosphärischer Orte und das Zusammenspiel zwischen Spielern.<br>
-
-Jeder kann seinen eigenen Stil wählen:<br>
-solo, im Team, entspannt, technisch oder kreativ.<br>
-
-Gleichzeitig achten wir darauf, dass die Freiheit jedes Einzelnen die Welt und die Gemeinschaft nicht beeinträchtigt.<br>
-
----
-
-## 🤝 Gemeinschaft & Umgang
-
-**Respekt, Fairness und ein freundlicher Umgang** bilden die Grundlage unserer Community.<br>
-
-Verhalten, das andere einschränkt oder den Spielspaß stört, passt nicht zu NewPath.<br>
-
-Die Regeln dienen nicht als Hürde, sondern als **Rahmen**, der dafür sorgt, dass alle in einer harmonischen Umgebung spielen können.<br>
-
----
-
-## 🧭 Projektidentität
-
-NewPath ist bewusst gestaltet und unterscheidet sich deutlich von klassischen **Alles-drin**-Ansätzen.<br>
-
-Viele Inhalte sind speziell auf das Projekt abgestimmt, um eine klare Identität und Wiedererkennbarkeit zu schaffen.<br>
-
-Das Ziel ist kein Übermaß an Funktionen, sondern ein stimmiges Gesamtbild, das sich wie aus einem Guss anfühlt.<br>
-
----
-
-## ⚙️ Technik & Verantwortung
-
-Technisch verfolgen wir eine ausgewogene Philosophie.<br>
-
-Wir wählen Inhalte gezielt aus, achten auf Stabilität und darauf, dass das Spielerlebnis für alle fair und flüssig bleibt.<br>
-
-Systeme, die die Welt stark beeinflussen, sind möglich, müssen aber verantwortungsvoll genutzt werden.<br>
-
-Wo nötig, passen wir Grenzen an, um Server und Spielerlebnis zu schützen.<br>
-
----
-
-## 🔄 Entwicklung & Community
-
-NewPath entwickelt sich fortlaufend weiter.<br>
-
-Kleine Aktualisierungen halten das Projekt stabil und aktuell.<br>
-
-Größere Erweiterungen erfolgen nur dann, wenn sie einen klaren Mehrwert bieten.<br>
-
-Die Community ist ein aktiver Teil dieser Entwicklung und trägt durch Feedback und Ideen dazu bei, NewPath stetig zu verbessern.<br>
-
----
-
-## 🏕️ Außenwirkung
-
-Nach außen soll NewPath als ein atmosphärisches, durchdachtes und hochwertiges Projekt erkennbar sein.<br>
-
-Es soll strukturiert, naturverbunden und mit einem klaren Konzept auftreten.<br>
-
-NewPath ist ein Modpack, das sich bewusst von üblichen Sammlungen abhebt und ein Spielerlebnis bietet, das langfristig Freude macht.<br>
-
----
-
-## ✨ Grundsatz
-
-**NewPath ist keine Liste zum Abarbeiten.**<br>
-**Es ist ein Projekt, das man mitgestaltet.**<br>
-**Eine Welt, die sich entwickelt, während man Teil davon ist.**<br>
+    <article>
+      <span>Echoes of the Wild</span>
+      <h2>Ein bewusster Neuanfang</h2>
+      <p>
+        Echoes of the Wild steht für einen neuen Abschnitt: klarere Gestaltung,
+        stärkere Atmosphäre, bessere Hilfen und ein gemeinsamer Blick auf die Zukunft
+        des Projekts.
+      </p>
+    </article>
+  </div>
+</section>
