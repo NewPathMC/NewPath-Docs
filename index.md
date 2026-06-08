@@ -33,17 +33,17 @@ permalink: /
     </div>
   </div>
 
-  <a class="np-hero-logo" href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener" aria-label="NewPath Discord beitreten">
+  <div class="np-hero-logo" aria-label="NewPath – Echoes of the Wild Logo">
     <img
       src="{{ site.baseurl }}/assets/images/logo.png"
       alt="NewPath – Echoes of the Wild Logo"
       width="512"
       height="512"
       decoding="async">
-  </a>
+  </div>
 </section>
 
-<section class="np-status-bar" aria-label="NewPath Serverstatus">
+<section class="np-status-bar" aria-label="NewPath Kurzinfos">
   <div class="np-status-item">
     <span class="np-status-icon">◇</span>
     <span>
@@ -61,10 +61,10 @@ permalink: /
   </div>
 
   <div class="np-status-item">
-    <span class="np-status-icon">✣</span>
+    <span class="np-status-icon">◆</span>
     <span>
-      <small>Spielmodus</small>
-      <strong>Survival</strong>
+      <small>Modpack</small>
+      <strong>CurseForge</strong>
     </span>
   </div>
 
@@ -79,48 +79,13 @@ permalink: /
   <div class="np-status-item">
     <span class="np-status-icon">☉</span>
     <span>
-      <small>Community</small>
-      <strong>Aktiv</strong>
+      <small>Discord</small>
+      <strong>Zentrale</strong>
     </span>
   </div>
 </section>
 
-<section class="np-main-grid">
-  <div class="np-panel np-quick-panel">
-    <p class="np-section-kicker">Schnellzugriff</p>
-    <h2>Alles Wichtige auf einen Blick</h2>
-
-    <div class="np-card-grid">
-      <a class="np-card" href="{{ site.baseurl }}/regelwerk.html">
-        <span class="np-card-icon np-card-icon-blue">§</span>
-        <span class="np-card-title">Regelwerk</span>
-        <span class="np-card-text">Alle wichtigen Regeln für Spieler, Community, Verhalten und Gameplay.</span>
-        <span class="np-card-link">Mehr lesen →</span>
-      </a>
-
-      <a class="np-card" href="{{ site.baseurl }}/philosophie.html">
-        <span class="np-card-icon np-card-icon-purple">✦</span>
-        <span class="np-card-title">Philosophie</span>
-        <span class="np-card-text">Wofür NewPath steht und welche Richtung Echoes of the Wild verfolgt.</span>
-        <span class="np-card-link">Mehr lesen →</span>
-      </a>
-
-      <a class="np-card" href="{{ site.baseurl }}/faq.html">
-        <span class="np-card-icon np-card-icon-gold">?</span>
-        <span class="np-card-title">FAQ</span>
-        <span class="np-card-text">Häufige Fragen rund um Installation, Zugang, Technik und Server.</span>
-        <span class="np-card-link">Mehr lesen →</span>
-      </a>
-
-      <a class="np-card" href="{{ site.baseurl }}/serverinfos.html">
-        <span class="np-card-icon np-card-icon-green">◆</span>
-        <span class="np-card-title">Serverinfos</span>
-        <span class="np-card-text">Technische Infos, Verbindungen und Hinweise zum Server.</span>
-        <span class="np-card-link">Mehr lesen →</span>
-      </a>
-    </div>
-  </div>
-
+<section class="np-main-grid np-main-grid-echo-first">
   <aside class="np-panel np-echo-feature" aria-label="ECHO – Der Wegbegleiter">
     <div class="np-echo-orb"></div>
 
@@ -136,19 +101,55 @@ permalink: /
 
     <div class="np-echo-content">
       <p class="np-section-kicker">ECHO – Der Wegbegleiter</p>
-      <h2>Ich begleite dich durch NewPath.</h2>
+      <h2>Ich helfe dir, den richtigen Pfad zu finden.</h2>
       <p>
-        ECHO ist deine neutrale Orientierung auf dieser Dokumentationsseite:
-        Er führt dich zu Regeln, Einstiegshilfen, FAQ und Serverinfos.
+        Statt dieselben Links mehrfach zu wiederholen, führt ECHO dich nach Situation:
+        neu einsteigen, mitspielen, technische Hilfe finden oder NewPath besser verstehen.
       </p>
 
-      <div class="np-echo-links" aria-label="ECHO Schnellhilfe">
-        <a href="{{ site.baseurl }}/regelwerk.html">Regeln</a>
-        <a href="{{ site.baseurl }}/faq.html">FAQ</a>
-        <a href="{{ site.baseurl }}/serverinfos.html">Serverinfos</a>
+      <div class="np-echo-steps" aria-label="ECHO Orientierungspfade">
+        <span>Neu hier?</span>
+        <span>Mitspielen</span>
+        <span>Technische Hilfe</span>
+        <span>NewPath verstehen</span>
       </div>
     </div>
   </aside>
+
+  <div class="np-panel np-quick-panel">
+    <p class="np-section-kicker">Einstieg</p>
+    <h2>Was möchtest du tun?</h2>
+
+    <div class="np-card-grid np-card-grid-guides">
+      <a class="np-card" href="{{ site.baseurl }}/faq.html">
+        <span class="np-card-icon np-card-icon-blue">?</span>
+        <span class="np-card-title">Ich bin neu hier</span>
+        <span class="np-card-text">Kurze Antworten zu Einstieg, Community und den wichtigsten Grundlagen.</span>
+        <span class="np-card-link">Zum FAQ →</span>
+      </a>
+
+      <a class="np-card" href="{{ site.baseurl }}/modpack-hilfe.html#mitspielen">
+        <span class="np-card-icon np-card-icon-green">◆</span>
+        <span class="np-card-title">Ich will mitspielen</span>
+        <span class="np-card-text">Installation, CurseForge, RAM, Zugang und die ersten Schritte.</span>
+        <span class="np-card-link">Zur Hilfe →</span>
+      </a>
+
+      <a class="np-card" href="{{ site.baseurl }}/modpack-hilfe.html">
+        <span class="np-card-icon np-card-icon-gold">⚙</span>
+        <span class="np-card-title">Technische Hilfe</span>
+        <span class="np-card-text">Hilfe zu Modpack, Voice Chat, Fehlern, Einstellungen und Mods.</span>
+        <span class="np-card-link">Zur Modpack Hilfe →</span>
+      </a>
+
+      <a class="np-card" href="{{ site.baseurl }}/philosophie.html">
+        <span class="np-card-icon np-card-icon-purple">✦</span>
+        <span class="np-card-title">NewPath verstehen</span>
+        <span class="np-card-text">Warum NewPath entschleunigt, gemeinschaftlich und atmosphärisch gedacht ist.</span>
+        <span class="np-card-link">Zur Philosophie →</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="np-panel np-about-panel">
@@ -166,6 +167,20 @@ permalink: /
       Unser Ziel ist eine stimmige Welt, in der Technik, Natur, Abenteuer und Community
       sinnvoll zusammenkommen und Fortschritt nicht nur schneller, sondern bewusster erlebt wird.
     </p>
+  </div>
+</section>
+
+<section class="np-panel np-server-brief" id="server-kurzinfos">
+  <div>
+    <p class="np-section-kicker">Server-Kurzinfos</p>
+    <h2>Alles Wichtige für den Einstieg bleibt auf der Startseite.</h2>
+  </div>
+
+  <div class="np-server-brief-grid">
+    <div><strong>Version</strong><span>Minecraft 26.1.2</span></div>
+    <div><strong>Modloader</strong><span>NeoForge</span></div>
+    <div><strong>Modpack</strong><span>über CurseForge</span></div>
+    <div><strong>Zugang</strong><span>Whitelist über Discord</span></div>
   </div>
 </section>
 

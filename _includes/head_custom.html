@@ -16,10 +16,9 @@
 
     const baseUrl = "{{ site.baseurl }}";
 
-    const brand = document.createElement("a");
+    const brand = document.createElement("div");
     brand.className = "np-topbar-brand";
-    brand.href = baseUrl + "/";
-    brand.setAttribute("aria-label", "NewPath Startseite");
+    brand.setAttribute("aria-label", "NewPath – Echoes of the Wild");
     brand.innerHTML = `
       <img class="np-topbar-logo" src="${baseUrl}/assets/images/logo.png" alt="" width="64" height="64" decoding="async">
       <span class="np-topbar-title">
@@ -37,7 +36,7 @@
       ["Regelwerk", baseUrl + "/regelwerk.html"],
       ["Philosophie", baseUrl + "/philosophie.html"],
       ["FAQ", baseUrl + "/faq.html"],
-      ["Serverinfos", baseUrl + "/serverinfos.html"]
+      ["Modpack Hilfe", baseUrl + "/modpack-hilfe.html"]
     ];
 
     const currentPath = window.location.pathname.replace(/\/index\.html$/, "/");
