@@ -2804,3 +2804,256 @@ body.np-page-sub .main-content,
 .np-card-icon-purple { background: linear-gradient(135deg, #3a2b68, #8b5be8) !important; }
 .np-card-icon-gold { background: linear-gradient(135deg, #7a5418, #f3b742) !important; }
 .np-card-icon-green { background: linear-gradient(135deg, #255f35, #66bd51) !important; }
+/* =========================================================
+   Step 80: Einheitliches Typografie-System für alle Seiten
+   - korrigiert den gemischten Schrift-/Farblook aus Step 79
+   - klare Rollen: Hero, Seitentitel, Section-Titel, Card-Titel, Body, Meta
+   - Header/Footer-Positionierung bleibt unangetastet
+   ========================================================= */
+
+:root {
+  --np-font-body: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --np-font-display: "Georgia", "Times New Roman", serif;
+  --np-font-ui: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --np-color-page-title: #f4cf7f;
+  --np-color-section-title: #ecb76e;
+  --np-color-card-title: #f7ecdc;
+  --np-color-body: rgba(247, 236, 220, 0.86);
+  --np-color-muted: rgba(247, 236, 220, 0.68);
+  --np-color-kicker: #00ddeb;
+  --np-color-link: #5feaf1;
+}
+
+/* Grundsystem */
+body,
+.main-content,
+.main-content p,
+.main-content li,
+.main-content summary,
+.main-content details,
+.np-route-text,
+.np-card-text,
+.np-help-tile span,
+.np-community-card span,
+.np-team-card p,
+.np-streamer-card p,
+.np-asset-card p,
+.np-faq-details p,
+.np-help-details p,
+.np-about-text p,
+.np-origin-teaser p {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-color-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.62 !important;
+}
+
+/* Kicker / kleine Kategoriezeilen: immer Cyan, immer UI-Schrift */
+.np-kicker,
+.np-section-kicker,
+.echo-page-kicker,
+.np-team-role,
+.np-streamer-label,
+.np-status-item small,
+.np-server-brief-grid strong,
+.np-help-flow article > span,
+.np-help-flow > div > span,
+.np-philosophy-grid article > span,
+.np-origin-timeline article > span,
+.np-team-section .np-section-kicker,
+.np-faq-section .np-section-kicker,
+.np-story-section .np-section-kicker,
+.np-origin-section .np-section-kicker {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-kicker) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.095em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 14px rgba(0, 221, 235, 0.12) !important;
+}
+
+/* Hero-Titel auf der Startseite: einzige große Serif/Fantasy-Ausnahme */
+.np-hero h1,
+.np-home-v2 .np-hero h1 {
+  font-family: var(--np-font-display) !important;
+  color: var(--np-color-page-title) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 0.92 !important;
+}
+
+/* Unterseiten-Haupttitel: ebenfalls Serif, aber nur H1 */
+body.np-page-sub .main-content > h1,
+.np-story-section > h1,
+.np-origin-section > h1,
+.np-faq-section > h1,
+.np-team-section > h1,
+.np-content-box > h1 {
+  font-family: var(--np-font-display) !important;
+  color: var(--np-color-page-title) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.08 !important;
+}
+
+/* ECHO-Intro-Titel und große Section-Titel: moderne UI-Schrift, Gold */
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2,
+.np-pathfinder-copy h2,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2,
+body.np-page-sub .main-content > h2,
+.np-story-section h2,
+.np-origin-section h2,
+.np-faq-section h2,
+.np-team-section h2,
+.np-streamer-section h2,
+.np-help-section h2 {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-section-title) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.16 !important;
+}
+
+/* Card-Titel: überall creme/weiß, gleiche UI-Schrift */
+.np-card-title,
+.np-route-title,
+.np-help-tile strong,
+.np-community-card strong,
+.np-team-card h2,
+.np-team-member-card h3,
+.np-streamer-card h3,
+.np-asset-card h3,
+.np-philosophy-grid h2,
+.np-origin-timeline h2,
+.np-server-brief-grid span,
+.np-status-item strong {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-card-title) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.22 !important;
+}
+
+/* Regelwerk/Markdown-H3 und Akkordeon-Fragen: Gold als Untertitel */
+body.np-page-sub .main-content > h3,
+.np-faq-details summary,
+.np-help-details summary {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-section-title) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.005em !important;
+}
+
+/* ECHO-Intro-Fließtext: auf allen Seiten gleich */
+.echo-page-box p:not(.echo-page-kicker),
+.echo-page-box-team p:not(.echo-page-kicker),
+.echo-page-box-philosophy p:not(.echo-page-kicker),
+.echo-page-box-faq p:not(.echo-page-kicker),
+.echo-page-box-rules p:not(.echo-page-kicker),
+.echo-page-box-streamer p:not(.echo-page-kicker),
+.echo-page-box-help p:not(.echo-page-kicker) {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-color-body) !important;
+  font-size: 0.98rem !important;
+  font-weight: 400 !important;
+  line-height: 1.62 !important;
+}
+
+/* Startseiten-Karten: gleiche Hierarchie */
+.np-route-title {
+  font-size: 0.88rem !important;
+}
+
+.np-route-text {
+  font-size: 0.72rem !important;
+}
+
+.np-route-link,
+.np-card-link {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-link) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+
+/* FAQ/Modpack-Hilfe Akkordeons nicht mehr wie fremde Buttons */
+.np-faq-details summary,
+.np-help-details summary {
+  font-size: 0.92rem !important;
+  line-height: 1.35 !important;
+}
+
+.np-faq-details p,
+.np-help-details p,
+.np-help-details li {
+  font-size: 0.92rem !important;
+}
+
+/* Team/Streamer/Asset-Karten gleichmäßiger */
+.np-team-card p,
+.np-team-member-card p,
+.np-streamer-card p,
+.np-asset-card p {
+  font-size: 0.88rem !important;
+}
+
+.np-team-role,
+.np-streamer-label {
+  color: var(--np-color-kicker) !important;
+}
+
+/* Links überall gleich */
+.main-content a,
+.np-route-link,
+.np-card-link {
+  color: var(--np-color-link) !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.18em !important;
+}
+
+.main-content a:hover,
+.np-route-link:hover,
+.np-card-link:hover {
+  color: var(--np-color-page-title) !important;
+}
+
+/* Meta/Timestamps/Footer-Texte einheitlich zurückhaltend */
+.np-last-updated,
+.np-site-footer-brand span,
+.np-site-footer-links a,
+.np-site-footer-links span,
+.np-page-meta {
+  font-family: var(--np-font-ui) !important;
+  color: var(--np-color-muted) !important;
+}
+
+/* Hero-Highlight bleibt Textbox, aber typografisch nicht anders als Rest */
+.np-hero-highlight,
+.np-hero-highlight p,
+.np-hero-highlight span {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-color-body) !important;
+}
+
+.np-hero-highlight strong {
+  color: var(--np-color-page-title) !important;
+  font-weight: 900 !important;
+}
+
+/* Kleine Korrektur: Der Markentitel im Header soll nicht plötzlich Serif werden */
+.np-topbar-title span:first-child,
+.np-topbar-title span:last-child {
+  font-family: var(--np-font-ui) !important;
+}
