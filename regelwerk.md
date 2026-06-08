@@ -12,7 +12,7 @@ permalink: /regelwerk.html
 <section class="echo-page-box echo-page-box-rules">
   <div class="echo-page-image">
     <img
-      src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
+      src="{{ site.baseurl }}/assets/images/echo/echo-rules.png"
       alt="ECHO erklärt das NewPath-Regelwerk"
       width="512"
       height="512"

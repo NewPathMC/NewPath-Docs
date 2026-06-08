@@ -55,8 +55,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Founder - Projektleitung</p>
       <h2 class="np-card-title">SarahdasFaultier</h2>
       <p class="np-card-text">
-        Kurze Beschreibung zur Rolle, zu Aufgaben im Projekt und dazu, wofür diese Person
-        in der Community Ansprechpartner ist.
+        Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
     </article>
 
@@ -73,8 +72,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Founder - Projektleitung - Entwicklung/ Technik</p>
       <h2 class="np-card-title">M4ximum_</h2>
       <p class="np-card-text">
-        Kurze Beschreibung zur Rolle, zu Support-Aufgaben, Community-Betreuung oder
-        organisatorischen Themen.
+        Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
     </article>
 
@@ -83,8 +81,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Technik & Modpack</p>
       <h2 class="np-card-title">Teammitglied 3</h2>
       <p class="np-card-text">
-        Kurze Beschreibung zur technischen Rolle, Modpack-Pflege, Tests, Fehleranalyse
-        oder Server-/GitHub-Themen.
+        Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
     </article>
 
@@ -93,8 +90,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Event & Community</p>
       <h2 class="np-card-title">Teammitglied 4</h2>
       <p class="np-card-text">
-        Kurze Beschreibung zur Rolle, z. B. Events, Spielerbetreuung, Kommunikation oder
-        besondere Community-Aufgaben.
+        Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
     </article>
   </div>
