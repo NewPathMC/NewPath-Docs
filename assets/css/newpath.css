@@ -1594,3 +1594,86 @@ blockquote {
     min-height: clamp(300px, 25vw, 400px) !important;
   }
 }
+
+/* =========================================================
+   Schritt 32: Header/Button sauberer skalieren + Seitenabstand
+   - Discord-Icon nicht mehr gequetscht
+   - Kopfzeile minimal höher
+   - Inhalte bekommen links/rechts mehr Luft
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  :root {
+    --np-page-left: clamp(5rem, 5.8vw, 7.6rem);
+    --np-page-right: clamp(4.8rem, 5.2vw, 7rem);
+    --np-content-width: calc(100vw - var(--np-page-left) - var(--np-page-right));
+  }
+
+  .main-header {
+    min-height: 4.68rem !important;
+    height: 4.68rem !important;
+    padding-left: 1.75rem !important;
+    padding-right: 1.75rem !important;
+  }
+
+  .np-topbar-brand {
+    min-width: 205px !important;
+  }
+
+  .np-topbar-logo {
+    width: 3.2rem !important;
+    height: 3.2rem !important;
+  }
+
+  .main-header .search {
+    height: 2.36rem !important;
+  }
+
+  .main-header .search-input-wrap {
+    height: 2.36rem !important;
+    min-height: 2.36rem !important;
+  }
+
+  .main-header .search-input {
+    height: 2.24rem !important;
+    min-height: 2.24rem !important;
+  }
+
+  .main-header .aux-nav a {
+    min-height: 2.42rem !important;
+    height: 2.42rem !important;
+    padding: 0 1.08rem !important;
+    gap: 0.56rem !important;
+    border-radius: 0.5rem !important;
+    line-height: 1 !important;
+  }
+
+  .main-header .aux-nav a::before {
+    width: 1.18rem !important;
+    height: 1rem !important;
+    flex: 0 0 1.18rem !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    transform: translateY(0.02rem) !important;
+  }
+
+  .np-last-updated {
+    margin-top: 0.55rem !important;
+    margin-bottom: -0.55rem !important;
+  }
+
+  .np-hero {
+    padding-top: clamp(0.45rem, 1vw, 1.1rem) !important;
+  }
+
+  .np-status-bar {
+    margin-top: -0.25rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1500px) {
+  :root {
+    --np-page-left: clamp(4rem, 5vw, 5.4rem);
+    --np-page-right: clamp(3.6rem, 4.4vw, 5rem);
+  }
+}
