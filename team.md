@@ -43,9 +43,17 @@ permalink: /team.html
 
   <div class="np-card-grid np-card-grid-4 np-team-grid">
     <article class="np-info-card np-team-card">
-      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <div class="np-card-media np-team-image">
+        <img
+          src="{{ site.baseurl }}/assets/images/sarah.png"
+          alt="Sarah"
+          width="512"
+          height="512"
+          loading="lazy"
+          decoding="async">
+      </div>
       <p class="np-card-kicker np-team-role">Projektleitung</p>
-      <h2 class="np-card-title">Teammitglied 1</h2>
+      <h2 class="np-card-title">Sarah</h2>
       <p class="np-card-text">
         Kurze Beschreibung zur Rolle, zu Aufgaben im Projekt und dazu, wofür diese Person
         in der Community Ansprechpartner ist.
@@ -53,9 +61,17 @@ permalink: /team.html
     </article>
 
     <article class="np-info-card np-team-card">
-      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <div class="np-card-media np-team-image">
+        <img
+          src="{{ site.baseurl }}/assets/images/bemmy.png"
+          alt="Bemmy"
+          width="512"
+          height="512"
+          loading="lazy"
+          decoding="async">
+      </div>
       <p class="np-card-kicker np-team-role">Community & Support</p>
-      <h2 class="np-card-title">Teammitglied 2</h2>
+      <h2 class="np-card-title">Bemmy</h2>
       <p class="np-card-text">
         Kurze Beschreibung zur Rolle, zu Support-Aufgaben, Community-Betreuung oder
         organisatorischen Themen.
@@ -81,10 +97,5 @@ permalink: /team.html
         besondere Community-Aufgaben.
       </p>
     </article>
-  </div>
-
-  <div class="np-note np-help-note">
-    <strong>Hinweis:</strong> Die Platzhalter können später durch echte Namen, Rollen,
-    Bilder und kurze Beschreibungen ersetzt werden.
   </div>
 </section>

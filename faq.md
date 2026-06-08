@@ -35,7 +35,7 @@ permalink: /faq.html
     <h1 class="np-title">Alle wichtigen Fragen gesammelt</h1>
   </div>
 
-  <div class="np-card-grid np-card-grid-2 np-faq-grid">
+  <div class="np-card-grid np-card-grid-1 np-faq-grid">
     <details class="np-accordion np-faq-details">
       <summary>Welche Minecraft-Version nutzt NewPath?</summary>
       <div>

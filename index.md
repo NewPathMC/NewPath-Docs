@@ -8,8 +8,6 @@ permalink: /
 
 <section class="np-hero np-hero-v2">
   <div class="np-hero-content">
-    <p class="np-kicker">Offizielles Modpack</p>
-
     <h1>
       <span class="np-hero-title-main">NewPath</span>
       <span class="np-hero-title-sub">Echoes of the Wild</span>
@@ -26,6 +24,10 @@ permalink: /
       Kein klassisches „Everything-Pack“, sondern eine lebendige Welt mit klarer
       Richtung, Atmosphäre und gemeinschaftlichem Fortschritt.
     </div>
+
+    <!-- AUTO_UPDATED_START -->
+    <p class="np-hero-updated">Zuletzt aktualisiert: 08.06.2026 16:12 Uhr</p>
+    <!-- AUTO_UPDATED_END -->
   </div>
 
   <div class="np-hero-logo" aria-label="NewPath – Echoes of the Wild Logo">
@@ -72,11 +74,7 @@ permalink: /
   </div>
 </section>
 
-<div class="np-page-meta">
-<!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 16:12 Uhr</p>
-<!-- AUTO_UPDATED_END -->
-</div>
+<div class="np-home-section-separator" aria-hidden="true"></div>
 
 <section class="np-panel np-pathfinder" aria-label="ECHO – Wegbegleiter und Einstieg">
   <div class="np-pathfinder-echo">
@@ -131,43 +129,49 @@ permalink: /
   </div>
 </section>
 
-<section class="np-panel np-about-panel np-about-panel-v2">
-  <div>
-    <p class="np-section-kicker">Über NewPath</p>
-    <h2>Eine Welt mit Richtung statt ein weiteres Everything-Pack.</h2>
-  </div>
+<div class="np-home-section-separator" aria-hidden="true"></div>
 
-  <div class="np-about-text">
+<section class="np-panel np-history-panel" aria-label="Entstehungsgeschichte von NewPath">
+  <div class="np-history-intro">
+    <p class="np-section-kicker">Entstehungsgeschichte</p>
+    <h2>Wie NewPath seinen eigenen Weg gefunden hat.</h2>
     <p>
-      <strong>NewPath – Echoes of the Wild</strong> ist ein atmosphärisches Minecraft-Modpack
-      mit Fokus auf Immersion, Erkundung, Gemeinschaft und entschleunigten Fortschritt.
-    </p>
-    <p>
-      Unser Ziel ist eine stimmige Welt, in der Technik, Natur, Abenteuer und Community
-      sinnvoll zusammenkommen und Fortschritt nicht nur schneller, sondern bewusster erlebt wird.
+      NewPath ist nicht als reine Modsammlung entstanden, sondern aus dem Wunsch nach
+      einer Welt mit Richtung, Atmosphäre und Gemeinschaft. Jede neue Version hat geholfen,
+      klarer zu verstehen, was NewPath ausmacht.
     </p>
   </div>
 
-  <div class="np-origin-teaser">
-    <p class="np-section-kicker">Ursprung & Idee</p>
-    <p>
-      NewPath ist aus dem Wunsch entstanden, Minecraft wieder gemeinschaftlicher,
-      atmosphärischer und weniger beliebig zu erleben.
-    </p>
-  </div>
-</section>
+  <div class="np-history-timeline" aria-label="NewPath Zeitstrahl">
+    <article class="np-history-step">
+      <span class="np-history-dot" aria-hidden="true"></span>
+      <p class="np-card-kicker">Ursprung</p>
+      <h3>Eine gemeinsame Welt</h3>
+      <p>
+        Am Anfang stand die Idee, Minecraft wieder gemeinschaftlicher und persönlicher
+        zu erleben – mit Orten, Geschichten und einem echten Gefühl von Zusammenhalt.
+      </p>
+    </article>
 
-<section class="np-panel np-server-brief np-server-brief-v2" id="server-kurzinfos">
-  <div>
-    <p class="np-section-kicker">Server-Kurzinfos</p>
-    <h2>Alles Wichtige für den Einstieg bleibt auf der Startseite.</h2>
-  </div>
+    <article class="np-history-step">
+      <span class="np-history-dot" aria-hidden="true"></span>
+      <p class="np-card-kicker">Erfahrung</p>
+      <h3>Aus Versionen lernen</h3>
+      <p>
+        Mit jeder Projektphase wurde deutlicher, welche Inhalte NewPath stärken und
+        welche nur Masse erzeugen. Daraus entstand eine bewusstere Richtung.
+      </p>
+    </article>
 
-  <div class="np-server-brief-grid">
-    <div><strong>Version</strong><span>Minecraft 26.1.2</span></div>
-    <div><strong>Modloader</strong><span>NeoForge</span></div>
-    <div><strong>Modpack</strong><span>über CurseForge</span></div>
-    <div><strong>Zugang</strong><span>Whitelist über Discord</span></div>
+    <article class="np-history-step">
+      <span class="np-history-dot" aria-hidden="true"></span>
+      <p class="np-card-kicker">Echoes of the Wild</p>
+      <h3>Ein klarerer Neuanfang</h3>
+      <p>
+        Echoes of the Wild verbindet Natur, Technik und Abenteuer stärker mit der
+        Community-Idee und gibt NewPath eine eigene, wiedererkennbare Identität.
+      </p>
+    </article>
   </div>
 </section>
 
