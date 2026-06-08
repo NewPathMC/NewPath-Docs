@@ -2396,3 +2396,175 @@ body:not(.home) .main-content th {
 .echo-page-box-help .echo-page-image img {
   filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34)) !important;
 }
+/* =========================================================
+   Step 76: Farb-/Kontrast- und Schriftbild-Feinschliff
+   - Hintergrund minimal dunkler
+   - Unterseiten-Texte ruhiger/lesbarer
+   - Karten, Akkordeons und Hinweise optisch vereinheitlicht
+   - Header/Footer bleiben unangetastet
+   ========================================================= */
+
+:root {
+  --np-text: #f7ecdc;
+  --np-muted: rgba(247, 236, 220, 0.82);
+  --np-faint: rgba(247, 236, 220, 0.60);
+  --np-panel: rgba(5, 20, 27, 0.82);
+  --np-panel-strong: rgba(5, 18, 25, 0.92);
+  --np-card: rgba(17, 46, 64, 0.82);
+  --np-border: rgba(72, 122, 146, 0.46);
+  --np-border-soft: rgba(72, 122, 146, 0.26);
+}
+
+/* Hintergrund minimal abdunkeln, damit Cyan/Creme-Texte nicht auf hellen Bildbereichen verschwimmen */
+body {
+  background:
+    linear-gradient(90deg, rgba(0, 4, 8, 0.78), rgba(3, 10, 14, 0.20) 24%, rgba(3, 10, 14, 0.22) 72%, rgba(0, 4, 8, 0.72)),
+    linear-gradient(180deg, rgba(0, 8, 14, 0.20), rgba(0, 8, 14, 0.30) 46%, rgba(0, 6, 10, 0.84) 100%),
+    radial-gradient(circle at 82% 20%, rgba(0, 230, 246, 0.06), transparent 34rem),
+    radial-gradient(circle at 18% 18%, rgba(236, 183, 110, 0.05), transparent 28rem),
+    url("../images/background-site.webp"),
+    linear-gradient(180deg, #101820, #05080a) !important;
+  background-size: cover, cover, auto, auto, cover, auto !important;
+  background-position: center top, center top, center, center, center top, center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Einheitlichere Typografie auf Unterseiten */
+body.np-page-sub .main-content {
+  color: var(--np-muted);
+}
+
+body.np-page-sub .main-content p,
+body.np-page-sub .main-content li {
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+body.np-page-sub .main-content h1 {
+  color: var(--np-gold-soft) !important;
+  letter-spacing: -0.025em;
+}
+
+body.np-page-sub .main-content h2 {
+  margin-top: 1.8rem !important;
+  color: var(--np-gold-soft) !important;
+  letter-spacing: -0.01em;
+}
+
+body.np-page-sub .main-content h3 {
+  color: var(--np-gold) !important;
+}
+
+/* Links: weniger grelles Cyan im Fließtext, aber weiterhin klar erkennbar */
+.main-content a {
+  color: #64eaf2 !important;
+  text-underline-offset: 0.18em;
+}
+
+.main-content a:hover {
+  color: var(--np-gold-soft) !important;
+}
+
+/* Einheitliche Box-Optik für wiederkehrende Inhaltsflächen */
+.echo-page-box,
+.np-content-box,
+.np-help-note,
+.np-help-details,
+.np-help-tile,
+.np-community-card,
+.np-team-card,
+.np-team-member-card,
+.np-streamer-card,
+.np-story-section,
+.np-origin-section,
+.np-faq-section,
+.np-team-section {
+  border-color: rgba(72, 122, 146, 0.38) !important;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.045), transparent 18rem),
+    linear-gradient(180deg, rgba(7, 24, 31, 0.84), rgba(4, 16, 22, 0.90)) !important;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.28),
+    inset 0 0 34px rgba(0, 230, 246, 0.020) !important;
+}
+
+/* Kicker/Meta-Zeilen einheitlich */
+.np-kicker,
+.np-section-kicker,
+.echo-page-kicker {
+  color: #5feaf1 !important;
+  text-shadow: 0 0 14px rgba(0, 230, 246, 0.12);
+}
+
+/* Akkordeons: geschlossener Zustand ruhiger, geöffneter Zustand klarer */
+.np-help-details,
+.np-faq-details {
+  background:
+    linear-gradient(180deg, rgba(17, 46, 64, 0.64), rgba(5, 20, 27, 0.78)) !important;
+}
+
+.np-help-details summary,
+.np-faq-details summary {
+  color: var(--np-gold-soft) !important;
+  background: rgba(0, 9, 15, 0.18);
+}
+
+.np-help-details[open],
+.np-faq-details[open] {
+  border-color: rgba(0, 230, 246, 0.36) !important;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.25),
+    inset 0 0 28px rgba(0, 230, 246, 0.030) !important;
+}
+
+/* Karten allgemein etwas hochwertiger, aber ohne Bewegungs-/Performance-Effekte */
+.np-help-tile,
+.np-community-card,
+.np-team-card,
+.np-team-member-card,
+.np-streamer-card,
+.np-card,
+.np-route-card {
+  transition: border-color 140ms ease, background 140ms ease, box-shadow 140ms ease !important;
+}
+
+.np-help-tile:hover,
+.np-community-card:hover,
+.np-team-card:hover,
+.np-team-member-card:hover,
+.np-streamer-card:hover,
+.np-card:hover,
+.np-route-card:hover {
+  transform: none !important;
+  border-color: rgba(0, 230, 246, 0.46) !important;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.26),
+    inset 0 0 32px rgba(0, 230, 246, 0.04) !important;
+}
+
+/* Bildplatzhalter einheitlicher */
+.np-team-image-placeholder,
+.np-team-avatar-placeholder,
+.np-team-image,
+.np-streamer-image,
+.np-help-image-placeholder {
+  background:
+    radial-gradient(circle at 50% 35%, rgba(0, 230, 246, 0.10), transparent 9rem),
+    rgba(0, 9, 15, 0.30) !important;
+  border-color: rgba(0, 230, 246, 0.30) !important;
+}
+
+/* Fokus für Tastatur-Navigation sichtbar, aber passend zum Design */
+.main-content a:focus-visible,
+.np-help-details summary:focus-visible,
+.np-faq-details summary:focus-visible {
+  outline: 2px solid rgba(0, 230, 246, 0.75) !important;
+  outline-offset: 3px !important;
+  border-radius: 0.35rem;
+}
+
+/* Footer-Abstand für längere Unterseiten vorsichtig stabilisieren, ohne Footer selbst anzufassen */
+body.np-page-sub .main-content {
+  margin-bottom: calc(var(--np-footer-height) + 3rem) !important;
+}
