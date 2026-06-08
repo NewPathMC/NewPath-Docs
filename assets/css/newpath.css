@@ -4489,7 +4489,7 @@ img {
   pointer-events: none;
 }
 
-/* echte Founder-Karten etwas wertiger */
+/* echte Gründer-Karten etwas wertiger */
 .np-team-section .np-team-grid .np-team-card:nth-child(1),
 .np-team-section .np-team-grid .np-team-card:nth-child(2),
 .np-team-section .np-team-grid .np-team-card:nth-child(3) {
@@ -4503,7 +4503,7 @@ img {
 .np-team-section .np-team-grid .np-team-card:nth-child(1)::after,
 .np-team-section .np-team-grid .np-team-card:nth-child(2)::after,
 .np-team-section .np-team-grid .np-team-card:nth-child(3)::after {
-  content: "FOUNDER";
+  content: "GRÜNDER";
   position: absolute;
   right: 1rem;
   top: 1rem;

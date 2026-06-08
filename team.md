@@ -52,7 +52,7 @@ permalink: /team.html
           loading="lazy"
           decoding="async">
       </div>
-      <p class="np-card-kicker np-team-role">Founder - Projektleitung</p>
+      <p class="np-card-kicker np-team-role">Gründer - Projektleitung</p>
       <h2 class="np-card-title">SarahdasFaultier</h2>
       <p class="np-card-text">
         Hallo hier könnte eine wichtige Beschreibung stehen.
@@ -69,7 +69,7 @@ permalink: /team.html
           loading="lazy"
           decoding="async">
       </div>
-      <p class="np-card-kicker np-team-role">Founder - Projektleitung - Entwicklung/ Technik</p>
+      <p class="np-card-kicker np-team-role">Gründer - Projektleitung - Entwicklung/ Technik</p>
       <h2 class="np-card-title">M4ximum_</h2>
       <p class="np-card-text">
         Hallo hier könnte eine wichtige Beschreibung stehen.
@@ -78,7 +78,7 @@ permalink: /team.html
 
     <article class="np-info-card np-team-card">
       <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
-      <p class="np-card-kicker np-team-role">Founder</p>
+      <p class="np-card-kicker np-team-role">Gründer</p>
       <h2 class="np-card-title">OutTerror</h2>
       <p class="np-card-text">
         Hallo hier könnte eine wichtige Beschreibung stehen.
