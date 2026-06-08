@@ -1181,3 +1181,38 @@ blockquote {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* =========================================================
+   Feinschliff: Zurück-nach-oben-Bereich an Inhaltsbreite anpassen
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .main-content > hr:last-of-type,
+  .main-content > p:has(a[href="#top"]),
+  .main-content > p:has(a[href="#"]) {
+    width: min(1180px, calc(100% - 3rem));
+    max-width: 1180px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .main-content > hr:last-of-type {
+    margin-top: 1.8rem !important;
+    margin-bottom: 1rem !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(0, 230, 246, 0.32) !important;
+  }
+
+  .main-content > p:has(a[href="#top"]),
+  .main-content > p:has(a[href="#"]) {
+    margin-top: 0 !important;
+    margin-bottom: 5.25rem !important;
+  }
+
+  .main-content > p:has(a[href="#top"]) a,
+  .main-content > p:has(a[href="#"]) a {
+    color: var(--np-cyan) !important;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none !important;
+  }
+}
