@@ -40,7 +40,7 @@ permalink: /
 
 <section class="np-status-bar" aria-label="NewPath Kurzinfos">
   <div class="np-status-item">
-    <span class="np-status-icon">◇</span>
+    <span class="np-status-icon np-status-icon-block" aria-hidden="true"></span>
     <span>
       <small>Minecraft</small>
       <strong>26.1.2</strong>
@@ -48,7 +48,7 @@ permalink: /
   </div>
 
   <div class="np-status-item">
-    <span class="np-status-icon">⌁</span>
+    <span class="np-status-icon np-status-icon-forge" aria-hidden="true"></span>
     <span>
       <small>Modloader</small>
       <strong>NeoForge</strong>
@@ -56,7 +56,7 @@ permalink: /
   </div>
 
   <div class="np-status-item">
-    <span class="np-status-icon">◆</span>
+    <span class="np-status-icon np-status-icon-pack" aria-hidden="true"></span>
     <span>
       <small>Modpack</small>
       <strong>CurseForge</strong>
@@ -64,18 +64,10 @@ permalink: /
   </div>
 
   <div class="np-status-item">
-    <span class="np-status-icon">◎</span>
+    <span class="np-status-icon np-status-icon-check" aria-hidden="true"></span>
     <span>
       <small>Whitelist</small>
       <strong>Aktiv</strong>
-    </span>
-  </div>
-
-  <div class="np-status-item">
-    <span class="np-status-icon">☉</span>
-    <span>
-      <small>Discord</small>
-      <strong>Zentrale</strong>
     </span>
   </div>
 </section>

@@ -293,13 +293,14 @@ body::selection {
 
   .main-header .aux-nav a::before {
     content: "";
-    width: 1.05rem;
-    height: 0.9rem;
-    flex: 0 0 1.05rem;
-    display: inline-block;
+    width: 1.06rem;
+    height: 1.06rem;
+    flex: 0 0 1.06rem;
+    display: block;
     background: var(--np-cyan);
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 9h10c2.2 0 4 1.8 4 4v2.5c0 1.4-1.1 2.5-2.5 2.5-.8 0-1.5-.4-2-1l-1.1-1.5H8.6L7.5 17c-.5.6-1.2 1-2 1C4.1 18 3 16.9 3 15.5V13c0-2.2 1.8-4 4-4Zm1.2 3.2H6.8v1.2H5.6v1.4h1.2V16h1.4v-1.2h1.2v-1.4H8.2v-1.2Zm8.3.4a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2.4 2.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z'/%3E%3C/svg%3E") center / contain no-repeat;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 9h10c2.2 0 4 1.8 4 4v2.5c0 1.4-1.1 2.5-2.5 2.5-.8 0-1.5-.4-2-1l-1.1-1.5H8.6L7.5 17c-.5.6-1.2 1-2 1C4.1 18 3 16.9 3 15.5V13c0-2.2 1.8-4 4-4Zm1.2 3.2H6.8v1.2H5.6v1.4h1.2V16h1.4v-1.2h1.2v-1.4H8.2v-1.2Zm8.3.4a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2.4 2.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    transform: translateY(0.01rem);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 245 240'%3E%3Cpath fill='white' d='M104.4 104.6c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.3-5 10.2-11.1 0-6.1-4.5-11.1-10.2-11.1Zm36.7 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1 10.2-5 10.2-11.1-4.5-11.1-10.2-11.1Z'/%3E%3Cpath fill='white' d='M189.5 20h-134C44.2 20 35 29.2 35 40.5v135C35 186.8 44.2 196 55.5 196h113.4l-5.3-18.5 12.8 11.9 12.1 11.2L210 220V40.5C210 29.2 200.8 20 189.5 20Zm-38.9 130.6s-3.7-4.4-6.8-8.3c13.5-3.8 18.7-12.1 18.7-12.1-4.2 2.8-8.2 4.8-11.8 6.2-5.1 2.1-10 3.5-14.8 4.3-9.8 1.8-18.8 1.3-26.5-.1-5.8-1.1-10.8-2.6-15-4.3-2.4-.9-5-2.1-7.6-3.6-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.9-1.1-3-1.9-3-1.9s5 8.1 18.1 12c-3.1 3.9-6.9 8.5-6.9 8.5-22.8-.7-31.5-15.7-31.5-15.7 0-33.2 14.8-60.1 14.8-60.1 14.8-11.1 28.9-10.8 28.9-10.8l1 1.2c-18.5 5.3-27.1 13.4-27.1 13.4s2.3-1.3 6.1-3.1c11.1-4.9 19.9-6.2 23.5-6.5.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-8.2-7.8-25.7-13.1l1.4-1.6s14.1-.3 28.9 10.8c0 0 14.8 26.9 14.8 60.1 0 .1-8.8 15.1-31.6 15.8Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 245 240'%3E%3Cpath fill='white' d='M104.4 104.6c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.3-5 10.2-11.1 0-6.1-4.5-11.1-10.2-11.1Zm36.7 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1 10.2-5 10.2-11.1-4.5-11.1-10.2-11.1Z'/%3E%3Cpath fill='white' d='M189.5 20h-134C44.2 20 35 29.2 35 40.5v135C35 186.8 44.2 196 55.5 196h113.4l-5.3-18.5 12.8 11.9 12.1 11.2L210 220V40.5C210 29.2 200.8 20 189.5 20Zm-38.9 130.6s-3.7-4.4-6.8-8.3c13.5-3.8 18.7-12.1 18.7-12.1-4.2 2.8-8.2 4.8-11.8 6.2-5.1 2.1-10 3.5-14.8 4.3-9.8 1.8-18.8 1.3-26.5-.1-5.8-1.1-10.8-2.6-15-4.3-2.4-.9-5-2.1-7.6-3.6-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.9-1.1-3-1.9-3-1.9s5 8.1 18.1 12c-3.1 3.9-6.9 8.5-6.9 8.5-22.8-.7-31.5-15.7-31.5-15.7 0-33.2 14.8-60.1 14.8-60.1 14.8-11.1 28.9-10.8 28.9-10.8l1 1.2c-18.5 5.3-27.1 13.4-27.1 13.4s2.3-1.3 6.1-3.1c11.1-4.9 19.9-6.2 23.5-6.5.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-8.2-7.8-25.7-13.1l1.4-1.6s14.1-.3 28.9 10.8c0 0 14.8 26.9 14.8 60.1 0 .1-8.8 15.1-31.6 15.8Z'/%3E%3C/svg%3E") center / contain no-repeat;
   }
 }
 
@@ -418,7 +419,7 @@ body::selection {
 
 .np-status-bar {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 0.45rem;
   border: 1px solid rgba(0, 230, 246, 0.20);
   border-radius: 0.52rem;
@@ -442,18 +443,61 @@ body::selection {
 }
 
 .np-status-icon {
-  width: 1.68rem;
-  height: 1.68rem;
-  flex: 0 0 1.68rem;
+  width: 1.82rem;
+  height: 1.82rem;
+  flex: 0 0 1.82rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0.44rem;
+  border-radius: 0.46rem;
   color: var(--np-cyan);
   background: rgba(0, 230, 246, 0.08);
-  border: 1px solid rgba(0, 230, 246, 0.28);
-  font-size: 0.74rem;
+  border: 1px solid rgba(0, 230, 246, 0.30);
+  box-shadow: inset 0 0 14px rgba(0, 230, 246, 0.04);
+}
+
+.np-status-icon::before {
+  content: "";
+  display: block;
+  background: currentColor;
+}
+
+.np-status-icon-block::before {
+  width: 0.92rem;
+  height: 0.92rem;
+  clip-path: polygon(50% 4%, 94% 27%, 94% 73%, 50% 96%, 6% 73%, 6% 27%);
+  box-shadow: inset -0.18rem -0.18rem 0 rgba(0, 0, 0, 0.22);
+}
+
+.np-status-icon-forge::before {
+  content: "⚒";
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: var(--np-cyan);
+  font-size: 0.92rem;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(0, 230, 246, 0.24);
+}
+
+.np-status-icon-pack::before {
+  width: 0.98rem;
+  height: 0.86rem;
+  border-radius: 0.16rem;
+  clip-path: polygon(10% 18%, 50% 0, 90% 18%, 90% 82%, 50% 100%, 10% 82%);
+  box-shadow: inset 0 -0.2rem 0 rgba(0, 0, 0, 0.22);
+}
+
+.np-status-icon-check::before {
+  content: "✓";
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: var(--np-cyan);
+  font-size: 1rem;
   font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(0, 230, 246, 0.24);
 }
 
 .np-status-item small,
@@ -962,6 +1006,84 @@ blockquote {
   color: var(--np-muted);
 }
 
+
+/* Feinschliff: Einstiegskarten und Back-to-top-Bereich */
+
+@media (min-width: 66.5rem) {
+  .np-quick-panel {
+    min-height: 154px;
+    padding: 0.82rem 0.88rem 0.9rem;
+    align-content: center;
+  }
+
+  .np-quick-panel h2 {
+    margin-bottom: 0.72rem;
+    font-size: 1.16rem;
+  }
+
+  .np-card-grid-guides {
+    gap: 0.56rem;
+  }
+
+  .np-card-grid-guides .np-card {
+    min-height: 70px;
+    padding: 0.44rem 0.36rem;
+  }
+
+  .np-card-grid-guides .np-card-icon {
+    width: 1.48rem;
+    height: 1.48rem;
+    margin-bottom: 0.24rem;
+    font-size: 0.68rem;
+  }
+
+  .np-card-grid-guides .np-card-title {
+    max-width: 100%;
+    margin-bottom: 0.18rem;
+    font-size: 0.62rem;
+    line-height: 1.08;
+  }
+
+  .np-card-grid-guides .np-card-link {
+    font-size: 0.56rem;
+    line-height: 1.1;
+  }
+
+  .main-content > hr,
+  .main-content > .back-to-top,
+  .main-content > p:has(a[href="#top"]),
+  .main-content > p:has(a[href="#"]) {
+    width: var(--np-content-width);
+    max-width: 1320px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .main-content > hr {
+    margin-top: 1.35rem !important;
+    margin-bottom: 0.65rem !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(0, 230, 246, 0.30) !important;
+  }
+
+  .main-content > .back-to-top,
+  .main-content > p:has(a[href="#top"]),
+  .main-content > p:has(a[href="#"]) {
+    margin-top: 0 !important;
+    margin-bottom: calc(var(--np-footer-height) + 0.8rem) !important;
+    text-align: left;
+  }
+
+  .main-content > .back-to-top a,
+  .main-content > p:has(a[href="#top"]) a,
+  .main-content > p:has(a[href="#"]) a {
+    color: var(--np-cyan) !important;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: none !important;
+  }
+}
+
 /* 7. Fixierter Footer */
 
 .site-footer:not(.np-site-footer),
@@ -1179,40 +1301,5 @@ blockquote {
   .np-team-grid,
   .np-streamer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-/* =========================================================
-   Feinschliff: Zurück-nach-oben-Bereich an Inhaltsbreite anpassen
-   ========================================================= */
-
-@media (min-width: 66.5rem) {
-  .main-content > hr:last-of-type,
-  .main-content > p:has(a[href="#top"]),
-  .main-content > p:has(a[href="#"]) {
-    width: min(1180px, calc(100% - 3rem));
-    max-width: 1180px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .main-content > hr:last-of-type {
-    margin-top: 1.8rem !important;
-    margin-bottom: 1rem !important;
-    border: 0 !important;
-    border-top: 1px solid rgba(0, 230, 246, 0.32) !important;
-  }
-
-  .main-content > p:has(a[href="#top"]),
-  .main-content > p:has(a[href="#"]) {
-    margin-top: 0 !important;
-    margin-bottom: 5.25rem !important;
-  }
-
-  .main-content > p:has(a[href="#top"]) a,
-  .main-content > p:has(a[href="#"]) a {
-    color: var(--np-cyan) !important;
-    font-size: 0.82rem;
-    font-weight: 800;
-    text-decoration: none !important;
   }
 }
