@@ -1473,3 +1473,124 @@ blockquote {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* =========================================================
+   Schritt 31: Außenabstände, Hero-Höhe und Discord-Button korrigieren
+   - links/rechts etwas mehr Luft zum Viewport
+   - Hero näher an die Kopfzeile ziehen
+   - Discord-Icon als echtes Symbol statt falschem Zeichen
+   - Button-Inhalt sauber vertikal zentrieren
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  :root {
+    --np-page-left: clamp(4.4rem, 5vw, 6.5rem);
+    --np-page-right: clamp(3.8rem, 4.5vw, 6rem);
+    --np-content-width: calc(100vw - var(--np-page-left) - var(--np-page-right));
+  }
+
+  .np-last-updated {
+    margin-top: 0.75rem !important;
+    margin-bottom: -0.45rem !important;
+  }
+
+  .np-hero {
+    min-height: clamp(315px, 24vw, 430px) !important;
+    padding-top: clamp(0.8rem, 1.4vw, 1.55rem) !important;
+    padding-bottom: clamp(0.75rem, 1.6vw, 1.45rem) !important;
+    align-items: center !important;
+    grid-template-columns: minmax(390px, 520px) minmax(285px, 370px) minmax(0, 1fr) !important;
+  }
+
+  .np-hero-content {
+    max-width: 515px !important;
+  }
+
+  .np-hero h1 {
+    font-size: clamp(2.85rem, 3.75vw, 4.65rem) !important;
+  }
+
+  .np-hero-logo {
+    width: clamp(245px, 17vw, 345px) !important;
+    height: clamp(245px, 17vw, 345px) !important;
+  }
+
+  .np-status-bar {
+    margin-top: -0.15rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .np-main-grid,
+  .np-main-grid-echo-first {
+    gap: 1rem !important;
+  }
+
+  .main-header .search {
+    height: 2.18rem !important;
+  }
+
+  .main-header .search-input-wrap {
+    height: 2.18rem !important;
+    min-height: 2.18rem !important;
+  }
+
+  .main-header .search-input {
+    height: 2.08rem !important;
+    min-height: 2.08rem !important;
+  }
+
+  .main-header .aux-nav {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .main-header .aux-nav-list,
+  .main-header .aux-nav-list-item {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .main-header .aux-nav a {
+    min-height: 2.18rem !important;
+    height: 2.18rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    padding: 0 1rem !important;
+    border-radius: 0.46rem !important;
+    color: rgba(245, 234, 220, 0.94) !important;
+    background:
+      linear-gradient(135deg, rgba(0, 230, 246, 0.09), rgba(0, 18, 33, 0.82)) !important;
+    border: 1px solid rgba(0, 230, 246, 0.46) !important;
+    box-shadow:
+      inset 0 0 14px rgba(0, 230, 246, 0.05),
+      0 0 16px rgba(0, 230, 246, 0.07) !important;
+    font-size: 0.78rem !important;
+    line-height: 1 !important;
+  }
+
+  .main-header .aux-nav a::before {
+    content: "" !important;
+    width: 1.02rem !important;
+    height: 0.82rem !important;
+    flex: 0 0 1.02rem !important;
+    display: inline-block !important;
+    background-color: var(--np-cyan) !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 9h10c2.2 0 4 1.8 4 4v2.5c0 1.4-1.1 2.5-2.5 2.5-.8 0-1.5-.4-2-1L15.4 15.5H8.6L7.5 17c-.5.6-1.2 1-2 1C4.1 18 3 16.9 3 15.5V13c0-2.2 1.8-4 4-4Zm1.2 3.2H6.8v1.2H5.6v1.4h1.2V16h1.4v-1.2h1.2v-1.4H8.2v-1.2Zm8.3.4a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2.4 2.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z'/%3E%3C/svg%3E") center / contain no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 9h10c2.2 0 4 1.8 4 4v2.5c0 1.4-1.1 2.5-2.5 2.5-.8 0-1.5-.4-2-1L15.4 15.5H8.6L7.5 17c-.5.6-1.2 1-2 1C4.1 18 3 16.9 3 15.5V13c0-2.2 1.8-4 4-4Zm1.2 3.2H6.8v1.2H5.6v1.4h1.2V16h1.4v-1.2h1.2v-1.4H8.2v-1.2Zm8.3.4a1 1 0 1 0 0 2 1 1 0 0 0 0-2Zm2.4 2.2a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z'/%3E%3C/svg%3E") center / contain no-repeat !important;
+    transform: translateY(0) !important;
+    text-shadow: none !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1500px) {
+  :root {
+    --np-page-left: clamp(3.2rem, 4.4vw, 4.8rem);
+    --np-page-right: clamp(2.6rem, 3.5vw, 4rem);
+  }
+
+  .np-hero {
+    min-height: clamp(300px, 25vw, 400px) !important;
+  }
+}
