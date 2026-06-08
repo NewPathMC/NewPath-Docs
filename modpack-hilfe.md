@@ -5,7 +5,7 @@ nav_order: 5
 permalink: /modpack-hilfe.html
 ---
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 13:31 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 13:40 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">
