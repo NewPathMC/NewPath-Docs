@@ -7108,3 +7108,199 @@ html body .np-help-details:not([open]) > :not(summary) {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 }
+
+/* =========================================================
+   STEP 56 – Einstieg korrigieren + Footer global stabilisieren
+   ========================================================= */
+
+/* Keine Bewegungs-/Hover-Effekte im ECHO-Bereich */
+html body .np-echo-feature,
+html body .np-echo-feature *,
+html body .np-echo-feature:hover,
+html body .np-echo-feature:focus-within,
+html body .np-echo-feature a:hover,
+html body .np-echo-feature button:hover {
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+/* ECHO bleibt wie im aktuellen guten Stand, aber die Texte springen nicht */
+html body.home .np-main-grid-echo-first .np-echo-feature,
+html body .np-home .np-main-grid-echo-first .np-echo-feature {
+  align-items: center !important;
+  min-width: 0 !important;
+}
+
+html body .np-echo-feature h2,
+html body .np-echo-feature .np-echo-title,
+html body .np-echo-feature p,
+html body .np-echo-feature a,
+html body .np-echo-feature span {
+  letter-spacing: normal !important;
+  font-kerning: normal !important;
+}
+
+/* Einstieg: Box und Karten neu sauber ausrichten */
+html body.home .np-main-grid-echo-first,
+html body .np-home .np-main-grid-echo-first {
+  grid-template-columns: minmax(360px, 0.95fr) minmax(520px, 1.25fr) !important;
+  gap: 1rem !important;
+  align-items: stretch !important;
+}
+
+html body.home .np-main-grid-echo-first .np-quick-panel,
+html body .np-home .np-main-grid-echo-first .np-quick-panel {
+  min-width: 0 !important;
+  padding: 1rem 1rem 1.05rem !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+html body .np-quick-panel .np-section-kicker,
+html body .np-quick-panel .np-eyebrow {
+  display: block !important;
+  font-size: 0.72rem !important;
+  line-height: 1.1 !important;
+  margin: 0 0 0.32rem !important;
+}
+
+html body .np-quick-panel h2 {
+  font-size: clamp(1.08rem, 1.05vw, 1.28rem) !important;
+  line-height: 1.12 !important;
+  margin: 0 0 0.85rem !important;
+}
+
+html body .np-card-grid-guides {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0.68rem !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+html body .np-card-grid-guides .np-card,
+html body .np-card-grid-guides .np-card:hover,
+html body .np-card-grid-guides .np-card:focus,
+html body .np-card-grid-guides .np-card:focus-within {
+  height: 116px !important;
+  min-height: 116px !important;
+  max-height: 116px !important;
+  padding: 0.72rem 0.52rem 0.58rem !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  transform: none !important;
+  transition: none !important;
+  filter: none !important;
+}
+
+html body .np-card-grid-guides .np-card-icon {
+  width: 1.95rem !important;
+  height: 1.95rem !important;
+  min-width: 1.95rem !important;
+  min-height: 1.95rem !important;
+  margin: 0 0 0.42rem !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+html body .np-card-grid-guides .np-card-title {
+  font-size: 0.74rem !important;
+  line-height: 1.06 !important;
+  margin: 0 0 0.28rem !important;
+  max-width: 100% !important;
+  white-space: normal !important;
+}
+
+html body .np-card-grid-guides .np-card-text {
+  display: none !important;
+}
+
+html body .np-card-grid-guides .np-card-link {
+  display: inline-block !important;
+  font-size: 0.64rem !important;
+  line-height: 1.1 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Footer: Ziel ist body > footer.np-site-footer. Wird per head_custom-JS dorthin verschoben. */
+html body {
+  padding-bottom: calc(var(--np-fixed-footer-height, 54px) + 1.5rem) !important;
+}
+
+html body > .np-site-footer,
+html body .np-site-footer.np-footer-globalized {
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483000 !important;
+  border-radius: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  transform: none !important;
+}
+
+html body > .np-site-footer .np-site-footer-inner,
+html body .np-site-footer.np-footer-globalized .np-site-footer-inner {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: var(--np-fixed-footer-height, 54px) !important;
+  margin: 0 !important;
+  padding-left: clamp(1rem, 1.8vw, 2rem) !important;
+  padding-right: clamp(1rem, 1.8vw, 2rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1.25rem !important;
+}
+
+/* Falls das Theme den Footer trotz JS kurz im Content rendert: keine Card-/Contentbreite übernehmen */
+html body .main-content .np-site-footer,
+html body .main .np-site-footer,
+html body .page-content .np-site-footer {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Unterseiten: Content soll nicht hinter dem fixierten Footer verschwinden */
+html body:not(.home) .main-content,
+html body:not(.home) .page-content,
+html body:not(.home) .main-content-wrap {
+  padding-bottom: calc(var(--np-fixed-footer-height, 54px) + 2.5rem) !important;
+}
+
+@media (max-width: 1240px) {
+  html body.home .np-main-grid-echo-first,
+  html body .np-home .np-main-grid-echo-first {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body .np-card-grid-guides {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  html body .np-card-grid-guides .np-card {
+    height: auto !important;
+    min-height: 108px !important;
+    max-height: none !important;
+  }
+}
