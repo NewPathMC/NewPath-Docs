@@ -5,13 +5,13 @@ permalink: /faq.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 21:05 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 19:21 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-faq">
   <div class="echo-page-image">
     <img
-      src="{{ site.baseurl }}/assets/images/echo/echo-faq.png"
+      src="{{ site.baseurl }}/assets/images/echo/echo-guide.png"
       alt="ECHO beantwortet häufige Fragen zu NewPath"
       width="512"
       height="512"
@@ -37,81 +37,110 @@ permalink: /faq.html
 
   <div class="np-card-grid np-card-grid-1 np-faq-grid">
     <details class="np-accordion np-faq-details">
+      <summary>Wie kann ich mitspielen?</summary>
+      <div>
+        <ul>
+          <li>Du musst mindestens 16 Jahre alt sein.</li>
+          <li>Du musst dem Discord beitreten.</li>
+          <li>Du musst das Regelwerk kennen.</li>
+          <li>Du musst Zugang zur Whitelist erhalten haben.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="np-accordion np-faq-details">
       <summary>Welche Minecraft-Version nutzt NewPath?</summary>
       <div>
-        <p>
-          NewPath – Echoes of the Wild basiert auf Minecraft 26.1.2 mit NeoForge.
-          Es handelt sich um ein Java-Modpack für PC.
-        </p>
+        <ul>
+          <li>Es handelt sich um ein Modpack in der Java-Version, somit ist der Zugang nur über PC möglich.</li>
+          <li>Unser Modpack benutzt die Minecraft-Version 26.1.2.</li>
+          <li>Wir wollen darauf hinweisen, dass ihr Minecraft über den CurseForge Launcher ausreichend RAM zuweist. Wir empfehlen 10–12 GB.</li>
+        </ul>
       </div>
     </details>
 
     <details class="np-accordion np-faq-details">
       <summary>Wie komme ich auf den Server?</summary>
       <div>
+        <ul>
+          <li>Um bei NewPath mitspielen zu können, musst du unter Whitelist eine Anfrage stellen.</li>
+          <li>Nach erfolgreicher Whitelist kannst du unserem Server joinen.</li>
+          <li>Die IP findest du bei Server-Informationen im Discord.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="np-accordion np-faq-details">
+      <summary>Modpack? Wie eigentlich?</summary>
+      <div>
+        <ul>
+          <li>Wir stellen euch über den CurseForge Launcher das NewPath Modpack bereit.</li>
+          <li>Sollten sich Fragen ergeben, kannst du in unsere <a href="{{ site.baseurl }}/modpack-hilfe.html">Modpack Hilfe</a> schauen oder im entsprechenden Discord-Channel nachfragen.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="np-accordion np-faq-details">
+      <summary>Warps und Teleportfragen?</summary>
+      <div>
+        <ul>
+          <li>Auf NewPath gibt es weder Warps noch Teleportanfragen.</li>
+          <li>Ihr könnt stattdessen Wegsteine finden und craften, um Orte zu erreichen.</li>
+          <li>Ihr habt die Möglichkeit, mit <code>/sethome</code> zwei Teleportpunkte zu setzen, zum Beispiel für euer Zuhause. Erreichen könnt ihr dieses dann mit <code>/home</code>.</li>
+          <li>Alternativ könnt ihr <code>/spawn</code> nutzen.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="np-accordion np-faq-details">
+      <summary>Roleplay?</summary>
+      <div>
+        <ul>
+          <li>Ihr habt hier die Möglichkeit, freiwillig Roleplay zu spielen.</li>
+          <li>Ob ihr der Lore folgt oder auch eine eigene Story kreiert, bleibt dabei euch überlassen. Treu dem Motto: Alles kann, nichts muss.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="np-accordion np-faq-details">
+      <summary>Wo bekomme ich Hilfe oder Support?</summary>
+      <div>
+        <ul>
+          <li>Ihr wurdet gegrieft, es gibt einen größeren Streit oder ihr habt einen Bug gefunden?</li>
+          <li>Dann öffnet bitte unter Support ein Ticket.</li>
+          <li>Wichtig: Nur mit genauer Problembeschreibung können wir euch helfen.</li>
+          <li>Bilder, Videos oder vielleicht auch Zeugen können ebenfalls hilfreich sein.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="np-accordion np-faq-details">
+      <summary>Mein Spiel stürzt ab, was soll ich tun?</summary>
+      <div>
         <p>
-          Der Zugang läuft über die Whitelist. Die Anfrage erfolgt über Discord.
-          Nach Annahme erhältst du dort alle weiteren Informationen zum Einstieg.
+          Schau bitte zuerst in die <a href="{{ site.baseurl }}/modpack-hilfe.html">Modpack Hilfe</a>.
+          Dort werden technische Grundlagen, typische Startprobleme und weitere Hilfethemen gesammelt.
         </p>
       </div>
     </details>
 
     <details class="np-accordion np-faq-details">
-      <summary>Wo bekomme ich das Modpack?</summary>
+      <summary>Darf ich NewPath streamen?</summary>
       <div>
-        <p>
-          Das Modpack wird über CurseForge bereitgestellt. Eine ausführlichere
-          Anleitung findest du auf der Seite <a href="{{ site.baseurl }}/modpack-hilfe.html">Modpack Hilfe</a>.
-        </p>
+        <ul>
+          <li>Streams, Screenshots und Videos über NewPath sind ausdrücklich erlaubt und erwünscht.</li>
+          <li>Bitte nenne das Projekt „NewPath – Echoes of the Wild“ oder „NewPath“ als Quelle.</li>
+          <li>Öffne ein Ticket und hole dir die Streamerrolle.</li>
+          <li>Weitere Informationen findest du auf der <a href="{{ site.baseurl }}/streamer.html">Streamer-Seite</a>.</li>
+        </ul>
       </div>
     </details>
 
     <details class="np-accordion np-faq-details">
-      <summary>Wie viel RAM sollte ich zuweisen?</summary>
+      <summary>Wieso sind meine Force Loaded Chunks nicht mehr aktiv?</summary>
       <div>
         <p>
-          Für ein stabiles Spielerlebnis empfehlen wir ausreichend Arbeitsspeicher.
-          Die genaue Empfehlung und die Schritte zur Einstellung findest du in der Modpack-Hilfe.
-        </p>
-      </div>
-    </details>
-
-    <details class="np-accordion np-faq-details">
-      <summary>Gibt es Voice Chat?</summary>
-      <div>
-        <p>
-          Ja. NewPath nutzt Voice Chat für mehr Immersion und natürlichere Kommunikation.
-          Die Nutzung ist freiwillig, aber für gemeinsames Spiel sehr hilfreich.
-        </p>
-      </div>
-    </details>
-
-    <details class="np-accordion np-faq-details">
-      <summary>Ist Roleplay Pflicht?</summary>
-      <div>
-        <p>
-          Nein. NewPath ist kein Hardcore-RP-Projekt. Roleplay und Atmosphäre sind willkommen,
-          aber der Fokus liegt auf einem respektvollen, gemeinschaftlichen Spielerlebnis.
-        </p>
-      </div>
-    </details>
-
-    <details class="np-accordion np-faq-details">
-      <summary>Warum gibt es nicht einfach alle Mods?</summary>
-      <div>
-        <p>
-          NewPath verfolgt bewusst eine klare Richtung. Nicht jede Mod passt zur Atmosphäre,
-          Performance oder Balance des Projekts. Qualität und Stimmigkeit sind wichtiger als Masse.
-        </p>
-      </div>
-    </details>
-
-    <details class="np-accordion np-faq-details">
-      <summary>Wo finde ich Hilfe bei Problemen?</summary>
-      <div>
-        <p>
-          Erste Hilfe findest du auf der Modpack-Hilfe-Seite. Wenn das Problem dort nicht gelöst wird,
-          kannst du dich über Discord an das Team wenden.
+          Aus Balancinggründen werden die Force Loaded Chunks nach 3 Tagen Inaktivität des Spielers deaktiviert.
         </p>
       </div>
     </details>
