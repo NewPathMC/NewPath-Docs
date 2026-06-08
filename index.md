@@ -15,12 +15,11 @@ permalink: /
       <span class="np-hero-title-sub">Echoes of the Wild</span>
     </h1>
 
-    <p class="np-hero-text">
-      Ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung,
-      Gemeinschaft und entschleunigten Fortschritt.
-    </p>
-
     <div class="np-hero-highlight">
+      <span class="np-hero-highlight-intro">
+        Ein atmosphärisches Minecraft-Modpack mit Fokus auf Immersion, Erkundung,
+        Gemeinschaft und entschleunigten Fortschritt.
+      </span>
       <strong>NewPath – Echoes of the Wild</strong> verbindet Natur, Technik,
       Abenteuer und Community zu einer stimmigen Minecraft-Erfahrung.
       <br>
@@ -83,7 +82,7 @@ permalink: /
 
 <div class="np-page-meta">
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 12:25 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 23:46 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 </div>
 

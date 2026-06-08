@@ -4826,3 +4826,187 @@ body:not(.home) .np-help-details > div img {
   border: 1px solid rgba(0, 230, 246, 0.18) !important;
   background: rgba(0, 9, 15, 0.55) !important;
 }
+
+
+/* =========================================================
+   Step 47: Hero-Lesbarkeit, ECHO-Präsenz und Abschnittsabstände
+   - Hero-Zusatztext in Highlight-Box verlagert (index.md)
+   - untere Footer-Trennlinie entfernt
+   - mehr Luft um Trennlinien zwischen Inhaltsbereichen
+   - ECHO-Bild deutlich präsenter, ohne die Box höher zu ziehen
+   - Einstiegskarten etwas größer/lesbarer
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  /* Hero: der helle Text liegt nicht mehr frei auf dem hellen Himmel */
+  .np-hero-text {
+    display: none !important;
+  }
+
+  .np-hero-highlight {
+    max-width: 560px !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.48 !important;
+    background:
+      linear-gradient(135deg, rgba(236, 189, 119, 0.075), transparent 42%),
+      rgba(0, 8, 14, 0.56) !important;
+    border-left: 3px solid rgba(236, 189, 119, 0.86) !important;
+    border-color: rgba(236, 189, 119, 0.26) !important;
+  }
+
+  .np-hero-highlight .np-hero-highlight-intro {
+    display: block !important;
+    margin-bottom: 0.38rem !important;
+    color: rgba(255, 248, 226, 0.92) !important;
+  }
+
+  /* Keine harte Trennlinie direkt am fixierten Footer */
+  .np-site-footer {
+    border-top: 0 !important;
+    box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.26) !important;
+  }
+
+  .np-site-footer::before,
+  .np-site-footer::after,
+  .np-home::after,
+  .np-server-brief::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .main-content > hr,
+  .np-home > hr {
+    display: none !important;
+  }
+
+  /* Abschnittstrenner: mehr Raum vor/nach der Linie */
+  .np-main-grid-echo-first,
+  .np-about-panel {
+    margin-bottom: 2.35rem !important;
+  }
+
+  .np-main-grid-echo-first::after,
+  .np-about-panel::after {
+    bottom: -1.28rem !important;
+    opacity: 0.72 !important;
+  }
+
+  .np-about-panel,
+  .np-server-brief {
+    margin-top: 0.65rem !important;
+  }
+
+  .np-server-brief {
+    margin-bottom: 2.35rem !important;
+  }
+
+  /* ECHO: Bild deutlich größer, Boxhöhe bleibt im gleichen Rahmen */
+  .np-main-grid-echo-first .np-echo-feature {
+    grid-template-columns: 158px minmax(0, 1fr) !important;
+    gap: 1.12rem !important;
+    align-items: center !important;
+    min-height: 186px !important;
+    padding: 0.95rem 1.22rem !important;
+  }
+
+  .np-echo-image-wrap,
+  .np-echo-image-wrap img,
+  .np-echo-feature:hover .np-echo-image-wrap,
+  .np-echo-feature:hover .np-echo-image-wrap img {
+    width: 146px !important;
+    height: 146px !important;
+    max-width: 146px !important;
+    max-height: 146px !important;
+    object-fit: contain !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+
+  .np-echo-orb {
+    display: none !important;
+  }
+
+  .np-echo-content h2 {
+    font-size: 1.42rem !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.38rem !important;
+  }
+
+  .np-echo-content p {
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
+    max-width: 560px !important;
+  }
+
+  .np-echo-steps {
+    margin-top: 0.55rem !important;
+  }
+
+  /* Einstiegskarten: ein Tick größer, aber weiterhin sauber in der Box */
+  .np-quick-panel {
+    min-height: 186px !important;
+    padding: 1.05rem 1.12rem !important;
+  }
+
+  .np-card-grid-guides {
+    gap: 0.72rem !important;
+  }
+
+  .np-card-grid-guides .np-card,
+  .np-card-grid-guides .np-card:hover,
+  .np-card-grid-guides .np-card:focus-within {
+    min-height: 118px !important;
+    padding: 0.78rem 0.64rem !important;
+    overflow: hidden !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  .np-card-grid-guides .np-card-icon {
+    width: 2.1rem !important;
+    height: 2.1rem !important;
+    margin-bottom: 0.42rem !important;
+  }
+
+  .np-card-grid-guides .np-card-title {
+    font-size: 0.84rem !important;
+  }
+
+  .np-card-grid-guides .np-card-link {
+    font-size: 0.68rem !important;
+  }
+}
+
+@media (max-width: 66.49rem) {
+  .np-hero-text {
+    display: none !important;
+  }
+
+  .np-hero-highlight .np-hero-highlight-intro {
+    display: block !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .np-site-footer,
+  .np-site-footer::before,
+  .np-site-footer::after {
+    border-top: 0 !important;
+  }
+
+  .np-main-grid-echo-first,
+  .np-about-panel {
+    margin-bottom: 2rem !important;
+  }
+
+  .np-main-grid-echo-first::after,
+  .np-about-panel::after {
+    bottom: -1rem !important;
+  }
+}
