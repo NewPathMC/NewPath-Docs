@@ -5010,3 +5010,320 @@ body:not(.home) .np-help-details > div img {
     bottom: -1rem !important;
   }
 }
+
+/* =========================================================
+   Step 48: ECHO-Wegbegleiter + Hilfeseiten-Stil ausarbeiten
+   - Startseite etwas luftiger
+   - ECHO als primärer Guide-Bereich stärker gewichten
+   - Einstiegskarten lesbarer halten
+   - Footer-Typografie leicht verbessern
+   - Modpack-Hilfe/Unterseiten-Komponenten stärker vorbereiten
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  /* Gesamtraster: nicht breiter ziehen, aber mehr Luft zwischen Sektionen */
+  .np-home {
+    padding-bottom: 7.25rem !important;
+  }
+
+  .np-hero {
+    margin-bottom: 1.08rem !important;
+  }
+
+  .np-status-bar {
+    margin-top: 0.82rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .np-page-meta {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Hero-Textbox etwas ruhiger und lesbarer */
+  .np-hero-highlight {
+    max-width: 585px !important;
+    padding: 0.95rem 1.08rem !important;
+    font-size: 0.84rem !important;
+    line-height: 1.55 !important;
+    border-radius: 0.42rem !important;
+  }
+
+  /* ECHO bekommt sichtbar mehr Wegbegleiter-Gewicht */
+  .np-main-grid-echo-first {
+    gap: 1.05rem !important;
+    align-items: stretch !important;
+    margin-bottom: 2.55rem !important;
+  }
+
+  .np-main-grid-echo-first .np-echo-feature {
+    grid-template-columns: 180px minmax(0, 1fr) !important;
+    gap: 1.2rem !important;
+    min-height: 212px !important;
+    padding: 1.05rem 1.28rem !important;
+    background:
+      radial-gradient(circle at 12% 48%, rgba(0, 230, 246, 0.14), transparent 13rem),
+      radial-gradient(circle at 96% 50%, rgba(236, 189, 119, 0.055), transparent 16rem),
+      linear-gradient(90deg, rgba(3, 19, 27, 0.74), rgba(6, 22, 29, 0.58)) !important;
+    border-left: 4px solid rgba(0, 230, 246, 0.82) !important;
+  }
+
+  .np-echo-image-wrap,
+  .np-echo-image-wrap img,
+  .np-echo-feature:hover .np-echo-image-wrap,
+  .np-echo-feature:hover .np-echo-image-wrap img {
+    width: 170px !important;
+    height: 170px !important;
+    max-width: 170px !important;
+    max-height: 170px !important;
+    object-fit: contain !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+  }
+
+  .np-echo-content h2 {
+    max-width: 560px !important;
+    font-size: 1.52rem !important;
+    line-height: 1.08 !important;
+    margin-bottom: 0.48rem !important;
+  }
+
+  .np-echo-content p {
+    max-width: 620px !important;
+    font-size: 0.87rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .np-echo-steps {
+    gap: 0.38rem !important;
+    margin-top: 0.7rem !important;
+  }
+
+  .np-echo-steps span {
+    padding: 0.26rem 0.52rem !important;
+    font-size: 0.66rem !important;
+  }
+
+  /* Einstieg: vier Karten bleiben nebeneinander, aber bekommen mehr Lesbarkeit */
+  .np-quick-panel {
+    min-height: 212px !important;
+    padding: 1.12rem 1.18rem !important;
+  }
+
+  .np-quick-panel h2 {
+    margin-bottom: 0.86rem !important;
+  }
+
+  .np-card-grid-guides {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0.72rem !important;
+  }
+
+  .np-card-grid-guides .np-card,
+  .np-card-grid-guides .np-card:hover,
+  .np-card-grid-guides .np-card:focus-within {
+    min-height: 128px !important;
+    padding: 0.84rem 0.66rem !important;
+    justify-content: center !important;
+  }
+
+  .np-card-grid-guides .np-card-icon {
+    width: 2.18rem !important;
+    height: 2.18rem !important;
+    margin-bottom: 0.48rem !important;
+  }
+
+  .np-card-grid-guides .np-card-title {
+    font-size: 0.88rem !important;
+    line-height: 1.12 !important;
+  }
+
+  .np-card-grid-guides .np-card-text {
+    max-width: 14rem !important;
+    font-size: 0.68rem !important;
+    line-height: 1.32 !important;
+  }
+
+  .np-card-grid-guides .np-card-link {
+    font-size: 0.72rem !important;
+  }
+
+  /* Inhaltsbereiche: etwas mehr Raum, ohne riesige Abstände */
+  .np-main-grid-echo-first::after,
+  .np-about-panel::after {
+    bottom: -1.42rem !important;
+  }
+
+  .np-about-panel {
+    margin-top: 0.9rem !important;
+    margin-bottom: 2.55rem !important;
+    padding-top: 1.1rem !important;
+    padding-bottom: 1.1rem !important;
+  }
+
+  .np-server-brief {
+    margin-top: 0.9rem !important;
+    padding-top: 1.18rem !important;
+    padding-bottom: 1.18rem !important;
+  }
+
+  /* Footer als fester Abschluss, aber besser lesbar */
+  .np-site-footer {
+    min-height: 3.3rem !important;
+  }
+
+  .np-footer-brand strong,
+  .np-footer-links a,
+  .np-footer-copy {
+    font-size: 0.72rem !important;
+  }
+
+  .np-footer-brand span {
+    font-size: 0.62rem !important;
+  }
+
+  /* Kontrast: Cyan nur als Akzent, mit Schatten auf Bildflächen */
+  .np-kicker,
+  .np-section-kicker,
+  .np-status-item small,
+  .np-server-brief-grid strong,
+  .np-help-kicker,
+  .echo-page-kicker {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55) !important;
+  }
+}
+
+/* Unterseiten: allgemeiner Content wirkt mehr wie die Startseiten-Komponenten */
+body:not(.home) .main-content,
+body:not(.home) .main-content-wrap {
+  scroll-margin-top: 5rem !important;
+}
+
+body:not(.home) .np-last-updated {
+  display: inline-flex !important;
+  width: fit-content !important;
+  margin: 0.3rem 0 1rem 0 !important;
+  padding: 0.34rem 0.62rem !important;
+  border-radius: 999px !important;
+  color: rgba(235, 226, 205, 0.74) !important;
+  background: rgba(0, 9, 15, 0.42) !important;
+  border: 1px solid rgba(236, 189, 119, 0.18) !important;
+  font-size: 0.72rem !important;
+}
+
+body:not(.home) .echo-page-box {
+  display: grid !important;
+  grid-template-columns: 130px minmax(0, 1fr) !important;
+  gap: 1.15rem !important;
+  align-items: center !important;
+  margin: 1rem 0 1.5rem !important;
+  padding: 1rem 1.15rem !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid rgba(0, 230, 246, 0.22) !important;
+  border-left: 4px solid rgba(0, 230, 246, 0.82) !important;
+  background:
+    radial-gradient(circle at 10% 52%, rgba(0, 230, 246, 0.12), transparent 12rem),
+    linear-gradient(90deg, rgba(3, 18, 26, 0.78), rgba(8, 23, 30, 0.62)) !important;
+}
+
+body:not(.home) .echo-page-image img {
+  width: 124px !important;
+  height: 124px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+body:not(.home) .echo-page-content h2 {
+  margin: 0.2rem 0 0.45rem !important;
+  color: #f4cf7f !important;
+}
+
+body:not(.home) .echo-page-content p {
+  margin: 0 !important;
+  color: rgba(245, 242, 232, 0.86) !important;
+  line-height: 1.6 !important;
+}
+
+body:not(.home) .np-help-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 0.9rem !important;
+  margin: 1rem 0 1.7rem !important;
+}
+
+body:not(.home) .np-help-tile {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  min-height: 98px !important;
+  padding: 0.95rem 1rem !important;
+  border-radius: 0.65rem !important;
+  text-decoration: none !important;
+  background: rgba(17, 46, 64, 0.70) !important;
+  border: 1px solid rgba(0, 230, 246, 0.18) !important;
+}
+
+body:not(.home) .np-help-tile strong {
+  color: #f4cf7f !important;
+}
+
+body:not(.home) .np-help-tile span {
+  color: rgba(245, 242, 232, 0.78) !important;
+  font-size: 0.86rem !important;
+}
+
+body:not(.home) .np-help-details {
+  margin: 0.8rem 0 !important;
+  border-radius: 0.7rem !important;
+  border: 1px solid rgba(0, 230, 246, 0.18) !important;
+  background: rgba(3, 16, 24, 0.62) !important;
+  overflow: hidden !important;
+}
+
+body:not(.home) .np-help-details summary {
+  cursor: pointer !important;
+  padding: 0.9rem 1rem !important;
+  color: #f4cf7f !important;
+  font-weight: 800 !important;
+  background: rgba(17, 46, 64, 0.56) !important;
+}
+
+body:not(.home) .np-help-details > div {
+  padding: 0.9rem 1rem 1rem !important;
+  color: rgba(245, 242, 232, 0.84) !important;
+}
+
+body:not(.home) .np-help-details > div p,
+body:not(.home) .np-help-details > div li {
+  line-height: 1.62 !important;
+}
+
+body:not(.home) .np-help-note {
+  margin: 1rem 0 !important;
+  padding: 0.85rem 1rem !important;
+  border-radius: 0.65rem !important;
+  border-left: 4px solid rgba(236, 189, 119, 0.85) !important;
+  background: rgba(0, 9, 15, 0.52) !important;
+  color: rgba(245, 242, 232, 0.86) !important;
+}
+
+@media (max-width: 1100px) {
+  body:not(.home) .np-help-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body:not(.home) .echo-page-box,
+  body:not(.home) .np-help-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  body:not(.home) .echo-page-image img {
+    width: 112px !important;
+    height: 112px !important;
+  }
+}

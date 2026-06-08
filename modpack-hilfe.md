@@ -5,7 +5,7 @@ nav_order: 5
 permalink: /modpack-hilfe.html
 ---
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 12:34 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 07.06.2026 23:46 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">
@@ -37,6 +37,10 @@ permalink: /modpack-hilfe.html
 Die **Modpack Hilfe** ist die zentrale Hilfebibliothek für **NewPath – Echoes of the Wild**.
 Hier landen nicht nur technische Hinweise, sondern auch Anleitungen zu einzelnen Mods,
 Serverfunktionen und typischen Fragen aus dem Discord.
+
+<div class="np-help-note">
+  <strong>Hinweis:</strong> Viele Inhalte stammen aus Hilfebeiträgen im Discord und werden hier nach und nach sauber gesammelt. Bilder und Schritt-für-Schritt-Grafiken können später direkt in die passenden Bereiche eingebunden werden.
+</div>
 
 ---
 
@@ -111,7 +115,7 @@ Serverfunktionen und typischen Fragen aus dem Discord.
 
 ## Wichtige Serverfunktionen
 
-<details id="voice-chat" class="np-help-details">
+<details id="voice-chat" class="np-help-details" open>
   <summary>Voice Chat einrichten</summary>
   <div>
     <p>
