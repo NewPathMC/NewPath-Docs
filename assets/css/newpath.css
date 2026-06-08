@@ -2518,3 +2518,155 @@ blockquote {
     justify-content: flex-start;
   }
 }
+
+/* =========================================================
+   Step 72: Regelwerk/Markdown-Unterseiten besser lesbar machen
+   Header/Footer bleiben unangetastet
+   ========================================================= */
+
+body:not(.home) .main-content > h1:first-of-type {
+  width: min(1180px, calc(100% - 3rem));
+  max-width: 1180px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(2.2rem, 2.8vw, 3.2rem) !important;
+  line-height: 1.08 !important;
+}
+
+body:not(.home) .main-content > p,
+body:not(.home) .main-content > ul,
+body:not(.home) .main-content > ol {
+  color: rgba(245, 234, 220, 0.88);
+}
+
+body:not(.home) .main-content > h2,
+body:not(.home) .main-content > h3 {
+  scroll-margin-top: 6rem;
+}
+
+body:not(.home) .main-content > h2 {
+  margin-top: 2rem !important;
+  margin-bottom: 0.85rem !important;
+  padding-top: 1.15rem !important;
+  border-top: 1px solid rgba(0, 230, 246, 0.26) !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.45rem, 1.7vw, 1.9rem) !important;
+}
+
+body:not(.home) .main-content > h3 {
+  margin-top: 1.45rem !important;
+  margin-bottom: 0.5rem !important;
+  color: var(--np-gold) !important;
+  font-size: 1.15rem !important;
+}
+
+body:not(.home) .main-content strong {
+  color: var(--np-gold-soft);
+}
+
+body:not(.home) .main-content hr {
+  width: min(1180px, calc(100% - 3rem));
+  max-width: 1180px;
+  margin: 1.6rem auto !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(0, 230, 246, 0.24) !important;
+}
+
+body:not(.home) .main-content table {
+  display: table;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(72, 122, 146, 0.34);
+  border-radius: 0.68rem;
+  background: rgba(5, 20, 27, 0.68);
+}
+
+body:not(.home) .main-content th {
+  color: var(--np-cyan);
+  background: rgba(0, 230, 246, 0.08);
+  font-weight: 900;
+}
+
+body:not(.home) .main-content td,
+body:not(.home) .main-content th {
+  border-color: rgba(72, 122, 146, 0.22) !important;
+  color: rgba(245, 234, 220, 0.9);
+}
+
+.np-rules-note {
+  width: min(1180px, calc(100% - 3rem));
+  max-width: 1180px;
+  margin: 0 auto 1.25rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid rgba(236, 183, 110, 0.82);
+  border-radius: 0.5rem;
+  background: rgba(0, 9, 15, 0.34);
+  color: rgba(245, 234, 220, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(72, 122, 146, 0.18);
+}
+
+.np-rules-note strong {
+  color: var(--np-gold-soft);
+}
+
+@media (max-width: 66.499rem) {
+  body:not(.home) .main-content > h1:first-of-type,
+  body:not(.home) .main-content hr,
+  .np-rules-note {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.echo-page-box-rules {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: clamp(1.4rem, 2.2vw, 2.4rem);
+  align-items: center;
+  padding: clamp(1.25rem, 2vw, 2rem) !important;
+  margin-bottom: 1.35rem !important;
+}
+
+.echo-page-box-rules .echo-page-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.echo-page-box-rules .echo-page-image img {
+  width: clamp(7.5rem, 10vw, 12rem);
+  height: clamp(7.5rem, 10vw, 12rem);
+  object-fit: contain;
+  filter: drop-shadow(0 16px 20px rgba(0, 0, 0, 0.34));
+}
+
+.echo-page-box-rules h2 {
+  margin: 0 0 0.65rem !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.75rem, 2vw, 2.35rem) !important;
+  line-height: 1.12 !important;
+}
+
+.echo-page-box-rules p:not(.echo-page-kicker) {
+  margin: 0 !important;
+  color: rgba(245, 234, 220, 0.9);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 66.499rem) {
+  .echo-page-box-rules {
+    grid-template-columns: 1fr;
+  }
+
+  .echo-page-box-rules .echo-page-image {
+    justify-content: flex-start;
+  }
+}
