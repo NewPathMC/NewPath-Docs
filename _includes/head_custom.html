@@ -10,66 +10,54 @@
   document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".main-header");
 
-    if (header && !header.querySelector(".np-top-nav")) {
-      const baseUrl = "{{ site.baseurl }}";
-
-      const brand = document.createElement("div");
-      brand.className = "np-topbar-brand";
-      brand.setAttribute("aria-label", "NewPath – Echoes of the Wild");
-      brand.innerHTML = `
-        <img class="np-topbar-logo" src="${baseUrl}/assets/images/logo.png" alt="" width="64" height="64" decoding="async">
-        <span class="np-topbar-title">
-          <span>NewPath</span>
-          <span>Echoes of the Wild</span>
-        </span>
-      `;
-
-      const nav = document.createElement("nav");
-      nav.className = "np-top-nav";
-      nav.setAttribute("aria-label", "Hauptnavigation");
-
-      const links = [
-        ["Startseite", baseUrl + "/"],
-        ["Regelwerk", baseUrl + "/regelwerk.html"],
-        ["Philosophie", baseUrl + "/philosophie.html"],
-        ["FAQ", baseUrl + "/faq.html"],
-        ["Modpack Hilfe", baseUrl + "/modpack-hilfe.html"],
-        ["Team", baseUrl + "/team.html"],
-        ["Streamer", baseUrl + "/streamer.html"]
-      ];
-
-      const currentPath = window.location.pathname.replace(/\/index\.html$/, "/");
-
-      links.forEach(function ([label, href]) {
-        const link = document.createElement("a");
-        link.href = href;
-        link.textContent = label;
-
-        const linkPath = new URL(href, window.location.origin).pathname.replace(/\/index\.html$/, "/");
-        if (currentPath === linkPath) {
-          link.classList.add("active");
-          link.setAttribute("aria-current", "page");
-        }
-
-        nav.appendChild(link);
-      });
-
-      header.prepend(nav);
-      header.prepend(brand);
+    if (!header || header.querySelector(".np-top-nav")) {
+      return;
     }
 
-    // Footer globalisieren: Just-the-Docs rendert Includes je nach Seite im Content.
-    // Für einen wirklich fixierten Footer muss er direkt unter body liegen.
-    const footers = Array.from(document.querySelectorAll(".np-site-footer"));
-    let footer = footers[0];
+    const baseUrl = "{{ site.baseurl }}";
 
-    footers.slice(1).forEach(function (duplicate) {
-      duplicate.remove();
+    const brand = document.createElement("div");
+    brand.className = "np-topbar-brand";
+    brand.setAttribute("aria-label", "NewPath – Echoes of the Wild");
+    brand.innerHTML = `
+      <img class="np-topbar-logo" src="${baseUrl}/assets/images/logo.png" alt="" width="64" height="64" decoding="async">
+      <span class="np-topbar-title">
+        <span>NewPath</span>
+        <span>Echoes of the Wild</span>
+      </span>
+    `;
+
+    const nav = document.createElement("nav");
+    nav.className = "np-top-nav";
+    nav.setAttribute("aria-label", "Hauptnavigation");
+
+    const links = [
+      ["Startseite", baseUrl + "/"],
+      ["Regelwerk", baseUrl + "/regelwerk.html"],
+      ["Philosophie", baseUrl + "/philosophie.html"],
+      ["FAQ", baseUrl + "/faq.html"],
+      ["Modpack Hilfe", baseUrl + "/modpack-hilfe.html"],
+      ["Team", baseUrl + "/team.html"],
+      ["Streamer", baseUrl + "/streamer.html"]
+    ];
+
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, "/");
+
+    links.forEach(function ([label, href]) {
+      const link = document.createElement("a");
+      link.href = href;
+      link.textContent = label;
+
+      const linkPath = new URL(href, window.location.origin).pathname.replace(/\/index\.html$/, "/");
+      if (currentPath === linkPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+
+      nav.appendChild(link);
     });
 
-    if (footer) {
-      footer.classList.add("np-footer-globalized");
-      document.body.appendChild(footer);
-    }
+    header.prepend(nav);
+    header.prepend(brand);
   });
 </script>
