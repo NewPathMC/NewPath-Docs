@@ -1848,3 +1848,113 @@ blockquote {
     min-height: 6.8rem !important;
   }
 }
+
+/* =========================================================
+   Schritt 34: Einstiegskarten innerhalb der Box halten
+   - Karten ragen nicht mehr aus der Einstieg-Box heraus
+   - 2x2-Raster statt zu flacher Ein-Zeilen-Lösung
+   - ECHO und Einstieg bleiben als gemeinsamer Bereich erhalten
+   ========================================================= */
+
+@media (min-width: 66.5rem) {
+  .np-main-grid-echo-first {
+    align-items: stretch !important;
+    gap: 0.9rem !important;
+  }
+
+  .np-main-grid-echo-first .np-echo-feature,
+  .np-main-grid-echo-first .np-quick-panel {
+    height: auto !important;
+    min-height: 17.6rem !important;
+    max-height: none !important;
+    overflow: hidden !important;
+  }
+
+  .np-quick-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1rem !important;
+  }
+
+  .np-quick-panel h2 {
+    margin-bottom: 0.8rem !important;
+    font-size: clamp(1.1rem, 1.16vw, 1.36rem) !important;
+  }
+
+  .np-card-grid-guides {
+    flex: 1 1 auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.7rem !important;
+    align-items: stretch !important;
+  }
+
+  .np-card-grid-guides .np-card {
+    min-height: 6.35rem !important;
+    height: auto !important;
+    padding: 0.64rem 0.78rem 0.58rem !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  .np-card-grid-guides .np-card-icon {
+    width: 2.05rem !important;
+    height: 2.05rem !important;
+    margin-bottom: 0.36rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .np-card-grid-guides .np-card-title {
+    margin-bottom: 0.22rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .np-card-grid-guides .np-card-text {
+    flex: 0 1 auto !important;
+    max-width: 100% !important;
+    font-size: 0.64rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .np-card-grid-guides .np-card-link {
+    margin-top: 0.32rem !important;
+    font-size: 0.63rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .np-echo-feature {
+    min-height: 17.6rem !important;
+    padding: 1.05rem 1.12rem !important;
+  }
+
+  .np-echo-content h2 {
+    max-width: 30rem !important;
+  }
+
+  .np-echo-content p {
+    max-width: 42rem !important;
+  }
+}
+
+@media (min-width: 1501px) {
+  .np-main-grid-echo-first .np-echo-feature,
+  .np-main-grid-echo-first .np-quick-panel {
+    min-height: 17.2rem !important;
+  }
+
+  .np-card-grid-guides .np-card {
+    min-height: 6.15rem !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1280px) {
+  .np-card-grid-guides {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .np-main-grid-echo-first .np-echo-feature,
+  .np-main-grid-echo-first .np-quick-panel {
+    min-height: 18.3rem !important;
+  }
+}
