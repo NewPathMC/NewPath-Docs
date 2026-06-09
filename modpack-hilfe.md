@@ -6,7 +6,7 @@ permalink: /modpack-hilfe.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 21:05 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 13:12 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">

@@ -6,7 +6,7 @@ permalink: /regelwerk.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 08.06.2026 22:52 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 13:12 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-rules">
