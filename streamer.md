@@ -34,8 +34,8 @@ permalink: /streamer.html
     <p class="np-eyebrow">Streamer-Informationen</p>
     <h1 class="np-title">Informationen für NewPath-Streamer</h1>
     <p class="np-lead">
-      Hier findest du wichtige Hinweise zur Registrierung als Streamer, zur Nutzung von NewPath-Inhalten
-      und zur Einbindung der bereitgestellten Assets.
+      Hier findest du alle wichtigen Hinweise zur Registrierung als Streamer, zu Medienrichtlinien
+      und zur Nutzung der bereitgestellten NewPath-Assets.
     </p>
   </div>
 
@@ -45,16 +45,16 @@ permalink: /streamer.html
       <div>
         <p>
           Wenn du NewPath streamst, kannst du dich im Discord als Streamer registrieren lassen.
-          Dadurch erhältst du die entsprechende Discord-Rolle und wirst für die automatische
-          Stream-Ankündigung durch <strong>ECHO – Der Wegbegleiter</strong> vorgemerkt.
+          Nach der Freischaltung erhältst du die passende Discord-Rolle und kannst durch
+          <strong>ECHO – Der Wegbegleiter</strong> automatisch angekündigt werden.
         </p>
 
         <p>
-          Sobald du live bist, kann ECHO deinen Stream automatisch in einem vorgesehenen Discord-Channel posten,
+          Sobald du live bist, kann ECHO deinen Stream in einem vorgesehenen Discord-Channel posten,
           damit die Community direkt sieht, dass du gerade auf NewPath unterwegs bist.
         </p>
 
-        <p><strong>Damit die automatische Ankündigung funktioniert, müssen zwei Kriterien erfüllt sein:</strong></p>
+        <p><strong>Für die automatische Stream-Ankündigung müssen zwei Kriterien erfüllt sein:</strong></p>
 
         <ul>
           <li>Das gestreamte Spiel muss <strong>Minecraft</strong> sein.</li>
@@ -62,12 +62,8 @@ permalink: /streamer.html
         </ul>
 
         <p>
-          Wenn eines dieser Kriterien nicht erfüllt ist, wird der Stream nicht automatisch angekündigt.
-        </p>
-
-        <p>
+          Wenn eines dieser Kriterien nicht erfüllt ist, wird dein Stream nicht automatisch angekündigt.
           Die Registrierung erfolgt über das Team bzw. über den vorgesehenen Discord-Supportweg.
-          Melde dich dort mit deinem Twitch-Kanal, damit deine Streamerrolle eingerichtet werden kann.
         </p>
       </div>
     </details>
@@ -76,16 +72,36 @@ permalink: /streamer.html
       <summary>Richtlinien & Medienübersicht</summary>
       <div>
         <p>
-          Streams, Screenshots und Videos zu <strong>NewPath – Echoes of the Wild</strong>
-          sind ausdrücklich erlaubt und erwünscht.
+          Wir freuen uns, wenn du <strong>NewPath – Echoes of the Wild</strong> nach außen präsentierst.
+          Damit Streams, Videos, Screenshots und Social-Media-Beiträge im Sinne der Community laufen,
+          beachte bitte die folgenden Hinweise.
         </p>
 
+        <p><strong>Verhalten & Kommunikation</strong></p>
         <ul>
-          <li>Nenne das Projekt nach Möglichkeit als <strong>NewPath – Echoes of the Wild</strong> oder kurz <strong>NewPath</strong>.</li>
-          <li>Veröffentliche keine privaten Discord-Inhalte, Ticket-Inhalte oder interne Teamkommunikation.</li>
-          <li>Achte darauf, keine personenbezogenen Daten anderer Spieler sichtbar zu machen.</li>
-          <li>Nutze für Overlays, Panels oder Ankündigungen bevorzugt die unten bereitgestellten NewPath-Assets.</li>
+          <li>Keine Beleidigungen oder toxisches Verhalten.</li>
+          <li>Keine diskriminierenden Inhalte.</li>
+          <li>Respektvoller Umgang mit Mitspielern, Teammitgliedern und Zuschauern.</li>
         </ul>
+
+        <p><strong>Schutz interner Informationen</strong></p>
+        <ul>
+          <li>Keine Veröffentlichung von IP-Adressen oder personenbezogenen Daten.</li>
+          <li>Keine Leaks organisatorischer oder interner Team-Informationen.</li>
+          <li>Keine Inhalte aus Tickets, internen Channels oder nicht-öffentlichen Bereichen zeigen.</li>
+        </ul>
+
+        <p><strong>Server-Compliance</strong></p>
+        <ul>
+          <li>Keine Modifikationen, Hacks oder Tools im Stream zeigen, die gegen die Serverregeln verstoßen.</li>
+          <li>Keine Hinweise, Animationen oder Inhalte nutzen, die zu Regelbrüchen motivieren.</li>
+          <li>Nutze bevorzugt die offiziellen NewPath-Grafiken und Vorlagen aus dem Asset-Bereich.</li>
+        </ul>
+
+        <p>
+          Das NewPath-Logo und die bereitgestellten Grafiken dürfen verwendet, aber nicht verändert,
+          verzerrt, umgefärbt oder als eigene Arbeit ausgegeben werden.
+        </p>
       </div>
     </details>
 
@@ -93,17 +109,51 @@ permalink: /streamer.html
       <summary>Einbindung auf Twitch</summary>
       <div>
         <p>
-          Du kannst die bereitgestellten Bilder zum Beispiel für Twitch-Panels, Szenen,
-          Overlays oder Stream-Ankündigungen verwenden.
+          Die bereitgestellten Assets können für Twitch-Panels, Overlays, Szenen,
+          Stream-Ankündigungen oder Social-Media-Beiträge verwendet werden.
         </p>
 
-        <ol>
-          <li>Lade das gewünschte Bild aus dem Asset-Bereich herunter.</li>
-          <li>Öffne dein Twitch-Dashboard oder dein Streaming-Tool.</li>
-          <li>Füge das Bild als Panel, Browser-/Bildquelle oder Szenenelement ein.</li>
-          <li>Verlinke nach Möglichkeit auf den Discord oder die NewPath-Website.</li>
-          <li>Prüfe vor dem Stream, ob das Bild korrekt skaliert und nicht abgeschnitten ist.</li>
-        </ol>
+        <p><strong>Panels</strong></p>
+        <ul>
+          <li>Wir stellen verschiedene Panel-Formate bereit.</li>
+          <li>Du kannst frei entscheiden, welche offiziellen Varianten du nutzen möchtest.</li>
+          <li>Bitte verändere die Panel-Grafiken nicht eigenständig, damit der NewPath-Look einheitlich bleibt.</li>
+        </ul>
+
+        <p><strong>QR-Codes</strong></p>
+        <ul>
+          <li>Nutze ausschließlich die bereitgestellten offiziellen QR-Code-Versionen.</li>
+          <li>Bitte keine eigenen QR-Codes erstellen, damit Links und Design konsistent bleiben.</li>
+        </ul>
+
+        <p><strong>Empfohlener Chat-Command</strong></p>
+        <p>
+          Du kannst deinen Zuschauern mit einem Chat-Command schnell erklären, was NewPath ist
+          und wo sie weitere Informationen finden.
+        </p>
+
+        <pre><code>!newpath / !mitspielen / !server
+
+Ich spiele gerade NewPath – Echoes of the Wild.
+Ein Community-Server mit eigenem Modpack.
+Wenn du Interesse hast mitzuspielen, schau dir den Discord der Community an:
+https://discord.gg/R4HwKRbZ5e</code></pre>
+
+        <p><strong>Offizieller Discord-Link</strong></p>
+        <p>
+          Bitte nutze ausschließlich den offiziellen Einladungslink:
+          <br>
+          <a href="https://discord.gg/R4HwKRbZ5e" target="_blank" rel="noopener">
+            https://discord.gg/R4HwKRbZ5e
+          </a>
+        </p>
+
+        <p><strong>Medien & Vorlagen</strong></p>
+        <ul>
+          <li>Alle bereitgestellten Grafiken, Panels, Logos und QR-Codes stehen freiwillig zur Nutzung bereit.</li>
+          <li>Das NewPath-Logo darf nicht verändert werden.</li>
+          <li>Keine Farbänderungen, Verzerrungen oder eigenen Abwandlungen der offiziellen Assets.</li>
+        </ul>
       </div>
     </details>
   </div>
