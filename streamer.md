@@ -34,12 +34,44 @@ permalink: /streamer.html
     <p class="np-eyebrow">Streamer-Informationen</p>
     <h1 class="np-title">Informationen für NewPath-Streamer</h1>
     <p class="np-lead">
-      Hier findest du wichtige Hinweise zur Nutzung von NewPath-Inhalten in Streams, Videos,
-      Screenshots und Social-Media-Beiträgen.
+      Hier findest du wichtige Hinweise zur Registrierung als Streamer, zur Nutzung von NewPath-Inhalten
+      und zur Einbindung der bereitgestellten Assets.
     </p>
   </div>
 
   <div class="np-faq-grid">
+    <details class="np-accordion np-faq-details">
+      <summary>Als Streamer registrieren</summary>
+      <div>
+        <p>
+          Wenn du NewPath streamst, kannst du dich im Discord als Streamer registrieren lassen.
+          Dadurch erhältst du die entsprechende Discord-Rolle und wirst für die automatische
+          Stream-Ankündigung durch <strong>ECHO – Der Wegbegleiter</strong> vorgemerkt.
+        </p>
+
+        <p>
+          Sobald du live bist, kann ECHO deinen Stream automatisch in einem vorgesehenen Discord-Channel posten,
+          damit die Community direkt sieht, dass du gerade auf NewPath unterwegs bist.
+        </p>
+
+        <p><strong>Damit die automatische Ankündigung funktioniert, müssen zwei Kriterien erfüllt sein:</strong></p>
+
+        <ul>
+          <li>Das gestreamte Spiel muss <strong>Minecraft</strong> sein.</li>
+          <li>Im Streamtitel muss <strong>NewPath</strong> stehen.</li>
+        </ul>
+
+        <p>
+          Wenn eines dieser Kriterien nicht erfüllt ist, wird der Stream nicht automatisch angekündigt.
+        </p>
+
+        <p>
+          Die Registrierung erfolgt über das Team bzw. über den vorgesehenen Discord-Supportweg.
+          Melde dich dort mit deinem Twitch-Kanal, damit deine Streamerrolle eingerichtet werden kann.
+        </p>
+      </div>
+    </details>
+
     <details class="np-accordion np-faq-details">
       <summary>Richtlinien & Medienübersicht</summary>
       <div>
