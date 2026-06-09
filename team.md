@@ -45,15 +45,15 @@ permalink: /team.html
     <article class="np-info-card np-team-card">
       <div class="np-card-media np-team-image">
         <img
-          src="{{ site.baseurl }}/assets/images/sarah.png"
+          src="{{ site.baseurl }}/assets/images/bemmy.png"
           alt="Sarah"
           width="512"
           height="512"
           loading="lazy"
           decoding="async">
       </div>
-      <p class="np-card-kicker np-team-role">Gründer - Projektleitung</p>
-      <h2 class="np-card-title">SarahdasFaultier</h2>
+      <p class="np-card-kicker np-team-role">Gründer - Projektleitung - Entwicklung/ Technik</p>
+      <h2 class="np-card-title">M4ximum_r</h2>
       <p class="np-card-text">
         Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
@@ -62,15 +62,15 @@ permalink: /team.html
     <article class="np-info-card np-team-card">
       <div class="np-card-media np-team-image">
         <img
-          src="{{ site.baseurl }}/assets/images/bemmy.png"
+          src="{{ site.baseurl }}/assets/images/sarah.png"
           alt="Bemmy"
           width="512"
           height="512"
           loading="lazy"
           decoding="async">
       </div>
-      <p class="np-card-kicker np-team-role">Gründer - Projektleitung - Entwicklung/ Technik</p>
-      <h2 class="np-card-title">M4ximum_</h2>
+      <p class="np-card-kicker np-team-role">Gründer - Projektleitung</p>
+      <h2 class="np-card-title">SarahdasFaultier</h2>
       <p class="np-card-text">
         Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
