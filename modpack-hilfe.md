@@ -6,7 +6,7 @@ permalink: /modpack-hilfe.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 17:25 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:09 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">
@@ -510,17 +510,28 @@ permalink: /modpack-hilfe.html
   </details>
 </section>
 
-<section class="np-page-section np-help-section np-help-module-section" id="probleme-support">
+<section class="np-page-section np-help-section np-help-module-section" id="mod-anleitungen">
   <div class="np-section-header np-help-category-header">
     <p class="np-eyebrow">Kategorie 03</p>
+    <h1 class="np-title">Mod Anleitungen</h1>
+    <p class="np-lead">
+      Hier entstehen später kurze Hilfen zu einzelnen Mods, wichtigen Menüs, Tastenkürzeln und wiederkehrenden
+      Gameplay-Fragen. Diese Kategorie bleibt vorerst ohne Module, bis die finalen Mod-Guides feststehen.
+    </p>
+  </div>
+</section>
+
+<section class="np-page-section np-help-section np-help-module-section" id="probleme-support">
+  <div class="np-section-header np-help-category-header">
+    <p class="np-eyebrow">Kategorie 04</p>
     <h1 class="np-title">Probleme und Support</h1>
     <p class="np-lead">
-      Hilfe bei Startproblemen, Abstürzen, Voice-Chat-Problemen und typischen Fragen zum Supportweg.
-      Nutze Hinweise im Modul, um besonders wichtige Punkte sichtbar hervorzuheben.
+      Hilfe bei Startproblemen, Abstürzen, Verbindungsproblemen, Performance, fehlenden Texturen,
+      Logs, Crash-Reports und Support-Tickets.
     </p>
   </div>
 
-  <details id="probleme" class="np-accordion np-help-details np-help-module">
+  <details id="spiel-startet-nicht" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">Spiel startet nicht oder stürzt ab</span>
@@ -529,187 +540,285 @@ permalink: /modpack-hilfe.html
     <div class="np-help-module-content">
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
-        <p>Wenn NewPath nicht startet, prüfe zuerst:</p>
 
-        <ul class="np-help-checklist">
-          <li>Ist genug RAM zugewiesen?</li>
-          <li>Ist die richtige Modpack-Version installiert?</li>
-          <li>Wurde der Download vollständig abgeschlossen?</li>
-          <li>Wurde das Modpack manuell verändert?</li>
-          <li>Gibt es eine konkrete Fehlermeldung oder einen Crash-Report?</li>
-        </ul>
 
-        <!-- HINWEISBOX -->
-        <div class="np-help-callout np-help-callout-danger">
-          <strong>!</strong>
-          <p>Für Support im Discord helfen Screenshots, Fehlermeldungen und Logs enorm.</p>
-        </div>
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Prüfe, ob du die richtige NewPath-Version nutzt.</li>
+          <li>Prüfe, ob genug RAM zugewiesen ist.</li>
+          <li>Stelle sicher, dass du keine eigenen Mods hinzugefügt hast.</li>
+          <li>Starte CurseForge neu.</li>
+          <li>Starte NewPath erneut.</li>
+          <li>Falls das Problem bleibt, öffne den Profilordner.</li>
+          <li>Sende dem Support die aktuelle Log-Datei oder den Crash-Report. (siehe Logs und Crash-Reports finden)</li>
+        </ol>
+
       </div>
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>Beispiel für Fehlermeldung, Log oder Crash-Report später hier einfügen.</p>
+          <p>Screenshot: CurseForge-Profilordner, latest.log oder Crash-Reports.</p>
         </div>
       </aside>
     </div>
   </details>
-
-  <details id="voice-chat-fehler" class="np-accordion np-help-details np-help-module">
+  <details id="serverbeitritt-funktioniert-nicht" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Voice Chat funktioniert nicht</span>
+      <span class="np-help-module-title">Serverbeitritt funktioniert nicht</span>
     </summary>
 
     <div class="np-help-module-content">
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
-        <p>Wenn der Voice Chat nicht funktioniert, prüfe zuerst diese Punkte:</p>
 
-        <ul class="np-help-checklist">
-          <li>Ist das richtige Mikrofon ausgewählt?</li>
-          <li>Ist das richtige Ausgabegerät ausgewählt?</li>
-          <li>Ist die Mikrofonlautstärke nicht auf 0?</li>
-          <li>Blockiert Windows oder ein anderes Programm das Mikrofon?</li>
-          <li>Ist Push-to-Talk aktiviert und die Taste korrekt belegt?</li>
-        </ul>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Prüfe, ob du die richtige Modpack-Version nutzt.</li>
+          <li>Prüfe, ob du auf der Whitelist bist.</li>
+          <li>Prüfe im Discord, ob Wartungen oder Serverprobleme angekündigt wurden.</li>
+          <li>Kopiere die genaue Fehlermeldung.</li>
+          <li>Starte das Modpack neu.</li>
+          <li>Versuche erneut, dem Server beizutreten.</li>
+          <li>Wenn es weiter nicht klappt, erstelle ein Support-Ticket.</li>
+        </ol>
+
       </div>
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>Voice-Chat-Einstellungen später hier einfügen.</p>
+          <p>Screenshot: Minecraft-Fehlermeldung beim Serverbeitritt.</p>
         </div>
       </aside>
     </div>
   </details>
+  <details id="modliste-stimmt-nicht" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Modliste stimmt nicht / Verbindung abgelehnt</span>
+    </summary>
 
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+        <!-- WICHTIGE HINWEISE -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Keine eigenen Mods hinzufügen, entfernen oder austauschen.</p>
+        </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Prüfe, ob du das offizielle NewPath-Profil nutzt.</li>
+          <li>Prüfe die installierte Version in CurseForge.</li>
+          <li>Aktualisiere das Modpack, falls nötig.</li>
+          <li>Repariere das Profil über CurseForge, falls verfügbar.</li>
+          <li>Entferne keine Mods manuell.</li>
+          <li>Wenn der Fehler bleibt, installiere das Modpack sauber neu.</li>
+          <li>Melde dich im Support, wenn du weiterhin nicht verbinden kannst.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Verbindung-abgelehnt-Fehler oder CurseForge-Profilversion.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="fps-ruckler" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">FPS niedrig oder starke Ruckler</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Reduziere die Render Distance.</li>
+          <li>Deaktiviere testweise Shader.</li>
+          <li>Reduziere Partikel, Schatten und andere Grafikeinstellungen.</li>
+          <li>Prüfe, ob genug RAM zugewiesen ist.</li>
+          <li>Schließe unnötige Programme im Hintergrund.</li>
+          <li>Prüfe, ob das Ruckeln überall oder nur an bestimmten Orten auftritt.</li>
+          <li>Melde auffällige Orte dem Team.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Minecraft-Grafikeinstellungen / Render Distance.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="texturen-fehlen" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Texturen fehlen oder sehen falsch aus</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Starte das Modpack neu.</li>
+          <li>Prüfe, ob Ressourcenpacks korrekt geladen wurden.</li>
+          <li>Deaktiviere testweise zusätzliche Ressourcenpacks, falls du welche ergänzt hast.</li>
+          <li>Repariere das Profil über CurseForge, falls verfügbar.</li>
+          <li>Installiere das Modpack sauber neu, wenn der Fehler bleibt.</li>
+          <li>Sende dem Support einen Screenshot, wenn das Problem weiterhin besteht.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Ressourcenpakete-Menü oder fehlerhafte Textur.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="logs-crash-reports" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Logs und Crash-Reports finden</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+        <!-- WICHTIGE HINWEISE -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Für technischen Support brauchen wir meistens Logs oder Crash-Reports.</p>
+        </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Öffne CurseForge.</li>
+          <li>Gehe zu deinem NewPath-Profil.</li>
+          <li>Öffne die Profiloptionen.</li>
+          <li>Klicke auf Ordner öffnen.</li>
+          <li>Öffne den Ordner logs für die aktuelle Log-Datei (latest.log).</li>
+          <li>Öffne den Ordner crash-reports, falls dein Spiel abgestürzt ist.</li>
+          <li>Sende die passende Datei im Support-Ticket mit.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: logs- und crash-reports-Ordner im NewPath-Profil.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
   <details id="support-ticket" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Wann sollte ich ein Support-Ticket öffnen?</span>
+      <span class="np-help-module-title">Support-Ticket richtig erstellen</span>
     </summary>
 
     <div class="np-help-module-content">
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
-        <p>
-          Öffne ein Ticket, wenn du trotz Anleitung nicht weiterkommst, wenn ein Fehler mehrfach auftritt
-          oder wenn du nicht sicher bist, ob ein Problem an deinem Client, am Modpack oder am Server liegt.
-        </p>
 
-        <!-- HINWEISBOX -->
+        <!-- WICHTIGE HINWEISE -->
         <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
-          <p>Beschreibe im Ticket möglichst genau, was passiert ist und welche Schritte du bereits getestet hast.</p>
+          <p>Bitte nicht nur „geht nicht“ schreiben.</p>
         </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li><strong>So erstellst du ein gutes Support-Ticket:</strong></li>
+          <li>Öffne im Discord den Support-Bereich.</li>
+          <li>Erstelle ein neues Support-Ticket.</li>
+          <li>Beschreibe kurz und verständlich, was passiert ist.</li>
+          <li>Füge die genaue Fehlermeldung ein, falls eine angezeigt wird.</li>
+          <li>Lade einen Screenshot hoch, wenn man das Problem darauf erkennen kann.</li>
+          <li>Füge bei Abstürzen oder technischen Fehlern die passende Log-Datei oder den Crash-Report hinzu.</li>
+          <li>Schreibe dazu, was du bereits versucht hast.</li>
+          <li><strong>Nutze am besten diese Vorlage:</strong></li>
+          <li>Minecraft-Name:</li>
+          <li>Modpack-Version:</li>
+          <li>Problem:</li>
+          <li>Wann ist es passiert?</li>
+          <li>Genaue Fehlermeldung:</li>
+          <li>Screenshot vorhanden?</li>
+          <li>Log oder Crash-Report vorhanden?</li>
+          <li>Was wurde bereits versucht?</li>
+        </ol>
+
       </div>
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>Support-Ticket-Beispiel oder Checkliste später hier einfügen.</p>
+          <p>Screenshot: Beispiel für ein gut ausgefülltes Support-Ticket.</p>
         </div>
       </aside>
     </div>
   </details>
-</section>
-
-<section class="np-page-section np-help-section np-help-module-section" id="mod-anleitungen">
-  <div class="np-section-header np-help-category-header">
-    <p class="np-eyebrow">Kategorie 04</p>
-    <h1 class="np-title">Mod Anleitungen</h1>
-    <p class="np-lead">
-      Platz für spätere Kurzguides zu einzelnen Mods, wichtigen Menüs, Tastenkürzeln und wiederkehrenden
-      Gameplay-Fragen. Jedes Modul kann mit Text, Bildern und Hinweisboxen erweitert werden.
-    </p>
-  </div>
-
-  <details id="mod-guides" class="np-accordion np-help-details np-help-module">
+  <details id="spiel-haengt-beim-laden" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Einzelne Mods kurz erklärt</span>
+      <span class="np-help-module-title">Spiel hängt beim Laden</span>
     </summary>
 
     <div class="np-help-module-content">
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
-        <p>
-          Dieser Bereich ist für kleine Anleitungen zu einzelnen Mods gedacht. Beispiele können später sein:
-          wichtige Menüs, Tastenkürzel, Anfängerfragen oder besondere Funktionen.
-        </p>
 
-        <!-- HINWEISBOX -->
+        <!-- WICHTIGE HINWEISE -->
         <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
-          <p>Hier später modbezogene Sonderregeln oder wichtige Einschränkungen ergänzen.</p>
+          <p>Der erste Start nach Installation oder Update kann länger dauern.</p>
         </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Warte zunächst einige Minuten ab.</li>
+          <li>Klicke nicht dauerhaft ins Fenster, wenn Windows kurz „Keine Rückmeldung“ anzeigt.</li>
+          <li>Prüfe, ob dein PC stark ausgelastet ist.</li>
+          <li>Prüfe die RAM-Zuweisung in CurseForge.</li>
+          <li>Starte das Modpack neu, wenn es dauerhaft hängen bleibt.</li>
+          <li>Sende die latest.log im Support, wenn das Problem wiederholt auftritt.</li>
+        </ol>
+
       </div>
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>Screenshot der jeweiligen Mod später hier einfügen.</p>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <details id="tasten" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Wichtige Tastenkürzel und Menüs</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>
-          Hier können häufig benötigte Tastenbelegungen und Menüfunktionen gesammelt werden.
-          Besonders hilfreich ist das für Mods, die neue Oberflächen oder Spezialfunktionen hinzufügen.
-        </p>
-
-        <ul class="np-help-checklist">
-          <li>Mod-Menü öffnen: Taste später ergänzen.</li>
-          <li>Konfiguration öffnen: Taste später ergänzen.</li>
-          <li>Wichtige Sonderfunktion: später ergänzen.</li>
-        </ul>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Tastenübersicht oder Menü-Screenshot später hier einfügen.</p>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <details id="claims-reisen" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Claims, Grundstücke und Reisen</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>
-          Dieser Bereich ist für spätere Hilfen zu Claims, Grundstücken, Wegsteinen und Reisewegen gedacht.
-          Die Inhalte werden ergänzt, sobald die finalen Serverregeln und Funktionen feststehen.
-        </p>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Beispielgrafik zu Claims oder Wegsteinen später hier einfügen.</p>
+          <p>Screenshot: Ladebildschirm oder Task-Manager-Auslastung.</p>
         </div>
       </aside>
     </div>
