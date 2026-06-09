@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v18
+   Konsolidierte CSS-Version v19
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -19,6 +19,8 @@
    14. Suche
    15. Interaktionen & globale UI-Details
    16. Konsolidierung / Performance / Robustheit
+   17. Teamseite
+   18. Easter Egg / Entenseite
 */
 
 :root {
@@ -4646,10 +4648,15 @@ img {
       inset 0 0 30px rgba(0, 230, 246, 0.035) !important;
   }
 }
+
 /* =========================================================
-   Easter Egg: Geheime NewPath-Ente
+   18. Easter Egg / Entenseite
+   Footer-Ente + eigene Zentrierung der geheimen Entenseite.
+   Diese Regeln sind absichtlich seitenbezogen, damit globale
+   Section-Header-Regeln nicht in die Entenseite reinfunken.
    ========================================================= */
 
+/* Kleine Ente im Footer */
 .np-duck-easteregg {
   display: inline-flex !important;
   align-items: center;
@@ -4688,14 +4695,66 @@ img {
   transform: translateY(0) rotate(4deg) scale(0.96);
 }
 
-.np-duck-section {
-  text-align: center;
+/* Entenseite: obere ECHO-Box kompakter, damit das Bild nicht verloren wirkt */
+.echo-page-box-duck {
+  grid-template-columns: minmax(150px, 210px) minmax(0, 1fr) !important;
 }
 
+.echo-page-box-duck .echo-page-image img {
+  width: clamp(7.5rem, 9vw, 10.5rem) !important;
+  height: clamp(7.5rem, 9vw, 10.5rem) !important;
+}
+
+/* Unterer geheimer Bereich: alles konsequent mittig */
+.np-duck-section {
+  text-align: center !important;
+}
+
+.np-duck-section .np-section-header {
+  width: 100%;
+  max-width: 100%;
+  display: grid !important;
+  justify-items: center !important;
+  text-align: center !important;
+}
+
+.np-duck-section .np-section-header .np-eyebrow {
+  width: auto !important;
+  margin: 0 auto 0.65rem !important;
+  text-align: center !important;
+}
+
+.np-duck-section .np-section-header .np-title {
+  width: fit-content !important;
+  max-width: min(100%, 58rem) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.np-duck-section .np-section-header .np-title::before {
+  flex: 0 0 0.42rem !important;
+}
+
+.np-duck-section .np-section-header .np-lead {
+  max-width: 62rem !important;
+  margin: 0.85rem auto 0 !important;
+  text-align: center !important;
+}
+
+.np-duck-section .np-section-header::after {
+  width: min(18rem, 60%) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Entenbox selbst */
 .np-duck-message {
   max-width: 48rem;
-  margin: 1.25rem auto 0;
+  margin: 1.25rem auto 0 !important;
   padding: clamp(1.2rem, 2vw, 2rem);
+  text-align: center !important;
   border: 1px solid rgba(236, 183, 110, 0.28);
   border-radius: var(--np-radius);
   background:
@@ -4718,6 +4777,7 @@ img {
   margin: 0 0 0.75rem !important;
   color: var(--np-gold-soft) !important;
   font-size: clamp(1.5rem, 2vw, 2.1rem) !important;
+  text-align: center !important;
 }
 
 .np-duck-message p:not(.np-duck-big) {
@@ -4725,41 +4785,17 @@ img {
   margin: 0 auto !important;
   color: rgba(247, 236, 220, 0.88) !important;
   line-height: 1.65 !important;
-}
-/* =========================================================
-   Easter Egg: Entenseite Ausrichtung korrigieren
-   - richtet den geheimen Bereich einheitlich mittig aus
-   - zentriert Kicker, Titel, Trennlinie und Text
-   ========================================================= */
-
-.np-duck-section .np-section-header {
-  text-align: center;
+  text-align: center !important;
 }
 
-.np-duck-section .np-section-header .np-eyebrow {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+/* Mobile: Entenseite bleibt sauber lesbar */
+@media (max-width: 66.499rem) {
+  .echo-page-box-duck {
+    grid-template-columns: 1fr !important;
+  }
+
+  .np-duck-section .np-section-header .np-title {
+    width: 100% !important;
+  }
 }
 
-.np-duck-section .np-section-header .np-title {
-  justify-content: center;
-  text-align: center;
-}
-
-.np-duck-section .np-section-header .np-lead {
-  max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.np-duck-section .np-section-header::after {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.np-duck-section .np-duck-message {
-  margin-left: auto;
-  margin-right: auto;
-}
