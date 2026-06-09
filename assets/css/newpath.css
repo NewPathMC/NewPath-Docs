@@ -5848,35 +5848,124 @@ img {
     height: 2.85rem !important;
     min-width: 2.85rem !important;
   }
-}/* =========================================================
-   26. Mobile Fix 6: Sticky Header, Footer-Lesbarkeit, JTD-Footer ausblenden
+}
+/* =========================================================
+   26. Mobile Fix 6: Fixierter Header/Footer und reduzierter Footer
    ========================================================= */
 
 @media (max-width: 66.499rem) {
-  /* Mobile Header oben fixieren */
+  :root {
+    --np-mobile-header-height: 4.25rem;
+    --np-mobile-footer-height: 4.4rem;
+    --np-footer-height: var(--np-mobile-footer-height);
+  }
+
+  /* Mobile Header wirklich fixieren */
   .main-header {
-    position: sticky !important;
+    position: fixed !important;
     top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
     z-index: 99990 !important;
+    width: 100vw !important;
+    height: var(--np-mobile-header-height) !important;
+    min-height: var(--np-mobile-header-height) !important;
+    max-height: var(--np-mobile-header-height) !important;
+    margin: 0 !important;
+    padding: 0 0.75rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 15, 0.99), rgba(0, 18, 33, 0.97)) !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.18) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36) !important;
   }
 
-  /* Content darf nicht unter dem Sticky Header kleben */
+  /* Platz für fixierten Header und Footer schaffen */
+  body {
+    padding-top: var(--np-mobile-header-height) !important;
+    padding-bottom: var(--np-mobile-footer-height) !important;
+  }
+
   .main-content {
-    padding-top: 0.75rem !important;
+    padding-top: 0.85rem !important;
   }
 
-  /* Header-Text etwas nach rechts schieben */
+  /* Header-Brand mittig */
   .site-title {
-    padding-left: 0.35rem !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: auto !important;
+    max-width: calc(100vw - 6.5rem) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--np-gold-soft) !important;
+    font-family: var(--np-font-heading);
+    font-size: 0.88rem !important;
+    font-weight: 950 !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
   }
 
-  /* Burger etwas sauberer rechts halten */
+  .site-title::after {
+    content: "Echoes of the Wild";
+    display: block;
+    margin-top: 0.16rem;
+    color: var(--np-cyan);
+    font-size: 0.50rem;
+    font-weight: 950;
+    letter-spacing: 0.095em;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* Burger rechts fixieren */
   .site-button {
-    margin-right: 0.25rem !important;
+    position: absolute !important;
+    right: 0.7rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 2.85rem !important;
+    height: 2.85rem !important;
+    min-width: 2.85rem !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--np-cyan) !important;
+    background: rgba(0, 230, 246, 0.055) !important;
+    border-left: 1px solid rgba(0, 230, 246, 0.16) !important;
   }
 
-  /* Just-the-Docs Standard-Footer ausblenden */
-  .site-footer:not(.np-site-footer),
+  /* Aufgeklapptes Menü unter den fixierten Header setzen */
+  .site-nav {
+    position: fixed !important;
+    top: var(--np-mobile-header-height) !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 99989 !important;
+    max-height: calc(100vh - var(--np-mobile-header-height) - var(--np-mobile-footer-height)) !important;
+    overflow-y: auto !important;
+    padding: 0.8rem 0.9rem 1rem !important;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(0, 230, 246, 0.08), transparent 14rem),
+      linear-gradient(180deg, rgba(0, 9, 15, 0.99), rgba(0, 18, 33, 0.97)) !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.18) !important;
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36) !important;
+  }
+
+  /* Just-the-Docs Standardfooter ausblenden, aber NewPath-Footer NICHT */
   .main-content .site-footer,
   .main-content > footer,
   .main-content p:has(a[href*="just-the-docs"]),
@@ -5884,30 +5973,98 @@ img {
     display: none !important;
   }
 
-  /* Footer lesbarer machen */
+  /* NewPath-Footer mobil wirklich fixieren */
+  #np-global-window-footer,
+  .np-site-footer#np-global-window-footer {
+    display: block !important;
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    top: auto !important;
+    z-index: 99988 !important;
+    width: 100vw !important;
+    height: var(--np-mobile-footer-height) !important;
+    min-height: var(--np-mobile-footer-height) !important;
+    max-height: var(--np-mobile-footer-height) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-top: 1px solid rgba(0, 230, 246, 0.18) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 18, 0.97), rgba(0, 13, 24, 0.99)) !important;
+    box-shadow: 0 -0.75rem 2rem rgba(0, 0, 0, 0.42) !important;
+  }
+
+  /* Footer-Inhalt komplett zentrieren */
   #np-global-window-footer .np-site-footer-inner {
-    padding-left: 1.15rem !important;
-    padding-right: 1.15rem !important;
-    align-items: flex-start !important;
+    width: 100% !important;
+    height: var(--np-mobile-footer-height) !important;
+    padding: 0.45rem 0.75rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.28rem !important;
+    text-align: center !important;
   }
 
   .np-site-footer-brand {
-    padding-left: 0.15rem !important;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
+  .np-site-footer-brand strong {
+    display: block !important;
+    color: var(--np-gold-soft) !important;
+    font-size: 0.62rem !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+  }
+
+  .np-site-footer-brand span {
+    display: block !important;
+    color: rgba(235, 246, 248, 0.72) !important;
+    font-size: 0.52rem !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+  }
+
+  /* Mobile Footer reduzieren:
+     Nur Ente, Discord und Copyright behalten */
   .np-site-footer-links {
-    padding-left: 0.15rem !important;
-    justify-content: flex-start !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    flex-wrap: nowrap !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  .np-site-footer-links a:not(.np-duck-easteregg):not([href*="discord"]),
+  .np-site-footer-links a[href*="Startseite"],
+  .np-site-footer-links a[href*="modpack"],
+  .np-site-footer-links a[href*="team"],
+  .np-site-footer-links a[href*="streamer"],
+  .np-site-footer-links a[href*="regelwerk"],
+  .np-site-footer-links a[href*="faq"] {
+    display: none !important;
   }
 
   .np-site-footer-links a,
   .np-site-footer-links span {
-    font-size: 0.58rem !important;
-    line-height: 1.35 !important;
+    font-size: 0.56rem !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
   }
 
   .np-duck-easteregg {
-    margin-left: 0 !important;
-    margin-right: 0.2rem !important;
+    display: inline-flex !important;
+    margin: 0 !important;
+    opacity: 0.78 !important;
   }
 }
