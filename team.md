@@ -53,7 +53,7 @@ permalink: /team.html
           decoding="async">
       </div>
       <p class="np-card-kicker np-team-role">Gründer - Projektleitung - Entwicklung/ Technik</p>
-      <h2 class="np-card-title">M4ximum_r</h2>
+      <h2 class="np-card-title">M4ximum_</h2>
       <p class="np-card-text">
         Hallo hier könnte eine wichtige Beschreibung stehen.
       </p>
