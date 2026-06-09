@@ -25,7 +25,7 @@
    20. Finale Nachschärfung / Overrides
    21. Mobile Layout
    22. Mobile Header/Footer Failsafe
-   23. Modpack-Hilfe Modul-Akkordeons
+   23. Modpack-Hilfe Module
 */
 
 :root {
@@ -5511,44 +5511,51 @@ img {
   }
 }
 
+
 /* =========================================================
-   23. Modpack-Hilfe Modul-Akkordeons
-   Zweispaltige Hilfemodule: links Text, rechts Bild/Medien.
+   23. Modpack-Hilfe Module
+   Kategorien + Akkordeons mit zwei Spalten:
+   links Text, rechts Bild-/Screenshotbereich.
    ========================================================= */
 
 .np-help-module-section {
   display: grid;
-  gap: 0.85rem;
+  gap: clamp(1.2rem, 1.6vw, 1.75rem);
+}
+
+.np-help-category-header {
+  margin-bottom: 0.15rem;
 }
 
 .np-help-module {
   overflow: hidden;
-  border: 1px solid rgba(0, 230, 246, 0.30);
-  border-radius: 0.74rem;
+  border: 1px solid rgba(0, 230, 246, 0.38) !important;
+  border-radius: var(--np-radius) !important;
   background:
-    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 18rem),
-    linear-gradient(180deg, rgba(8, 29, 38, 0.88), rgba(4, 16, 22, 0.92));
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.075), transparent 20rem),
+    linear-gradient(180deg, rgba(8, 31, 39, 0.88), rgba(4, 16, 22, 0.94)) !important;
   box-shadow:
-    0 16px 34px rgba(0, 0, 0, 0.24),
-    inset 0 0 30px rgba(0, 230, 246, 0.025);
+    0 18px 36px rgba(0, 0, 0, 0.28),
+    inset 0 0 30px rgba(0, 230, 246, 0.025) !important;
 }
 
 .np-help-module + .np-help-module {
-  margin-top: 0.75rem;
+  margin-top: 0.7rem;
 }
 
 .np-help-module summary {
-  min-height: 4.15rem;
+  position: relative;
+  min-height: 4.65rem;
   display: grid;
-  grid-template-columns: 2.65rem minmax(0, 1fr) auto;
+  grid-template-columns: 3.35rem minmax(0, 1fr);
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.85rem 1rem !important;
+  gap: 1rem;
+  padding: 1rem 1.35rem;
   cursor: pointer;
   list-style: none;
-  border-left: 3px solid rgba(0, 230, 246, 0.62);
+  border-left: 3px solid rgba(0, 230, 246, 0.72);
   background:
-    linear-gradient(90deg, rgba(0, 230, 246, 0.075), rgba(5, 20, 27, 0.18));
+    linear-gradient(90deg, rgba(0, 230, 246, 0.12), rgba(17, 46, 64, 0.52), rgba(5, 18, 25, 0.60));
 }
 
 .np-help-module summary::-webkit-details-marker {
@@ -5561,79 +5568,79 @@ img {
 
 .np-help-module summary::after {
   content: "+";
-  width: 2rem;
-  height: 2rem;
-  display: inline-grid;
-  place-items: center;
-  justify-self: end;
+  position: absolute;
+  right: 1.15rem;
+  top: 50%;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
   color: var(--np-cyan);
-  background: rgba(0, 230, 246, 0.075);
-  border: 1px solid rgba(0, 230, 246, 0.24);
+  background: rgba(0, 230, 246, 0.08);
+  border: 1px solid rgba(0, 230, 246, 0.30);
   font-family: var(--np-font-label);
+  font-size: 1rem;
   font-weight: 950;
   line-height: 1;
-  box-shadow: inset 0 0 14px rgba(0, 230, 246, 0.035);
+  transform: translateY(-50%);
 }
 
 .np-help-module[open] summary::after {
   content: "−";
   color: var(--np-gold-soft);
+  border-color: rgba(236, 183, 110, 0.42);
   background: rgba(236, 183, 110, 0.10);
-  border-color: rgba(236, 183, 110, 0.28);
 }
 
 .np-help-module-icon {
-  width: 2.15rem;
-  height: 2.15rem;
-  display: inline-grid;
-  place-items: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
-  color: var(--np-bg-deep);
+  color: transparent;
+  font-size: 0;
   background:
-    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.48), transparent 0.85rem),
-    linear-gradient(135deg, var(--np-cyan), #0b5a91);
-  border: 1px solid rgba(0, 230, 246, 0.40);
+    radial-gradient(circle at 36% 28%, rgba(255, 255, 255, 0.36), transparent 0.55rem),
+    linear-gradient(135deg, rgba(0, 230, 246, 0.95), rgba(6, 69, 119, 0.90));
+  border: 1px solid rgba(0, 230, 246, 0.46);
   box-shadow:
-    0 0 18px rgba(0, 230, 246, 0.16),
-    inset 0 0 16px rgba(255, 255, 255, 0.08);
-  font-family: var(--np-font-label);
-  font-size: 0.72rem;
-  font-weight: 950;
-  letter-spacing: 0.02em;
+    0 0 22px rgba(0, 230, 246, 0.18),
+    inset 0 -0.45rem 0.8rem rgba(0, 0, 0, 0.22);
+}
+
+.np-help-module-icon::before {
+  content: "";
+  width: 0.82rem;
+  height: 0.82rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 0 14px rgba(0, 230, 246, 0.40);
 }
 
 .np-help-module-title {
   min-width: 0;
+  padding-right: 3rem;
   color: var(--np-gold-soft);
   font-family: var(--np-font-heading);
-  font-size: clamp(1rem, 1.15vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.25vw, 1.36rem);
   font-weight: 950;
-  line-height: 1.15;
+  line-height: 1.16;
+  text-shadow: 0 0 14px rgba(236, 183, 110, 0.12);
 }
 
 .np-help-module-meta {
-  justify-self: end;
-  margin-right: 0.35rem;
-  padding: 0.2rem 0.52rem;
-  border-radius: 999px;
-  color: var(--np-cyan);
-  background: rgba(0, 230, 246, 0.07);
-  border: 1px solid rgba(0, 230, 246, 0.20);
-  font-family: var(--np-font-label);
-  font-size: 0.62rem;
-  font-weight: 950;
-  letter-spacing: 0.075em;
-  line-height: 1.1;
-  text-transform: uppercase;
-  white-space: nowrap;
+  display: none !important;
 }
 
 .np-help-module-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
-  gap: clamp(1rem, 1.6vw, 1.45rem);
-  padding: 1rem;
+  grid-template-columns: minmax(0, 0.54fr) minmax(320px, 0.46fr);
+  gap: clamp(1rem, 1.7vw, 1.6rem);
+  padding: clamp(1rem, 1.5vw, 1.35rem);
   border-top: 1px solid rgba(72, 122, 146, 0.24);
 }
 
@@ -5643,18 +5650,16 @@ img {
 }
 
 .np-help-module-text {
-  padding: 0.15rem 0.15rem 0.15rem 0;
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
 }
 
 .np-help-module-text p {
-  margin: 0 0 0.85rem;
+  margin: 0;
   color: rgba(247, 236, 220, 0.90);
-  font-size: 0.98rem;
-  line-height: 1.66;
-}
-
-.np-help-module-text p:last-child {
-  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .np-help-module-text strong {
@@ -5662,74 +5667,73 @@ img {
 }
 
 .np-help-module .np-help-checklist {
-  margin: 0.75rem 0 1rem;
+  margin: 0;
   padding-left: 1.25rem;
 }
 
 .np-help-module .np-help-checklist li {
-  margin: 0.36rem 0;
+  margin: 0.38rem 0;
   color: rgba(247, 236, 220, 0.88);
   line-height: 1.55;
 }
 
 .np-help-module .np-help-checklist li::marker {
-  color: var(--np-gold-soft);
-  font-weight: 900;
+  color: rgba(247, 236, 220, 0.52);
 }
 
-.np-help-alert {
+.np-help-callout {
   display: grid;
-  grid-template-columns: 2rem minmax(0, 1fr);
-  gap: 0.65rem;
-  align-items: start;
-  margin: 1rem 0 0;
-  padding: 0.78rem 0.85rem;
-  border-radius: 0.62rem;
-  background: rgba(5, 20, 27, 0.68);
-  box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.14);
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.2rem;
+  padding: 0.82rem 0.9rem;
+  border-radius: 0.58rem;
+  background:
+    linear-gradient(90deg, rgba(236, 183, 110, 0.105), rgba(5, 20, 27, 0.76));
+  border: 1px solid rgba(236, 183, 110, 0.34);
+  box-shadow: inset 0 0 18px rgba(236, 183, 110, 0.025);
 }
 
-.np-help-alert p {
-  margin: 0 !important;
-  font-size: 0.92rem;
-  line-height: 1.55;
-}
-
-.np-help-alert-symbol {
+.np-help-callout > strong {
   width: 2rem;
   height: 2rem;
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
-  font-family: var(--np-font-label);
-  font-size: 1rem;
+  color: #001221;
+  background: var(--np-gold-soft);
+  font-size: 1.05rem;
   font-weight: 950;
   line-height: 1;
 }
 
-.np-help-alert-warning {
-  border: 1px solid rgba(236, 183, 110, 0.34);
-  border-left: 3px solid rgba(236, 183, 110, 0.82);
+.np-help-callout p {
+  margin: 0 !important;
+  color: rgba(247, 236, 220, 0.92) !important;
+  font-size: 0.94rem !important;
+  line-height: 1.45 !important;
 }
 
-.np-help-alert-warning .np-help-alert-symbol {
-  color: #201104;
-  background: linear-gradient(135deg, #f4cf7f, #ecb76e);
-  box-shadow: 0 0 18px rgba(236, 183, 110, 0.14);
-}
-
-.np-help-alert-danger {
-  border: 1px solid rgba(255, 85, 85, 0.34);
-  border-left: 3px solid rgba(255, 85, 85, 0.82);
+.np-help-callout-danger {
   background:
-    radial-gradient(circle at 0% 0%, rgba(255, 85, 85, 0.075), transparent 14rem),
-    rgba(5, 20, 27, 0.70);
+    linear-gradient(90deg, rgba(150, 33, 33, 0.24), rgba(5, 20, 27, 0.78));
+  border-color: rgba(255, 91, 91, 0.52);
+  box-shadow:
+    inset 0 0 18px rgba(255, 91, 91, 0.035),
+    0 0 18px rgba(255, 91, 91, 0.05);
 }
 
-.np-help-alert-danger .np-help-alert-symbol {
-  color: #fff2ed;
-  background: linear-gradient(135deg, #c93b3b, #7a1f1f);
-  box-shadow: 0 0 18px rgba(255, 85, 85, 0.20);
+.np-help-callout-danger > strong {
+  color: #190606;
+  background: #ff7070;
+}
+
+.np-help-callout-warning {
+  background:
+    linear-gradient(90deg, rgba(236, 183, 110, 0.13), rgba(5, 20, 27, 0.78));
+  border-color: rgba(236, 183, 110, 0.42);
 }
 
 .np-help-module-media {
@@ -5738,26 +5742,26 @@ img {
 }
 
 .np-help-image-placeholder {
-  min-height: 100%;
+  min-height: 15.2rem;
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 0.45rem;
-  padding: clamp(1.2rem, 2vw, 2rem);
-  border-radius: 0.68rem;
-  border: 1px dashed rgba(0, 230, 246, 0.34);
-  background:
-    radial-gradient(circle at 50% 30%, rgba(0, 230, 246, 0.10), transparent 14rem),
-    rgba(0, 9, 15, 0.34);
-  color: rgba(247, 236, 220, 0.72);
+  gap: 0.65rem;
+  padding: 1.2rem;
   text-align: center;
+  border-radius: 0.58rem;
+  border: 1px dashed rgba(0, 230, 246, 0.38);
+  background:
+    radial-gradient(circle at 50% 45%, rgba(0, 230, 246, 0.08), transparent 9rem),
+    rgba(0, 9, 15, 0.26);
 }
 
 .np-help-image-placeholder span {
-  width: 4.2rem;
-  height: 4.2rem;
-  display: inline-grid;
-  place-items: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
   color: var(--np-cyan);
   background: rgba(0, 230, 246, 0.10);
@@ -5765,84 +5769,71 @@ img {
   font-family: var(--np-font-label);
   font-size: 0.72rem;
   font-weight: 950;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  box-shadow:
-    0 0 20px rgba(0, 230, 246, 0.10),
-    inset 0 0 18px rgba(0, 230, 246, 0.035);
 }
 
-.np-help-image-placeholder small {
+.np-help-image-placeholder p {
   max-width: 22rem;
-  color: rgba(247, 236, 220, 0.64);
-  font-size: 0.78rem;
-  line-height: 1.45;
+  margin: 0;
+  color: rgba(247, 236, 220, 0.62);
+  font-family: var(--np-font-label);
+  font-size: 0.86rem;
+  font-weight: 850;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .np-help-module-media img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 0.68rem;
+  border-radius: 0.58rem;
   border: 1px solid rgba(72, 122, 146, 0.36);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.30);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .np-help-module summary:hover {
     background:
-      linear-gradient(90deg, rgba(0, 230, 246, 0.105), rgba(5, 20, 27, 0.22));
+      linear-gradient(90deg, rgba(0, 230, 246, 0.16), rgba(17, 46, 64, 0.58), rgba(5, 18, 25, 0.62));
   }
 }
 
 @media (max-width: 66.499rem) {
   .np-help-module summary {
-    grid-template-columns: 2.35rem minmax(0, 1fr);
-    gap: 0.7rem;
-    padding: 0.78rem 0.85rem !important;
+    min-height: 4.1rem;
+    grid-template-columns: 2.8rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.85rem 0.95rem;
   }
 
   .np-help-module summary::after {
-    grid-column: 2;
-    grid-row: 2;
-    justify-self: start;
-    width: 1.7rem;
-    height: 1.7rem;
+    right: 0.8rem;
   }
 
   .np-help-module-icon {
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.66rem;
+    width: 2.15rem;
+    height: 2.15rem;
   }
 
   .np-help-module-title {
-    font-size: 0.98rem;
-  }
-
-  .np-help-module-meta {
-    grid-column: 2;
-    justify-self: start;
-    margin: 0.24rem 0 0;
-    font-size: 0.58rem;
+    padding-right: 2.25rem;
+    font-size: 1rem;
   }
 
   .np-help-module-content {
     grid-template-columns: 1fr;
-    padding: 0.85rem;
+    padding: 0.95rem;
   }
 
   .np-help-module-media {
+    order: 2;
+  }
+
+  .np-help-image-placeholder {
     min-height: 12rem;
   }
-
-  .np-help-alert {
-    grid-template-columns: 1.8rem minmax(0, 1fr);
-    padding: 0.72rem 0.75rem;
-  }
-
-  .np-help-alert-symbol {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
 }
+

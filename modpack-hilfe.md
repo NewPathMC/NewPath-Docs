@@ -69,34 +69,26 @@ permalink: /modpack-hilfe.html
   </div>
 </section>
 
-<section class="np-page-section np-help-section np-help-module-section">
-  <div class="np-section-header">
-    <p class="np-eyebrow">Hilfemodule</p>
-    <h1 class="np-title">Anleitungen im Detail</h1>
+<section class="np-page-section np-help-section np-help-module-section" id="installation-setup">
+  <div class="np-section-header np-help-category-header">
+    <p class="np-eyebrow">Kategorie 01</p>
+    <h1 class="np-title">Installation und Setup</h1>
     <p class="np-lead">
-      Die folgenden Module sind als Vorlage aufgebaut: links steht der Erklärungstext,
-      rechts ist Platz für Bilder, Screenshots oder kleine Schritt-für-Schritt-Grafiken.
-      Wichtige Hinweise können direkt im jeweiligen Modul hervorgehoben werden.
+      Alles rund um Installation, richtige Version, Speicherzuweisung und grundlegende Einrichtung.
+      Die einzelnen Module sind so vorbereitet, dass links der Erklärungstext steht und rechts später Bilder
+      oder Screenshots ergänzt werden können.
     </p>
   </div>
 
-  <!-- =====================================================
-       MODUL: Installation
-       Bearbeitung:
-       - TEXTBEREICH links anpassen
-       - BILDBEREICH rechts mit <img> ersetzen
-       - HINWEISBOX optional behalten, ändern oder entfernen
-       ===================================================== -->
-  <details id="installation" class="np-accordion np-help-details np-help-module">
+  <details id="installation" class="np-accordion np-help-details np-help-module" open>
     <summary>
-      <span class="np-help-module-icon">01</span>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">NewPath über CurseForge installieren</span>
-      <span class="np-help-module-meta">Setup</span>
     </summary>
 
     <div class="np-help-module-content">
       <div class="np-help-module-text">
-        <!-- TEXTBEREICH: Hier später finalen Erklärungstext einsetzen. -->
+        <!-- TEXTBEREICH: Hier später Erklärungstext ergänzen/anpassen -->
         <p>
           NewPath wird ausschließlich über CurseForge veröffentlicht. Suche im CurseForge Launcher nach
           <strong>NewPath</strong> und installiere die aktuell empfohlene Version.
@@ -110,33 +102,27 @@ permalink: /modpack-hilfe.html
           <li>Nach der Installation RAM-Zuweisung prüfen.</li>
         </ol>
 
-        <!-- HINWEISBOX: Für wichtige Warnungen/Infos. Bei Bedarf Text ändern. -->
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Achte darauf, nur die offizielle NewPath-Version zu installieren und keine eigenen Mods hinzuzufügen.
-          </p>
+        <!-- HINWEISBOX: Für wichtige Hinweise. Klasse bei Bedarf ändern: np-help-callout-warning / np-help-callout-danger -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Achte darauf, nur die offizielle NewPath-Version zu installieren und keine eigenen Mods hinzuzufügen.</p>
         </div>
       </div>
 
       <aside class="np-help-module-media">
-        <!-- BILDBEREICH: Platzhalter später durch echtes Bild ersetzen. -->
+        <!-- BILDBEREICH: Platzhalter später durch <img src="..." alt="..."> ersetzen -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <small>CurseForge-Installationsgrafik später hier einfügen.</small>
+          <p>CurseForge-Installationsgrafik später hier einfügen.</p>
         </div>
       </aside>
     </div>
   </details>
 
-  <!-- =====================================================
-       MODUL: RAM
-       ===================================================== -->
   <details id="ram" class="np-accordion np-help-details np-help-module">
     <summary>
-      <span class="np-help-module-icon">02</span>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">RAM im CurseForge Launcher zuweisen</span>
-      <span class="np-help-module-meta">Leistung</span>
     </summary>
 
     <div class="np-help-module-content">
@@ -156,11 +142,10 @@ permalink: /modpack-hilfe.html
           <li>Mindestens <strong>8000 MB</strong> einstellen.</li>
         </ol>
 
-        <div class="np-help-alert np-help-alert-danger">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Zu wenig RAM kann dazu führen, dass das Spiel langsam startet, stark ruckelt oder beim Laden abstürzt.
-          </p>
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-danger">
+          <strong>!</strong>
+          <p>Zu wenig RAM kann dazu führen, dass das Spiel langsam startet, stark ruckelt oder beim Laden abstürzt.</p>
         </div>
       </div>
 
@@ -168,20 +153,16 @@ permalink: /modpack-hilfe.html
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <small>RAM-Zuweisungsgrafik später hier einfügen.</small>
+          <p>RAM-Zuweisungsgrafik später hier einfügen.</p>
         </div>
       </aside>
     </div>
   </details>
 
-  <!-- =====================================================
-       MODUL: Version
-       ===================================================== -->
   <details id="version" class="np-accordion np-help-details np-help-module">
     <summary>
-      <span class="np-help-module-icon">03</span>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">Richtige Modpack-Version finden</span>
-      <span class="np-help-module-meta">Version</span>
     </summary>
 
     <div class="np-help-module-content">
@@ -192,17 +173,15 @@ permalink: /modpack-hilfe.html
           und wird zusätzlich im Discord angekündigt.
         </p>
 
-        <ul class="np-help-checklist">
-          <li>Versionsnummer im CurseForge Launcher prüfen.</li>
-          <li>Versionsangabe auf der Startseite vergleichen.</li>
-          <li>Discord-Ankündigungen zu Updates beachten.</li>
-        </ul>
+        <p>
+          Wenn du unsicher bist, ob du die richtige Version installiert hast, vergleiche die Versionsnummer im
+          CurseForge Launcher mit der Angabe auf der Startseite.
+        </p>
 
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Unterschiedliche Versionen können dazu führen, dass du dem Server nicht beitreten kannst.
-          </p>
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Bei Versionswechseln immer auf Discord-Ankündigungen und Hinweise im Changelog achten.</p>
         </div>
       </div>
 
@@ -210,20 +189,16 @@ permalink: /modpack-hilfe.html
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <small>Screenshot der Versionsanzeige später hier einfügen.</small>
+          <p>Versionsvergleich oder CurseForge-Profil später hier einfügen.</p>
         </div>
       </aside>
     </div>
   </details>
 
-  <!-- =====================================================
-       MODUL: Voice Chat
-       ===================================================== -->
   <details id="voice-chat" class="np-accordion np-help-details np-help-module">
     <summary>
-      <span class="np-help-module-icon">04</span>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">Voice Chat einrichten</span>
-      <span class="np-help-module-meta">Kommunikation</span>
     </summary>
 
     <div class="np-help-module-content">
@@ -241,246 +216,33 @@ permalink: /modpack-hilfe.html
           <li>Gruppen erstellen oder bestehenden Gruppen beitreten.</li>
           <li>Testen, ob dein Mikrofon im Spiel korrekt erkannt wird.</li>
         </ul>
-
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Musik, Sounds oder störendes Verhalten im Voice Chat sind nur im erlaubten Rahmen und mit Rücksicht auf andere Spieler sinnvoll.
-          </p>
-        </div>
       </div>
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <small>Voice-Chat-Grafik später hier einfügen.</small>
+          <p>Voice-Chat-Grafik später hier einfügen.</p>
         </div>
       </aside>
     </div>
   </details>
+</section>
 
-  <!-- =====================================================
-       MODUL: Voice Chat Fehler
-       ===================================================== -->
-  <details id="voice-chat-fehler" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon">05</span>
-      <span class="np-help-module-title">Voice Chat funktioniert nicht</span>
-      <span class="np-help-module-meta">Fehlerhilfe</span>
-    </summary>
+<section class="np-page-section np-help-section np-help-module-section" id="probleme-support">
+  <div class="np-section-header np-help-category-header">
+    <p class="np-eyebrow">Kategorie 02</p>
+    <h1 class="np-title">Probleme und Support</h1>
+    <p class="np-lead">
+      Hilfe bei Startproblemen, Abstürzen, Voice-Chat-Problemen und typischen Fragen zum Supportweg.
+      Nutze Hinweise im Modul, um besonders wichtige Punkte sichtbar hervorzuheben.
+    </p>
+  </div>
 
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>Wenn der Voice Chat nicht funktioniert, prüfe zuerst diese Punkte:</p>
-
-        <ul class="np-help-checklist">
-          <li>Ist das richtige Mikrofon ausgewählt?</li>
-          <li>Ist das richtige Ausgabegerät ausgewählt?</li>
-          <li>Ist die Mikrofonlautstärke nicht auf 0?</li>
-          <li>Blockiert Windows oder ein anderes Programm das Mikrofon?</li>
-          <li>Ist Push-to-Talk aktiviert und die Taste korrekt belegt?</li>
-        </ul>
-
-        <div class="np-help-alert np-help-alert-danger">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Wenn du weiterhin nicht gehört wirst, öffne ein Ticket und beschreibe genau, was du bereits geprüft hast.
-          </p>
-        </div>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <small>Screenshot der Voice-Chat-Einstellungen später hier einfügen.</small>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <!-- =====================================================
-       MODUL: Whitelist
-       ===================================================== -->
-  <details id="whitelist" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon">06</span>
-      <span class="np-help-module-title">Whitelist und Zugang</span>
-      <span class="np-help-module-meta">Serverzugang</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>
-          Der Zugang zum Server läuft über Discord und die Whitelist. Hinweise zum Ablauf findest du im Discord
-          und auf der Startseite in den Server-Kurzinfos.
-        </p>
-
-        <ul class="np-help-checklist">
-          <li>Discord beitreten.</li>
-          <li>Regelwerk lesen.</li>
-          <li>Whitelist-Anfrage stellen.</li>
-          <li>Nach Freigabe dem Server beitreten.</li>
-        </ul>
-
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Mit Vergabe der Whitelist akzeptierst du das Regelwerk von NewPath.
-          </p>
-        </div>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <small>Discord-/Whitelist-Grafik später hier einfügen.</small>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <!-- =====================================================
-       MODUL: Claims / Reisen
-       ===================================================== -->
-  <details id="claims-reisen" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon">07</span>
-      <span class="np-help-module-title">Claims, Grundstücke und Reisen</span>
-      <span class="np-help-module-meta">Serverfunktionen</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>
-          Dieser Bereich ist für spätere Hilfen zu Claims, Grundstücken, Wegsteinen und Reisewegen gedacht.
-          Die Inhalte werden ergänzt, sobald die finalen Serverregeln und Funktionen feststehen.
-        </p>
-
-        <ul class="np-help-checklist">
-          <li>Claim-Grundlagen erklären.</li>
-          <li>Grundstück melden.</li>
-          <li>Wegsteine und Reisen erklären.</li>
-          <li>Häufige Fehler oder Missverständnisse sammeln.</li>
-        </ul>
-
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Dieser Abschnitt ist bewusst als Platzhalter vorbereitet und muss inhaltlich später finalisiert werden.
-          </p>
-        </div>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <small>Claim-/Waystone-Grafik später hier einfügen.</small>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <!-- =====================================================
-       MODUL: Einzelne Mods
-       ===================================================== -->
-  <details id="mod-guides" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon">08</span>
-      <span class="np-help-module-title">Einzelne Mods kurz erklärt</span>
-      <span class="np-help-module-meta">Mod-Guides</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>
-          Dieser Bereich ist für kleine Anleitungen zu einzelnen Mods gedacht. Beispiele können später sein:
-          wichtige Menüs, Tastenkürzel, Anfängerfragen oder besondere Funktionen.
-        </p>
-
-        <ul class="np-help-checklist">
-          <li>Modname und Zweck kurz erklären.</li>
-          <li>Wichtigste Bedienungsschritte nennen.</li>
-          <li>Typische Anfängerfehler sammeln.</li>
-          <li>Optional Bild, Beispiel oder Mini-Guide ergänzen.</li>
-        </ul>
-
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Für jeden größeren Mod-Guide kann dieses Modul später kopiert und angepasst werden.
-          </p>
-        </div>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <small>Mod-Screenshot oder Interface-Grafik später hier einfügen.</small>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <!-- =====================================================
-       MODUL: Tastenkürzel
-       ===================================================== -->
-  <details id="tasten" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon">09</span>
-      <span class="np-help-module-title">Wichtige Tastenkürzel und Menüs</span>
-      <span class="np-help-module-meta">Bedienung</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-        <p>
-          Hier können häufig benötigte Tastenbelegungen und Menüfunktionen gesammelt werden.
-          Besonders hilfreich ist das für Mods, die neue Oberflächen oder Spezialfunktionen hinzufügen.
-        </p>
-
-        <ul class="np-help-checklist">
-          <li>Taste oder Menü nennen.</li>
-          <li>Funktion kurz erklären.</li>
-          <li>Konflikte mit anderen Tasten erwähnen.</li>
-          <li>Optional Screenshot ergänzen.</li>
-        </ul>
-
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Wenn eine Taste bei dir nicht funktioniert, prüfe zuerst die Minecraft-Tastenbelegung auf Konflikte.
-          </p>
-        </div>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <small>Tastenbelegungs-Screenshot später hier einfügen.</small>
-        </div>
-      </aside>
-    </div>
-  </details>
-
-  <!-- =====================================================
-       MODUL: Support
-       ===================================================== -->
   <details id="probleme" class="np-accordion np-help-details np-help-module">
     <summary>
-      <span class="np-help-module-icon">10</span>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">Spiel startet nicht oder stürzt ab</span>
-      <span class="np-help-module-meta">Support</span>
     </summary>
 
     <div class="np-help-module-content">
@@ -496,15 +258,10 @@ permalink: /modpack-hilfe.html
           <li>Gibt es eine konkrete Fehlermeldung oder einen Crash-Report?</li>
         </ul>
 
-        <p>
-          Für Support im Discord helfen Screenshots, Fehlermeldungen und Logs enorm.
-        </p>
-
-        <div class="np-help-alert np-help-alert-danger">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Bitte poste keine riesigen Log-Dateien direkt in den Chat. Lade sie als Datei hoch oder nutze das Ticket-System.
-          </p>
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-danger">
+          <strong>!</strong>
+          <p>Für Support im Discord helfen Screenshots, Fehlermeldungen und Logs enorm.</p>
         </div>
       </div>
 
@@ -512,20 +269,46 @@ permalink: /modpack-hilfe.html
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <small>Beispiel für Crash-Report / Fehlermeldung später hier einfügen.</small>
+          <p>Beispiel für Fehlermeldung, Log oder Crash-Report später hier einfügen.</p>
         </div>
       </aside>
     </div>
   </details>
 
-  <!-- =====================================================
-       MODUL: Support-Ticket
-       ===================================================== -->
+  <details id="voice-chat-fehler" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Voice Chat funktioniert nicht</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>Wenn der Voice Chat nicht funktioniert, prüfe zuerst diese Punkte:</p>
+
+        <ul class="np-help-checklist">
+          <li>Ist das richtige Mikrofon ausgewählt?</li>
+          <li>Ist das richtige Ausgabegerät ausgewählt?</li>
+          <li>Ist die Mikrofonlautstärke nicht auf 0?</li>
+          <li>Blockiert Windows oder ein anderes Programm das Mikrofon?</li>
+          <li>Ist Push-to-Talk aktiviert und die Taste korrekt belegt?</li>
+        </ul>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Voice-Chat-Einstellungen später hier einfügen.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+
   <details id="support-ticket" class="np-accordion np-help-details np-help-module">
     <summary>
-      <span class="np-help-module-icon">11</span>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
       <span class="np-help-module-title">Wann sollte ich ein Support-Ticket öffnen?</span>
-      <span class="np-help-module-meta">Support</span>
     </summary>
 
     <div class="np-help-module-content">
@@ -536,18 +319,10 @@ permalink: /modpack-hilfe.html
           oder wenn du nicht sicher bist, ob ein Problem an deinem Client, am Modpack oder am Server liegt.
         </p>
 
-        <ul class="np-help-checklist">
-          <li>Problem kurz beschreiben.</li>
-          <li>Screenshot oder Fehlermeldung ergänzen.</li>
-          <li>Erklären, was du schon versucht hast.</li>
-          <li>Falls vorhanden: Crash-Report oder Log-Datei anhängen.</li>
-        </ul>
-
-        <div class="np-help-alert np-help-alert-warning">
-          <span class="np-help-alert-symbol">!</span>
-          <p>
-            Je genauer die Beschreibung ist, desto schneller kann das Team helfen.
-          </p>
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Beschreibe im Ticket möglichst genau, was passiert ist und welche Schritte du bereits getestet hast.</p>
         </div>
       </div>
 
@@ -555,7 +330,105 @@ permalink: /modpack-hilfe.html
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <small>Ticket-Beispiel oder Support-Grafik später hier einfügen.</small>
+          <p>Support-Ticket-Beispiel oder Checkliste später hier einfügen.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+</section>
+
+<section class="np-page-section np-help-section np-help-module-section" id="mod-anleitungen">
+  <div class="np-section-header np-help-category-header">
+    <p class="np-eyebrow">Kategorie 03</p>
+    <h1 class="np-title">Mod Anleitungen</h1>
+    <p class="np-lead">
+      Platz für spätere Kurzguides zu einzelnen Mods, wichtigen Menüs, Tastenkürzeln und wiederkehrenden
+      Gameplay-Fragen. Jedes Modul kann mit Text, Bildern und Hinweisboxen erweitert werden.
+    </p>
+  </div>
+
+  <details id="mod-guides" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Einzelne Mods kurz erklärt</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Dieser Bereich ist für kleine Anleitungen zu einzelnen Mods gedacht. Beispiele können später sein:
+          wichtige Menüs, Tastenkürzel, Anfängerfragen oder besondere Funktionen.
+        </p>
+
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Hier später modbezogene Sonderregeln oder wichtige Einschränkungen ergänzen.</p>
+        </div>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot der jeweiligen Mod später hier einfügen.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+
+  <details id="tasten" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Wichtige Tastenkürzel und Menüs</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Hier können häufig benötigte Tastenbelegungen und Menüfunktionen gesammelt werden.
+          Besonders hilfreich ist das für Mods, die neue Oberflächen oder Spezialfunktionen hinzufügen.
+        </p>
+
+        <ul class="np-help-checklist">
+          <li>Mod-Menü öffnen: Taste später ergänzen.</li>
+          <li>Konfiguration öffnen: Taste später ergänzen.</li>
+          <li>Wichtige Sonderfunktion: später ergänzen.</li>
+        </ul>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Tastenübersicht oder Menü-Screenshot später hier einfügen.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+
+  <details id="claims-reisen" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Claims, Grundstücke und Reisen</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Dieser Bereich ist für spätere Hilfen zu Claims, Grundstücken, Wegsteinen und Reisewegen gedacht.
+          Die Inhalte werden ergänzt, sobald die finalen Serverregeln und Funktionen feststehen.
+        </p>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Beispielgrafik zu Claims oder Wegsteinen später hier einfügen.</p>
         </div>
       </aside>
     </div>
