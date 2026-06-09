@@ -5850,30 +5850,34 @@ img {
   }
 }
 /* =========================================================
-   26. Mobile Fix 6: Fixierter Header/Footer und reduzierter Footer
+   26. Mobile Fix 6 korrigiert:
+   Header/Footer mobil fixieren und zentrieren
    ========================================================= */
 
 @media (max-width: 66.499rem) {
   :root {
-    --np-mobile-header-height: 4.25rem;
-    --np-mobile-footer-height: 4.4rem;
+    --np-mobile-header-height: 4.15rem;
+    --np-mobile-footer-height: 4.35rem;
     --np-footer-height: var(--np-mobile-footer-height);
   }
 
-  /* Mobile Header wirklich fixieren */
+  body {
+    padding-top: var(--np-mobile-header-height) !important;
+    padding-bottom: var(--np-mobile-footer-height) !important;
+  }
+
+  /* Header wirklich fixiert */
   .main-header {
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    bottom: auto !important;
     z-index: 99990 !important;
     width: 100vw !important;
     height: var(--np-mobile-header-height) !important;
     min-height: var(--np-mobile-header-height) !important;
-    max-height: var(--np-mobile-header-height) !important;
     margin: 0 !important;
-    padding: 0 0.75rem !important;
+    padding: 0 4rem 0 1rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -5883,57 +5887,47 @@ img {
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36) !important;
   }
 
-  /* Platz für fixierten Header und Footer schaffen */
-  body {
-    padding-top: var(--np-mobile-header-height) !important;
-    padding-bottom: var(--np-mobile-footer-height) !important;
-  }
-
-  .main-content {
-    padding-top: 0.85rem !important;
-  }
-
-  /* Header-Brand mittig */
-  .site-title {
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: auto !important;
-    max-width: calc(100vw - 6.5rem) !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  /* Header-Text sichtbar und mittig */
+  .main-header .site-title {
+    position: static !important;
+    transform: none !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    width: auto !important;
+    max-width: calc(100vw - 7rem) !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     color: var(--np-gold-soft) !important;
     font-family: var(--np-font-heading);
     font-size: 0.88rem !important;
     font-weight: 950 !important;
-    line-height: 1.1 !important;
+    line-height: 1.12 !important;
     text-align: center !important;
     white-space: nowrap !important;
     text-decoration: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
-  .site-title::after {
+  .main-header .site-title::after {
     content: "Echoes of the Wild";
-    display: block;
-    margin-top: 0.16rem;
-    color: var(--np-cyan);
-    font-size: 0.50rem;
-    font-weight: 950;
-    letter-spacing: 0.095em;
-    line-height: 1.1;
-    text-align: center;
-    text-transform: uppercase;
+    display: block !important;
+    margin-top: 0.16rem !important;
+    color: var(--np-cyan) !important;
+    font-size: 0.50rem !important;
+    font-weight: 950 !important;
+    letter-spacing: 0.095em !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
   }
 
-  /* Burger rechts fixieren */
-  .site-button {
+  /* Nur der Burger im Header, nicht globale .site-button */
+  .main-header .site-button {
     position: absolute !important;
-    right: 0.7rem !important;
+    right: 0.75rem !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     width: 2.85rem !important;
@@ -5948,7 +5942,7 @@ img {
     border-left: 1px solid rgba(0, 230, 246, 0.16) !important;
   }
 
-  /* Aufgeklapptes Menü unter den fixierten Header setzen */
+  /* Menü unter den fixierten Header */
   .site-nav {
     position: fixed !important;
     top: var(--np-mobile-header-height) !important;
@@ -5957,15 +5951,9 @@ img {
     z-index: 99989 !important;
     max-height: calc(100vh - var(--np-mobile-header-height) - var(--np-mobile-footer-height)) !important;
     overflow-y: auto !important;
-    padding: 0.8rem 0.9rem 1rem !important;
-    background:
-      radial-gradient(circle at 100% 0%, rgba(0, 230, 246, 0.08), transparent 14rem),
-      linear-gradient(180deg, rgba(0, 9, 15, 0.99), rgba(0, 18, 33, 0.97)) !important;
-    border-bottom: 1px solid rgba(0, 230, 246, 0.18) !important;
-    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36) !important;
   }
 
-  /* Just-the-Docs Standardfooter ausblenden, aber NewPath-Footer NICHT */
+  /* Standard Just-the-Docs-Footertext entfernen */
   .main-content .site-footer,
   .main-content > footer,
   .main-content p:has(a[href*="just-the-docs"]),
@@ -5973,10 +5961,12 @@ img {
     display: none !important;
   }
 
-  /* NewPath-Footer mobil wirklich fixieren */
+  /* NewPath-Footer wieder sichtbar und fixiert */
   #np-global-window-footer,
   .np-site-footer#np-global-window-footer {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     position: fixed !important;
     left: 0 !important;
     right: 0 !important;
@@ -5996,7 +5986,6 @@ img {
     box-shadow: 0 -0.75rem 2rem rgba(0, 0, 0, 0.42) !important;
   }
 
-  /* Footer-Inhalt komplett zentrieren */
   #np-global-window-footer .np-site-footer-inner {
     width: 100% !important;
     height: var(--np-mobile-footer-height) !important;
@@ -6032,8 +6021,7 @@ img {
     text-align: center !important;
   }
 
-  /* Mobile Footer reduzieren:
-     Nur Ente, Discord und Copyright behalten */
+  /* Footer mobil reduzieren: nur Ente, Discord und Copyright sichtbar */
   .np-site-footer-links {
     width: 100% !important;
     display: flex !important;
@@ -6045,13 +6033,7 @@ img {
     white-space: nowrap !important;
   }
 
-  .np-site-footer-links a:not(.np-duck-easteregg):not([href*="discord"]),
-  .np-site-footer-links a[href*="Startseite"],
-  .np-site-footer-links a[href*="modpack"],
-  .np-site-footer-links a[href*="team"],
-  .np-site-footer-links a[href*="streamer"],
-  .np-site-footer-links a[href*="regelwerk"],
-  .np-site-footer-links a[href*="faq"] {
+  .np-site-footer-links a:not(.np-duck-easteregg):not([href*="discord"]) {
     display: none !important;
   }
 
