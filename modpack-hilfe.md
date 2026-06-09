@@ -30,45 +30,6 @@ permalink: /modpack-hilfe.html
   </div>
 </section>
 
-<section class="np-page-section np-help-section">
-  <div class="np-section-header">
-    <p class="np-eyebrow">Modpack Hilfe</p>
-    <h1 class="np-title">Alles Wichtige für Installation und Technik.</h1>
-    <p class="np-lead">
-      Die Modpack Hilfe ist die zentrale Hilfebibliothek für <strong>NewPath – Echoes of the Wild</strong>.
-      Sie ersetzt keine Support-Tickets, soll aber die häufigsten Fragen so erklären, dass neue Spieler
-      schnell selbst weiterkommen.
-    </p>
-  </div>
-
-  <div class="np-note np-help-note">
-    <strong>Hinweis:</strong> Die Bereiche sind bewusst aufklappbar. So bleibt die Seite übersichtlich,
-    auch wenn später Bilder, Schritt-für-Schritt-Grafiken und einzelne Mod-Guides ergänzt werden.
-  </div>
-
-  <div class="np-card-grid np-card-grid-4 np-help-grid" id="mitspielen">
-    <a class="np-info-card np-help-tile" href="#installation">
-      <strong class="np-card-title">Installation</strong>
-      <span class="np-card-text">NewPath über CurseForge installieren</span>
-    </a>
-
-    <a class="np-info-card np-help-tile" href="#ram">
-      <strong class="np-card-title">RAM zuweisen</strong>
-      <span class="np-card-text">Arbeitsspeicher im Launcher prüfen</span>
-    </a>
-
-    <a class="np-info-card np-help-tile" href="#voice-chat">
-      <strong class="np-card-title">Voice Chat</strong>
-      <span class="np-card-text">Mikrofon, Lautstärke und Gruppen</span>
-    </a>
-
-    <a class="np-info-card np-help-tile" href="#probleme">
-      <strong class="np-card-title">Probleme & Support</strong>
-      <span class="np-card-text">Startprobleme und typische Fehler</span>
-    </a>
-  </div>
-</section>
-
 <section class="np-page-section np-help-section np-help-module-section" id="installation-setup">
   <div class="np-section-header np-help-category-header">
     <p class="np-eyebrow">Kategorie 01</p>
