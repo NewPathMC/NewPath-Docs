@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v19
+   Konsolidierte CSS-Version v20
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -21,6 +21,8 @@
    16. Konsolidierung / Performance / Robustheit
    17. Teamseite
    18. Easter Egg / Entenseite
+   19. ECHO-Charakter-Glow
+   20. Finale Nachschärfung / Overrides
 */
 
 :root {
@@ -4448,10 +4450,9 @@ img {
 }
 
 /* =========================================================
-   17. Teamseite: Karten-Typografie und NewPath-Farbakzente
-   Wichtig: team.md nutzt .np-team-card, nicht .np-team-member-card.
-   Deshalb greifen die Regeln direkt auf .np-team-card und die
-   vorhandenen .np-card-* Klassen.
+   17. Teamseite
+   Teamkarten nutzen in team.md die Klasse .np-team-card.
+   Founder-Badge wird manuell über .np-team-founder gesteuert.
    ========================================================= */
 
 .np-team-section .np-team-grid {
@@ -4491,10 +4492,7 @@ img {
   pointer-events: none;
 }
 
-/* echte Gründer-Karten etwas wertiger */
-.np-team-section .np-team-grid .np-team-card:nth-child(1),
-.np-team-section .np-team-grid .np-team-card:nth-child(2),
-.np-team-section .np-team-grid .np-team-card:nth-child(3) {
+.np-team-section .np-team-card.np-team-founder {
   border-color: rgba(236, 183, 110, 0.34) !important;
   background:
     radial-gradient(circle at 50% 0%, rgba(236, 183, 110, 0.085), transparent 13rem),
@@ -4502,9 +4500,7 @@ img {
     linear-gradient(180deg, rgba(12, 38, 48, 0.88), rgba(4, 16, 22, 0.92)) !important;
 }
 
-.np-team-section .np-team-grid .np-team-card:nth-child(1)::after,
-.np-team-section .np-team-grid .np-team-card:nth-child(2)::after,
-.np-team-section .np-team-grid .np-team-card:nth-child(3)::after {
+.np-team-section .np-team-card.np-team-founder::after {
   content: "GRÜNDER";
   position: absolute;
   right: 1rem;
@@ -4525,7 +4521,6 @@ img {
   line-height: 1;
 }
 
-/* Bildbereich */
 .np-team-section .np-team-card .np-card-media,
 .np-team-section .np-team-card .np-team-image,
 .np-team-section .np-team-card .np-team-image-placeholder {
@@ -4546,7 +4541,6 @@ img {
   object-fit: cover;
 }
 
-/* Rollenlabel: cyan, aber hochwertiger und klarer */
 .np-team-section .np-team-card .np-team-role,
 .np-team-section .np-team-card .np-card-kicker {
   width: fit-content;
@@ -4566,7 +4560,6 @@ img {
   text-shadow: 0 0 12px rgba(0, 230, 246, 0.14);
 }
 
-/* Name: deutlich goldener und prominenter */
 .np-team-section .np-team-card .np-card-title,
 .np-team-section .np-team-card h2,
 .np-team-section .np-team-card h3 {
@@ -4582,7 +4575,6 @@ img {
     0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* Beschreibung: heller, ruhiger und mit dezenter Goldkante */
 .np-team-section .np-team-card .np-card-text,
 .np-team-section .np-team-card p:not(.np-card-kicker):not(.np-team-role) {
   position: relative;
@@ -4609,7 +4601,6 @@ img {
   );
 }
 
-/* Platzhalter hochwertiger */
 .np-team-section .np-team-image-placeholder span {
   display: inline-flex;
   align-items: center;
@@ -4649,14 +4640,12 @@ img {
   }
 }
 
+
 /* =========================================================
    18. Easter Egg / Entenseite
    Footer-Ente + eigene Zentrierung der geheimen Entenseite.
-   Diese Regeln sind absichtlich seitenbezogen, damit globale
-   Section-Header-Regeln nicht in die Entenseite reinfunken.
    ========================================================= */
 
-/* Kleine Ente im Footer */
 .np-duck-easteregg {
   display: inline-flex !important;
   align-items: center;
@@ -4695,7 +4684,6 @@ img {
   transform: translateY(0) rotate(4deg) scale(0.96);
 }
 
-/* Entenseite: obere ECHO-Box kompakter, damit das Bild nicht verloren wirkt */
 .echo-page-box-duck {
   grid-template-columns: minmax(150px, 210px) minmax(0, 1fr) !important;
 }
@@ -4705,7 +4693,6 @@ img {
   height: clamp(7.5rem, 9vw, 10.5rem) !important;
 }
 
-/* Unterer geheimer Bereich: alles konsequent mittig */
 .np-duck-section {
   text-align: center !important;
 }
@@ -4749,7 +4736,6 @@ img {
   margin-right: auto !important;
 }
 
-/* Entenbox selbst */
 .np-duck-message {
   max-width: 48rem;
   margin: 1.25rem auto 0 !important;
@@ -4788,7 +4774,6 @@ img {
   text-align: center !important;
 }
 
-/* Mobile: Entenseite bleibt sauber lesbar */
 @media (max-width: 66.499rem) {
   .echo-page-box-duck {
     grid-template-columns: 1fr !important;
@@ -4798,44 +4783,15 @@ img {
     width: 100% !important;
   }
 }
+
+
 /* =========================================================
-   ECHO: Charakter-Glow auf allen Seiten
-   - Glow liegt nur auf dem transparenten ECHO-Bild
-   - keine Box, kein Rahmen, kein Hintergrund betroffen
+   19. ECHO-Charakter-Glow
+   Glow liegt direkt auf transparenten ECHO-Bildern, nicht auf Boxen.
+   Dieser Abschnitt steht bewusst spät, damit ältere Bildfilter
+   überschrieben werden.
    ========================================================= */
 
-.echo-page-image img,
-.np-pathfinder-image img,
-.np-echo-image-wrap img {
-  filter:
-    drop-shadow(0 0 10px rgba(0, 230, 246, 0.28))
-    drop-shadow(0 0 22px rgba(0, 230, 246, 0.16))
-    drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34)) !important;
-}
-
-/* Enten-ECHO etwas wärmer, weil dort Gold/Ente besser passt */
-.echo-page-box-duck .echo-page-image img {
-  filter:
-    drop-shadow(0 0 10px rgba(0, 230, 246, 0.24))
-    drop-shadow(0 0 20px rgba(236, 183, 110, 0.18))
-    drop-shadow(0 14px 20px rgba(0, 0, 0, 0.34)) !important;
-}
-
-/* Mobile etwas dezenter */
-@media (max-width: 66.499rem) {
-  .echo-page-image img,
-  .np-pathfinder-image img,
-  .np-echo-image-wrap img {
-    filter:
-      drop-shadow(0 0 8px rgba(0, 230, 246, 0.20))
-      drop-shadow(0 10px 16px rgba(0, 0, 0, 0.30)) !important;
-  }
-}/* =========================================================
-   ECHO: Glow wirklich auf allen ECHO-Bildern
-   Muss ganz unten stehen, damit ältere Bildregeln überschrieben werden.
-   ========================================================= */
-
-/* Unterseiten-ECHO + Startseiten-ECHO */
 body .echo-page-box .echo-page-image img,
 body .echo-page-box-team .echo-page-image img,
 body .echo-page-box-philosophy .echo-page-image img,
@@ -4845,14 +4801,7 @@ body .echo-page-box-streamer .echo-page-image img,
 body .echo-page-box-help .echo-page-image img,
 body .echo-page-box-duck .echo-page-image img,
 body .np-pathfinder-image img,
-body .np-echo-image-wrap img {
-  filter:
-    drop-shadow(0 0 10px rgba(0, 230, 246, 0.32))
-    drop-shadow(0 0 24px rgba(0, 230, 246, 0.18))
-    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
-}
-
-/* Fallback: jedes Bild aus dem echo-Ordner */
+body .np-echo-image-wrap img,
 body img[src*="/assets/images/echo/"] {
   filter:
     drop-shadow(0 0 10px rgba(0, 230, 246, 0.32))
@@ -4860,8 +4809,8 @@ body img[src*="/assets/images/echo/"] {
     drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
 }
 
-/* Entenseite etwas wärmer */
-body .echo-page-box-duck .echo-page-image img {
+body .echo-page-box-duck .echo-page-image img,
+body img[src*="/assets/images/echo/ente"] {
   filter:
     drop-shadow(0 0 10px rgba(0, 230, 246, 0.26))
     drop-shadow(0 0 24px rgba(236, 183, 110, 0.22))
@@ -4878,3 +4827,39 @@ body .echo-page-box-duck .echo-page-image img {
       drop-shadow(0 10px 16px rgba(0, 0, 0, 0.32)) !important;
   }
 }
+
+
+/* =========================================================
+   20. Finale Nachschärfung / Overrides
+   Kleine Sicherheitsregeln nach der Konsolidierung.
+   ========================================================= */
+
+/* Keine alten Kreis/Kreuz-Ornamente in Content-Boxen */
+.echo-page-box::after,
+.np-page-section::after,
+.np-history-panel::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Kein Standard-Browser-Fokusrahmen an der Header-Suche */
+.main-header .search-input:focus,
+.main-header .search-input:focus-visible,
+.main-header .search-input-wrap:focus-within {
+  outline: none !important;
+  box-shadow:
+    0 0 0 1px rgba(0, 230, 246, 0.46),
+    0 0 18px rgba(0, 230, 246, 0.10) !important;
+}
+
+/* Nur echte Links/Buttons bekommen Pointer; Branding bleibt ruhig */
+.np-topbar-brand {
+  cursor: default !important;
+}
+
+/* Bilder robust halten */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
