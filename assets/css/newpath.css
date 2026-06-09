@@ -5819,4 +5819,33 @@ img {
   .np-hero {
     padding-top: 1.35rem !important;
   }
+}/* =========================================================
+   25. Mobile Fix 5: Header-Brand lesbarer machen
+   ========================================================= */
+
+@media (max-width: 66.499rem) {
+  .site-title {
+    font-size: 0.86rem !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0.01em !important;
+    max-width: calc(100% - 4.2rem) !important;
+  }
+
+  .site-title::after {
+    margin-top: 0.2rem !important;
+    font-size: 0.50rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.095em !important;
+  }
+
+  .main-header {
+    padding-left: 1rem !important;
+    padding-right: 0.55rem !important;
+  }
+
+  .site-button {
+    width: 2.85rem !important;
+    height: 2.85rem !important;
+    min-width: 2.85rem !important;
+  }
 }
