@@ -6,7 +6,7 @@ permalink: /modpack-hilfe.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 17:25 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:09 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">
@@ -465,38 +465,59 @@ permalink: /modpack-hilfe.html
         </div>
 
         <!-- INHALT / ANLEITUNG -->
-        <ol class="np-help-checklist">
-          <li><strong>FTB-Teams-Menü öffnen:</strong></li>
-          <li>Öffne dein Inventar.</li>
-          <li>Klicke oben links auf das FTB-Teams-Symbol bzw. den Team-Button in der FTB-Sidebar.</li>
-          <li>Es öffnet sich das FTB-Teams-Menü.</li>
-          <li><strong>Eigenes Team erstellen:</strong></li>
-          <li>Öffne das FTB-Teams-Menü.</li>
-          <li>Klicke auf Team erstellen oder eine ähnlich benannte Schaltfläche.</li>
-          <li>Gib deinem Team einen passenden Namen.</li>
-          <li>Bestätige die Erstellung.</li>
-          <li>Prüfe anschließend, ob dein Team im Menü angezeigt wird.</li>
-          <li><strong>Spieler einladen:</strong></li>
-          <li>Öffne dein FTB-Teams-Menü.</li>
-          <li>Wähle dein Team aus.</li>
-          <li>Öffne den Bereich für Mitglieder, Einladungen oder Spieler einladen.</li>
-          <li>Wähle den gewünschten Spieler aus oder trage seinen Namen ein, falls das Menü dies verlangt.</li>
-          <li>Sende die Einladung ab.</li>
-          <li>Warte, bis der Spieler die Einladung annimmt.</li>
-          <li><strong>Einem Team beitreten:</strong></li>
-          <li>Öffne dein Inventar.</li>
-          <li>Klicke oben links auf das FTB-Teams-Symbol.</li>
-          <li>Prüfe im FTB-Teams-Menü, ob eine Einladung angezeigt wird.</li>
-          <li>Wähle die Einladung aus.</li>
-          <li>Klicke auf Annehmen.</li>
-          <li>Prüfe danach, ob du im richtigen Team bist.</li>
-          <li><strong>Nach dem Erstellen oder Beitreten:</strong></li>
-          <li>Öffne anschließend die FTB-Chunks-Karte.</li>
-          <li>Prüfe, ob eure Claims korrekt angezeigt werden.</li>
-          <li>Sprecht im Team ab, wer welche Bereiche nutzt.</li>
-          <li>Vergib Rechte und Zugriff nur an Spieler, denen du vertraust.</li>
-        </ol>
+        <div class="np-help-step-group">
+          <h4>FTB-Teams-Menü öffnen:</h4>
+          <ol class="np-help-checklist">
+            <li>Öffne dein Inventar.</li>
+            <li>Klicke oben links auf das FTB-Teams-Symbol bzw. den Team-Button in der FTB-Sidebar.</li>
+            <li>Es öffnet sich das FTB-Teams-Menü.</li>
+          </ol>
+        </div>
 
+        <div class="np-help-step-group">
+          <h4>Eigenes Team erstellen:</h4>
+          <ol class="np-help-checklist">
+            <li>Öffne das FTB-Teams-Menü.</li>
+            <li>Klicke auf Team erstellen oder eine ähnlich benannte Schaltfläche.</li>
+            <li>Gib deinem Team einen passenden Namen.</li>
+            <li>Bestätige die Erstellung.</li>
+            <li>Prüfe anschließend, ob dein Team im Menü angezeigt wird.</li>
+          </ol>
+        </div>
+
+        <div class="np-help-step-group">
+          <h4>Spieler einladen:</h4>
+          <ol class="np-help-checklist">
+            <li>Öffne dein FTB-Teams-Menü.</li>
+            <li>Wähle dein Team aus.</li>
+            <li>Öffne den Bereich für Mitglieder, Einladungen oder Spieler einladen.</li>
+            <li>Wähle den gewünschten Spieler aus oder trage seinen Namen ein, falls das Menü dies verlangt.</li>
+            <li>Sende die Einladung ab.</li>
+            <li>Warte, bis der Spieler die Einladung annimmt.</li>
+          </ol>
+        </div>
+
+        <div class="np-help-step-group">
+          <h4>Einem Team beitreten:</h4>
+          <ol class="np-help-checklist">
+            <li>Öffne dein Inventar.</li>
+            <li>Klicke oben links auf das FTB-Teams-Symbol.</li>
+            <li>Prüfe im FTB-Teams-Menü, ob eine Einladung angezeigt wird.</li>
+            <li>Wähle die Einladung aus.</li>
+            <li>Klicke auf Annehmen.</li>
+            <li>Prüfe danach, ob du im richtigen Team bist.</li>
+          </ol>
+        </div>
+
+        <div class="np-help-step-group">
+          <h4>Nach dem Erstellen oder Beitreten:</h4>
+          <ol class="np-help-checklist">
+            <li>Öffne anschließend die FTB-Chunks-Karte.</li>
+            <li>Prüfe, ob eure Claims korrekt angezeigt werden.</li>
+            <li>Sprecht im Team ab, wer welche Bereiche nutzt.</li>
+            <li>Vergib Rechte und Zugriff nur an Spieler, denen du vertraust.</li>
+          </ol>
+        </div>
       </div>
 
       <aside class="np-help-module-media">
@@ -755,26 +776,32 @@ permalink: /modpack-hilfe.html
         </div>
 
         <!-- INHALT / ANLEITUNG -->
-        <ol class="np-help-checklist">
-          <li><strong>So erstellst du ein gutes Support-Ticket:</strong></li>
-          <li>Öffne im Discord den Support-Bereich.</li>
-          <li>Erstelle ein neues Support-Ticket.</li>
-          <li>Beschreibe kurz und verständlich, was passiert ist.</li>
-          <li>Füge die genaue Fehlermeldung ein, falls eine angezeigt wird.</li>
-          <li>Lade einen Screenshot hoch, wenn man das Problem darauf erkennen kann.</li>
-          <li>Füge bei Abstürzen oder technischen Fehlern die passende Log-Datei oder den Crash-Report hinzu.</li>
-          <li>Schreibe dazu, was du bereits versucht hast.</li>
-          <li><strong>Nutze am besten diese Vorlage:</strong></li>
-          <li>Minecraft-Name:</li>
-          <li>Modpack-Version:</li>
-          <li>Problem:</li>
-          <li>Wann ist es passiert?</li>
-          <li>Genaue Fehlermeldung:</li>
-          <li>Screenshot vorhanden?</li>
-          <li>Log oder Crash-Report vorhanden?</li>
-          <li>Was wurde bereits versucht?</li>
-        </ol>
+        <div class="np-help-step-group">
+          <h4>So erstellst du ein gutes Support-Ticket:</h4>
+          <ol class="np-help-checklist">
+            <li>Öffne im Discord den Support-Bereich.</li>
+            <li>Erstelle ein neues Support-Ticket.</li>
+            <li>Beschreibe kurz und verständlich, was passiert ist.</li>
+            <li>Füge die genaue Fehlermeldung ein, falls eine angezeigt wird.</li>
+            <li>Lade einen Screenshot hoch, wenn man das Problem darauf erkennen kann.</li>
+            <li>Füge bei Abstürzen oder technischen Fehlern die passende Log-Datei oder den Crash-Report hinzu.</li>
+            <li>Schreibe dazu, was du bereits versucht hast.</li>
+          </ol>
+        </div>
 
+        <div class="np-help-step-group">
+          <h4>Nutze am besten diese Vorlage:</h4>
+          <ul class="np-help-checklist">
+            <li>Minecraft-Name:</li>
+            <li>Modpack-Version:</li>
+            <li>Problem:</li>
+            <li>Wann ist es passiert?</li>
+            <li>Genaue Fehlermeldung:</li>
+            <li>Screenshot vorhanden?</li>
+            <li>Log oder Crash-Report vorhanden?</li>
+            <li>Was wurde bereits versucht?</li>
+          </ul>
+        </div>
       </div>
 
       <aside class="np-help-module-media">
