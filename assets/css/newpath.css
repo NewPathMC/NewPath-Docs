@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v27
+   Konsolidierte CSS-Version v28
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -26,7 +26,7 @@
    21. Mobile Layout
    22. Mobile Header/Footer Failsafe
    23. Modpack-Hilfe Module
-   24. Accordion Symbol-System
+   24. Einheitliches Akkordeon ohne Symbol
 */
 
 :root {
@@ -2242,17 +2242,6 @@ blockquote {
   display: none;
 }
 
-.np-faq-details summary::before {
-  content: "▸";
-  display: inline-block;
-  margin-right: 0.55rem;
-  color: var(--np-cyan);
-  transition: transform 160ms ease;
-}
-
-.np-faq-details[open] summary::before {
-  transform: rotate(90deg);
-}
 
 .np-faq-details > div {
   padding: 0 1rem 1rem 1rem;
@@ -5469,40 +5458,6 @@ img {
   display: none !important;
 }
 
-.np-help-module-section .np-help-module-icon {
-  width: 1.08rem !important;
-  height: 1.08rem !important;
-  min-width: 1.08rem !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 999px !important;
-  color: #001221 !important;
-  background: var(--np-cyan) !important;
-  border: 0 !important;
-  box-shadow:
-    0 0 12px rgba(0, 230, 246, 0.22),
-    inset 0 -0.12rem 0.25rem rgba(0, 0, 0, 0.18) !important;
-}
-
-.np-help-module-section .np-help-module-icon::before {
-  content: "+" !important;
-  width: auto !important;
-  height: auto !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  color: #001221 !important;
-  box-shadow: none !important;
-  font-family: var(--np-font-label);
-  font-size: 0.78rem !important;
-  font-weight: 950 !important;
-  line-height: 1 !important;
-}
-
-.np-help-module-section .np-help-module[open] .np-help-module-icon::before {
-  content: "−" !important;
-  transform: translateY(-0.02rem);
-}
 
 .np-help-module-section .np-help-module-title {
   min-width: 0 !important;
@@ -5724,19 +5679,38 @@ img {
 }
 
 /* =========================================================
-   24. Accordion Symbol-System
-   FAQ und Modpack-Hilfe verwenden exakt dasselbe Öffnen/Schließen-Symbol.
-   Symbol: kleiner Cyan-Kreis mit + / − links vor dem Titel.
+   24. Einheitliches Akkordeon ohne Symbol
+   FAQ und Modpack-Hilfe nutzen denselben Akkordeon-Kopf.
+   Keine Plus-/Minus-Zeichen, keine Pfeile, keine Icon-Kugeln.
    ========================================================= */
 
-/* FAQ und Modpack-Hilfe: gemeinsame Summary-Basis */
+/* Gemeinsame Akkordeon-Hülle */
+.np-faq-details,
+.np-help-module-section .np-help-module {
+  overflow: hidden !important;
+  border-radius: 0.58rem !important;
+  border: 1px solid rgba(72, 122, 146, 0.40) !important;
+  background:
+    linear-gradient(180deg, rgba(10, 36, 47, 0.72), rgba(5, 20, 27, 0.82)) !important;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.16),
+    inset 0 0 22px rgba(0, 230, 246, 0.018) !important;
+}
+
+/* FAQ-Abstände und Modpack-Hilfe-Abstände angleichen */
+.np-faq-details,
+.np-help-module-section .np-help-module {
+  margin: 0.36rem 0 !important;
+}
+
+/* Gemeinsamer Akkordeon-Kopf ohne Symbol-Spalte */
 .np-faq-details summary,
 .np-help-module-section .np-help-module summary {
   min-height: 3.35rem !important;
-  display: grid !important;
-  grid-template-columns: 1.35rem minmax(0, 1fr) !important;
-  gap: 0.62rem !important;
+  display: flex !important;
   align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
   padding: 0.78rem 1rem !important;
   color: var(--np-gold-soft) !important;
   background:
@@ -5744,67 +5718,6 @@ img {
   border: 0 !important;
   cursor: pointer !important;
   list-style: none !important;
-}
-
-.np-faq-details summary::-webkit-details-marker,
-.np-help-module-section .np-help-module summary::-webkit-details-marker {
-  display: none !important;
-}
-
-/* FAQ nutzt ::before, Modpack-Hilfe nutzt das vorhandene span.np-help-module-icon.
-   Beide werden optisch exakt gleich gebaut. */
-.np-faq-details summary::before,
-.np-help-module-section .np-help-module-icon {
-  content: "+" !important;
-  width: 1.08rem !important;
-  height: 1.08rem !important;
-  min-width: 1.08rem !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  align-self: center !important;
-  justify-self: center !important;
-  margin: 0 !important;
-  border-radius: 999px !important;
-  color: #001221 !important;
-  background: var(--np-cyan) !important;
-  border: 0 !important;
-  box-shadow:
-    0 0 12px rgba(0, 230, 246, 0.22),
-    inset 0 -0.12rem 0.25rem rgba(0, 0, 0, 0.18) !important;
-  font-family: var(--np-font-label);
-  font-size: 0.78rem !important;
-  font-weight: 950 !important;
-  line-height: 1 !important;
-  text-align: center !important;
-  transform: none !important;
-  transition: none !important;
-}
-
-/* Modpack-Hilfe: innere alte Punkt-Darstellung abschalten */
-.np-help-module-section .np-help-module-icon::before {
-  content: none !important;
-  display: none !important;
-}
-
-/* Geöffnet: beide zeigen Minus, keine Rotation */
-.np-faq-details[open] summary::before,
-.np-help-module-section .np-help-module[open] .np-help-module-icon {
-  content: "−" !important;
-  transform: none !important;
-}
-
-/* Modpack-Hilfe: eventuell alte Summary-Pseudoelemente sicher ausblenden */
-.np-help-module-section .np-help-module summary::before,
-.np-help-module-section .np-help-module summary::after,
-.np-help-module-section .np-help-module-meta {
-  content: none !important;
-  display: none !important;
-}
-
-/* FAQ-Titel und Modpack-Hilfe-Titel gleich behandeln */
-.np-faq-details summary,
-.np-help-module-section .np-help-module-title {
   font-family: var(--np-font-heading) !important;
   font-size: clamp(0.95rem, 1vw, 1.08rem) !important;
   font-weight: 950 !important;
@@ -5812,16 +5725,48 @@ img {
   text-shadow: none !important;
 }
 
+/* Browser-Details-Marker + alte Pseudo-Symbole sicher entfernen */
+.np-faq-details summary::-webkit-details-marker,
+.np-help-module-section .np-help-module summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.np-faq-details summary::before,
+.np-faq-details summary::after,
+.np-help-module-section .np-help-module summary::before,
+.np-help-module-section .np-help-module summary::after {
+  content: none !important;
+  display: none !important;
+  transform: none !important;
+}
+
+/* Modpack-Hilfe hatte ein eigenes Icon-Span im HTML: komplett ausblenden */
+.np-help-module-section .np-help-module-icon,
+.np-help-module-section .np-help-module-icon::before,
+.np-help-module-section .np-help-module-icon::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Modpack-Hilfe-Titel verhält sich wie normaler FAQ-Summary-Text */
 .np-help-module-section .np-help-module-title {
   min-width: 0 !important;
   padding-right: 0 !important;
   color: var(--np-gold-soft) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  text-shadow: none !important;
 }
 
-/* FAQ-Inhalt behält einfache Struktur, Modpack-Hilfe behält zweispaltigen Aufbau */
+/* Geöffneter Zustand identisch */
 .np-faq-details[open],
 .np-help-module-section .np-help-module[open] {
   border-color: rgba(0, 230, 246, 0.48) !important;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.20),
+    inset 0 0 24px rgba(0, 230, 246, 0.025) !important;
 }
 
 .np-faq-details[open] summary,
@@ -5831,6 +5776,7 @@ img {
   border-bottom: 1px solid rgba(72, 122, 146, 0.24) !important;
 }
 
+/* Hover identisch */
 @media (hover: hover) and (pointer: fine) {
   .np-faq-details summary:hover,
   .np-help-module-section .np-help-module summary:hover {
@@ -5839,21 +5785,34 @@ img {
   }
 }
 
+/* Inhalt: FAQ bleibt einspaltig, Modpack-Hilfe bleibt zweispaltig */
+.np-faq-details > div {
+  padding: 0.95rem 1rem 1rem !important;
+  color: rgba(245, 234, 220, 0.84) !important;
+}
+
+.np-help-module-section .np-help-module-content {
+  grid-template-columns: minmax(0, 0.54fr) minmax(300px, 0.46fr) !important;
+  gap: clamp(0.9rem, 1.45vw, 1.35rem) !important;
+  padding: clamp(0.95rem, 1.35vw, 1.2rem) !important;
+}
+
 @media (max-width: 66.499rem) {
+  .np-faq-details,
+  .np-help-module-section .np-help-module {
+    margin: 0.32rem 0 !important;
+  }
+
   .np-faq-details summary,
   .np-help-module-section .np-help-module summary {
     min-height: 3.25rem !important;
-    grid-template-columns: 1.3rem minmax(0, 1fr) !important;
-    gap: 0.55rem !important;
     padding: 0.72rem 0.82rem !important;
+    font-size: 0.94rem !important;
   }
 
-  .np-faq-details summary::before,
-  .np-help-module-section .np-help-module-icon {
-    width: 1.04rem !important;
-    height: 1.04rem !important;
-    min-width: 1.04rem !important;
-    font-size: 0.74rem !important;
+  .np-help-module-section .np-help-module-content {
+    grid-template-columns: 1fr !important;
+    padding: 0.85rem !important;
   }
 }
 
