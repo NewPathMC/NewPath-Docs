@@ -5556,4 +5556,192 @@ img {
     padding-bottom: 1.1rem !important;
   }
 }
+/* =========================================================
+   23. Mobile Fix 3: Header, Menü und Status-Icons
+   Ergänzt Mobile Fix 1 + 2.
+   ========================================================= */
 
+@media (max-width: 66.499rem) {
+  /* Mobile Header oben sauberer, ruhiger, nicht mehr so gequetscht */
+  .main-header {
+    min-height: 4.1rem !important;
+    height: 4.1rem !important;
+    padding: 0 0.85rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 15, 0.98), rgba(0, 18, 33, 0.96)) !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.18) !important;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28) !important;
+  }
+
+  .site-title {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 3.5rem) !important;
+    padding: 0 !important;
+    color: var(--np-gold-soft) !important;
+    font-family: var(--np-font-heading);
+    font-size: 0.95rem !important;
+    font-weight: 950 !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0.01em !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  .site-title::after {
+    content: "Echoes of the Wild";
+    display: block;
+    margin-top: 0.16rem;
+    color: var(--np-cyan);
+    font-size: 0.56rem;
+    font-weight: 950;
+    letter-spacing: 0.11em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .site-button {
+    width: 3rem !important;
+    height: 3rem !important;
+    min-width: 3rem !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-left: 1px solid rgba(0, 230, 246, 0.16) !important;
+    background: rgba(0, 9, 15, 0.28) !important;
+    color: var(--np-cyan) !important;
+  }
+
+  .site-button:hover {
+    background: rgba(0, 230, 246, 0.08) !important;
+  }
+
+  /* Mobile Menü: weniger Abstand, mehr wie ein Panel */
+  .site-nav {
+    padding: 0.7rem 0.85rem 0.9rem !important;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(0, 230, 246, 0.08), transparent 14rem),
+      linear-gradient(180deg, rgba(0, 9, 15, 0.98), rgba(0, 18, 33, 0.96)) !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.18) !important;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.30) !important;
+  }
+
+  .site-nav .nav-list {
+    display: grid !important;
+    gap: 0.34rem !important;
+  }
+
+  .site-nav .nav-list-link {
+    min-height: 2.35rem !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.58rem 0.72rem !important;
+    border-radius: 0.58rem !important;
+    color: rgba(247, 236, 220, 0.88) !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.01em !important;
+    background: rgba(5, 20, 27, 0.44) !important;
+    border: 1px solid rgba(72, 122, 146, 0.18) !important;
+  }
+
+  .site-nav .nav-list-link.active {
+    color: var(--np-gold-soft) !important;
+    background: rgba(236, 183, 110, 0.10) !important;
+    border-color: rgba(236, 183, 110, 0.30) !important;
+    box-shadow:
+      inset 3px 0 0 rgba(0, 230, 246, 0.70),
+      0 0 16px rgba(236, 183, 110, 0.06) !important;
+  }
+
+  .site-nav .nav-list-link:hover {
+    color: var(--np-gold-soft) !important;
+    border-color: rgba(0, 230, 246, 0.32) !important;
+    background: rgba(0, 230, 246, 0.07) !important;
+  }
+
+  .site-nav .search {
+    margin-top: 0.8rem !important;
+    padding-top: 0.75rem !important;
+    border-top: 1px solid rgba(0, 230, 246, 0.14) !important;
+  }
+
+  .site-nav .search-input-wrap {
+    height: 2.65rem !important;
+    min-height: 2.65rem !important;
+    border-radius: 0.62rem !important;
+    background: rgba(0, 9, 15, 0.62) !important;
+    border: 1px solid rgba(0, 230, 246, 0.26) !important;
+  }
+
+  .site-nav .search-input {
+    height: 2.55rem !important;
+    min-height: 2.55rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Status-Icons: fehlende Symbole für Spielmodus und Plattform */
+  .np-status-icon-star::before,
+  .np-status-icon-survival::before,
+  .np-status-icon-game::before {
+    content: "★" !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    background: transparent !important;
+    color: var(--np-cyan) !important;
+    font-size: 0.92rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+  }
+
+  .np-status-icon-screen::before,
+  .np-status-icon-platform::before,
+  .np-status-icon-pc::before {
+    content: "▣" !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    background: transparent !important;
+    color: var(--np-cyan) !important;
+    font-size: 1rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+  }
+
+  /* Falls die Elemente keine Spezialklasse haben, nach Position auffüllen */
+  .np-status-bar .np-status-item:nth-child(4) .np-status-icon::before,
+  .np-status-bar-v2 .np-status-item:nth-child(4) .np-status-icon::before,
+  .np-status-bar-showcase .np-status-item:nth-child(4) .np-status-icon::before {
+    content: "★" !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    background: transparent !important;
+    color: var(--np-cyan) !important;
+    font-size: 0.92rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+  }
+
+  .np-status-bar .np-status-item:nth-child(5) .np-status-icon::before,
+  .np-status-bar-v2 .np-status-item:nth-child(5) .np-status-icon::before,
+  .np-status-bar-showcase .np-status-item:nth-child(5) .np-status-icon::before {
+    content: "▣" !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    background: transparent !important;
+    color: var(--np-cyan) !important;
+    font-size: 1rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+  }
+}
