@@ -6,7 +6,7 @@ permalink: /modpack-hilfe.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:29 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:09 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">
@@ -35,9 +35,8 @@ permalink: /modpack-hilfe.html
     <p class="np-eyebrow">Kategorie 01</p>
     <h1 class="np-title">Installation und Setup</h1>
     <p class="np-lead">
-      Alles rund um Installation, richtige Version, Speicherzuweisung und grundlegende Einrichtung.
-      Die einzelnen Module sind so vorbereitet, dass links der Erklärungstext steht und rechts später Bilder
-      oder Screenshots ergänzt werden können.
+      Alles rund um Installation, richtige Version, Speicherzuweisung, Updates, Reparatur,
+      Neuinstallation, Serverbeitritt und den ersten Zugang über die Whitelist.
     </p>
   </div>
 
@@ -49,37 +48,32 @@ permalink: /modpack-hilfe.html
 
     <div class="np-help-module-content">
       <div class="np-help-module-text">
-        <!-- TEXTBEREICH: Hier später Erklärungstext ergänzen/anpassen -->
+        <!-- TEXTBEREICH -->
         <p>
-          NewPath wird ausschließlich über CurseForge veröffentlicht. Suche im CurseForge Launcher nach
-          <strong>NewPath</strong> und installiere die aktuell empfohlene Version.
+          NewPath wird ausschließlich über CurseForge bereitgestellt. Installiere daher immer die offizielle NewPath-Version über den CurseForge Launcher.
         </p>
 
         <ol class="np-help-checklist">
-          <li>CurseForge Launcher öffnen.</li>
-          <li>Nach <strong>NewPath</strong> suchen.</li>
-          <li>Das richtige NewPath-Projekt auswählen.</li>
-          <li>Auf <strong>Installieren</strong> klicken.</li>
-          <li>Nach der Installation RAM-Zuweisung prüfen.</li>
+          <li>Öffne den CurseForge Launcher.</li>
+          <li>Gehe in den Bereich <strong>Minecraft</strong>.</li>
+          <li>Suche nach <strong>NewPath</strong>.</li>
+          <li>Wähle das offizielle NewPath-Modpack aus.</li>
+          <li>Klicke auf <strong>Installieren</strong>.</li>
+          <li>Warte, bis CurseForge alle Dateien vollständig heruntergeladen hat.</li>
+          <li>Starte das Modpack anschließend direkt über CurseForge.</li>
         </ol>
 
-        <!-- HINWEISBOX: Für wichtige Hinweise. Klasse bei Bedarf ändern: np-help-callout-warning / np-help-callout-danger -->
-        <div class="np-help-callout np-help-callout-warning">
-          <strong>!</strong>
-          <p>Achte darauf, nur die offizielle NewPath-Version zu installieren und keine eigenen Mods hinzuzufügen.</p>
-        </div>
       </div>
 
       <aside class="np-help-module-media">
-        <!-- BILDBEREICH: Platzhalter später durch <img src="..." alt="..."> ersetzen -->
+        <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>CurseForge-Installationsgrafik später hier einfügen.</p>
+          <p>Screenshot: NewPath im CurseForge Launcher suchen und installieren.</p>
         </div>
       </aside>
     </div>
   </details>
-
   <details id="ram" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
@@ -90,21 +84,21 @@ permalink: /modpack-hilfe.html
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
         <p>
-          Nach der Installation solltest du prüfen, wie viel Arbeitsspeicher dem Modpack zugewiesen ist.
-          Für NewPath empfehlen wir mindestens <strong>8 GB RAM</strong>. Je nach System, Shadern,
-          Ressourcenauslastung und Version können auch mehr sinnvoll sein.
+          Für NewPath empfehlen wir mindestens <strong>10 GB RAM</strong>. Je nach System, Shadern, Ressourcennutzung und Version kann auch mehr sinnvoll sein.
         </p>
 
         <ol class="np-help-checklist">
-          <li>CurseForge Launcher öffnen.</li>
-          <li>Links unten auf die Einstellungen gehen.</li>
-          <li>Unter Minecraft die Java-/Speichereinstellungen öffnen.</li>
-          <li>Den Regler für zugewiesenen Speicher prüfen.</li>
-          <li>Mindestens <strong>8000 MB</strong> einstellen.</li>
+          <li>Öffne CurseForge.</li>
+          <li>Klicke unten links auf das Zahnrad für die Einstellungen.</li>
+          <li>Wähle links den Bereich <strong>Minecraft</strong> aus.</li>
+          <li>Suche den Abschnitt für den zugewiesenen Arbeitsspeicher.</li>
+          <li>Stelle mindestens <strong>10000 MB</strong> ein.</li>
+          <li>Speichere die Einstellung, falls nötig.</li>
+          <li>Starte NewPath danach neu.</li>
         </ol>
 
         <!-- HINWEISBOX -->
-        <div class="np-help-callout np-help-callout-danger">
+        <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
           <p>Zu wenig RAM kann dazu führen, dass das Spiel langsam startet, stark ruckelt oder beim Laden abstürzt.</p>
         </div>
@@ -114,12 +108,11 @@ permalink: /modpack-hilfe.html
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>RAM-Zuweisungsgrafik später hier einfügen.</p>
+          <p>Screenshot: RAM-Regler in den CurseForge-Minecraft-Einstellungen.</p>
         </div>
       </aside>
     </div>
   </details>
-
   <details id="version" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
@@ -130,19 +123,22 @@ permalink: /modpack-hilfe.html
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
         <p>
-          Achte darauf, dass du die aktuell empfohlene Version nutzt. Die aktive Version steht auf der Startseite
-          und wird zusätzlich im Discord angekündigt.
+          Nutze immer die aktuell im Discord angekündigte Version. So stellst du sicher, dass dein Client zur Serverversion passt.
         </p>
 
-        <p>
-          Wenn du unsicher bist, ob du die richtige Version installiert hast, vergleiche die Versionsnummer im
-          CurseForge Launcher mit der Angabe auf der Startseite.
-        </p>
+        <ol class="np-help-checklist">
+          <li>Öffne CurseForge.</li>
+          <li>Wähle dein NewPath-Profil aus.</li>
+          <li>Prüfe die angezeigte Modpack-Version.</li>
+          <li>Vergleiche sie mit der aktuellen Version im Discord.</li>
+          <li>Falls deine Version abweicht, aktualisiere das Modpack über CurseForge.</li>
+          <li>Starte danach das Modpack neu.</li>
+        </ol>
 
         <!-- HINWEISBOX -->
         <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
-          <p>Bei Versionswechseln immer auf Discord-Ankündigungen und Hinweise im Changelog achten.</p>
+          <p>Eine falsche Modpack-Version kann verhindern, dass du dem Server beitreten kannst.</p>
         </div>
       </div>
 
@@ -150,40 +146,186 @@ permalink: /modpack-hilfe.html
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>Versionsvergleich oder CurseForge-Profil später hier einfügen.</p>
+          <p>Screenshot: Versionsanzeige im NewPath-Profil bei CurseForge.</p>
         </div>
       </aside>
     </div>
   </details>
-
-  <details id="voice-chat" class="np-accordion np-help-details np-help-module">
+  <details id="aktualisieren" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Voice Chat einrichten</span>
+      <span class="np-help-module-title">Modpack aktualisieren</span>
     </summary>
 
     <div class="np-help-module-content">
       <div class="np-help-module-text">
         <!-- TEXTBEREICH -->
         <p>
-          NewPath nutzt eine Voice-Chat-Mod. Damit du andere Spieler hören kannst und selbst gehört wirst,
-          solltest du die Grundeinstellungen einmal prüfen.
+          Wenn im Discord eine neue NewPath-Version angekündigt wird, solltest du dein Modpack über CurseForge aktualisieren.
         </p>
 
-        <ul class="np-help-checklist">
-          <li>Mikrofon und Ausgabegerät auswählen.</li>
-          <li>Lautstärke einzelner Spieler prüfen.</li>
-          <li>Push-to-Talk oder Sprachaktivierung einstellen.</li>
-          <li>Gruppen erstellen oder bestehenden Gruppen beitreten.</li>
-          <li>Testen, ob dein Mikrofon im Spiel korrekt erkannt wird.</li>
-        </ul>
+        <ol class="np-help-checklist">
+          <li>Öffne CurseForge.</li>
+          <li>Gehe zu deinem NewPath-Profil.</li>
+          <li>Prüfe, ob ein Update verfügbar ist.</li>
+          <li>Klicke auf <strong>Aktualisieren</strong>.</li>
+          <li>Warte, bis CurseForge das Update vollständig installiert hat.</li>
+          <li>Starte das Modpack neu.</li>
+          <li>Prüfe beim Serverbeitritt, ob die Version nun passt.</li>
+        </ol>
+
       </div>
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
-          <p>Voice-Chat-Grafik später hier einfügen.</p>
+          <p>Screenshot: Update-Schaltfläche im CurseForge-Profil.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="reparieren" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Modpack reparieren</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Wenn Dateien fehlen, beschädigt sind oder das Modpack unerwartet Probleme macht, kann eine Reparatur über CurseForge helfen.
+        </p>
+
+        <ol class="np-help-checklist">
+          <li>Öffne CurseForge.</li>
+          <li>Gehe zu deinem NewPath-Profil.</li>
+          <li>Öffne die Profiloptionen über die drei Punkte.</li>
+          <li>Wähle die Reparaturfunktion, falls verfügbar.</li>
+          <li>Warte, bis CurseForge die Dateien geprüft hat.</li>
+          <li>Starte NewPath anschließend neu.</li>
+          <li>Prüfe, ob das Problem weiterhin besteht.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Profiloptionen / Reparaturfunktion in CurseForge.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="neu-installieren" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Modpack sauber neu installieren</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Eine saubere Neuinstallation kann helfen, wenn Reparatur und Update das Problem nicht lösen.
+        </p>
+
+        <ol class="np-help-checklist">
+          <li>Öffne CurseForge.</li>
+          <li>Wähle dein NewPath-Profil aus.</li>
+          <li>Öffne die Profiloptionen.</li>
+          <li>Lösche das bestehende Profil.</li>
+          <li>Installiere NewPath anschließend erneut über CurseForge.</li>
+          <li>Starte das Modpack neu.</li>
+          <li>Prüfe danach, ob der Fehler behoben ist.</li>
+        </ol>
+
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-danger">
+          <strong>!</strong>
+          <p>Sichere vorher persönliche Dateien wie Screenshots, Wegpunkte oder eigene Einstellungen, falls du sie behalten möchtest.</p>
+        </div>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Profil löschen und NewPath neu installieren.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="server-betreten" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Server betreten</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Für den Serverbeitritt brauchst du eine erfolgreiche Whitelist und die aktuell passende Modpack-Version.
+        </p>
+
+        <ol class="np-help-checklist">
+          <li>Starte NewPath über CurseForge.</li>
+          <li>Klicke im Hauptmenü auf <strong>Mehrspieler</strong>.</li>
+          <li>Füge den NewPath-Server hinzu, falls er noch nicht eingetragen ist.</li>
+          <li>Trage die Server-IP aus dem Discord ein.</li>
+          <li>Wähle den Server aus.</li>
+          <li>Klicke auf <strong>Beitreten</strong>.</li>
+          <li>Falls du nicht verbinden kannst, prüfe Whitelist und Modpack-Version.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Server in Minecraft hinzufügen und betreten.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="whitelist-zugang" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Whitelist und erster Zugang</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+        <p>
+          Ohne Whitelist ist kein Serverbeitritt möglich. Die Freischaltung läuft über den NewPath-Discord.
+        </p>
+
+        <ol class="np-help-checklist">
+          <li>Öffne den NewPath-Discord.</li>
+          <li>Gehe zum Whitelist-Bereich.</li>
+          <li>Stelle dort deine Whitelist-Anfrage.</li>
+          <li>Gib deinen Minecraft-Namen korrekt an.</li>
+          <li>Warte, bis das Team deine Anfrage bearbeitet hat.</li>
+          <li>Nach erfolgreicher Freischaltung kannst du dem Server beitreten.</li>
+        </ol>
+
+        <!-- HINWEISBOX -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Achte darauf, deinen Minecraft-Namen exakt richtig anzugeben. Schreibfehler können die Freischaltung verhindern.</p>
+        </div>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Whitelist-Bereich im Discord.</p>
         </div>
       </aside>
     </div>
