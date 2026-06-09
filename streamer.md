@@ -29,110 +29,98 @@ permalink: /streamer.html
     </p>
   </div>
 </section>
-
-<section class="np-page-section np-streamer-section">
+<section class="np-page-section np-streamer-section" id="streamer-infos">
   <div class="np-section-header">
-    <p class="np-eyebrow">Streamer</p>
-    <h1 class="np-title">Streamer-Übersicht</h1>
+    <p class="np-eyebrow">Streamer-Informationen</p>
+    <h1 class="np-title">Informationen für NewPath-Streamer</h1>
     <p class="np-lead">
-      Hier entstehen später einheitliche Karten für registrierte NewPath-Streamer.
-      Jede Karte nutzt denselben Aufbau wie Team- und Hilfekarten.
+      Hier findest du wichtige Hinweise zur Nutzung von NewPath-Inhalten in Streams, Videos,
+      Screenshots und Social-Media-Beiträgen.
     </p>
   </div>
 
-  <div class="np-card-grid np-card-grid-3 np-streamer-grid">
-    <article class="np-info-card np-streamer-card">
-      <div class="np-card-media np-streamer-avatar-placeholder">Bild</div>
-      <p class="np-card-kicker np-streamer-label">Streamer</p>
-      <h2 class="np-card-title">Name / Kanal</h2>
-      <p class="np-card-text">
-        Kurze Beschreibung, Streaming-Zeiten, bevorzugte Inhalte oder Rolle innerhalb von NewPath.
-      </p>
-      <a class="np-card-link" href="#" aria-disabled="true">Kanal später ergänzen</a>
-    </article>
+  <div class="np-faq-grid">
+    <details class="np-accordion np-faq-details">
+      <summary>Richtlinien & Medienübersicht</summary>
+      <div>
+        <p>
+          Streams, Screenshots und Videos zu <strong>NewPath – Echoes of the Wild</strong>
+          sind ausdrücklich erlaubt und erwünscht.
+        </p>
 
-    <article class="np-info-card np-streamer-card">
-      <div class="np-card-media np-streamer-avatar-placeholder">Bild</div>
-      <p class="np-card-kicker np-streamer-label">Streamer</p>
-      <h2 class="np-card-title">Name / Kanal</h2>
-      <p class="np-card-text">
-        Kurze Beschreibung, Streaming-Zeiten, bevorzugte Inhalte oder Rolle innerhalb von NewPath.
-      </p>
-      <a class="np-card-link" href="#" aria-disabled="true">Kanal später ergänzen</a>
-    </article>
+        <ul>
+          <li>Nenne das Projekt nach Möglichkeit als <strong>NewPath – Echoes of the Wild</strong> oder kurz <strong>NewPath</strong>.</li>
+          <li>Veröffentliche keine privaten Discord-Inhalte, Ticket-Inhalte oder interne Teamkommunikation.</li>
+          <li>Achte darauf, keine personenbezogenen Daten anderer Spieler sichtbar zu machen.</li>
+          <li>Nutze für Overlays, Panels oder Ankündigungen bevorzugt die unten bereitgestellten NewPath-Assets.</li>
+        </ul>
+      </div>
+    </details>
 
-    <article class="np-info-card np-streamer-card">
-      <div class="np-card-media np-streamer-avatar-placeholder">Bild</div>
-      <p class="np-card-kicker np-streamer-label">Streamer</p>
-      <h2 class="np-card-title">Name / Kanal</h2>
-      <p class="np-card-text">
-        Kurze Beschreibung, Streaming-Zeiten, bevorzugte Inhalte oder Rolle innerhalb von NewPath.
-      </p>
-      <a class="np-card-link" href="#" aria-disabled="true">Kanal später ergänzen</a>
-    </article>
+    <details class="np-accordion np-faq-details">
+      <summary>Einbindung auf Twitch</summary>
+      <div>
+        <p>
+          Du kannst die bereitgestellten Bilder zum Beispiel für Twitch-Panels, Szenen,
+          Overlays oder Stream-Ankündigungen verwenden.
+        </p>
+
+        <ol>
+          <li>Lade das gewünschte Bild aus dem Asset-Bereich herunter.</li>
+          <li>Öffne dein Twitch-Dashboard oder dein Streaming-Tool.</li>
+          <li>Füge das Bild als Panel, Browser-/Bildquelle oder Szenenelement ein.</li>
+          <li>Verlinke nach Möglichkeit auf den Discord oder die NewPath-Website.</li>
+          <li>Prüfe vor dem Stream, ob das Bild korrekt skaliert und nicht abgeschnitten ist.</li>
+        </ol>
+      </div>
+    </details>
   </div>
 </section>
 
-<section class="np-page-section np-streamer-section">
+<section class="np-page-section np-streamer-assets-section" id="streamer-assets">
   <div class="np-section-header">
-    <p class="np-eyebrow">Assets</p>
-    <h1 class="np-title">Streamer-Assets</h1>
+    <p class="np-eyebrow">Streamer-Assets</p>
+    <h1 class="np-title">Bilder und Assets für Streams</h1>
     <p class="np-lead">
-      Platzhalter für Grafiken, Hinweise und Materialien, die später für Streamer ergänzt werden.
+      Diese Bilder kannst du für Streams, Overlays, Panels, Ankündigungen oder Social Media verwenden.
     </p>
   </div>
 
-  <div class="np-card-grid np-card-grid-3 np-asset-grid">
-    <article class="np-info-card np-asset-card">
-      <span class="np-asset-icon">▣</span>
-      <h2 class="np-card-title">Overlay-Bilder</h2>
-      <p class="np-card-text">
-        Hier können später Bilder für Twitch, OBS oder Social Media verlinkt werden.
-      </p>
+  <div class="np-streamer-assets-grid">
+    <article class="np-streamer-asset-card">
+      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" alt="NewPath Streamer Banner">
+      <div class="np-streamer-asset-content">
+        <h2>Streamer Banner</h2>
+        <p>Banner für Twitch, Discord-Ankündigungen oder Social Media.</p>
+        <div class="np-streamer-asset-actions">
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" target="_blank" rel="noopener">Öffnen</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" download>Download</a>
+        </div>
+      </div>
     </article>
 
-    <article class="np-info-card np-asset-card">
-      <span class="np-asset-icon">✦</span>
-      <h2 class="np-card-title">Banner & Panels</h2>
-      <p class="np-card-text">
-        Platz für Streamer-Banner, Infografiken oder kleine Projektgrafiken.
-      </p>
+    <article class="np-streamer-asset-card">
+      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" alt="NewPath Twitch Panel">
+      <div class="np-streamer-asset-content">
+        <h2>Twitch Panel</h2>
+        <p>Panel-Grafik für Twitch-Kanalinformationen.</p>
+        <div class="np-streamer-asset-actions">
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" target="_blank" rel="noopener">Öffnen</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" download>Download</a>
+        </div>
+      </div>
     </article>
 
-    <article class="np-info-card np-asset-card">
-      <span class="np-asset-icon">⌁</span>
-      <h2 class="np-card-title">Hinweise zur Nutzung</h2>
-      <p class="np-card-text">
-        Kurze Regeln, wie NewPath-Bilder, Logos und Texte genutzt werden sollen.
-      </p>
+    <article class="np-streamer-asset-card">
+      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" alt="NewPath Overlay">
+      <div class="np-streamer-asset-content">
+        <h2>Overlay / Szene</h2>
+        <p>Grafik für Stream-Szenen oder Overlay-Elemente.</p>
+        <div class="np-streamer-asset-actions">
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" target="_blank" rel="noopener">Öffnen</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" download>Download</a>
+        </div>
+      </div>
     </article>
   </div>
-</section>
-
-<section class="np-page-section np-streamer-section">
-  <div class="np-section-header">
-    <p class="np-eyebrow">Hinweise</p>
-    <h1 class="np-title">Hinweise für Streams</h1>
-  </div>
-
-  <details class="np-accordion np-help-details">
-    <summary>Was darf gezeigt werden?</summary>
-    <div>
-      <p>
-        Grundsätzlich dürfen Streams und Screenshots rund um NewPath gezeigt werden,
-        solange keine privaten Daten, Team-Interna, Ticket-Inhalte oder vertraulichen
-        Gespräche sichtbar sind.
-      </p>
-    </div>
-  </details>
-
-  <details class="np-accordion np-help-details">
-    <summary>Wie werde ich als Streamer eingetragen?</summary>
-    <div>
-      <p>
-        Die Eintragung erfolgt später über das NewPath-Team. Geplant ist eine Übersicht
-        mit Namen, Kanal-Link und kurzer Beschreibung.
-      </p>
-    </div>
-  </details>
 </section>
