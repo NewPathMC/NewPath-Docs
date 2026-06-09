@@ -6,7 +6,7 @@ permalink: /modpack-hilfe.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 17:25 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:09 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-help">
@@ -325,9 +325,194 @@ permalink: /modpack-hilfe.html
   </details>
 </section>
 
-<section class="np-page-section np-help-section np-help-module-section" id="probleme-support">
+<section class="np-page-section np-help-section np-help-module-section" id="erste-schritte-server">
   <div class="np-section-header np-help-category-header">
     <p class="np-eyebrow">Kategorie 02</p>
+    <h1 class="np-title">Erste Schritte auf dem Server</h1>
+    <p class="np-lead">
+      Die wichtigsten Schritte nach dem ersten Join: Orientierung, Bauplatzsuche, Claims mit FTB Chunks
+      und Teamverwaltung über FTB Teams.
+    </p>
+  </div>
+
+  <details id="nach-dem-ersten-join" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Nach dem ersten Join</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Sieh dich am Spawn in Ruhe um.</li>
+          <li>Lies die wichtigsten Hinweise und Regeln.</li>
+          <li>Prüfe, ob deine Steuerung funktioniert.</li>
+          <li>Prüfe, ob der Voice Chat korrekt eingestellt ist.</li>
+          <li>Setze dir einen Wegpunkt am Spawn.</li>
+          <li>Suche dir anschließend einen passenden Ort für deinen Start.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Spawn-Bereich oder erste Orientierung nach dem Join.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="bauplatz-finden" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Einen passenden Bauplatz finden</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+        <!-- WICHTIGE HINWEISE -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Baue nicht direkt neben anderen Spielern, ohne dich vorher abzusprechen.</p>
+        </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Erkunde die Welt in Ruhe.</li>
+          <li>Achte auf bestehende Basen, Wege oder Community-Gebiete.</li>
+          <li>Suche dir einen Ort mit genug Platz für dein Projekt.</li>
+          <li>Halte ausreichend Abstand zu anderen Spielern.</li>
+          <li>Wenn du in der Nähe anderer bauen möchtest, sprich dich vorher ab.</li>
+          <li>Setze dir einen Wegpunkt, sobald du einen passenden Ort gefunden hast.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Beispiel für geeigneten Bauplatz oder Weltkarte.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="claims-ftb-chunks" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Claim-System mit FTB Chunks verstehen</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+        <!-- WICHTIGE HINWEISE -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Claims schützen dein Gebiet. Claime nur Bereiche, die du wirklich nutzt.</p>
+        </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li>Öffne dein Inventar.</li>
+          <li>Klicke oben links auf das FTB-Chunks-/Karten-Symbol.</li>
+          <li>Es öffnet sich die FTB-Chunks-Karte.</li>
+          <li>Suche auf der Karte den Bereich, den du schützen möchtest.</li>
+          <li>Klicke mit Linksklick auf einen Chunk, um ihn zu claimen.</li>
+          <li>Halte Linksklick gedrückt und ziehe über mehrere Chunks, wenn du direkt mehrere Bereiche claimen möchtest.</li>
+          <li>Claimed Chunks werden farblich auf der Karte markiert.</li>
+          <li>Prüfe, ob deine Base, dein Lager und wichtige Eingänge vollständig im Claim liegen.</li>
+          <li>Mit Rechtsklick auf einen bereits geclaimten Chunk kannst du den Claim wieder entfernen.</li>
+          <li>Halte Rechtsklick gedrückt und ziehe über mehrere Chunks, wenn du mehrere Claims wieder entfernen möchtest.</li>
+        </ol>
+
+        <p>
+          Claims schützen dein Gebiet vor fremdem Abbauen, Platzieren und ungewollten Eingriffen. Öffentliche Wege, Spawn-Bereiche, Nachbarbasen oder Community-Flächen sollten nicht blockiert werden.
+        </p>
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: FTB-Chunks-Karte mit geclaimten Chunks.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+  <details id="ftb-teams" class="np-accordion np-help-details np-help-module">
+    <summary>
+      <span class="np-help-module-icon" aria-hidden="true"></span>
+      <span class="np-help-module-title">Team mit FTB Teams erstellen oder beitreten</span>
+    </summary>
+
+    <div class="np-help-module-content">
+      <div class="np-help-module-text">
+        <!-- TEXTBEREICH -->
+
+        <!-- WICHTIGE HINWEISE -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Teamrechte sollten nur an Personen vergeben werden, denen du vertraust.</p>
+        </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <ol class="np-help-checklist">
+          <li><strong>FTB-Teams-Menü öffnen:</strong></li>
+          <li>Öffne dein Inventar.</li>
+          <li>Klicke oben links auf das FTB-Teams-Symbol bzw. den Team-Button in der FTB-Sidebar.</li>
+          <li>Es öffnet sich das FTB-Teams-Menü.</li>
+          <li><strong>Eigenes Team erstellen:</strong></li>
+          <li>Öffne das FTB-Teams-Menü.</li>
+          <li>Klicke auf Team erstellen oder eine ähnlich benannte Schaltfläche.</li>
+          <li>Gib deinem Team einen passenden Namen.</li>
+          <li>Bestätige die Erstellung.</li>
+          <li>Prüfe anschließend, ob dein Team im Menü angezeigt wird.</li>
+          <li><strong>Spieler einladen:</strong></li>
+          <li>Öffne dein FTB-Teams-Menü.</li>
+          <li>Wähle dein Team aus.</li>
+          <li>Öffne den Bereich für Mitglieder, Einladungen oder Spieler einladen.</li>
+          <li>Wähle den gewünschten Spieler aus oder trage seinen Namen ein, falls das Menü dies verlangt.</li>
+          <li>Sende die Einladung ab.</li>
+          <li>Warte, bis der Spieler die Einladung annimmt.</li>
+          <li><strong>Einem Team beitreten:</strong></li>
+          <li>Öffne dein Inventar.</li>
+          <li>Klicke oben links auf das FTB-Teams-Symbol.</li>
+          <li>Prüfe im FTB-Teams-Menü, ob eine Einladung angezeigt wird.</li>
+          <li>Wähle die Einladung aus.</li>
+          <li>Klicke auf Annehmen.</li>
+          <li>Prüfe danach, ob du im richtigen Team bist.</li>
+          <li><strong>Nach dem Erstellen oder Beitreten:</strong></li>
+          <li>Öffne anschließend die FTB-Chunks-Karte.</li>
+          <li>Prüfe, ob eure Claims korrekt angezeigt werden.</li>
+          <li>Sprecht im Team ab, wer welche Bereiche nutzt.</li>
+          <li>Vergib Rechte und Zugriff nur an Spieler, denen du vertraust.</li>
+        </ol>
+
+      </div>
+
+      <aside class="np-help-module-media">
+        <!-- BILDBEREICH -->
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: FTB-Teams-Menü mit Team erstellen, Einladungen oder Mitgliederbereich.</p>
+        </div>
+      </aside>
+    </div>
+  </details>
+</section>
+
+<section class="np-page-section np-help-section np-help-module-section" id="probleme-support">
+  <div class="np-section-header np-help-category-header">
+    <p class="np-eyebrow">Kategorie 03</p>
     <h1 class="np-title">Probleme und Support</h1>
     <p class="np-lead">
       Hilfe bei Startproblemen, Abstürzen, Voice-Chat-Problemen und typischen Fragen zum Supportweg.
@@ -435,7 +620,7 @@ permalink: /modpack-hilfe.html
 
 <section class="np-page-section np-help-section np-help-module-section" id="mod-anleitungen">
   <div class="np-section-header np-help-category-header">
-    <p class="np-eyebrow">Kategorie 03</p>
+    <p class="np-eyebrow">Kategorie 04</p>
     <h1 class="np-title">Mod Anleitungen</h1>
     <p class="np-lead">
       Platz für spätere Kurzguides zu einzelnen Mods, wichtigen Menüs, Tastenkürzeln und wiederkehrenden
