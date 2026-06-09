@@ -4646,4 +4646,83 @@ img {
       inset 0 0 30px rgba(0, 230, 246, 0.035) !important;
   }
 }
+/* =========================================================
+   Easter Egg: Geheime NewPath-Ente
+   ========================================================= */
 
+.np-duck-easteregg {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-left: 0.15rem;
+  border-radius: 999px;
+  color: var(--np-gold-soft) !important;
+  background: rgba(236, 183, 110, 0.06);
+  border: 1px solid rgba(236, 183, 110, 0.18);
+  font-size: 0.88rem !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  opacity: 0.72;
+  transform: translateY(-0.02rem);
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.np-duck-easteregg:hover {
+  opacity: 1;
+  transform: translateY(-0.12rem) rotate(-8deg) scale(1.08);
+  background: rgba(236, 183, 110, 0.12);
+  border-color: rgba(236, 183, 110, 0.42);
+  box-shadow:
+    0 0 16px rgba(236, 183, 110, 0.14),
+    0 0 20px rgba(0, 230, 246, 0.06);
+}
+
+.np-duck-easteregg:active {
+  transform: translateY(0) rotate(4deg) scale(0.96);
+}
+
+.np-duck-section {
+  text-align: center;
+}
+
+.np-duck-message {
+  max-width: 48rem;
+  margin: 1.25rem auto 0;
+  padding: clamp(1.2rem, 2vw, 2rem);
+  border: 1px solid rgba(236, 183, 110, 0.28);
+  border-radius: var(--np-radius);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(236, 183, 110, 0.10), transparent 18rem),
+    radial-gradient(circle at 50% 100%, rgba(0, 230, 246, 0.08), transparent 18rem),
+    linear-gradient(180deg, rgba(8, 29, 38, 0.86), rgba(4, 16, 22, 0.92));
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.26),
+    inset 0 0 30px rgba(0, 230, 246, 0.025);
+}
+
+.np-duck-big {
+  margin: 0 0 0.65rem !important;
+  font-size: clamp(3rem, 6vw, 5rem) !important;
+  line-height: 1 !important;
+  filter: drop-shadow(0 0 18px rgba(236, 183, 110, 0.18));
+}
+
+.np-duck-message h2 {
+  margin: 0 0 0.75rem !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.5rem, 2vw, 2.1rem) !important;
+}
+
+.np-duck-message p:not(.np-duck-big) {
+  max-width: 36rem;
+  margin: 0 auto !important;
+  color: rgba(247, 236, 220, 0.88) !important;
+  line-height: 1.65 !important;
+}
