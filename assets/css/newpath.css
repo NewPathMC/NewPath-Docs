@@ -4830,4 +4830,51 @@ img {
       drop-shadow(0 0 8px rgba(0, 230, 246, 0.20))
       drop-shadow(0 10px 16px rgba(0, 0, 0, 0.30)) !important;
   }
+}/* =========================================================
+   ECHO: Glow wirklich auf allen ECHO-Bildern
+   Muss ganz unten stehen, damit ältere Bildregeln überschrieben werden.
+   ========================================================= */
+
+/* Unterseiten-ECHO + Startseiten-ECHO */
+body .echo-page-box .echo-page-image img,
+body .echo-page-box-team .echo-page-image img,
+body .echo-page-box-philosophy .echo-page-image img,
+body .echo-page-box-faq .echo-page-image img,
+body .echo-page-box-rules .echo-page-image img,
+body .echo-page-box-streamer .echo-page-image img,
+body .echo-page-box-help .echo-page-image img,
+body .echo-page-box-duck .echo-page-image img,
+body .np-pathfinder-image img,
+body .np-echo-image-wrap img {
+  filter:
+    drop-shadow(0 0 10px rgba(0, 230, 246, 0.32))
+    drop-shadow(0 0 24px rgba(0, 230, 246, 0.18))
+    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
+}
+
+/* Fallback: jedes Bild aus dem echo-Ordner */
+body img[src*="/assets/images/echo/"] {
+  filter:
+    drop-shadow(0 0 10px rgba(0, 230, 246, 0.32))
+    drop-shadow(0 0 24px rgba(0, 230, 246, 0.18))
+    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
+}
+
+/* Entenseite etwas wärmer */
+body .echo-page-box-duck .echo-page-image img {
+  filter:
+    drop-shadow(0 0 10px rgba(0, 230, 246, 0.26))
+    drop-shadow(0 0 24px rgba(236, 183, 110, 0.22))
+    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
+}
+
+@media (max-width: 66.499rem) {
+  body .echo-page-box .echo-page-image img,
+  body img[src*="/assets/images/echo/"],
+  body .np-pathfinder-image img,
+  body .np-echo-image-wrap img {
+    filter:
+      drop-shadow(0 0 8px rgba(0, 230, 246, 0.22))
+      drop-shadow(0 10px 16px rgba(0, 0, 0, 0.32)) !important;
+  }
 }
