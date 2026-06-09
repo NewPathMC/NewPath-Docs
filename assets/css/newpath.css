@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v24
+   Konsolidierte CSS-Version v25
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -5834,6 +5834,185 @@ img {
 
   .np-help-image-placeholder {
     min-height: 12rem;
+  }
+}
+
+/* =========================================================
+   24. Modpack-Hilfe: FAQ-ähnliche Akkordeon-Optik
+   Gleicht die Hilfe-Akkordeons optisch stärker an die FAQ an.
+   Die zweispaltige Modulstruktur im geöffneten Zustand bleibt erhalten.
+   ========================================================= */
+
+.np-help-module-section {
+  padding-top: clamp(1.15rem, 1.65vw, 1.65rem) !important;
+  padding-bottom: clamp(1.15rem, 1.65vw, 1.65rem) !important;
+}
+
+.np-help-module-section .np-section-header {
+  margin-bottom: 1.05rem !important;
+}
+
+.np-help-module-section .np-section-header::after {
+  margin-top: 0.95rem !important;
+}
+
+/* Akkordeons enger setzen, ähnlich FAQ */
+.np-help-module-section .np-help-module {
+  margin: 0.72rem 0 !important;
+  border-radius: 0.58rem !important;
+  border: 1px solid rgba(72, 122, 146, 0.40) !important;
+  background:
+    linear-gradient(180deg, rgba(10, 36, 47, 0.72), rgba(5, 20, 27, 0.82)) !important;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.16),
+    inset 0 0 22px rgba(0, 230, 246, 0.018) !important;
+  overflow: hidden !important;
+}
+
+/* Kopfbereich wie FAQ: kompakter, ruhiger, ohne große Badge-Wirkung */
+.np-help-module-section .np-help-module summary {
+  min-height: 3.35rem !important;
+  display: grid !important;
+  grid-template-columns: 1.35rem minmax(0, 1fr) !important;
+  gap: 0.62rem !important;
+  align-items: center !important;
+  padding: 0.78rem 1rem !important;
+  border-left: 0 !important;
+  background:
+    linear-gradient(90deg, rgba(17, 46, 64, 0.58), rgba(5, 20, 27, 0.72)) !important;
+  border-bottom: 0 !important;
+  cursor: pointer !important;
+}
+
+/* kein zusätzlicher rechter Badge/Meta-Bereich */
+.np-help-module-section .np-help-module summary::after,
+.np-help-module-section .np-help-module-meta {
+  display: none !important;
+}
+
+/* Kleiner FAQ-ähnlicher Plus-Kreis statt großer Kugel */
+.np-help-module-section .np-help-module-icon {
+  width: 1.08rem !important;
+  height: 1.08rem !important;
+  min-width: 1.08rem !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #001221 !important;
+  background: var(--np-cyan) !important;
+  border: 0 !important;
+  box-shadow:
+    0 0 12px rgba(0, 230, 246, 0.22),
+    inset 0 -0.12rem 0.25rem rgba(0, 0, 0, 0.18) !important;
+}
+
+.np-help-module-section .np-help-module-icon::before {
+  content: "+" !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #001221 !important;
+  box-shadow: none !important;
+  font-family: var(--np-font-label);
+  font-size: 0.78rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+}
+
+.np-help-module-section .np-help-module[open] .np-help-module-icon::before {
+  content: "−" !important;
+  transform: translateY(-0.02rem);
+}
+
+/* Titel wie FAQ: kleiner, klarer, gold */
+.np-help-module-section .np-help-module-title {
+  min-width: 0 !important;
+  padding-right: 0 !important;
+  color: var(--np-gold-soft) !important;
+  font-family: var(--np-font-heading);
+  font-size: clamp(0.95rem, 1vw, 1.08rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.18 !important;
+  text-shadow: none !important;
+}
+
+/* Geöffnet: dezente Hervorhebung, aber gleiche Grundoptik */
+.np-help-module-section .np-help-module[open] {
+  border-color: rgba(0, 230, 246, 0.48) !important;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.20),
+    inset 0 0 24px rgba(0, 230, 246, 0.025) !important;
+}
+
+.np-help-module-section .np-help-module[open] summary {
+  background:
+    linear-gradient(90deg, rgba(0, 230, 246, 0.11), rgba(17, 46, 64, 0.58), rgba(5, 20, 27, 0.72)) !important;
+  border-bottom: 1px solid rgba(72, 122, 146, 0.24) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .np-help-module-section .np-help-module summary:hover {
+    background:
+      linear-gradient(90deg, rgba(0, 230, 246, 0.13), rgba(17, 46, 64, 0.60), rgba(5, 20, 27, 0.74)) !important;
+  }
+}
+
+/* Inhalt bleibt zweispaltig, aber etwas kompakter */
+.np-help-module-section .np-help-module-content {
+  grid-template-columns: minmax(0, 0.54fr) minmax(300px, 0.46fr) !important;
+  gap: clamp(0.9rem, 1.45vw, 1.35rem) !important;
+  padding: clamp(0.95rem, 1.35vw, 1.2rem) !important;
+}
+
+.np-help-module-section .np-help-module-text {
+  gap: 0.78rem !important;
+}
+
+.np-help-module-section .np-help-module-text p {
+  font-size: 0.96rem !important;
+  line-height: 1.62 !important;
+}
+
+.np-help-module-section .np-help-module .np-help-checklist li {
+  margin: 0.28rem 0 !important;
+  line-height: 1.5 !important;
+}
+
+.np-help-module-section .np-help-callout {
+  margin-top: 0.1rem !important;
+  padding: 0.74rem 0.82rem !important;
+}
+
+/* Bildplatzhalter etwas ruhiger, damit der geöffnete Bereich nicht zu wuchtig wirkt */
+.np-help-module-section .np-help-image-placeholder {
+  min-height: 13.2rem !important;
+}
+
+@media (max-width: 66.499rem) {
+  .np-help-module-section .np-help-module {
+    margin: 0.58rem 0 !important;
+  }
+
+  .np-help-module-section .np-help-module summary {
+    min-height: 3.25rem !important;
+    grid-template-columns: 1.3rem minmax(0, 1fr) !important;
+    gap: 0.55rem !important;
+    padding: 0.72rem 0.82rem !important;
+  }
+
+  .np-help-module-section .np-help-module-title {
+    font-size: 0.94rem !important;
+  }
+
+  .np-help-module-section .np-help-module-content {
+    grid-template-columns: 1fr !important;
+    padding: 0.85rem !important;
+  }
+
+  .np-help-module-section .np-help-image-placeholder {
+    min-height: 11rem !important;
   }
 }
 
