@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v21
+   Konsolidierte CSS-Version v22
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -4866,17 +4866,14 @@ img {
 
 /* =========================================================
    21. Mobile Konsolidierung
-   Ziel:
-   - Desktop-Regeln unverändert lassen
-   - Mobile Header/Footer stabil und fixiert
-   - Mobile Navigation als sauberes Panel
-   - Startseite mobil kontrolliert stapeln
-   - Unterseiten-ECHO mobil lesbar darstellen
+   Just-the-Docs Mobile nutzt sichtbar .site-header/.site-title.
+   Deshalb werden Header und Menü hier über site-header UND
+   main-header abgesichert. Desktop bleibt unverändert.
    ========================================================= */
 
 @media (max-width: 66.499rem) {
   :root {
-    --np-mobile-header-height: 4.25rem;
+    --np-mobile-header-height: 4.35rem;
     --np-mobile-footer-height: 4.35rem;
     --np-footer-height: var(--np-mobile-footer-height);
     --np-page-left: 0.85rem;
@@ -4903,10 +4900,11 @@ img {
     background-position: center top !important;
   }
 
-  /* -----------------------------
-     Mobile Header
-     ----------------------------- */
+  /* ---------------------------------------------------------
+     Mobile Header: tatsächlichen JTD-Header fixieren
+     --------------------------------------------------------- */
 
+  .site-header,
   .main-header {
     position: fixed !important;
     top: 0 !important;
@@ -4926,31 +4924,47 @@ img {
     justify-items: center !important;
     background:
       linear-gradient(180deg, rgba(0, 9, 15, 0.99), rgba(0, 18, 33, 0.97)) !important;
-    border-bottom: 1px solid rgba(0, 230, 246, 0.18) !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.22) !important;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36) !important;
-    overflow: visible !important;
+    overflow: hidden !important;
   }
 
+  .site-header::before,
+  .site-header::after,
   .main-header::before,
   .main-header::after {
     display: none !important;
   }
 
-  .main-header .site-title {
+  /* Desktop-Custom-Elemente mobil aus dem Header raus */
+  .main-header .np-topbar-brand,
+  .main-header .np-top-nav,
+  .main-header .search,
+  .main-header .aux-nav {
+    display: none !important;
+  }
+
+  /* Titel exakt in der Mitte des mobilen Headers */
+  .site-header .site-title,
+  .main-header .site-title,
+  .site-title {
     grid-column: 2 !important;
     position: static !important;
     transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 0.2rem !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: auto !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
     color: var(--np-gold-soft) !important;
+    background: transparent !important;
+    border: 0 !important;
     font-family: var(--np-font-heading);
-    font-size: 0.88rem !important;
+    font-size: 0.92rem !important;
     font-weight: 950 !important;
     line-height: 1.08 !important;
     text-align: center !important;
@@ -4960,13 +4974,15 @@ img {
     visibility: visible !important;
   }
 
-  .main-header .site-title::after {
+  .site-header .site-title::after,
+  .main-header .site-title::after,
+  .site-title::after {
     content: "Echoes of the Wild";
     display: block !important;
-    margin-top: 0.16rem !important;
+    margin-top: 0.18rem !important;
     color: var(--np-cyan) !important;
     font-family: var(--np-font-label);
-    font-size: 0.50rem !important;
+    font-size: 0.52rem !important;
     font-weight: 950 !important;
     letter-spacing: 0.095em !important;
     line-height: 1.1 !important;
@@ -4974,7 +4990,10 @@ img {
     text-transform: uppercase !important;
   }
 
-  .main-header .site-button {
+  /* Burger exakt rechts im Header, nicht im Content */
+  .site-header .site-button,
+  .main-header .site-button,
+  .site-button {
     grid-column: 3 !important;
     position: static !important;
     transform: none !important;
@@ -4989,21 +5008,20 @@ img {
     justify-content: center !important;
     color: var(--np-cyan) !important;
     background: rgba(0, 230, 246, 0.055) !important;
-    border: 1px solid rgba(0, 230, 246, 0.18) !important;
-    border-radius: 0 !important;
-    box-shadow: inset 0 0 16px rgba(0, 230, 246, 0.035) !important;
+    border: 1px solid rgba(0, 230, 246, 0.22) !important;
+    border-radius: 0.2rem !important;
+    box-shadow: inset 0 0 16px rgba(0, 230, 246, 0.04) !important;
   }
 
-  .main-header .search,
-  .main-header .aux-nav,
-  .main-header .np-topbar-brand,
-  .main-header .np-top-nav {
-    display: none !important;
+  .site-header .site-button:hover,
+  .main-header .site-button:hover,
+  .site-button:hover {
+    background: rgba(0, 230, 246, 0.10) !important;
   }
 
-  /* -----------------------------
-     Mobile Navigation
-     ----------------------------- */
+  /* ---------------------------------------------------------
+     Mobile Navigation Panel
+     --------------------------------------------------------- */
 
   .site-nav {
     position: fixed !important;
@@ -5014,6 +5032,7 @@ img {
     width: 100vw !important;
     max-height: calc(100vh - var(--np-mobile-header-height) - var(--np-mobile-footer-height)) !important;
     overflow-y: auto !important;
+    margin: 0 !important;
     padding: 0.85rem 0.95rem 1rem !important;
     background:
       radial-gradient(circle at 100% 0%, rgba(0, 230, 246, 0.08), transparent 14rem),
@@ -5097,18 +5116,9 @@ img {
     font-size: 0.72rem !important;
   }
 
-  .site-nav .search-input:focus,
-  .site-nav .search-input:focus-visible,
-  .site-nav .search-input-wrap:focus-within {
-    outline: none !important;
-    box-shadow:
-      0 0 0 1px rgba(0, 230, 246, 0.42),
-      0 0 18px rgba(0, 230, 246, 0.10) !important;
-  }
-
-  /* -----------------------------
+  /* ---------------------------------------------------------
      Mobile Layout allgemein
-     ----------------------------- */
+     --------------------------------------------------------- */
 
   .main-content {
     width: 100% !important;
@@ -5138,9 +5148,9 @@ img {
     overflow-x: hidden !important;
   }
 
-  /* -----------------------------
+  /* ---------------------------------------------------------
      Mobile Startseite
-     ----------------------------- */
+     --------------------------------------------------------- */
 
   .np-home-v2 .np-hero,
   .np-hero {
@@ -5163,11 +5173,6 @@ img {
     text-align: center !important;
   }
 
-  .np-kicker,
-  .np-section-kicker {
-    text-align: center !important;
-  }
-
   .np-home-v2 .np-hero h1,
   .np-hero h1 {
     margin-bottom: 0.65rem !important;
@@ -5184,9 +5189,6 @@ img {
     text-align: left !important;
     font-size: 0.84rem !important;
     line-height: 1.48 !important;
-    box-shadow:
-      inset 0 0 0 1px rgba(72, 122, 146, 0.28),
-      0 12px 28px rgba(0, 0, 0, 0.22) !important;
   }
 
   .np-home-v2 .np-hero-logo,
@@ -5282,13 +5284,21 @@ img {
     font-size: 0.62rem !important;
   }
 
-  /* ECHO-Pfadfinder / Schnellzugriffe mobil */
   .np-pathfinder,
-  .np-home-v2 .np-pathfinder {
+  .np-home-v2 .np-pathfinder,
+  .np-history-panel,
+  .np-home-v2 .np-history-panel,
+  .np-about-panel-v2,
+  .np-server-brief-v2 {
     width: 100% !important;
     max-width: 100% !important;
-    display: grid !important;
     grid-template-columns: 1fr !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .np-pathfinder {
+    display: grid !important;
     gap: 1rem !important;
     margin: 0 0 1rem !important;
     padding: 1rem !important;
@@ -5389,26 +5399,15 @@ img {
     text-align: right !important;
   }
 
-  .np-history-panel,
-  .np-home-v2 .np-history-panel,
-  .np-about-panel-v2,
-  .np-server-brief-v2 {
-    width: 100% !important;
-    max-width: 100% !important;
-    grid-template-columns: 1fr !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
   .np-history-grid,
   .np-server-brief-grid,
   .np-card-grid-guides {
     grid-template-columns: 1fr !important;
   }
 
-  /* -----------------------------
+  /* ---------------------------------------------------------
      Mobile Unterseiten / ECHO
-     ----------------------------- */
+     --------------------------------------------------------- */
 
   .echo-page-box,
   .echo-page-box-team,
@@ -5517,9 +5516,9 @@ img {
     gap: 0.8rem !important;
   }
 
-  /* -----------------------------
+  /* ---------------------------------------------------------
      Mobile Footer
-     ----------------------------- */
+     --------------------------------------------------------- */
 
   .main-content .site-footer,
   .main-content > footer,
@@ -5528,8 +5527,9 @@ img {
     display: none !important;
   }
 
-  #np-global-window-footer,
-  .np-site-footer#np-global-window-footer {
+  body #np-global-window-footer,
+  body footer#np-global-window-footer,
+  body .np-site-footer#np-global-window-footer {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -5552,7 +5552,7 @@ img {
     box-shadow: 0 -0.75rem 2rem rgba(0, 0, 0, 0.42) !important;
   }
 
-  #np-global-window-footer .np-site-footer-inner {
+  body #np-global-window-footer .np-site-footer-inner {
     width: 100% !important;
     height: var(--np-mobile-footer-height) !important;
     padding: 0.45rem 0.75rem !important;
@@ -5564,14 +5564,16 @@ img {
     text-align: center !important;
   }
 
-  .np-site-footer-brand {
+  body #np-global-window-footer .np-site-footer-brand {
     width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
   }
 
-  .np-site-footer-brand strong {
+  body #np-global-window-footer .np-site-footer-brand strong {
     display: block !important;
     color: var(--np-gold-soft) !important;
     font-size: 0.62rem !important;
@@ -5579,7 +5581,7 @@ img {
     text-align: center !important;
   }
 
-  .np-site-footer-brand span {
+  body #np-global-window-footer .np-site-footer-brand span {
     display: block !important;
     color: rgba(235, 246, 248, 0.72) !important;
     font-size: 0.52rem !important;
@@ -5587,7 +5589,7 @@ img {
     text-align: center !important;
   }
 
-  .np-site-footer-links {
+  body #np-global-window-footer .np-site-footer-links {
     width: 100% !important;
     display: flex !important;
     align-items: center !important;
@@ -5598,18 +5600,21 @@ img {
     white-space: nowrap !important;
   }
 
-  .np-site-footer-links a:not(.np-duck-easteregg):not([href*="discord"]) {
+  body #np-global-window-footer .np-site-footer-links a:not(.np-duck-easteregg):not([href*="discord"]) {
     display: none !important;
   }
 
-  .np-site-footer-links a,
-  .np-site-footer-links span {
+  body #np-global-window-footer .np-site-footer-links a,
+  body #np-global-window-footer .np-site-footer-links span {
+    display: inline-flex !important;
+    color: rgba(235, 246, 248, 0.86) !important;
     font-size: 0.56rem !important;
     line-height: 1.2 !important;
     text-align: center !important;
+    text-decoration: none !important;
   }
 
-  .np-duck-easteregg {
+  body #np-global-window-footer .np-duck-easteregg {
     display: inline-flex !important;
     margin: 0 !important;
     opacity: 0.78 !important;
