@@ -5650,4 +5650,186 @@ img {
     text-align: left !important;
   }
 }
+/* =========================================================
+   22. Mobile Header/Footer Failsafe
+   Eigener NewPath-Mobile-Header und eigener Mobile-Footer.
+   Umgeht Just-the-Docs-Mobile-Probleme vollständig.
+   ========================================================= */
 
+#np-mobile-header,
+#np-mobile-footer {
+  display: none;
+}
+
+@media (max-width: 66.499rem) {
+  :root {
+    --np-mobile-header-height: 4.35rem;
+    --np-mobile-footer-height: 4.2rem;
+    --np-footer-height: var(--np-mobile-footer-height);
+  }
+
+  body {
+    padding-top: var(--np-mobile-header-height) !important;
+    padding-bottom: var(--np-mobile-footer-height) !important;
+  }
+
+  /* Alte/Theme-Mobile-Header auf Mobile ausblenden */
+  .site-header,
+  .main-header {
+    display: none !important;
+  }
+
+  /* Eigener Mobile Header */
+  #np-mobile-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100000;
+    height: var(--np-mobile-header-height);
+    display: grid;
+    grid-template-columns: 3.2rem minmax(0, 1fr) 3.2rem;
+    align-items: center;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 15, 0.99), rgba(0, 18, 33, 0.97));
+    border-bottom: 1px solid rgba(0, 230, 246, 0.22);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36);
+  }
+
+  .np-mobile-brand {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--np-gold-soft) !important;
+    text-decoration: none !important;
+    text-align: center;
+    font-family: var(--np-font-heading);
+    font-weight: 950;
+    line-height: 1.05;
+  }
+
+  .np-mobile-brand span {
+    font-size: 0.92rem;
+  }
+
+  .np-mobile-brand small {
+    margin-top: 0.18rem;
+    color: var(--np-cyan);
+    font-size: 0.52rem;
+    font-weight: 950;
+    letter-spacing: 0.095em;
+    text-transform: uppercase;
+  }
+
+  .np-mobile-menu-button {
+    grid-column: 3;
+    width: 2.85rem;
+    height: 2.85rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--np-cyan);
+    background: rgba(0, 230, 246, 0.055);
+    border: 1px solid rgba(0, 230, 246, 0.22);
+    border-radius: 0.2rem;
+    font-size: 1.15rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .np-mobile-menu {
+    position: fixed;
+    top: var(--np-mobile-header-height);
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    display: none;
+    padding: 0.85rem 0.95rem 1rem;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(0, 230, 246, 0.08), transparent 14rem),
+      linear-gradient(180deg, rgba(0, 9, 15, 0.99), rgba(0, 18, 33, 0.97));
+    border-bottom: 1px solid rgba(0, 230, 246, 0.18);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
+  }
+
+  #np-mobile-header.is-open .np-mobile-menu {
+    display: grid;
+    gap: 0.36rem;
+  }
+
+  .np-mobile-menu a {
+    min-height: 2.35rem;
+    display: flex;
+    align-items: center;
+    padding: 0.58rem 0.72rem;
+    border-radius: 0.58rem;
+    color: rgba(247, 236, 220, 0.90) !important;
+    background: rgba(5, 20, 27, 0.44);
+    border: 1px solid rgba(72, 122, 146, 0.18);
+    font-family: var(--np-font-label);
+    font-size: 0.78rem;
+    font-weight: 900;
+    text-decoration: none !important;
+  }
+
+  .np-mobile-menu a:hover {
+    color: var(--np-gold-soft) !important;
+    background: rgba(236, 183, 110, 0.10);
+    border-color: rgba(236, 183, 110, 0.30);
+    box-shadow: inset 3px 0 0 rgba(0, 230, 246, 0.70);
+  }
+
+  /* Alten Footer mobil ausblenden */
+  #np-global-window-footer,
+  .site-footer,
+  .main-content .site-footer,
+  .main-content > footer,
+  .main-content p:has(a[href*="just-the-docs"]) {
+    display: none !important;
+  }
+
+  /* Eigener Mobile Footer */
+  #np-mobile-footer {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 100000;
+    height: var(--np-mobile-footer-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.28rem;
+    padding: 0.45rem 0.75rem;
+    text-align: center;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 18, 0.97), rgba(0, 13, 24, 0.99));
+    border-top: 1px solid rgba(0, 230, 246, 0.18);
+    box-shadow: 0 -0.75rem 2rem rgba(0, 0, 0, 0.42);
+  }
+
+  #np-mobile-footer strong {
+    color: var(--np-gold-soft);
+    font-size: 0.62rem;
+    line-height: 1.1;
+  }
+
+  #np-mobile-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+
+  #np-mobile-footer a,
+  #np-mobile-footer span {
+    color: rgba(235, 246, 248, 0.86) !important;
+    font-size: 0.56rem;
+    line-height: 1.2;
+    text-decoration: none !important;
+  }
+
+  #np-mobile-footer a:hover {
+    color: var(--np-cyan) !important;
+  }
+}
