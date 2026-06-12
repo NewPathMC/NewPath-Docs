@@ -23,21 +23,20 @@ permalink: /
       <br>
       Kein klassisches „Everything-Pack“, sondern eine lebendige Welt mit klarer
       Richtung, Atmosphäre und gemeinschaftlichem Fortschritt.
-    </div>
+      <div class="np-hero-cta-row">
+        <button
+          class="np-copy-ip-button"
+          type="button"
+          data-server-ip="DEINE-SERVER-IP-HIER"
+          onclick="navigator.clipboard.writeText(this.dataset.serverIp); this.querySelector('.np-copy-ip-button-label').textContent='IP kopiert'; setTimeout(() => this.querySelector('.np-copy-ip-button-label').textContent='Server-IP kopieren', 1800);">
+          <span class="np-copy-ip-button-icon" aria-hidden="true"></span>
+          <span class="np-copy-ip-button-label">Server-IP kopieren</span>
+        </button>
+      </div>
 
-    <div class="np-hero-actions np-hero-actions-server">
-      <button
-        class="np-hero-button np-hero-button-primary np-hero-copy-ip"
-        type="button"
-        data-server-ip="DEINE-SERVER-IP-HIER"
-        onclick="navigator.clipboard.writeText(this.dataset.serverIp); this.querySelector('.np-hero-button-label').textContent='IP kopiert'; setTimeout(() => this.querySelector('.np-hero-button-label').textContent='Server-IP kopieren', 1800);">
-        <span class="np-hero-button-icon" aria-hidden="true"></span>
-        <span class="np-hero-button-label">Server-IP kopieren</span>
-      </button>
     </div>
-
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 12.06.2026 13:51 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:29 Uhr</p>
 <!-- AUTO_UPDATED_END -->
   </div>
 
