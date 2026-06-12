@@ -55,7 +55,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Gründer - Projektleitung - Entwicklung/ Technik</p>
       <h2 class="np-card-title">M4ximum_</h2>
       <p class="np-card-text">
-        Hallo hier könnte eine wichtige Beschreibung stehen.
+        Tut was er soll, obwohl er keinen Plan hat.
       </p>
     </article>
 
@@ -69,28 +69,44 @@ permalink: /team.html
           loading="lazy"
           decoding="async">
       </div>
-      <p class="np-card-kicker np-team-role">Gründer - Projektleitung</p>
+      <p class="np-card-kicker np-team-role">Gründer - Projektleitung - Promotion</p>
       <h2 class="np-card-title">SarahdasFaultier</h2>
       <p class="np-card-text">
-        Hallo hier könnte eine wichtige Beschreibung stehen.
+        Hat wohl einen Gottkomplex.
       </p>
     </article>
 
     <article class="np-info-card np-team-card">
-      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <div class="np-card-media np-team-image">
+        <img
+          src="{{ site.baseurl }}/assets/images/outi.png"
+          alt="Sarah"
+          width="512"
+          height="512"
+          loading="lazy"
+          decoding="async">
+      </div>
       <p class="np-card-kicker np-team-role">Gründer</p>
       <h2 class="np-card-title">OutTerror</h2>
       <p class="np-card-text">
-        Hallo hier könnte eine wichtige Beschreibung stehen.
+        Ist einfach da, manchmal.
       </p>
     </article>
 
     <article class="np-info-card np-team-card">
-      <div class="np-card-media np-team-image-placeholder"><span>Bild</span></div>
+      <div class="np-card-media np-team-image">
+        <img
+          src="{{ site.baseurl }}/assets/images/pumpe.png"
+          alt="Sarah"
+          width="512"
+          height="512"
+          loading="lazy"
+          decoding="async">
+      </div>
       <p class="np-card-kicker np-team-role">Premiumsupport</p>
       <h2 class="np-card-title">Pumpe_XD</h2>
       <p class="np-card-text">
-        Hallo hier könnte eine wichtige Beschreibung stehen.
+        Bietet Support auf allerhöchstem Niveau, glaubt er selbst.
       </p>
     </article>
   </div>
