@@ -37,11 +37,7 @@ permalink: /
     </div>
 
 <!-- AUTO_UPDATED_START -->
-<<<<<<< HEAD
-<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:29 Uhr</p>
-=======
-<p class="np-last-updated">Zuletzt aktualisiert: 12.06.2026 13:55 Uhr</p>
->>>>>>> e0535bc36f9586e7a289ace25717fc4191e5cdb8
+<p class="np-last-updated">Zuletzt aktualisiert: 12.06.2026 14:25 Uhr</p>
 <!-- AUTO_UPDATED_END -->
   </div>
 
