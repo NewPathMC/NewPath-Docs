@@ -34,11 +34,6 @@ permalink: /team.html
   <div class="np-section-header">
     <p class="np-eyebrow">NewPath Team</p>
     <h1 class="np-title">Das Team hinter NewPath</h1>
-    <p class="np-lead">
-      Hier findest du später eine Übersicht der Personen, die NewPath organisatorisch,
-      technisch, kreativ und im Community-Alltag betreuen. Die Platzhalter können später
-      durch echte Namen, Rollen, Bilder und kurze Beschreibungen ersetzt werden.
-    </p>
   </div>
 
   <div class="np-card-grid np-card-grid-4 np-team-grid">
