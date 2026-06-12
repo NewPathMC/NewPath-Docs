@@ -30,11 +30,11 @@ permalink: /
         class="np-hero-button np-hero-button-primary np-hero-copy-ip"
         type="button"
         data-server-ip="DEINE-SERVER-IP-HIER"
-        onclick="navigator.clipboard.writeText(this.dataset.serverIp); this.querySelector('span').textContent='IP kopiert'; setTimeout(() => this.querySelector('span').textContent='Server-IP kopieren', 1800);">
-        <span>Server-IP kopieren</span>
+        onclick="navigator.clipboard.writeText(this.dataset.serverIp); this.querySelector('.np-hero-button-label').textContent='IP kopiert'; setTimeout(() => this.querySelector('.np-hero-button-label').textContent='Server-IP kopieren', 1800);">
+        <span class="np-hero-button-icon" aria-hidden="true"></span>
+        <span class="np-hero-button-label">Server-IP kopieren</span>
       </button>
     </div>
-
 
 <!-- AUTO_UPDATED_START -->
 <p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:29 Uhr</p>
