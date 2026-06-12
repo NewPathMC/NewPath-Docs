@@ -33,9 +33,6 @@ permalink: /modpack-hilfe.html
 <section class="np-page-section np-help-section np-help-module-section" id="installation-setup">
   <div class="np-section-header np-help-category-header">
     <h1 class="np-title">Installation und Setup</h1>
-    <p class="np-lead">
-      Alles rund um Installation, richtige Version, Speicherzuweisung und grundlegende Einrichtung.
-    </p>
   </div>
 
   <details id="installation" class="np-accordion np-help-details np-help-module">
@@ -327,10 +324,6 @@ permalink: /modpack-hilfe.html
 <section class="np-page-section np-help-section np-help-module-section" id="erste-schritte-server">
   <div class="np-section-header np-help-category-header">
     <h1 class="np-title">Erste Schritte auf dem Server</h1>
-    <p class="np-lead">
-      Die wichtigsten Schritte nach dem ersten Join: Orientierung, Bauplatzsuche, Claims mit FTB Chunks
-      und Teamverwaltung über FTB Teams.
-    </p>
   </div>
 
   <details id="nach-dem-ersten-join" class="np-accordion np-help-details np-help-module">
@@ -532,20 +525,12 @@ permalink: /modpack-hilfe.html
 <section class="np-page-section np-help-section np-help-module-section" id="mod-anleitungen">
   <div class="np-section-header np-help-category-header">
     <h1 class="np-title">Mod Anleitungen</h1>
-    <p class="np-lead">
-      Hier entstehen später kurze Hilfen zu einzelnen Mods, wichtigen Menüs, Tastenkürzeln und wiederkehrenden
-      Gameplay-Fragen. Diese Kategorie bleibt vorerst ohne Module, bis die finalen Mod-Guides feststehen.
-    </p>
   </div>
 </section>
 
 <section class="np-page-section np-help-section np-help-module-section" id="probleme-support">
   <div class="np-section-header np-help-category-header">
     <h1 class="np-title">Probleme und Support</h1>
-    <p class="np-lead">
-      Hilfe bei Startproblemen, Abstürzen, Verbindungsproblemen, Performance, fehlenden Texturen,
-      Logs, Crash-Reports und Support-Tickets.
-    </p>
   </div>
 
   <details id="spiel-startet-nicht" class="np-accordion np-help-details np-help-module">

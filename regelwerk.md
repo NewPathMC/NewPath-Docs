@@ -34,10 +34,6 @@ permalink: /regelwerk.html
 <section class="np-page-section np-rules-section">
   <div class="np-section-header">
     <h1 class="np-title">NewPath · Echoes of the Wild</h1>
-    <p class="np-lead">
-      Die folgenden Regeln bilden den gemeinsamen Rahmen für ein faires, atmosphärisches
-      und langfristig stabiles Spielerlebnis auf NewPath.
-    </p>
   </div>
 
   <article class="np-rule-block">
