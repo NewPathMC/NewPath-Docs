@@ -6233,16 +6233,72 @@ button.np-server-copy-hero-button:hover {
 
 /* 28. Bild-Lightbox / anklickbare Hilfebilder */
 
+.np-help-image,
+.np-help-gallery figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.58rem;
+}
+
 .np-help-image img,
 .np-help-gallery img,
 .np-streamer-asset-card > img {
   cursor: zoom-in !important;
 }
 
-.np-help-image figcaption::after {
-  content: " · Zum Vergrößern anklicken";
-  color: rgba(0, 230, 246, 0.78);
-  font-weight: 800;
+.np-help-image img,
+.np-help-gallery img {
+  transition:
+    transform 0.22s ease,
+    filter 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.np-help-image:hover img,
+.np-help-image:focus-within img,
+.np-help-gallery figure:hover img,
+.np-help-gallery figure:focus-within img {
+  filter: brightness(1.08) saturate(1.05);
+  transform: scale(1.018);
+}
+
+.np-help-image::before,
+.np-help-gallery figure::before {
+  content: "Zum Vergrößern anklicken";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-0.2rem);
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: rgba(245, 234, 220, 0.96);
+  background: rgba(0, 9, 15, 0.78);
+  border: 1px solid rgba(0, 230, 246, 0.36);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  font-family: var(--np-font-label);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.np-help-image:hover::before,
+.np-help-image:focus-within::before,
+.np-help-gallery figure:hover::before,
+.np-help-gallery figure:focus-within::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.np-help-image figcaption,
+.np-help-gallery figcaption {
+  display: none;
 }
 
 .np-image-lightbox {
