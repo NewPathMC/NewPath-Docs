@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v35
+   Konsolidierte CSS-Version v36
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -28,7 +28,7 @@
    23. Modpack-Hilfe Module
    24. Einheitliches Akkordeon ohne Symbol
    25. Startseite: Server-IP als Hero-Button
-   26. Footer: zentraler Gamertransfer-Link
+   26. Footer: schlichter Gamertransfer-Link
 */
 
 :root {
@@ -5967,8 +5967,9 @@ img {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  gap: 0.75rem !important;
-  margin: 0.82rem 0 0 !important;
+  flex-wrap: wrap !important;
+  gap: 0.62rem 0.78rem !important;
+  margin: 1.05rem 0 0.72rem !important;
   padding: 0 !important;
 }
 
@@ -5983,16 +5984,16 @@ button.np-server-copy-hero-button {
   gap: 0.58rem !important;
   width: auto !important;
   min-width: 0 !important;
-  min-height: 2.55rem !important;
+  min-height: 2.52rem !important;
   margin: 0 !important;
-  padding: 0 1.12rem !important;
+  padding: 0 1.14rem !important;
   border: 1px solid rgba(0, 230, 246, 0.58) !important;
   border-radius: 0.52rem !important;
   outline: 0 !important;
   color: rgba(245, 234, 220, 0.98) !important;
   background:
-    radial-gradient(circle at 20% 18%, rgba(0, 230, 246, 0.22), transparent 4.8rem),
-    linear-gradient(135deg, rgba(0, 230, 246, 0.18), rgba(0, 18, 33, 0.92)) !important;
+    radial-gradient(circle at 20% 18%, rgba(0, 230, 246, 0.20), transparent 4.8rem),
+    linear-gradient(135deg, rgba(0, 230, 246, 0.16), rgba(0, 18, 33, 0.92)) !important;
   box-shadow:
     inset 0 0 18px rgba(0, 230, 246, 0.055),
     0 0 18px rgba(0, 230, 246, 0.08),
@@ -6042,6 +6043,16 @@ button.np-server-copy-hero-button::before {
   line-height: 1 !important;
 }
 
+.np-home-v2 .np-hero-content .np-server-copy-hint,
+.main-content .np-hero-content .np-server-copy-hint {
+  margin: 0 !important;
+  color: rgba(245, 234, 220, 0.68) !important;
+  font-size: 0.68rem !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45) !important;
+}
+
 .np-home-v2 .np-hero-content button.np-server-copy-hero-button:hover,
 .main-content .np-hero-content button.np-server-copy-hero-button:hover,
 button.np-server-copy-hero-button:hover {
@@ -6061,18 +6072,47 @@ button.np-server-copy-hero-button:hover {
   background: var(--np-gold-soft) !important;
 }
 
-.np-home-v2 .np-hero-content > .np-last-updated {
-  display: block !important;
-  width: 100% !important;
-  margin: 0.52rem 0 0 !important;
-  text-align: right !important;
-  float: none !important;
-  clear: both !important;
+/* 27-Zoll/Desktop-Feinschliff für die Startseite */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero {
+    padding-bottom: 0.9rem !important;
+  }
+
+  .np-status-bar-v2,
+  .np-status-bar-showcase {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .np-home-section-separator {
+    margin: 0.92rem auto !important;
+  }
+
+  .np-home-v2 .np-pathfinder {
+    margin-top: 0.45rem !important;
+    margin-bottom: 1.45rem !important;
+  }
+
+  .np-home-v2 .np-history-panel {
+    margin-top: 0.15rem !important;
+    margin-bottom: 1.55rem !important;
+  }
+
+  .np-route-text {
+    font-size: 0.74rem !important;
+  }
+
+  .np-route-link {
+    font-size: 0.74rem !important;
+  }
 }
 
 @media (max-width: 66.499rem) {
   .np-home-v2 .np-hero-content .np-hero-actions-server {
-    margin-top: 0.85rem !important;
+    margin: 0.9rem 0 0.95rem !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
   }
 
   .np-home-v2 .np-hero-content button.np-server-copy-hero-button,
@@ -6082,8 +6122,9 @@ button.np-server-copy-hero-button:hover {
     min-height: 2.75rem !important;
   }
 
-  .np-home-v2 .np-hero-content > .np-last-updated {
-    text-align: left !important;
+  .np-home-v2 .np-hero-content .np-server-copy-hint,
+  .main-content .np-hero-content .np-server-copy-hint {
+    text-align: center !important;
   }
 }
 
@@ -6092,7 +6133,7 @@ button.np-server-copy-hero-button:hover {
 
 #np-global-window-footer .np-site-footer-inner {
   display: grid !important;
-  grid-template-columns: minmax(220px, 1fr) auto minmax(420px, 1fr) !important;
+  grid-template-columns: minmax(240px, 1fr) auto minmax(240px, 1fr) !important;
   align-items: center !important;
   gap: 1rem !important;
 }
@@ -6109,10 +6150,10 @@ button.np-server-copy-hero-button:hover {
   box-shadow: none !important;
   color: var(--np-cyan) !important;
   font-family: var(--np-font-label) !important;
-  font-size: 0.62rem !important;
+  font-size: 0.68rem !important;
   font-weight: 950 !important;
   line-height: 1 !important;
-  letter-spacing: 0.02em !important;
+  letter-spacing: 0.035em !important;
   text-decoration: none !important;
   white-space: nowrap !important;
 }
@@ -6123,6 +6164,11 @@ button.np-server-copy-hero-button:hover {
   border: 0 !important;
   box-shadow: none !important;
   transform: none !important;
+}
+
+#np-global-window-footer .np-site-footer-links {
+  justify-content: flex-end !important;
+  gap: 0.82rem !important;
 }
 
 @media (max-width: 66.499rem) {
@@ -6140,70 +6186,119 @@ button.np-server-copy-hero-button:hover {
   }
 }
 
-/* 27. Teamseite: Mobile Bildrahmen-Fix */
+/* 28. Bild-Lightbox / anklickbare Hilfebilder */
 
-/*
-  Fix für mobile Team-Karten:
-  - entfernt gestrichelte Platzhalter-Rahmen an echten Bildern
-  - entfernt horizontale Linien/Overlays über Team-Bildern
-  - sorgt dafür, dass Bilder sauber im Kartenrahmen sitzen
-*/
-
-.np-team-member-card .np-team-image,
-.np-team-member-card .np-team-image img {
-  overflow: hidden !important;
+.np-help-image img,
+.np-help-gallery img {
+  cursor: zoom-in !important;
 }
 
-.np-team-member-card .np-team-image:has(img) {
-  border-style: solid !important;
-  border-color: rgba(0, 230, 246, 0.24) !important;
-  background: rgba(0, 9, 15, 0.24) !important;
+.np-help-image figcaption::after {
+  content: " · Zum Vergrößern anklicken";
+  color: rgba(0, 230, 246, 0.78);
+  font-weight: 800;
 }
 
-.np-team-member-card .np-team-image:has(img)::before,
-.np-team-member-card .np-team-image:has(img)::after,
-.np-team-member-card .np-team-image img::before,
-.np-team-member-card .np-team-image img::after {
-  display: none !important;
-  content: none !important;
+.np-image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(0, 230, 246, 0.10), transparent 28rem),
+    rgba(0, 6, 12, 0.88);
+  backdrop-filter: blur(10px);
 }
 
-.np-team-member-card .np-team-image img {
-  width: 100% !important;
-  height: 100% !important;
-  display: block !important;
-  object-fit: cover !important;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
+.np-image-lightbox.is-open {
+  display: flex;
+}
+
+.np-image-lightbox-panel {
+  position: relative;
+  width: min(1180px, 96vw);
+  max-height: 90vh;
+  display: grid;
+  gap: 0.75rem;
+  padding: clamp(0.7rem, 1.5vw, 1rem);
+  border: 1px solid rgba(0, 230, 246, 0.34);
+  border-radius: 0.78rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.08), transparent 18rem),
+    linear-gradient(180deg, rgba(5, 20, 27, 0.94), rgba(1, 10, 16, 0.98));
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.58),
+    inset 0 0 34px rgba(0, 230, 246, 0.035);
+}
+
+.np-image-lightbox-image {
+  max-width: 100%;
+  max-height: calc(90vh - 5.5rem);
+  display: block;
+  justify-self: center;
+  border-radius: 0.58rem;
+  border: 1px solid rgba(72, 122, 146, 0.38);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.42);
+  object-fit: contain;
+}
+
+.np-image-lightbox-caption {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.78);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.np-image-lightbox-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 230, 246, 0.44);
+  border-radius: 999px;
+  color: var(--np-text);
+  background: rgba(0, 9, 15, 0.78);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.np-image-lightbox-close:hover {
+  color: var(--np-gold-soft);
+  border-color: rgba(236, 183, 110, 0.62);
+}
+
+body.np-lightbox-open {
+  overflow: hidden;
 }
 
 @media (max-width: 66.499rem) {
-  .np-team-grid {
-    gap: 1.15rem !important;
+  .np-image-lightbox {
+    padding: 0.7rem;
   }
 
-  .np-team-member-card {
-    overflow: hidden !important;
+  .np-image-lightbox-panel {
+    width: 100%;
+    max-height: 92vh;
+    padding: 0.65rem;
   }
 
-  .np-team-member-card .np-team-image:has(img) {
-    border: 1px solid rgba(0, 230, 246, 0.24) !important;
-    border-radius: 0.72rem !important;
-    outline: 0 !important;
-    box-shadow:
-      inset 0 0 20px rgba(0, 230, 246, 0.035),
-      0 12px 26px rgba(0, 0, 0, 0.22) !important;
+  .np-image-lightbox-image {
+    max-height: calc(92vh - 5.2rem);
   }
 
-  .np-team-member-card .np-team-avatar-placeholder {
-    border-style: dashed !important;
-  }
-
-  .np-team-member-card .np-team-image:has(img) + *,
-  .np-team-member-card .np-team-image:has(img) ~ * {
-    position: relative !important;
-    z-index: 2 !important;
+  .np-image-lightbox-caption {
+    font-size: 0.74rem;
   }
 }
 
