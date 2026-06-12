@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v29
+   Konsolidierte CSS-Version v35
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -5961,48 +5961,42 @@ img {
   }
 }
 
-/* 25. Startseite: Server-IP als Hero-CTA */
+/* 25. Startseite: Server-IP Button im Hero */
 
 .np-home-v2 .np-hero-content .np-hero-actions-server {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-start !important;
   gap: 0.75rem !important;
-  margin: 0.78rem 0 0 !important;
+  margin: 0.82rem 0 0 !important;
   padding: 0 !important;
 }
 
-.np-home-v2 .np-hero-content button.np-copy-ip-button,
-.main-content .np-hero-content button.np-copy-ip-button,
-button.np-copy-ip-button {
+.np-home-v2 .np-hero-content button.np-server-copy-hero-button,
+.main-content .np-hero-content button.np-server-copy-hero-button,
+button.np-server-copy-hero-button {
   appearance: none !important;
   -webkit-appearance: none !important;
-
-  width: auto !important;
-  min-width: 0 !important;
-  min-height: 2.58rem !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 0.58rem !important;
-
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 2.55rem !important;
   margin: 0 !important;
   padding: 0 1.12rem !important;
-
-  border-radius: 0.52rem !important;
   border: 1px solid rgba(0, 230, 246, 0.58) !important;
+  border-radius: 0.52rem !important;
   outline: 0 !important;
-
   color: rgba(245, 234, 220, 0.98) !important;
   background:
     radial-gradient(circle at 20% 18%, rgba(0, 230, 246, 0.22), transparent 4.8rem),
     linear-gradient(135deg, rgba(0, 230, 246, 0.18), rgba(0, 18, 33, 0.92)) !important;
-
   box-shadow:
     inset 0 0 18px rgba(0, 230, 246, 0.055),
     0 0 18px rgba(0, 230, 246, 0.08),
     0 10px 22px rgba(0, 0, 0, 0.22) !important;
-
   font-family: var(--np-font-label) !important;
   font-size: 0.78rem !important;
   font-weight: 950 !important;
@@ -6012,10 +6006,8 @@ button.np-copy-ip-button {
   text-decoration: none !important;
   text-shadow: none !important;
   white-space: nowrap !important;
-
   cursor: pointer !important;
   user-select: none !important;
-
   transition:
     transform 160ms ease,
     border-color 160ms ease,
@@ -6023,15 +6015,15 @@ button.np-copy-ip-button {
     box-shadow 160ms ease !important;
 }
 
-.np-home-v2 .np-hero-content button.np-copy-ip-button::before,
-.main-content .np-hero-content button.np-copy-ip-button::before,
-button.np-copy-ip-button::before {
+.np-home-v2 .np-hero-content button.np-server-copy-hero-button::before,
+.main-content .np-hero-content button.np-server-copy-hero-button::before,
+button.np-server-copy-hero-button::before {
   display: none !important;
   content: none !important;
 }
 
-.np-home-v2 .np-hero-content .np-copy-ip-button-icon,
-.main-content .np-hero-content .np-copy-ip-button-icon {
+.np-home-v2 .np-hero-content .np-server-copy-hero-icon,
+.main-content .np-hero-content .np-server-copy-hero-icon {
   width: 1.08rem !important;
   height: 1.08rem !important;
   min-width: 1.08rem !important;
@@ -6042,17 +6034,17 @@ button.np-copy-ip-button::before {
   box-shadow: 0 0 13px rgba(0, 230, 246, 0.34) !important;
 }
 
-.np-home-v2 .np-hero-content .np-copy-ip-button-label,
-.main-content .np-hero-content .np-copy-ip-button-label {
+.np-home-v2 .np-hero-content .np-server-copy-hero-label,
+.main-content .np-hero-content .np-server-copy-hero-label {
   display: inline-block !important;
   color: inherit !important;
   font: inherit !important;
   line-height: 1 !important;
 }
 
-.np-home-v2 .np-hero-content button.np-copy-ip-button:hover,
-.main-content .np-hero-content button.np-copy-ip-button:hover,
-button.np-copy-ip-button:hover {
+.np-home-v2 .np-hero-content button.np-server-copy-hero-button:hover,
+.main-content .np-hero-content button.np-server-copy-hero-button:hover,
+button.np-server-copy-hero-button:hover {
   transform: translateY(-2px) !important;
   border-color: rgba(236, 183, 110, 0.68) !important;
   color: #fff !important;
@@ -6064,8 +6056,8 @@ button.np-copy-ip-button:hover {
     0 0 24px rgba(0, 230, 246, 0.13) !important;
 }
 
-.np-home-v2 .np-hero-content button.np-copy-ip-button:hover .np-copy-ip-button-icon,
-.main-content .np-hero-content button.np-copy-ip-button:hover .np-copy-ip-button-icon {
+.np-home-v2 .np-hero-content button.np-server-copy-hero-button:hover .np-server-copy-hero-icon,
+.main-content .np-hero-content button.np-server-copy-hero-button:hover .np-server-copy-hero-icon {
   background: var(--np-gold-soft) !important;
 }
 
@@ -6083,9 +6075,9 @@ button.np-copy-ip-button:hover {
     margin-top: 0.85rem !important;
   }
 
-  .np-home-v2 .np-hero-content button.np-copy-ip-button,
-  .main-content .np-hero-content button.np-copy-ip-button,
-  button.np-copy-ip-button {
+  .np-home-v2 .np-hero-content button.np-server-copy-hero-button,
+  .main-content .np-hero-content button.np-server-copy-hero-button,
+  button.np-server-copy-hero-button {
     width: 100% !important;
     min-height: 2.75rem !important;
   }
@@ -6110,7 +6102,6 @@ button.np-copy-ip-button:hover {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  min-height: auto !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
@@ -6123,22 +6114,10 @@ button.np-copy-ip-button:hover {
   line-height: 1 !important;
   letter-spacing: 0.02em !important;
   text-decoration: none !important;
-  text-transform: none !important;
   white-space: nowrap !important;
 }
 
-.np-footer-gamertransfer span {
-  display: none !important;
-}
-
-.np-footer-gamertransfer strong {
-  color: var(--np-cyan) !important;
-  font: inherit !important;
-  line-height: inherit !important;
-}
-
-.np-footer-gamertransfer:hover,
-.np-footer-gamertransfer:hover strong {
+.np-footer-gamertransfer:hover {
   color: var(--np-gold-soft) !important;
   background: transparent !important;
   border: 0 !important;
