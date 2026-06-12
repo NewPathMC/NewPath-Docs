@@ -26,7 +26,7 @@ permalink: /
     </div>
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 12.06.2026 13:35 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:29 Uhr</p>
 <!-- AUTO_UPDATED_END -->
   </div>
 
@@ -84,36 +84,21 @@ permalink: /
 
 <div class="np-home-section-separator" aria-hidden="true"></div>
 
-<section class="np-panel np-server-access" aria-label="Serverzugang und externe Projektseite">
-  <div class="np-server-access-copy">
+<section class="np-server-ip-strip" aria-label="NewPath Server-IP">
+  <div class="np-server-ip-strip-copy">
     <p class="np-section-kicker">Serverzugang</p>
-    <h2>Bereit für den ersten Schritt?</h2>
-    <p>
-      Kopiere die Server-IP oder öffne unsere Gamertransfer-Seite, um mehr über NewPath zu erfahren.
-      Für den Serverbeitritt brauchst du eine erfolgreiche Whitelist über unseren Discord.
-    </p>
+    <strong>Server-IP kopieren</strong>
+    <span>Für den Beitritt ist eine erfolgreiche Whitelist über Discord erforderlich.</span>
   </div>
 
-  <div class="np-server-access-actions">
-    <div class="np-server-ip-card">
-      <span class="np-server-access-label">Server-IP</span>
-      <code id="np-server-ip">DEINE-SERVER-IP-HIER</code>
-      <button
-        class="np-server-copy-button"
-        type="button"
-        onclick="navigator.clipboard.writeText(document.getElementById('np-server-ip').textContent.trim()); this.textContent='Kopiert!'; setTimeout(() => this.textContent='IP kopieren', 1800);">
-        IP kopieren
-      </button>
-    </div>
-
-    <a
-      class="np-server-gamertransfer-button"
-      href="DEIN-GAMERTRANSFER-LINK-HIER"
-      target="_blank"
-      rel="noopener">
-      <span>Gamertransfer</span>
-      <strong>Projektseite öffnen</strong>
-    </a>
+  <div class="np-server-ip-strip-action">
+    <code id="np-server-ip">DEINE-SERVER-IP-HIER</code>
+    <button
+      class="np-server-copy-button"
+      type="button"
+      onclick="navigator.clipboard.writeText(document.getElementById('np-server-ip').textContent.trim()); this.textContent='Kopiert!'; setTimeout(() => this.textContent='IP kopieren', 1800);">
+      IP kopieren
+    </button>
   </div>
 </section>
 
