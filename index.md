@@ -26,7 +26,7 @@ permalink: /
     </div>
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 09.06.2026 16:29 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 12.06.2026 13:44 Uhr</p>
 <!-- AUTO_UPDATED_END -->
   </div>
 
