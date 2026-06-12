@@ -408,7 +408,7 @@ permalink: /modpack-hilfe.html
         <!-- WICHTIGE HINWEISE -->
         <div class="np-help-callout np-help-callout-warning">
           <strong>!</strong>
-          <p>Claims schützen dein Gebiet. Claime nur Bereiche, die du wirklich nutzt.</p>
+          <p>Soll dein Claim einen bestimmten Namen haben, solltest du erste ein Team gründen und dann claimen.</p>
         </div>
 
         <!-- INHALT / ANLEITUNG -->
