@@ -5958,3 +5958,210 @@ img {
     grid-column: auto;
   }
 }
+
+/* 25. Startseite: Serverzugang / Gamertransfer */
+
+.np-server-access {
+  width: min(1180px, var(--np-content-width));
+  max-width: min(1180px, var(--np-content-width));
+  margin: 0 auto 1rem;
+  padding: clamp(1rem, 1.45vw, 1.45rem);
+  display: grid;
+  grid-template-columns: minmax(320px, 0.46fr) minmax(520px, 0.54fr);
+  gap: clamp(1rem, 1.7vw, 1.45rem);
+  align-items: center;
+  border-color: rgba(236, 183, 110, 0.30);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(236, 183, 110, 0.10), transparent 16rem),
+    radial-gradient(circle at 88% 80%, rgba(0, 230, 246, 0.10), transparent 18rem),
+    linear-gradient(135deg, rgba(5, 20, 27, 0.84), rgba(17, 46, 64, 0.62));
+}
+
+.np-server-access-copy {
+  position: relative;
+  padding-left: 0.9rem;
+}
+
+.np-server-access-copy::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18rem;
+  bottom: 0.18rem;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(236, 183, 110, 0.9), rgba(0, 230, 246, 0.16));
+}
+
+.np-server-access-copy h2 {
+  margin: 0 0 0.5rem;
+  color: var(--np-gold-soft);
+  font-size: clamp(1.45rem, 1.65vw, 2rem);
+  line-height: 1.1;
+}
+
+.np-server-access-copy p {
+  margin: 0;
+  max-width: 36rem;
+  color: rgba(245, 234, 220, 0.88);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.np-server-access-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.np-server-ip-card,
+.np-server-gamertransfer-button {
+  min-height: 6.6rem;
+  border-radius: 0.66rem;
+  border: 1px solid rgba(72, 122, 146, 0.34);
+  background:
+    linear-gradient(180deg, rgba(17, 55, 67, 0.70), rgba(6, 24, 31, 0.84));
+  box-shadow:
+    inset 0 0 24px rgba(0, 230, 246, 0.025),
+    0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.np-server-ip-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  gap: 0.45rem 0.75rem;
+  align-items: center;
+  padding: 0.85rem;
+}
+
+.np-server-access-label {
+  grid-column: 1 / -1;
+  color: var(--np-cyan);
+  font-family: var(--np-font-label);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.np-server-ip-card code {
+  min-width: 0;
+  display: block;
+  padding: 0.54rem 0.7rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  color: var(--np-gold-soft);
+  background: rgba(0, 9, 15, 0.58);
+  border: 1px solid rgba(236, 183, 110, 0.24);
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.np-server-copy-button,
+.np-server-gamertransfer-button {
+  cursor: pointer;
+  text-decoration: none !important;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.np-server-copy-button {
+  min-height: 2.28rem;
+  padding: 0 0.82rem;
+  border-radius: 999px;
+  color: rgba(245, 234, 220, 0.95);
+  background: linear-gradient(135deg, rgba(0, 230, 246, 0.14), rgba(0, 18, 33, 0.82));
+  border: 1px solid rgba(0, 230, 246, 0.42);
+  font-family: var(--np-font-label);
+  font-size: 0.72rem;
+  font-weight: 950;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.np-server-gamertransfer-button {
+  position: relative;
+  display: grid;
+  align-content: center;
+  gap: 0.3rem;
+  padding: 0.95rem 1rem;
+  overflow: hidden;
+  color: var(--np-text) !important;
+  border-color: rgba(236, 183, 110, 0.34);
+}
+
+.np-server-gamertransfer-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(236, 183, 110, 0.18), transparent 8rem),
+    radial-gradient(circle at 88% 85%, rgba(0, 230, 246, 0.10), transparent 9rem);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.np-server-gamertransfer-button span,
+.np-server-gamertransfer-button strong {
+  position: relative;
+  z-index: 1;
+}
+
+.np-server-gamertransfer-button span {
+  color: var(--np-cyan);
+  font-family: var(--np-font-label);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.np-server-gamertransfer-button strong {
+  color: var(--np-gold-soft);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.np-server-copy-button:hover,
+.np-server-gamertransfer-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 230, 246, 0.58);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.22),
+    0 0 22px rgba(0, 230, 246, 0.08);
+}
+
+.np-server-gamertransfer-button:hover strong {
+  color: #fff;
+}
+
+@media (max-width: 66.499rem) {
+  .np-server-access {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1rem;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .np-server-access-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .np-server-ip-card {
+    grid-template-columns: 1fr;
+  }
+
+  .np-server-copy-button {
+    width: 100%;
+  }
+}
+
