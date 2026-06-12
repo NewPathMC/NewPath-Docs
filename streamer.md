@@ -5,7 +5,7 @@ permalink: /streamer.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 12.06.2026 13:33 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 13.06.2026 01:17 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-streamer">
