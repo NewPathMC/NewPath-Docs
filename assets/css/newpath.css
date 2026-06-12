@@ -5826,6 +5826,7 @@ img {
 }
 
 .np-streamer-asset-card {
+  position: relative;
   overflow: hidden;
   border-radius: 0.7rem;
   border: 1px solid rgba(72, 122, 146, 0.38);
@@ -5836,13 +5837,55 @@ img {
     inset 0 0 24px rgba(0, 230, 246, 0.02);
 }
 
-.np-streamer-asset-card img {
+.np-streamer-asset-card::before {
+  content: "Zum Vergrößern anklicken";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-0.2rem);
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  color: rgba(245, 234, 220, 0.96);
+  background: rgba(0, 9, 15, 0.78);
+  border: 1px solid rgba(0, 230, 246, 0.36);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  font-family: var(--np-font-label);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+}
+
+.np-streamer-asset-card:hover::before,
+.np-streamer-asset-card:focus-within::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.np-streamer-asset-card > img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
   border-bottom: 1px solid rgba(72, 122, 146, 0.32);
   background: rgba(0, 9, 15, 0.45);
+  cursor: zoom-in;
+  transition:
+    transform 0.22s ease,
+    filter 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.np-streamer-asset-card:hover > img,
+.np-streamer-asset-card > img:focus {
+  filter: brightness(1.08) saturate(1.05);
+  transform: scale(1.018);
 }
 
 .np-streamer-asset-content {
@@ -5868,9 +5911,11 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
+  margin-top: 0.9rem;
 }
 
 .np-streamer-asset-actions a {
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -6189,7 +6234,8 @@ button.np-server-copy-hero-button:hover {
 /* 28. Bild-Lightbox / anklickbare Hilfebilder */
 
 .np-help-image img,
-.np-help-gallery img {
+.np-help-gallery img,
+.np-streamer-asset-card > img {
   cursor: zoom-in !important;
 }
 

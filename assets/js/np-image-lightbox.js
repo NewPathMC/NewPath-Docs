@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const selectableImages = document.querySelectorAll(".np-help-image img, .np-help-gallery img");
+  const selectableImages = document.querySelectorAll(
+    ".np-help-image img, .np-help-gallery img, .np-streamer-asset-card > img"
+  );
 
   if (!selectableImages.length) {
     return;
@@ -24,15 +26,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const lightboxCaption = lightbox.querySelector(".np-image-lightbox-caption");
   const closeButton = lightbox.querySelector(".np-image-lightbox-close");
 
-  function openLightbox(sourceImage) {
+  function getCaption(sourceImage) {
     const figure = sourceImage.closest("figure");
-    const caption = figure ? figure.querySelector("figcaption") : null;
+    const figureCaption = figure ? figure.querySelector("figcaption") : null;
 
+    if (figureCaption) {
+      return figureCaption.textContent.replace(" · Zum Vergrößern anklicken", "").trim();
+    }
+
+    const assetCard = sourceImage.closest(".np-streamer-asset-card");
+
+    if (assetCard) {
+      const title = assetCard.querySelector("h2");
+      const description = assetCard.querySelector("p");
+
+      if (title && description) {
+        return `${title.textContent.trim()} – ${description.textContent.trim()}`;
+      }
+
+      if (title) {
+        return title.textContent.trim();
+      }
+    }
+
+    return sourceImage.alt || "";
+  }
+
+  function openLightbox(sourceImage) {
     lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
     lightboxImage.alt = sourceImage.alt || "";
-    lightboxCaption.textContent = caption
-      ? caption.textContent.replace(" · Zum Vergrößern anklicken", "")
-      : "";
+    lightboxCaption.textContent = getCaption(sourceImage);
 
     lightbox.classList.add("is-open");
     document.body.classList.add("np-lightbox-open");
@@ -43,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     lightbox.classList.remove("is-open");
     document.body.classList.remove("np-lightbox-open");
     lightboxImage.removeAttribute("src");
+    lightboxCaption.textContent = "";
   }
 
   selectableImages.forEach(function (image) {

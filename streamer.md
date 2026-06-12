@@ -209,48 +209,60 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
 
   <div class="np-streamer-assets-grid">
     <article class="np-streamer-asset-card">
-      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" alt="NewPath Streamer Banner">
+      <img
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png"
+        alt="NewPath Streamer Banner"
+        loading="lazy"
+        decoding="async">
       <div class="np-streamer-asset-content">
         <h2>Streamer Banner</h2>
         <p>Banner für Twitch, Discord-Ankündigungen oder Social Media.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" target="_blank" rel="noopener">Öffnen</a>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" download>Download</a>
         </div>
       </div>
     </article>
 
     <article class="np-streamer-asset-card">
-      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" alt="NewPath Twitch Panel">
+      <img
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png"
+        alt="NewPath Twitch Panel"
+        loading="lazy"
+        decoding="async">
       <div class="np-streamer-asset-content">
         <h2>Twitch Panel</h2>
         <p>Panel-Grafik für Twitch-Kanalinformationen.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" target="_blank" rel="noopener">Öffnen</a>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" download>Download</a>
         </div>
       </div>
     </article>
 
     <article class="np-streamer-asset-card">
-      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-code.png" alt="NewPath QR-Code">
+      <img
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-code.png"
+        alt="NewPath QR-Code"
+        loading="lazy"
+        decoding="async">
       <div class="np-streamer-asset-content">
         <h2>QR-Code</h2>
         <p>Offizieller QR-Code für Panels, Overlays oder Info-Grafiken.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-code.png" target="_blank" rel="noopener">Öffnen</a>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-code.png" download>Download</a>
         </div>
       </div>
     </article>
 
     <article class="np-streamer-asset-card">
-      <img src="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" alt="NewPath Overlay">
+      <img
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png"
+        alt="NewPath Overlay"
+        loading="lazy"
+        decoding="async">
       <div class="np-streamer-asset-content">
         <h2>Overlay / Szene</h2>
         <p>Grafik für Stream-Szenen oder Overlay-Elemente.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" target="_blank" rel="noopener">Öffnen</a>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" download>Download</a>
         </div>
       </div>
