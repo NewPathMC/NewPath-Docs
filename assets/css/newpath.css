@@ -7174,6 +7174,8 @@ body.np-lightbox-open {
 }
 
 .np-rule-change-edited {
+  margin-left: -0.52rem !important;
+  padding-left: 1.7rem !important;
   background:
     linear-gradient(90deg, rgba(236, 183, 110, 0.25), rgba(236, 183, 110, 0.08));
   box-shadow:
