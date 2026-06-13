@@ -348,6 +348,17 @@ body::selection {
   overflow-x: clip;
 }
 
+.np-hero,
+.np-status-bar,
+.np-page-meta,
+.np-main-grid,
+.np-about-panel,
+.np-server-brief {
+  width: min(1320px, var(--np-content-width));
+  max-width: min(1320px, var(--np-content-width));
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .np-hero {
   min-height: clamp(315px, 24vw, 430px);
@@ -554,6 +565,36 @@ body::selection {
   text-align: right;
 }
 
+/* Hauptbereiche */
+
+.np-main-grid {
+  display: grid;
+  grid-template-columns: minmax(460px, 0.48fr) minmax(520px, 0.52fr);
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.np-panel,
+.np-about-panel,
+.np-server-brief,
+.echo-page-box,
+.np-content-box,
+.np-help-note,
+.np-help-tile,
+.np-help-details,
+.np-team-member-card,
+.np-streamer-card,
+.np-community-card {
+  border: 1px solid rgba(72, 122, 146, 0.34);
+  border-radius: 0.72rem;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 18rem),
+    linear-gradient(180deg, rgba(8, 26, 34, 0.78), rgba(4, 16, 22, 0.82));
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.25),
+    inset 0 0 34px rgba(0, 230, 246, 0.025);
+  backdrop-filter: blur(8px);
+}
 
 /* 5b. Einheitliche ECHO-Unterseitenboxen */
 
@@ -642,11 +683,115 @@ body::selection {
   line-height: 1.65 !important;
 }
 
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2 {
+  margin: 0 0 0.9rem;
+  padding: 0;
+  border: 0 !important;
+  color: var(--np-gold);
+  font-size: 1.22rem;
+  line-height: 1.16;
+}
+
+.np-echo-feature {
+  position: relative;
+  min-height: 152px;
+  display: grid;
+  grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  overflow: hidden;
+  border-color: rgba(0, 230, 246, 0.45);
+  background:
+    radial-gradient(circle at 17% 52%, rgba(0, 230, 246, 0.16), transparent 12rem),
+    linear-gradient(135deg, rgba(3, 20, 30, 0.88), rgba(7, 32, 40, 0.78));
+}
+
+.np-echo-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-left: 3px solid rgba(0, 230, 246, 0.78);
+  pointer-events: none;
+}
 
 .np-echo-orb {
   display: none;
 }
 
+.np-echo-image-wrap,
+.echo-page-image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.np-echo-image-wrap img {
+  width: clamp(8rem, 8.4vw, 10rem);
+  height: clamp(8rem, 8.4vw, 10rem);
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.38));
+}
+
+.np-echo-content {
+  position: relative;
+  z-index: 1;
+}
+
+.np-echo-content h2 {
+  margin: 0 0 0.45rem;
+  color: var(--np-gold-soft);
+  font-size: clamp(1.2rem, 1.35vw, 1.58rem);
+  line-height: 1.12;
+}
+
+.np-echo-content p {
+  margin: 0;
+  color: rgba(245, 234, 220, 0.88);
+  font-size: 0.78rem;
+  line-height: 1.42;
+}
+
+.np-echo-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  margin-top: 0.65rem;
+}
+
+.np-echo-steps span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.45rem;
+  padding: 0.2rem 0.48rem;
+  border-radius: 999px;
+  color: rgba(245, 234, 220, 0.92);
+  background: rgba(0, 230, 246, 0.075);
+  border: 1px solid rgba(0, 230, 246, 0.22);
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+.np-quick-panel {
+  min-height: 152px;
+  padding: 0.9rem 0.95rem;
+  display: grid;
+  align-content: center;
+}
+
+.np-quick-panel .np-kicker {
+  margin-bottom: 0.28rem;
+  font-size: 0.68rem;
+}
+
+.np-quick-panel h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
 
 .np-card-grid-guides {
   display: grid;
@@ -722,6 +867,23 @@ body::selection {
 .np-card-icon-gold { background: linear-gradient(135deg, #7a5418, #f1bb45); }
 .np-card-icon-green { background: linear-gradient(135deg, #255f35, #66bd51); }
 
+.np-about-panel,
+.np-server-brief {
+  margin-top: 0.75rem;
+  padding: 0.9rem 1rem;
+}
+
+.np-about-panel {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.np-about-panel h2 {
+  margin-bottom: 0;
+  max-width: 30rem;
+}
 
 .np-about-text p {
   margin: 0 0 0.75rem;
@@ -736,6 +898,45 @@ body::selection {
   color: var(--np-gold-soft);
 }
 
+.np-server-brief {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.36fr) minmax(0, 0.64fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.np-server-brief h2 {
+  margin-bottom: 0;
+}
+
+.np-server-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.np-server-brief-grid div {
+  min-height: 4.2rem;
+  display: grid;
+  align-content: center;
+  gap: 0.18rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.56rem;
+  background: rgba(17, 46, 64, 0.62);
+  border: 1px solid rgba(72, 122, 146, 0.28);
+}
+
+.np-server-brief-grid strong {
+  color: var(--np-cyan);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.np-server-brief-grid span {
+  color: var(--np-text);
+  font-weight: 800;
+}
 
 /* 5. Unterseiten */
 
@@ -1092,6 +1293,18 @@ blockquote {
     grid-template-columns: minmax(330px, 470px) minmax(230px, 300px) minmax(0, 1fr);
   }
 
+  .np-main-grid {
+    grid-template-columns: minmax(420px, 0.48fr) minmax(480px, 0.52fr);
+  }
+
+  .np-echo-feature {
+    grid-template-columns: 115px minmax(0, 1fr);
+  }
+
+  .np-echo-image-wrap img {
+    width: 7.4rem;
+    height: 7.4rem;
+  }
 }
 
 @media (min-width: 66.5rem) and (max-width: 1120px) {
@@ -1100,6 +1313,20 @@ blockquote {
     --np-page-right: 2rem;
   }
 
+  .np-main-grid,
+  .np-about-panel,
+  .np-server-brief {
+    grid-template-columns: 1fr;
+  }
+
+  .np-card-grid-guides,
+  .np-server-brief-grid,
+  .np-help-grid,
+  .np-community-grid,
+  .np-team-grid,
+  .np-streamer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* 4b. Startseite: ECHO-Pfadfinder / finale Startseitenstruktur */
@@ -1347,6 +1574,11 @@ blockquote {
 }
 
 @media (min-width: 66.5rem) and (max-width: 1120px) {
+  .np-pathfinder,
+  .np-about-panel-v2,
+  .np-server-brief-v2 {
+    grid-template-columns: 1fr !important;
+  }
 
   .np-pathfinder-routes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1354,6 +1586,11 @@ blockquote {
 }
 
 @media (max-width: 66.499rem) {
+  .np-pathfinder,
+  .np-pathfinder-echo,
+  .np-about-panel-v2 {
+    grid-template-columns: 1fr !important;
+  }
 
   .np-pathfinder-routes {
     grid-template-columns: 1fr;
@@ -2199,6 +2436,37 @@ body,
   line-height: 1.62 !important;
 }
 
+/* 9.3 Kicker / Labels / kleine Kategoriezeilen = Segoe UI */
+.np-eyebrow,
+.np-kicker,
+.np-section-kicker,
+.echo-page-kicker,
+.np-card-kicker,
+.np-team-role,
+.np-streamer-label,
+.np-status-item small,
+.np-server-brief-grid strong,
+.np-philosophy-grid article > span,
+.np-origin-timeline article > span,
+.np-help-flow > div > span,
+.np-last-updated,
+.np-page-meta,
+.np-site-footer-brand,
+.np-site-footer-links,
+.np-topbar-title,
+.np-top-nav a,
+.main-header .search-input,
+.main-header .aux-nav a {
+  margin: 0 0 0.5rem !important;
+  font-family: var(--np-font-label) !important;
+  color: var(--np-type-kicker) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.095em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 0 14px rgba(0, 221, 235, 0.12) !important;
+}
 
 .np-topbar-title,
 .np-top-nav a,
@@ -2209,6 +2477,60 @@ body,
   margin: 0 !important;
 }
 
+/* 9.4 Normale Überschriften, ECHO-Titel, Section-Titel = Segoe UI */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+body.np-page-sub .main-content > h1,
+body.np-page-sub .main-content > h2,
+body.np-page-sub .main-content > h3,
+.np-title,
+.np-section-title,
+.np-page-section > h1,
+.np-page-section > h2,
+.np-section-header h1,
+.np-section-header h2,
+.np-section-header h3,
+.np-story-section > h1,
+.np-origin-section > h1,
+.np-faq-section > h1,
+.np-team-section > h1,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2,
+.np-pathfinder-copy h2,
+.echo-page-box h1,
+.echo-page-box h2,
+.echo-page-box-team h1,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h1,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h1,
+.echo-page-box-faq h2,
+.echo-page-box-rules h1,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h1,
+.echo-page-box-streamer h2,
+.echo-page-box-help h1,
+.echo-page-box-help h2,
+.np-info-card h2,
+.np-info-card h3,
+.np-team-card h2,
+.np-team-member-card h3,
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-asset-card h2,
+.np-asset-card h3,
+.np-card-title,
+.np-route-title,
+.np-faq-details summary,
+.np-help-details summary,
+.np-accordion summary {
+  font-family: var(--np-font-heading) !important;
+}
 
 /* 9.5 Überschriftenrollen */
 .np-title,
@@ -2228,6 +2550,31 @@ body.np-page-sub .main-content > h1,
   line-height: 1.08 !important;
 }
 
+.np-section-title,
+.np-page-section > h2,
+body.np-page-sub .main-content > h2,
+.np-help-section h2,
+.np-streamer-section h2,
+.np-panel h2,
+.np-about-panel h2,
+.np-server-brief h2,
+.np-pathfinder-copy h2,
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2 {
+  margin: 0 0 0.75rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: var(--np-type-title) !important;
+  font-size: clamp(1.35rem, 1.55vw, 1.85rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.018em !important;
+  line-height: 1.16 !important;
+}
 
 body.np-page-sub .main-content > h3,
 .np-faq-details summary,
@@ -2346,6 +2693,29 @@ body.np-page-sub .main-content > h3,
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.np-info-card,
+.np-card,
+.np-route-card,
+.np-help-tile,
+.np-community-card,
+.np-team-card,
+.np-team-member-card,
+.np-streamer-card,
+.np-asset-card,
+.np-faq-details,
+.np-help-details,
+.np-accordion,
+.np-philosophy-grid article,
+.np-origin-timeline article,
+.np-server-brief-grid div {
+  min-width: 0;
+  border: 1px solid rgba(72, 122, 146, 0.34) !important;
+  border-radius: 0.72rem !important;
+  background: var(--np-card-bg) !important;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.22),
+    inset 0 0 28px rgba(0, 230, 246, 0.020) !important;
+}
 
 .np-info-card,
 .np-card,
@@ -2385,6 +2755,27 @@ body.np-page-sub .main-content > h3,
   text-transform: uppercase !important;
 }
 
+.np-card-title,
+.np-route-title,
+.np-help-tile strong,
+.np-community-card strong,
+.np-team-card h2,
+.np-team-member-card h3,
+.np-streamer-card h2,
+.np-streamer-card h3,
+.np-asset-card h2,
+.np-asset-card h3,
+.np-philosophy-grid h2,
+.np-origin-timeline h2,
+.np-status-item strong,
+.np-server-brief-grid span {
+  margin: 0 0 0.5rem !important;
+  color: var(--np-type-card) !important;
+  font-size: 1.02rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.22 !important;
+}
 
 /* 9.10 ECHO-Introboxen */
 .echo-page-box,
@@ -2997,6 +3388,22 @@ a[href="#main-content"],
   }
 }
 
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-history-panel,
+  .np-history-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .np-history-timeline::before {
+    left: 1.3rem;
+    right: auto;
+    top: 0.9rem;
+    bottom: 0.9rem;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, rgba(0, 230, 246, 0.16), rgba(236, 183, 110, 0.22), rgba(0, 230, 246, 0.16));
+  }
+}
 
 @media (max-width: 66.499rem) {
   .np-hero-updated {
@@ -3011,6 +3418,21 @@ a[href="#main-content"],
     background: linear-gradient(90deg, transparent, rgba(0, 230, 246, 0.28), transparent);
   }
 
+  .np-history-panel,
+  .np-history-timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .np-history-step {
+    padding: 1rem;
+  }
+
+  .np-history-dot,
+  .np-history-timeline::before {
+    display: none;
+  }
 
   .np-faq-grid {
     grid-template-columns: 1fr !important;
@@ -4251,12 +4673,47 @@ img {
 }
 
 
+/* =========================================================
+   19. ECHO-Charakter-Glow
+   Glow liegt direkt auf transparenten ECHO-Bildern, nicht auf Boxen.
+   Dieser Abschnitt steht bewusst spät, damit ältere Bildfilter
+   überschrieben werden.
+   ========================================================= */
+
+body .echo-page-box .echo-page-image img,
+body .echo-page-box-team .echo-page-image img,
+body .echo-page-box-philosophy .echo-page-image img,
+body .echo-page-box-faq .echo-page-image img,
+body .echo-page-box-rules .echo-page-image img,
+body .echo-page-box-streamer .echo-page-image img,
+body .echo-page-box-help .echo-page-image img,
+body .echo-page-box-duck .echo-page-image img,
+body .np-pathfinder-image img,
+body .np-echo-image-wrap img,
+body img[src*="/assets/images/echo/"] {
+  filter:
+    drop-shadow(0 0 10px rgba(0, 230, 246, 0.32))
+    drop-shadow(0 0 24px rgba(0, 230, 246, 0.18))
+    drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
+}
+
 body .echo-page-box-duck .echo-page-image img,
 body img[src*="/assets/images/echo/ente"] {
   filter:
     drop-shadow(0 0 10px rgba(0, 230, 246, 0.26))
     drop-shadow(0 0 24px rgba(236, 183, 110, 0.22))
     drop-shadow(0 14px 22px rgba(0, 0, 0, 0.36)) !important;
+}
+
+@media (max-width: 66.499rem) {
+  body .echo-page-box .echo-page-image img,
+  body img[src*="/assets/images/echo/"],
+  body .np-pathfinder-image img,
+  body .np-echo-image-wrap img {
+    filter:
+      drop-shadow(0 0 8px rgba(0, 230, 246, 0.22))
+      drop-shadow(0 10px 16px rgba(0, 0, 0, 0.32)) !important;
+  }
 }
 
 
@@ -6158,6 +6615,15 @@ body.np-lightbox-open {
   }
 }
 
+@media (min-width: 66.5rem) and (max-width: 1280px) {
+  .np-history-horizontal {
+    gap: 0.42rem !important;
+  }
+
+  .np-history-event-body {
+    width: min(23rem, 34vw) !important;
+  }
+}
 
 @media (max-width: 66.499rem) {
   .np-history-panel-compact {
@@ -6165,11 +6631,40 @@ body.np-lightbox-open {
     gap: 1rem !important;
   }
 
+  .np-history-horizontal {
+    position: relative !important;
+    display: grid !important;
+    gap: 0.7rem !important;
+  }
 
   .np-history-track {
     display: none !important;
   }
 
+  .np-history-event {
+    border: 1px solid rgba(72, 122, 146, 0.34) !important;
+    border-radius: 0.62rem !important;
+    background: linear-gradient(180deg, rgba(17, 46, 64, 0.66), rgba(5, 18, 25, 0.82)) !important;
+    overflow: hidden !important;
+  }
+
+  .np-history-event summary {
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    gap: 0.65rem !important;
+    align-items: center !important;
+    padding: 0.8rem 0.9rem !important;
+    cursor: pointer !important;
+    list-style: none !important;
+  }
+
+  .np-history-event summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  .np-history-node {
+    display: none !important;
+  }
 
   .np-history-year {
     padding: 0.24rem 0.5rem !important;
@@ -6188,6 +6683,28 @@ body.np-lightbox-open {
     line-height: 1.2 !important;
   }
 
+  .np-history-event summary::after {
+    content: "+" !important;
+    color: var(--np-cyan) !important;
+    font-size: 1.1rem !important;
+    font-weight: 900 !important;
+  }
+
+  .np-history-event[open] summary::after {
+    content: "–" !important;
+    color: var(--np-gold-soft) !important;
+  }
+
+  .np-history-event-body {
+    padding: 0 0.9rem 0.85rem !important;
+  }
+
+  .np-history-event-body p {
+    margin: 0 !important;
+    color: rgba(245, 234, 220, 0.86) !important;
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+  }
 }
 
 /* 27. Startseite: kompakter Zeitstrahl als horizontale Auswahl */
@@ -8194,8 +8711,31 @@ body.np-lightbox-open {
   }
 }
 
+@media (min-width: 66.5rem) and (max-width: 1450px) {
+  .np-home-v2 .np-home-dashboard {
+    grid-template-columns: 1fr !important;
+  }
+
+  .np-dashboard-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: auto !important;
+  }
+}
 
 @media (max-width: 66.499rem) {
+  .np-home-dashboard {
+    display: grid !important;
+    gap: 1rem !important;
+  }
+
+  .np-dashboard-side {
+    display: grid !important;
+    gap: 1rem !important;
+  }
+
+  .np-dashboard-card {
+    padding: 1rem !important;
+  }
 
   .np-hero-secondary-button {
     min-height: 2.35rem !important;
@@ -9791,3 +10331,258 @@ body.np-page-sub::after {
     background: var(--np-section-bg) !important;
   }
 }
+
+/* 47. Seitenübergreifende Typografie- und Box-Konsolidierung */
+
+:root {
+  --np-heading-main-size: clamp(1.72rem, 2.08vw, 2.62rem);
+  --np-heading-echo-size: clamp(1.62rem, 1.88vw, 2.25rem);
+  --np-heading-card-size: clamp(0.96rem, 1vw, 1.08rem);
+  --np-text-ui-size: clamp(0.84rem, 0.88vw, 0.96rem);
+  --np-text-card-size: clamp(0.78rem, 0.82vw, 0.88rem);
+  --np-label-size: 0.68rem;
+}
+
+/* Große Seitentitel / Section-Titel: einheitliche Unterseiten-Logik */
+.np-section-header .np-title,
+.np-page-section > h1,
+.np-page-section h1.np-title,
+body.np-page-sub .main-content > h1 {
+  font-family: var(--np-font-heading) !important;
+  color: var(--np-type-hero) !important;
+  font-size: var(--np-heading-main-size) !important;
+  font-weight: 950 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.032em !important;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.54),
+    0 0 18px rgba(236, 183, 110, 0.06) !important;
+}
+
+/* Gleiche Deko-Elemente für echte Section-Header */
+.np-section-header {
+  position: relative !important;
+  max-width: 64rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.np-section-header .np-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+}
+
+.np-section-header .np-title::before {
+  content: "" !important;
+  flex: 0 0 0.42rem !important;
+  width: 0.42rem !important;
+  height: 0.42rem !important;
+  border-radius: 999px !important;
+  background: var(--np-cyan) !important;
+  box-shadow:
+    0 0 0 0.22rem rgba(0, 230, 246, 0.08),
+    0 0 14px rgba(0, 230, 246, 0.20) !important;
+}
+
+.np-section-header::after {
+  content: "" !important;
+  display: block !important;
+  width: min(14rem, 46%) !important;
+  height: 1px !important;
+  margin-top: 0.85rem !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 230, 246, 0),
+      rgba(0, 230, 246, 0.40),
+      rgba(236, 183, 110, 0.36),
+      rgba(0, 230, 246, 0)
+    ) !important;
+  box-shadow: 0 0 16px rgba(0, 230, 246, 0.08) !important;
+}
+
+/* ECHO-Seitenboxen: alle Unterseiten gleich behandeln */
+.echo-page-box h2,
+.echo-page-box-team h2,
+.echo-page-box-philosophy h2,
+.echo-page-box-faq h2,
+.echo-page-box-rules h2,
+.echo-page-box-streamer h2,
+.echo-page-box-help h2,
+.echo-page-box-duck h2,
+.np-home-v2 .np-pathfinder-copy h2 {
+  font-family: var(--np-font-heading) !important;
+  color: var(--np-gold-soft) !important;
+  font-size: var(--np-heading-echo-size) !important;
+  font-weight: 950 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.54),
+    0 0 16px rgba(236, 183, 110, 0.055) !important;
+}
+
+.echo-page-kicker,
+.np-section-kicker,
+.np-card-kicker,
+.np-ecosystem-type,
+.np-help-category-label,
+.np-team-role,
+.np-echo-route-head span {
+  font-family: var(--np-font-label) !important;
+  color: var(--np-type-kicker) !important;
+  font-size: var(--np-label-size) !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.085em !important;
+  text-transform: uppercase !important;
+}
+
+/* Karten-System: gleiche Grundwirkung für Kartenarten */
+.np-info-card,
+.np-team-card,
+.np-streamer-info-card,
+.np-asset-card,
+.np-help-callout,
+.np-home-v2 .np-route-card,
+.np-home-v2 .np-ecosystem-card,
+.np-home-v2 .np-history-tab-content,
+.np-home-v2 .np-history-panel-compact .np-history-intro {
+  border: 1px solid rgba(72, 122, 146, 0.32) !important;
+  border-radius: 0.72rem !important;
+  background: var(--np-card-bg) !important;
+  box-shadow:
+    0 13px 26px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055) !important;
+}
+
+/* Kartentitel: gleiche Rolle, aber keine Hero-Schrift */
+.np-card-title,
+.np-info-card h2,
+.np-team-card h2,
+.np-streamer-info-card h3,
+.np-asset-card h3,
+.np-help-callout h3,
+.np-home-v2 .np-route-title,
+.np-home-v2 .np-ecosystem-card strong,
+.np-history-tab-panel h3 {
+  font-family: var(--np-font-heading) !important;
+  color: var(--np-gold-soft) !important;
+  font-size: var(--np-heading-card-size) !important;
+  font-weight: 950 !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.012em !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.48) !important;
+}
+
+/* Kartentext / Beschreibungstexte: überall normal, nicht fett */
+.np-card-text,
+.np-info-card p:not(.np-card-kicker):not(.np-team-role),
+.np-team-card p:not(.np-card-kicker):not(.np-team-role),
+.np-streamer-info-card p,
+.np-asset-card p,
+.np-help-callout p,
+.np-home-v2 .np-route-text,
+.np-home-v2 .np-ecosystem-card span:not(.np-ecosystem-type),
+.np-history-tab-panel p {
+  font-family: var(--np-font-body) !important;
+  color: rgba(247, 236, 220, 0.76) !important;
+  font-size: var(--np-text-card-size) !important;
+  font-weight: 400 !important;
+  line-height: 1.48 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Akkordeons: FAQ, Streamer und Modpack-Hilfe einheitlicher */
+.np-accordion,
+.np-faq-details,
+.np-help-details {
+  border: 1px solid rgba(72, 122, 146, 0.32) !important;
+  border-radius: 0.72rem !important;
+  background: var(--np-card-bg) !important;
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+}
+
+.np-accordion summary,
+.np-faq-details summary,
+.np-help-details summary {
+  min-height: 3.05rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.58rem !important;
+  padding: 0.88rem 1.08rem !important;
+  color: var(--np-gold-soft) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(0.94rem, 0.95vw, 1.05rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.01em !important;
+  border-left: 3px solid rgba(0, 230, 246, 0.50) !important;
+  background: transparent !important;
+}
+
+.np-accordion[open] summary,
+.np-faq-details[open] summary,
+.np-help-details[open] summary {
+  border-bottom: 1px solid rgba(72, 122, 146, 0.28) !important;
+  background:
+    linear-gradient(90deg, rgba(0, 230, 246, 0.07), rgba(0, 230, 246, 0.00)) !important;
+}
+
+.np-accordion > div,
+.np-faq-details > div,
+.np-help-details > div,
+.np-help-module-content {
+  color: rgba(247, 236, 220, 0.78) !important;
+  font-family: var(--np-font-body) !important;
+  font-size: var(--np-text-ui-size) !important;
+  font-weight: 400 !important;
+  line-height: 1.58 !important;
+}
+
+/* Startseite: Nicht-Hero-Section-Titel näher an Unterseitenstil */
+.np-home-v2 .np-ecosystem-head h2,
+.np-home-v2 .np-history-panel-compact .np-history-intro h2 {
+  font-family: var(--np-font-heading) !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.42rem, 1.58vw, 2rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.022em !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.52) !important;
+}
+
+/* Ecosystem bekommt die gleiche Section-Deko wie Unterseiten, aber dezenter */
+.np-home-v2 .np-ecosystem-head h2 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+}
+
+.np-home-v2 .np-ecosystem-head h2::before {
+  content: "" !important;
+  flex: 0 0 0.42rem !important;
+  width: 0.42rem !important;
+  height: 0.42rem !important;
+  border-radius: 999px !important;
+  background: var(--np-cyan) !important;
+  box-shadow:
+    0 0 0 0.22rem rgba(0, 230, 246, 0.08),
+    0 0 14px rgba(0, 230, 246, 0.20) !important;
+}
+
+/* Hero bleibt bewusst eigene Rolle und wird nicht an Unterseiten angeglichen */
+.np-hero-title-main,
+.np-hero-title-sub,
+.np-hero h1 {
+  font-family: var(--np-font-hero) !important;
+}
+
+/* Footer/Header Icons und Labels bleiben dezent */
+#np-global-window-footer .np-site-footer-brand span,
+#np-global-window-footer .np-footer-gamertransfer,
+#np-global-window-footer .np-footer-icon-link {
+  font-family: var(--np-font-body) !important;
+}
+
