@@ -42,7 +42,7 @@ permalink: /regelwerk.html
       <h2>1. Vorwort</h2>
     </header>
     <ol class="np-rule-list">
-      <li><strong>1.1.</strong> Wir bauen eine immersive Welt, in der Erkunden, Bauen und Atmosphäre im Vordergrund stehen.</li>
+      <li><strong>1.1.</strong> TEST TEST Wir bauen eine immersive Welt, in der Erkunden, Bauen und Atmosphäre im Vordergrund stehen.</li>
       <li><strong>1.2.</strong> Handelt bitte im Sinne unserer Philosophie – diese findet ihr auf unserem Discord.</li>
       <li><strong>1.3.</strong> Respektvoller Umgang miteinander ist Voraussetzung – kein toxisches Verhalten, keine Diskriminierung.</li>
       <li><strong>1.4.</strong> Änderungen am Regelwerk sind jederzeit möglich, werden aber transparent im Discord angekündigt.</li>
