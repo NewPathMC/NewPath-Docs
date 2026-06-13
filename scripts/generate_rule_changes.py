@@ -136,6 +136,85 @@ def compact_changes(entries: Iterable[LineEntry], change_type: str) -> list[dict
     return changes
 
 
+
+def similarity(left: str, right: str) -> float:
+    """Berechnet, ob zwei sichtbare Textzeilen eher eine Änderung derselben Regel sind."""
+    left_norm = re.sub(r'\s+', ' ', left.casefold()).strip()
+    right_norm = re.sub(r'\s+', ' ', right.casefold()).strip()
+
+    if not left_norm or not right_norm:
+        return 0.0
+
+    if left_norm == right_norm:
+        return 1.0
+
+    # Wenn eine Fassung die andere enthält, ist das fast immer eine Bearbeitung
+    # derselben Regel, z. B. wenn nur "TEST TEST" eingefügt wurde.
+    if left_norm in right_norm or right_norm in left_norm:
+        shorter = min(len(left_norm), len(right_norm))
+        longer = max(len(left_norm), len(right_norm))
+        return max(0.72, shorter / longer)
+
+    return SequenceMatcher(a=left_norm, b=right_norm, autojunk=False).ratio()
+
+
+def split_replace_block(
+    before_block: list[LineEntry],
+    after_block: list[LineEntry],
+    edit_threshold: float = 0.55,
+) -> tuple[list[LineEntry], list[LineEntry], list[LineEntry]]:
+    """Teilt einen replace-Block in echte neue, geänderte und entfernte Zeilen auf.
+
+    SequenceMatcher meldet normale Textänderungen als:
+    - alte Zeile entfernt
+    - neue Zeile hinzugefügt
+
+    Für das Regelwerk wollen wir solche Fälle aber als "geändert" zählen,
+    damit nicht fälschlich eine rote "entfernt"-Box erscheint.
+    """
+    added: list[LineEntry] = []
+    edited: list[LineEntry] = []
+    removed: list[LineEntry] = []
+
+    unmatched_before = set(range(len(before_block)))
+    unmatched_after = set(range(len(after_block)))
+    pairs: list[tuple[float, int, int]] = []
+
+    for before_index, before_entry in enumerate(before_block):
+        for after_index, after_entry in enumerate(after_block):
+            score = similarity(before_entry.text, after_entry.text)
+            if score >= edit_threshold:
+                pairs.append((score, before_index, after_index))
+
+    # Beste Treffer zuerst, damit jede alte/neue Zeile nur einmal verwendet wird.
+    pairs.sort(reverse=True, key=lambda item: item[0])
+
+    for score, before_index, after_index in pairs:
+        if before_index not in unmatched_before or after_index not in unmatched_after:
+            continue
+
+        edited.append(after_block[after_index])
+        unmatched_before.remove(before_index)
+        unmatched_after.remove(after_index)
+
+    # Wenn die Blockgrößen identisch sind, die Texte aber stärker umformuliert wurden,
+    # behandeln wir die übrigen Paare positionsbasiert ebenfalls als "geändert".
+    while len(unmatched_before) == len(unmatched_after) and unmatched_before and unmatched_after:
+        before_index = min(unmatched_before)
+        after_index = min(unmatched_after)
+        edited.append(after_block[after_index])
+        unmatched_before.remove(before_index)
+        unmatched_after.remove(after_index)
+
+    for after_index in sorted(unmatched_after):
+        added.append(after_block[after_index])
+
+    for before_index in sorted(unmatched_before):
+        removed.append(before_block[before_index])
+
+    return added, edited, removed
+
+
 def build_changes(before_text: str, after_text: str) -> dict[str, object]:
     before_entries = collect_entries(before_text)
     after_entries = collect_entries(after_text)
@@ -152,13 +231,23 @@ def build_changes(before_text: str, after_text: str) -> dict[str, object]:
     for tag, i1, i2, j1, j2 in matcher.get_opcodes():
         if tag == 'equal':
             continue
+
         if tag == 'insert':
             added.extend(after_entries[j1:j2])
-        elif tag == 'delete':
+            continue
+
+        if tag == 'delete':
             removed.extend(before_entries[i1:i2])
-        elif tag == 'replace':
-            edited.extend(after_entries[j1:j2])
-            removed.extend(before_entries[i1:i2])
+            continue
+
+        if tag == 'replace':
+            block_added, block_edited, block_removed = split_replace_block(
+                before_entries[i1:i2],
+                after_entries[j1:j2],
+            )
+            added.extend(block_added)
+            edited.extend(block_edited)
+            removed.extend(block_removed)
 
     generated_at = dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds')
 
