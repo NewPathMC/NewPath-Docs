@@ -10046,182 +10046,7 @@ body.np-page-sub .main-content > h1 {
   font-family: var(--np-font-body) !important;
 }
 
-/* 48. Startseite: Anchor-Icons ausblenden und ECHO-Stil angleichen */
 
-/*
-  Just-the-Docs fügt bei Überschriften teilweise Anchor-/Link-Symbole ein.
-  Auf der Startseite stören diese im Landingpage-Design, deshalb werden sie dort entfernt.
-*/
-body.np-page-home .anchor-heading,
-body.np-page-home .anchor-heading:hover,
-body.np-page-home .anchor-link,
-body.np-page-home .anchor-link:hover,
-body.np-page-home .np-ecosystem-head h2 .anchor-heading,
-body.np-page-home .np-ecosystem-head h2 .anchor-link,
-body.np-page-home .np-history-intro h2 .anchor-heading,
-body.np-page-home .np-history-intro h2 .anchor-link,
-body.np-page-home h1 .anchor-heading,
-body.np-page-home h2 .anchor-heading,
-body.np-page-home h3 .anchor-heading,
-body.np-page-home h1 .anchor-link,
-body.np-page-home h2 .anchor-link,
-body.np-page-home h3 .anchor-link {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-/* Startseiten-ECHO bekommt denselben Grundcharakter wie Unterseiten-ECHO-Boxen */
-@media (min-width: 66.5rem) {
-  .np-home-v2 .np-pathfinder-dashboard {
-    grid-template-columns: minmax(430px, 0.40fr) minmax(760px, 0.60fr) !important;
-    align-items: center !important;
-    border: 1px solid var(--np-system-border) !important;
-    border-left: 3px solid rgba(0, 230, 246, 0.62) !important;
-    border-radius: 0.78rem !important;
-    background:
-      radial-gradient(circle at 6% 45%, rgba(0, 230, 246, 0.14), transparent 13.5rem),
-      linear-gradient(180deg, rgba(3, 18, 25, 0.86), rgba(1, 12, 18, 0.92)) !important;
-    box-shadow:
-      0 18px 38px rgba(0, 0, 0, 0.30),
-      inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      inset 0 0 34px rgba(0, 230, 246, 0.022) !important;
-  }
-
-  .np-home-v2 .np-pathfinder-echo {
-    display: grid !important;
-    grid-template-columns: clamp(6.6rem, 7.2vw, 8.2rem) minmax(0, 1fr) !important;
-    gap: clamp(1.25rem, 1.6vw, 1.9rem) !important;
-    align-items: center !important;
-    min-width: 0 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image {
-    position: relative !important;
-    width: clamp(6.4rem, 7vw, 8rem) !important;
-    height: clamp(6.4rem, 7vw, 8rem) !important;
-    display: grid !important;
-    place-items: center !important;
-    border-radius: 999px !important;
-    background:
-      radial-gradient(circle, rgba(0, 230, 246, 0.16), transparent 63%) !important;
-    filter: drop-shadow(0 0 20px rgba(0, 230, 246, 0.16)) !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image::before {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0.45rem !important;
-    border-radius: 999px !important;
-    border: 1px solid rgba(0, 230, 246, 0.16) !important;
-    box-shadow: inset 0 0 18px rgba(0, 230, 246, 0.08) !important;
-    pointer-events: none !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image img {
-    position: relative !important;
-    z-index: 1 !important;
-    width: 88% !important;
-    height: 88% !important;
-    object-fit: contain !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy {
-    min-width: 0 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy .np-section-kicker {
-    margin-bottom: 0.35rem !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy h2 {
-    margin: 0 0 0.45rem !important;
-    font-family: var(--np-font-heading) !important;
-    color: var(--np-gold-soft) !important;
-    font-size: clamp(1.72rem, 1.72vw, 2.12rem) !important;
-    font-weight: 950 !important;
-    line-height: 1.08 !important;
-    letter-spacing: -0.022em !important;
-    text-shadow:
-      0 2px 12px rgba(0, 0, 0, 0.54),
-      0 0 16px rgba(236, 183, 110, 0.055) !important;
-  }
-
-  .np-home-v2 .np-pathfinder-copy p:last-child {
-    max-width: 39rem !important;
-    margin: 0 !important;
-    color: rgba(247, 236, 220, 0.78) !important;
-    font-family: var(--np-font-body) !important;
-    font-size: clamp(0.88rem, 0.9vw, 1rem) !important;
-    font-weight: 400 !important;
-    line-height: 1.55 !important;
-  }
-
-  .np-home-v2 .np-echo-route-head {
-    margin-bottom: 0.18rem !important;
-  }
-
-  .np-home-v2 .np-echo-route-head strong {
-    color: rgba(247, 236, 220, 0.80) !important;
-    font-family: var(--np-font-body) !important;
-    font-size: 0.8rem !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.01em !important;
-  }
-}
-
-@media (max-width: 66.499rem) {
-  .np-home-v2 .np-pathfinder-image {
-    width: 6.4rem !important;
-    height: 6.4rem !important;
-    margin: 0 auto !important;
-    border-radius: 999px !important;
-    background: radial-gradient(circle, rgba(0, 230, 246, 0.16), transparent 63%) !important;
-  }
-}
-
-/* 49. Startseite: zusätzlichen ECHO-Kreis entfernen */
-
-@media (min-width: 66.5rem) {
-  .np-home-v2 .np-pathfinder-image {
-    background: transparent !important;
-    border-radius: 0 !important;
-    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.34)) !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image::before,
-  .np-home-v2 .np-pathfinder-image::after {
-    display: none !important;
-    content: none !important;
-    opacity: 0 !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image img {
-    width: 92% !important;
-    height: 92% !important;
-    object-fit: contain !important;
-    filter:
-      drop-shadow(0 10px 16px rgba(0, 0, 0, 0.34))
-      drop-shadow(0 0 12px rgba(0, 230, 246, 0.12)) !important;
-  }
-}
-
-@media (max-width: 66.499rem) {
-  .np-home-v2 .np-pathfinder-image {
-    background: transparent !important;
-    border-radius: 0 !important;
-  }
-
-  .np-home-v2 .np-pathfinder-image::before,
-  .np-home-v2 .np-pathfinder-image::after {
-    display: none !important;
-    content: none !important;
-  }
-}
 
 /* 50. Finaler Design-Check: einheitliche Rollen für Überschriften, Boxen, Karten und ECHO */
 
@@ -10623,7 +10448,6 @@ body.np-page-home h3 .anchor-link {
   font-family: var(--np-font-hero) !important;
 }
 
-/* 51. ECHO-Hover entfernen, Bild-Schimmer ergänzen, Hero-Buttons angleichen, Header-Brand fixen */
 
 /* 51.1 ECHO-Boxen: kein Hover auf der gesamten Box */
 .echo-page-box,
@@ -10856,147 +10680,31 @@ header .np-header-brand-subtitle {
   text-transform: uppercase !important;
 }
 
-/* 52. Finale Detailfixes: Header-Georgia, Hero-Buttons, ECHO-Schimmer, History-Überlauf */
+/* 53. ECHO-Konfliktbereinigung: dauerhafter Bildschimmer ohne Box-Hover */
 
-/* 52.1 Header links: tatsächliche JS-Struktur aus head_custom.html gezielt ansprechen */
-@media (min-width: 66.5rem) {
-  .np-topbar-brand .np-topbar-title span:first-child,
-  .main-header .np-topbar-brand .np-topbar-title span:first-child {
-    font-family: Georgia, "Times New Roman", serif !important;
-    color: var(--np-gold-soft) !important;
-    font-size: 1.28rem !important;
-    font-weight: 700 !important;
-    line-height: 0.95 !important;
-    letter-spacing: -0.035em !important;
-    text-transform: none !important;
-    text-shadow:
-      0 2px 10px rgba(0, 0, 0, 0.52),
-      0 0 10px rgba(236, 183, 110, 0.06) !important;
-  }
+/*
+  Wichtig:
+  Dieser Block liegt bewusst ganz am Ende und überschreibt alte ECHO-Regeln.
+  Ziel:
+  - ECHO-Boxen selbst haben KEINEN Hover-Effekt.
+  - ECHO-Bilder haben IMMER einen dezenten Schimmer.
+  - Der Schimmer ist auf Startseite und Unterseiten sichtbar.
+  - Kein sichtbarer Kreis/Rahmen um ECHO, nur weicher Glow hinter der PNG.
+*/
 
-  .np-topbar-brand .np-topbar-title span:last-child,
-  .main-header .np-topbar-brand .np-topbar-title span:last-child {
-    font-family: var(--np-font-label) !important;
-    color: var(--np-cyan) !important;
-    font-size: 0.62rem !important;
-    font-weight: 950 !important;
-    line-height: 1 !important;
-    letter-spacing: 0.12em !important;
-    text-transform: uppercase !important;
-  }
+/* 53.1 ECHO-Box-Hover vollständig neutralisieren */
+.echo-page-box,
+.echo-page-box-team,
+.echo-page-box-philosophy,
+.echo-page-box-faq,
+.echo-page-box-rules,
+.echo-page-box-streamer,
+.echo-page-box-help,
+.echo-page-box-duck,
+.np-home-v2 .np-pathfinder-dashboard {
+  transition: none !important;
 }
 
-/* 52.2 Hero-Buttons: beide exakt gleich groß, Regelwerk mit eigenem Hover */
-@media (min-width: 66.5rem) {
-  .np-home-v2 .np-hero-actions,
-  .np-home-v2 .np-server-actions,
-  .np-hero-actions,
-  .np-server-actions {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0.65rem !important;
-    flex-wrap: wrap !important;
-  }
-
-  .np-home-v2 .np-hero-actions > a,
-  .np-home-v2 .np-hero-actions > button,
-  .np-home-v2 .np-server-actions > a,
-  .np-home-v2 .np-server-actions > button,
-  .np-hero-actions > a,
-  .np-hero-actions > button,
-  .np-server-actions > a,
-  .np-server-actions > button,
-  .np-home-v2 .np-server-copy,
-  .np-server-copy,
-  .np-home-v2 .np-hero-button,
-  .np-hero-button {
-    width: 10.9rem !important;
-    min-width: 10.9rem !important;
-    max-width: 10.9rem !important;
-    height: 2.42rem !important;
-    min-height: 2.42rem !important;
-    max-height: 2.42rem !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.48rem !important;
-    padding: 0 0.95rem !important;
-    border-radius: 0.52rem !important;
-    font-family: var(--np-font-label) !important;
-    font-size: 0.76rem !important;
-    font-weight: 950 !important;
-    line-height: 1 !important;
-    letter-spacing: 0.01em !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    box-sizing: border-box !important;
-    transform: translateY(0) !important;
-    transition:
-      transform 0.18s ease,
-      border-color 0.18s ease,
-      background 0.18s ease,
-      box-shadow 0.18s ease,
-      color 0.18s ease !important;
-  }
-
-  .np-home-v2 .np-server-copy,
-  .np-server-copy {
-    color: #ffffff !important;
-    background:
-      linear-gradient(180deg, rgba(0, 230, 246, 0.26), rgba(0, 132, 150, 0.18)) !important;
-    border: 1px solid rgba(0, 230, 246, 0.68) !important;
-    box-shadow:
-      0 10px 20px rgba(0, 0, 0, 0.24),
-      0 0 14px rgba(0, 230, 246, 0.08),
-      inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
-  }
-
-  .np-home-v2 .np-server-copy:hover,
-  .np-server-copy:hover {
-    transform: translateY(-1px) !important;
-    border-color: rgba(0, 230, 246, 0.86) !important;
-    background:
-      linear-gradient(180deg, rgba(0, 230, 246, 0.34), rgba(0, 132, 150, 0.22)) !important;
-    box-shadow:
-      0 14px 24px rgba(0, 0, 0, 0.30),
-      0 0 20px rgba(0, 230, 246, 0.15),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
-  }
-
-  .np-home-v2 .np-hero-button-secondary,
-  .np-hero-button-secondary,
-  .np-home-v2 .np-hero-actions a[href*="regelwerk"],
-  .np-home-v2 .np-server-actions a[href*="regelwerk"],
-  .np-hero-actions a[href*="regelwerk"],
-  .np-server-actions a[href*="regelwerk"] {
-    color: rgba(247, 236, 220, 0.94) !important;
-    background:
-      linear-gradient(180deg, rgba(236, 183, 110, 0.16), rgba(58, 40, 20, 0.14)) !important;
-    border: 1px solid rgba(236, 183, 110, 0.56) !important;
-    box-shadow:
-      0 10px 20px rgba(0, 0, 0, 0.22),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-  }
-
-  .np-home-v2 .np-hero-button-secondary:hover,
-  .np-hero-button-secondary:hover,
-  .np-home-v2 .np-hero-actions a[href*="regelwerk"]:hover,
-  .np-home-v2 .np-server-actions a[href*="regelwerk"]:hover,
-  .np-hero-actions a[href*="regelwerk"]:hover,
-  .np-server-actions a[href*="regelwerk"]:hover {
-    transform: translateY(-1px) !important;
-    color: #ffffff !important;
-    border-color: rgba(236, 183, 110, 0.82) !important;
-    background:
-      linear-gradient(180deg, rgba(236, 183, 110, 0.24), rgba(58, 40, 20, 0.18)) !important;
-    box-shadow:
-      0 14px 24px rgba(0, 0, 0, 0.30),
-      0 0 20px rgba(236, 183, 110, 0.13),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
-  }
-}
-
-/* 52.3 ECHO-Boxen: Box-Hover komplett neutralisieren */
 .echo-page-box:hover,
 .echo-page-box-team:hover,
 .echo-page-box-philosophy:hover,
@@ -11009,64 +10717,120 @@ header .np-header-brand-subtitle {
   transform: none !important;
   border-color: var(--np-ui-border, rgba(72, 122, 146, 0.34)) !important;
   border-left-color: rgba(0, 230, 246, 0.62) !important;
-  box-shadow: var(--np-ui-panel-shadow, 0 18px 38px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.045), inset 0 0 34px rgba(0, 230, 246, 0.018)) !important;
+  background:
+    radial-gradient(circle at 5% 45%, rgba(0, 230, 246, 0.10), transparent 14rem),
+    linear-gradient(180deg, rgba(3, 18, 25, 0.84), rgba(1, 12, 18, 0.91)) !important;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    inset 0 0 34px rgba(0, 230, 246, 0.018) !important;
 }
 
-/* 52.4 ECHO-Bild-Schimmer dauerhaft, auch ohne Hover; kein Kreis auf der Startseite */
+/* 53.2 Gemeinsame ECHO-Bildfläche: Unterseiten + Startseite */
 .echo-page-image,
+.echo-page-box .echo-page-image,
+.echo-page-box-team .echo-page-image,
+.echo-page-box-philosophy .echo-page-image,
+.echo-page-box-faq .echo-page-image,
+.echo-page-box-rules .echo-page-image,
+.echo-page-box-streamer .echo-page-image,
+.echo-page-box-help .echo-page-image,
+.echo-page-box-duck .echo-page-image,
 .np-home-v2 .np-pathfinder-image {
   position: relative !important;
   isolation: isolate !important;
+  z-index: 0 !important;
+  overflow: visible !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   background: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  overflow: visible !important;
 }
 
+/* feste Fläche, damit pseudo-elemente auf der Startseite überhaupt sichtbar arbeiten */
+.np-home-v2 .np-pathfinder-image {
+  flex: 0 0 clamp(8.5rem, 9.8vw, 11rem) !important;
+  width: clamp(8.5rem, 9.8vw, 11rem) !important;
+  min-width: clamp(8.5rem, 9.8vw, 11rem) !important;
+  height: clamp(8.5rem, 9.8vw, 11rem) !important;
+  min-height: clamp(8.5rem, 9.8vw, 11rem) !important;
+}
+
+/* alte Kreis-/Rahmen-Pseudo-Elemente sicher abschalten */
 .echo-page-image::before,
+.echo-page-box .echo-page-image::before,
+.echo-page-box-team .echo-page-image::before,
+.echo-page-box-philosophy .echo-page-image::before,
+.echo-page-box-faq .echo-page-image::before,
+.echo-page-box-rules .echo-page-image::before,
+.echo-page-box-streamer .echo-page-image::before,
+.echo-page-box-help .echo-page-image::before,
+.echo-page-box-duck .echo-page-image::before,
 .np-home-v2 .np-pathfinder-image::before {
   display: none !important;
   content: none !important;
 }
 
+/* dauerhafter Glow hinter ECHO */
 .echo-page-image::after,
+.echo-page-box .echo-page-image::after,
+.echo-page-box-team .echo-page-image::after,
+.echo-page-box-philosophy .echo-page-image::after,
+.echo-page-box-faq .echo-page-image::after,
+.echo-page-box-rules .echo-page-image::after,
+.echo-page-box-streamer .echo-page-image::after,
+.echo-page-box-help .echo-page-image::after,
+.echo-page-box-duck .echo-page-image::after,
 .np-home-v2 .np-pathfinder-image::after {
   content: "" !important;
+  display: block !important;
   position: absolute !important;
   left: 50% !important;
-  top: 52% !important;
-  width: 74% !important;
-  height: 72% !important;
-  border-radius: 999px !important;
+  top: 53% !important;
+  width: 86% !important;
+  height: 76% !important;
   transform: translate(-50%, -50%) scale(1) !important;
+  border-radius: 999px !important;
   background:
     radial-gradient(circle,
-      rgba(0, 230, 246, 0.23) 0%,
-      rgba(0, 230, 246, 0.12) 32%,
-      rgba(0, 230, 246, 0.035) 56%,
-      transparent 74%) !important;
-  filter: blur(12px) !important;
-  opacity: 0.78 !important;
-  z-index: 0 !important;
+      rgba(0, 230, 246, 0.26) 0%,
+      rgba(0, 230, 246, 0.16) 28%,
+      rgba(0, 230, 246, 0.065) 48%,
+      transparent 72%) !important;
+  filter: blur(13px) !important;
+  opacity: 0.82 !important;
+  z-index: -1 !important;
   pointer-events: none !important;
-  animation: npEchoPermanentGlow 4.8s ease-in-out infinite !important;
+  animation: npEchoPermanentImageShimmer 4.6s ease-in-out infinite !important;
 }
 
+/* Bild selbst bleibt über dem Schimmer */
 .echo-page-image img,
+.echo-page-box .echo-page-image img,
+.echo-page-box-team .echo-page-image img,
+.echo-page-box-philosophy .echo-page-image img,
+.echo-page-box-faq .echo-page-image img,
+.echo-page-box-rules .echo-page-image img,
+.echo-page-box-streamer .echo-page-image img,
+.echo-page-box-help .echo-page-image img,
+.echo-page-box-duck .echo-page-image img,
 .np-home-v2 .np-pathfinder-image img {
   position: relative !important;
-  z-index: 1 !important;
+  z-index: 2 !important;
   background: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   transform: none !important;
   filter:
-    drop-shadow(0 11px 16px rgba(0, 0, 0, 0.38))
+    drop-shadow(0 12px 18px rgba(0, 0, 0, 0.40))
     drop-shadow(0 0 15px rgba(0, 230, 246, 0.18)) !important;
 }
 
+/* kein anderes Bildverhalten beim Hover */
 .echo-page-box:hover .echo-page-image img,
 .echo-page-box-team:hover .echo-page-image img,
 .echo-page-box-philosophy:hover .echo-page-image img,
@@ -11077,67 +10841,39 @@ header .np-header-brand-subtitle {
 .echo-page-box-duck:hover .echo-page-image img,
 .np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
   transform: none !important;
+  filter:
+    drop-shadow(0 12px 18px rgba(0, 0, 0, 0.40))
+    drop-shadow(0 0 15px rgba(0, 230, 246, 0.18)) !important;
 }
 
-@keyframes npEchoPermanentGlow {
+/* Animation ist dauerhaft aktiv, nicht hover-basiert */
+@keyframes npEchoPermanentImageShimmer {
   0%, 100% {
     opacity: 0.58;
-    transform: translate(-50%, -50%) scale(0.98);
+    transform: translate(-50%, -50%) scale(0.96);
   }
+
   50% {
-    opacity: 0.88;
-    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 0.92;
+    transform: translate(-50%, -50%) scale(1.06);
   }
 }
 
-/* 52.5 Entstehungsgeschichte: Text darf nicht in Zeitstrahl/Box laufen */
-@media (min-width: 66.5rem) {
-  .np-home-v2 .np-history-panel,
-  .np-home-v2 .np-history-panel-compact {
-    display: grid !important;
-    grid-template-columns: minmax(260px, 0.28fr) minmax(0, 0.72fr) !important;
-    align-items: stretch !important;
-    gap: clamp(1.2rem, 1.65vw, 1.8rem) !important;
-    overflow: hidden !important;
+/* Mobile ebenfalls ohne Kreis, aber mit leichterem Glow */
+@media (max-width: 66.499rem) {
+  .np-home-v2 .np-pathfinder-image {
+    width: 7rem !important;
+    min-width: 7rem !important;
+    height: 7rem !important;
+    min-height: 7rem !important;
   }
 
-  .np-home-v2 .np-history-panel-compact .np-history-intro,
-  .np-home-v2 .np-history-intro {
-    min-width: 0 !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
-    padding: clamp(1rem, 1.35vw, 1.35rem) !important;
-  }
-
-  .np-home-v2 .np-history-panel-compact .np-history-intro h2,
-  .np-home-v2 .np-history-intro h2 {
-    max-width: 100% !important;
-    margin: 0 0 0.8rem !important;
-    font-size: clamp(1.45rem, 1.58vw, 1.95rem) !important;
-    line-height: 1.12 !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-    hyphens: auto !important;
-  }
-
-  .np-home-v2 .np-history-panel-compact .np-history-intro p,
-  .np-home-v2 .np-history-intro p {
-    max-width: 100% !important;
-    margin: 0 !important;
-    font-size: clamp(0.78rem, 0.82vw, 0.9rem) !important;
-    line-height: 1.5 !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-    hyphens: auto !important;
-  }
-
-  .np-home-v2 .np-history-tabs,
-  .np-home-v2 .np-history-content,
-  .np-home-v2 .np-history-track,
-  .np-home-v2 .np-history-tab-content {
-    min-width: 0 !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
+  .echo-page-image::after,
+  .np-home-v2 .np-pathfinder-image::after {
+    width: 82% !important;
+    height: 70% !important;
+    filter: blur(11px) !important;
+    opacity: 0.68 !important;
   }
 }
 
