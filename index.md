@@ -158,6 +158,7 @@ permalink: /
   </div>
 </section>
 
+<div class="np-home-section-separator" aria-hidden="true"></div>
 
 <section class="np-panel np-ecosystem-panel" aria-labelledby="np-ecosystem-title">
   <div class="np-ecosystem-head">
