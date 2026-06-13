@@ -10877,3 +10877,192 @@ header .np-header-brand-subtitle {
   }
 }
 
+/* 54. Detailfix: Header-Georgia und Entstehungsgeschichte stabilisieren */
+
+/* 54.1 Header-Branding links: echte Topbar-Struktur erzwingen */
+@media (min-width: 66.5rem) {
+  .main-header .np-topbar-brand,
+  .main-header .np-topbar-brand:visited,
+  .main-header .np-topbar-brand:hover {
+    text-decoration: none !important;
+  }
+
+  .main-header .np-topbar-title {
+    display: grid !important;
+    align-content: center !important;
+    line-height: 1 !important;
+  }
+
+  .main-header .np-topbar-title span:first-child {
+    font-family: Georgia, "Times New Roman", Times, serif !important;
+    color: var(--np-gold-soft) !important;
+    font-size: 1.28rem !important;
+    font-weight: 700 !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.045em !important;
+    text-transform: none !important;
+    font-style: normal !important;
+    text-shadow:
+      0 2px 10px rgba(0, 0, 0, 0.55),
+      0 0 10px rgba(236, 183, 110, 0.06) !important;
+  }
+
+  .main-header .np-topbar-title span:last-child {
+    font-family: var(--np-font-label) !important;
+    color: var(--np-cyan) !important;
+    margin-top: 0.17rem !important;
+    font-size: 0.62rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+  }
+}
+
+/* 54.2 Hero-Buttons: beide Buttons exakt gleich groß halten */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .np-home-v2 .np-hero-actions .np-server-copy,
+  .np-home-v2 .np-hero-actions .np-hero-button,
+  .np-home-v2 .np-hero-actions .np-hero-button-secondary,
+  .np-home-v2 .np-hero-actions a,
+  .np-home-v2 .np-hero-actions button {
+    width: 10.9rem !important;
+    min-width: 10.9rem !important;
+    max-width: 10.9rem !important;
+    height: 2.42rem !important;
+    min-height: 2.42rem !important;
+    max-height: 2.42rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.48rem !important;
+    padding: 0 0.95rem !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    border-radius: 0.52rem !important;
+    font-family: var(--np-font-label) !important;
+    font-size: 0.76rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.01em !important;
+    text-decoration: none !important;
+    transform: translateY(0) !important;
+    transition:
+      transform 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease,
+      box-shadow 0.18s ease,
+      color 0.18s ease !important;
+  }
+
+  .np-home-v2 .np-hero-actions .np-hero-button-secondary,
+  .np-home-v2 .np-hero-actions a[href*="regelwerk"] {
+    color: rgba(247, 236, 220, 0.94) !important;
+    background:
+      linear-gradient(180deg, rgba(236, 183, 110, 0.16), rgba(58, 40, 20, 0.14)) !important;
+    border: 1px solid rgba(236, 183, 110, 0.56) !important;
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .np-home-v2 .np-hero-actions .np-hero-button-secondary:hover,
+  .np-home-v2 .np-hero-actions a[href*="regelwerk"]:hover {
+    transform: translateY(-1px) !important;
+    color: #ffffff !important;
+    border-color: rgba(236, 183, 110, 0.82) !important;
+    background:
+      linear-gradient(180deg, rgba(236, 183, 110, 0.24), rgba(58, 40, 20, 0.18)) !important;
+    box-shadow:
+      0 14px 24px rgba(0, 0, 0, 0.30),
+      0 0 20px rgba(236, 183, 110, 0.13),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  }
+}
+
+/* 54.3 Entstehungsgeschichte: linke Intro-Box darf nicht in den Zeitstrahl laufen */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    display: grid !important;
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr) !important;
+    align-items: stretch !important;
+    column-gap: clamp(1.4rem, 2vw, 2.1rem) !important;
+    overflow: hidden !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro,
+  .np-home-v2 .np-history-intro {
+    min-width: 0 !important;
+    max-width: 20rem !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    padding: clamp(1rem, 1.35vw, 1.35rem) !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2,
+  .np-home-v2 .np-history-intro h2 {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 0 0.8rem !important;
+    font-size: clamp(1.38rem, 1.45vw, 1.72rem) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.02em !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2::before,
+  .np-home-v2 .np-history-intro h2::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro p,
+  .np-home-v2 .np-history-intro p {
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: clamp(0.78rem, 0.82vw, 0.9rem) !important;
+    line-height: 1.5 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }
+
+  .np-home-v2 .np-history-tabs,
+  .np-home-v2 .np-history-content,
+  .np-home-v2 .np-history-track,
+  .np-home-v2 .np-history-tab-content {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1280px) {
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    grid-template-columns: minmax(0, 18rem) minmax(0, 1fr) !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro,
+  .np-home-v2 .np-history-intro {
+    max-width: 18rem !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2,
+  .np-home-v2 .np-history-intro h2 {
+    font-size: clamp(1.22rem, 1.36vw, 1.48rem) !important;
+  }
+}
+
