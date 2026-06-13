@@ -147,87 +147,121 @@ permalink: /
 
 <div class="np-home-section-separator" aria-hidden="true"></div>
 
-<section class="np-panel np-history-panel" aria-label="Entstehungsgeschichte von NewPath">
+<section class="np-panel np-history-panel np-history-panel-compact" aria-label="Entstehungsgeschichte von NewPath">
   <div class="np-history-intro">
     <p class="np-section-kicker">Entstehungsgeschichte</p>
     <h2>Der Weg zu NewPath.</h2>
     <p>
       NewPath ist über viele Jahre aus öffentlichen Minecraft-Projekten entstanden:
-      von gemeinsamen Vanilla-Welten über Rebrandings bis hin zum eigenen Modpack
-      mit klarer Identität, Atmosphäre und Community-Fokus.
+      von gemeinsamen Vanilla-Welten über Rebrandings bis hin zum eigenen Modpack mit
+      klarer Identität, Atmosphäre und Community-Fokus.
     </p>
   </div>
 
-  <div class="np-history-timeline np-history-timeline-full" aria-label="NewPath Zeitstrahl">
-    <article class="np-history-step">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">Seit 2017</p>
-      <h3>Öffentliche Minecraft-Projekte</h3>
-      <p>
-        M4ximum_ startet und begleitet öffentliche Minecraft-Projekte – die Grundlage
-        für alles, was später zu NewPath werden sollte.
-      </p>
-    </article>
+  <div class="np-history-horizontal" aria-label="Horizontaler NewPath Zeitstrahl">
+    <div class="np-history-track" aria-hidden="true"></div>
 
-    <article class="np-history-step">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">2022</p>
-      <h3>S.O.O.M. Community Server</h3>
-      <p>
-        Ein Vanilla-Minecraft-Server mit Plugins entsteht. SarahdasFaultier, OutTerror,
-        Ossifant und M4ximum_ sind Initiatoren und Namensgeber des Projekts.
-      </p>
-    </article>
+    <details class="np-history-event" open>
+      <summary>
+        <span class="np-history-year">seit 2017</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">Öffentliche Minecraft-Projekte</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          M4ximum_ startet und begleitet seit 2017 öffentliche Minecraft-Projekte.
+          Diese Zeit bildet die Grundlage für alles, was später zu NewPath werden sollte.
+        </p>
+      </div>
+    </details>
 
-    <article class="np-history-step">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">2024</p>
-      <h3>TriPath</h3>
-      <p>
-        Nach dem zeitlich bedingten Weggang von Ossifant wird aus dem Projekt TriPath:
-        drei Personen, drei Wege, eine gemeinsame Richtung.
-      </p>
-    </article>
+    <details class="np-history-event">
+      <summary>
+        <span class="np-history-year">2022</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">S.O.O.M. Community Server</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          Gründung des S.O.O.M. Community Servers als Vanilla-Minecraft-Projekt mit
+          Plugins. SarahdasFaultier, OutTerror, Ossifant und M4ximum_ waren die
+          Initiatoren und Namensgeber des Projektes.
+        </p>
+      </div>
+    </details>
 
-    <article class="np-history-step">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">25.11.2024</p>
-      <h3>NewPath – Ein neuer Weg</h3>
-      <p>
-        Der Wunsch nach Rebranding, einem eigenen Modpack und der Abkehr vom reinen
-        Vanilla-Minecraft führt zur Geburt von NewPath auf Minecraft 1.21.1.
-      </p>
-    </article>
+    <details class="np-history-event">
+      <summary>
+        <span class="np-history-year">2024</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">TriPath</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          Durch den zeitlich bedingten Weggang von Ossifant entsteht TriPath.
+          Der Name steht für drei Personen, drei Wege und eine gemeinsame Richtung.
+        </p>
+      </div>
+    </details>
 
-    <article class="np-history-step">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">22.12.2024</p>
-      <h3>Release NewPath 1.0</h3>
-      <p>
-        NewPath 1.0 erscheint sechs Tage vor dem geplanten Start und markiert die erste
-        eigene Modpack-Version des Projekts.
-      </p>
-    </article>
+    <details class="np-history-event">
+      <summary>
+        <span class="np-history-year">25.11.2024</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">NewPath – ein neuer Weg</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          NewPath wird geboren. Aus dem Wunsch nach Rebranding, einem eigenen Modpack
+          und dem Schritt weg von reinem Vanilla-Minecraft entsteht ein neues Projekt
+          auf Minecraft 1.21.1.
+        </p>
+      </div>
+    </details>
 
-    <article class="np-history-step">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">05.12.2025</p>
-      <h3>NewPath – Beyond Lands</h3>
-      <p>
-        Mit Version 5.0 bekommt NewPath ein weiteres Rebranding, viele Neuerungen und
-        macht einen großen Schritt in Richtung eigener Projektidentität.
-      </p>
-    </article>
+    <details class="np-history-event">
+      <summary>
+        <span class="np-history-year">22.12.2024</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">Release NewPath 1.0</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          NewPath 1.0 erscheint sechs Tage vor dem geplanten Start und markiert die
+          erste eigene Modpack-Version des Projektes.
+        </p>
+      </div>
+    </details>
 
-    <article class="np-history-step np-history-step-featured">
-      <span class="np-history-dot" aria-hidden="true"></span>
-      <p class="np-card-kicker">Q4 2026</p>
-      <h3>NewPath – Echoes of the Wild</h3>
-      <p>
-        Modpack und Konzept werden komplett neu gedacht. NewPath entsteht in Minecraft
-        26.1.2 von Grund auf neu – atmosphärischer, klarer und konsequenter als zuvor.
-      </p>
-    </article>
+    <details class="np-history-event">
+      <summary>
+        <span class="np-history-year">05.12.2025</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">NewPath – Beyond Lands</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          Mit Version 5.0 bekommt NewPath ein weiteres Rebranding, viele Neuerungen
+          und macht einen großen Schritt in Richtung eigener Projektidentität.
+        </p>
+      </div>
+    </details>
+
+    <details class="np-history-event np-history-event-future">
+      <summary>
+        <span class="np-history-year">Q4 2026</span>
+        <span class="np-history-node" aria-hidden="true"></span>
+        <span class="np-history-title">NewPath – Echoes of the Wild</span>
+      </summary>
+      <div class="np-history-event-body">
+        <p>
+          Modpack und Konzept werden komplett neu gedacht. NewPath entsteht in
+          Minecraft 26.1.2 von Grund auf neu – atmosphärischer, klarer und
+          konsequenter als zuvor.
+        </p>
+      </div>
+    </details>
   </div>
 </section>
+
 </div>
