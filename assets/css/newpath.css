@@ -7250,3 +7250,42 @@ body.np-lightbox-open {
     margin-right: 0;
   }
 }
+
+
+/* 32. Startseite: Entstehungsgeschichte auf Hauptbreite ausrichten
+   - richtet den unteren Zeitstrahl optisch an Statusleiste und ECHO-Pfadfinder aus
+   - überschreibt ältere kompakte 1320px-Regeln am Dateiende bewusst
+*/
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-history-panel-compact {
+    width: min(1440px, var(--np-content-width)) !important;
+    max-width: min(1440px, var(--np-content-width)) !important;
+    grid-template-columns: minmax(330px, 0.28fr) minmax(0, 0.72fr) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro {
+    min-height: 15.4rem !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2 {
+    max-width: 20rem !important;
+  }
+
+  .np-home-v2 .np-history-tabs,
+  .np-home-v2 .np-history-tab-content {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .np-home-v2 .np-history-tab-panel p:last-child {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-home-v2 .np-history-panel-compact {
+    grid-template-columns: 1fr !important;
+  }
+}
