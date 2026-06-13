@@ -8955,3 +8955,137 @@ body.np-lightbox-open {
   }
 }
 
+/* 35. Startseite: Kontrast auf hellen Hintergrundstellen verbessern */
+
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero-highlight {
+    background:
+      linear-gradient(90deg, rgba(0, 9, 15, 0.76), rgba(5, 18, 25, 0.58)) !important;
+    border-left-color: rgba(236, 183, 110, 0.96) !important;
+    box-shadow:
+      0 14px 28px rgba(0, 0, 0, 0.24),
+      inset 0 0 0 1px rgba(72, 122, 146, 0.30) !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.72) !important;
+  }
+
+  .np-hero-actions-server {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .np-server-copy-hero-button,
+  .np-hero-secondary-button {
+    min-height: 2.22rem !important;
+    box-shadow:
+      0 12px 22px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.72) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+
+  .np-server-copy-hero-button {
+    color: #f7ffff !important;
+    background:
+      linear-gradient(135deg, rgba(0, 230, 246, 0.28), rgba(0, 42, 54, 0.92)) !important;
+    border: 1px solid rgba(0, 230, 246, 0.72) !important;
+  }
+
+  .np-server-copy-hero-button:hover {
+    background:
+      linear-gradient(135deg, rgba(0, 230, 246, 0.38), rgba(0, 54, 68, 0.96)) !important;
+  }
+
+  .np-hero-secondary-button {
+    color: #ffe5a6 !important;
+    background:
+      linear-gradient(135deg, rgba(236, 183, 110, 0.20), rgba(28, 18, 8, 0.90)) !important;
+    border: 1px solid rgba(236, 183, 110, 0.80) !important;
+  }
+
+  .np-hero-secondary-button:hover {
+    color: #fff3d0 !important;
+    background:
+      linear-gradient(135deg, rgba(236, 183, 110, 0.30), rgba(45, 29, 10, 0.94)) !important;
+  }
+
+  .np-server-copy-hint {
+    width: fit-content !important;
+    padding: 0.12rem 0.4rem !important;
+    border-radius: 999px !important;
+    color: rgba(247, 236, 220, 0.92) !important;
+    background: rgba(0, 9, 15, 0.46) !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.86) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .np-home-v2 .np-status-bar-v2,
+  .np-home-v2 .np-status-bar-showcase {
+    background:
+      linear-gradient(90deg, rgba(3, 16, 22, 0.72), rgba(17, 46, 64, 0.48), rgba(3, 16, 22, 0.72)) !important;
+    box-shadow:
+      0 16px 32px rgba(0, 0, 0, 0.30),
+      inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  .np-home-v2 .np-status-bar-v2 .np-status-item small,
+  .np-home-v2 .np-status-bar-v2 .np-status-item strong {
+    text-shadow: 0 1px 7px rgba(0, 0, 0, 0.72) !important;
+  }
+
+  .np-pathfinder-dashboard,
+  .np-home-v2 .np-pathfinder-dashboard,
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    background:
+      radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.075), transparent 19rem),
+      linear-gradient(180deg, rgba(7, 24, 31, 0.86), rgba(4, 16, 22, 0.90)) !important;
+    box-shadow:
+      0 18px 42px rgba(0, 0, 0, 0.32),
+      inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-card,
+  .np-history-tab-content,
+  .np-home-v2 .np-history-panel-compact .np-history-intro {
+    background-color: rgba(0, 12, 18, 0.40) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-title,
+  .np-home-v2 .np-echo-route-list .np-route-text,
+  .np-home-v2 .np-echo-route-list .np-route-link,
+  .np-history-tab-title,
+  .np-history-tab-panel h3,
+  .np-history-tab-panel p {
+    text-shadow: 0 1px 7px rgba(0, 0, 0, 0.70) !important;
+  }
+
+  .np-home-v2 .np-hero h1,
+  .np-hero-title-main,
+  .np-hero-title-sub {
+    text-shadow:
+      0 3px 0 rgba(0, 0, 0, 0.20),
+      0 5px 20px rgba(0, 0, 0, 0.72),
+      0 0 28px rgba(236, 183, 110, 0.14) !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-server-copy-hero-button,
+  .np-hero-secondary-button {
+    box-shadow:
+      0 12px 22px rgba(0, 0, 0, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.09) !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.72) !important;
+  }
+
+  .np-hero-secondary-button {
+    color: #ffe5a6 !important;
+    background:
+      linear-gradient(135deg, rgba(236, 183, 110, 0.20), rgba(28, 18, 8, 0.90)) !important;
+    border: 1px solid rgba(236, 183, 110, 0.80) !important;
+  }
+}
+
