@@ -10856,3 +10856,288 @@ header .np-header-brand-subtitle {
   text-transform: uppercase !important;
 }
 
+/* 52. Finale Detailfixes: Header-Georgia, Hero-Buttons, ECHO-Schimmer, History-Überlauf */
+
+/* 52.1 Header links: tatsächliche JS-Struktur aus head_custom.html gezielt ansprechen */
+@media (min-width: 66.5rem) {
+  .np-topbar-brand .np-topbar-title span:first-child,
+  .main-header .np-topbar-brand .np-topbar-title span:first-child {
+    font-family: Georgia, "Times New Roman", serif !important;
+    color: var(--np-gold-soft) !important;
+    font-size: 1.28rem !important;
+    font-weight: 700 !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.035em !important;
+    text-transform: none !important;
+    text-shadow:
+      0 2px 10px rgba(0, 0, 0, 0.52),
+      0 0 10px rgba(236, 183, 110, 0.06) !important;
+  }
+
+  .np-topbar-brand .np-topbar-title span:last-child,
+  .main-header .np-topbar-brand .np-topbar-title span:last-child {
+    font-family: var(--np-font-label) !important;
+    color: var(--np-cyan) !important;
+    font-size: 0.62rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+  }
+}
+
+/* 52.2 Hero-Buttons: beide exakt gleich groß, Regelwerk mit eigenem Hover */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero-actions,
+  .np-home-v2 .np-server-actions,
+  .np-hero-actions,
+  .np-server-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .np-home-v2 .np-hero-actions > a,
+  .np-home-v2 .np-hero-actions > button,
+  .np-home-v2 .np-server-actions > a,
+  .np-home-v2 .np-server-actions > button,
+  .np-hero-actions > a,
+  .np-hero-actions > button,
+  .np-server-actions > a,
+  .np-server-actions > button,
+  .np-home-v2 .np-server-copy,
+  .np-server-copy,
+  .np-home-v2 .np-hero-button,
+  .np-hero-button {
+    width: 10.9rem !important;
+    min-width: 10.9rem !important;
+    max-width: 10.9rem !important;
+    height: 2.42rem !important;
+    min-height: 2.42rem !important;
+    max-height: 2.42rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.48rem !important;
+    padding: 0 0.95rem !important;
+    border-radius: 0.52rem !important;
+    font-family: var(--np-font-label) !important;
+    font-size: 0.76rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.01em !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    transform: translateY(0) !important;
+    transition:
+      transform 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease,
+      box-shadow 0.18s ease,
+      color 0.18s ease !important;
+  }
+
+  .np-home-v2 .np-server-copy,
+  .np-server-copy {
+    color: #ffffff !important;
+    background:
+      linear-gradient(180deg, rgba(0, 230, 246, 0.26), rgba(0, 132, 150, 0.18)) !important;
+    border: 1px solid rgba(0, 230, 246, 0.68) !important;
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.24),
+      0 0 14px rgba(0, 230, 246, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
+  }
+
+  .np-home-v2 .np-server-copy:hover,
+  .np-server-copy:hover {
+    transform: translateY(-1px) !important;
+    border-color: rgba(0, 230, 246, 0.86) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 230, 246, 0.34), rgba(0, 132, 150, 0.22)) !important;
+    box-shadow:
+      0 14px 24px rgba(0, 0, 0, 0.30),
+      0 0 20px rgba(0, 230, 246, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .np-home-v2 .np-hero-button-secondary,
+  .np-hero-button-secondary,
+  .np-home-v2 .np-hero-actions a[href*="regelwerk"],
+  .np-home-v2 .np-server-actions a[href*="regelwerk"],
+  .np-hero-actions a[href*="regelwerk"],
+  .np-server-actions a[href*="regelwerk"] {
+    color: rgba(247, 236, 220, 0.94) !important;
+    background:
+      linear-gradient(180deg, rgba(236, 183, 110, 0.16), rgba(58, 40, 20, 0.14)) !important;
+    border: 1px solid rgba(236, 183, 110, 0.56) !important;
+    box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .np-home-v2 .np-hero-button-secondary:hover,
+  .np-hero-button-secondary:hover,
+  .np-home-v2 .np-hero-actions a[href*="regelwerk"]:hover,
+  .np-home-v2 .np-server-actions a[href*="regelwerk"]:hover,
+  .np-hero-actions a[href*="regelwerk"]:hover,
+  .np-server-actions a[href*="regelwerk"]:hover {
+    transform: translateY(-1px) !important;
+    color: #ffffff !important;
+    border-color: rgba(236, 183, 110, 0.82) !important;
+    background:
+      linear-gradient(180deg, rgba(236, 183, 110, 0.24), rgba(58, 40, 20, 0.18)) !important;
+    box-shadow:
+      0 14px 24px rgba(0, 0, 0, 0.30),
+      0 0 20px rgba(236, 183, 110, 0.13),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  }
+}
+
+/* 52.3 ECHO-Boxen: Box-Hover komplett neutralisieren */
+.echo-page-box:hover,
+.echo-page-box-team:hover,
+.echo-page-box-philosophy:hover,
+.echo-page-box-faq:hover,
+.echo-page-box-rules:hover,
+.echo-page-box-streamer:hover,
+.echo-page-box-help:hover,
+.echo-page-box-duck:hover,
+.np-home-v2 .np-pathfinder-dashboard:hover {
+  transform: none !important;
+  border-color: var(--np-ui-border, rgba(72, 122, 146, 0.34)) !important;
+  border-left-color: rgba(0, 230, 246, 0.62) !important;
+  box-shadow: var(--np-ui-panel-shadow, 0 18px 38px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.045), inset 0 0 34px rgba(0, 230, 246, 0.018)) !important;
+}
+
+/* 52.4 ECHO-Bild-Schimmer dauerhaft, auch ohne Hover; kein Kreis auf der Startseite */
+.echo-page-image,
+.np-home-v2 .np-pathfinder-image {
+  position: relative !important;
+  isolation: isolate !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.echo-page-image::before,
+.np-home-v2 .np-pathfinder-image::before {
+  display: none !important;
+  content: none !important;
+}
+
+.echo-page-image::after,
+.np-home-v2 .np-pathfinder-image::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 52% !important;
+  width: 74% !important;
+  height: 72% !important;
+  border-radius: 999px !important;
+  transform: translate(-50%, -50%) scale(1) !important;
+  background:
+    radial-gradient(circle,
+      rgba(0, 230, 246, 0.23) 0%,
+      rgba(0, 230, 246, 0.12) 32%,
+      rgba(0, 230, 246, 0.035) 56%,
+      transparent 74%) !important;
+  filter: blur(12px) !important;
+  opacity: 0.78 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  animation: npEchoPermanentGlow 4.8s ease-in-out infinite !important;
+}
+
+.echo-page-image img,
+.np-home-v2 .np-pathfinder-image img {
+  position: relative !important;
+  z-index: 1 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter:
+    drop-shadow(0 11px 16px rgba(0, 0, 0, 0.38))
+    drop-shadow(0 0 15px rgba(0, 230, 246, 0.18)) !important;
+}
+
+.echo-page-box:hover .echo-page-image img,
+.echo-page-box-team:hover .echo-page-image img,
+.echo-page-box-philosophy:hover .echo-page-image img,
+.echo-page-box-faq:hover .echo-page-image img,
+.echo-page-box-rules:hover .echo-page-image img,
+.echo-page-box-streamer:hover .echo-page-image img,
+.echo-page-box-help:hover .echo-page-image img,
+.echo-page-box-duck:hover .echo-page-image img,
+.np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
+  transform: none !important;
+}
+
+@keyframes npEchoPermanentGlow {
+  0%, 100% {
+    opacity: 0.58;
+    transform: translate(-50%, -50%) scale(0.98);
+  }
+  50% {
+    opacity: 0.88;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* 52.5 Entstehungsgeschichte: Text darf nicht in Zeitstrahl/Box laufen */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    display: grid !important;
+    grid-template-columns: minmax(260px, 0.28fr) minmax(0, 0.72fr) !important;
+    align-items: stretch !important;
+    gap: clamp(1.2rem, 1.65vw, 1.8rem) !important;
+    overflow: hidden !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro,
+  .np-home-v2 .np-history-intro {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    padding: clamp(1rem, 1.35vw, 1.35rem) !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2,
+  .np-home-v2 .np-history-intro h2 {
+    max-width: 100% !important;
+    margin: 0 0 0.8rem !important;
+    font-size: clamp(1.45rem, 1.58vw, 1.95rem) !important;
+    line-height: 1.12 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro p,
+  .np-home-v2 .np-history-intro p {
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: clamp(0.78rem, 0.82vw, 0.9rem) !important;
+    line-height: 1.5 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    hyphens: auto !important;
+  }
+
+  .np-home-v2 .np-history-tabs,
+  .np-home-v2 .np-history-content,
+  .np-home-v2 .np-history-track,
+  .np-home-v2 .np-history-tab-content {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+}
+
