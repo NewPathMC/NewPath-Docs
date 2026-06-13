@@ -10586,3 +10586,138 @@ body.np-page-sub .main-content > h1 {
   font-family: var(--np-font-body) !important;
 }
 
+/* 48. Startseite: Anchor-Icons ausblenden und ECHO-Stil angleichen */
+
+/*
+  Just-the-Docs fügt bei Überschriften teilweise Anchor-/Link-Symbole ein.
+  Auf der Startseite stören diese im Landingpage-Design, deshalb werden sie dort entfernt.
+*/
+body.np-page-home .anchor-heading,
+body.np-page-home .anchor-heading:hover,
+body.np-page-home .anchor-link,
+body.np-page-home .anchor-link:hover,
+body.np-page-home .np-ecosystem-head h2 .anchor-heading,
+body.np-page-home .np-ecosystem-head h2 .anchor-link,
+body.np-page-home .np-history-intro h2 .anchor-heading,
+body.np-page-home .np-history-intro h2 .anchor-link,
+body.np-page-home h1 .anchor-heading,
+body.np-page-home h2 .anchor-heading,
+body.np-page-home h3 .anchor-heading,
+body.np-page-home h1 .anchor-link,
+body.np-page-home h2 .anchor-link,
+body.np-page-home h3 .anchor-link {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Startseiten-ECHO bekommt denselben Grundcharakter wie Unterseiten-ECHO-Boxen */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-pathfinder-dashboard {
+    grid-template-columns: minmax(430px, 0.40fr) minmax(760px, 0.60fr) !important;
+    align-items: center !important;
+    border: 1px solid var(--np-system-border) !important;
+    border-left: 3px solid rgba(0, 230, 246, 0.62) !important;
+    border-radius: 0.78rem !important;
+    background:
+      radial-gradient(circle at 6% 45%, rgba(0, 230, 246, 0.14), transparent 13.5rem),
+      linear-gradient(180deg, rgba(3, 18, 25, 0.86), rgba(1, 12, 18, 0.92)) !important;
+    box-shadow:
+      0 18px 38px rgba(0, 0, 0, 0.30),
+      inset 0 1px 0 rgba(255, 255, 255, 0.045),
+      inset 0 0 34px rgba(0, 230, 246, 0.022) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-echo {
+    display: grid !important;
+    grid-template-columns: clamp(6.6rem, 7.2vw, 8.2rem) minmax(0, 1fr) !important;
+    gap: clamp(1.25rem, 1.6vw, 1.9rem) !important;
+    align-items: center !important;
+    min-width: 0 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image {
+    position: relative !important;
+    width: clamp(6.4rem, 7vw, 8rem) !important;
+    height: clamp(6.4rem, 7vw, 8rem) !important;
+    display: grid !important;
+    place-items: center !important;
+    border-radius: 999px !important;
+    background:
+      radial-gradient(circle, rgba(0, 230, 246, 0.16), transparent 63%) !important;
+    filter: drop-shadow(0 0 20px rgba(0, 230, 246, 0.16)) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0.45rem !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(0, 230, 246, 0.16) !important;
+    box-shadow: inset 0 0 18px rgba(0, 230, 246, 0.08) !important;
+    pointer-events: none !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image img {
+    position: relative !important;
+    z-index: 1 !important;
+    width: 88% !important;
+    height: 88% !important;
+    object-fit: contain !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy {
+    min-width: 0 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy .np-section-kicker {
+    margin-bottom: 0.35rem !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy h2 {
+    margin: 0 0 0.45rem !important;
+    font-family: var(--np-font-heading) !important;
+    color: var(--np-gold-soft) !important;
+    font-size: clamp(1.72rem, 1.72vw, 2.12rem) !important;
+    font-weight: 950 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.022em !important;
+    text-shadow:
+      0 2px 12px rgba(0, 0, 0, 0.54),
+      0 0 16px rgba(236, 183, 110, 0.055) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy p:last-child {
+    max-width: 39rem !important;
+    margin: 0 !important;
+    color: rgba(247, 236, 220, 0.78) !important;
+    font-family: var(--np-font-body) !important;
+    font-size: clamp(0.88rem, 0.9vw, 1rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
+  }
+
+  .np-home-v2 .np-echo-route-head {
+    margin-bottom: 0.18rem !important;
+  }
+
+  .np-home-v2 .np-echo-route-head strong {
+    color: rgba(247, 236, 220, 0.80) !important;
+    font-family: var(--np-font-body) !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.01em !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-home-v2 .np-pathfinder-image {
+    width: 6.4rem !important;
+    height: 6.4rem !important;
+    margin: 0 auto !important;
+    border-radius: 999px !important;
+    background: radial-gradient(circle, rgba(0, 230, 246, 0.16), transparent 63%) !important;
+  }
+}
+
