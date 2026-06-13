@@ -1,7 +1,25 @@
 {
-  "generated_at": "",
+  "generated_at": "2026-06-13T16:18:00+00:00",
   "source_file": "regelwerk.md",
-  "added": [],
-  "edited": [],
-  "removed": []
+  "added": [
+    {
+      "type": "added",
+      "text": "1.1.1. TEST: Diese neue Regel dient nur zur Prüfung der automatischen Änderungsmarkierung.",
+      "line": 13
+    }
+  ],
+  "edited": [
+    {
+      "type": "edited",
+      "text": "1.1. Wir bauen eine immersive Welt, in der Erkunden, Bauen, Atmosphäre und gemeinsames Erleben im Vordergrund stehen.",
+      "line": 12
+    }
+  ],
+  "removed": [
+    {
+      "type": "removed",
+      "text": "1.8. Die im Modpack verwendeten individuellen Inhalte, darunter Konfigurationen, Designs, Assets und Skripte, sind geschützt. Eine Weiterverbreitung, Änderung oder Wiederveröffentlichung ist untersagt.",
+      "line": 19
+    }
+  ]
 }
