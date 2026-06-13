@@ -66,7 +66,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Gründerin - Projektleitung - Promotion</p>
       <h2 class="np-card-title">SarahdasFaultier</h2>
       <p class="np-card-text">
-        Hat wohl einen Gottkomplex.
+        Hat wohl einen Gottkomplex, sagt sie selbst.
       </p>
     </article>
 
@@ -83,7 +83,7 @@ permalink: /team.html
       <p class="np-card-kicker np-team-role">Gründer</p>
       <h2 class="np-card-title">OutTerror</h2>
       <p class="np-card-text">
-        Ist einfach da, manchmal.
+        Ist einfach da, manchmal zumindest.
       </p>
     </article>
 
