@@ -8355,3 +8355,112 @@ body.np-lightbox-open {
   }
 }
 
+/* 32. Startseite: finaler Feinschliff ECHO-Karten, Footer und Geschichte */
+
+@media (min-width: 66.5rem) {
+  .np-home-v2 {
+    padding-bottom: 2.6rem !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-card {
+    min-height: 9.45rem !important;
+    padding: 0.86rem 0.66rem 0.72rem !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-title {
+    font-size: 0.96rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-text {
+    max-width: 9.7rem !important;
+    min-height: 2.1rem !important;
+    font-size: 0.76rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-link {
+    min-height: 1.55rem !important;
+    padding: 0.32rem 0.62rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    min-height: 16.2rem !important;
+    margin-bottom: 3rem !important;
+    align-items: stretch !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro {
+    align-self: stretch !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2 {
+    font-size: clamp(1.42rem, 1.48vw, 1.95rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.028em !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro p:last-child {
+    font-size: 0.88rem !important;
+    line-height: 1.52 !important;
+  }
+
+  .np-history-tab-title {
+    font-size: 0.84rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .np-history-tab-content {
+    min-height: 8.55rem !important;
+  }
+
+  .np-history-tab-panel h3 {
+    font-size: 1.28rem !important;
+  }
+
+  .np-history-tab-panel p:last-child {
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+  }
+
+  #np-global-window-footer .np-site-footer-inner {
+    padding-left: clamp(1.4rem, 2.8vw, 3.2rem) !important;
+    padding-right: clamp(1.4rem, 2.8vw, 3.2rem) !important;
+  }
+
+  #np-global-window-footer .np-site-footer-brand strong {
+    font-size: 0.86rem !important;
+  }
+
+  #np-global-window-footer .np-site-footer-brand span {
+    font-size: 0.74rem !important;
+  }
+
+  #np-global-window-footer .np-site-footer-links a,
+  #np-global-window-footer .np-site-footer-links span {
+    font-size: 0.8rem !important;
+  }
+
+  #np-global-window-footer .np-site-footer-links a[href*="gamertransfer"],
+  #np-global-window-footer a[href*="gamertransfer"],
+  #np-global-window-footer .np-footer-gamertransfer {
+    color: var(--np-cyan) !important;
+    font-size: 0.94rem !important;
+    font-weight: 950 !important;
+    letter-spacing: 0.02em !important;
+    text-shadow: 0 0 12px rgba(0, 230, 246, 0.22) !important;
+  }
+}
+
+@media (min-width: 100rem) {
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    margin-bottom: 3.4rem !important;
+  }
+}
+

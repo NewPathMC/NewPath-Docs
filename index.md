@@ -123,36 +123,36 @@ permalink: /
     <a class="np-route-card np-route-card-primary" href="{{ site.baseurl }}/modpack-hilfe.html#installation-setup">
       <span class="np-card-icon np-card-icon-green">▶</span>
       <span class="np-route-title">Mitspielen starten</span>
-      <span class="np-route-text">Installation, Zugang und erster Join.</span>
-      <span class="np-route-link">Startanleitung →</span>
+      <span class="np-route-text">Installation und Zugang.</span>
+      <span class="np-route-link">Starten →</span>
     </a>
 
     <a class="np-route-card" href="{{ site.baseurl }}/regelwerk.html">
       <span class="np-card-icon np-card-icon-gold">§</span>
       <span class="np-route-title">Regeln ansehen</span>
-      <span class="np-route-text">Was auf NewPath gilt und warum.</span>
+      <span class="np-route-text">Was bei uns gilt.</span>
       <span class="np-route-link">Regelwerk →</span>
     </a>
 
     <a class="np-route-card" href="{{ site.baseurl }}/faq.html">
       <span class="np-card-icon np-card-icon-blue">?</span>
       <span class="np-route-title">Häufige Fragen</span>
-      <span class="np-route-text">Kurze Antworten zu Version, Server und Ablauf.</span>
+      <span class="np-route-text">Version, Server und Ablauf.</span>
       <span class="np-route-link">FAQ öffnen →</span>
     </a>
 
     <a class="np-route-card" href="{{ site.baseurl }}/modpack-hilfe.html#probleme-support">
       <span class="np-card-icon np-card-icon-red">!</span>
       <span class="np-route-title">Problem lösen</span>
-      <span class="np-route-text">Crash, RAM, Logs, Verbindung und Support.</span>
+      <span class="np-route-text">Crash, RAM, Logs und Support.</span>
       <span class="np-route-link">Hilfe öffnen →</span>
     </a>
 
     <a class="np-route-card" href="{{ site.baseurl }}/philosophie.html">
       <span class="np-card-icon np-card-icon-purple">✦</span>
       <span class="np-route-title">NewPath verstehen</span>
-      <span class="np-route-text">Philosophie, Atmosphäre und Projektidee.</span>
-      <span class="np-route-link">Mehr erfahren →</span>
+      <span class="np-route-text">Atmosphäre und Projektidee.</span>
+      <span class="np-route-link">Mehr →</span>
     </a>
   </div>
 </section>
