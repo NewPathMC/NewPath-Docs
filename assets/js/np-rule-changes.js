@@ -109,20 +109,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     summary.innerHTML = `
       <div class="np-rule-change-summary-head">
-        <p class="np-section-kicker">Letzte Regelwerksänderung</p>
-        <h2>Automatisch hervorgehobene Anpassungen</h2>
-        <p>
-          Markiert werden immer nur die zuletzt gepushten Änderungen am Regelwerk.
-          Beim nächsten Regelwerks-Update wird diese Markierung automatisch ersetzt.
-        </p>
+        <h2>Letzte Regelwerksänderung</h2>
       </div>
-      <div class="np-rule-change-summary-stats">
-        <span><strong>${addedCount}</strong> neu</span>
-        <span><strong>${editedCount}</strong> geändert</span>
-        <span><strong>${removedCount}</strong> entfernt</span>
+      <div class="np-rule-change-summary-meta">
+        <div class="np-rule-change-summary-stats">
+          <span><strong>${addedCount}</strong> neu</span>
+          <span><strong>${editedCount}</strong> geändert</span>
+          <span><strong>${removedCount}</strong> entfernt</span>
+        </div>
+        ${generatedAt ? `<p class="np-rule-change-summary-date">Stand: ${generatedAt} Uhr</p>` : ""}
       </div>
-      ${generatedAt ? `<p class="np-rule-change-summary-date">Stand der Markierung: ${generatedAt} Uhr</p>` : ""}
-      ${removedItems ? `<div class="np-rule-change-removed-box"><strong>Zuletzt entfernte Passagen:</strong><ul>${removedItems}</ul></div>` : ""}
+      ${removedItems ? `<div class="np-rule-change-removed-box"><strong>Entfernte Passagen:</strong><ul>${removedItems}</ul></div>` : ""}
     `;
 
     rulesSection.parentNode.insertBefore(summary, rulesSection);
