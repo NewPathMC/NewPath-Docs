@@ -10206,3 +10206,130 @@ body.np-page-sub::after {
   }
 }
 
+/* 46. Startseite: Boxsystem unterhalb der Statusleiste an Unterseiten angleichen */
+
+@media (min-width: 66.5rem) {
+  /*
+    Ziel:
+    Die Startseitenbereiche unterhalb der Statusleiste sollen denselben Grundcharakter
+    wie die Unterseiten-Boxen haben: gleiche Panel-Logik, gleiche Border-Farbe,
+    gleiche Rundung, ruhiger Innenaufbau. Die Sonderlayouts bleiben erhalten.
+  */
+
+  .np-home-v2 .np-pathfinder-dashboard,
+  .np-home-v2 .np-ecosystem-panel,
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    border: 1px solid var(--np-system-border) !important;
+    border-radius: 0.78rem !important;
+    background: var(--np-section-bg) !important;
+    box-shadow:
+      0 18px 38px rgba(0, 0, 0, 0.28),
+      inset 0 0 34px rgba(0, 230, 246, 0.020) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-dashboard {
+    border-left: 3px solid rgba(0, 230, 246, 0.62) !important;
+  }
+
+  .np-home-v2 .np-ecosystem-panel,
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    padding: clamp(1.2rem, 2vw, 1.8rem) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-dashboard {
+    padding: clamp(1.2rem, 2vw, 1.8rem) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-dashboard .np-pathfinder-echo::before {
+    display: none !important;
+  }
+
+  .np-home-v2 .np-pathfinder-dashboard .np-pathfinder-echo {
+    border-left: 0 !important;
+  }
+
+  .np-home-v2 .np-ecosystem-head,
+  .np-home-v2 .np-history-panel-compact .np-history-intro,
+  .np-home-v2 .np-pathfinder-copy {
+    position: relative !important;
+  }
+
+  .np-home-v2 .np-ecosystem-head::after {
+    content: "" !important;
+    display: block !important;
+    width: 100% !important;
+    height: 1px !important;
+    margin-top: 1rem !important;
+    background: linear-gradient(90deg, rgba(0, 230, 246, 0.28), rgba(236, 183, 110, 0.14), transparent) !important;
+    opacity: 0.65 !important;
+  }
+
+  .np-home-v2 .np-ecosystem-card,
+  .np-home-v2 .np-route-card,
+  .np-home-v2 .np-history-tab-content,
+  .np-home-v2 .np-history-panel-compact .np-history-intro {
+    border: 1px solid rgba(72, 122, 146, 0.32) !important;
+    border-radius: 0.72rem !important;
+    background: var(--np-card-bg) !important;
+    box-shadow:
+      0 13px 26px rgba(0, 0, 0, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.055) !important;
+  }
+
+  .np-home-v2 .np-route-card:hover,
+  .np-home-v2 .np-ecosystem-card:hover {
+    border-color: rgba(0, 230, 246, 0.46) !important;
+    box-shadow:
+      0 18px 34px rgba(0, 0, 0, 0.26),
+      0 0 18px rgba(0, 230, 246, 0.07),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
+  }
+
+  .np-home-v2 .np-ecosystem-head h2,
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2,
+  .np-home-v2 .np-pathfinder-copy h2 {
+    color: var(--np-gold-soft) !important;
+  }
+
+  .np-home-v2 .np-ecosystem-head p:not(.np-section-kicker),
+  .np-home-v2 .np-history-panel-compact .np-history-intro p:last-child,
+  .np-home-v2 .np-pathfinder-copy p:last-child {
+    color: rgba(247, 236, 220, 0.78) !important;
+    font-weight: 400 !important;
+  }
+
+  .np-home-v2 .np-section-kicker,
+  .np-home-v2 .np-ecosystem-type,
+  .np-home-v2 .np-echo-route-head span,
+  .np-home-v2 .np-history-tab-panel .np-section-kicker {
+    color: var(--np-type-kicker) !important;
+  }
+
+  /*
+    Abstandssystem:
+    Trennlinien behalten bewusst die Aufgabe, große Startseitenmodule sichtbar zu trennen.
+    Die Boxen selbst nutzen aber nun dieselbe visuelle Grundlage wie die Unterseiten.
+  */
+  .np-home-v2 .np-home-section-separator {
+    width: min(1180px, calc(100vw - 9rem)) !important;
+    margin-top: 1.75rem !important;
+    margin-bottom: 1.75rem !important;
+    opacity: 0.78 !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-home-v2 .np-pathfinder-dashboard,
+  .np-home-v2 .np-ecosystem-panel,
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    border: 1px solid var(--np-system-border) !important;
+    border-radius: 0.78rem !important;
+    background: var(--np-section-bg) !important;
+  }
+}
+
