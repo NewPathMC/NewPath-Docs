@@ -52,6 +52,16 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
+      - name: Regelwerksänderungen für Website-Markierung erzeugen
+        if: contains(steps.changed-files.outputs.files, 'regelwerk.md')
+        shell: bash
+        run: |
+          python scripts/generate_rule_changes.py \
+            --before "${{ github.event.before }}" \
+            --after "${{ github.sha }}" \
+            --file "regelwerk.md" \
+            --output "assets/data/rule-changes.json"
+
       - name: Zeitstempel aktualisieren
         if: steps.changed-files.outputs.files != ''
         shell: bash
@@ -81,10 +91,10 @@ jobs:
         shell: bash
         run: |
           if git diff --quiet; then
-            echo "Keine Zeitstempel-Änderungen vorhanden."
+            echo "Keine automatischen Änderungen vorhanden."
             exit 0
           fi
 
-          git add regelwerk.md philosophie.md faq.md modpack-hilfe.md team.md streamer.md
-          git commit -m "Doku: Zeitstempel aktualisiert"
+          git add regelwerk.md philosophie.md faq.md modpack-hilfe.md team.md streamer.md assets/data/rule-changes.json
+          git commit -m "Doku: Zeitstempel und Regelwerksmarkierungen aktualisiert"
           git push

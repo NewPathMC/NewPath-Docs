@@ -7045,3 +7045,181 @@ body.np-lightbox-open {
     display: block !important;
   }
 }
+
+/* 31. Regelwerk: automatische Änderungsmarkierungen */
+
+.np-rule-change-summary {
+  margin: 1rem 0 1.25rem;
+  padding: clamp(1rem, 1.6vw, 1.35rem);
+  border-radius: 0.72rem;
+  border: 1px solid rgba(236, 183, 110, 0.34);
+  border-left: 3px solid rgba(236, 183, 110, 0.88);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(236, 183, 110, 0.10), transparent 18rem),
+    linear-gradient(180deg, rgba(30, 21, 12, 0.68), rgba(8, 20, 27, 0.82));
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.26),
+    inset 0 0 28px rgba(236, 183, 110, 0.035);
+}
+
+.np-rule-change-summary-head h2 {
+  margin: 0 0 0.45rem !important;
+  color: var(--np-gold-soft) !important;
+  font-size: clamp(1.25rem, 1.55vw, 1.7rem) !important;
+  line-height: 1.12 !important;
+}
+
+.np-rule-change-summary-head p:not(.np-section-kicker) {
+  max-width: 58rem;
+  margin: 0;
+  color: rgba(245, 234, 220, 0.86);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.np-rule-change-summary-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.np-rule-change-summary-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  min-height: 1.95rem;
+  padding: 0.28rem 0.62rem;
+  border-radius: 999px;
+  color: rgba(245, 234, 220, 0.92);
+  background: rgba(0, 9, 15, 0.34);
+  border: 1px solid rgba(236, 183, 110, 0.28);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.np-rule-change-summary-stats strong {
+  color: var(--np-gold-soft);
+  font-size: 0.88rem;
+}
+
+.np-rule-change-summary-date {
+  margin: 0.75rem 0 0;
+  color: rgba(245, 234, 220, 0.58);
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+.np-rule-change-removed-box {
+  margin-top: 0.9rem;
+  padding: 0.78rem 0.9rem;
+  border-radius: 0.58rem;
+  color: rgba(255, 224, 224, 0.94);
+  background: rgba(116, 24, 24, 0.24);
+  border: 1px solid rgba(255, 92, 92, 0.34);
+}
+
+.np-rule-change-removed-box strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #ffb6a8;
+  font-size: 0.82rem;
+}
+
+.np-rule-change-removed-box ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.np-rule-change-removed-box li {
+  margin: 0.28rem 0;
+  color: rgba(255, 224, 224, 0.88);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  text-decoration: line-through;
+}
+
+.np-rule-change-highlight {
+  position: relative;
+  border-radius: 0.48rem;
+  transition:
+    background-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.22s ease;
+}
+
+.np-rules-section li.np-rule-change-highlight,
+.np-rules-section p.np-rule-change-highlight,
+.np-rules-section h1.np-rule-change-highlight,
+.np-rules-section h2.np-rule-change-highlight,
+.np-rules-section h3.np-rule-change-highlight {
+  padding: 0.44rem 0.62rem;
+  margin-left: -0.62rem;
+  margin-right: -0.62rem;
+}
+
+.np-rule-change-added {
+  background:
+    linear-gradient(90deg, rgba(46, 160, 67, 0.22), rgba(46, 160, 67, 0.08));
+  box-shadow:
+    inset 3px 0 0 rgba(76, 210, 103, 0.86),
+    inset 0 0 0 1px rgba(76, 210, 103, 0.22),
+    0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.np-rule-change-edited {
+  background:
+    linear-gradient(90deg, rgba(236, 183, 110, 0.25), rgba(236, 183, 110, 0.08));
+  box-shadow:
+    inset 3px 0 0 rgba(236, 183, 110, 0.92),
+    inset 0 0 0 1px rgba(236, 183, 110, 0.24),
+    0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.np-rule-change-highlight::after {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.45rem;
+  padding: 0.18rem 0.42rem;
+  border-radius: 999px;
+  color: rgba(245, 234, 220, 0.94);
+  background: rgba(0, 9, 15, 0.58);
+  border: 1px solid rgba(236, 183, 110, 0.32);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.np-rule-change-added::after {
+  content: "Neu";
+  border-color: rgba(76, 210, 103, 0.42);
+}
+
+.np-rule-change-edited::after {
+  content: "Geändert";
+}
+
+@media (max-width: 66.499rem) {
+  .np-rule-change-summary-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .np-rule-change-highlight::after {
+    position: static;
+    display: inline-flex;
+    margin-left: 0.45rem;
+    vertical-align: middle;
+  }
+
+  .np-rules-section li.np-rule-change-highlight,
+  .np-rules-section p.np-rule-change-highlight,
+  .np-rules-section h1.np-rule-change-highlight,
+  .np-rules-section h2.np-rule-change-highlight,
+  .np-rules-section h3.np-rule-change-highlight {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
