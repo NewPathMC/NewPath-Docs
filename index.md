@@ -156,8 +156,7 @@ permalink: /
 <section class="np-panel np-ecosystem-panel" aria-labelledby="np-ecosystem-title">
   <div class="np-ecosystem-head">
     <div>
-      <p class="np-section-kicker">NewPath Ecosystem</p>
-      <h2 id="np-ecosystem-title">Mehr als ein einzelnes Modpack.</h2>
+      <h2 id="np-ecosystem-title">NewPath Ecosystem</h2>
       <p>
         NewPath besteht aus mehreren Modpack-Projekten, saisonalen Sonderwelten,
         der Dokumentation und ECHO als digitalem Wegbegleiter.
@@ -226,8 +225,7 @@ permalink: /
 
 <section class="np-panel np-history-panel np-history-panel-compact" aria-label="Entstehungsgeschichte von NewPath">
   <div class="np-history-intro">
-    <p class="np-section-kicker">Entstehungsgeschichte</p>
-    <h2>Der Weg zu NewPath wie es heute ist.</h2>
+    <h2>NewPath · Entstehungsgeschichte</h2>
     <p>
       NewPath entstand nicht über Nacht, sondern aus Jahren gemeinsamer Minecraft-Projekte, Veränderungen im Team und dem Wunsch, mehr zu schaffen als nur den nächsten Server. Aus Vanilla-Welten wurden eigene Ideen, aus Rebrandings eine klare Richtung – und aus einem neuen Weg schließlich NewPath.
     </p>
