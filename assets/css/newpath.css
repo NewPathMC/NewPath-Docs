@@ -11200,3 +11200,132 @@ header .np-header-brand-subtitle {
   }
 }
 
+/* 57. Startseite: Hero-Logo-Schimmer sichtbar erzwingen */
+
+/*
+  Der vorherige Schimmer war zu dezent bzw. lag wahrscheinlich hinter dem falschen Layer.
+  Dieser Block legt den warmen Lichtschein direkt auf die Hero-Logo-Spalte/Logo-Fläche.
+*/
+
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero {
+    position: relative !important;
+    isolation: isolate !important;
+  }
+
+  .np-home-v2 .np-hero-logo,
+  .np-home-v2 .np-hero-emblem,
+  .np-home-v2 .np-hero-logo-wrap,
+  .np-home-v2 .np-hero-visual,
+  .np-home-v2 .np-hero-media,
+  .np-home-v2 .np-hero-brand-visual,
+  .np-home-v2 .np-hero-image,
+  .np-home-v2 .np-hero-mark {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: visible !important;
+  }
+
+  /* sichtbarer Sonnenkern direkt hinter dem Logo */
+  .np-home-v2 .np-hero-logo::before,
+  .np-home-v2 .np-hero-emblem::before,
+  .np-home-v2 .np-hero-logo-wrap::before,
+  .np-home-v2 .np-hero-visual::before,
+  .np-home-v2 .np-hero-media::before,
+  .np-home-v2 .np-hero-brand-visual::before,
+  .np-home-v2 .np-hero-image::before,
+  .np-home-v2 .np-hero-mark::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 56% !important;
+    width: clamp(20rem, 28vw, 34rem) !important;
+    height: clamp(15rem, 20vw, 24rem) !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 999px !important;
+    background:
+      radial-gradient(circle,
+        rgba(255, 213, 129, 0.62) 0%,
+        rgba(236, 183, 110, 0.42) 22%,
+        rgba(236, 183, 110, 0.22) 42%,
+        rgba(236, 183, 110, 0.08) 62%,
+        transparent 78%) !important;
+    filter: blur(18px) !important;
+    opacity: 0.95 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+  }
+
+  /* breite Strahlen nach außen, stärker rechts/oben */
+  .np-home-v2 .np-hero-logo::after,
+  .np-home-v2 .np-hero-emblem::after,
+  .np-home-v2 .np-hero-logo-wrap::after,
+  .np-home-v2 .np-hero-visual::after,
+  .np-home-v2 .np-hero-media::after,
+  .np-home-v2 .np-hero-brand-visual::after,
+  .np-home-v2 .np-hero-image::after,
+  .np-home-v2 .np-hero-mark::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 55% !important;
+    width: clamp(28rem, 42vw, 52rem) !important;
+    height: clamp(14rem, 20vw, 25rem) !important;
+    transform: translate(-50%, -50%) rotate(-8deg) !important;
+    border-radius: 999px !important;
+    background:
+      linear-gradient(90deg,
+        transparent 0%,
+        rgba(236, 183, 110, 0.00) 18%,
+        rgba(236, 183, 110, 0.20) 43%,
+        rgba(255, 213, 129, 0.26) 50%,
+        rgba(236, 183, 110, 0.16) 58%,
+        transparent 82%) !important;
+    filter: blur(24px) !important;
+    opacity: 0.78 !important;
+    z-index: -2 !important;
+    pointer-events: none !important;
+  }
+
+  .np-home-v2 .np-hero-logo img,
+  .np-home-v2 .np-hero-emblem img,
+  .np-home-v2 .np-hero-logo-wrap img,
+  .np-home-v2 .np-hero-visual img,
+  .np-home-v2 .np-hero-media img,
+  .np-home-v2 .np-hero-brand-visual img,
+  .np-home-v2 .np-hero-image img,
+  .np-home-v2 .np-hero-mark img {
+    position: relative !important;
+    z-index: 2 !important;
+    filter:
+      drop-shadow(0 18px 26px rgba(0, 0, 0, 0.46))
+      drop-shadow(0 0 24px rgba(236, 183, 110, 0.22))
+      drop-shadow(0 0 14px rgba(0, 230, 246, 0.10)) !important;
+  }
+
+  /*
+    Fallback: falls das Logo keinen eigenen Wrapper hat.
+    Dann wird ein Lichtschein über dem Hero-Hintergrund ungefähr hinter dem Logo platziert.
+  */
+  .np-home-v2 .np-hero::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 58% !important;
+    top: 42% !important;
+    width: clamp(24rem, 34vw, 42rem) !important;
+    height: clamp(16rem, 22vw, 27rem) !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 999px !important;
+    background:
+      radial-gradient(circle,
+        rgba(255, 213, 129, 0.26) 0%,
+        rgba(236, 183, 110, 0.16) 34%,
+        rgba(236, 183, 110, 0.06) 56%,
+        transparent 76%) !important;
+    filter: blur(22px) !important;
+    opacity: 0.72 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+  }
+}
+
