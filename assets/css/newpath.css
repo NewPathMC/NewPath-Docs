@@ -11328,3 +11328,386 @@ header .np-header-brand-subtitle {
   }
 }
 
+/* 58. Mobile Feinschliff nach Header-/Footer- und Startseitenänderungen */
+
+@media (max-width: 66.499rem) {
+  :root {
+    --np-mobile-header-height: 4.65rem;
+    --np-mobile-footer-height: 3.35rem;
+    --np-footer-height: var(--np-mobile-footer-height);
+    --np-content-width: calc(100vw - 1.4rem);
+  }
+
+  body {
+    padding-top: var(--np-mobile-header-height) !important;
+    padding-bottom: calc(var(--np-mobile-footer-height) + 0.85rem) !important;
+    background:
+      linear-gradient(90deg, rgba(0, 4, 8, 0.74), rgba(3, 10, 14, 0.16) 28%, rgba(3, 10, 14, 0.20) 74%, rgba(0, 4, 8, 0.72)),
+      linear-gradient(180deg, rgba(0, 8, 14, 0.16), rgba(0, 8, 14, 0.30) 50%, rgba(0, 6, 10, 0.84) 100%),
+      url("../images/background-site.webp"),
+      linear-gradient(180deg, #001221, #000915) !important;
+    background-size: cover, cover, cover, auto !important;
+    background-position: center top, center top, center top, center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+  }
+
+  /* Desktop-Header auf Mobile sicher ausblenden */
+  .main-header {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  #np-mobile-header {
+    position: fixed !important;
+    inset: 0 0 auto 0 !important;
+    z-index: 100000 !important;
+    height: var(--np-mobile-header-height) !important;
+    min-height: var(--np-mobile-header-height) !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.54rem 0.82rem !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.14) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 15, 0.985), rgba(0, 18, 33, 0.945)) !important;
+    box-shadow: 0 0.85rem 2rem rgba(0, 0, 0, 0.30) !important;
+    backdrop-filter: blur(13px) !important;
+    -webkit-backdrop-filter: blur(13px) !important;
+  }
+
+  .np-mobile-brand {
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.55rem !important;
+    color: var(--np-text) !important;
+    text-decoration: none !important;
+  }
+
+  .np-mobile-brand-logo {
+    width: 2.65rem !important;
+    height: 2.65rem !important;
+    flex: 0 0 2.65rem !important;
+    object-fit: contain !important;
+    filter:
+      drop-shadow(0 8px 12px rgba(0, 0, 0, 0.38))
+      drop-shadow(0 0 9px rgba(0, 230, 246, 0.12)) !important;
+  }
+
+  .np-mobile-brand-text {
+    min-width: 0 !important;
+    display: grid !important;
+    line-height: 1 !important;
+  }
+
+  .np-mobile-brand-text > span,
+  .np-mobile-brand > span:not(.np-mobile-brand-text) {
+    font-family: Georgia, "Times New Roman", serif !important;
+    color: var(--np-gold-soft) !important;
+    font-size: 1.24rem !important;
+    font-weight: 700 !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.04em !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+  }
+
+  .np-mobile-brand small,
+  .np-mobile-brand-text small {
+    margin-top: 0.18rem !important;
+    color: var(--np-cyan) !important;
+    font-family: var(--np-font-label) !important;
+    font-size: 0.56rem !important;
+    font-weight: 950 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.105em !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+  }
+
+  .np-mobile-menu-button {
+    width: 2.72rem !important;
+    height: 2.72rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0.56rem !important;
+    color: var(--np-cyan) !important;
+    background: rgba(0, 230, 246, 0.065) !important;
+    border: 1px solid rgba(0, 230, 246, 0.24) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+    font-size: 1.25rem !important;
+    font-weight: 950 !important;
+  }
+
+  .np-mobile-menu {
+    top: var(--np-mobile-header-height) !important;
+    max-height: calc(100vh - var(--np-mobile-header-height) - var(--np-mobile-footer-height)) !important;
+    overflow-y: auto !important;
+    padding: 0.85rem 0.82rem 1rem !important;
+  }
+
+  .np-mobile-menu a {
+    min-height: 2.45rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Mobile Footer an neuen Desktop-Footer angleichen */
+  #np-mobile-footer {
+    position: fixed !important;
+    inset: auto 0 0 0 !important;
+    z-index: 100000 !important;
+    height: var(--np-mobile-footer-height) !important;
+    min-height: var(--np-mobile-footer-height) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.38rem 0.66rem !important;
+    border-top: 1px solid rgba(0, 230, 246, 0.12) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 9, 18, 0.965), rgba(0, 13, 24, 0.99)) !important;
+    box-shadow: 0 -0.75rem 2rem rgba(0, 0, 0, 0.38) !important;
+  }
+
+  .np-mobile-footer-inner {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    gap: 0.42rem !important;
+  }
+
+  .np-mobile-footer-copy {
+    justify-self: start !important;
+    color: rgba(247, 236, 220, 0.58) !important;
+    font-size: 0.58rem !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
+  }
+
+  .np-mobile-footer-gamertransfer {
+    justify-self: center !important;
+    color: rgba(0, 230, 246, 0.72) !important;
+    font-size: 0.66rem !important;
+    font-weight: 850 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+  }
+
+  .np-mobile-footer-links {
+    justify-self: end !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.42rem !important;
+  }
+
+  .np-mobile-footer-icon {
+    width: 1.42rem !important;
+    height: 1.42rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgba(247, 236, 220, 0.58) !important;
+    text-decoration: none !important;
+    opacity: 0.86 !important;
+  }
+
+  .np-mobile-footer-icon svg {
+    width: 1rem !important;
+    height: 1rem !important;
+    display: block !important;
+    fill: currentColor !important;
+  }
+
+  .np-mobile-footer-icon span {
+    font-size: 0.92rem !important;
+    line-height: 1 !important;
+  }
+
+  .np-mobile-footer-icon:hover,
+  .np-mobile-footer-gamertransfer:hover {
+    color: rgba(247, 236, 220, 0.82) !important;
+    opacity: 1 !important;
+  }
+
+  /* Startseiten-Mobile: neue Desktop-Effekte entschärfen */
+  .np-home-v2 .np-hero::after,
+  .np-home-v2 .np-hero-logo::before,
+  .np-home-v2 .np-hero-logo::after,
+  .np-home-v2 .np-hero-emblem::before,
+  .np-home-v2 .np-hero-emblem::after,
+  .np-home-v2 .np-hero-logo-wrap::before,
+  .np-home-v2 .np-hero-logo-wrap::after,
+  .np-home-v2 .np-hero-visual::before,
+  .np-home-v2 .np-hero-visual::after,
+  .np-home-v2 .np-hero-media::before,
+  .np-home-v2 .np-hero-media::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .np-home-v2 .np-hero-logo,
+  .np-hero-logo {
+    width: min(62vw, 14.5rem) !important;
+    height: auto !important;
+    margin: 0.15rem auto 0.4rem !important;
+  }
+
+  .np-home-v2 .np-hero-logo img,
+  .np-hero-logo img {
+    max-width: min(62vw, 14.5rem) !important;
+    height: auto !important;
+    filter:
+      drop-shadow(0 13px 19px rgba(0, 0, 0, 0.48))
+      drop-shadow(0 0 10px rgba(0, 230, 246, 0.10)) !important;
+  }
+
+  .np-home-v2 .np-hero h1,
+  .np-hero h1 {
+    font-size: clamp(2.1rem, 12vw, 3.35rem) !important;
+    line-height: 0.94 !important;
+  }
+
+  .np-home-v2 .np-hero-actions {
+    justify-content: center !important;
+  }
+
+  .np-home-v2 .np-hero-actions .np-server-copy,
+  .np-home-v2 .np-hero-actions .np-hero-button,
+  .np-home-v2 .np-hero-actions .np-hero-button-secondary,
+  .np-home-v2 .np-hero-actions a,
+  .np-home-v2 .np-hero-actions button {
+    width: min(100%, 13.5rem) !important;
+    min-width: min(100%, 13.5rem) !important;
+    max-width: 13.5rem !important;
+    height: 2.45rem !important;
+    min-height: 2.45rem !important;
+  }
+
+  .np-whitelist-note,
+  .np-home-v2 .np-whitelist-note {
+    display: block !important;
+    width: 100% !important;
+    margin: 0.45rem auto 0 !important;
+    color: rgba(247, 236, 220, 0.70) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-align: center !important;
+    font-size: 0.68rem !important;
+  }
+
+  /* Ecosystem auf Mobile klar stapeln */
+  .np-home-v2 .np-ecosystem-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.78rem !important;
+  }
+
+  .np-home-v2 .np-ecosystem-card,
+  .np-home-v2 .np-ecosystem-card-featured,
+  .np-home-v2 .np-ecosystem-card-static {
+    min-height: auto !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    padding: 0.92rem !important;
+  }
+
+  .np-home-v2 .np-ecosystem-card img {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  /* History auf Mobile immer einspaltig, keine Überlappungen */
+  .np-home-v2 .np-history-panel,
+  .np-home-v2 .np-history-panel-compact {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem !important;
+    overflow: hidden !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro,
+  .np-home-v2 .np-history-intro {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .np-home-v2 .np-history-panel-compact .np-history-intro h2,
+  .np-home-v2 .np-history-intro h2 {
+    font-size: clamp(1.42rem, 8vw, 2.05rem) !important;
+    line-height: 1.12 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .np-home-v2 .np-history-tabs,
+  .np-home-v2 .np-history-track {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 0.35rem !important;
+  }
+
+  .np-home-v2 .np-history-tab-content {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  /* ECHO auf Mobile: Glow dauerhaft, aber dezenter */
+  .np-home-v2 .np-pathfinder-image::after,
+  .echo-page-image::after {
+    opacity: 0.58 !important;
+    filter: blur(10px) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-dashboard,
+  .echo-page-box,
+  .echo-page-box-team,
+  .echo-page-box-philosophy,
+  .echo-page-box-faq,
+  .echo-page-box-rules,
+  .echo-page-box-streamer,
+  .echo-page-box-help,
+  .echo-page-box-duck {
+    border-left-width: 2px !important;
+  }
+}
+
+@media (max-width: 24rem) {
+  #np-mobile-header {
+    padding-inline: 0.58rem !important;
+  }
+
+  .np-mobile-brand-logo {
+    width: 2.3rem !important;
+    height: 2.3rem !important;
+    flex-basis: 2.3rem !important;
+  }
+
+  .np-mobile-brand-text > span,
+  .np-mobile-brand > span:not(.np-mobile-brand-text) {
+    font-size: 1.06rem !important;
+  }
+
+  .np-mobile-brand small,
+  .np-mobile-brand-text small {
+    font-size: 0.48rem !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .np-mobile-footer-copy {
+    font-size: 0.5rem !important;
+  }
+
+  .np-mobile-footer-gamertransfer {
+    font-size: 0.58rem !important;
+  }
+
+  .np-mobile-footer-links {
+    gap: 0.28rem !important;
+  }
+}
+
