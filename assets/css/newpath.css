@@ -11200,11 +11200,14 @@ header .np-header-brand-subtitle {
   }
 }
 
-/* 57. Startseite: Hero-Logo-Schimmer sichtbar erzwingen */
+/* 57. Startseite: Hero-Logo mit dunkler Bühne statt hellem Sonnenfleck */
 
 /*
-  Der vorherige Schimmer war zu dezent bzw. lag wahrscheinlich hinter dem falschen Layer.
-  Dieser Block legt den warmen Lichtschein direkt auf die Hero-Logo-Spalte/Logo-Fläche.
+  Der helle Sonnenfleck wurde ersetzt:
+  - dunkle weiche Vignette hinter dem Logo für besseren Kontrast
+  - dezenter goldener Nah-Glow
+  - leichter Cyan-Tech-Glow
+  Dadurch wird der ohnehin helle Himmel nicht noch heller.
 */
 
 @media (min-width: 66.5rem) {
@@ -11226,7 +11229,7 @@ header .np-header-brand-subtitle {
     overflow: visible !important;
   }
 
-  /* sichtbarer Sonnenkern direkt hinter dem Logo */
+  /* dunkle Bühne direkt hinter dem Logo */
   .np-home-v2 .np-hero-logo::before,
   .np-home-v2 .np-hero-emblem::before,
   .np-home-v2 .np-hero-logo-wrap::before,
@@ -11238,25 +11241,24 @@ header .np-header-brand-subtitle {
     content: "" !important;
     position: absolute !important;
     left: 50% !important;
-    top: 56% !important;
-    width: clamp(20rem, 28vw, 34rem) !important;
-    height: clamp(15rem, 20vw, 24rem) !important;
+    top: 54% !important;
+    width: clamp(19rem, 27vw, 32rem) !important;
+    height: clamp(15rem, 20vw, 23rem) !important;
     transform: translate(-50%, -50%) !important;
     border-radius: 999px !important;
     background:
       radial-gradient(circle,
-        rgba(255, 213, 129, 0.62) 0%,
-        rgba(236, 183, 110, 0.42) 22%,
-        rgba(236, 183, 110, 0.22) 42%,
-        rgba(236, 183, 110, 0.08) 62%,
-        transparent 78%) !important;
-    filter: blur(18px) !important;
-    opacity: 0.95 !important;
-    z-index: -1 !important;
+        rgba(0, 8, 12, 0.62) 0%,
+        rgba(0, 12, 18, 0.46) 33%,
+        rgba(0, 18, 26, 0.22) 55%,
+        transparent 76%) !important;
+    filter: blur(15px) !important;
+    opacity: 0.92 !important;
+    z-index: -2 !important;
     pointer-events: none !important;
   }
 
-  /* breite Strahlen nach außen, stärker rechts/oben */
+  /* sehr dezenter Gold-/Cyan-Halo, nah am Logo */
   .np-home-v2 .np-hero-logo::after,
   .np-home-v2 .np-hero-emblem::after,
   .np-home-v2 .np-hero-logo-wrap::after,
@@ -11268,22 +11270,20 @@ header .np-header-brand-subtitle {
     content: "" !important;
     position: absolute !important;
     left: 50% !important;
-    top: 55% !important;
-    width: clamp(28rem, 42vw, 52rem) !important;
-    height: clamp(14rem, 20vw, 25rem) !important;
-    transform: translate(-50%, -50%) rotate(-8deg) !important;
+    top: 54% !important;
+    width: clamp(15rem, 21vw, 25rem) !important;
+    height: clamp(12rem, 16vw, 19rem) !important;
+    transform: translate(-50%, -50%) !important;
     border-radius: 999px !important;
     background:
-      linear-gradient(90deg,
-        transparent 0%,
-        rgba(236, 183, 110, 0.00) 18%,
-        rgba(236, 183, 110, 0.20) 43%,
-        rgba(255, 213, 129, 0.26) 50%,
-        rgba(236, 183, 110, 0.16) 58%,
-        transparent 82%) !important;
-    filter: blur(24px) !important;
-    opacity: 0.78 !important;
-    z-index: -2 !important;
+      radial-gradient(circle,
+        rgba(236, 183, 110, 0.12) 0%,
+        rgba(236, 183, 110, 0.075) 30%,
+        rgba(0, 230, 246, 0.055) 52%,
+        transparent 73%) !important;
+    filter: blur(10px) !important;
+    opacity: 0.84 !important;
+    z-index: -1 !important;
     pointer-events: none !important;
   }
 
@@ -11298,31 +11298,30 @@ header .np-header-brand-subtitle {
     position: relative !important;
     z-index: 2 !important;
     filter:
-      drop-shadow(0 18px 26px rgba(0, 0, 0, 0.46))
-      drop-shadow(0 0 24px rgba(236, 183, 110, 0.22))
-      drop-shadow(0 0 14px rgba(0, 230, 246, 0.10)) !important;
+      drop-shadow(0 18px 28px rgba(0, 0, 0, 0.58))
+      drop-shadow(0 0 12px rgba(236, 183, 110, 0.16))
+      drop-shadow(0 0 10px rgba(0, 230, 246, 0.12)) !important;
   }
 
   /*
-    Fallback: falls das Logo keinen eigenen Wrapper hat.
-    Dann wird ein Lichtschein über dem Hero-Hintergrund ungefähr hinter dem Logo platziert.
+    Fallback, falls das Logo keinen eigenen Wrapper hat:
+    eine dunkle Fläche ungefähr hinter dem Emblem, aber weniger dominant.
   */
   .np-home-v2 .np-hero::after {
     content: "" !important;
     position: absolute !important;
     left: 58% !important;
     top: 42% !important;
-    width: clamp(24rem, 34vw, 42rem) !important;
-    height: clamp(16rem, 22vw, 27rem) !important;
+    width: clamp(20rem, 30vw, 36rem) !important;
+    height: clamp(14rem, 20vw, 24rem) !important;
     transform: translate(-50%, -50%) !important;
     border-radius: 999px !important;
     background:
       radial-gradient(circle,
-        rgba(255, 213, 129, 0.26) 0%,
-        rgba(236, 183, 110, 0.16) 34%,
-        rgba(236, 183, 110, 0.06) 56%,
+        rgba(0, 8, 12, 0.34) 0%,
+        rgba(0, 12, 18, 0.22) 42%,
         transparent 76%) !important;
-    filter: blur(22px) !important;
+    filter: blur(18px) !important;
     opacity: 0.72 !important;
     z-index: -1 !important;
     pointer-events: none !important;
