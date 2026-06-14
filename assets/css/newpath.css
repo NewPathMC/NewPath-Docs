@@ -11110,3 +11110,93 @@ header .np-header-brand-subtitle {
   }
 }
 
+/* 56. Startseite: Sonnen-/Dämmerungsschimmer hinter Hero-Logo */
+
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero-logo,
+  .np-home-v2 .np-hero-emblem,
+  .np-home-v2 .np-hero-logo-wrap,
+  .np-home-v2 .np-hero-visual,
+  .np-home-v2 .np-hero-media {
+    position: relative !important;
+    isolation: isolate !important;
+  }
+
+  .np-home-v2 .np-hero-logo::before,
+  .np-home-v2 .np-hero-emblem::before,
+  .np-home-v2 .np-hero-logo-wrap::before,
+  .np-home-v2 .np-hero-visual::before,
+  .np-home-v2 .np-hero-media::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 54% !important;
+    width: clamp(17rem, 24vw, 27rem) !important;
+    height: clamp(13rem, 18vw, 20rem) !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 999px !important;
+    background:
+      radial-gradient(circle at 50% 50%,
+        rgba(236, 183, 110, 0.34) 0%,
+        rgba(236, 183, 110, 0.20) 22%,
+        rgba(236, 183, 110, 0.10) 42%,
+        rgba(0, 230, 246, 0.045) 62%,
+        transparent 76%) !important;
+    filter: blur(18px) !important;
+    opacity: 0.82 !important;
+    z-index: -2 !important;
+    pointer-events: none !important;
+  }
+
+  .np-home-v2 .np-hero-logo::after,
+  .np-home-v2 .np-hero-emblem::after,
+  .np-home-v2 .np-hero-logo-wrap::after,
+  .np-home-v2 .np-hero-visual::after,
+  .np-home-v2 .np-hero-media::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 55% !important;
+    width: clamp(22rem, 34vw, 38rem) !important;
+    height: clamp(12rem, 17vw, 19rem) !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 999px !important;
+    background:
+      conic-gradient(from 245deg at 50% 50%,
+        transparent 0deg,
+        rgba(236, 183, 110, 0.00) 24deg,
+        rgba(236, 183, 110, 0.12) 56deg,
+        rgba(236, 183, 110, 0.04) 86deg,
+        transparent 125deg,
+        transparent 360deg) !important;
+    filter: blur(20px) !important;
+    opacity: 0.72 !important;
+    z-index: -3 !important;
+    pointer-events: none !important;
+  }
+
+  .np-home-v2 .np-hero-logo img,
+  .np-home-v2 .np-hero-emblem img,
+  .np-home-v2 .np-hero-logo-wrap img,
+  .np-home-v2 .np-hero-visual img,
+  .np-home-v2 .np-hero-media img {
+    position: relative !important;
+    z-index: 1 !important;
+    filter:
+      drop-shadow(0 18px 26px rgba(0, 0, 0, 0.44))
+      drop-shadow(0 0 18px rgba(236, 183, 110, 0.12))
+      drop-shadow(0 0 13px rgba(0, 230, 246, 0.10)) !important;
+  }
+}
+
+/* Fallback, falls das Logo direkt im Hero ohne dedizierte Wrapper-Klasse liegt */
+@media (min-width: 66.5rem) {
+  .np-home-v2 .np-hero img[alt*="NewPath"][src*="logo"],
+  .np-home-v2 .np-hero img[alt*="Echoes"][src*="logo"] {
+    filter:
+      drop-shadow(0 18px 26px rgba(0, 0, 0, 0.44))
+      drop-shadow(0 0 22px rgba(236, 183, 110, 0.16))
+      drop-shadow(0 0 13px rgba(0, 230, 246, 0.10)) !important;
+  }
+}
+

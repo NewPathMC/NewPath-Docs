@@ -163,7 +163,8 @@ permalink: /
 <section class="np-panel np-ecosystem-panel" aria-labelledby="np-ecosystem-title">
   <div class="np-ecosystem-head">
     <div>
-      <h2 id="np-ecosystem-title">NewPath Ecosystem</h2>
+      <p class="np-section-kicker">NewPath Ecosystem</p>
+      <h2 id="np-ecosystem-title">Mehr als ein einzelnes Modpack.</h2>
       <p>
         NewPath besteht aus mehreren Modpack-Projekten, saisonalen Sonderwelten,
         der Dokumentation und ECHO als digitalem Wegbegleiter.
@@ -172,12 +173,12 @@ permalink: /
   </div>
 
   <div class="np-ecosystem-grid" aria-label="NewPath Ecosystem Übersicht">
-    <a class="np-ecosystem-card np-ecosystem-card-featured" href="https://www.curseforge.com/minecraft/modpacks/newpath-echoes-of-the-wild" target="_blank" rel="noopener">
+    <a class="np-ecosystem-card np-ecosystem-card-featured" href="https://www.curseforge.com/minecraft/modpacks/frostpath-winterproject-2025" target="_blank" rel="noopener">
       <img src="{{ site.baseurl }}/assets/images/ecosystem/newpath-eotw.png" alt="NewPath – Echoes of the Wild Logo" loading="lazy" decoding="async">
       <span class="np-ecosystem-type">Aktuelles Hauptprojekt</span>
       <strong>NewPath – Echoes of the Wild</strong>
       <span>Das aktuelle NewPath-Modpack mit neuer Minecraft-Version, neuer Atmosphäre und frischem Konzept.</span>
-      <em>CurseForge-Link eintragen →</em>
+      <em>Auf CurseForge öffnen →</em>
     </a>
 
     <a class="np-ecosystem-card" href="https://www.curseforge.com/minecraft/modpacks/newpath-beyond-lands" target="_blank" rel="noopener">
@@ -185,7 +186,7 @@ permalink: /
       <span class="np-ecosystem-type">Modpack-Ära</span>
       <strong>NewPath – Beyond Lands</strong>
       <span>Die große Weiterentwicklung von NewPath mit Rebranding, neuen Inhalten und stärkerer Projektidentität.</span>
-      <em>CurseForge-Link eintragen →</em>
+      <em>Auf CurseForge öffnen →</em>
     </a>
 
     <a class="np-ecosystem-card" href="https://www.curseforge.com/minecraft/modpacks/newpath-ein-neuer-weg" target="_blank" rel="noopener">
@@ -193,7 +194,7 @@ permalink: /
       <span class="np-ecosystem-type">Ursprung</span>
       <strong>NewPath – ein neuer Weg</strong>
       <span>Der Start der eigenen NewPath-Modpack-Reihe und der Schritt weg von reinen Vanilla-Projekten.</span>
-      <em>CurseForge-Link eintragen →</em>
+      <em>Auf CurseForge öffnen →</em>
     </a>
 
     <a class="np-ecosystem-card" href="https://www.curseforge.com/minecraft/modpacks/sunpath-sommerprojekt-2026" target="_blank" rel="noopener">
@@ -201,7 +202,7 @@ permalink: /
       <span class="np-ecosystem-type">Sommerprojekt</span>
       <strong>SunPath – Sommerprojekt 2026</strong>
       <span>Ein saisonales NewPath-Projekt mit sommerlicher Sonderwelt und eigenem Event-Charakter.</span>
-      <em>CurseForge-Link eintragen →</em>
+      <em>Auf CurseForge öffnen →</em>
     </a>
 
     <a class="np-ecosystem-card" href="https://www.curseforge.com/minecraft/modpacks/frostpath-winterproject-2025" target="_blank" rel="noopener">
@@ -209,7 +210,7 @@ permalink: /
       <span class="np-ecosystem-type">Winterprojekt</span>
       <strong>FrostPath – Winterprojekt 2025</strong>
       <span>Ein saisonales Winterprojekt innerhalb der NewPath-Projektfamilie.</span>
-      <em>CurseForge-Link eintragen →</em>
+      <em>Auf CurseForge öffnen →</em>
     </a>
 
     <article class="np-ecosystem-card np-ecosystem-card-static">
@@ -232,7 +233,8 @@ permalink: /
 
 <section class="np-panel np-history-panel np-history-panel-compact" aria-label="Entstehungsgeschichte von NewPath">
   <div class="np-history-intro">
-    <h2>NewPath - Entstehungsgeschichte</h2>
+    <p class="np-section-kicker">Entstehungsgeschichte</p>
+    <h2>Der Weg zu NewPath wie es heute ist.</h2>
     <p>
       NewPath entstand nicht über Nacht, sondern aus Jahren gemeinsamer Minecraft-Projekte, Veränderungen im Team und dem Wunsch, mehr zu schaffen als nur den nächsten Server. Aus Vanilla-Welten wurden eigene Ideen, aus Rebrandings eine klare Richtung – und aus einem neuen Weg schließlich NewPath.
     </p>
