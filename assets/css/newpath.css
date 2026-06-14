@@ -12161,3 +12161,108 @@ header .np-header-brand-subtitle {
   }
 }
 
+/* 62. Mobile Menü wieder sichtbar machen */
+
+/*
+  Der Mobile-Header wurde für das Branding fixiert.
+  Dabei hat `overflow: hidden` das aufgeklappte Menü abgeschnitten.
+  Deshalb:
+  - Header darf wieder overflow visible haben
+  - Menü wird unterhalb des Headers als eigenes fixed Panel angezeigt
+  - is-open steuert Sichtbarkeit
+*/
+
+@media (max-width: 66.499rem) {
+  #np-mobile-header {
+    overflow: visible !important;
+  }
+
+  #np-mobile-header .np-mobile-menu,
+  .np-mobile-menu {
+    position: fixed !important;
+    top: 4.25rem !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    z-index: 99999 !important;
+
+    display: grid !important;
+    gap: 0.45rem !important;
+
+    max-height: calc(100vh - 4.25rem - var(--np-mobile-footer-height, 3.35rem)) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+
+    padding: 0.85rem 0.82rem 1rem !important;
+    border-bottom: 1px solid rgba(0, 230, 246, 0.16) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 13, 24, 0.985), rgba(0, 9, 15, 0.965)) !important;
+    box-shadow:
+      0 1.25rem 2.35rem rgba(0, 0, 0, 0.42),
+      inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+    backdrop-filter: blur(13px) !important;
+    -webkit-backdrop-filter: blur(13px) !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-0.45rem) !important;
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease,
+      visibility 0.18s ease !important;
+  }
+
+  #np-mobile-header.is-open .np-mobile-menu,
+  .np-mobile-header.is-open .np-mobile-menu,
+  body:has(#np-mobile-header.is-open) .np-mobile-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+
+  #np-mobile-header .np-mobile-menu a,
+  .np-mobile-menu a {
+    min-height: 2.45rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.72rem 0.86rem !important;
+    border: 1px solid rgba(72, 122, 146, 0.30) !important;
+    border-radius: 0.62rem !important;
+    color: rgba(247, 236, 220, 0.84) !important;
+    background:
+      linear-gradient(180deg, rgba(10, 34, 43, 0.72), rgba(4, 16, 22, 0.88)) !important;
+    text-decoration: none !important;
+    font-family: var(--np-font-label) !important;
+    font-size: 0.82rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  #np-mobile-header .np-mobile-menu a:hover,
+  .np-mobile-menu a:hover,
+  #np-mobile-header .np-mobile-menu a.is-active,
+  .np-mobile-menu a.is-active {
+    color: #ffffff !important;
+    border-color: rgba(0, 230, 246, 0.46) !important;
+    background:
+      linear-gradient(180deg, rgba(0, 230, 246, 0.12), rgba(4, 16, 22, 0.92)) !important;
+  }
+
+  #np-mobile-header.is-open .np-mobile-menu-button {
+    color: #ffffff !important;
+    border-color: rgba(0, 230, 246, 0.55) !important;
+    background: rgba(0, 230, 246, 0.12) !important;
+  }
+}
+
+@media (max-width: 24rem) {
+  #np-mobile-header .np-mobile-menu,
+  .np-mobile-menu {
+    top: 4.25rem !important;
+    padding-inline: 0.58rem !important;
+  }
+}
+
