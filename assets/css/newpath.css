@@ -12641,3 +12641,167 @@ body.np-gallery-viewer-open {
     margin-bottom: 4.2rem;
   }
 }
+
+/* 65. Effekt-Paket 1: Schrift & Lesbarkeit */
+
+/*
+  Ziel:
+  - große Goldtitel besser lesbar auf atmosphärischem Hintergrund
+  - mehr Logo-/Fantasy-Gefühl durch dezente dunkle Kontur
+  - Cyan-Labels klarer, aber nicht grell
+  - keine Layoutänderungen, keine starken Animationen
+*/
+
+:root {
+  --np-title-outline:
+    0 1px 0 rgba(0, 0, 0, 0.92),
+    1px 0 0 rgba(0, 0, 0, 0.72),
+    -1px 0 0 rgba(0, 0, 0, 0.72),
+    0 -1px 0 rgba(0, 0, 0, 0.68),
+    0 2px 3px rgba(0, 0, 0, 0.62),
+    0 0 16px rgba(236, 183, 110, 0.10);
+
+  --np-title-outline-strong:
+    0 1px 0 rgba(0, 0, 0, 0.96),
+    1px 0 0 rgba(0, 0, 0, 0.82),
+    -1px 0 0 rgba(0, 0, 0, 0.82),
+    0 -1px 0 rgba(0, 0, 0, 0.78),
+    0 2px 4px rgba(0, 0, 0, 0.72),
+    0 0 18px rgba(236, 183, 110, 0.13);
+
+  --np-cyan-label-glow:
+    0 0 8px rgba(0, 230, 246, 0.18),
+    0 0 16px rgba(0, 230, 246, 0.07);
+}
+
+/* Große Hero-Titel */
+.np-home-hero h1,
+.np-hero-title,
+.np-home-title,
+.np-home-v2 h1 {
+  text-shadow: var(--np-title-outline-strong) !important;
+}
+
+/* Hero-Unterzeilen / Untertitel mit etwas weicherer Kontur */
+.np-home-hero h2,
+.np-hero-subtitle,
+.np-home-subtitle,
+.np-home-v2 .np-hero-subtitle {
+  text-shadow: var(--np-title-outline) !important;
+}
+
+/* Seiten- und Box-Überschriften */
+.main-content h1,
+.main-content h2,
+.np-title,
+.np-section-header h1,
+.np-section-header h2,
+.np-page-section h1,
+.np-page-section h2,
+.echo-page-content h2,
+.np-echo-copy h2,
+.np-ecosystem h2,
+.np-history-card h2,
+.np-gallery-category-heading h2,
+.np-team-card h3,
+.np-streamer-asset-card h3 {
+  text-shadow: var(--np-title-outline) !important;
+}
+
+/* Besonders große Unterseiten-Titel etwas kräftiger */
+.echo-page-content h2,
+.np-page-section > h1,
+.np-page-section > h2,
+.np-section-header .np-title {
+  text-shadow: var(--np-title-outline-strong) !important;
+}
+
+/* Goldschrift minimal edler staffeln, ohne bestehende Verläufe zu zerstören */
+.np-home-hero h1,
+.np-hero-title,
+.np-home-title,
+.np-title,
+.echo-page-content h2,
+.np-section-header h1,
+.np-page-section h1,
+.np-page-section h2 {
+  letter-spacing: -0.025em;
+}
+
+/* Kleine Cyan-Labels: klarer, lesbarer, aber bewusst subtil */
+.np-section-kicker,
+.echo-page-kicker,
+.np-gallery-category-kicker,
+.np-ecosystem-kicker,
+.np-card-kicker,
+.np-home-kicker,
+.np-echo-kicker,
+.np-timeline-kicker,
+.np-status-label,
+.np-rule-kicker,
+.np-help-kicker,
+.np-streamer-kicker,
+.np-team-kicker {
+  color: var(--np-cyan) !important;
+  text-shadow: var(--np-cyan-label-glow) !important;
+}
+
+/* Aktive/kleine Cyan-Akzente bekommen etwas mehr Präzision */
+.main-header a.is-active,
+.np-topbar-nav a.is-active,
+.np-mobile-menu a.is-active,
+.np-gallery-category-card.is-active .np-gallery-category-kicker,
+.np-gallery-category-card:hover .np-gallery-category-kicker {
+  text-shadow:
+    0 0 8px rgba(0, 230, 246, 0.34),
+    0 0 18px rgba(0, 230, 246, 0.14) !important;
+}
+
+/* Goldene Karten-/Buttontitel minimal besser absetzen */
+.np-echo-card strong,
+.np-ecosystem-card strong,
+.np-gallery-category-card strong,
+.np-status-item strong,
+.np-help-card strong,
+.np-accordion summary,
+.np-faq summary,
+.np-team-card h3,
+.np-streamer-asset-card h3 {
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.78),
+    0 2px 3px rgba(0, 0, 0, 0.44),
+    0 0 10px rgba(236, 183, 110, 0.07) !important;
+}
+
+/* Fließtext bleibt bewusst ruhig und bekommt keinen Glow */
+.main-content p,
+.main-content li,
+.main-content small,
+.np-lead,
+.echo-page-content p,
+.np-ecosystem-card p,
+.np-gallery-category-card small,
+.np-team-card p,
+.np-streamer-asset-card p {
+  text-shadow: none;
+}
+
+/* Mobile: Kontur minimal reduziert, damit Schrift nicht matschig wirkt */
+@media (max-width: 66.499rem) {
+  :root {
+    --np-title-outline:
+      0 1px 0 rgba(0, 0, 0, 0.86),
+      1px 0 0 rgba(0, 0, 0, 0.56),
+      -1px 0 0 rgba(0, 0, 0, 0.56),
+      0 2px 3px rgba(0, 0, 0, 0.54),
+      0 0 12px rgba(236, 183, 110, 0.08);
+
+    --np-title-outline-strong:
+      0 1px 0 rgba(0, 0, 0, 0.92),
+      1px 0 0 rgba(0, 0, 0, 0.64),
+      -1px 0 0 rgba(0, 0, 0, 0.64),
+      0 2px 4px rgba(0, 0, 0, 0.62),
+      0 0 14px rgba(236, 183, 110, 0.09);
+  }
+}
+
