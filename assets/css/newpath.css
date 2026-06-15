@@ -13575,3 +13575,179 @@ details[open] > *:not(summary) {
   }
 }
 
+/* 67. Finaler Fix: ECHO-Ecken deaktivieren und Trennlinie sichtbarer */
+
+/*
+  Die ECHO-Box hat eigene Rundungs-/Panel-Regeln und lässt die Eckmarker
+  optisch anders wirken als die anderen Boxen. Deshalb bekommt ECHO keine
+  Eckmarker mehr. Die Deko bleibt auf den großen Content-Panels.
+*/
+
+/* ECHO-Boxen ohne Eckmarker */
+.echo-page-box::before,
+.echo-page-box::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Startseiten-ECHO/Pathfinder ebenfalls ohne Eckmarker, weil hier die Rundung optisch stört */
+.np-pathfinder-dashboard::before,
+.np-pathfinder-dashboard::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  filter: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Eckmarker bleiben auf diesen großen Content-Panels */
+.np-ecosystem-panel,
+.np-history-panel,
+.np-page-section,
+.np-gallery-page {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.np-ecosystem-panel::before,
+.np-history-panel::before,
+.np-page-section::before,
+.np-gallery-page::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0.88rem !important;
+  left: 0.88rem !important;
+  width: 2.65rem !important;
+  height: 2.65rem !important;
+  pointer-events: none !important;
+  z-index: 8 !important;
+  opacity: 0.92 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background:
+    linear-gradient(90deg, rgba(32, 244, 255, 0.95), rgba(32, 244, 255, 0.42), transparent 78%)
+      left top / 2.65rem 1px no-repeat,
+    linear-gradient(180deg, rgba(32, 244, 255, 0.95), rgba(32, 244, 255, 0.42), transparent 78%)
+      left top / 1px 2.65rem no-repeat !important;
+  filter:
+    drop-shadow(0 0 0.35rem rgba(0, 230, 246, 0.26))
+    drop-shadow(0 0 0.85rem rgba(0, 230, 246, 0.12)) !important;
+}
+
+.np-ecosystem-panel::after,
+.np-history-panel::after,
+.np-page-section::after,
+.np-gallery-page::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  right: 0.88rem !important;
+  bottom: 0.88rem !important;
+  width: 2.65rem !important;
+  height: 2.65rem !important;
+  pointer-events: none !important;
+  z-index: 8 !important;
+  opacity: 0.78 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background:
+    linear-gradient(270deg, rgba(236, 183, 110, 0.88), rgba(236, 183, 110, 0.36), transparent 78%)
+      right bottom / 2.65rem 1px no-repeat,
+    linear-gradient(0deg, rgba(236, 183, 110, 0.88), rgba(236, 183, 110, 0.36), transparent 78%)
+      right bottom / 1px 2.65rem no-repeat !important;
+  filter:
+    drop-shadow(0 0 0.32rem rgba(236, 183, 110, 0.18))
+    drop-shadow(0 0 0.75rem rgba(236, 183, 110, 0.075)) !important;
+}
+
+/* Trennlinie sichtbar verstärken */
+.np-home-section-separator {
+  position: relative !important;
+  display: block !important;
+  width: min(52rem, 62vw) !important;
+  max-width: min(52rem, 62vw) !important;
+  height: 0.95rem !important;
+  margin: clamp(1.45rem, 2.55vw, 2.65rem) auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+.np-home-section-separator::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 50% !important;
+  height: 2px !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 230, 246, 0.00) 6%,
+      rgba(0, 230, 246, 0.62) 24%,
+      rgba(236, 183, 110, 0.50) 50%,
+      rgba(0, 230, 246, 0.62) 76%,
+      rgba(0, 230, 246, 0.00) 94%,
+      transparent 100%
+    ) !important;
+  box-shadow:
+    0 0 0.75rem rgba(0, 230, 246, 0.42),
+    0 0 1.5rem rgba(0, 230, 246, 0.20),
+    0 0 1.9rem rgba(236, 183, 110, 0.13) !important;
+}
+
+.np-home-section-separator::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 3rem !important;
+  height: 0.95rem !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 50% 50%, #ffffff 0 0.12rem, #20f4ff 0.13rem 0.23rem, rgba(0, 230, 246, 0.34) 0.24rem 0.34rem, transparent 0.35rem),
+    radial-gradient(circle at 22% 50%, rgba(236, 183, 110, 1.0) 0 0.105rem, rgba(236, 183, 110, 0.30) 0.115rem 0.18rem, transparent 0.19rem),
+    radial-gradient(circle at 78% 50%, rgba(236, 183, 110, 1.0) 0 0.105rem, rgba(236, 183, 110, 0.30) 0.115rem 0.18rem, transparent 0.19rem) !important;
+  filter:
+    drop-shadow(0 0 0.5rem rgba(0, 230, 246, 0.72))
+    drop-shadow(0 0 0.9rem rgba(0, 230, 246, 0.32))
+    drop-shadow(0 0 0.75rem rgba(236, 183, 110, 0.26)) !important;
+}
+
+@media (max-width: 66.499rem) {
+  .np-ecosystem-panel::before,
+  .np-history-panel::before,
+  .np-page-section::before,
+  .np-gallery-page::before,
+  .np-ecosystem-panel::after,
+  .np-history-panel::after,
+  .np-page-section::after,
+  .np-gallery-page::after {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+  }
+
+  .np-home-section-separator {
+    width: min(21rem, 72vw) !important;
+    height: 0.75rem !important;
+    margin-block: 1.1rem !important;
+  }
+
+  .np-home-section-separator::after {
+    width: 2.25rem !important;
+  }
+}
+
