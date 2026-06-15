@@ -13882,3 +13882,168 @@ details[open] > *:not(summary) {
   }
 }
 
+/* 69. Startseite: finaler Spacing- und Separator-Feinschliff */
+
+/*
+  Abschluss-Feinschliff:
+  - mehr Luft zwischen den großen Startseiten-Panels
+  - weniger Leerraum nach der Entstehungsgeschichte zum Footer
+  - Separator wird weicher und atmosphärischer statt harte HUD-Linie
+*/
+
+/* Mehr Luft zwischen den großen Panels */
+.np-pathfinder-dashboard {
+  margin-bottom: clamp(2.05rem, 3.2vw, 3.15rem) !important;
+}
+
+.np-ecosystem-panel {
+  margin-top: clamp(2.05rem, 3vw, 2.95rem) !important;
+  margin-bottom: clamp(2.0rem, 2.8vw, 2.75rem) !important;
+}
+
+.np-history-panel {
+  margin-top: clamp(2.0rem, 2.8vw, 2.75rem) !important;
+  margin-bottom: clamp(1.1rem, 1.6vw, 1.55rem) !important;
+}
+
+/* Unteren Leerraum der Startseite reduzieren */
+body.np-page-home .main-content,
+body.np-page-home main,
+body.np-page-home #main-content,
+body.np-page-home .np-home-v2 {
+  padding-bottom: clamp(1.0rem, 1.6vw, 1.7rem) !important;
+}
+
+body.np-page-home .main {
+  padding-bottom: clamp(1.0rem, 1.6vw, 1.7rem) !important;
+}
+
+/* Falls Just-the-Docs zusätzlichen Content-Abstand setzt */
+body.np-page-home .page-content,
+body.np-page-home .main-content-wrap {
+  padding-bottom: clamp(1.0rem, 1.6vw, 1.7rem) !important;
+}
+
+/* Separator: weicher Glow statt harte Linie */
+.np-home-section-separator {
+  position: relative !important;
+  display: block !important;
+  width: min(50rem, 58vw) !important;
+  max-width: min(50rem, 58vw) !important;
+  height: 1.35rem !important;
+  margin: clamp(1.25rem, 2vw, 1.85rem) auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+}
+
+/* Weiches Lichtband */
+.np-home-section-separator::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 50% !important;
+  height: 0.42rem !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(236, 183, 110, 0.22) 0%, rgba(236, 183, 110, 0.10) 14%, transparent 31%),
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 230, 246, 0.00) 7%,
+      rgba(0, 230, 246, 0.18) 19%,
+      rgba(0, 230, 246, 0.46) 39%,
+      rgba(236, 183, 110, 0.42) 50%,
+      rgba(0, 230, 246, 0.42) 61%,
+      rgba(0, 230, 246, 0.14) 81%,
+      rgba(0, 230, 246, 0.00) 93%,
+      transparent 100%
+    ) !important;
+  -webkit-mask-image:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 38%,
+      #000 62%,
+      transparent 100%
+    ) !important;
+  mask-image:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 38%,
+      #000 62%,
+      transparent 100%
+    ) !important;
+  box-shadow:
+    0 0 1.0rem rgba(0, 230, 246, 0.24),
+    0 0 1.75rem rgba(0, 230, 246, 0.12),
+    0 0 1.55rem rgba(236, 183, 110, 0.08) !important;
+}
+
+/* Dezentes Mittelmodul bleibt, aber weniger fremdkörperhaft */
+.np-home-section-separator::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 2.85rem !important;
+  height: 0.95rem !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 50% 50%, #dfffff 0 0.105rem, #20f4ff 0.115rem 0.20rem, rgba(0, 230, 246, 0.26) 0.21rem 0.31rem, transparent 0.32rem),
+    radial-gradient(circle at 24% 50%, rgba(236, 183, 110, 0.82) 0 0.075rem, rgba(236, 183, 110, 0.20) 0.085rem 0.145rem, transparent 0.15rem),
+    radial-gradient(circle at 76% 50%, rgba(236, 183, 110, 0.82) 0 0.075rem, rgba(236, 183, 110, 0.20) 0.085rem 0.145rem, transparent 0.15rem) !important;
+  filter:
+    drop-shadow(0 0 0.42rem rgba(0, 230, 246, 0.62))
+    drop-shadow(0 0 0.82rem rgba(0, 230, 246, 0.24))
+    drop-shadow(0 0 0.68rem rgba(236, 183, 110, 0.17)) !important;
+}
+
+/* Footer darf etwas näher an die letzte Box rücken */
+body.np-page-home #np-mobile-footer,
+body.np-page-home footer,
+body.np-page-home .site-footer {
+  margin-top: 0 !important;
+}
+
+/* Mobile sauber halten */
+@media (max-width: 66.499rem) {
+  .np-pathfinder-dashboard {
+    margin-bottom: 1.55rem !important;
+  }
+
+  .np-ecosystem-panel {
+    margin-top: 1.55rem !important;
+    margin-bottom: 1.45rem !important;
+  }
+
+  .np-history-panel {
+    margin-top: 1.45rem !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  body.np-page-home .main-content,
+  body.np-page-home main,
+  body.np-page-home #main-content,
+  body.np-page-home .np-home-v2 {
+    padding-bottom: 1rem !important;
+  }
+
+  .np-home-section-separator {
+    width: min(20rem, 70vw) !important;
+    height: 1rem !important;
+    margin-block: 1rem !important;
+  }
+
+  .np-home-section-separator::after {
+    width: 2.2rem !important;
+    height: 0.78rem !important;
+  }
+}
+
