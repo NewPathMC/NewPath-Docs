@@ -13206,3 +13206,380 @@ button.np-button:hover::after {
   }
 }
 
+/* 68. Startseiten-Effekt-Fix: Hero, Home-Boxen und sichtbare Premium-Details */
+
+/*
+  Warum dieser Fix:
+  Die Startseite nutzt mehrere eigene Klassen und wird daher nicht immer
+  von generischen Unterseiten-Selektoren getroffen.
+  Dieser Block zielt gezielt auf:
+  - Hero-Titel der Startseite
+  - Hero-Highlight/Textbox
+  - Status-Leiste
+  - ECHO-Kompass
+  - Ecosystem
+  - Entstehungsgeschichte
+  - Startseiten-Buttons
+*/
+
+/* Hero-Titel: deutlich sichtbarer als Paket 1 */
+.np-home-hero .np-hero-title-main,
+.np-home-hero .np-hero-title-sub,
+.np-hero-title .np-hero-title-main,
+.np-hero-title .np-hero-title-sub,
+.np-hero-title-main,
+.np-hero-title-sub {
+  filter:
+    drop-shadow(0 3px 0 rgba(0, 0, 0, 0.92))
+    drop-shadow(0 6px 6px rgba(0, 0, 0, 0.72))
+    drop-shadow(0 0 12px rgba(236, 183, 110, 0.24)) !important;
+  text-shadow:
+    -2px -2px 0 rgba(0, 0, 0, 0.92),
+     2px -2px 0 rgba(0, 0, 0, 0.92),
+    -2px  2px 0 rgba(0, 0, 0, 0.96),
+     2px  2px 0 rgba(0, 0, 0, 0.96),
+     0 4px 0 rgba(0, 0, 0, 0.78),
+     0 8px 12px rgba(0, 0, 0, 0.66),
+     0 0 20px rgba(236, 183, 110, 0.30),
+     0 0 42px rgba(236, 183, 110, 0.13) !important;
+}
+
+/* Große Startseiten-Überschriften ebenfalls sichtbarer */
+.np-home-section-title,
+.np-echo-copy h2,
+.np-ecosystem h2,
+.np-history-card h2,
+.np-home-v2 h2,
+.np-home-v2 .np-section-title,
+.np-home-v2 .np-title {
+  text-shadow:
+    -1.2px -1.2px 0 rgba(0, 0, 0, 0.86),
+     1.2px -1.2px 0 rgba(0, 0, 0, 0.86),
+    -1.2px  1.2px 0 rgba(0, 0, 0, 0.90),
+     1.2px  1.2px 0 rgba(0, 0, 0, 0.90),
+     0 3px 6px rgba(0, 0, 0, 0.64),
+     0 0 18px rgba(236, 183, 110, 0.18) !important;
+}
+
+/* Startseiten-Boxen bekommen die Eckmarker ebenfalls */
+.np-home-hero-card,
+.np-hero-highlight,
+.np-status-strip,
+.np-echo-kompass,
+.np-home-echo,
+.np-ecosystem,
+.np-history-section,
+.np-history-card,
+.np-history-timeline,
+.np-home-panel,
+.np-home-section {
+  position: relative;
+}
+
+.np-home-hero-card::before,
+.np-hero-highlight::before,
+.np-status-strip::before,
+.np-echo-kompass::before,
+.np-home-echo::before,
+.np-ecosystem::before,
+.np-history-section::before,
+.np-history-card::before,
+.np-history-timeline::before,
+.np-home-panel::before,
+.np-home-section::before {
+  content: "";
+  position: absolute;
+  top: 0.72rem;
+  left: 0.72rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  pointer-events: none;
+  border-top: 1px solid rgba(0, 230, 246, 0.48);
+  border-left: 1px solid rgba(0, 230, 246, 0.48);
+  border-radius: 0.34rem 0 0 0;
+  opacity: 0.72;
+  z-index: 2;
+}
+
+.np-home-hero-card::after,
+.np-hero-highlight::after,
+.np-status-strip::after,
+.np-echo-kompass::after,
+.np-home-echo::after,
+.np-ecosystem::after,
+.np-history-section::after,
+.np-history-card::after,
+.np-history-timeline::after,
+.np-home-panel::after,
+.np-home-section::after {
+  content: "";
+  position: absolute;
+  right: 0.72rem;
+  bottom: 0.72rem;
+  width: 2.15rem;
+  height: 2.15rem;
+  pointer-events: none;
+  border-right: 1px solid rgba(236, 183, 110, 0.42);
+  border-bottom: 1px solid rgba(236, 183, 110, 0.42);
+  border-radius: 0 0 0.34rem 0;
+  opacity: 0.64;
+  z-index: 2;
+}
+
+/* Status-Leiste und Home-Karten: Hover/Glow wirklich sichtbar */
+.np-status-item,
+.np-echo-card,
+.np-ecosystem-card,
+.np-history-step,
+.np-history-timeline button,
+.np-history-timeline [role="button"] {
+  position: relative !important;
+  isolation: isolate !important;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    filter 0.2s ease !important;
+}
+
+.np-status-item:hover,
+.np-echo-card:hover,
+.np-ecosystem-card:hover,
+.np-history-step:hover,
+.np-history-timeline button:hover,
+.np-history-timeline [role="button"]:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(0, 230, 246, 0.62) !important;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(0, 230, 246, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  filter: brightness(1.06);
+}
+
+/* Startseiten-Buttons: sichtbarer Shimmer */
+.np-hero-actions a,
+.np-hero-actions button,
+.np-server-copy,
+.np-hero-button,
+.np-hero-button-secondary,
+.np-echo-card a,
+.np-ecosystem-card a {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.np-hero-actions a::after,
+.np-hero-actions button::after,
+.np-server-copy::after,
+.np-hero-button::after,
+.np-hero-button-secondary::after,
+.np-echo-card a::after,
+.np-ecosystem-card a::after {
+  content: "";
+  position: absolute;
+  top: -55%;
+  left: -65%;
+  width: 46%;
+  height: 210%;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.34),
+      rgba(0, 230, 246, 0.30),
+      transparent
+    );
+  transform: skewX(-22deg);
+  opacity: 0;
+}
+
+.np-hero-actions a:hover::after,
+.np-hero-actions button:hover::after,
+.np-server-copy:hover::after,
+.np-hero-button:hover::after,
+.np-hero-button-secondary:hover::after,
+.np-echo-card a:hover::after,
+.np-ecosystem-card a:hover::after {
+  animation: np-button-shimmer-strong 0.75s ease forwards;
+}
+
+@keyframes np-button-shimmer-strong {
+  0% {
+    left: -65%;
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}
+
+/* ECHO-Scanline gezielt auf Startseite sichtbar machen */
+.np-echo-visual,
+.np-echo-robot,
+.np-home-echo-image,
+.np-echo-kompass .np-echo-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.np-echo-visual::after,
+.np-echo-robot::after,
+.np-home-echo-image::after,
+.np-echo-kompass .np-echo-image::after {
+  content: "";
+  position: absolute;
+  left: -14%;
+  right: -14%;
+  top: -34%;
+  height: 38%;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(0, 230, 246, 0.16),
+      rgba(0, 230, 246, 0.055),
+      transparent
+    );
+  opacity: 0;
+  transform: translateY(-140%);
+  animation: np-echo-scanline-home 6.8s ease-in-out infinite;
+}
+
+@keyframes np-echo-scanline-home {
+  0%, 58% {
+    transform: translateY(-140%);
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0.58;
+  }
+
+  82% {
+    opacity: 0.34;
+  }
+
+  100% {
+    transform: translateY(430%);
+    opacity: 0;
+  }
+}
+
+/* 69. Weiche Akkordeon-Animation */
+
+/*
+  Moderne Browser-Version:
+  Chrome unterstützt ::details-content + interpolate-size.
+  Damit öffnen/schließen FAQ, Modpack-Hilfe und Streamer-Akkordeons
+  weich statt abrupt.
+*/
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-0.25rem);
+  transition:
+    block-size 0.28s ease,
+    opacity 0.22s ease,
+    transform 0.24s ease,
+    content-visibility 0.28s allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Akkordeon-Summary fühlt sich beim Klick weicher an */
+details > summary {
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease !important;
+}
+
+details[open] > summary {
+  color: var(--np-gold-soft, #ecb76e) !important;
+  border-color: rgba(0, 230, 246, 0.42) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 0 14px rgba(0, 230, 246, 0.06) !important;
+}
+
+/* Falls Inhalte nicht direkt per ::details-content greifen, dennoch Content weicher wirken lassen */
+details[open] > *:not(summary) {
+  animation: np-accordion-fade-in 0.26s ease both;
+}
+
+@keyframes np-accordion-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.22rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-home-hero-card::before,
+  .np-hero-highlight::before,
+  .np-status-strip::before,
+  .np-echo-kompass::before,
+  .np-home-echo::before,
+  .np-ecosystem::before,
+  .np-history-section::before,
+  .np-history-card::before,
+  .np-history-timeline::before,
+  .np-home-panel::before,
+  .np-home-section::before,
+  .np-home-hero-card::after,
+  .np-hero-highlight::after,
+  .np-status-strip::after,
+  .np-echo-kompass::after,
+  .np-home-echo::after,
+  .np-ecosystem::after,
+  .np-history-section::after,
+  .np-history-card::after,
+  .np-history-timeline::after,
+  .np-home-panel::after,
+  .np-home-section::after {
+    width: 1.55rem;
+    height: 1.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .np-echo-visual::after,
+  .np-echo-robot::after,
+  .np-home-echo-image::after,
+  .np-echo-kompass .np-echo-image::after {
+    animation: none !important;
+  }
+
+  details::details-content,
+  details[open] > *:not(summary) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
