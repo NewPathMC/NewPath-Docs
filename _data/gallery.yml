@@ -1,0 +1,32 @@
+categories:
+  - id: "eotw"
+    label: "NewPath – Echoes of the Wild"
+    intro: "Aktuelle Eindrücke aus der neuen Welt von NewPath."
+    images:
+      - "/assets/images/gallery/eotw/bild1.webp"
+      - "/assets/images/gallery/eotw/bild2.webp"
+      - "/assets/images/gallery/eotw/bild3.webp"
+
+  - id: "archiv"
+    label: "Archiv"
+    intro: "Alte Eindrücke, Erinnerungen und frühere Momente aus NewPath."
+    images:
+      - "/assets/images/gallery/archiv/bild1.webp"
+      - "/assets/images/gallery/archiv/bild2.webp"
+      - "/assets/images/gallery/archiv/bild3.webp"
+
+  - id: "events"
+    label: "Events"
+    intro: "Bilder aus Events, Sonderprojekten und saisonalen Aktionen."
+    images:
+      - "/assets/images/gallery/events/bild1.webp"
+      - "/assets/images/gallery/events/bild2.webp"
+      - "/assets/images/gallery/events/bild3.webp"
+
+  - id: "community"
+    label: "Community"
+    intro: "Momente aus der Community, vom Serveralltag und gemeinsamen Projekten."
+    images:
+      - "/assets/images/gallery/community/bild1.webp"
+      - "/assets/images/gallery/community/bild2.webp"
+      - "/assets/images/gallery/community/bild3.webp"
