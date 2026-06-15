@@ -14047,3 +14047,112 @@ body.np-page-home .site-footer {
   }
 }
 
+/* 70. Startseite: mutiger Spacing- und Footer-Fix */
+
+/*
+  Finaler mutiger Spacing-Fix:
+  - Separator bekommt deutlich mehr Luft, damit er nicht zwischen Panels gequetscht wirkt
+  - Abstand nach der Entstehungsgeschichte zum Footer wird stark reduziert
+  - unteres Home-Padding wird neutralisiert
+*/
+
+/* Zwischen den Hauptbereichen mutiger werden */
+.np-pathfinder-dashboard {
+  margin-bottom: clamp(2.8rem, 4.2vw, 4.25rem) !important;
+}
+
+.np-ecosystem-panel {
+  margin-top: clamp(2.8rem, 4vw, 4rem) !important;
+  margin-bottom: clamp(2.65rem, 3.8vw, 3.75rem) !important;
+}
+
+.np-history-panel {
+  margin-top: clamp(2.55rem, 3.6vw, 3.45rem) !important;
+  margin-bottom: 0.35rem !important;
+}
+
+/* Separator selbst bekommt mehr Raum, bleibt aber optisch weich */
+.np-home-section-separator {
+  width: min(54rem, 62vw) !important;
+  max-width: min(54rem, 62vw) !important;
+  height: 1.25rem !important;
+  margin-top: clamp(2.05rem, 3.2vw, 3.15rem) !important;
+  margin-bottom: clamp(2.15rem, 3.4vw, 3.35rem) !important;
+}
+
+/* Nach dem letzten Panel keinen künstlichen Extra-Leerraum mehr */
+body.np-page-home .np-home-v2,
+body.np-page-home .main-content,
+body.np-page-home #main-content,
+body.np-page-home main,
+body.np-page-home .main {
+  padding-bottom: 0.25rem !important;
+  margin-bottom: 0 !important;
+  min-height: auto !important;
+}
+
+body.np-page-home .page-content,
+body.np-page-home .main-content-wrap,
+body.np-page-home .main-content .wrapper,
+body.np-page-home .content {
+  padding-bottom: 0.25rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Footer näher an die letzte Box ziehen */
+body.np-page-home footer,
+body.np-page-home .site-footer,
+body.np-page-home #np-mobile-footer,
+body.np-page-home .np-footer {
+  margin-top: 0 !important;
+}
+
+/* Falls ein Back-to-top oder fixer Footer Abstand erzeugt */
+body.np-page-home .np-back-to-top {
+  bottom: 3.1rem !important;
+}
+
+/* Desktop: letzte Startseiten-Box noch etwas näher an Footer */
+@media (min-width: 66.5rem) {
+  body.np-page-home .np-history-panel {
+    margin-bottom: 0.2rem !important;
+  }
+
+  body.np-page-home .np-home-v2 > :last-child,
+  body.np-page-home .main-content > :last-child,
+  body.np-page-home #main-content > :last-child {
+    margin-bottom: 0.2rem !important;
+  }
+}
+
+/* Mobile nicht zu luftig machen */
+@media (max-width: 66.499rem) {
+  .np-pathfinder-dashboard {
+    margin-bottom: 1.95rem !important;
+  }
+
+  .np-ecosystem-panel {
+    margin-top: 1.95rem !important;
+    margin-bottom: 1.85rem !important;
+  }
+
+  .np-history-panel {
+    margin-top: 1.75rem !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .np-home-section-separator {
+    width: min(22rem, 74vw) !important;
+    height: 1rem !important;
+    margin-top: 1.35rem !important;
+    margin-bottom: 1.45rem !important;
+  }
+
+  body.np-page-home .np-home-v2,
+  body.np-page-home .main-content,
+  body.np-page-home #main-content,
+  body.np-page-home main {
+    padding-bottom: 0.4rem !important;
+  }
+}
+
