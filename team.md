@@ -11,7 +11,7 @@ permalink: /team.html
 <section class="echo-page-box echo-page-box-team">
   <div class="echo-page-image">
     <img
-      src="{{ site.baseurl }}/assets/images/echo/echo-philosophy.png"
+      src="{{ site.baseurl }}/assets/images/echo/echo-team.png"
       alt="ECHO stellt das NewPath-Team vor"
       width="512"
       height="512"

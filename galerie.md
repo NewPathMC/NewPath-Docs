@@ -7,7 +7,7 @@ permalink: /galerie.html
 
 <section class="echo-page-box echo-page-box-gallery">
   <div class="echo-page-image">
-    <img src="{{ '/assets/images/echo/echo-server.png' | relative_url }}" alt="ECHO Galerie">
+    <img src="{{ '/assets/images/echo/echo-galerie.png' | relative_url }}" alt="ECHO Galerie">
   </div>
 
   <div class="echo-page-content">
