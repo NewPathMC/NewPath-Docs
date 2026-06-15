@@ -12642,160 +12642,69 @@ body.np-gallery-viewer-open {
   }
 }
 
-/* 65. Effekt-Layer konsolidiert: Startseite, Hover, Galerie, ECHO, Akkordeons */
+/* 65. NewPath Deko-System konsolidiert */
 
 /*
-  Konsolidierter Effekt-Layer.
-  Ersetzt die vorherigen Testblöcke 65–71.
+  Ein einziger konsolidierter Deko-/Effektblock.
+  Ersetzt die vorherigen Testblöcke.
 
-  Fixes:
-  - keine Deko mehr auf Hero-Beschreibung oder Statusleiste
-  - Eckmarker gezielt auf echte Startseiten-Panels:
-    .np-pathfinder-dashboard, .np-ecosystem-panel, .np-history-panel
-  - Statusleiste bleibt statisch ohne Hover
-  - Hover nur auf klar interaktiven Karten/Buttons
-  - Akkordeon-Animation bleibt erhalten
-  - Galerie-Hover/Viewer bleibt erhalten
+  Ziele:
+  - einheitliche Eckmarker auf großen Boxen
+  - keine Eckmarker auf Hero-Text oder Statusleiste
+  - leuchtende Cyan-Punkte
+  - Statusleiste als eine gemeinsame HUD-Box
+  - sichtbare, aber dezente Bereichs-Trennlinien
+  - Hover nur auf interaktiven Elementen
+  - weiche Akkordeon-Animation
 */
 
 /* ------------------------------------------------------------
-   65.1 Typografie: dezenter Titel-Glow
+   65.1 Basis: Welche Boxen bekommen Eckdeko?
 ------------------------------------------------------------ */
 
-.np-hero-title-main,
-.np-hero-title-sub {
-  filter:
-    drop-shadow(0 3px 0 rgba(0, 0, 0, 0.86))
-    drop-shadow(0 6px 7px rgba(0, 0, 0, 0.58))
-    drop-shadow(0 0 14px rgba(236, 183, 110, 0.22)) !important;
-}
+/*
+  Startseite:
+  .np-panel sitzt auf ECHO-Kompass, Ecosystem und Geschichte.
+  Unterseiten:
+  .echo-page-box = ECHO-Kopfbalken
+  .np-page-section = Inhaltsboxen
+*/
 
-.echo-page-content h2,
-.echo-page-box h2,
-.np-page-section h1,
-.np-page-section h2,
-.np-section-header h1,
-.np-section-header h2,
-.np-title,
-.np-echo-copy h2,
-.np-ecosystem h2,
-.np-history-card h2,
-.np-gallery-category-heading h2,
-.np-home-section-title {
-  text-shadow:
-    0 2px 0 rgba(0, 0, 0, 0.72),
-    0 4px 7px rgba(0, 0, 0, 0.48),
-    0 0 13px rgba(236, 183, 110, 0.13) !important;
-}
-
-.echo-page-kicker,
-.np-section-kicker,
-.np-echo-kicker,
-.np-gallery-category-kicker,
-.np-ecosystem-kicker,
-.np-card-kicker,
-.np-home-kicker,
-.np-timeline-kicker,
-.np-rule-kicker,
-.np-help-kicker,
-.np-streamer-kicker,
-.np-team-kicker {
-  color: #20f4ff !important;
-  text-shadow:
-    0 0 7px rgba(0, 230, 246, 0.34),
-    0 0 15px rgba(0, 230, 246, 0.12) !important;
-}
-
-/* Fließtext bewusst ruhig lassen */
-.main-content p,
-.main-content li,
-.main-content small,
-.np-lead,
-.echo-page-content p,
-.np-hero-highlight,
-.np-ecosystem-card p,
-.np-gallery-category-card small,
-.np-team-card p,
-.np-streamer-asset-card p {
-  text-shadow: none !important;
-}
-
-/* ------------------------------------------------------------
-   65.2 Eckmarker: nur echte große Panels, nicht Hero/Status
------------------------------------------------------------- */
-
-/* Explizit keine Deko auf Hero-Beschreibung, Hero-Card oder Statusleiste */
-.np-hero-highlight::before,
-.np-hero-highlight::after,
-.np-home-hero-card::before,
-.np-home-hero-card::after,
-.np-status-bar::before,
-.np-status-bar::after,
-.np-status-strip::before,
-.np-status-strip::after,
-.np-status-item::before,
-.np-status-item::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Echte Startseiten-Panels */
-.np-pathfinder-dashboard,
-.np-ecosystem-panel,
-.np-history-panel,
+.np-panel,
 .echo-page-box,
-.np-gallery-page {
+.np-page-section {
   position: relative !important;
+}
+
+/* Boxen brauchen sichtbaren Inhalt, aber die Deko soll nicht von Rundungen unterschiedlich abgeschnitten werden */
+.np-panel,
+.echo-page-box,
+.np-page-section {
   overflow: hidden !important;
 }
 
-/* Cyan-Ecke oben links */
-.np-pathfinder-dashboard::before,
-.np-ecosystem-panel::before,
-.np-history-panel::before,
-.echo-page-box::before,
-.np-gallery-page::before {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  top: 0.72rem !important;
-  left: 0.72rem !important;
-  width: 2.35rem !important;
-  height: 2.35rem !important;
-  pointer-events: none !important;
-  border-top: 1px solid rgba(0, 230, 246, 0.54) !important;
-  border-left: 1px solid rgba(0, 230, 246, 0.54) !important;
-  border-right: 0 !important;
-  border-bottom: 0 !important;
-  border-radius: 0.36rem 0 0 0 !important;
-  opacity: 0.78 !important;
-  z-index: 4 !important;
-}
-
-/* Gold-Ecke unten rechts */
-.np-pathfinder-dashboard::after,
-.np-ecosystem-panel::after,
-.np-history-panel::after,
-.echo-page-box::after,
-.np-gallery-page::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  right: 0.72rem !important;
-  bottom: 0.72rem !important;
-  width: 2.35rem !important;
-  height: 2.35rem !important;
-  pointer-events: none !important;
-  border-right: 1px solid rgba(236, 183, 110, 0.46) !important;
-  border-bottom: 1px solid rgba(236, 183, 110, 0.46) !important;
-  border-top: 0 !important;
-  border-left: 0 !important;
-  border-radius: 0 0 0.36rem 0 !important;
-  opacity: 0.68 !important;
-  z-index: 4 !important;
-}
-
-/* Innere History-Elemente ausdrücklich ohne eigene Eckmarker */
+/* Explizit keine Eckdeko auf kleinen/ungeeigneten Bereichen */
+.np-hero,
+.np-hero-v2,
+.np-hero-content,
+.np-hero-highlight,
+.np-hero-highlight::before,
+.np-hero-highlight::after,
+.np-home-hero-card,
+.np-home-hero-card::before,
+.np-home-hero-card::after,
+.np-status-bar,
+.np-status-bar::before,
+.np-status-bar::after,
+.np-status-bar-v2,
+.np-status-bar-v2::before,
+.np-status-bar-v2::after,
+.np-status-bar-showcase,
+.np-status-bar-showcase::before,
+.np-status-bar-showcase::after,
+.np-status-item,
+.np-status-item::before,
+.np-status-item::after,
 .np-history-card::before,
 .np-history-card::after,
 .np-history-timeline::before,
@@ -12803,11 +12712,238 @@ body.np-gallery-viewer-open {
 .np-history-tabs::before,
 .np-history-tabs::after {
   content: none !important;
-  display: none !important;
+}
+
+/* Einheitliche cyanfarbene L-Ecke oben links */
+.np-panel::before,
+.echo-page-box::before,
+.np-page-section::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0.82rem !important;
+  left: 0.82rem !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  pointer-events: none !important;
+  border-top: 1px solid rgba(0, 230, 246, 0.62) !important;
+  border-left: 1px solid rgba(0, 230, 246, 0.62) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+  opacity: 0.86 !important;
+  z-index: 5 !important;
+  box-shadow:
+    -0.18rem -0.18rem 1.1rem rgba(0, 230, 246, 0.09) !important;
+}
+
+/* Einheitliche goldene L-Ecke unten rechts */
+.np-panel::after,
+.echo-page-box::after,
+.np-page-section::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  right: 0.82rem !important;
+  bottom: 0.82rem !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  pointer-events: none !important;
+  border-right: 1px solid rgba(236, 183, 110, 0.52) !important;
+  border-bottom: 1px solid rgba(236, 183, 110, 0.52) !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  opacity: 0.74 !important;
+  z-index: 5 !important;
+  box-shadow:
+    0.18rem 0.18rem 1.05rem rgba(236, 183, 110, 0.07) !important;
 }
 
 /* ------------------------------------------------------------
-   65.3 Hover: nur interaktive Karten/Buttons
+   65.2 Cyan-Punkte als Tech-LEDs
+------------------------------------------------------------ */
+
+/*
+  Betrifft vorhandene Punkte vor Überschriften und ergänzt Punkte dort,
+  wo die Startseite eigene Überschriften nutzt.
+*/
+
+.np-section-header .np-title::before,
+.np-page-section h1::before,
+.np-page-section h2::before,
+.np-ecosystem-head h2::before,
+.np-history-intro h2::before,
+.np-gallery-category-heading h2::before,
+.np-heading-dot,
+.np-title-dot,
+.np-section-dot {
+  background:
+    radial-gradient(circle, #d8feff 0%, #20f4ff 34%, #00a7ba 100%) !important;
+  box-shadow:
+    0 0 0 0.18rem rgba(0, 230, 246, 0.10),
+    0 0 0.52rem rgba(0, 230, 246, 0.90),
+    0 0 1.05rem rgba(0, 230, 246, 0.52),
+    0 0 1.85rem rgba(0, 230, 246, 0.20) !important;
+  filter: saturate(1.35) brightness(1.25) !important;
+}
+
+/* Startseiten-H2 bekommen bei Bedarf konsistent einen Punkt */
+.np-ecosystem-head h2,
+.np-history-intro h2 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+}
+
+.np-ecosystem-head h2::before,
+.np-history-intro h2::before {
+  content: "" !important;
+  width: 0.44rem !important;
+  height: 0.44rem !important;
+  flex: 0 0 0.44rem !important;
+  border-radius: 999px !important;
+}
+
+/* Ausnahme: History-Intro darf auf Desktop nicht kaputt umspringen */
+@media (min-width: 66.5rem) {
+  .np-history-intro h2 {
+    display: block !important;
+  }
+
+  .np-history-intro h2::before {
+    display: inline-block !important;
+    margin-right: 0.55rem !important;
+    vertical-align: 0.12em !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   65.3 Statusleiste als gemeinsame HUD-Box
+------------------------------------------------------------ */
+
+.np-status-bar,
+.np-status-bar-v2,
+.np-status-bar-showcase {
+  position: relative !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(0, 230, 246, 0.26) !important;
+  border-radius: 0.64rem !important;
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 230, 246, 0.08), transparent 18rem),
+    radial-gradient(circle at 100% 50%, rgba(236, 183, 110, 0.06), transparent 18rem),
+    linear-gradient(90deg, rgba(2, 12, 18, 0.78), rgba(13, 42, 52, 0.56), rgba(2, 12, 18, 0.78)) !important;
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    inset 0 0 26px rgba(0, 230, 246, 0.028) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Die einzelnen Statusfelder wirken nicht mehr wie eigene Karten */
+.np-status-bar > .np-status-item,
+.np-status-bar-v2 > .np-status-item,
+.np-status-bar-showcase > .np-status-item {
+  position: relative !important;
+  border-right: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Kurze, nicht durchgehende Trenner */
+.np-status-bar > .np-status-item:not(:last-child)::after,
+.np-status-bar-v2 > .np-status-item:not(:last-child)::after,
+.np-status-bar-showcase > .np-status-item:not(:last-child)::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 24% !important;
+  right: 0 !important;
+  bottom: 24% !important;
+  width: 1px !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(0, 230, 246, 0.30),
+      rgba(236, 183, 110, 0.18),
+      transparent
+    ) !important;
+  box-shadow: 0 0 0.85rem rgba(0, 230, 246, 0.10) !important;
+  opacity: 0.95 !important;
+}
+
+.np-status-icon {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(0, 230, 246, 0.20), rgba(0, 230, 246, 0.060)) !important;
+  border-color: rgba(0, 230, 246, 0.36) !important;
+  box-shadow:
+    inset 0 0 0.8rem rgba(0, 230, 246, 0.07),
+    0 0 0.95rem rgba(0, 230, 246, 0.12) !important;
+}
+
+/* Status bleibt nicht interaktiv */
+.np-status-item:hover,
+.np-status-bar:hover .np-status-item,
+.np-status-bar-v2:hover .np-status-item,
+.np-status-bar-showcase:hover .np-status-item {
+  transform: none !important;
+  filter: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ------------------------------------------------------------
+   65.4 Horizontale Startseiten-Trennlinien
+------------------------------------------------------------ */
+
+.np-home-section-separator {
+  position: relative !important;
+  width: min(980px, 62vw) !important;
+  max-width: min(980px, 62vw) !important;
+  height: 2px !important;
+  margin: clamp(1.35rem, 2.2vw, 2.25rem) auto !important;
+  border: 0 !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 230, 246, 0.08) 12%,
+      rgba(0, 230, 246, 0.52) 42%,
+      rgba(236, 183, 110, 0.34) 50%,
+      rgba(0, 230, 246, 0.46) 58%,
+      rgba(0, 230, 246, 0.08) 88%,
+      transparent 100%
+    ) !important;
+  box-shadow:
+    0 0 0.85rem rgba(0, 230, 246, 0.18),
+    0 0 1.55rem rgba(236, 183, 110, 0.08) !important;
+  opacity: 1 !important;
+}
+
+.np-home-section-separator::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 0.45rem !important;
+  height: 0.45rem !important;
+  border-radius: 999px !important;
+  transform: translate(-50%, -50%) !important;
+  background:
+    radial-gradient(circle, #d8feff 0%, #20f4ff 42%, rgba(0, 230, 246, 0.26) 100%) !important;
+  box-shadow:
+    0 0 0.65rem rgba(0, 230, 246, 0.70),
+    0 0 1.25rem rgba(0, 230, 246, 0.26) !important;
+  pointer-events: none !important;
+}
+
+/* ------------------------------------------------------------
+   65.5 Hover nur für interaktive Karten und Buttons
 ------------------------------------------------------------ */
 
 .np-route-card,
@@ -12843,21 +12979,6 @@ body.np-gallery-viewer-open {
   filter: brightness(1.045);
 }
 
-/* Statusleiste ist Info, nicht interaktiv */
-.np-status-bar,
-.np-status-item,
-.np-status-item:hover {
-  transform: none !important;
-  filter: none !important;
-}
-
-.np-status-item:hover {
-  border-color: rgba(72, 122, 146, 0.30) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
-}
-
-/* Button-Shimmer */
 .np-server-copy-hero-button,
 .np-hero-secondary-button,
 .np-server-copy,
@@ -12937,7 +13058,7 @@ button.np-button:hover::after {
 }
 
 /* ------------------------------------------------------------
-   65.4 ECHO-Scanline
+   65.6 ECHO-Scanline
 ------------------------------------------------------------ */
 
 .echo-page-image,
@@ -12995,7 +13116,7 @@ button.np-button:hover::after {
 }
 
 /* ------------------------------------------------------------
-   65.5 Galerie-Polish
+   65.7 Galerie-Polish
 ------------------------------------------------------------ */
 
 .np-gallery-category-card.is-active {
@@ -13089,17 +13210,8 @@ button.np-button:hover::after {
   box-shadow: 0 0 14px rgba(0, 230, 246, 0.08);
 }
 
-.np-gallery-viewer-arrow,
-.np-gallery-viewer-close {
-  border-color: rgba(0, 230, 246, 0.44) !important;
-  box-shadow:
-    0 16px 34px rgba(0, 0, 0, 0.42),
-    0 0 18px rgba(0, 230, 246, 0.10),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
-}
-
 /* ------------------------------------------------------------
-   65.6 Weiche Akkordeon-Animation
+   65.8 Weiche Akkordeon-Animation
 ------------------------------------------------------------ */
 
 :root {
@@ -13157,22 +13269,42 @@ details[open] > *:not(summary) {
 }
 
 /* ------------------------------------------------------------
-   65.7 Motion und Mobile
+   65.9 Mobile / reduzierte Bewegung
 ------------------------------------------------------------ */
 
 @media (max-width: 66.499rem) {
-  .np-pathfinder-dashboard::before,
-  .np-ecosystem-panel::before,
-  .np-history-panel::before,
+  .np-panel::before,
   .echo-page-box::before,
-  .np-gallery-page::before,
-  .np-pathfinder-dashboard::after,
-  .np-ecosystem-panel::after,
-  .np-history-panel::after,
+  .np-page-section::before,
+  .np-panel::after,
   .echo-page-box::after,
-  .np-gallery-page::after {
+  .np-page-section::after {
     width: 1.55rem !important;
     height: 1.55rem !important;
+  }
+
+  .np-status-bar > .np-status-item:not(:last-child)::after,
+  .np-status-bar-v2 > .np-status-item:not(:last-child)::after,
+  .np-status-bar-showcase > .np-status-item:not(:last-child)::after {
+    top: auto !important;
+    right: 8% !important;
+    bottom: 0 !important;
+    left: 8% !important;
+    width: auto !important;
+    height: 1px !important;
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 230, 246, 0.22),
+        rgba(236, 183, 110, 0.14),
+        transparent
+      ) !important;
+  }
+
+  .np-home-section-separator {
+    width: min(20rem, 72vw) !important;
+    margin-block: 1rem !important;
   }
 
   .np-gallery-item::after {
@@ -13208,313 +13340,6 @@ details[open] > *:not(summary) {
   details[open] > *:not(summary) {
     animation: none !important;
     transition: none !important;
-  }
-}
-
-/* 66. Deko-Feinschliff: LED-Punkte, HUD-Statusleiste, einheitliche Eckmarker */
-
-/*
-  Ergänzt den konsolidierten Effekt-Layer.
-  Ziel:
-  - einheitliche Eckmarker auf echten Startseiten-Panels
-  - leuchtende Cyan-Punkte vor Überschriften
-  - Statusleiste als eine gemeinsame HUD-Box mit kurzen Trennern
-  - keine Hover-Effekte auf der Statusleiste
-*/
-
-/* ------------------------------------------------------------
-   66.1 Einheitliche Eckmarker
------------------------------------------------------------- */
-
-/* Keine Eckmarker auf Hero-Beschreibung und Status */
-.np-hero-highlight::before,
-.np-hero-highlight::after,
-.np-home-hero-card::before,
-.np-home-hero-card::after,
-.np-status-bar::before,
-.np-status-bar::after,
-.np-status-bar-v2::before,
-.np-status-bar-v2::after,
-.np-status-bar-showcase::before,
-.np-status-bar-showcase::after,
-.np-status-item::before {
-  content: none !important;
-  display: none !important;
-}
-
-/* Ziel-Panels: Startseite + Unterseiten-ECHO + Galerie */
-.np-pathfinder-dashboard,
-.np-ecosystem-panel,
-.np-history-panel,
-.echo-page-box,
-.np-gallery-page {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-/* Einheitliche cyanfarbene L-Ecke oben links */
-.np-pathfinder-dashboard::before,
-.np-ecosystem-panel::before,
-.np-history-panel::before,
-.echo-page-box::before,
-.np-gallery-page::before {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  top: 0.78rem !important;
-  left: 0.78rem !important;
-  width: 2.25rem !important;
-  height: 2.25rem !important;
-  pointer-events: none !important;
-  border-top: 1px solid rgba(0, 230, 246, 0.58) !important;
-  border-left: 1px solid rgba(0, 230, 246, 0.58) !important;
-  border-right: 0 !important;
-  border-bottom: 0 !important;
-  border-radius: 0 !important;
-  opacity: 0.82 !important;
-  z-index: 5 !important;
-  box-shadow:
-    -0.25rem -0.25rem 1.1rem rgba(0, 230, 246, 0.07),
-    inset 0.18rem 0.18rem 0 rgba(0, 230, 246, 0.035) !important;
-}
-
-/* Einheitliche goldene L-Ecke unten rechts */
-.np-pathfinder-dashboard::after,
-.np-ecosystem-panel::after,
-.np-history-panel::after,
-.echo-page-box::after,
-.np-gallery-page::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  right: 0.78rem !important;
-  bottom: 0.78rem !important;
-  width: 2.25rem !important;
-  height: 2.25rem !important;
-  pointer-events: none !important;
-  border-right: 1px solid rgba(236, 183, 110, 0.50) !important;
-  border-bottom: 1px solid rgba(236, 183, 110, 0.50) !important;
-  border-top: 0 !important;
-  border-left: 0 !important;
-  border-radius: 0 !important;
-  opacity: 0.70 !important;
-  z-index: 5 !important;
-  box-shadow:
-    0.25rem 0.25rem 1.05rem rgba(236, 183, 110, 0.055),
-    inset -0.18rem -0.18rem 0 rgba(236, 183, 110, 0.025) !important;
-}
-
-/* Innere History-Elemente bekommen keine eigenen Eckmarker */
-.np-history-card::before,
-.np-history-card::after,
-.np-history-timeline::before,
-.np-history-timeline::after,
-.np-history-tabs::before,
-.np-history-tabs::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* ------------------------------------------------------------
-   66.2 Leuchtende Cyan-Punkte vor Überschriften
------------------------------------------------------------- */
-
-/* Bestehende Punkt-Pseudoelemente stärker wie Tech-LEDs wirken lassen */
-.np-section-header .np-title::before,
-.np-page-section > h1::before,
-.np-page-section h2::before,
-.np-ecosystem-panel h2::before,
-.np-history-intro h2::before,
-.np-gallery-category-heading h2::before,
-.np-pathfinder-kicker::before,
-.np-ecosystem-head h2::before,
-.np-route-headline::before {
-  background: #20f4ff !important;
-  box-shadow:
-    0 0 0 0.24rem rgba(0, 230, 246, 0.10),
-    0 0 0.75rem rgba(0, 230, 246, 0.55),
-    0 0 1.35rem rgba(0, 230, 246, 0.22) !important;
-  filter: saturate(1.25) brightness(1.15);
-}
-
-/* Falls Überschriften ihren Punkt als separates Inline-Element haben */
-.np-heading-dot,
-.np-title-dot,
-.np-section-dot {
-  background: #20f4ff !important;
-  box-shadow:
-    0 0 0 0.24rem rgba(0, 230, 246, 0.10),
-    0 0 0.75rem rgba(0, 230, 246, 0.55),
-    0 0 1.35rem rgba(0, 230, 246, 0.22) !important;
-}
-
-/* Startseiten-H2 ohne vorhandenes Pseudoelement: Punkt optional ergänzen */
-.np-ecosystem-head h2,
-.np-history-intro h2 {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.55rem !important;
-}
-
-.np-ecosystem-head h2::before,
-.np-history-intro h2::before {
-  content: "" !important;
-  width: 0.42rem !important;
-  height: 0.42rem !important;
-  flex: 0 0 0.42rem !important;
-  border-radius: 999px !important;
-  background: #20f4ff !important;
-}
-
-/* ------------------------------------------------------------
-   66.3 Statusleiste als gemeinsame HUD-Box
------------------------------------------------------------- */
-
-.np-status-bar,
-.np-status-bar-v2,
-.np-status-bar-showcase {
-  position: relative !important;
-  overflow: hidden !important;
-  border: 1px solid rgba(0, 230, 246, 0.22) !important;
-  border-radius: 0.62rem !important;
-  background:
-    radial-gradient(circle at 0% 50%, rgba(0, 230, 246, 0.070), transparent 18rem),
-    radial-gradient(circle at 100% 50%, rgba(236, 183, 110, 0.050), transparent 18rem),
-    linear-gradient(90deg, rgba(3, 15, 21, 0.72), rgba(10, 35, 45, 0.54), rgba(3, 15, 21, 0.72)) !important;
-  box-shadow:
-    0 16px 32px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.050),
-    inset 0 0 24px rgba(0, 230, 246, 0.025) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-/* feine Lichtkante innen */
-.np-status-bar > .np-status-item,
-.np-status-bar-v2 > .np-status-item,
-.np-status-bar-showcase > .np-status-item {
-  position: relative !important;
-  border-right: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  transform: none !important;
-  filter: none !important;
-}
-
-/* kurze, nicht durchgehende vertikale Trenner */
-.np-status-bar > .np-status-item:not(:last-child)::after,
-.np-status-bar-v2 > .np-status-item:not(:last-child)::after,
-.np-status-bar-showcase > .np-status-item:not(:last-child)::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  top: 24% !important;
-  right: 0 !important;
-  bottom: 24% !important;
-  width: 1px !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(0, 230, 246, 0.24),
-      rgba(236, 183, 110, 0.16),
-      transparent
-    ) !important;
-  box-shadow: 0 0 0.75rem rgba(0, 230, 246, 0.075) !important;
-  opacity: 0.92 !important;
-}
-
-/* Status-Icons dürfen leicht leuchten, aber nicht hovern */
-.np-status-icon {
-  background:
-    radial-gradient(circle at 50% 42%, rgba(0, 230, 246, 0.18), rgba(0, 230, 246, 0.055)) !important;
-  border-color: rgba(0, 230, 246, 0.34) !important;
-  box-shadow:
-    inset 0 0 0.8rem rgba(0, 230, 246, 0.060),
-    0 0 0.9rem rgba(0, 230, 246, 0.10) !important;
-}
-
-/* Statusleiste bleibt bewusst nicht interaktiv */
-.np-status-item:hover,
-.np-status-bar:hover .np-status-item,
-.np-status-bar-v2:hover .np-status-item,
-.np-status-bar-showcase:hover .np-status-item {
-  transform: none !important;
-  filter: none !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* ------------------------------------------------------------
-   66.4 Bestehende Bereichs-Trennlinien leicht sichtbarer
------------------------------------------------------------- */
-
-.np-home-section-separator {
-  height: 1px !important;
-  width: min(52rem, 64vw) !important;
-  margin: 1.25rem auto 1.25rem !important;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(0, 230, 246, 0.28),
-      rgba(236, 183, 110, 0.18),
-      rgba(0, 230, 246, 0.24),
-      transparent
-    ) !important;
-  box-shadow:
-    0 0 0.85rem rgba(0, 230, 246, 0.08),
-    0 0 1.25rem rgba(236, 183, 110, 0.035) !important;
-  opacity: 0.88 !important;
-}
-
-/* ------------------------------------------------------------
-   66.5 Mobile
------------------------------------------------------------- */
-
-@media (max-width: 66.499rem) {
-  .np-pathfinder-dashboard::before,
-  .np-ecosystem-panel::before,
-  .np-history-panel::before,
-  .echo-page-box::before,
-  .np-gallery-page::before,
-  .np-pathfinder-dashboard::after,
-  .np-ecosystem-panel::after,
-  .np-history-panel::after,
-  .echo-page-box::after,
-  .np-gallery-page::after {
-    width: 1.55rem !important;
-    height: 1.55rem !important;
-  }
-
-  .np-status-bar,
-  .np-status-bar-v2,
-  .np-status-bar-showcase {
-    border-radius: 0.68rem !important;
-  }
-
-  .np-status-bar > .np-status-item:not(:last-child)::after,
-  .np-status-bar-v2 > .np-status-item:not(:last-child)::after,
-  .np-status-bar-showcase > .np-status-item:not(:last-child)::after {
-    top: auto !important;
-    right: 8% !important;
-    bottom: 0 !important;
-    left: 8% !important;
-    width: auto !important;
-    height: 1px !important;
-    background:
-      linear-gradient(
-        90deg,
-        transparent,
-        rgba(0, 230, 246, 0.20),
-        rgba(236, 183, 110, 0.12),
-        transparent
-      ) !important;
-  }
-
-  .np-home-section-separator {
-    width: min(20rem, 72vw) !important;
-    margin-block: 1rem !important;
   }
 }
 
