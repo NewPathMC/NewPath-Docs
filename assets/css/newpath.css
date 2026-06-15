@@ -13343,3 +13343,235 @@ details[open] > *:not(summary) {
   }
 }
 
+/* 66. Finaler Fix: Eckmarker und Startseiten-Trennlinie */
+
+/*
+  Finaler Fix:
+  - Eckmarker werden nicht mehr per border gerendert.
+  - Stattdessen reine background-gradient Linien.
+  - Dadurch keine runden/gebogenen Ecken mehr.
+  - Startseiten-Trennlinie wird sichtbarer und eigenständiger.
+*/
+
+/* ------------------------------------------------------------
+   66.1 Eckmarker: alte Border-Deko vollständig neutralisieren
+------------------------------------------------------------ */
+
+.np-panel::before,
+.echo-page-box::before,
+.np-page-section::before,
+.np-panel::after,
+.echo-page-box::after,
+.np-page-section::after {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Keine Eckmarker auf Hero und Status */
+.np-hero-highlight::before,
+.np-hero-highlight::after,
+.np-home-hero-card::before,
+.np-home-hero-card::after,
+.np-status-bar::before,
+.np-status-bar::after,
+.np-status-bar-v2::before,
+.np-status-bar-v2::after,
+.np-status-bar-showcase::before,
+.np-status-bar-showcase::after,
+.np-status-item::before,
+.np-status-item::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Zielboxen */
+.np-panel,
+.echo-page-box,
+.np-page-section,
+.np-gallery-page {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Cyan-Ecke oben links: exakt rechtwinklig, nicht rund */
+.np-panel::before,
+.echo-page-box::before,
+.np-page-section::before,
+.np-gallery-page::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0.88rem !important;
+  left: 0.88rem !important;
+  width: 2.65rem !important;
+  height: 2.65rem !important;
+  pointer-events: none !important;
+  z-index: 8 !important;
+  opacity: 0.92 !important;
+
+  background:
+    linear-gradient(90deg, rgba(32, 244, 255, 0.95), rgba(32, 244, 255, 0.42), transparent 78%)
+      left top / 2.65rem 1px no-repeat,
+    linear-gradient(180deg, rgba(32, 244, 255, 0.95), rgba(32, 244, 255, 0.42), transparent 78%)
+      left top / 1px 2.65rem no-repeat !important;
+
+  filter:
+    drop-shadow(0 0 0.35rem rgba(0, 230, 246, 0.26))
+    drop-shadow(0 0 0.85rem rgba(0, 230, 246, 0.12)) !important;
+}
+
+/* Gold-Ecke unten rechts: exakt rechtwinklig, nicht rund */
+.np-panel::after,
+.echo-page-box::after,
+.np-page-section::after,
+.np-gallery-page::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  right: 0.88rem !important;
+  bottom: 0.88rem !important;
+  width: 2.65rem !important;
+  height: 2.65rem !important;
+  pointer-events: none !important;
+  z-index: 8 !important;
+  opacity: 0.78 !important;
+
+  background:
+    linear-gradient(270deg, rgba(236, 183, 110, 0.88), rgba(236, 183, 110, 0.36), transparent 78%)
+      right bottom / 2.65rem 1px no-repeat,
+    linear-gradient(0deg, rgba(236, 183, 110, 0.88), rgba(236, 183, 110, 0.36), transparent 78%)
+      right bottom / 1px 2.65rem no-repeat !important;
+
+  filter:
+    drop-shadow(0 0 0.32rem rgba(236, 183, 110, 0.18))
+    drop-shadow(0 0 0.75rem rgba(236, 183, 110, 0.075)) !important;
+}
+
+/* Falls innere History-Elemente eigene Pseudoelemente nutzen: aus */
+.np-history-card::before,
+.np-history-card::after,
+.np-history-timeline::before,
+.np-history-timeline::after,
+.np-history-tabs::before,
+.np-history-tabs::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   66.2 Startseiten-Trennlinie: sichtbarere Runen-/Tech-Leiste
+------------------------------------------------------------ */
+
+.np-home-section-separator {
+  position: relative !important;
+  display: block !important;
+  width: min(42rem, 54vw) !important;
+  max-width: min(42rem, 54vw) !important;
+  height: 0.72rem !important;
+  margin: clamp(1.35rem, 2.4vw, 2.45rem) auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+/* eigentliche helle Linie */
+.np-home-section-separator::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 50% !important;
+  height: 1px !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 230, 246, 0.00) 8%,
+      rgba(0, 230, 246, 0.46) 26%,
+      rgba(236, 183, 110, 0.40) 50%,
+      rgba(0, 230, 246, 0.46) 74%,
+      rgba(0, 230, 246, 0.00) 92%,
+      transparent 100%
+    ) !important;
+  box-shadow:
+    0 0 0.65rem rgba(0, 230, 246, 0.30),
+    0 0 1.25rem rgba(236, 183, 110, 0.10) !important;
+}
+
+/* mittleres Tech-Modul mit drei Punkten */
+.np-home-section-separator::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 2.25rem !important;
+  height: 0.72rem !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 50% 50%, #d8feff 0 0.16rem, rgba(32, 244, 255, 0.72) 0.17rem 0.24rem, transparent 0.25rem),
+    radial-gradient(circle at 18% 50%, rgba(236, 183, 110, 0.90) 0 0.09rem, transparent 0.10rem),
+    radial-gradient(circle at 82% 50%, rgba(236, 183, 110, 0.90) 0 0.09rem, transparent 0.10rem) !important;
+  filter:
+    drop-shadow(0 0 0.45rem rgba(0, 230, 246, 0.48))
+    drop-shadow(0 0 0.75rem rgba(236, 183, 110, 0.18)) !important;
+}
+
+/* ------------------------------------------------------------
+   66.3 Mobile
+------------------------------------------------------------ */
+
+@media (max-width: 66.499rem) {
+  .np-panel::before,
+  .echo-page-box::before,
+  .np-page-section::before,
+  .np-gallery-page::before,
+  .np-panel::after,
+  .echo-page-box::after,
+  .np-page-section::after,
+  .np-gallery-page::after {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+  }
+
+  .np-panel::before,
+  .echo-page-box::before,
+  .np-page-section::before,
+  .np-gallery-page::before {
+    top: 0.58rem !important;
+    left: 0.58rem !important;
+    background:
+      linear-gradient(90deg, rgba(32, 244, 255, 0.92), rgba(32, 244, 255, 0.38), transparent 78%)
+        left top / 1.75rem 1px no-repeat,
+      linear-gradient(180deg, rgba(32, 244, 255, 0.92), rgba(32, 244, 255, 0.38), transparent 78%)
+        left top / 1px 1.75rem no-repeat !important;
+  }
+
+  .np-panel::after,
+  .echo-page-box::after,
+  .np-page-section::after,
+  .np-gallery-page::after {
+    right: 0.58rem !important;
+    bottom: 0.58rem !important;
+    background:
+      linear-gradient(270deg, rgba(236, 183, 110, 0.82), rgba(236, 183, 110, 0.32), transparent 78%)
+        right bottom / 1.75rem 1px no-repeat,
+      linear-gradient(0deg, rgba(236, 183, 110, 0.82), rgba(236, 183, 110, 0.32), transparent 78%)
+        right bottom / 1px 1.75rem no-repeat !important;
+  }
+
+  .np-home-section-separator {
+    width: min(18rem, 68vw) !important;
+    height: 0.62rem !important;
+    margin-block: 1rem !important;
+  }
+
+  .np-home-section-separator::after {
+    width: 1.75rem !important;
+  }
+}
+
