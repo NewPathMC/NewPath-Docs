@@ -12642,151 +12642,124 @@ body.np-gallery-viewer-open {
   }
 }
 
-/* 65. Effekt-Paket 1B: Sichtbare Schriftkontur & Goldtiefe */
+/* 65. Effekt-Paket 1C: echte NewPath-Titelklassen */
 
 /*
-  Diese Variante ist bewusst sichtbarer als Paket 1:
-  - stärkere dunkle Kontur für große Goldtitel
-  - klarerer warmer Goldschein
-  - cyan Labels etwas prägnanter
-  - Fließtext bleibt weiterhin ruhig
+  Korrigierte Variante:
+  Paket 1/1B war zu allgemein und hat den echten Hero-Titel nicht direkt getroffen.
+  Diese Version zielt gezielt auf die aktuelle NewPath-Struktur:
+  .np-hero-title-main / .np-hero-title-sub und die wichtigsten Seiten-/Box-Titel.
 */
 
-:root {
-  --np-title-outline:
+/* Hero-Titel Startseite */
+.np-hero-title-main,
+.np-hero-title-sub {
+  text-shadow:
+    -1.5px -1.5px 0 rgba(0, 0, 0, 0.96),
+     1.5px -1.5px 0 rgba(0, 0, 0, 0.96),
+    -1.5px  1.5px 0 rgba(0, 0, 0, 0.98),
+     1.5px  1.5px 0 rgba(0, 0, 0, 0.98),
+     0 3px 0 rgba(0, 0, 0, 0.78),
+     0 7px 10px rgba(0, 0, 0, 0.68),
+     0 0 18px rgba(236, 183, 110, 0.30),
+     0 0 36px rgba(236, 183, 110, 0.12) !important;
+}
+
+/* Untertitel minimal schwächer, damit er nicht matschig wirkt */
+.np-hero-title-sub {
+  text-shadow:
+    -1.2px -1.2px 0 rgba(0, 0, 0, 0.92),
+     1.2px -1.2px 0 rgba(0, 0, 0, 0.92),
+    -1.2px  1.2px 0 rgba(0, 0, 0, 0.94),
+     1.2px  1.2px 0 rgba(0, 0, 0, 0.94),
+     0 3px 6px rgba(0, 0, 0, 0.66),
+     0 0 15px rgba(236, 183, 110, 0.22) !important;
+}
+
+/* Große Unterseiten-ECHO-Titel */
+.echo-page-content h2,
+.echo-page-box h2,
+.np-page-section h1,
+.np-page-section h2,
+.np-section-header h1,
+.np-section-header h2,
+.np-title {
+  text-shadow:
     -1px -1px 0 rgba(0, 0, 0, 0.82),
      1px -1px 0 rgba(0, 0, 0, 0.82),
     -1px  1px 0 rgba(0, 0, 0, 0.86),
      1px  1px 0 rgba(0, 0, 0, 0.86),
-     0 2px 0 rgba(0, 0, 0, 0.72),
-     0 4px 5px rgba(0, 0, 0, 0.62),
-     0 0 14px rgba(236, 183, 110, 0.20);
-
-  --np-title-outline-strong:
-    -1.4px -1.4px 0 rgba(0, 0, 0, 0.92),
-     1.4px -1.4px 0 rgba(0, 0, 0, 0.92),
-    -1.4px  1.4px 0 rgba(0, 0, 0, 0.96),
-     1.4px  1.4px 0 rgba(0, 0, 0, 0.96),
-     0 2px 0 rgba(0, 0, 0, 0.82),
-     0 5px 7px rgba(0, 0, 0, 0.72),
-     0 0 18px rgba(236, 183, 110, 0.26),
-     0 0 34px rgba(236, 183, 110, 0.10);
-
-  --np-cyan-label-glow:
-    0 0 7px rgba(0, 230, 246, 0.38),
-    0 0 16px rgba(0, 230, 246, 0.16);
+     0 3px 5px rgba(0, 0, 0, 0.62),
+     0 0 15px rgba(236, 183, 110, 0.16) !important;
 }
 
-/* Hero-Titel wirklich sichtbar konturieren */
-.np-home-hero h1,
-.np-hero-title,
-.np-home-title,
-.np-home-v2 h1,
-.np-home-v2 .np-hero-title,
-.np-home-v2 .np-hero-copy h1 {
-  text-shadow: var(--np-title-outline-strong) !important;
-}
-
-/* Hero-Unterzeile */
-.np-home-hero h2,
-.np-hero-subtitle,
-.np-home-subtitle,
-.np-home-v2 .np-hero-subtitle,
-.np-home-v2 .np-hero-copy h2 {
-  text-shadow: var(--np-title-outline) !important;
-}
-
-/* Große Überschriften auf Unterseiten und Boxen */
-.main-content h1,
-.main-content h2,
-.np-title,
-.np-section-header h1,
-.np-section-header h2,
-.np-page-section h1,
-.np-page-section h2,
-.echo-page-content h2,
+/* Startseiten-Box-Titel */
 .np-echo-copy h2,
 .np-ecosystem h2,
 .np-history-card h2,
 .np-gallery-category-heading h2 {
-  text-shadow: var(--np-title-outline) !important;
+  text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.80),
+     1px  1px 0 rgba(0, 0, 0, 0.80),
+     0 3px 5px rgba(0, 0, 0, 0.58),
+     0 0 14px rgba(236, 183, 110, 0.14) !important;
 }
 
-/* Die wichtigsten Seiten-Hero-Titel etwas stärker */
-.echo-page-content h2,
-.np-section-header .np-title,
-.np-home-v2 .np-echo-copy h2 {
-  text-shadow: var(--np-title-outline-strong) !important;
-}
-
-/* Karten-Titel: sichtbar, aber kleiner dosiert */
+/* Kartenüberschriften etwas knackiger */
 .np-echo-card strong,
 .np-ecosystem-card strong,
 .np-gallery-category-card strong,
 .np-status-item strong,
-.np-help-card strong,
-.np-accordion summary,
-.np-faq summary,
 .np-team-card h3,
 .np-streamer-asset-card h3,
-.np-gallery-category-card strong {
+.np-help-card strong,
+.np-accordion summary,
+.np-faq summary {
   text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.70),
-     1px  1px 0 rgba(0, 0, 0, 0.70),
-     0 2px 3px rgba(0, 0, 0, 0.52),
-     0 0 11px rgba(236, 183, 110, 0.12) !important;
+    -1px -1px 0 rgba(0, 0, 0, 0.66),
+     1px  1px 0 rgba(0, 0, 0, 0.66),
+     0 2px 3px rgba(0, 0, 0, 0.48),
+     0 0 10px rgba(236, 183, 110, 0.10) !important;
 }
 
-/* Cyan-Labels stärker lesbar */
-.np-section-kicker,
+/* Cyan-Labels sichtbarer, aber nicht übertrieben */
 .echo-page-kicker,
+.np-section-kicker,
+.np-echo-kicker,
 .np-gallery-category-kicker,
 .np-ecosystem-kicker,
 .np-card-kicker,
 .np-home-kicker,
-.np-echo-kicker,
 .np-timeline-kicker,
-.np-status-label,
+.np-status-item small,
 .np-rule-kicker,
 .np-help-kicker,
 .np-streamer-kicker,
 .np-team-kicker {
   color: #20f4ff !important;
-  text-shadow: var(--np-cyan-label-glow) !important;
+  text-shadow:
+    0 0 7px rgba(0, 230, 246, 0.42),
+    0 0 16px rgba(0, 230, 246, 0.18) !important;
 }
 
-/* Aktive Navigation und aktive Kategorie noch klarer */
-.main-header a.is-active,
+/* Aktive Navigation bewusst sichtbarer */
 .np-topbar-nav a.is-active,
-.np-mobile-menu a.is-active,
-.np-gallery-category-card.is-active .np-gallery-category-kicker,
-.np-gallery-category-card:hover .np-gallery-category-kicker {
+.main-header a.is-active,
+.np-mobile-menu a.is-active {
   color: #20f4ff !important;
   text-shadow:
-    0 0 8px rgba(0, 230, 246, 0.56),
+    0 0 8px rgba(0, 230, 246, 0.58),
     0 0 18px rgba(0, 230, 246, 0.26),
-    0 0 30px rgba(0, 230, 246, 0.10) !important;
+    0 0 30px rgba(0, 230, 246, 0.12) !important;
 }
 
-/* Sehr große Goldtitel bekommen minimal mehr Gewicht */
-.np-home-hero h1,
-.np-hero-title,
-.np-home-title,
-.np-home-v2 h1,
-.np-title,
-.echo-page-content h2,
-.np-section-header h1,
-.np-page-section h1,
-.np-page-section h2 {
-  letter-spacing: -0.028em;
-}
-
-/* Fließtext bewusst ohne Effekt */
+/* Fließtext ausdrücklich ruhig lassen */
 .main-content p,
 .main-content li,
 .main-content small,
 .np-lead,
 .echo-page-content p,
+.np-hero-highlight,
 .np-ecosystem-card p,
 .np-gallery-category-card small,
 .np-team-card p,
@@ -12794,24 +12767,17 @@ body.np-gallery-viewer-open {
   text-shadow: none !important;
 }
 
-/* Mobile: sichtbar, aber etwas weniger stark */
+/* Mobile etwas reduzieren */
 @media (max-width: 66.499rem) {
-  :root {
-    --np-title-outline:
-      -1px -1px 0 rgba(0, 0, 0, 0.74),
-       1px -1px 0 rgba(0, 0, 0, 0.74),
-      -1px  1px 0 rgba(0, 0, 0, 0.78),
-       1px  1px 0 rgba(0, 0, 0, 0.78),
-       0 3px 4px rgba(0, 0, 0, 0.58),
-       0 0 13px rgba(236, 183, 110, 0.14);
-
-    --np-title-outline-strong:
-      -1px -1px 0 rgba(0, 0, 0, 0.84),
-       1px -1px 0 rgba(0, 0, 0, 0.84),
-      -1px  1px 0 rgba(0, 0, 0, 0.88),
-       1px  1px 0 rgba(0, 0, 0, 0.88),
-       0 3px 5px rgba(0, 0, 0, 0.64),
-       0 0 15px rgba(236, 183, 110, 0.16);
+  .np-hero-title-main,
+  .np-hero-title-sub {
+    text-shadow:
+      -1px -1px 0 rgba(0, 0, 0, 0.88),
+       1px -1px 0 rgba(0, 0, 0, 0.88),
+      -1px  1px 0 rgba(0, 0, 0, 0.90),
+       1px  1px 0 rgba(0, 0, 0, 0.90),
+       0 3px 5px rgba(0, 0, 0, 0.62),
+       0 0 14px rgba(236, 183, 110, 0.16) !important;
   }
 }
 
