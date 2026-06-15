@@ -13751,3 +13751,134 @@ details[open] > *:not(summary) {
   }
 }
 
+/* 68. Startseite: kräftigere HUD-Trennlinie und bessere Abstände */
+
+/*
+  Die vorherige Trennlinie war im großen Gesamtbild zu fein.
+  Diese Version macht sie sichtbarer:
+  - breitere HUD-Leiste
+  - zwei feine Linien statt einer
+  - stärkeres Mittelmodul
+  - mehr Abstand nach dem ECHO-Pathfinder
+*/
+
+/* Mehr Luft zwischen Pathfinder/ECHO und nachfolgenden Bereichen */
+.np-pathfinder-dashboard {
+  margin-bottom: clamp(1.8rem, 2.8vw, 2.7rem) !important;
+}
+
+.np-ecosystem-panel,
+.np-history-panel {
+  margin-top: clamp(1.65rem, 2.4vw, 2.35rem) !important;
+}
+
+/* Sichtbare Separator-Leiste */
+.np-home-section-separator {
+  position: relative !important;
+  display: block !important;
+  width: min(58rem, 68vw) !important;
+  max-width: min(58rem, 68vw) !important;
+  height: 1.15rem !important;
+  margin: clamp(1.7rem, 2.8vw, 2.85rem) auto !important;
+  border: 0 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+}
+
+/* Hauptlinie: kräftiger, heller, im Hintergrund sichtbar */
+.np-home-section-separator::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 50% !important;
+  height: 0.28rem !important;
+  transform: translateY(-50%) !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 230, 246, 0.00) 5%,
+      rgba(0, 230, 246, 0.26) 14%,
+      rgba(0, 230, 246, 0.72) 30%,
+      rgba(236, 183, 110, 0.60) 50%,
+      rgba(0, 230, 246, 0.72) 70%,
+      rgba(0, 230, 246, 0.26) 86%,
+      rgba(0, 230, 246, 0.00) 95%,
+      transparent 100%
+    ) !important;
+  -webkit-mask-image:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 34%,
+      #000 66%,
+      transparent 100%
+    ) !important;
+  mask-image:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 34%,
+      #000 66%,
+      transparent 100%
+    ) !important;
+  box-shadow:
+    0 0 0.85rem rgba(0, 230, 246, 0.48),
+    0 0 1.65rem rgba(0, 230, 246, 0.24),
+    0 0 2.1rem rgba(236, 183, 110, 0.16) !important;
+}
+
+/* Mittelmodul: stärker und klarer */
+.np-home-section-separator::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 4.1rem !important;
+  height: 1.15rem !important;
+  transform: translate(-50%, -50%) !important;
+  pointer-events: none !important;
+  background:
+    radial-gradient(circle at 50% 50%, #ffffff 0 0.13rem, #20f4ff 0.14rem 0.26rem, rgba(0, 230, 246, 0.38) 0.27rem 0.42rem, transparent 0.43rem),
+    radial-gradient(circle at 32% 50%, rgba(236, 183, 110, 1.0) 0 0.105rem, rgba(236, 183, 110, 0.34) 0.115rem 0.20rem, transparent 0.21rem),
+    radial-gradient(circle at 68% 50%, rgba(236, 183, 110, 1.0) 0 0.105rem, rgba(236, 183, 110, 0.34) 0.115rem 0.20rem, transparent 0.21rem),
+    linear-gradient(90deg, transparent 0%, rgba(0, 230, 246, 0.40) 30%, rgba(236, 183, 110, 0.28) 50%, rgba(0, 230, 246, 0.40) 70%, transparent 100%)
+      center / 4.1rem 1px no-repeat !important;
+  filter:
+    drop-shadow(0 0 0.55rem rgba(0, 230, 246, 0.90))
+    drop-shadow(0 0 1.05rem rgba(0, 230, 246, 0.44))
+    drop-shadow(0 0 0.9rem rgba(236, 183, 110, 0.30)) !important;
+}
+
+/* Zusätzliche obere/untere feine Linie über inset-shadow am Element selbst */
+.np-home-section-separator {
+  box-shadow:
+    inset 0 0.35rem 0 -0.32rem rgba(0, 230, 246, 0.22),
+    inset 0 -0.35rem 0 -0.32rem rgba(236, 183, 110, 0.16) !important;
+}
+
+@media (max-width: 66.499rem) {
+  .np-pathfinder-dashboard {
+    margin-bottom: 1.35rem !important;
+  }
+
+  .np-ecosystem-panel,
+  .np-history-panel {
+    margin-top: 1.25rem !important;
+  }
+
+  .np-home-section-separator {
+    width: min(23rem, 76vw) !important;
+    height: 0.9rem !important;
+    margin-block: 1.25rem !important;
+  }
+
+  .np-home-section-separator::after {
+    width: 3rem !important;
+    height: 0.9rem !important;
+  }
+}
+
