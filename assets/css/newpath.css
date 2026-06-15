@@ -13583,3 +13583,158 @@ details[open] > *:not(summary) {
   }
 }
 
+/* 70. Startseite: Eckmarker korrekt platzieren */
+
+/*
+  Fix:
+  Die Eckmarker sollen nicht auf der kleinen Hero-Beschreibung/Textbox sitzen,
+  sondern auf den großen Startseiten-Modulen:
+  - ECHO-Kompass
+  - NewPath Ecosystem
+  - Entstehungsgeschichte
+*/
+
+/* Hero-Beschreibung/Textbox explizit ohne Eckmarker */
+.np-hero-highlight::before,
+.np-hero-highlight::after,
+.np-home-hero-card::before,
+.np-home-hero-card::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Statusleiste ebenfalls ohne Eckmarker */
+.np-status-strip::before,
+.np-status-strip::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Große Zielbereiche vorbereiten */
+.np-echo-kompass,
+.np-home-echo,
+.np-ecosystem,
+.np-history-section {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Innere History-Elemente bekommen keine eigenen Eckmarker */
+.np-history-card::before,
+.np-history-card::after,
+.np-history-timeline::before,
+.np-history-timeline::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Cyan oben links */
+.np-echo-kompass::before,
+.np-home-echo::before,
+.np-ecosystem::before,
+.np-history-section::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0.72rem !important;
+  left: 0.72rem !important;
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  pointer-events: none !important;
+  border-top: 1px solid rgba(0, 230, 246, 0.54) !important;
+  border-left: 1px solid rgba(0, 230, 246, 0.54) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 0.36rem 0 0 0 !important;
+  opacity: 0.82 !important;
+  z-index: 4 !important;
+}
+
+/* Gold unten rechts */
+.np-echo-kompass::after,
+.np-home-echo::after,
+.np-ecosystem::after,
+.np-history-section::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  right: 0.72rem !important;
+  bottom: 0.72rem !important;
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  pointer-events: none !important;
+  border-right: 1px solid rgba(236, 183, 110, 0.48) !important;
+  border-bottom: 1px solid rgba(236, 183, 110, 0.48) !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 0 0.36rem 0 !important;
+  opacity: 0.72 !important;
+  z-index: 4 !important;
+}
+
+/* Mobile kleiner halten */
+@media (max-width: 66.499rem) {
+  .np-echo-kompass::before,
+  .np-home-echo::before,
+  .np-ecosystem::before,
+  .np-history-section::before,
+  .np-echo-kompass::after,
+  .np-home-echo::after,
+  .np-ecosystem::after,
+  .np-history-section::after {
+    width: 1.55rem !important;
+    height: 1.55rem !important;
+  }
+
+  .np-echo-kompass::before,
+  .np-home-echo::before,
+  .np-ecosystem::before,
+  .np-history-section::before {
+    top: 0.55rem !important;
+    left: 0.55rem !important;
+  }
+
+  .np-echo-kompass::after,
+  .np-home-echo::after,
+  .np-ecosystem::after,
+  .np-history-section::after {
+    right: 0.55rem !important;
+    bottom: 0.55rem !important;
+  }
+}
+
+/* 71. Startseite: Statusleisten-Hover deaktivieren */
+
+/*
+  Die Statusleiste ist Information, keine interaktive Karte.
+  Deshalb entfernen wir Hover-Bewegung, Glow und Shimmer wieder.
+*/
+
+.np-status-strip,
+.np-status-item {
+  transform: none !important;
+  filter: none !important;
+}
+
+.np-status-item,
+.np-status-item:hover,
+.np-status-strip:hover .np-status-item {
+  transform: none !important;
+  filter: none !important;
+  border-color: rgba(72, 122, 146, 0.30) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
+}
+
+.np-status-item::before,
+.np-status-item::after {
+  content: none !important;
+  display: none !important;
+  animation: none !important;
+}
+
+.np-status-item:hover strong,
+.np-status-item:hover small {
+  text-shadow: inherit !important;
+}
+
