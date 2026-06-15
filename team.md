@@ -5,7 +5,7 @@ permalink: /team.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 13.06.2026 17:24 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 15.06.2026 16:42 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-team">
