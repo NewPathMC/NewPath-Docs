@@ -92,9 +92,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const activeItem = activeImages[activeIndex];
     const src = activeItem.dataset.galleryImage;
 
-    viewerImage.src = src;
-    viewerImage.alt = "NewPath Galerie Bild";
-    viewerCounter.textContent = `${activeIndex + 1} / ${activeImages.length}`;
+    viewerImage.classList.add("is-switching");
+
+    window.setTimeout(() => {
+      viewerImage.src = src;
+      viewerImage.alt = "NewPath Galerie Bild";
+      viewerCounter.textContent = `${activeIndex + 1} / ${activeImages.length}`;
+
+      window.setTimeout(() => {
+        viewerImage.classList.remove("is-switching");
+      }, 80);
+    }, 90);
   };
 
   const showPrevious = () => {

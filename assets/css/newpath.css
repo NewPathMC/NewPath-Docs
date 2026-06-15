@@ -12645,13 +12645,13 @@ body.np-gallery-viewer-open {
 /* 65. Effekt-Paket 1C: echte NewPath-Titelklassen */
 
 /*
-  Korrigierte Variante:
-  Paket 1/1B war zu allgemein und hat den echten Hero-Titel nicht direkt getroffen.
-  Diese Version zielt gezielt auf die aktuelle NewPath-Struktur:
-  .np-hero-title-main / .np-hero-title-sub und die wichtigsten Seiten-/Box-Titel.
+  Typografie-Feinschliff:
+  - dunklere Kontur für große Goldtitel
+  - warmer Goldschein für wichtige Headlines
+  - klarere Cyan-Labels
+  - Fließtext bleibt bewusst ruhig
 */
 
-/* Hero-Titel Startseite */
 .np-hero-title-main,
 .np-hero-title-sub {
   text-shadow:
@@ -12665,7 +12665,6 @@ body.np-gallery-viewer-open {
      0 0 36px rgba(236, 183, 110, 0.12) !important;
 }
 
-/* Untertitel minimal schwächer, damit er nicht matschig wirkt */
 .np-hero-title-sub {
   text-shadow:
     -1.2px -1.2px 0 rgba(0, 0, 0, 0.92),
@@ -12676,7 +12675,6 @@ body.np-gallery-viewer-open {
      0 0 15px rgba(236, 183, 110, 0.22) !important;
 }
 
-/* Große Unterseiten-ECHO-Titel */
 .echo-page-content h2,
 .echo-page-box h2,
 .np-page-section h1,
@@ -12693,7 +12691,6 @@ body.np-gallery-viewer-open {
      0 0 15px rgba(236, 183, 110, 0.16) !important;
 }
 
-/* Startseiten-Box-Titel */
 .np-echo-copy h2,
 .np-ecosystem h2,
 .np-history-card h2,
@@ -12705,7 +12702,6 @@ body.np-gallery-viewer-open {
      0 0 14px rgba(236, 183, 110, 0.14) !important;
 }
 
-/* Kartenüberschriften etwas knackiger */
 .np-echo-card strong,
 .np-ecosystem-card strong,
 .np-gallery-category-card strong,
@@ -12722,7 +12718,6 @@ body.np-gallery-viewer-open {
      0 0 10px rgba(236, 183, 110, 0.10) !important;
 }
 
-/* Cyan-Labels sichtbarer, aber nicht übertrieben */
 .echo-page-kicker,
 .np-section-kicker,
 .np-echo-kicker,
@@ -12742,7 +12737,6 @@ body.np-gallery-viewer-open {
     0 0 16px rgba(0, 230, 246, 0.18) !important;
 }
 
-/* Aktive Navigation bewusst sichtbarer */
 .np-topbar-nav a.is-active,
 .main-header a.is-active,
 .np-mobile-menu a.is-active {
@@ -12753,7 +12747,6 @@ body.np-gallery-viewer-open {
     0 0 30px rgba(0, 230, 246, 0.12) !important;
 }
 
-/* Fließtext ausdrücklich ruhig lassen */
 .main-content p,
 .main-content li,
 .main-content small,
@@ -12767,7 +12760,6 @@ body.np-gallery-viewer-open {
   text-shadow: none !important;
 }
 
-/* Mobile etwas reduzieren */
 @media (max-width: 66.499rem) {
   .np-hero-title-main,
   .np-hero-title-sub {
@@ -12778,6 +12770,439 @@ body.np-gallery-viewer-open {
        1px  1px 0 rgba(0, 0, 0, 0.90),
        0 3px 5px rgba(0, 0, 0, 0.62),
        0 0 14px rgba(236, 183, 110, 0.16) !important;
+  }
+}
+
+
+/* 66. Effekt-Paket 2: Premium-Hover für interaktive Elemente */
+
+/*
+  Sichtbarer Effekt-Layer:
+  - Karten heben sich beim Hover klarer ab
+  - Cyan-Rand + dezenter Innen-Glow
+  - Buttons bekommen einen Lichtstreifen beim Hover
+  - bewusst keine Layout-Umbauten
+*/
+
+.np-echo-card,
+.np-ecosystem-card,
+.np-gallery-category-card,
+.np-team-card,
+.np-streamer-asset-card,
+.np-help-card,
+.np-gallery-item {
+  position: relative !important;
+  isolation: isolate !important;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease !important;
+}
+
+.np-echo-card::before,
+.np-ecosystem-card::before,
+.np-gallery-category-card::before,
+.np-team-card::before,
+.np-streamer-asset-card::before,
+.np-help-card::before,
+.np-gallery-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(0, 230, 246, 0.16), transparent 58%),
+    linear-gradient(135deg, rgba(236, 183, 110, 0.09), transparent 44%);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.np-echo-card:hover,
+.np-ecosystem-card:hover,
+.np-gallery-category-card:hover,
+.np-team-card:hover,
+.np-streamer-asset-card:hover,
+.np-help-card:hover,
+.np-gallery-item:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(0, 230, 246, 0.58) !important;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.36),
+    0 0 20px rgba(0, 230, 246, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.075) !important;
+}
+
+.np-echo-card:hover::before,
+.np-ecosystem-card:hover::before,
+.np-gallery-category-card:hover::before,
+.np-team-card:hover::before,
+.np-streamer-asset-card:hover::before,
+.np-help-card:hover::before,
+.np-gallery-item:hover::before {
+  opacity: 1;
+}
+
+.np-accordion,
+.np-faq,
+.np-help-accordion,
+details[class*="np-"] {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease !important;
+}
+
+.np-accordion:hover,
+.np-faq:hover,
+.np-help-accordion:hover,
+details[class*="np-"]:hover {
+  border-color: rgba(0, 230, 246, 0.46) !important;
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.24),
+    0 0 16px rgba(0, 230, 246, 0.08) !important;
+}
+
+.np-hero-button,
+.np-server-copy,
+.np-copy-button,
+.np-discord-button,
+.np-ecosystem-card a,
+.np-streamer-download,
+.np-echo-card a,
+.np-help-card a,
+a.np-button,
+button.np-button {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.np-hero-button::after,
+.np-server-copy::after,
+.np-copy-button::after,
+.np-discord-button::after,
+.np-ecosystem-card a::after,
+.np-streamer-download::after,
+.np-echo-card a::after,
+.np-help-card a::after,
+a.np-button::after,
+button.np-button::after {
+  content: "";
+  position: absolute;
+  top: -45%;
+  left: -60%;
+  width: 42%;
+  height: 190%;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.26),
+      rgba(0, 230, 246, 0.24),
+      transparent
+    );
+  transform: skewX(-22deg);
+  opacity: 0;
+}
+
+.np-hero-button:hover::after,
+.np-server-copy:hover::after,
+.np-copy-button:hover::after,
+.np-discord-button:hover::after,
+.np-ecosystem-card a:hover::after,
+.np-streamer-download:hover::after,
+.np-echo-card a:hover::after,
+.np-help-card a:hover::after,
+a.np-button:hover::after,
+button.np-button:hover::after {
+  animation: np-button-shimmer 0.72s ease forwards;
+}
+
+@keyframes np-button-shimmer {
+  0% {
+    left: -60%;
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 122%;
+    opacity: 0;
+  }
+}
+
+.np-gallery-category-card.is-active {
+  border-color: rgba(236, 183, 110, 0.66) !important;
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.30),
+    0 0 18px rgba(236, 183, 110, 0.10),
+    0 0 18px rgba(0, 230, 246, 0.08) !important;
+}
+
+/* 67. Effekt-Paket 3: Galerie, ECHO-Scanline und Box-Eckmarker */
+
+/*
+  Ziel:
+  - Galerie-Thumbnails zeigen klar: klickbar / ansehen
+  - Viewer bekommt mehr Premium-Gefühl
+  - ECHO-Boxen bekommen einen subtilen Scanline-Effekt
+  - Große Boxen bekommen dezente NewPath-Eckmarker
+*/
+
+.echo-page-box,
+.np-page-section,
+.np-echo-kompass,
+.np-ecosystem,
+.np-history-section,
+.np-gallery-page {
+  position: relative;
+}
+
+.echo-page-box::before,
+.np-page-section::before,
+.np-echo-kompass::before,
+.np-ecosystem::before,
+.np-history-section::before,
+.np-gallery-page::before {
+  content: "";
+  position: absolute;
+  top: 0.72rem;
+  left: 0.72rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  pointer-events: none;
+  border-top: 1px solid rgba(0, 230, 246, 0.45);
+  border-left: 1px solid rgba(0, 230, 246, 0.45);
+  border-radius: 0.34rem 0 0 0;
+  opacity: 0.72;
+}
+
+.echo-page-box::after,
+.np-page-section::after,
+.np-echo-kompass::after,
+.np-ecosystem::after,
+.np-history-section::after,
+.np-gallery-page::after {
+  content: "";
+  position: absolute;
+  right: 0.72rem;
+  bottom: 0.72rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  pointer-events: none;
+  border-right: 1px solid rgba(236, 183, 110, 0.38);
+  border-bottom: 1px solid rgba(236, 183, 110, 0.38);
+  border-radius: 0 0 0.34rem 0;
+  opacity: 0.62;
+}
+
+.echo-page-box .echo-page-image,
+.np-echo-kompass .np-echo-visual,
+.np-echo-visual,
+.echo-page-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.echo-page-box .echo-page-image::after,
+.np-echo-kompass .np-echo-visual::after,
+.np-echo-visual::after,
+.echo-page-image::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: -30%;
+  height: 34%;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(0, 230, 246, 0.10),
+      rgba(0, 230, 246, 0.035),
+      transparent
+    );
+  opacity: 0.46;
+  transform: translateY(-120%);
+  animation: np-echo-scanline 7.5s ease-in-out infinite;
+}
+
+@keyframes np-echo-scanline {
+  0%, 62% {
+    transform: translateY(-130%);
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0.42;
+  }
+
+  86% {
+    opacity: 0.22;
+  }
+
+  100% {
+    transform: translateY(430%);
+    opacity: 0;
+  }
+}
+
+.np-gallery-item {
+  position: relative !important;
+}
+
+.np-gallery-item::after {
+  content: "ANSEHEN";
+  position: absolute;
+  top: 0.58rem;
+  right: 0.58rem;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.55rem;
+  padding: 0.24rem 0.5rem;
+  border: 1px solid rgba(0, 230, 246, 0.45);
+  border-radius: 999px;
+  color: #20f4ff;
+  background:
+    linear-gradient(180deg, rgba(0, 13, 24, 0.88), rgba(0, 8, 14, 0.94));
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.32),
+    0 0 14px rgba(0, 230, 246, 0.12);
+  font-family: var(--np-font-label);
+  font-size: 0.58rem;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+  opacity: 0;
+  transform: translateY(-0.25rem);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.np-gallery-item:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.np-gallery-item img {
+  transition:
+    transform 0.24s ease,
+    filter 0.24s ease !important;
+}
+
+.np-gallery-item:hover img {
+  transform: scale(1.055) !important;
+  filter: saturate(1.10) contrast(1.08) brightness(1.02) !important;
+}
+
+.np-gallery-viewer {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0, 230, 246, 0.08), transparent 36rem),
+    radial-gradient(circle at 50% 18%, rgba(236, 183, 110, 0.055), transparent 34rem),
+    rgba(0, 5, 9, 0.90) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+}
+
+.np-gallery-viewer-image {
+  border-color: rgba(0, 230, 246, 0.36) !important;
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.66),
+    0 0 32px rgba(0, 230, 246, 0.12),
+    0 0 18px rgba(236, 183, 110, 0.06) !important;
+  opacity: 1;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease,
+    filter 0.16s ease !important;
+}
+
+.np-gallery-viewer-image.is-switching {
+  opacity: 0.18;
+  transform: scale(0.985);
+  filter: blur(1px);
+}
+
+.np-gallery-viewer-counter {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.7rem;
+  padding: 0.25rem 0.72rem;
+  border: 1px solid rgba(0, 230, 246, 0.22);
+  border-radius: 999px;
+  background: rgba(0, 13, 24, 0.72);
+  box-shadow: 0 0 14px rgba(0, 230, 246, 0.08);
+}
+
+.np-gallery-viewer-arrow,
+.np-gallery-viewer-close {
+  border-color: rgba(0, 230, 246, 0.44) !important;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.42),
+    0 0 18px rgba(0, 230, 246, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
+}
+
+.np-gallery-viewer-arrow:hover,
+.np-gallery-viewer-close:hover {
+  border-color: rgba(0, 230, 246, 0.72) !important;
+  box-shadow:
+    0 20px 42px rgba(0, 0, 0, 0.46),
+    0 0 24px rgba(0, 230, 246, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .echo-page-box .echo-page-image::after,
+  .np-echo-kompass .np-echo-visual::after,
+  .np-echo-visual::after,
+  .echo-page-image::after {
+    animation: none !important;
+  }
+
+  .np-hero-button:hover::after,
+  .np-server-copy:hover::after,
+  .np-copy-button:hover::after,
+  .np-discord-button:hover::after,
+  .np-ecosystem-card a:hover::after,
+  .np-streamer-download:hover::after,
+  .np-echo-card a:hover::after,
+  .np-help-card a:hover::after {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-gallery-item::after {
+    opacity: 1;
+    transform: none;
+    font-size: 0.52rem;
+  }
+
+  .echo-page-box::before,
+  .np-page-section::before,
+  .np-echo-kompass::before,
+  .np-ecosystem::before,
+  .np-history-section::before,
+  .np-gallery-page::before,
+  .echo-page-box::after,
+  .np-page-section::after,
+  .np-echo-kompass::after,
+  .np-ecosystem::after,
+  .np-history-section::after,
+  .np-gallery-page::after {
+    width: 1.55rem;
+    height: 1.55rem;
   }
 }
 
