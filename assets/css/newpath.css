@@ -12642,37 +12642,32 @@ body.np-gallery-viewer-open {
   }
 }
 
-/* 65. Effekt-Paket 1C: echte NewPath-Titelklassen */
+/* 65. Effekt-Layer konsolidiert: Startseite, Hover, Galerie, ECHO, Akkordeons */
 
 /*
-  Typografie-Feinschliff:
-  - dunklere Kontur für große Goldtitel
-  - warmer Goldschein für wichtige Headlines
-  - klarere Cyan-Labels
-  - Fließtext bleibt bewusst ruhig
+  Konsolidierter Effekt-Layer.
+  Ersetzt die vorherigen Testblöcke 65–71.
+
+  Fixes:
+  - keine Deko mehr auf Hero-Beschreibung oder Statusleiste
+  - Eckmarker gezielt auf echte Startseiten-Panels:
+    .np-pathfinder-dashboard, .np-ecosystem-panel, .np-history-panel
+  - Statusleiste bleibt statisch ohne Hover
+  - Hover nur auf klar interaktiven Karten/Buttons
+  - Akkordeon-Animation bleibt erhalten
+  - Galerie-Hover/Viewer bleibt erhalten
 */
+
+/* ------------------------------------------------------------
+   65.1 Typografie: dezenter Titel-Glow
+------------------------------------------------------------ */
 
 .np-hero-title-main,
 .np-hero-title-sub {
-  text-shadow:
-    -1.5px -1.5px 0 rgba(0, 0, 0, 0.96),
-     1.5px -1.5px 0 rgba(0, 0, 0, 0.96),
-    -1.5px  1.5px 0 rgba(0, 0, 0, 0.98),
-     1.5px  1.5px 0 rgba(0, 0, 0, 0.98),
-     0 3px 0 rgba(0, 0, 0, 0.78),
-     0 7px 10px rgba(0, 0, 0, 0.68),
-     0 0 18px rgba(236, 183, 110, 0.30),
-     0 0 36px rgba(236, 183, 110, 0.12) !important;
-}
-
-.np-hero-title-sub {
-  text-shadow:
-    -1.2px -1.2px 0 rgba(0, 0, 0, 0.92),
-     1.2px -1.2px 0 rgba(0, 0, 0, 0.92),
-    -1.2px  1.2px 0 rgba(0, 0, 0, 0.94),
-     1.2px  1.2px 0 rgba(0, 0, 0, 0.94),
-     0 3px 6px rgba(0, 0, 0, 0.66),
-     0 0 15px rgba(236, 183, 110, 0.22) !important;
+  filter:
+    drop-shadow(0 3px 0 rgba(0, 0, 0, 0.86))
+    drop-shadow(0 6px 7px rgba(0, 0, 0, 0.58))
+    drop-shadow(0 0 14px rgba(236, 183, 110, 0.22)) !important;
 }
 
 .echo-page-content h2,
@@ -12681,41 +12676,16 @@ body.np-gallery-viewer-open {
 .np-page-section h2,
 .np-section-header h1,
 .np-section-header h2,
-.np-title {
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.82),
-     1px -1px 0 rgba(0, 0, 0, 0.82),
-    -1px  1px 0 rgba(0, 0, 0, 0.86),
-     1px  1px 0 rgba(0, 0, 0, 0.86),
-     0 3px 5px rgba(0, 0, 0, 0.62),
-     0 0 15px rgba(236, 183, 110, 0.16) !important;
-}
-
+.np-title,
 .np-echo-copy h2,
 .np-ecosystem h2,
 .np-history-card h2,
-.np-gallery-category-heading h2 {
+.np-gallery-category-heading h2,
+.np-home-section-title {
   text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.80),
-     1px  1px 0 rgba(0, 0, 0, 0.80),
-     0 3px 5px rgba(0, 0, 0, 0.58),
-     0 0 14px rgba(236, 183, 110, 0.14) !important;
-}
-
-.np-echo-card strong,
-.np-ecosystem-card strong,
-.np-gallery-category-card strong,
-.np-status-item strong,
-.np-team-card h3,
-.np-streamer-asset-card h3,
-.np-help-card strong,
-.np-accordion summary,
-.np-faq summary {
-  text-shadow:
-    -1px -1px 0 rgba(0, 0, 0, 0.66),
-     1px  1px 0 rgba(0, 0, 0, 0.66),
-     0 2px 3px rgba(0, 0, 0, 0.48),
-     0 0 10px rgba(236, 183, 110, 0.10) !important;
+    0 2px 0 rgba(0, 0, 0, 0.72),
+    0 4px 7px rgba(0, 0, 0, 0.48),
+    0 0 13px rgba(236, 183, 110, 0.13) !important;
 }
 
 .echo-page-kicker,
@@ -12726,27 +12696,17 @@ body.np-gallery-viewer-open {
 .np-card-kicker,
 .np-home-kicker,
 .np-timeline-kicker,
-.np-status-item small,
 .np-rule-kicker,
 .np-help-kicker,
 .np-streamer-kicker,
 .np-team-kicker {
   color: #20f4ff !important;
   text-shadow:
-    0 0 7px rgba(0, 230, 246, 0.42),
-    0 0 16px rgba(0, 230, 246, 0.18) !important;
+    0 0 7px rgba(0, 230, 246, 0.34),
+    0 0 15px rgba(0, 230, 246, 0.12) !important;
 }
 
-.np-topbar-nav a.is-active,
-.main-header a.is-active,
-.np-mobile-menu a.is-active {
-  color: #20f4ff !important;
-  text-shadow:
-    0 0 8px rgba(0, 230, 246, 0.58),
-    0 0 18px rgba(0, 230, 246, 0.26),
-    0 0 30px rgba(0, 230, 246, 0.12) !important;
-}
-
+/* Fließtext bewusst ruhig lassen */
 .main-content p,
 .main-content li,
 .main-content small,
@@ -12760,118 +12720,153 @@ body.np-gallery-viewer-open {
   text-shadow: none !important;
 }
 
-@media (max-width: 66.499rem) {
-  .np-hero-title-main,
-  .np-hero-title-sub {
-    text-shadow:
-      -1px -1px 0 rgba(0, 0, 0, 0.88),
-       1px -1px 0 rgba(0, 0, 0, 0.88),
-      -1px  1px 0 rgba(0, 0, 0, 0.90),
-       1px  1px 0 rgba(0, 0, 0, 0.90),
-       0 3px 5px rgba(0, 0, 0, 0.62),
-       0 0 14px rgba(236, 183, 110, 0.16) !important;
-  }
+/* ------------------------------------------------------------
+   65.2 Eckmarker: nur echte große Panels, nicht Hero/Status
+------------------------------------------------------------ */
+
+/* Explizit keine Deko auf Hero-Beschreibung, Hero-Card oder Statusleiste */
+.np-hero-highlight::before,
+.np-hero-highlight::after,
+.np-home-hero-card::before,
+.np-home-hero-card::after,
+.np-status-bar::before,
+.np-status-bar::after,
+.np-status-strip::before,
+.np-status-strip::after,
+.np-status-item::before,
+.np-status-item::after {
+  content: none !important;
+  display: none !important;
 }
 
+/* Echte Startseiten-Panels */
+.np-pathfinder-dashboard,
+.np-ecosystem-panel,
+.np-history-panel,
+.echo-page-box,
+.np-gallery-page {
+  position: relative !important;
+  overflow: hidden !important;
+}
 
-/* 66. Effekt-Paket 2: Premium-Hover für interaktive Elemente */
+/* Cyan-Ecke oben links */
+.np-pathfinder-dashboard::before,
+.np-ecosystem-panel::before,
+.np-history-panel::before,
+.echo-page-box::before,
+.np-gallery-page::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 0.72rem !important;
+  left: 0.72rem !important;
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  pointer-events: none !important;
+  border-top: 1px solid rgba(0, 230, 246, 0.54) !important;
+  border-left: 1px solid rgba(0, 230, 246, 0.54) !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-radius: 0.36rem 0 0 0 !important;
+  opacity: 0.78 !important;
+  z-index: 4 !important;
+}
 
-/*
-  Sichtbarer Effekt-Layer:
-  - Karten heben sich beim Hover klarer ab
-  - Cyan-Rand + dezenter Innen-Glow
-  - Buttons bekommen einen Lichtstreifen beim Hover
-  - bewusst keine Layout-Umbauten
-*/
+/* Gold-Ecke unten rechts */
+.np-pathfinder-dashboard::after,
+.np-ecosystem-panel::after,
+.np-history-panel::after,
+.echo-page-box::after,
+.np-gallery-page::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  right: 0.72rem !important;
+  bottom: 0.72rem !important;
+  width: 2.35rem !important;
+  height: 2.35rem !important;
+  pointer-events: none !important;
+  border-right: 1px solid rgba(236, 183, 110, 0.46) !important;
+  border-bottom: 1px solid rgba(236, 183, 110, 0.46) !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 0 0.36rem 0 !important;
+  opacity: 0.68 !important;
+  z-index: 4 !important;
+}
 
-.np-echo-card,
+/* Innere History-Elemente ausdrücklich ohne eigene Eckmarker */
+.np-history-card::before,
+.np-history-card::after,
+.np-history-timeline::before,
+.np-history-timeline::after,
+.np-history-tabs::before,
+.np-history-tabs::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   65.3 Hover: nur interaktive Karten/Buttons
+------------------------------------------------------------ */
+
+.np-route-card,
 .np-ecosystem-card,
 .np-gallery-category-card,
+.np-gallery-item,
 .np-team-card,
 .np-streamer-asset-card,
-.np-help-card,
-.np-gallery-item {
+.np-help-card {
   position: relative !important;
   isolation: isolate !important;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease,
-    background 0.2s ease !important;
+    background 0.2s ease,
+    filter 0.2s ease !important;
 }
 
-.np-echo-card::before,
-.np-ecosystem-card::before,
-.np-gallery-category-card::before,
-.np-team-card::before,
-.np-streamer-asset-card::before,
-.np-help-card::before,
-.np-gallery-item::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: inherit;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(0, 230, 246, 0.16), transparent 58%),
-    linear-gradient(135deg, rgba(236, 183, 110, 0.09), transparent 44%);
-  opacity: 0;
-  transition: opacity 0.22s ease;
-}
-
-.np-echo-card:hover,
+.np-route-card:hover,
 .np-ecosystem-card:hover,
 .np-gallery-category-card:hover,
+.np-gallery-item:hover,
 .np-team-card:hover,
 .np-streamer-asset-card:hover,
-.np-help-card:hover,
-.np-gallery-item:hover {
+.np-help-card:hover {
   transform: translateY(-3px) !important;
-  border-color: rgba(0, 230, 246, 0.58) !important;
+  border-color: rgba(0, 230, 246, 0.60) !important;
   box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.36),
-    0 0 20px rgba(0, 230, 246, 0.13),
+    0 18px 36px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(0, 230, 246, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.075) !important;
+  filter: brightness(1.045);
 }
 
-.np-echo-card:hover::before,
-.np-ecosystem-card:hover::before,
-.np-gallery-category-card:hover::before,
-.np-team-card:hover::before,
-.np-streamer-asset-card:hover::before,
-.np-help-card:hover::before,
-.np-gallery-item:hover::before {
-  opacity: 1;
+/* Statusleiste ist Info, nicht interaktiv */
+.np-status-bar,
+.np-status-item,
+.np-status-item:hover {
+  transform: none !important;
+  filter: none !important;
 }
 
-.np-accordion,
-.np-faq,
-.np-help-accordion,
-details[class*="np-"] {
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease !important;
-}
-
-.np-accordion:hover,
-.np-faq:hover,
-.np-help-accordion:hover,
-details[class*="np-"]:hover {
-  border-color: rgba(0, 230, 246, 0.46) !important;
+.np-status-item:hover {
+  border-color: rgba(72, 122, 146, 0.30) !important;
   box-shadow:
-    0 12px 26px rgba(0, 0, 0, 0.24),
-    0 0 16px rgba(0, 230, 246, 0.08) !important;
+    inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
 }
 
-.np-hero-button,
+/* Button-Shimmer */
+.np-server-copy-hero-button,
+.np-hero-secondary-button,
 .np-server-copy,
-.np-copy-button,
+.np-hero-button,
+.np-hero-button-secondary,
 .np-discord-button,
+.np-route-link,
 .np-ecosystem-card a,
 .np-streamer-download,
-.np-echo-card a,
 .np-help-card a,
 a.np-button,
 button.np-button {
@@ -12879,51 +12874,55 @@ button.np-button {
   overflow: hidden !important;
 }
 
-.np-hero-button::after,
+.np-server-copy-hero-button::after,
+.np-hero-secondary-button::after,
 .np-server-copy::after,
-.np-copy-button::after,
+.np-hero-button::after,
+.np-hero-button-secondary::after,
 .np-discord-button::after,
+.np-route-link::after,
 .np-ecosystem-card a::after,
 .np-streamer-download::after,
-.np-echo-card a::after,
 .np-help-card a::after,
 a.np-button::after,
 button.np-button::after {
   content: "";
   position: absolute;
-  top: -45%;
-  left: -60%;
-  width: 42%;
-  height: 190%;
+  top: -55%;
+  left: -65%;
+  width: 46%;
+  height: 210%;
   pointer-events: none;
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.26),
-      rgba(0, 230, 246, 0.24),
+      rgba(255, 255, 255, 0.30),
+      rgba(0, 230, 246, 0.26),
       transparent
     );
   transform: skewX(-22deg);
   opacity: 0;
 }
 
-.np-hero-button:hover::after,
+.np-server-copy-hero-button:hover::after,
+.np-hero-secondary-button:hover::after,
 .np-server-copy:hover::after,
-.np-copy-button:hover::after,
+.np-hero-button:hover::after,
+.np-hero-button-secondary:hover::after,
 .np-discord-button:hover::after,
+.np-route-link:hover::after,
 .np-ecosystem-card a:hover::after,
 .np-streamer-download:hover::after,
-.np-echo-card a:hover::after,
 .np-help-card a:hover::after,
 a.np-button:hover::after,
 button.np-button:hover::after {
-  animation: np-button-shimmer 0.72s ease forwards;
+  animation: np-button-shimmer 0.75s ease forwards;
 }
 
 @keyframes np-button-shimmer {
   0% {
-    left: -60%;
+    left: -65%;
     opacity: 0;
   }
 
@@ -12932,10 +12931,72 @@ button.np-button:hover::after {
   }
 
   100% {
-    left: 122%;
+    left: 125%;
     opacity: 0;
   }
 }
+
+/* ------------------------------------------------------------
+   65.4 ECHO-Scanline
+------------------------------------------------------------ */
+
+.echo-page-image,
+.np-pathfinder-image,
+.np-echo-visual,
+.np-echo-robot,
+.np-home-echo-image {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.echo-page-image::after,
+.np-pathfinder-image::after,
+.np-echo-visual::after,
+.np-echo-robot::after,
+.np-home-echo-image::after {
+  content: "";
+  position: absolute;
+  left: -14%;
+  right: -14%;
+  top: -34%;
+  height: 38%;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(0, 230, 246, 0.15),
+      rgba(0, 230, 246, 0.055),
+      transparent
+    );
+  opacity: 0;
+  transform: translateY(-140%);
+  animation: np-echo-scanline 7.2s ease-in-out infinite;
+}
+
+@keyframes np-echo-scanline {
+  0%, 58% {
+    transform: translateY(-140%);
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0.52;
+  }
+
+  82% {
+    opacity: 0.30;
+  }
+
+  100% {
+    transform: translateY(430%);
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------------------------
+   65.5 Galerie-Polish
+------------------------------------------------------------ */
 
 .np-gallery-category-card.is-active {
   border-color: rgba(236, 183, 110, 0.66) !important;
@@ -12943,115 +13004,6 @@ button.np-button:hover::after {
     0 16px 32px rgba(0, 0, 0, 0.30),
     0 0 18px rgba(236, 183, 110, 0.10),
     0 0 18px rgba(0, 230, 246, 0.08) !important;
-}
-
-/* 67. Effekt-Paket 3: Galerie, ECHO-Scanline und Box-Eckmarker */
-
-/*
-  Ziel:
-  - Galerie-Thumbnails zeigen klar: klickbar / ansehen
-  - Viewer bekommt mehr Premium-Gefühl
-  - ECHO-Boxen bekommen einen subtilen Scanline-Effekt
-  - Große Boxen bekommen dezente NewPath-Eckmarker
-*/
-
-.echo-page-box,
-.np-page-section,
-.np-echo-kompass,
-.np-ecosystem,
-.np-history-section,
-.np-gallery-page {
-  position: relative;
-}
-
-.echo-page-box::before,
-.np-page-section::before,
-.np-echo-kompass::before,
-.np-ecosystem::before,
-.np-history-section::before,
-.np-gallery-page::before {
-  content: "";
-  position: absolute;
-  top: 0.72rem;
-  left: 0.72rem;
-  width: 2.2rem;
-  height: 2.2rem;
-  pointer-events: none;
-  border-top: 1px solid rgba(0, 230, 246, 0.45);
-  border-left: 1px solid rgba(0, 230, 246, 0.45);
-  border-radius: 0.34rem 0 0 0;
-  opacity: 0.72;
-}
-
-.echo-page-box::after,
-.np-page-section::after,
-.np-echo-kompass::after,
-.np-ecosystem::after,
-.np-history-section::after,
-.np-gallery-page::after {
-  content: "";
-  position: absolute;
-  right: 0.72rem;
-  bottom: 0.72rem;
-  width: 2.2rem;
-  height: 2.2rem;
-  pointer-events: none;
-  border-right: 1px solid rgba(236, 183, 110, 0.38);
-  border-bottom: 1px solid rgba(236, 183, 110, 0.38);
-  border-radius: 0 0 0.34rem 0;
-  opacity: 0.62;
-}
-
-.echo-page-box .echo-page-image,
-.np-echo-kompass .np-echo-visual,
-.np-echo-visual,
-.echo-page-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.echo-page-box .echo-page-image::after,
-.np-echo-kompass .np-echo-visual::after,
-.np-echo-visual::after,
-.echo-page-image::after {
-  content: "";
-  position: absolute;
-  left: -10%;
-  right: -10%;
-  top: -30%;
-  height: 34%;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(0, 230, 246, 0.10),
-      rgba(0, 230, 246, 0.035),
-      transparent
-    );
-  opacity: 0.46;
-  transform: translateY(-120%);
-  animation: np-echo-scanline 7.5s ease-in-out infinite;
-}
-
-@keyframes np-echo-scanline {
-  0%, 62% {
-    transform: translateY(-130%);
-    opacity: 0;
-  }
-
-  70% {
-    opacity: 0.42;
-  }
-
-  86% {
-    opacity: 0.22;
-  }
-
-  100% {
-    transform: translateY(430%);
-    opacity: 0;
-  }
 }
 
 .np-gallery-item {
@@ -13093,12 +13045,6 @@ button.np-button:hover::after {
   transform: translateY(0);
 }
 
-.np-gallery-item img {
-  transition:
-    transform 0.24s ease,
-    filter 0.24s ease !important;
-}
-
 .np-gallery-item:hover img {
   transform: scale(1.055) !important;
   filter: saturate(1.10) contrast(1.08) brightness(1.02) !important;
@@ -13119,7 +13065,6 @@ button.np-button:hover::after {
     0 26px 70px rgba(0, 0, 0, 0.66),
     0 0 32px rgba(0, 230, 246, 0.12),
     0 0 18px rgba(236, 183, 110, 0.06) !important;
-  opacity: 1;
   transition:
     opacity 0.16s ease,
     transform 0.16s ease,
@@ -13153,336 +13098,9 @@ button.np-button:hover::after {
     inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
 }
 
-.np-gallery-viewer-arrow:hover,
-.np-gallery-viewer-close:hover {
-  border-color: rgba(0, 230, 246, 0.72) !important;
-  box-shadow:
-    0 20px 42px rgba(0, 0, 0, 0.46),
-    0 0 24px rgba(0, 230, 246, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .echo-page-box .echo-page-image::after,
-  .np-echo-kompass .np-echo-visual::after,
-  .np-echo-visual::after,
-  .echo-page-image::after {
-    animation: none !important;
-  }
-
-  .np-hero-button:hover::after,
-  .np-server-copy:hover::after,
-  .np-copy-button:hover::after,
-  .np-discord-button:hover::after,
-  .np-ecosystem-card a:hover::after,
-  .np-streamer-download:hover::after,
-  .np-echo-card a:hover::after,
-  .np-help-card a:hover::after {
-    animation: none !important;
-  }
-}
-
-@media (max-width: 66.499rem) {
-  .np-gallery-item::after {
-    opacity: 1;
-    transform: none;
-    font-size: 0.52rem;
-  }
-
-  .echo-page-box::before,
-  .np-page-section::before,
-  .np-echo-kompass::before,
-  .np-ecosystem::before,
-  .np-history-section::before,
-  .np-gallery-page::before,
-  .echo-page-box::after,
-  .np-page-section::after,
-  .np-echo-kompass::after,
-  .np-ecosystem::after,
-  .np-history-section::after,
-  .np-gallery-page::after {
-    width: 1.55rem;
-    height: 1.55rem;
-  }
-}
-
-/* 68. Startseiten-Effekt-Fix: Hero, Home-Boxen und sichtbare Premium-Details */
-
-/*
-  Warum dieser Fix:
-  Die Startseite nutzt mehrere eigene Klassen und wird daher nicht immer
-  von generischen Unterseiten-Selektoren getroffen.
-  Dieser Block zielt gezielt auf:
-  - Hero-Titel der Startseite
-  - Hero-Highlight/Textbox
-  - Status-Leiste
-  - ECHO-Kompass
-  - Ecosystem
-  - Entstehungsgeschichte
-  - Startseiten-Buttons
-*/
-
-/* Hero-Titel: deutlich sichtbarer als Paket 1 */
-.np-home-hero .np-hero-title-main,
-.np-home-hero .np-hero-title-sub,
-.np-hero-title .np-hero-title-main,
-.np-hero-title .np-hero-title-sub,
-.np-hero-title-main,
-.np-hero-title-sub {
-  filter:
-    drop-shadow(0 3px 0 rgba(0, 0, 0, 0.92))
-    drop-shadow(0 6px 6px rgba(0, 0, 0, 0.72))
-    drop-shadow(0 0 12px rgba(236, 183, 110, 0.24)) !important;
-  text-shadow:
-    -2px -2px 0 rgba(0, 0, 0, 0.92),
-     2px -2px 0 rgba(0, 0, 0, 0.92),
-    -2px  2px 0 rgba(0, 0, 0, 0.96),
-     2px  2px 0 rgba(0, 0, 0, 0.96),
-     0 4px 0 rgba(0, 0, 0, 0.78),
-     0 8px 12px rgba(0, 0, 0, 0.66),
-     0 0 20px rgba(236, 183, 110, 0.30),
-     0 0 42px rgba(236, 183, 110, 0.13) !important;
-}
-
-/* Große Startseiten-Überschriften ebenfalls sichtbarer */
-.np-home-section-title,
-.np-echo-copy h2,
-.np-ecosystem h2,
-.np-history-card h2,
-.np-home-v2 h2,
-.np-home-v2 .np-section-title,
-.np-home-v2 .np-title {
-  text-shadow:
-    -1.2px -1.2px 0 rgba(0, 0, 0, 0.86),
-     1.2px -1.2px 0 rgba(0, 0, 0, 0.86),
-    -1.2px  1.2px 0 rgba(0, 0, 0, 0.90),
-     1.2px  1.2px 0 rgba(0, 0, 0, 0.90),
-     0 3px 6px rgba(0, 0, 0, 0.64),
-     0 0 18px rgba(236, 183, 110, 0.18) !important;
-}
-
-/* Startseiten-Boxen bekommen die Eckmarker ebenfalls */
-.np-home-hero-card,
-.np-hero-highlight,
-.np-status-strip,
-.np-echo-kompass,
-.np-home-echo,
-.np-ecosystem,
-.np-history-section,
-.np-history-card,
-.np-history-timeline,
-.np-home-panel,
-.np-home-section {
-  position: relative;
-}
-
-.np-home-hero-card::before,
-.np-hero-highlight::before,
-.np-status-strip::before,
-.np-echo-kompass::before,
-.np-home-echo::before,
-.np-ecosystem::before,
-.np-history-section::before,
-.np-history-card::before,
-.np-history-timeline::before,
-.np-home-panel::before,
-.np-home-section::before {
-  content: "";
-  position: absolute;
-  top: 0.72rem;
-  left: 0.72rem;
-  width: 2.15rem;
-  height: 2.15rem;
-  pointer-events: none;
-  border-top: 1px solid rgba(0, 230, 246, 0.48);
-  border-left: 1px solid rgba(0, 230, 246, 0.48);
-  border-radius: 0.34rem 0 0 0;
-  opacity: 0.72;
-  z-index: 2;
-}
-
-.np-home-hero-card::after,
-.np-hero-highlight::after,
-.np-status-strip::after,
-.np-echo-kompass::after,
-.np-home-echo::after,
-.np-ecosystem::after,
-.np-history-section::after,
-.np-history-card::after,
-.np-history-timeline::after,
-.np-home-panel::after,
-.np-home-section::after {
-  content: "";
-  position: absolute;
-  right: 0.72rem;
-  bottom: 0.72rem;
-  width: 2.15rem;
-  height: 2.15rem;
-  pointer-events: none;
-  border-right: 1px solid rgba(236, 183, 110, 0.42);
-  border-bottom: 1px solid rgba(236, 183, 110, 0.42);
-  border-radius: 0 0 0.34rem 0;
-  opacity: 0.64;
-  z-index: 2;
-}
-
-/* Status-Leiste und Home-Karten: Hover/Glow wirklich sichtbar */
-.np-status-item,
-.np-echo-card,
-.np-ecosystem-card,
-.np-history-step,
-.np-history-timeline button,
-.np-history-timeline [role="button"] {
-  position: relative !important;
-  isolation: isolate !important;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease,
-    filter 0.2s ease !important;
-}
-
-.np-status-item:hover,
-.np-echo-card:hover,
-.np-ecosystem-card:hover,
-.np-history-step:hover,
-.np-history-timeline button:hover,
-.np-history-timeline [role="button"]:hover {
-  transform: translateY(-3px) !important;
-  border-color: rgba(0, 230, 246, 0.62) !important;
-  box-shadow:
-    0 18px 36px rgba(0, 0, 0, 0.34),
-    0 0 22px rgba(0, 230, 246, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-  filter: brightness(1.06);
-}
-
-/* Startseiten-Buttons: sichtbarer Shimmer */
-.np-hero-actions a,
-.np-hero-actions button,
-.np-server-copy,
-.np-hero-button,
-.np-hero-button-secondary,
-.np-echo-card a,
-.np-ecosystem-card a {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.np-hero-actions a::after,
-.np-hero-actions button::after,
-.np-server-copy::after,
-.np-hero-button::after,
-.np-hero-button-secondary::after,
-.np-echo-card a::after,
-.np-ecosystem-card a::after {
-  content: "";
-  position: absolute;
-  top: -55%;
-  left: -65%;
-  width: 46%;
-  height: 210%;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.34),
-      rgba(0, 230, 246, 0.30),
-      transparent
-    );
-  transform: skewX(-22deg);
-  opacity: 0;
-}
-
-.np-hero-actions a:hover::after,
-.np-hero-actions button:hover::after,
-.np-server-copy:hover::after,
-.np-hero-button:hover::after,
-.np-hero-button-secondary:hover::after,
-.np-echo-card a:hover::after,
-.np-ecosystem-card a:hover::after {
-  animation: np-button-shimmer-strong 0.75s ease forwards;
-}
-
-@keyframes np-button-shimmer-strong {
-  0% {
-    left: -65%;
-    opacity: 0;
-  }
-
-  18% {
-    opacity: 1;
-  }
-
-  100% {
-    left: 125%;
-    opacity: 0;
-  }
-}
-
-/* ECHO-Scanline gezielt auf Startseite sichtbar machen */
-.np-echo-visual,
-.np-echo-robot,
-.np-home-echo-image,
-.np-echo-kompass .np-echo-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.np-echo-visual::after,
-.np-echo-robot::after,
-.np-home-echo-image::after,
-.np-echo-kompass .np-echo-image::after {
-  content: "";
-  position: absolute;
-  left: -14%;
-  right: -14%;
-  top: -34%;
-  height: 38%;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(0, 230, 246, 0.16),
-      rgba(0, 230, 246, 0.055),
-      transparent
-    );
-  opacity: 0;
-  transform: translateY(-140%);
-  animation: np-echo-scanline-home 6.8s ease-in-out infinite;
-}
-
-@keyframes np-echo-scanline-home {
-  0%, 58% {
-    transform: translateY(-140%);
-    opacity: 0;
-  }
-
-  66% {
-    opacity: 0.58;
-  }
-
-  82% {
-    opacity: 0.34;
-  }
-
-  100% {
-    transform: translateY(430%);
-    opacity: 0;
-  }
-}
-
-/* 69. Weiche Akkordeon-Animation */
-
-/*
-  Moderne Browser-Version:
-  Chrome unterstützt ::details-content + interpolate-size.
-  Damit öffnen/schließen FAQ, Modpack-Hilfe und Streamer-Akkordeons
-  weich statt abrupt.
-*/
+/* ------------------------------------------------------------
+   65.6 Weiche Akkordeon-Animation
+------------------------------------------------------------ */
 
 :root {
   interpolate-size: allow-keywords;
@@ -13506,7 +13124,6 @@ details[open]::details-content {
   transform: translateY(0);
 }
 
-/* Akkordeon-Summary fühlt sich beim Klick weicher an */
 details > summary {
   transition:
     color 0.18s ease,
@@ -13523,7 +13140,6 @@ details[open] > summary {
     0 0 14px rgba(0, 230, 246, 0.06) !important;
 }
 
-/* Falls Inhalte nicht direkt per ::details-content greifen, dennoch Content weicher wirken lassen */
 details[open] > *:not(summary) {
   animation: np-accordion-fade-in 0.26s ease both;
 }
@@ -13540,39 +13156,51 @@ details[open] > *:not(summary) {
   }
 }
 
+/* ------------------------------------------------------------
+   65.7 Motion und Mobile
+------------------------------------------------------------ */
+
 @media (max-width: 66.499rem) {
-  .np-home-hero-card::before,
-  .np-hero-highlight::before,
-  .np-status-strip::before,
-  .np-echo-kompass::before,
-  .np-home-echo::before,
-  .np-ecosystem::before,
-  .np-history-section::before,
-  .np-history-card::before,
-  .np-history-timeline::before,
-  .np-home-panel::before,
-  .np-home-section::before,
-  .np-home-hero-card::after,
-  .np-hero-highlight::after,
-  .np-status-strip::after,
-  .np-echo-kompass::after,
-  .np-home-echo::after,
-  .np-ecosystem::after,
-  .np-history-section::after,
-  .np-history-card::after,
-  .np-history-timeline::after,
-  .np-home-panel::after,
-  .np-home-section::after {
-    width: 1.55rem;
-    height: 1.55rem;
+  .np-pathfinder-dashboard::before,
+  .np-ecosystem-panel::before,
+  .np-history-panel::before,
+  .echo-page-box::before,
+  .np-gallery-page::before,
+  .np-pathfinder-dashboard::after,
+  .np-ecosystem-panel::after,
+  .np-history-panel::after,
+  .echo-page-box::after,
+  .np-gallery-page::after {
+    width: 1.55rem !important;
+    height: 1.55rem !important;
+  }
+
+  .np-gallery-item::after {
+    opacity: 1;
+    transform: none;
+    font-size: 0.52rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .echo-page-image::after,
+  .np-pathfinder-image::after,
   .np-echo-visual::after,
   .np-echo-robot::after,
-  .np-home-echo-image::after,
-  .np-echo-kompass .np-echo-image::after {
+  .np-home-echo-image::after {
+    animation: none !important;
+  }
+
+  .np-server-copy-hero-button:hover::after,
+  .np-hero-secondary-button:hover::after,
+  .np-server-copy:hover::after,
+  .np-hero-button:hover::after,
+  .np-hero-button-secondary:hover::after,
+  .np-discord-button:hover::after,
+  .np-route-link:hover::after,
+  .np-ecosystem-card a:hover::after,
+  .np-streamer-download:hover::after,
+  .np-help-card a:hover::after {
     animation: none !important;
   }
 
@@ -13581,160 +13209,5 @@ details[open] > *:not(summary) {
     animation: none !important;
     transition: none !important;
   }
-}
-
-/* 70. Startseite: Eckmarker korrekt platzieren */
-
-/*
-  Fix:
-  Die Eckmarker sollen nicht auf der kleinen Hero-Beschreibung/Textbox sitzen,
-  sondern auf den großen Startseiten-Modulen:
-  - ECHO-Kompass
-  - NewPath Ecosystem
-  - Entstehungsgeschichte
-*/
-
-/* Hero-Beschreibung/Textbox explizit ohne Eckmarker */
-.np-hero-highlight::before,
-.np-hero-highlight::after,
-.np-home-hero-card::before,
-.np-home-hero-card::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Statusleiste ebenfalls ohne Eckmarker */
-.np-status-strip::before,
-.np-status-strip::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Große Zielbereiche vorbereiten */
-.np-echo-kompass,
-.np-home-echo,
-.np-ecosystem,
-.np-history-section {
-  position: relative !important;
-  overflow: visible !important;
-}
-
-/* Innere History-Elemente bekommen keine eigenen Eckmarker */
-.np-history-card::before,
-.np-history-card::after,
-.np-history-timeline::before,
-.np-history-timeline::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Cyan oben links */
-.np-echo-kompass::before,
-.np-home-echo::before,
-.np-ecosystem::before,
-.np-history-section::before {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  top: 0.72rem !important;
-  left: 0.72rem !important;
-  width: 2.35rem !important;
-  height: 2.35rem !important;
-  pointer-events: none !important;
-  border-top: 1px solid rgba(0, 230, 246, 0.54) !important;
-  border-left: 1px solid rgba(0, 230, 246, 0.54) !important;
-  border-right: 0 !important;
-  border-bottom: 0 !important;
-  border-radius: 0.36rem 0 0 0 !important;
-  opacity: 0.82 !important;
-  z-index: 4 !important;
-}
-
-/* Gold unten rechts */
-.np-echo-kompass::after,
-.np-home-echo::after,
-.np-ecosystem::after,
-.np-history-section::after {
-  content: "" !important;
-  display: block !important;
-  position: absolute !important;
-  right: 0.72rem !important;
-  bottom: 0.72rem !important;
-  width: 2.35rem !important;
-  height: 2.35rem !important;
-  pointer-events: none !important;
-  border-right: 1px solid rgba(236, 183, 110, 0.48) !important;
-  border-bottom: 1px solid rgba(236, 183, 110, 0.48) !important;
-  border-top: 0 !important;
-  border-left: 0 !important;
-  border-radius: 0 0 0.36rem 0 !important;
-  opacity: 0.72 !important;
-  z-index: 4 !important;
-}
-
-/* Mobile kleiner halten */
-@media (max-width: 66.499rem) {
-  .np-echo-kompass::before,
-  .np-home-echo::before,
-  .np-ecosystem::before,
-  .np-history-section::before,
-  .np-echo-kompass::after,
-  .np-home-echo::after,
-  .np-ecosystem::after,
-  .np-history-section::after {
-    width: 1.55rem !important;
-    height: 1.55rem !important;
-  }
-
-  .np-echo-kompass::before,
-  .np-home-echo::before,
-  .np-ecosystem::before,
-  .np-history-section::before {
-    top: 0.55rem !important;
-    left: 0.55rem !important;
-  }
-
-  .np-echo-kompass::after,
-  .np-home-echo::after,
-  .np-ecosystem::after,
-  .np-history-section::after {
-    right: 0.55rem !important;
-    bottom: 0.55rem !important;
-  }
-}
-
-/* 71. Startseite: Statusleisten-Hover deaktivieren */
-
-/*
-  Die Statusleiste ist Information, keine interaktive Karte.
-  Deshalb entfernen wir Hover-Bewegung, Glow und Shimmer wieder.
-*/
-
-.np-status-strip,
-.np-status-item {
-  transform: none !important;
-  filter: none !important;
-}
-
-.np-status-item,
-.np-status-item:hover,
-.np-status-strip:hover .np-status-item {
-  transform: none !important;
-  filter: none !important;
-  border-color: rgba(72, 122, 146, 0.30) !important;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.045) !important;
-}
-
-.np-status-item::before,
-.np-status-item::after {
-  content: none !important;
-  display: none !important;
-  animation: none !important;
-}
-
-.np-status-item:hover strong,
-.np-status-item:hover small {
-  text-shadow: inherit !important;
 }
 
