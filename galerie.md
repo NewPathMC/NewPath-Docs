@@ -7,7 +7,7 @@ permalink: /galerie.html
 
 <section class="echo-page-box echo-page-box-gallery">
   <div class="echo-page-image">
-    <img src="{{ '/assets/images/echo/echo-galerie.png' | relative_url }}" alt="ECHO Galerie">
+    <img src="{{ '/assets/images/echo/echo-galerie.png' | relative_url }}" alt="ECHO Galerie" width="512" height="512" loading="lazy" decoding="async">
   </div>
 
   <div class="echo-page-content">
@@ -63,7 +63,7 @@ permalink: /galerie.html
             data-gallery-index="{{ forloop.index0 }}"
             aria-label="Galeriebild öffnen"
           >
-            <img src="{{ image | relative_url }}" alt="">
+            <img src="{{ image | relative_url }}" alt="" loading="lazy" decoding="async">
           </button>
         {% endfor %}
       </div>
