@@ -16169,3 +16169,108 @@ body.np-logo-evolution-viewer-open {
   }
 }
 
+
+/* 82. Logo-Evolution: finaler Mini-Polish */
+
+/*
+  Nur Feinschliff:
+  - Logos optisch etwas näher an die Evolutionslinie
+  - rechte Beschreibung minimal sauberer zur Zeile ausgerichtet
+  - EOTW-Badge etwas ruhiger positioniert
+  - minimal mehr Verbindung/Flow zwischen den Stationen
+*/
+
+.np-logo-evolution-intro {
+  transform: translateY(0.08rem) !important;
+  max-width: 41rem !important;
+}
+
+/* Linie minimal kräftiger und stärker als Verbindung wahrnehmbar */
+.np-logo-evolution-track::before {
+  height: 2px !important;
+  opacity: 0.95 !important;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 230, 246, 0.12),
+      rgba(0, 230, 246, 0.32),
+      rgba(0, 230, 246, 0.38),
+      rgba(236, 183, 110, 0.42),
+      rgba(236, 183, 110, 0.68)
+    ) !important;
+  box-shadow:
+    0 0 1rem rgba(0, 230, 246, 0.15),
+    0 0 1.4rem rgba(236, 183, 110, 0.12) !important;
+}
+
+/* Logos minimal näher zur Linie ziehen, ohne das Layout wieder zu quetschen */
+.np-logo-evolution-image {
+  transform: translateY(0.12rem) !important;
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-image {
+  transform: translateY(0.04rem) !important;
+}
+
+/* Station-Punkte etwas klarer */
+.np-logo-evolution-card::before {
+  width: 0.66rem !important;
+  height: 0.66rem !important;
+  box-shadow:
+    0 0 0 3px rgba(0, 9, 15, 0.96),
+    0 0 0.95rem rgba(0, 230, 246, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.22) !important;
+}
+
+.np-logo-evolution-card.is-current::before {
+  width: 0.82rem !important;
+  height: 0.82rem !important;
+  box-shadow:
+    0 0 0 3px rgba(0, 9, 15, 0.96),
+    0 0 1.05rem rgba(236, 183, 110, 0.62),
+    0 0 1.35rem rgba(0, 230, 246, 0.24),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.28) !important;
+}
+
+/* Labels minimal näher an die Logos */
+.np-logo-evolution-meta {
+  margin-top: -0.12rem !important;
+}
+
+/* EOTW-Badge ruhiger, nicht zu nah am Intro-Text */
+.np-logo-evolution-badge {
+  top: 0.55rem !important;
+  right: 0.35rem !important;
+  transform: translateX(0.15rem) !important;
+}
+
+/* EOTW-Aura etwas besser in die Linie integrieren */
+.np-logo-evolution-card.is-current {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(0, 230, 246, 0.20), transparent 56%),
+    radial-gradient(circle at 50% 82%, rgba(236, 183, 110, 0.13), transparent 62%) !important;
+}
+
+/* Hover minimal dezenter, damit nichts springt */
+.np-logo-evolution-card:hover {
+  filter: brightness(1.06) !important;
+}
+
+@media (max-width: 66.499rem) {
+  .np-logo-evolution-intro,
+  .np-logo-evolution-image,
+  .np-logo-evolution-card.is-current .np-logo-evolution-image {
+    transform: none !important;
+  }
+
+  .np-logo-evolution-meta {
+    margin-top: 0 !important;
+  }
+
+  .np-logo-evolution-badge {
+    top: 0.35rem !important;
+    right: 0.35rem !important;
+    transform: none !important;
+  }
+}
+
