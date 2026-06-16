@@ -22,8 +22,7 @@ permalink: /galerie.html
 <section class="np-page-section np-gallery-page">
 
   <header class="np-section-header">
-    <p class="np-section-kicker">NewPath Galerie</p>
-    <h1 class="np-title">Bilder aus unserer Welt.</h1>
+    <h1 class="np-title">NewPath Galerie</h1>
     <p class="np-lead">
       Wähle eine Kategorie und klicke dich durch die Galerie.
     </p>
@@ -49,7 +48,6 @@ permalink: /galerie.html
       data-gallery-category-panel="{{ category.id }}"
     >
       <div class="np-gallery-category-heading">
-        <p class="np-section-kicker">Kategorie</p>
         <h2>{{ category.label }}</h2>
       </div>
 
