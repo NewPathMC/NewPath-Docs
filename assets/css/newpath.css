@@ -15930,3 +15930,112 @@ body.np-logo-evolution-viewer-open {
   }
 }
 
+
+/* 80. Logo-Evolution: Ecosystem-Titel, Mittellinie und Galerie-Lightbox */
+
+/*
+  Finaler Korrekturblock:
+  - Titel-Schrift explizit wie NewPath Ecosystem, nicht Georgia/Serif
+  - Evolutionslinie durch die Logo-Mitte
+  - Logo-Lightbox nutzt jetzt Galerie-Klassen; alte Logo-Viewer-Styles werden neutralisiert
+*/
+
+/* Titel wie NewPath Ecosystem */
+.np-logo-evolution-title,
+.np-logo-evolution-head .np-logo-evolution-title,
+#logo-evolution {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 0 0 1.05rem !important;
+  border: 0 !important;
+  color: var(--np-gold-soft) !important;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(1.55rem, 1.95vw, 2.15rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.045em !important;
+  text-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.52),
+    0 0 16px rgba(236, 183, 110, 0.08) !important;
+}
+
+.np-logo-evolution-title::before,
+#logo-evolution::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.56em !important;
+  width: 0.48rem !important;
+  height: 0.48rem !important;
+  border-radius: 999px !important;
+  background: var(--np-cyan) !important;
+  box-shadow:
+    0 0 0.75rem rgba(0, 230, 246, 0.62),
+    0 0 0 2px rgba(0, 230, 246, 0.14) !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Linie wirklich mittig durch die Logos */
+.np-logo-evolution-track {
+  --np-logo-line-y: clamp(4.35rem, 5.05vw, 5.35rem);
+}
+
+.np-logo-evolution-track::before {
+  top: var(--np-logo-line-y) !important;
+  left: clamp(4.2rem, 7.2vw, 6.2rem) !important;
+  right: clamp(5.2rem, 8.2vw, 7.4rem) !important;
+  height: 2px !important;
+}
+
+/* Punkte auf dieselbe Linie setzen */
+.np-logo-evolution-card::before,
+.np-logo-evolution-card.is-current::before {
+  top: calc(var(--np-logo-line-y) - 0.31rem) !important;
+}
+
+/* Logos an der Linie ausrichten */
+.np-logo-evolution-card {
+  grid-template-rows: minmax(6.9rem, 1fr) auto !important;
+}
+
+.np-logo-evolution-image {
+  align-items: center !important;
+  min-height: clamp(6.95rem, 7.6vw, 8rem) !important;
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-image {
+  min-height: clamp(7.65rem, 8.4vw, 8.75rem) !important;
+}
+
+/* Alte eigene Logo-Lightbox vollständig deaktivieren, falls alte Klassen irgendwo noch existieren */
+.np-logo-evolution-viewer,
+.np-logo-evolution-viewer.is-open,
+.np-logo-evolution-viewer-close,
+.np-logo-evolution-viewer-arrow,
+.np-logo-evolution-viewer-frame,
+.np-logo-evolution-viewer-image,
+.np-logo-evolution-viewer-caption {
+  all: unset;
+  display: none !important;
+}
+
+/* Logo-Lightbox nutzt Galerie-Styles, bekommt nur minimale logo-spezifische Bildbegrenzung */
+.np-logo-evolution-gallery-viewer .np-gallery-viewer-image {
+  max-width: min(42rem, 76vw) !important;
+  max-height: 72vh !important;
+  object-fit: contain !important;
+}
+
+/* Auf Mobile bleibt die Galerie-Logik gleich, die Timeline-Linie wird weiter ausgeblendet */
+@media (max-width: 66.499rem) {
+  .np-logo-evolution-title,
+  .np-logo-evolution-head .np-logo-evolution-title,
+  #logo-evolution {
+    font-size: clamp(1.45rem, 7vw, 2rem) !important;
+  }
+
+  .np-logo-evolution-track {
+    --np-logo-line-y: 0;
+  }
+}
+
