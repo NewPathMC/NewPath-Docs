@@ -14983,3 +14983,200 @@ body.np-logo-evolution-viewer-open {
   }
 }
 
+
+/* 76. Logo-Evolution: Inline ohne Zusatzbox */
+
+/*
+  Die Logo-Evolution gehört visuell zur Entstehungsgeschichte
+  und soll nicht wie eine zusätzliche Box in der Box wirken.
+  Daher: Außenkasten weg, vertikale Abstände enger, Karten bleiben erhalten.
+*/
+
+.np-history-panel .np-logo-evolution,
+.np-history-panel-compact .np-logo-evolution,
+.np-logo-evolution {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  margin-top: clamp(0.9rem, 1.45vw, 1.35rem) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+/* keine zusätzliche Trennlinie durch den ganzen Logo-Block */
+.np-logo-evolution::before {
+  display: none !important;
+}
+
+/* Kopfzeile kompakter und näher an die Logos */
+.np-logo-evolution-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: end !important;
+  column-gap: 1rem !important;
+  row-gap: 0.18rem !important;
+  max-width: none !important;
+  margin-bottom: clamp(0.65rem, 0.9vw, 0.85rem) !important;
+  padding: 0 clamp(0.05rem, 0.4vw, 0.35rem) !important;
+}
+
+.np-logo-evolution-head .np-section-kicker {
+  grid-column: 1 / -1 !important;
+  margin: 0 0 0.02rem !important;
+}
+
+.np-logo-evolution-head h3 {
+  margin: 0 !important;
+  font-size: clamp(1.28rem, 1.55vw, 1.68rem) !important;
+}
+
+.np-logo-evolution-head p:not(.np-section-kicker) {
+  max-width: 40rem !important;
+  margin: 0 !important;
+  justify-self: end !important;
+  text-align: right !important;
+  font-size: 0.82rem !important;
+  line-height: 1.42 !important;
+}
+
+/* Logo-Reihe enger an den Block, aber weiterhin klar lesbar */
+.np-logo-evolution-track {
+  display: grid !important;
+  grid-template-columns:
+    minmax(9.6rem, 1fr)
+    minmax(9.6rem, 1fr)
+    minmax(9.6rem, 1fr)
+    minmax(9.6rem, 1fr)
+    minmax(13rem, 1.36fr) !important;
+  gap: clamp(0.78rem, 1.15vw, 1.05rem) !important;
+  align-items: stretch !important;
+  margin-top: 0 !important;
+}
+
+/* Karten etwas ruhiger, weniger "Box in Box" */
+.np-logo-evolution-card {
+  min-height: clamp(10.8rem, 11.6vw, 12.25rem) !important;
+  padding: 0.88rem 0.78rem 0.78rem !important;
+  border-radius: 0.64rem !important;
+  border-color: rgba(72, 122, 146, 0.30) !important;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(0, 230, 246, 0.060), transparent 68%),
+    linear-gradient(180deg, rgba(13, 39, 50, 0.46), rgba(4, 16, 23, 0.62)) !important;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.15),
+    inset 0 0 18px rgba(0, 230, 246, 0.014) !important;
+}
+
+/* Verbindungslinien zwischen Karten dezenter */
+.np-logo-evolution-card::after {
+  background: linear-gradient(90deg, rgba(0, 230, 246, 0.16), rgba(236, 183, 110, 0.10)) !important;
+  opacity: 0.75 !important;
+}
+
+.np-logo-evolution-image {
+  min-height: clamp(6.75rem, 7.35vw, 7.75rem) !important;
+}
+
+.np-logo-evolution-image img {
+  max-width: min(100%, 8.65rem) !important;
+  max-height: clamp(6.35rem, 6.9vw, 7.15rem) !important;
+}
+
+/* EOTW weiterhin Fokus, aber nicht wie Fremdkörper */
+.np-logo-evolution-card.is-current {
+  min-height: clamp(12rem, 12.85vw, 13.5rem) !important;
+  transform: translateY(-0.32rem) !important;
+  border-color: rgba(236, 183, 110, 0.68) !important;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(0, 230, 246, 0.15), transparent 68%),
+    radial-gradient(circle at 50% 86%, rgba(236, 183, 110, 0.11), transparent 70%),
+    linear-gradient(180deg, rgba(18, 68, 80, 0.64), rgba(5, 20, 27, 0.78)) !important;
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.24),
+    0 0 22px rgba(0, 230, 246, 0.13),
+    0 0 14px rgba(236, 183, 110, 0.10),
+    inset 0 0 28px rgba(0, 230, 246, 0.032) !important;
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-image {
+  min-height: clamp(7.55rem, 8.2vw, 8.55rem) !important;
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-image img {
+  max-width: min(100%, 10.8rem) !important;
+  max-height: clamp(7.25rem, 7.9vw, 8.35rem) !important;
+}
+
+/* History-Box unten nicht unnötig aufblasen */
+.np-history-panel,
+.np-history-panel-compact {
+  padding-bottom: clamp(0.95rem, 1.45vw, 1.35rem) !important;
+}
+
+/* Etwas weniger vertikale Luft zwischen History-Text und Logo-Evolution */
+.np-history-tabs,
+.np-history-detail,
+.np-history-tab-content {
+  margin-bottom: clamp(0.55rem, 0.9vw, 0.85rem) !important;
+}
+
+/* Desktop mittel: zweireihig, aber immer noch ohne Zusatzbox */
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-logo-evolution-head {
+    grid-template-columns: 1fr !important;
+  }
+
+  .np-logo-evolution-head p:not(.np-section-kicker) {
+    justify-self: start !important;
+    text-align: left !important;
+  }
+
+  .np-logo-evolution-track {
+    grid-template-columns: repeat(3, minmax(9rem, 1fr)) !important;
+  }
+
+  .np-logo-evolution-card.is-current {
+    grid-column: span 2 !important;
+  }
+}
+
+/* Mobile enger und scrollbar */
+@media (max-width: 66.499rem) {
+  .np-logo-evolution {
+    margin-top: 1rem !important;
+    padding: 0 !important;
+  }
+
+  .np-logo-evolution-head {
+    grid-template-columns: 1fr !important;
+    padding: 0 !important;
+    margin-bottom: 0.7rem !important;
+  }
+
+  .np-logo-evolution-head p:not(.np-section-kicker) {
+    text-align: left !important;
+    justify-self: start !important;
+  }
+
+  .np-logo-evolution-track {
+    display: flex !important;
+    grid-template-columns: none !important;
+    gap: 0.78rem !important;
+    overflow-x: auto !important;
+    padding: 0.12rem 0.05rem 0.55rem !important;
+  }
+
+  .np-logo-evolution-card {
+    flex: 0 0 11.5rem !important;
+    min-height: 10.7rem !important;
+  }
+
+  .np-logo-evolution-card.is-current {
+    flex-basis: 13.2rem !important;
+    min-height: 11.9rem !important;
+  }
+}
+
