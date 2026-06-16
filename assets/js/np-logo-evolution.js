@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const items = Array.from(document.querySelectorAll("[data-logo-evolution-image]"));
-  if (!items.length) return;
+  const items = Array.from(
+    document.querySelectorAll("[data-logo-evolution-image]")
+  );
 
-  logoItems.forEach((item) => {
+  if (!items.length) {
+    return;
+  }
+
+  items.forEach((item) => {
     const image = item.querySelector("img");
 
     if (!image) {
@@ -10,10 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    image.addEventListener("error", () => {
-      item.classList.add("is-missing-logo");
-      image.remove();
-    }, { once: true });
+    image.addEventListener(
+      "error",
+      () => {
+        item.classList.add("is-missing-logo");
+        image.remove();
+      },
+      { once: true }
+    );
 
     if (image.complete && image.naturalWidth === 0) {
       item.classList.add("is-missing-logo");
@@ -21,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   const viewer = document.createElement("div");
   viewer.className = "np-logo-evolution-viewer";
   viewer.setAttribute("aria-hidden", "true");
+
   viewer.innerHTML = `
     <button class="np-logo-evolution-viewer-close" type="button" aria-label="Logo schließen">×</button>
     <button class="np-logo-evolution-viewer-arrow np-logo-evolution-viewer-prev" type="button" aria-label="Vorheriges Logo">‹</button>
@@ -34,30 +43,44 @@ document.addEventListener("DOMContentLoaded", () => {
     </figure>
     <button class="np-logo-evolution-viewer-arrow np-logo-evolution-viewer-next" type="button" aria-label="Nächstes Logo">›</button>
   `;
+
   document.body.appendChild(viewer);
 
-  const image = viewer.querySelector(".np-logo-evolution-viewer-image");
-  const caption = viewer.querySelector(".np-logo-evolution-viewer-caption");
-  const close = viewer.querySelector(".np-logo-evolution-viewer-close");
-  const prev = viewer.querySelector(".np-logo-evolution-viewer-prev");
-  const next = viewer.querySelector(".np-logo-evolution-viewer-next");
-  let index = 0;
+  const viewerImage = viewer.querySelector(".np-logo-evolution-viewer-image");
+  const viewerCaption = viewer.querySelector(".np-logo-evolution-viewer-caption");
+  const closeButton = viewer.querySelector(".np-logo-evolution-viewer-close");
+  const prevButton = viewer.querySelector(".np-logo-evolution-viewer-prev");
+  const nextButton = viewer.querySelector(".np-logo-evolution-viewer-next");
 
-  const update = () => {
-    const item = items[index];
+  let activeIndex = 0;
+
+  const updateViewer = () => {
+    const item = items[activeIndex];
+
+    if (!item) {
+      return;
+    }
+
+    const src = item.dataset.logoEvolutionImage;
     const label = item.dataset.logoEvolutionLabel || "NewPath Logo";
-    image.classList.add("is-switching");
+
+    viewerImage.classList.add("is-switching");
+
     window.setTimeout(() => {
-      image.src = item.dataset.logoEvolutionImage;
-      image.alt = label;
-      caption.textContent = `${label} · ${index + 1} / ${items.length}`;
-      window.setTimeout(() => image.classList.remove("is-switching"), 80);
+      viewerImage.src = src;
+      viewerImage.alt = label;
+      viewerCaption.textContent = `${label} · ${activeIndex + 1} / ${items.length}`;
+
+      window.setTimeout(() => {
+        viewerImage.classList.remove("is-switching");
+      }, 80);
     }, 90);
   };
 
-  const open = (nextIndex) => {
-    index = nextIndex;
-    update();
+  const openViewer = (index) => {
+    activeIndex = index;
+    updateViewer();
+
     viewer.classList.add("is-open");
     viewer.setAttribute("aria-hidden", "false");
     document.body.classList.add("np-logo-evolution-viewer-open");
@@ -67,32 +90,52 @@ document.addEventListener("DOMContentLoaded", () => {
     viewer.classList.remove("is-open");
     viewer.setAttribute("aria-hidden", "true");
     document.body.classList.remove("np-logo-evolution-viewer-open");
-    image.src = "";
-    image.alt = "";
+
+    viewerImage.src = "";
+    viewerImage.alt = "";
   };
 
-  const previous = () => {
-    index = index === 0 ? items.length - 1 : index - 1;
-    update();
+  const showPrevious = () => {
+    activeIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    updateViewer();
   };
 
-  const nextLogo = () => {
-    index = index === items.length - 1 ? 0 : index + 1;
-    update();
+  const showNext = () => {
+    activeIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    updateViewer();
   };
 
-  items.forEach((item, itemIndex) => item.addEventListener("click", () => open(itemIndex)));
-  close.addEventListener("click", closeViewer);
-  prev.addEventListener("click", previous);
-  next.addEventListener("click", nextLogo);
+  items.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      openViewer(index);
+    });
+  });
+
+  closeButton.addEventListener("click", closeViewer);
+  prevButton.addEventListener("click", showPrevious);
+  nextButton.addEventListener("click", showNext);
+
   viewer.addEventListener("click", (event) => {
-    if (event.target === viewer) closeViewer();
+    if (event.target === viewer) {
+      closeViewer();
+    }
   });
 
   document.addEventListener("keydown", (event) => {
-    if (!viewer.classList.contains("is-open")) return;
-    if (event.key === "Escape") closeViewer();
-    if (event.key === "ArrowLeft") previous();
-    if (event.key === "ArrowRight") nextLogo();
+    if (!viewer.classList.contains("is-open")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeViewer();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showPrevious();
+    }
+
+    if (event.key === "ArrowRight") {
+      showNext();
+    }
   });
 });
