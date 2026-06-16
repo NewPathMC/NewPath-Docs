@@ -22,6 +22,7 @@ from typing import Iterable
 
 RULE_SECTION_START = '<section class="np-page-section np-rules-section"'
 RULE_SECTION_END = '</section>'
+RULE_BLOCK_START = '<article class="np-rule-block"'
 
 IGNORED_TEXT_FRAGMENTS = (
     'AUTO_UPDATED_START',
@@ -59,16 +60,33 @@ def run_git_show(ref: str, file_path: str) -> str:
 
 
 def extract_rule_section(markdown: str) -> str:
-    """Beschränkt den Vergleich auf den eigentlichen Regelwerk-Bereich."""
-    start = markdown.find(RULE_SECTION_START)
-    if start == -1:
+    """Beschränkt den Vergleich auf die tatsächlichen Regelblöcke.
+
+    Wichtig:
+    Die Regelwerksseite enthält vor den eigentlichen Regeln noch Header,
+    ECHO-Box, Änderungsübersicht und den großen Abschnittstitel
+    wie z. B. "Serverregelwerk".
+
+    Für die Änderungslogik sollen aber nur die echten Regeln zählen.
+    Deshalb wird zuerst der Regelwerksbereich gesucht und danach auf den
+    ersten `<article class="np-rule-block">` innerhalb dieses Bereichs
+    gesprungen. Alles davor wird ignoriert.
+    """
+    section_start = markdown.find(RULE_SECTION_START)
+    if section_start == -1:
         return markdown
 
-    end = markdown.find(RULE_SECTION_END, start)
-    if end == -1:
-        return markdown[start:]
+    section_end = markdown.find(RULE_SECTION_END, section_start)
+    if section_end == -1:
+        section = markdown[section_start:]
+    else:
+        section = markdown[section_start:section_end + len(RULE_SECTION_END)]
 
-    return markdown[start:end + len(RULE_SECTION_END)]
+    first_rule_block = section.find(RULE_BLOCK_START)
+    if first_rule_block == -1:
+        return section
+
+    return section[first_rule_block:]
 
 
 def visible_text(line: str) -> str:

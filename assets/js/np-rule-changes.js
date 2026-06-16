@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function markInlineChanges(data) {
     const candidates = Array.from(document.querySelectorAll(
-      ".np-rules-section li, .np-rules-section p, .np-rules-section h1, .np-rules-section h2, .np-rules-section h3"
+      ".np-rules-section .np-rule-block li, .np-rules-section .np-rule-block p, .np-rules-section .np-rule-block h2, .np-rules-section .np-rule-block h3"
     ));
 
     const changes = [];
@@ -72,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const target = candidates.find(function (element) {
+        if (!element.closest(".np-rule-block")) {
+          return false;
+        }
+
         const elementText = normalizeText(element.textContent);
         return elementText === changeText || elementText.includes(changeText) || changeText.includes(elementText);
       });
