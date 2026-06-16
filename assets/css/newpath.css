@@ -16039,3 +16039,133 @@ body.np-logo-evolution-viewer-open {
   }
 }
 
+
+/* 81. Logo-Evolution: vertikal kompakter ausrichten */
+
+/*
+  Die Logo-Evolution wird näher an den eigentlichen Geschichtsbereich gezogen.
+  Ziel: weniger freier Zwischenraum, mehr Zusammengehörigkeit mit der Entstehungsgeschichte.
+*/
+
+.np-history-panel .np-logo-evolution,
+.np-history-panel-compact .np-logo-evolution,
+.np-logo-evolution {
+  margin-top: clamp(-0.25rem, -0.35vw, -0.1rem) !important;
+}
+
+/* Kopfbereich dichter und höher ausrichten */
+.np-logo-evolution-head {
+  margin-bottom: clamp(0.25rem, 0.45vw, 0.45rem) !important;
+  align-items: start !important;
+}
+
+/* Titel etwas höher / weniger Luft darunter */
+.np-logo-evolution-title,
+.np-logo-evolution-head .np-logo-evolution-title,
+#logo-evolution {
+  line-height: 0.98 !important;
+}
+
+/* Intro-Text rechts näher an den oberen Geschichtsbereich ziehen */
+.np-logo-evolution-intro {
+  align-self: start !important;
+  padding-top: 0.08rem !important;
+  padding-bottom: 0 !important;
+  transform: translateY(-0.15rem) !important;
+}
+
+/* komplette Logo-Leiste höher und kompakter */
+.np-logo-evolution-track {
+  padding-top: clamp(0.2rem, 0.45vw, 0.38rem) !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Linie folgt der kompakteren Logo-Position */
+.np-logo-evolution-track {
+  --np-logo-line-y: clamp(3.85rem, 4.62vw, 4.82rem) !important;
+}
+
+/* Stationen selbst etwas höher setzen */
+.np-logo-evolution-card:nth-child(1) {
+  transform: translateY(0.05rem) scale(0.94) !important;
+}
+
+.np-logo-evolution-card:nth-child(2) {
+  transform: translateY(-0.06rem) scale(0.97) !important;
+}
+
+.np-logo-evolution-card:nth-child(3) {
+  transform: translateY(-0.18rem) scale(0.99) !important;
+}
+
+.np-logo-evolution-card:nth-child(4) {
+  transform: translateY(-0.30rem) scale(1.02) !important;
+}
+
+.np-logo-evolution-card.is-current {
+  transform: translateY(-0.72rem) scale(1.08) !important;
+}
+
+.np-logo-evolution-card:nth-child(1):hover,
+.np-logo-evolution-card:nth-child(2):hover,
+.np-logo-evolution-card:nth-child(3):hover,
+.np-logo-evolution-card:nth-child(4):hover {
+  transform: translateY(-0.42rem) scale(1.03) !important;
+}
+
+.np-logo-evolution-card.is-current:hover {
+  transform: translateY(-0.9rem) scale(1.10) !important;
+}
+
+/* Bildbereich minimal kompakter, ohne Logos kleiner zu machen */
+.np-logo-evolution-image {
+  min-height: clamp(6.35rem, 7vw, 7.35rem) !important;
+}
+
+/* weniger Restluft unter der Evolution */
+.np-history-panel,
+.np-history-panel-compact {
+  padding-bottom: clamp(0.55rem, 0.85vw, 0.8rem) !important;
+}
+
+/* Bei mittleren Breiten keine negativen Verschiebungen erzwingen */
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-logo-evolution {
+    margin-top: 0.55rem !important;
+  }
+
+  .np-logo-evolution-card:nth-child(n),
+  .np-logo-evolution-card.is-current {
+    transform: none !important;
+  }
+
+  .np-logo-evolution-intro {
+    transform: none !important;
+  }
+}
+
+/* Mobile ebenfalls kompakt, aber ohne Quetschen */
+@media (max-width: 66.499rem) {
+  .np-logo-evolution {
+    margin-top: 0.55rem !important;
+  }
+
+  .np-logo-evolution-head {
+    margin-bottom: 0.55rem !important;
+  }
+
+  .np-logo-evolution-intro {
+    transform: none !important;
+  }
+
+  .np-logo-evolution-track {
+    padding-top: 0.2rem !important;
+  }
+
+  .np-logo-evolution-card:nth-child(n),
+  .np-logo-evolution-card.is-current {
+    transform: none !important;
+  }
+}
+
