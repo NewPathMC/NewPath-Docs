@@ -2,6 +2,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = Array.from(document.querySelectorAll("[data-logo-evolution-image]"));
   if (!items.length) return;
 
+  logoItems.forEach((item) => {
+    const image = item.querySelector("img");
+
+    if (!image) {
+      item.classList.add("is-missing-logo");
+      return;
+    }
+
+    image.addEventListener("error", () => {
+      item.classList.add("is-missing-logo");
+      image.remove();
+    }, { once: true });
+
+    if (image.complete && image.naturalWidth === 0) {
+      item.classList.add("is-missing-logo");
+      image.remove();
+    }
+  });
+
+
   const viewer = document.createElement("div");
   viewer.className = "np-logo-evolution-viewer";
   viewer.setAttribute("aria-hidden", "true");

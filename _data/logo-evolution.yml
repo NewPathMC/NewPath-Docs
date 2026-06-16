@@ -22,5 +22,5 @@ items:
   - id: "eotw"
     label: "Echoes of the Wild"
     phase: "Aktuelles Branding"
-    image: "/assets/images/logo-evolution/np-eotw.png"
+    image: "/assets/images/logo-evolution/np-logo-eotw.png"
     current: true
