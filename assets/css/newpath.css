@@ -14156,3 +14156,61 @@ body.np-page-home .np-back-to-top {
   }
 }
 
+/* 71. Startseite: ECHO im Pathfinder größer darstellen */
+
+/*
+  ECHO war im Startseiten-Pathfinder optisch zu klein.
+  Diese Anpassung vergrößert nur die ECHO-Figur auf der Startseite,
+  ohne die Unterseiten-ECHO-Boxen oder andere Bilder zu verändern.
+*/
+
+.np-pathfinder-image {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: clamp(9.5rem, 13vw, 14.25rem) !important;
+}
+
+.np-pathfinder-image img,
+.np-pathfinder-echo,
+.np-pathfinder-robot {
+  width: clamp(8.2rem, 10.8vw, 12.4rem) !important;
+  max-width: none !important;
+  height: auto !important;
+  transform: translateX(-0.15rem) scale(1.08) !important;
+  transform-origin: center bottom !important;
+  filter:
+    drop-shadow(0 0 0.85rem rgba(0, 230, 246, 0.20))
+    drop-shadow(0 1.1rem 1.25rem rgba(0, 0, 0, 0.34)) !important;
+}
+
+.np-pathfinder-copy {
+  min-width: 0 !important;
+}
+
+@media (max-width: 82rem) and (min-width: 66.5rem) {
+  .np-pathfinder-image {
+    min-width: clamp(8.4rem, 11vw, 11rem) !important;
+  }
+
+  .np-pathfinder-image img,
+  .np-pathfinder-echo,
+  .np-pathfinder-robot {
+    width: clamp(7.4rem, 9.5vw, 10.2rem) !important;
+    transform: translateX(-0.1rem) scale(1.04) !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-pathfinder-image {
+    min-width: auto !important;
+  }
+
+  .np-pathfinder-image img,
+  .np-pathfinder-echo,
+  .np-pathfinder-robot {
+    width: clamp(7rem, 32vw, 9.3rem) !important;
+    transform: none !important;
+  }
+}
+
