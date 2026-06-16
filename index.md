@@ -354,6 +354,38 @@ permalink: /
       </article>
     </div>
   </div>
+
+  <div class="np-logo-evolution" aria-label="Logo-Evolution von NewPath">
+    <div class="np-logo-evolution-head">
+      <p class="np-section-kicker">Visuelle Entwicklung</p>
+      <h3>Logo-Evolution</h3>
+      <p>Von den ersten NewPath-Brandings bis zum aktuellen Look von <strong>Echoes of the Wild</strong>.</p>
+    </div>
+
+    <div class="np-logo-evolution-track">
+      {% for logo in site.data.logo-evolution.items %}
+        <button
+          class="np-logo-evolution-card{% if logo.current %} is-current{% endif %}"
+          type="button"
+          data-logo-evolution-image="{{ logo.image | relative_url }}"
+          data-logo-evolution-label="{{ logo.label }}"
+          aria-label="{{ logo.label }} vergrößern"
+        >
+          <span class="np-logo-evolution-image">
+            <img src="{{ logo.image | relative_url }}" alt="{{ logo.label }}">
+          </span>
+          <span class="np-logo-evolution-meta">
+            <strong>{{ logo.label }}</strong>
+            <small>{{ logo.phase }}</small>
+          </span>
+          {% if logo.current %}
+            <span class="np-logo-evolution-badge">Aktuell</span>
+          {% endif %}
+        </button>
+      {% endfor %}
+    </div>
+  </div>
+
 </section>
 
 </div>

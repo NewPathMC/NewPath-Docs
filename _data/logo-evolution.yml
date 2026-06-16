@@ -1,0 +1,26 @@
+items:
+  - id: "newpath-1"
+    label: "NewPath Ursprung"
+    phase: "Erstes Hauptlogo"
+    image: "/assets/images/logo-evolution/np-logo1.png"
+
+  - id: "newpath-2"
+    label: "NewPath Rebranding 1"
+    phase: "Zweites Hauptlogo"
+    image: "/assets/images/logo-evolution/np-logo2.png"
+
+  - id: "halloween-2025"
+    label: "Halloween 2025"
+    phase: "Eventbranding"
+    image: "/assets/images/logo-evolution/np-logo-hw.png"
+
+  - id: "mewpath-3"
+    label: "NewPath Rebranding 2"
+    phase: "Drittes Hauptlogo"
+    image: "/assets/images/logo-evolution/np-logo3.png"
+
+  - id: "eotw"
+    label: "Echoes of the Wild"
+    phase: "Aktuelles Branding"
+    image: "/assets/images/logo-evolution/np-eotw.png"
+    current: true
