@@ -15543,3 +15543,390 @@ body.np-logo-evolution-viewer-open {
   }
 }
 
+
+/* 79. Logo-Evolution: Offene Timeline ohne Kartenboxen */
+
+/*
+  Ziel:
+  - Titel optisch wie die anderen Startseiten-Überschriften, z.B. NewPath Ecosystem
+  - keine harte Box-in-Box-Optik mehr
+  - Logos als offene Evolution-Leiste
+  - EOTW bleibt hervorgehobener Endpunkt
+*/
+
+.np-history-panel .np-logo-evolution,
+.np-history-panel-compact .np-logo-evolution,
+.np-logo-evolution {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  margin-top: clamp(0.35rem, 0.65vw, 0.65rem) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.np-logo-evolution::before {
+  display: none !important;
+}
+
+/* Header wie die normalen Startseiten-Sektionen */
+.np-logo-evolution-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, auto) minmax(18rem, 1fr) !important;
+  align-items: end !important;
+  column-gap: clamp(1rem, 2vw, 2rem) !important;
+  row-gap: 0 !important;
+  margin: 0 0 clamp(0.65rem, 0.9vw, 0.85rem) !important;
+  padding: 0 !important;
+}
+
+.np-logo-evolution-head .np-section-kicker {
+  display: none !important;
+}
+
+/* Cyan-Punkt wie bei NewPath Ecosystem */
+.np-logo-evolution-title {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 0 0 1.05rem !important;
+  border: 0 !important;
+  color: var(--np-gold-soft) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.55rem, 1.95vw, 2.15rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.04em !important;
+  text-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.52),
+    0 0 16px rgba(236, 183, 110, 0.08) !important;
+}
+
+.np-logo-evolution-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.56em;
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  background: var(--np-cyan);
+  box-shadow:
+    0 0 0.75rem rgba(0, 230, 246, 0.62),
+    0 0 0 2px rgba(0, 230, 246, 0.14);
+  transform: translateY(-50%);
+}
+
+.np-logo-evolution-intro {
+  max-width: 43rem !important;
+  margin: 0 !important;
+  justify-self: end !important;
+  align-self: end !important;
+  padding-bottom: 0.08rem !important;
+  color: rgba(247, 236, 220, 0.76) !important;
+  font-size: 0.84rem !important;
+  line-height: 1.42 !important;
+  text-align: right !important;
+}
+
+/* Offene Evolution-Leiste */
+.np-logo-evolution-track {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns:
+    minmax(8.5rem, 0.9fr)
+    minmax(8.8rem, 0.96fr)
+    minmax(9rem, 1fr)
+    minmax(9.4rem, 1.06fr)
+    minmax(12rem, 1.28fr) !important;
+  gap: clamp(0.75rem, 1.25vw, 1.15rem) !important;
+  align-items: end !important;
+  padding: clamp(0.75rem, 1.1vw, 1rem) clamp(0.25rem, 0.75vw, 0.65rem) 0.15rem !important;
+  margin: 0 !important;
+}
+
+/* Hauptlinie hinter den Stationen */
+.np-logo-evolution-track::before {
+  content: "";
+  position: absolute;
+  left: clamp(4rem, 7vw, 6rem);
+  right: clamp(5rem, 8vw, 7rem);
+  top: clamp(4.1rem, 5.2vw, 5.15rem);
+  height: 2px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 230, 246, 0.10),
+      rgba(0, 230, 246, 0.30),
+      rgba(0, 230, 246, 0.36),
+      rgba(236, 183, 110, 0.38),
+      rgba(236, 183, 110, 0.62)
+    );
+  box-shadow:
+    0 0 1rem rgba(0, 230, 246, 0.13),
+    0 0 1.3rem rgba(236, 183, 110, 0.10);
+  pointer-events: none;
+}
+
+/* Kartenoptik entfernen: Stationen wirken frei auf der Linie */
+.np-logo-evolution-card {
+  position: relative !important;
+  z-index: 1 !important;
+  min-height: clamp(9.6rem, 10.4vw, 11.1rem) !important;
+  display: grid !important;
+  grid-template-rows: minmax(5.7rem, 1fr) auto !important;
+  gap: 0.42rem !important;
+  align-items: end !important;
+  justify-items: center !important;
+  padding: 0.15rem 0.25rem 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  cursor: pointer !important;
+  transform: none !important;
+  opacity: 1 !important;
+  transition:
+    transform 0.18s ease,
+    filter 0.18s ease,
+    opacity 0.18s ease !important;
+}
+
+.np-logo-evolution-card::after {
+  display: none !important;
+}
+
+/* Station-Punkt auf der Evolutionslinie */
+.np-logo-evolution-card::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: clamp(3.15rem, 4.1vw, 4.05rem);
+  width: 0.62rem;
+  height: 0.62rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--np-cyan);
+  box-shadow:
+    0 0 0 3px rgba(0, 9, 15, 0.94),
+    0 0 0.95rem rgba(0, 230, 246, 0.42);
+  pointer-events: none;
+}
+
+.np-logo-evolution-card:hover {
+  transform: translateY(-0.28rem) !important;
+  filter: brightness(1.08) !important;
+}
+
+/* leichte Evolution/Progression ohne Boxen */
+.np-logo-evolution-card:nth-child(1) {
+  transform: translateY(0.35rem) scale(0.94) !important;
+}
+
+.np-logo-evolution-card:nth-child(2) {
+  transform: translateY(0.22rem) scale(0.97) !important;
+}
+
+.np-logo-evolution-card:nth-child(3) {
+  transform: translateY(0.08rem) scale(0.99) !important;
+}
+
+.np-logo-evolution-card:nth-child(4) {
+  transform: translateY(-0.06rem) scale(1.02) !important;
+}
+
+.np-logo-evolution-card:nth-child(1):hover,
+.np-logo-evolution-card:nth-child(2):hover,
+.np-logo-evolution-card:nth-child(3):hover,
+.np-logo-evolution-card:nth-child(4):hover {
+  transform: translateY(-0.24rem) scale(1.03) !important;
+}
+
+/* Logos frei, aber mit Schatten für Lesbarkeit */
+.np-logo-evolution-image {
+  width: 100% !important;
+  min-height: clamp(5.95rem, 6.8vw, 7.05rem) !important;
+  display: flex !important;
+  align-items: end !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.np-logo-evolution-image img {
+  width: auto !important;
+  max-width: min(100%, 8.15rem) !important;
+  max-height: clamp(5.8rem, 6.4vw, 6.75rem) !important;
+  object-fit: contain !important;
+  filter:
+    drop-shadow(0 0 0.5rem rgba(0, 230, 246, 0.08))
+    drop-shadow(0 0.7rem 0.9rem rgba(0, 0, 0, 0.42)) !important;
+}
+
+.np-logo-evolution-meta {
+  min-height: 2.2rem !important;
+  display: grid !important;
+  gap: 0.12rem !important;
+  align-content: start !important;
+  text-align: center !important;
+}
+
+.np-logo-evolution-meta strong {
+  color: var(--np-gold-soft) !important;
+  font-size: 0.78rem !important;
+  font-weight: 950 !important;
+  line-height: 1.06 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.52) !important;
+}
+
+.np-logo-evolution-meta small {
+  color: rgba(247, 236, 220, 0.66) !important;
+  font-size: 0.58rem !important;
+  font-weight: 850 !important;
+  line-height: 1.08 !important;
+}
+
+/* EOTW als finaler Endpunkt mit Aura statt Box */
+.np-logo-evolution-card.is-current {
+  min-height: clamp(10.8rem, 11.8vw, 12.6rem) !important;
+  padding: 0.15rem 0.35rem 0 !important;
+  border: 0 !important;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0, 230, 246, 0.19), transparent 58%),
+    radial-gradient(circle at 50% 76%, rgba(236, 183, 110, 0.11), transparent 60%) !important;
+  box-shadow: none !important;
+  transform: translateY(-0.42rem) scale(1.08) !important;
+}
+
+.np-logo-evolution-card.is-current:hover {
+  transform: translateY(-0.62rem) scale(1.10) !important;
+}
+
+.np-logo-evolution-card.is-current::before {
+  top: clamp(3.45rem, 4.55vw, 4.45rem);
+  width: 0.76rem;
+  height: 0.76rem;
+  background: var(--np-gold-soft);
+  box-shadow:
+    0 0 0 3px rgba(0, 9, 15, 0.94),
+    0 0 1.05rem rgba(236, 183, 110, 0.58),
+    0 0 1.25rem rgba(0, 230, 246, 0.22);
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-image {
+  min-height: clamp(7rem, 7.8vw, 8.25rem) !important;
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-image img {
+  max-width: min(100%, 10.7rem) !important;
+  max-height: clamp(6.95rem, 7.65vw, 8.15rem) !important;
+  filter:
+    drop-shadow(0 0 0.75rem rgba(0, 230, 246, 0.20))
+    drop-shadow(0 1rem 1.1rem rgba(0, 0, 0, 0.46)) !important;
+}
+
+.np-logo-evolution-card.is-current .np-logo-evolution-meta strong {
+  font-size: 0.88rem !important;
+}
+
+.np-logo-evolution-badge {
+  top: 0.25rem !important;
+  right: 0.55rem !important;
+  z-index: 2 !important;
+}
+
+/* History enger anschließen */
+.np-history-tab-content,
+.np-history-detail,
+.np-history-tabs {
+  margin-bottom: clamp(0.14rem, 0.35vw, 0.32rem) !important;
+}
+
+.np-history-panel,
+.np-history-panel-compact {
+  padding-bottom: clamp(0.7rem, 1vw, 0.95rem) !important;
+}
+
+@media (min-width: 66.5rem) and (max-width: 1180px) {
+  .np-logo-evolution-head {
+    grid-template-columns: 1fr !important;
+  }
+
+  .np-logo-evolution-intro {
+    justify-self: start !important;
+    text-align: left !important;
+  }
+
+  .np-logo-evolution-track {
+    grid-template-columns: repeat(3, minmax(8.8rem, 1fr)) !important;
+    row-gap: 0.95rem !important;
+  }
+
+  .np-logo-evolution-track::before {
+    display: none !important;
+  }
+
+  .np-logo-evolution-card:nth-child(n),
+  .np-logo-evolution-card.is-current {
+    transform: none !important;
+  }
+
+  .np-logo-evolution-card.is-current {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-logo-evolution {
+    margin-top: 0.75rem !important;
+  }
+
+  .np-logo-evolution-head {
+    grid-template-columns: 1fr !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .np-logo-evolution-title {
+    font-size: clamp(1.45rem, 8vw, 2rem) !important;
+  }
+
+  .np-logo-evolution-intro {
+    justify-self: start !important;
+    text-align: left !important;
+  }
+
+  .np-logo-evolution-track {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 0.9rem !important;
+    padding: 0.4rem 0.1rem 0.55rem !important;
+  }
+
+  .np-logo-evolution-track::before {
+    display: none !important;
+  }
+
+  .np-logo-evolution-card:nth-child(n),
+  .np-logo-evolution-card.is-current {
+    flex: 0 0 10.6rem !important;
+    min-height: 10.25rem !important;
+    transform: none !important;
+    background: transparent !important;
+  }
+
+  .np-logo-evolution-card.is-current {
+    flex-basis: 12.4rem !important;
+    min-height: 11.2rem !important;
+  }
+
+  .np-logo-evolution-card::before {
+    display: none !important;
+  }
+}
+
