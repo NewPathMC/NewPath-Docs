@@ -33,7 +33,7 @@ permalink: /regelwerk.html
 
 <section class="np-page-section np-rules-section">
   <div class="np-section-header">
-    <h1 class="np-title">NewPath · Echoes of the Wild</h1>
+    <h1 class="np-title">Serverregelwerk</h1>
   </div>
 
   <article class="np-rule-block">

@@ -31,7 +31,7 @@ permalink: /philosophie.html
 
 <section class="np-page-section np-story-section">
   <div class="np-section-header">
-    <h1 class="np-title">NewPath · Echoes of the Wild</h1>
+    <h1 class="np-title">Projektphilosophie</h1>
   </div>
 
   <div class="np-card-grid np-card-grid-1 np-philosophy-grid">
