@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const PREVIEW_LIMIT = 12;
+
   const categoryButtons = Array.from(
     document.querySelectorAll("[data-gallery-category-button]")
   );
@@ -15,6 +17,97 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  const panelState = new Map();
+
+  const getPanelItems = (panel) =>
+    Array.from(panel.querySelectorAll("[data-gallery-image]"));
+
+  const getCategoryItems = (categoryId) =>
+    galleryItems.filter((item) => item.dataset.galleryCategory === categoryId);
+
+  const updatePanelPreview = (panel) => {
+    const categoryId = panel.dataset.galleryCategoryPanel;
+    const items = getPanelItems(panel);
+    const state = panelState.get(categoryId);
+
+    if (!state || items.length <= PREVIEW_LIMIT) {
+      items.forEach((item) => item.classList.remove("is-gallery-hidden"));
+      return;
+    }
+
+    const isExpanded = state.expanded;
+
+    items.forEach((item, index) => {
+      item.classList.toggle("is-gallery-hidden", !isExpanded && index >= PREVIEW_LIMIT);
+    });
+
+    const hiddenCount = Math.max(0, items.length - PREVIEW_LIMIT);
+
+    if (state.button) {
+      state.button.classList.toggle("is-expanded", isExpanded);
+      state.button.textContent = isExpanded
+        ? "Weniger Bilder anzeigen"
+        : `Alle ${items.length} Bilder anzeigen`;
+    }
+
+    if (state.count) {
+      state.count.textContent = isExpanded
+        ? `${items.length} Bilder sichtbar`
+        : `${Math.min(PREVIEW_LIMIT, items.length)} von ${items.length} Bildern sichtbar · ${hiddenCount} weitere`;
+    }
+  };
+
+  const setupCompactPanels = () => {
+    categoryPanels.forEach((panel) => {
+      const categoryId = panel.dataset.galleryCategoryPanel;
+      const items = getPanelItems(panel);
+
+      if (!categoryId || items.length <= PREVIEW_LIMIT) {
+        return;
+      }
+
+      if (panelState.has(categoryId)) {
+        updatePanelPreview(panel);
+        return;
+      }
+
+      const toggleWrap = document.createElement("div");
+      toggleWrap.className = "np-gallery-toggle-wrap";
+
+      const toggleButton = document.createElement("button");
+      toggleButton.className = "np-gallery-toggle";
+      toggleButton.type = "button";
+
+      const count = document.createElement("div");
+      count.className = "np-gallery-panel-count";
+
+      toggleWrap.appendChild(toggleButton);
+      panel.appendChild(toggleWrap);
+      panel.appendChild(count);
+
+      panelState.set(categoryId, {
+        expanded: false,
+        button: toggleButton,
+        count,
+      });
+
+      toggleButton.addEventListener("click", () => {
+        const state = panelState.get(categoryId);
+        state.expanded = !state.expanded;
+        updatePanelPreview(panel);
+
+        if (!state.expanded) {
+          panel.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+
+      updatePanelPreview(panel);
+    });
+  };
+
   const setActiveCategory = (categoryId) => {
     categoryButtons.forEach((button) => {
       button.classList.toggle(
@@ -24,12 +117,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     categoryPanels.forEach((panel) => {
-      panel.classList.toggle(
-        "is-active",
-        panel.dataset.galleryCategoryPanel === categoryId
-      );
+      const isActive = panel.dataset.galleryCategoryPanel === categoryId;
+
+      panel.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        updatePanelPreview(panel);
+      }
     });
   };
+
+  setupCompactPanels();
 
   categoryButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -62,28 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeImages = [];
   let activeIndex = 0;
 
-  const openViewer = (categoryId, index) => {
-    activeImages = galleryItems.filter(
-      (item) => item.dataset.galleryCategory === categoryId
-    );
-
-    activeIndex = index;
-    updateViewer();
-
-    lightbox.classList.add("is-open");
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.classList.add("np-gallery-viewer-open");
-  };
-
-  const closeViewer = () => {
-    lightbox.classList.remove("is-open");
-    lightbox.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("np-gallery-viewer-open");
-
-    viewerImage.src = "";
-    viewerImage.alt = "";
-  };
-
   const updateViewer = () => {
     if (!activeImages.length) {
       return;
@@ -103,6 +179,26 @@ document.addEventListener("DOMContentLoaded", () => {
         viewerImage.classList.remove("is-switching");
       }, 80);
     }, 90);
+  };
+
+  const openViewer = (categoryId, index) => {
+    activeImages = getCategoryItems(categoryId);
+    activeIndex = index;
+
+    updateViewer();
+
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("np-gallery-viewer-open");
+  };
+
+  const closeViewer = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("np-gallery-viewer-open");
+
+    viewerImage.src = "";
+    viewerImage.alt = "";
   };
 
   const showPrevious = () => {
@@ -130,9 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
   galleryItems.forEach((item) => {
     item.addEventListener("click", () => {
       const categoryId = item.dataset.galleryCategory;
-      const itemsInCategory = galleryItems.filter(
-        (entry) => entry.dataset.galleryCategory === categoryId
-      );
+      const itemsInCategory = getCategoryItems(categoryId);
 
       const index = itemsInCategory.indexOf(item);
       openViewer(categoryId, index);
