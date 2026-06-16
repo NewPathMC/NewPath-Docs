@@ -357,9 +357,8 @@ permalink: /
 
   <div class="np-logo-evolution" aria-label="Logo-Evolution von NewPath">
     <div class="np-logo-evolution-head">
-      <p class="np-section-kicker">Visuelle Entwicklung</p>
-      <h3>Logo-Evolution</h3>
-      <p>Von den ersten NewPath-Brandings bis zum aktuellen Look von <strong>Echoes of the Wild</strong>.</p>
+      <h3 id="logo-evolution" class="np-logo-evolution-title">Logo-Evolution</h3>
+      <p class="np-logo-evolution-intro">Von den ersten NewPath-Brandings bis zum aktuellen Look von <strong>Echoes of the Wild</strong>.</p>
     </div>
 
     <div class="np-logo-evolution-track">
