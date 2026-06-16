@@ -1,7 +1,13 @@
 {
-  "generated_at": "",
+  "generated_at": "2026-06-16T19:26:36+00:00",
   "source_file": "regelwerk.md",
   "added": [],
-  "edited": [],
+  "edited": [
+    {
+      "type": "edited",
+      "text": "Serverregelwerk",
+      "line": 3
+    }
+  ],
   "removed": []
 }
