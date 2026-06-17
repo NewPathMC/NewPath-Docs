@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v36
+   Konsolidierte CSS-Version v37
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -29,6 +29,7 @@
    24. Einheitliches Akkordeon ohne Symbol
    25. Startseite: Server-IP als Hero-Button
    26. Footer: schlichter Gamertransfer-Link
+   27. Server-ECHO-Box in ECHO-System integriert
 */
 
 :root {
@@ -2592,6 +2593,7 @@ body.np-page-sub .main-content > h3,
   .echo-page-box-rules,
   .echo-page-box-streamer,
   .echo-page-box-help,
+  .echo-page-box-server,
   .np-page-section,
   .np-content-box,
   .np-story-section,
@@ -2614,6 +2616,7 @@ body.np-page-sub .main-content > h3,
   .echo-page-box-rules:last-child,
   .echo-page-box-streamer:last-child,
   .echo-page-box-help:last-child,
+  .echo-page-box-server:last-child,
   .np-page-section:last-child,
   .np-content-box:last-child,
   .np-story-section:last-child,
@@ -4624,6 +4627,7 @@ img {
   .echo-page-box-rules,
   .echo-page-box-streamer,
   .echo-page-box-help,
+  .echo-page-box-server,
   .echo-page-box-duck {
     width: 100% !important;
     max-width: 100% !important;
@@ -4646,6 +4650,7 @@ img {
   .echo-page-box-rules .echo-page-image,
   .echo-page-box-streamer .echo-page-image,
   .echo-page-box-help .echo-page-image,
+  .echo-page-box-server .echo-page-image,
   .echo-page-box-duck .echo-page-image {
     width: 100% !important;
     justify-content: center !important;
@@ -4658,6 +4663,7 @@ img {
   .echo-page-box-rules .echo-page-image img,
   .echo-page-box-streamer .echo-page-image img,
   .echo-page-box-help .echo-page-image img,
+  .echo-page-box-server .echo-page-image img,
   .echo-page-box-duck .echo-page-image img {
     width: min(42vw, 8.75rem) !important;
     height: min(42vw, 8.75rem) !important;
@@ -4670,6 +4676,7 @@ img {
   .echo-page-box-rules .echo-page-content,
   .echo-page-box-streamer .echo-page-content,
   .echo-page-box-help .echo-page-content,
+  .echo-page-box-server .echo-page-content,
   .echo-page-box-duck .echo-page-content {
     width: 100% !important;
     max-width: 100% !important;
@@ -4683,6 +4690,7 @@ img {
   .echo-page-box-rules h2,
   .echo-page-box-streamer h2,
   .echo-page-box-help h2,
+  .echo-page-box-server h2,
   .echo-page-box-duck h2 {
     font-size: clamp(1.45rem, 7vw, 2rem) !important;
     line-height: 1.12 !important;
@@ -4696,6 +4704,7 @@ img {
   .echo-page-box-rules p,
   .echo-page-box-streamer p,
   .echo-page-box-help p,
+  .echo-page-box-server p,
   .echo-page-box-duck p {
     text-align: center !important;
   }
@@ -9869,6 +9878,7 @@ body.np-page-sub .main-content > h1 {
 .echo-page-box-rules h2,
 .echo-page-box-streamer h2,
 .echo-page-box-help h2,
+.echo-page-box-server h2,
 .echo-page-box-duck h2,
 .np-home-v2 .np-pathfinder-copy h2 {
   font-family: var(--np-font-heading) !important;
@@ -10157,6 +10167,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-rules,
 .echo-page-box-streamer,
 .echo-page-box-help,
+.echo-page-box-server,
 .echo-page-box-duck,
 .np-home-v2 .np-pathfinder-dashboard {
   border: 1px solid var(--np-ui-border) !important;
@@ -10181,6 +10192,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-rules:hover,
 .echo-page-box-streamer:hover,
 .echo-page-box-help:hover,
+.echo-page-box-server:hover,
 .echo-page-box-duck:hover,
 .np-home-v2 .np-pathfinder-dashboard:hover {
   border-color: rgba(0, 230, 246, 0.46) !important;
@@ -10199,6 +10211,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-rules h2,
 .echo-page-box-streamer h2,
 .echo-page-box-help h2,
+.echo-page-box-server h2,
 .echo-page-box-duck h2,
 .np-home-v2 .np-pathfinder-copy h2 {
   color: var(--np-ui-heading-color) !important;
@@ -10219,6 +10232,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-rules p,
 .echo-page-box-streamer p,
 .echo-page-box-help p,
+.echo-page-box-server p,
 .echo-page-box-duck p,
 .np-home-v2 .np-pathfinder-copy p:last-child {
   color: var(--np-ui-text-color) !important;
@@ -10245,6 +10259,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-rules:hover .echo-page-image img,
 .echo-page-box-streamer:hover .echo-page-image img,
 .echo-page-box-help:hover .echo-page-image img,
+.echo-page-box-server:hover .echo-page-image img,
 .echo-page-box-duck:hover .echo-page-image img,
 .np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
   transform: translateY(-1px) scale(1.012) !important;
@@ -10457,6 +10472,7 @@ body.np-page-home h3 .anchor-link {
 .echo-page-box-rules,
 .echo-page-box-streamer,
 .echo-page-box-help,
+.echo-page-box-server,
 .echo-page-box-duck,
 .np-home-v2 .np-pathfinder-dashboard {
   transition: none !important;
@@ -10469,6 +10485,7 @@ body.np-page-home h3 .anchor-link {
 .echo-page-box-rules:hover,
 .echo-page-box-streamer:hover,
 .echo-page-box-help:hover,
+.echo-page-box-server:hover,
 .echo-page-box-duck:hover,
 .np-home-v2 .np-pathfinder-dashboard:hover {
   border-color: var(--np-ui-border) !important;
@@ -10524,6 +10541,7 @@ body.np-page-home h3 .anchor-link {
 .echo-page-box-rules:hover .echo-page-image img,
 .echo-page-box-streamer:hover .echo-page-image img,
 .echo-page-box-help:hover .echo-page-image img,
+.echo-page-box-server:hover .echo-page-image img,
 .echo-page-box-duck:hover .echo-page-image img,
 .np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
   transform: none !important;
@@ -10700,6 +10718,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules,
 .echo-page-box-streamer,
 .echo-page-box-help,
+.echo-page-box-server,
 .echo-page-box-duck,
 .np-home-v2 .np-pathfinder-dashboard {
   transition: none !important;
@@ -10712,6 +10731,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules:hover,
 .echo-page-box-streamer:hover,
 .echo-page-box-help:hover,
+.echo-page-box-server:hover,
 .echo-page-box-duck:hover,
 .np-home-v2 .np-pathfinder-dashboard:hover {
   transform: none !important;
@@ -10735,6 +10755,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules .echo-page-image,
 .echo-page-box-streamer .echo-page-image,
 .echo-page-box-help .echo-page-image,
+.echo-page-box-server .echo-page-image,
 .echo-page-box-duck .echo-page-image,
 .np-home-v2 .np-pathfinder-image {
   position: relative !important;
@@ -10768,6 +10789,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules .echo-page-image::before,
 .echo-page-box-streamer .echo-page-image::before,
 .echo-page-box-help .echo-page-image::before,
+.echo-page-box-server .echo-page-image::before,
 .echo-page-box-duck .echo-page-image::before,
 .np-home-v2 .np-pathfinder-image::before {
   display: none !important;
@@ -10783,6 +10805,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules .echo-page-image::after,
 .echo-page-box-streamer .echo-page-image::after,
 .echo-page-box-help .echo-page-image::after,
+.echo-page-box-server .echo-page-image::after,
 .echo-page-box-duck .echo-page-image::after,
 .np-home-v2 .np-pathfinder-image::after {
   content: "" !important;
@@ -10816,6 +10839,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules .echo-page-image img,
 .echo-page-box-streamer .echo-page-image img,
 .echo-page-box-help .echo-page-image img,
+.echo-page-box-server .echo-page-image img,
 .echo-page-box-duck .echo-page-image img,
 .np-home-v2 .np-pathfinder-image img {
   position: relative !important;
@@ -10838,6 +10862,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-rules:hover .echo-page-image img,
 .echo-page-box-streamer:hover .echo-page-image img,
 .echo-page-box-help:hover .echo-page-image img,
+.echo-page-box-server:hover .echo-page-image img,
 .echo-page-box-duck:hover .echo-page-image img,
 .np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
   transform: none !important;
@@ -11671,6 +11696,7 @@ header .np-header-brand-subtitle {
   .echo-page-box-rules,
   .echo-page-box-streamer,
   .echo-page-box-help,
+  .echo-page-box-server,
   .echo-page-box-duck {
     border-left-width: 2px !important;
   }
@@ -14778,6 +14804,18 @@ body.np-page-home .np-back-to-top {
 .echo-page-box-server {
   border-color: var(--np-system-border) !important;
   background: var(--np-section-bg) !important;
+}
+
+.echo-page-box-server,
+.echo-page-box-server:hover,
+.echo-page-box-server:focus-within {
+  transform: none !important;
+}
+
+.echo-page-box-server:hover {
+  border-color: var(--np-system-border) !important;
+  background: var(--np-section-bg) !important;
+  box-shadow: var(--np-ui-panel-shadow, 0 18px 38px rgba(0, 0, 0, 0.28)) !important;
 }
 
 .echo-page-box-server p:not(.echo-page-kicker) {
