@@ -64,13 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
     setUpdated();
   }
 
+  function setOffline() {
+    setState("offline");
+    label.textContent = "Offline";
+    players.textContent = "0";
+    ping.textContent = "–";
+    setUpdated();
+  }
+
   function renderStatus(data, requestTime) {
     if (!data || data.online !== true) {
-      setState("offline");
-      label.textContent = "Offline";
-      players.textContent = "0";
-      ping.textContent = "–";
-      setUpdated();
+      setOffline();
       return;
     }
 
@@ -113,7 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const startedAt = performance.now();
 
     try {
-      const endpoint = "https://api.mcsrvstat.us/3/" + encodeURIComponent(address);
+      /*
+        Wir nutzen bewusst mcstatus.io statt mcsrvstat.us.
+        mcsrvstat.us cached Antworten mehrere Minuten, wodurch der Server
+        nach dem Stoppen noch als online angezeigt werden kann.
+      */
+      const endpoint = "https://api.mcstatus.io/v2/status/java/" + encodeURIComponent(address) + "?_=" + Date.now();
+
       const response = await fetch(endpoint, {
         cache: "no-store",
         headers: {
