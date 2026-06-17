@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:13 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
@@ -30,81 +30,56 @@ permalink: /server.html
   </div>
 </section>
 
-<section class="np-page-section np-server-section">
+<section class="np-page-section np-server-section np-server-dashboard">
   <div class="np-section-header">
     <h1 class="np-title">Server & Welt</h1>
-    <p class="np-section-lead">
-      Diese Seite bündelt die wichtigsten Informationen zum aktiven NewPath-Server.
-      Details zu Installation, RAM, Voice Chat und Fehlerbehebung findest du weiterhin in der Modpack Hilfe.
-    </p>
   </div>
 
-  <div class="np-server-top-grid">
-    <article class="np-server-info-card np-server-info-card-large">
-      <p class="np-server-kicker">Zugang</p>
-      <h2>Whitelist-Projekt</h2>
-      <p>
-        NewPath ist ein freigeschaltetes Community-Projekt. Die Server-IP wird nach erfolgreicher
-        Whitelist im Discord bereitgestellt.
-      </p>
-      <ul>
-        <li>Whitelist über Discord</li>
-        <li>Server-IP im freigeschalteten Bereich</li>
-        <li>Regeln werden mit der Whitelist akzeptiert</li>
-      </ul>
-    </article>
+  <section class="np-server-status-hero" data-np-server-status data-server-address="newpath.minecraft.best" aria-label="Aktueller Serverstatus">
+    <div class="np-server-status-hero-main">
+      <p class="np-server-kicker">Live-Status</p>
+      <div class="np-server-status-titleline">
+        <h2 data-np-status-label>Wird geladen …</h2>
+        <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
+      </div>
+      <p data-np-status-detail>Serverstatus wird abgefragt.</p>
+    </div>
 
-    <aside class="np-server-side-column">
-      <section class="np-server-status-panel" data-np-server-status data-server-address="newpath.minecraft.best" aria-label="Aktueller Serverstatus">
-        <div class="np-server-status-main">
-          <p class="np-server-kicker">Live-Status</p>
-          <div class="np-server-status-titleline">
-            <h2 data-np-status-label>Wird geladen …</h2>
-            <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
-          </div>
-          <p data-np-status-detail>Serverstatus wird abgefragt.</p>
-        </div>
+    <div class="np-server-status-hero-stats">
+      <span>
+        <small>Spieler</small>
+        <strong data-np-status-players>–</strong>
+      </span>
+      <span>
+        <small>Serverantwort</small>
+        <strong data-np-status-version>–</strong>
+      </span>
+      <span>
+        <small>Modpack</small>
+        <strong>Minecraft 26.1.2</strong>
+      </span>
+    </div>
 
-        <div class="np-server-status-stats">
-          <span>
-            <small>Spieler</small>
-            <strong data-np-status-players>–</strong>
-          </span>
-          <span>
-            <small>Serverantwort</small>
-            <strong data-np-status-version>–</strong>
-          </span>
-        </div>
+    <button class="np-server-refresh" type="button" data-np-status-refresh>
+      Status aktualisieren
+    </button>
+  </section>
 
-        <button class="np-server-refresh" type="button" data-np-status-refresh>
-          Status aktualisieren
-        </button>
-      </section>
-
-      <article class="np-server-info-card np-server-version-card">
-        <p class="np-server-kicker">Modpack-Version</p>
-        <h2>Minecraft 26.1.2</h2>
-        <p>
-          NeoForge · NewPath – Echoes of the Wild
-        </p>
-      </article>
-    </aside>
-  </div>
-
-  <div class="np-server-info-grid">
-    <article class="np-server-info-card">
+  <div class="np-server-dashboard-grid">
+    <article class="np-server-dashboard-card">
       <p class="np-server-kicker">Neustarts</p>
       <h2>Automatische Restarts</h2>
       <p>
         Regelmäßige Neustarts helfen dabei, den Server langfristig stabil zu halten.
       </p>
-      <ul>
-        <li>05:00 Uhr</li>
-        <li>17:00 Uhr</li>
-      </ul>
+
+      <div class="np-server-time-list">
+        <span>05:00 Uhr</span>
+        <span>17:00 Uhr</span>
+      </div>
     </article>
 
-    <article class="np-server-info-card">
+    <article class="np-server-dashboard-card np-server-map-card">
       <p class="np-server-kicker">Weltkarte</p>
       <h2>Webmap vorbereitet</h2>
       <p>

@@ -15526,3 +15526,263 @@ body.np-page-home .np-back-to-top {
     grid-template-columns: 1fr;
   }
 }
+
+/* 89. Serverseite als Dashboard */
+
+/*
+  Server & Welt ist jetzt ein Dashboard:
+  - kein Zugangs-/FAQ-Block
+  - Live-Status als Hauptmodul
+  - darunter nur Restarts und Weltkarte
+*/
+
+.np-server-dashboard .np-section-header {
+  margin-bottom: 1.1rem !important;
+}
+
+.np-server-dashboard .np-section-lead,
+.np-server-top-grid,
+.np-server-info-grid-main,
+.np-server-info-card-large,
+.np-server-version-card,
+.np-server-side-column,
+.np-server-overview,
+.np-server-main-card,
+.np-server-mini-card,
+.np-server-status-panel,
+.np-server-info-grid {
+  display: none !important;
+}
+
+.np-server-status-hero,
+.np-server-dashboard-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(64, 116, 138, 0.48) !important;
+  border-radius: 0.9rem !important;
+  background:
+    radial-gradient(circle at 9% 0%, rgba(0, 230, 246, 0.095), transparent 18rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.06), transparent 15rem),
+    linear-gradient(180deg, rgba(8, 30, 38, 0.88), rgba(4, 18, 25, 0.94)) !important;
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.26),
+    inset 0 0 34px rgba(0, 230, 246, 0.026) !important;
+}
+
+.np-server-status-hero::before,
+.np-server-dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(0, 230, 246, 0.72), rgba(236, 183, 110, 0.32), transparent);
+  opacity: 0.82;
+}
+
+.np-server-status-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(21rem, 0.85fr) auto;
+  align-items: center;
+  gap: 1.15rem;
+  min-height: 10rem;
+  margin: 1.2rem 0 1rem !important;
+  padding: clamp(1.15rem, 1.7vw, 1.55rem) !important;
+}
+
+.np-server-status-hero-main {
+  min-width: 0;
+}
+
+.np-server-status-titleline {
+  display: flex;
+  align-items: center;
+  gap: 0.72rem;
+}
+
+.np-server-status-titleline h2 {
+  margin: 0 0 0.35rem !important;
+  color: var(--np-type-title) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.55rem, 2.2vw, 2.35rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.05 !important;
+}
+
+.np-server-status-hero-main p:not(.np-server-kicker) {
+  max-width: 46rem;
+  margin: 0.35rem 0 0 !important;
+  color: var(--np-type-body) !important;
+  font-size: 0.98rem !important;
+  line-height: 1.58 !important;
+}
+
+.np-server-live-dot {
+  flex: 0 0 auto;
+  width: 0.78rem;
+  height: 0.78rem;
+  border-radius: 999px;
+  background: rgba(244, 207, 127, 0.7);
+  box-shadow: 0 0 0 3px rgba(244, 207, 127, 0.08);
+}
+
+.np-server-status-hero.is-loading .np-server-live-dot {
+  background: rgba(0, 230, 246, 0.9);
+  box-shadow: 0 0 0 3px rgba(0, 230, 246, 0.12), 0 0 18px rgba(0, 230, 246, 0.44);
+}
+
+.np-server-status-hero.is-online .np-server-live-dot {
+  background: #58d86d;
+  box-shadow: 0 0 0 3px rgba(88, 216, 109, 0.14), 0 0 18px rgba(88, 216, 109, 0.42);
+}
+
+.np-server-status-hero.is-offline .np-server-live-dot,
+.np-server-status-hero.is-error .np-server-live-dot {
+  background: #d85b58;
+  box-shadow: 0 0 0 3px rgba(216, 91, 88, 0.14), 0 0 18px rgba(216, 91, 88, 0.34);
+}
+
+.np-server-status-hero-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+}
+
+.np-server-status-hero-stats span {
+  display: block;
+  padding: 0.66rem 0.75rem;
+  border: 1px solid rgba(64, 116, 138, 0.38);
+  border-radius: 0.58rem;
+  background: rgba(0, 9, 15, 0.24);
+}
+
+.np-server-status-hero-stats small {
+  display: block;
+  margin-bottom: 0.18rem;
+  color: var(--np-type-muted, rgba(244, 231, 205, 0.62));
+  font-family: var(--np-font-label);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.np-server-status-hero-stats strong {
+  display: block;
+  color: var(--np-type-title);
+  font-family: var(--np-font-heading);
+  font-size: 0.9rem;
+  line-height: 1.12;
+}
+
+.np-server-refresh {
+  min-width: 10.5rem;
+  padding: 0.62rem 0.76rem;
+  border: 1px solid rgba(0, 230, 246, 0.32);
+  border-radius: 0.58rem;
+  color: var(--np-type-kicker);
+  background: rgba(0, 9, 15, 0.26);
+  font-family: var(--np-font-label);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.np-server-refresh:hover:not(:disabled) {
+  border-color: rgba(0, 230, 246, 0.56);
+  box-shadow: 0 0 18px rgba(0, 230, 246, 0.12);
+}
+
+.np-server-refresh:disabled {
+  cursor: progress;
+  opacity: 0.62;
+}
+
+.np-server-dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  margin: 1rem 0 0 !important;
+}
+
+.np-server-dashboard-card {
+  padding: 1.15rem 1.2rem !important;
+}
+
+.np-server-dashboard-card h2 {
+  margin: 0 0 0.5rem !important;
+  color: var(--np-type-title) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.08rem, 1.18vw, 1.28rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.18 !important;
+}
+
+.np-server-dashboard-card p:not(.np-server-kicker) {
+  margin: 0 !important;
+  color: var(--np-type-body) !important;
+  font-size: 0.93rem !important;
+  line-height: 1.58 !important;
+}
+
+.np-server-time-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.9rem;
+}
+
+.np-server-time-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7.5rem;
+  padding: 0.58rem 0.78rem;
+  border: 1px solid rgba(0, 230, 246, 0.28);
+  border-radius: 999px;
+  color: var(--np-type-title);
+  background: rgba(0, 9, 15, 0.24);
+  font-family: var(--np-font-label);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.np-server-placeholder {
+  margin-top: 0.9rem !important;
+  padding: 0.78rem 0.9rem !important;
+  border: 1px dashed rgba(0, 230, 246, 0.3);
+  border-radius: 0.58rem;
+  color: var(--np-type-title);
+  background: rgba(0, 9, 15, 0.22);
+  font-family: var(--np-font-label);
+  font-size: 0.74rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+@media (max-width: 76rem) {
+  .np-server-status-hero {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .np-server-status-hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .np-server-refresh {
+    width: 100%;
+  }
+}
+
+@media (max-width: 56rem) {
+  .np-server-dashboard-grid,
+  .np-server-status-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .np-server-status-titleline h2 {
+    font-size: clamp(1.45rem, 9vw, 2rem) !important;
+  }
+}
