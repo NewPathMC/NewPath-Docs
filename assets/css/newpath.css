@@ -15006,3 +15006,176 @@ body.np-page-home .np-back-to-top {
     padding: 1rem !important;
   }
 }
+
+/* 86. Server-Seite visueller Feinschliff */
+
+/*
+  Nachschliff für /server.html:
+  - Karten wirken weniger wie fremde Dashboard-Widgets
+  - Abstände orientieren sich stärker am restlichen NewPath-Boxsystem
+  - Status-/Feature-Karten bekommen mehr ruhige Fläche und weniger harte Kanten
+  - kleine Cyan-Marker werden dezenter
+*/
+
+.np-server-section {
+  padding-top: clamp(1.35rem, 2.2vw, 2rem) !important;
+}
+
+.np-server-section > .np-section-header {
+  margin-bottom: 1.15rem !important;
+}
+
+.np-server-section > .np-section-header .np-title {
+  margin-bottom: 0.5rem !important;
+}
+
+.np-server-status-card,
+.np-server-card,
+.np-server-feature,
+.np-server-note {
+  border-color: rgba(64, 116, 138, 0.42) !important;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(0, 230, 246, 0.06), transparent 14rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.045), transparent 13rem),
+    linear-gradient(180deg, rgba(8, 30, 38, 0.82), rgba(4, 18, 25, 0.9)) !important;
+}
+
+.np-server-status-card {
+  min-height: 7.1rem !important;
+  margin-top: 1.15rem !important;
+  margin-bottom: 1.15rem !important;
+  padding: clamp(1rem, 1.35vw, 1.3rem) clamp(1.05rem, 1.7vw, 1.55rem) !important;
+}
+
+.np-server-status-card::before,
+.np-server-card::before,
+.np-server-feature::before,
+.np-server-note::before {
+  width: 1px !important;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 230, 246, 0.58),
+    rgba(236, 183, 110, 0.26),
+    rgba(0, 230, 246, 0)
+  ) !important;
+}
+
+.np-server-grid {
+  gap: 1rem !important;
+  margin-top: 1.05rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.np-server-card {
+  min-height: 16.2rem !important;
+  padding: 1.15rem 1.05rem 1.1rem !important;
+}
+
+.np-server-feature-grid {
+  gap: 1rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.np-server-feature {
+  min-height: 10.4rem !important;
+  padding: 1.15rem 1.2rem !important;
+}
+
+.np-server-note {
+  margin-top: 1rem !important;
+  padding: 1rem 1.2rem !important;
+}
+
+.np-server-card-icon,
+.np-philosophy-merge-icon {
+  width: 1.65rem !important;
+  height: 1.65rem !important;
+  margin-bottom: 0.78rem !important;
+  border-radius: 0.52rem !important;
+  opacity: 0.88 !important;
+  background:
+    radial-gradient(circle at 48% 42%, rgba(0, 230, 246, 0.22), transparent 46%),
+    rgba(0, 9, 15, 0.28) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 207, 127, 0.035),
+    0 0 14px rgba(0, 230, 246, 0.055) !important;
+}
+
+.np-server-card-icon::after,
+.np-philosophy-merge-icon::after {
+  width: 0.48rem !important;
+  height: 0.48rem !important;
+  box-shadow:
+    0 0 0 2px rgba(0, 230, 246, 0.1),
+    0 0 12px rgba(0, 230, 246, 0.34) !important;
+}
+
+.np-server-card h2,
+.np-server-feature h2,
+.np-server-note h2,
+.np-server-status-card h2 {
+  font-size: clamp(1rem, 1.05vw, 1.18rem) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.np-server-card p,
+.np-server-feature p,
+.np-server-note p,
+.np-server-status-card p {
+  font-size: 0.93rem !important;
+  line-height: 1.6 !important;
+}
+
+.np-server-card ul {
+  margin-top: 0.78rem !important;
+  padding-left: 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+.np-server-card li + li {
+  margin-top: 0.34rem !important;
+}
+
+.np-server-status-pill {
+  min-width: 5.9rem !important;
+  padding: 0.36rem 0.72rem !important;
+  font-size: 0.66rem !important;
+  box-shadow: 0 0 0.85rem rgba(0, 230, 246, 0.09) !important;
+}
+
+.np-server-placeholder {
+  margin-top: 0.9rem !important;
+  padding: 0.75rem 0.9rem !important;
+  border-radius: 0.52rem !important;
+  background: rgba(0, 9, 15, 0.22) !important;
+  font-size: 0.72rem !important;
+}
+
+@media (min-width: 76.001rem) {
+  .np-server-card:nth-child(1),
+  .np-server-card:nth-child(2),
+  .np-server-card:nth-child(3),
+  .np-server-card:nth-child(4) {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 44rem) {
+  .np-server-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .np-server-status-card,
+  .np-server-card,
+  .np-server-feature,
+  .np-server-note {
+    min-height: auto !important;
+  }
+
+  .np-server-card {
+    padding: 1rem !important;
+  }
+}
