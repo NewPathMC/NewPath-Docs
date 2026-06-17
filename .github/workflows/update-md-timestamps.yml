@@ -65,7 +65,11 @@ jobs:
         if: contains(steps.changed-files.outputs.files, 'regelwerk.md')
         shell: bash
         run: |
-          python scripts/generate_rule_changes.py             --before "${{ github.event.before }}"             --after "${{ github.sha }}"             --file "regelwerk.md"             --output "assets/data/rule-changes.json"
+          python scripts/generate_rule_changes.py \
+            --before "${{ github.event.before }}" \
+            --after "${{ github.sha }}" \
+            --file "regelwerk.md" \
+            --output "assets/data/rule-changes.json"
 
       - name: Zeitstempel aktualisieren
         if: steps.changed-files.outputs.files != ''
@@ -86,9 +90,7 @@ jobs:
             echo "Aktualisiere Zeitstempel in: $file"
 
             if grep -q "<!-- AUTO_UPDATED_START -->" "$file"; then
-              sed -i "/<!-- AUTO_UPDATED_START -->/,/<!-- AUTO_UPDATED_END -->/c\<!-- AUTO_UPDATED_START -->
-<p class=\"np-last-updated\">Zuletzt aktualisiert: $TIMESTAMP</p>
-<!-- AUTO_UPDATED_END -->" "$file"
+              python -c 'import re,sys,pathlib; p=pathlib.Path(sys.argv[1]); ts=sys.argv[2]; t=p.read_text(encoding="utf-8"); r="<!-- AUTO_UPDATED_START -->\n<p class=\"np-last-updated\">Zuletzt aktualisiert: "+ts+"</p>\n<!-- AUTO_UPDATED_END -->"; p.write_text(re.sub(r"<!-- AUTO_UPDATED_START -->[\s\S]*?<!-- AUTO_UPDATED_END -->", r, t, count=1), encoding="utf-8")' "$file" "$TIMESTAMP"
             else
               echo "Kein AUTO_UPDATED-Block gefunden in: $file"
             fi
