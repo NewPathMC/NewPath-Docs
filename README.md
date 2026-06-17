@@ -13,14 +13,33 @@ https://www.newpath-mc.de/
 Die Dokumentation umfasst aktuell folgende Bereiche:
 
 - **Startseite** – Überblick über NewPath, ECHO, Projektbereiche, Ecosystem, Entstehungsgeschichte und Logo-Evolution
-- **Regelwerk** – öffentliches Serverregelwerk mit automatischer Änderungsmarkierung
-- **Philosophie** – Grundgedanke, Spieltempo, Community-Anspruch und Projektidentität
-- **FAQ** – häufige Fragen rund um Zugang, Installation, Technik, Voice Chat und Servergrundlagen
+- **Regeln** – Philosophie, Grundsätze und öffentliches Serverregelwerk auf einer gemeinsamen Seite
+- **Server & Welt** – zentrale Übersicht zu Serverzugang, Versionen, Neustarts, Support und späteren Live-Funktionen
 - **Modpack Hilfe** – Hilfen zu Installation, CurseForge, RAM-Zuweisung, Voice Chat, ersten Schritten und später einzelnen Mod-Guides
+- **FAQ** – häufige Fragen rund um Zugang, Technik, Servergrundlagen und Community
 - **Team** – Vorstellung des Projektteams
 - **Streamer** – Informationen und Assets für NewPath-Streamer
 - **Galerie** – Bildsammlung mit Kategorien und Lightbox
 - **Geheime NewPath-Ente** – kleines Easter Egg der Webseite
+
+---
+
+## Seitenstruktur
+
+```text
+Startseite
+├─ Regeln
+│  ├─ Philosophie
+│  └─ Serverregelwerk
+├─ Server & Welt
+├─ Modpack Hilfe
+├─ FAQ
+├─ Team
+├─ Streamer
+└─ Galerie
+```
+
+Die frühere separate Philosophie-Seite wurde in die Seite **Regeln** integriert. Dadurch stehen Grundidee und verbindliches Regelwerk direkt zusammen.
 
 ---
 
@@ -29,10 +48,10 @@ Die Dokumentation umfasst aktuell folgende Bereiche:
 ```text
 .
 ├─ index.md                         # Startseite
-├─ regelwerk.md                     # Regelwerk
-├─ philosophie.md                   # Philosophie
-├─ faq.md                           # FAQ
+├─ regelwerk.md                     # Regeln: Philosophie + Serverregelwerk
+├─ server.md                        # Server & Welt
 ├─ modpack-hilfe.md                 # Modpack-Hilfe
+├─ faq.md                           # FAQ
 ├─ team.md                          # Teamseite
 ├─ streamer.md                      # Streamer-Seite
 ├─ galerie.md                       # Galerie
@@ -64,6 +83,27 @@ Die Dokumentation umfasst aktuell folgende Bereiche:
 └─ scripts/
    └─ generate_rule_changes.py      # Generator für Regelwerksänderungen
 ```
+
+---
+
+## Navigation
+
+Die Hauptnavigation ist aktuell wie folgt aufgebaut:
+
+```text
+Startseite
+Regeln
+Server & Welt
+Modpack Hilfe
+FAQ
+Team
+Streamer
+Galerie
+```
+
+Die Navigation wird über `_includes/head_custom.html` erzeugt. Dort werden Desktop- und Mobile-Navigation gepflegt.
+
+Die Reihenfolge der Seiten wird zusätzlich über `nav_order` in den jeweiligen Markdown-Dateien gepflegt.
 
 ---
 
@@ -138,7 +178,15 @@ Die Änderungslogik soll nur echte Regelblöcke auswerten, also Inhalte innerhal
 <article class="np-rule-block">
 ```
 
-Nicht ausgewertet werden sollen Header, ECHO-Box, Seitentitel oder Änderungsübersicht.
+Nicht ausgewertet werden sollen:
+
+```text
+- Header
+- ECHO-Box
+- Philosophie-Bereich
+- Seitentitel
+- Änderungsübersicht
+```
 
 Um die Änderungsdaten manuell zurückzusetzen, kann `assets/data/rule-changes.json` auf folgenden Inhalt gesetzt werden:
 
@@ -150,6 +198,25 @@ Um die Änderungsdaten manuell zurückzusetzen, kann `assets/data/rule-changes.j
   "removed": []
 }
 ```
+
+---
+
+## Server & Welt
+
+Die Seite **Server & Welt** bündelt Informationen zum laufenden Serverbetrieb.
+
+Aktuell vorgesehen:
+
+```text
+- Serverzugang / Whitelist-Hinweis
+- Minecraft-/NeoForge-/Modpack-Version
+- automatische Restart-Zeiten
+- Support-Hinweise
+- Platzhalter für Live-Serverstatus
+- Platzhalter für spätere Weltkarte / Webmap
+```
+
+Live-Funktionen wie Serverstatus oder Weltkarte sind vorbereitet, aber noch nicht produktiv eingebunden.
 
 ---
 
