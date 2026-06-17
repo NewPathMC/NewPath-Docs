@@ -39,7 +39,6 @@ permalink: /server.html
     <section class="np-server-status-hero np-server-status-discord" data-np-server-status data-server-address="newpath.minecraft.best" aria-label="Aktueller Serverstatus">
       <div class="np-server-status-header">
         <div>
-          <p class="np-server-kicker">Serverstatus</p>
           <h2>NewPath Serverstatus</h2>
         </div>
         <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
@@ -81,7 +80,6 @@ permalink: /server.html
     </section>
 
     <article class="np-server-dashboard-card np-server-restart-card">
-      <p class="np-server-kicker">Neustarts</p>
       <h2>Automatische Restarts</h2>
       <p>
         Regelmäßige Neustarts helfen dabei, den Server langfristig stabil zu halten.
@@ -97,7 +95,6 @@ permalink: /server.html
   <article class="np-server-dashboard-card np-server-map-card np-bluemap-card">
     <div class="np-bluemap-head">
       <div>
-        <p class="np-server-kicker">Weltkarte</p>
         <h2>Live-Weltkarte</h2>
         <p>
           Die BlueMap zeigt die aktuelle NewPath-Welt direkt im Browser. Du kannst die Karte bewegen,

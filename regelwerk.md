@@ -41,7 +41,6 @@ permalink: /regelwerk.html
 
   <div class="np-card-grid np-card-grid-1 np-philosophy-grid">
     <article class="np-info-card">
-      <span class="np-card-kicker">01</span>
       <h2 class="np-card-title">Im eigenen Tempo</h2>
       <p class="np-card-text">
         NewPath ist eine Welt für Spieler, die Minecraft in ihrem eigenen Tempo erleben möchten.
@@ -49,7 +48,6 @@ permalink: /regelwerk.html
     </article>
 
     <article class="np-info-card">
-      <span class="np-card-kicker">02</span>
       <h2 class="np-card-title">Entdeckung, Kreativität und Gemeinschaft</h2>
       <p class="np-card-text">
         Im Mittelpunkt stehen Entdeckung, Kreativität und Gemeinschaft. Ob allein oder im
@@ -59,7 +57,6 @@ permalink: /regelwerk.html
     </article>
 
     <article class="np-info-card">
-      <span class="np-card-kicker">03</span>
       <h2 class="np-card-title">Bewusst gestaltet</h2>
       <p class="np-card-text">
         NewPath ist bewusst gestaltet und unterscheidet sich deutlich von klassischen
@@ -71,7 +68,6 @@ permalink: /regelwerk.html
     </article>
 
     <article class="np-info-card">
-      <span class="np-card-kicker">04</span>
       <h2 class="np-card-title">Respektvolles Miteinander</h2>
       <p class="np-card-text">
         Respekt, Fairness und gegenseitige Rücksichtnahme bilden die Grundlage unserer
@@ -81,7 +77,6 @@ permalink: /regelwerk.html
     </article>
 
     <article class="np-info-card">
-      <span class="np-card-kicker">05</span>
       <h2 class="np-card-title">Gemeinsam weiterentwickeln</h2>
       <p class="np-card-text">
         NewPath entwickelt sich gemeinsam mit seiner Community weiter. Feedback, Ideen
@@ -94,7 +89,6 @@ permalink: /regelwerk.html
 
 <section class="np-page-section np-rules-section" id="serverregelwerk">
   <div class="np-section-header">
-    <p class="np-section-kicker">Verbindliche Regeln</p>
     <h1 class="np-title">Serverregelwerk</h1>
   </div>
 
