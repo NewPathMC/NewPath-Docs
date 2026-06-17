@@ -5,14 +5,30 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  /*
+    Website-Version des Discord-Statusprinzips:
+    - automatische Aktualisierung alle 10 Sekunden
+    - gleiche Kernwerte wie im Discord-Embed
+    - keine MOTD
+    - keine technische Serverantwort
+    - Button bleibt nur als manuelle Sofort-Aktualisierung
+  */
+
   const FALLBACK_SERVER_ADDRESS = "newpath.minecraft.best";
-  const address = (card.dataset.serverAddress || FALLBACK_SERVER_ADDRESS || "").trim();
+  const FALLBACK_SERVER_PORT = "25565";
+  const REFRESH_SECONDS = 10;
+
+  const rawAddress = (card.dataset.serverAddress || FALLBACK_SERVER_ADDRESS || "").trim();
+  const address = rawAddress.includes(":") ? rawAddress : rawAddress + ":" + FALLBACK_SERVER_PORT;
 
   const label = card.querySelector("[data-np-status-label]");
   const players = card.querySelector("[data-np-status-players]");
   const ping = card.querySelector("[data-np-status-ping]");
   const updated = card.querySelector("[data-np-status-updated]");
   const refreshButton = card.querySelector("[data-np-status-refresh]");
+
+  let refreshTimer = null;
+  let isLoading = false;
 
   function setState(state) {
     card.classList.remove("is-online", "is-offline", "is-loading", "is-error", "is-unconfigured");
@@ -25,35 +41,31 @@ document.addEventListener("DOMContentLoaded", function () {
       month: "2-digit",
       year: "numeric",
       hour: "2-digit",
-      minute: "2-digit"
+      minute: "2-digit",
+      second: "2-digit"
     }).format(date).replace(",", " –");
   }
 
-  function setUpdated() {
+  function setUpdated(prefix = "Letzte Aktualisierung") {
     if (updated) {
-      updated.textContent = "Letzte Aktualisierung: " + formatTime(new Date());
+      updated.textContent = prefix + ": " + formatTime(new Date()) + " · alle " + REFRESH_SECONDS + "s";
     }
   }
 
-  function finishButton() {
+  function setButtonLoading(active) {
     if (!refreshButton) {
       return;
     }
 
-    refreshButton.disabled = false;
-    refreshButton.textContent = "Aktualisieren";
+    refreshButton.disabled = active;
+    refreshButton.textContent = active ? "Prüft …" : "Aktualisieren";
   }
 
   function setLoading() {
     setState("loading");
-    label.textContent = "Wird geladen …";
-    players.textContent = "–";
+    label.textContent = "Wird geprüft …";
     ping.textContent = "–";
-
-    if (refreshButton) {
-      refreshButton.disabled = true;
-      refreshButton.textContent = "Lädt …";
-    }
+    setButtonLoading(true);
   }
 
   function setUnconfigured() {
@@ -67,33 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function setOffline() {
     setState("offline");
     label.textContent = "Offline";
-    players.textContent = "0";
+    players.textContent = "0/0";
     ping.textContent = "–";
     setUpdated();
   }
 
-  function renderStatus(data, requestTime) {
-    if (!data || data.online !== true) {
-      setOffline();
-      return;
-    }
-
-    const onlinePlayers = data.players && typeof data.players.online === "number"
-      ? data.players.online
-      : 0;
-
-    const maxPlayers = data.players && typeof data.players.max === "number"
-      ? data.players.max
-      : null;
-
-    setState("online");
-    label.textContent = "Online";
-    players.textContent = maxPlayers !== null ? onlinePlayers + "/" + maxPlayers : String(onlinePlayers);
-    ping.textContent = requestTime + " ms";
-    setUpdated();
-  }
-
-  function setError(error) {
+  function setUnknown(error) {
     setState("error");
     label.textContent = "Unbekannt";
     players.textContent = "–";
@@ -105,50 +96,118 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  async function loadStatus() {
-    if (!address) {
-      setUnconfigured();
-      finishButton();
+  function readMcstatusIo(data, requestTime) {
+    if (!data || data.online !== true) {
+      return null;
+    }
+
+    const onlinePlayers =
+      data.players && typeof data.players.online === "number"
+        ? data.players.online
+        : 0;
+
+    const maxPlayers =
+      data.players && typeof data.players.max === "number"
+        ? data.players.max
+        : 0;
+
+    return {
+      online: true,
+      ping: requestTime,
+      playersOnline: onlinePlayers,
+      playersMax: maxPlayers
+    };
+  }
+
+  function renderOnline(status) {
+    setState("online");
+    label.textContent = "Online";
+    ping.textContent = status.ping + " ms";
+    players.textContent = status.playersOnline + "/" + status.playersMax;
+    setUpdated();
+  }
+
+  async function fetchMcstatusIo() {
+    const startedAt = performance.now();
+    const endpoint =
+      "https://api.mcstatus.io/v2/status/java/" +
+      encodeURIComponent(address) +
+      "?_=" +
+      Date.now();
+
+    const response = await fetch(endpoint, {
+      cache: "no-store",
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    const requestTime = Math.max(1, Math.round(performance.now() - startedAt));
+
+    if (!response.ok) {
+      throw new Error("mcstatus.io antwortet mit HTTP " + response.status);
+    }
+
+    const data = await response.json();
+    return readMcstatusIo(data, requestTime);
+  }
+
+  async function loadStatus({ silent = false } = {}) {
+    if (isLoading) {
       return;
     }
 
-    setLoading();
+    if (!address) {
+      setUnconfigured();
+      return;
+    }
 
-    const startedAt = performance.now();
+    isLoading = true;
+
+    if (!silent) {
+      setLoading();
+    } else {
+      setButtonLoading(true);
+    }
 
     try {
-      /*
-        Wir nutzen bewusst mcstatus.io statt mcsrvstat.us.
-        mcsrvstat.us cached Antworten mehrere Minuten, wodurch der Server
-        nach dem Stoppen noch als online angezeigt werden kann.
-      */
-      const endpoint = "https://api.mcstatus.io/v2/status/java/" + encodeURIComponent(address) + "?_=" + Date.now();
+      const status = await fetchMcstatusIo();
 
-      const response = await fetch(endpoint, {
-        cache: "no-store",
-        headers: {
-          "Accept": "application/json"
-        }
-      });
-
-      const requestTime = Math.max(1, Math.round(performance.now() - startedAt));
-
-      if (!response.ok) {
-        throw new Error("Status API antwortet mit HTTP " + response.status);
+      if (status && status.online === true) {
+        renderOnline(status);
+      } else {
+        setOffline();
       }
-
-      const data = await response.json();
-      renderStatus(data, requestTime);
     } catch (error) {
-      setError(error);
+      /*
+        Wichtig:
+        Bei einem API-/Netzwerkfehler zeigen wir nicht einfach weiter Online.
+        So bleibt kein falscher grüner Zustand stehen.
+      */
+      setUnknown(error);
     } finally {
-      finishButton();
+      isLoading = false;
+      setButtonLoading(false);
     }
   }
 
-  if (refreshButton) {
-    refreshButton.addEventListener("click", loadStatus);
+  function startAutoRefresh() {
+    if (refreshTimer) {
+      window.clearInterval(refreshTimer);
+    }
+
+    refreshTimer = window.setInterval(function () {
+      loadStatus({ silent: true });
+    }, REFRESH_SECONDS * 1000);
   }
 
-  loadStatus();
+  if (refreshButton) {
+    refreshButton.addEventListener("click", function () {
+      loadStatus({ silent: false });
+      startAutoRefresh();
+    });
+  }
+
+  loadStatus({ silent: false });
+  startAutoRefresh();
 });
