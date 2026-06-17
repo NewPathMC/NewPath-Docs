@@ -15430,3 +15430,99 @@ body.np-page-home .np-back-to-top {
     grid-template-columns: 1fr;
   }
 }
+
+/* 88. Serverstatus kompakt platzieren */
+
+/*
+  Server & Welt:
+  - Live-Status nicht mehr über die volle Breite.
+  - Zugang links, Status + Modpack-Version rechts.
+  - API-Version wird als "Serverantwort" dargestellt, damit sie nicht mit der Modpack-Version verwechselt wird.
+*/
+
+.np-server-top-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(19rem, 0.65fr);
+  gap: 1rem;
+  margin: 1.25rem 0 1rem !important;
+}
+
+.np-server-side-column {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+.np-server-top-grid .np-server-status-panel {
+  display: block !important;
+  margin: 0 !important;
+  padding: 1rem 1.05rem !important;
+}
+
+.np-server-top-grid .np-server-status-panel::before {
+  width: 1px !important;
+}
+
+.np-server-top-grid .np-server-status-titleline {
+  justify-content: space-between;
+}
+
+.np-server-top-grid .np-server-status-titleline h2 {
+  margin-bottom: 0.35rem !important;
+}
+
+.np-server-top-grid .np-server-status-main p:not(.np-server-kicker) {
+  margin-top: 0.25rem !important;
+  font-size: 0.86rem !important;
+  line-height: 1.45 !important;
+}
+
+.np-server-top-grid .np-server-status-stats {
+  grid-template-columns: 1fr;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.np-server-top-grid .np-server-status-stats span {
+  padding: 0.48rem 0.55rem;
+}
+
+.np-server-top-grid .np-server-status-stats strong {
+  font-size: 0.8rem;
+}
+
+.np-server-top-grid .np-server-refresh {
+  width: 100%;
+  min-width: 0;
+  margin-top: 0.65rem;
+  padding: 0.52rem 0.7rem;
+}
+
+.np-server-version-card {
+  min-height: auto !important;
+}
+
+.np-server-info-grid-main,
+.np-server-status-panel + .np-server-info-grid-main {
+  display: none !important;
+}
+
+@media (max-width: 64rem) {
+  .np-server-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .np-server-side-column {
+    grid-template-rows: auto;
+  }
+
+  .np-server-top-grid .np-server-status-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 44rem) {
+  .np-server-top-grid .np-server-status-stats {
+    grid-template-columns: 1fr;
+  }
+}
