@@ -84,15 +84,29 @@ permalink: /server.html
     </article>
   </div>
 
-  <article class="np-server-dashboard-card np-server-map-card">
-    <p class="np-server-kicker">Weltkarte</p>
-    <h2>BlueMap vorbereitet</h2>
-    <p>
-      Sobald BlueMap öffentlich erreichbar ist, kann die interaktive Weltkarte hier eingebunden werden.
-    </p>
-    <div class="np-server-map-placeholder">
-      <span>BlueMap folgt</span>
-      <small>Später als eingebettete Karte oder direkter Kartenlink</small>
+  <article class="np-server-dashboard-card np-server-map-card np-bluemap-card">
+    <div class="np-bluemap-head">
+      <div>
+        <p class="np-server-kicker">Weltkarte</p>
+        <h2>Live-Weltkarte</h2>
+        <p>
+          Die BlueMap zeigt die aktuelle NewPath-Welt direkt im Browser. Du kannst die Karte bewegen,
+          zoomen und die BlueMap-Funktionen innerhalb der eingebetteten Ansicht nutzen.
+        </p>
+      </div>
+
+      <a class="np-bluemap-open" href="https://map.newpath-mc.de" target="_blank" rel="noopener">
+        Karte im Vollbild öffnen
+      </a>
+    </div>
+
+    <div class="np-bluemap-frame">
+      <iframe
+        src="https://map.newpath-mc.de"
+        title="NewPath BlueMap Weltkarte"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
     </div>
   </article>
 </section>
