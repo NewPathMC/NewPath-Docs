@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 17:15 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 15:47 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
@@ -59,7 +59,17 @@ permalink: /server.html
 
       <div class="np-server-address-line">
         <small>IP-Adresse</small>
-        <code>newpath.minecraft.best</code>
+        <div class="np-server-address-actions">
+          <code>newpath.minecraft.best</code>
+          <button
+            class="np-server-copy-hero-button np-server-copy-status-button"
+            type="button"
+            data-server-ip="newpath.minecraft.best"
+            onclick="navigator.clipboard.writeText(this.dataset.serverIp); this.querySelector('.np-server-copy-hero-label').textContent='IP kopiert'; setTimeout(() => this.querySelector('.np-server-copy-hero-label').textContent='Server-IP kopieren', 1800);">
+            <span class="np-server-copy-hero-icon" aria-hidden="true"></span>
+            <span class="np-server-copy-hero-label">Server-IP kopieren</span>
+          </button>
+        </div>
       </div>
 
       <div class="np-server-status-footer">

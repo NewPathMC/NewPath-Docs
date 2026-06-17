@@ -19,14 +19,14 @@ permalink: /
     </div>
 
     <div class="np-hero-actions np-hero-actions-server">
-      <button
-        class="np-server-copy-hero-button"
-        type="button"
-        data-server-ip="newpath.minecraft.best"
-        onclick="navigator.clipboard.writeText(this.dataset.serverIp); this.querySelector('.np-server-copy-hero-label').textContent='IP kopiert'; setTimeout(() => this.querySelector('.np-server-copy-hero-label').textContent='Server-IP kopieren', 1800);">
-        <span class="np-server-copy-hero-icon" aria-hidden="true"></span>
-        <span class="np-server-copy-hero-label">Server-IP kopieren</span>
-      </button>
+      <a
+        class="np-server-copy-hero-button np-discord-hero-button"
+        href="https://discord.gg/R4HwKRbZ5e"
+        target="_blank"
+        rel="noopener">
+        <span class="np-server-copy-hero-icon np-discord-hero-icon" aria-hidden="true"></span>
+        <span class="np-server-copy-hero-label">Discord beitreten</span>
+      </a>
       <a class="np-hero-secondary-button" href="{{ site.baseurl }}/regelwerk.html">Regelwerk lesen</a>
       <p class="np-server-copy-hint">Whitelist über Discord erforderlich.</p>
     </div>
