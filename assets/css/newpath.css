@@ -14765,19 +14765,80 @@ body.np-page-home .np-back-to-top {
   }
 }
 
-/* 85. Server & Welt Seite */
+/* 85. Server/Philosophie: konsolidierte Boxen und Karten */
 
-.np-page-server .echo-page-box-server {
-  position: relative;
+/*
+  Konsolidierung:
+  - Server- und Philosophie-Boxen nutzen dieselben Kartenrollen.
+  - Keine abweichenden Emoji-Karten mehr.
+  - Radien, Rahmen, Hintergründe und Abstände orientieren sich an np-page-section / np-rule-block.
+  - Server-ECHO-Box wird in die bestehenden ECHO-Box-Regeln eingebunden.
+*/
+
+.echo-page-box-server {
+  border-color: var(--np-system-border) !important;
+  background: var(--np-section-bg) !important;
 }
 
-.np-server-section .np-section-lead {
-  max-width: 58rem;
-  margin: 0.6rem auto 0;
-  color: rgba(244, 231, 205, 0.82);
-  font-size: clamp(1rem, 1.3vw, 1.12rem);
-  line-height: 1.7;
-  text-align: center;
+.echo-page-box-server p:not(.echo-page-kicker) {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-type-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.62 !important;
+}
+
+.np-server-section .np-section-lead,
+.np-philosophy-intro-section .np-section-lead {
+  max-width: 62rem;
+  margin: 0.7rem 0 0 !important;
+  color: var(--np-type-body) !important;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem) !important;
+  line-height: 1.68 !important;
+  text-align: left !important;
+}
+
+.np-philosophy-intro-section .np-section-kicker,
+.np-rules-section .np-section-kicker,
+.np-server-kicker {
+  margin: 0 0 0.45rem !important;
+  color: var(--np-type-kicker) !important;
+  font-family: var(--np-font-label) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+
+.np-server-status-card,
+.np-server-card,
+.np-server-feature,
+.np-server-note,
+.np-philosophy-merge-card,
+.np-philosophy-rule-bridge {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(72, 122, 146, 0.34) !important;
+  border-radius: 0.78rem !important;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 16rem),
+    linear-gradient(180deg, rgba(7, 28, 36, 0.78), rgba(5, 20, 27, 0.88)) !important;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.24),
+    inset 0 0 28px rgba(0, 230, 246, 0.025) !important;
+}
+
+.np-server-status-card::before,
+.np-server-card::before,
+.np-server-feature::before,
+.np-server-note::before,
+.np-philosophy-merge-card::before,
+.np-philosophy-rule-bridge::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(0, 230, 246, 0.72), rgba(236, 183, 110, 0.38), transparent);
+  opacity: 0.8;
 }
 
 .np-server-status-card {
@@ -14785,283 +14846,163 @@ body.np-page-home .np-back-to-top {
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
-  margin: 1.65rem auto 1.4rem;
-  padding: clamp(1rem, 2vw, 1.35rem);
-  border: 1px solid rgba(0, 230, 246, 0.24);
-  border-radius: 1rem;
-  background:
-    radial-gradient(circle at 12% 20%, rgba(0, 230, 246, 0.16), transparent 34%),
-    linear-gradient(135deg, rgba(5, 27, 49, 0.92), rgba(17, 46, 64, 0.78));
-  box-shadow:
-    0 1rem 2.2rem rgba(0, 0, 0, 0.28),
-    inset 0 0 0 1px rgba(244, 207, 127, 0.08);
+  margin: 1.45rem 0 1.35rem !important;
+  padding: clamp(1rem, 1.45vw, 1.45rem) !important;
 }
 
-.np-server-status-card h2,
+.np-server-grid,
+.np-philosophy-merge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.2rem 0 1.35rem !important;
+}
+
+.np-server-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.2rem 0 1.35rem !important;
+}
+
+.np-server-card,
+.np-server-feature,
+.np-server-note,
+.np-philosophy-merge-card,
+.np-philosophy-rule-bridge {
+  padding: 1rem !important;
+}
+
+.np-philosophy-rule-bridge,
+.np-server-note {
+  margin: 1.1rem 0 0 !important;
+}
+
+.np-server-card-icon,
+.np-philosophy-merge-icon {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 230, 246, 0.26);
+  border-radius: 0.62rem;
+  background:
+    radial-gradient(circle at 45% 35%, rgba(0, 230, 246, 0.28), transparent 46%),
+    rgba(0, 9, 15, 0.36);
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 207, 127, 0.06),
+    0 0 18px rgba(0, 230, 246, 0.08);
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.np-server-card-icon::after,
+.np-philosophy-merge-icon::after {
+  content: "";
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  background: var(--np-type-kicker);
+  box-shadow:
+    0 0 0 3px rgba(0, 230, 246, 0.12),
+    0 0 14px rgba(0, 230, 246, 0.42);
+}
+
 .np-server-card h2,
 .np-server-feature h2,
-.np-server-note h2 {
-  margin: 0 0 0.45rem;
-  color: #f4cf7f;
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: 0.01em;
+.np-server-note h2,
+.np-server-status-card h2,
+.np-philosophy-merge-card h2,
+.np-philosophy-rule-bridge h2 {
+  margin: 0 0 0.45rem !important;
+  color: var(--np-type-title) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.08rem, 1.28vw, 1.35rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.015em !important;
 }
 
 .np-server-status-card p,
 .np-server-card p,
 .np-server-feature p,
-.np-server-note p {
-  margin: 0;
-  color: rgba(244, 231, 205, 0.82);
-  line-height: 1.65;
+.np-server-note p,
+.np-philosophy-merge-card p,
+.np-philosophy-rule-bridge p {
+  margin: 0 !important;
+  color: var(--np-type-body) !important;
+  line-height: 1.62 !important;
 }
 
-.np-server-kicker {
-  margin: 0 0 0.35rem !important;
-  color: #00e6f6 !important;
-  font-size: 0.74rem !important;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+.np-server-card ul {
+  margin: 0.85rem 0 0 !important;
+  padding-left: 1.05rem !important;
+  color: var(--np-type-body) !important;
+  line-height: 1.55 !important;
+}
+
+.np-server-card li + li {
+  margin-top: 0.32rem;
 }
 
 .np-server-status-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 6.5rem;
-  padding: 0.48rem 0.85rem;
-  border: 1px solid rgba(244, 207, 127, 0.32);
+  min-width: 6.2rem;
+  padding: 0.42rem 0.78rem;
+  border: 1px solid rgba(0, 230, 246, 0.34);
   border-radius: 999px;
-  color: #f4cf7f;
-  background: rgba(12, 24, 34, 0.78);
-  box-shadow: 0 0 1.2rem rgba(0, 230, 246, 0.12);
-  font-size: 0.78rem;
-  font-weight: 800;
+  color: var(--np-type-kicker);
+  background: rgba(0, 9, 15, 0.42);
+  box-shadow: 0 0 1rem rgba(0, 230, 246, 0.12);
+  font-family: var(--np-font-label);
+  font-size: 0.7rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   white-space: nowrap;
 }
 
-.np-server-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.15rem auto 1.35rem;
-}
-
-.np-server-card,
-.np-server-feature,
-.np-server-note {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(236, 183, 110, 0.2);
-  border-radius: 1rem;
-  background:
-    linear-gradient(180deg, rgba(17, 46, 64, 0.9), rgba(5, 27, 49, 0.86)),
-    radial-gradient(circle at 90% 12%, rgba(0, 230, 246, 0.09), transparent 34%);
-  box-shadow:
-    0 0.9rem 2rem rgba(0, 0, 0, 0.24),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.035);
-}
-
-.np-server-card,
-.np-server-feature,
-.np-server-note {
-  padding: 1.15rem;
-}
-
-.np-server-card::before,
-.np-server-feature::before,
-.np-server-note::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 3px;
-  background: linear-gradient(180deg, rgba(0, 230, 246, 0.85), rgba(236, 183, 110, 0.6), transparent);
-  opacity: 0.88;
-}
-
-.np-server-card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.15rem;
-  height: 2.15rem;
-  margin-bottom: 0.75rem;
-  border-radius: 0.75rem;
-  background: rgba(0, 230, 246, 0.1);
-  border: 1px solid rgba(0, 230, 246, 0.2);
-  font-size: 1.12rem;
-}
-
-.np-server-card ul {
-  margin: 0.85rem 0 0;
-  padding-left: 1.1rem;
-  color: rgba(244, 231, 205, 0.82);
-  line-height: 1.55;
-}
-
-.np-server-card li + li {
-  margin-top: 0.35rem;
-}
-
-.np-server-feature-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.35rem auto;
-}
-
 .np-server-placeholder {
-  margin-top: 1rem;
-  padding: 1rem;
-  border: 1px dashed rgba(0, 230, 246, 0.36);
-  border-radius: 0.85rem;
-  color: rgba(244, 207, 127, 0.86);
-  background: linear-gradient(135deg, rgba(0, 230, 246, 0.06), rgba(236, 183, 110, 0.05));
-  font-weight: 800;
+  margin-top: 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 1px dashed rgba(0, 230, 246, 0.34);
+  border-radius: 0.62rem;
+  color: var(--np-type-title);
+  background: rgba(0, 9, 15, 0.30);
+  font-family: var(--np-font-label);
+  font-size: 0.78rem;
+  font-weight: 900;
   text-align: center;
 }
 
 @media (max-width: 76rem) {
-  .np-server-grid {
+  .np-server-grid,
+  .np-philosophy-merge-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 44rem) {
-  .np-server-section .np-section-lead {
-    text-align: left;
-  }
-
   .np-server-status-card {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .np-server-grid,
-  .np-server-feature-grid {
+  .np-server-feature-grid,
+  .np-philosophy-merge-grid {
     grid-template-columns: 1fr;
   }
 
   .np-server-card,
   .np-server-feature,
-  .np-server-note {
-    padding: 1rem;
-  }
-}
-
-/* 86. Regeln und Philosophie zusammengeführt */
-
-.np-philosophy-intro-section .np-section-kicker,
-.np-rules-section .np-section-kicker {
-  margin: 0 0 0.45rem;
-  color: #00e6f6;
-  font-size: 0.74rem;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.np-philosophy-intro-section .np-section-lead {
-  max-width: 62rem;
-  margin: 0.7rem auto 0;
-  color: rgba(244, 231, 205, 0.82);
-  font-size: clamp(1rem, 1.25vw, 1.12rem);
-  line-height: 1.75;
-  text-align: center;
-}
-
-.np-philosophy-merge-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1.65rem auto 1.35rem;
-}
-
-.np-philosophy-merge-card,
-.np-philosophy-rule-bridge {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(236, 183, 110, 0.2);
-  border-radius: 1rem;
-  background:
-    linear-gradient(180deg, rgba(17, 46, 64, 0.9), rgba(5, 27, 49, 0.86)),
-    radial-gradient(circle at 85% 8%, rgba(0, 230, 246, 0.09), transparent 34%);
-  box-shadow:
-    0 0.9rem 2rem rgba(0, 0, 0, 0.24),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.035);
-}
-
-.np-philosophy-merge-card {
-  padding: 1.15rem;
-}
-
-.np-philosophy-rule-bridge {
-  margin: 1.35rem auto 0;
-  padding: 1.2rem 1.35rem;
-  border-color: rgba(0, 230, 246, 0.22);
-  background:
-    radial-gradient(circle at 12% 18%, rgba(0, 230, 246, 0.11), transparent 36%),
-    linear-gradient(135deg, rgba(5, 27, 49, 0.92), rgba(17, 46, 64, 0.78));
-}
-
-.np-philosophy-merge-card::before,
-.np-philosophy-rule-bridge::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 3px;
-  background: linear-gradient(180deg, rgba(0, 230, 246, 0.85), rgba(236, 183, 110, 0.62), transparent);
-  opacity: 0.88;
-}
-
-.np-philosophy-merge-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.15rem;
-  height: 2.15rem;
-  margin-bottom: 0.75rem;
-  border-radius: 0.75rem;
-  background: rgba(0, 230, 246, 0.1);
-  border: 1px solid rgba(0, 230, 246, 0.2);
-  font-size: 1.12rem;
-}
-
-.np-philosophy-merge-card h2,
-.np-philosophy-rule-bridge h2 {
-  margin: 0 0 0.45rem;
-  color: #f4cf7f;
-  font-family: Georgia, "Times New Roman", serif;
-  letter-spacing: 0.01em;
-}
-
-.np-philosophy-merge-card p,
-.np-philosophy-rule-bridge p {
-  margin: 0;
-  color: rgba(244, 231, 205, 0.82);
-  line-height: 1.65;
-}
-
-@media (max-width: 76rem) {
-  .np-philosophy-merge-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 44rem) {
-  .np-philosophy-intro-section .np-section-lead {
-    text-align: left;
-  }
-
-  .np-philosophy-merge-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .np-server-note,
   .np-philosophy-merge-card,
   .np-philosophy-rule-bridge {
-    padding: 1rem;
+    padding: 1rem !important;
   }
 }

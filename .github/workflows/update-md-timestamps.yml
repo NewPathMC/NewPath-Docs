@@ -6,11 +6,12 @@ on:
       - main
     paths:
       - "regelwerk.md"
-      - "philosophie.md"
       - "faq.md"
       - "modpack-hilfe.md"
+      - "server.md"
       - "team.md"
       - "streamer.md"
+      - "ente.md"
 
 permissions:
   contents: write
@@ -35,13 +36,21 @@ jobs:
         id: changed-files
         shell: bash
         run: |
-          CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRT "${{ github.event.before }}" "${{ github.sha }}" -- \
-            regelwerk.md \
-            philosophie.md \
-            faq.md \
-            modpack-hilfe.md \
-            team.md \
-            streamer.md || true)
+          TARGET_FILES=(
+            regelwerk.md
+            faq.md
+            modpack-hilfe.md
+            server.md
+            team.md
+            streamer.md
+            ente.md
+          )
+
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            CHANGED_FILES=$(git diff-tree --no-commit-id --name-only -r "${{ github.sha }}" -- "${TARGET_FILES[@]}" || true)
+          else
+            CHANGED_FILES=$(git diff --name-only --diff-filter=ACMRT "${{ github.event.before }}" "${{ github.sha }}" -- "${TARGET_FILES[@]}" || true)
+          fi
 
           echo "Geänderte Website-Dateien:"
           echo "$CHANGED_FILES"
@@ -56,11 +65,7 @@ jobs:
         if: contains(steps.changed-files.outputs.files, 'regelwerk.md')
         shell: bash
         run: |
-          python scripts/generate_rule_changes.py \
-            --before "${{ github.event.before }}" \
-            --after "${{ github.sha }}" \
-            --file "regelwerk.md" \
-            --output "assets/data/rule-changes.json"
+          python scripts/generate_rule_changes.py             --before "${{ github.event.before }}"             --after "${{ github.sha }}"             --file "regelwerk.md"             --output "assets/data/rule-changes.json"
 
       - name: Zeitstempel aktualisieren
         if: steps.changed-files.outputs.files != ''
@@ -81,7 +86,9 @@ jobs:
             echo "Aktualisiere Zeitstempel in: $file"
 
             if grep -q "<!-- AUTO_UPDATED_START -->" "$file"; then
-              sed -i "/<!-- AUTO_UPDATED_START -->/,/<!-- AUTO_UPDATED_END -->/c\\<!-- AUTO_UPDATED_START -->\n<p class=\"np-last-updated\">Zuletzt aktualisiert: $TIMESTAMP</p>\n<!-- AUTO_UPDATED_END -->" "$file"
+              sed -i "/<!-- AUTO_UPDATED_START -->/,/<!-- AUTO_UPDATED_END -->/c\<!-- AUTO_UPDATED_START -->
+<p class=\"np-last-updated\">Zuletzt aktualisiert: $TIMESTAMP</p>
+<!-- AUTO_UPDATED_END -->" "$file"
             else
               echo "Kein AUTO_UPDATED-Block gefunden in: $file"
             fi
@@ -90,11 +97,21 @@ jobs:
       - name: Änderungen committen
         shell: bash
         run: |
-          if git diff --quiet; then
+          if [ -f assets/data/rule-changes.json ]; then
+            git add assets/data/rule-changes.json
+          fi
+
+          echo "${{ steps.changed-files.outputs.files }}" | while IFS= read -r file; do
+            if [ -n "$file" ] && [ -f "$file" ]; then
+              git add "$file"
+            fi
+          done
+
+          if git diff --cached --quiet; then
             echo "Keine automatischen Änderungen vorhanden."
             exit 0
           fi
 
-          git add regelwerk.md philosophie.md faq.md modpack-hilfe.md team.md streamer.md assets/data/rule-changes.json
           git commit -m "Doku: Zeitstempel und Regelwerksmarkierungen aktualisiert"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push

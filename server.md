@@ -5,12 +5,14 @@ nav_order: 3
 permalink: /server.html
 ---
 
+<!-- AUTO_UPDATED_START -->
 <p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
+<!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
   <div class="echo-page-image">
     <img
-      src="{{ site.baseurl }}/assets/images/echo/server.png"
+      src="{{ site.baseurl }}/assets/images/echo/echo-server.png"
       alt="ECHO erklärt Server und Welt von NewPath"
       width="512"
       height="512"
