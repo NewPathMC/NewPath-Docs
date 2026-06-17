@@ -1,7 +1,13 @@
 {
-  "generated_at": "2026-06-17T19:49:24+00:00",
+  "generated_at": "2026-06-17T19:53:28+00:00",
   "source_file": "regelwerk.md",
   "added": [],
-  "edited": [],
+  "edited": [
+    {
+      "type": "edited",
+      "text": "1.2. Handelt bitte im Sinne unserer Grundsätze.",
+      "line": 8
+    }
+  ],
   "removed": []
 }
