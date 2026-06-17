@@ -14765,28 +14765,30 @@ body.np-page-home .np-back-to-top {
   }
 }
 
-/* 85. Regeln/Server: Konsolidierung nach Strukturumbau */
+/* 85. Server/Philosophie: konsolidierte Boxen und Karten */
 
 /*
-  Ziel:
-  - Philosophie nutzt wieder die vorhandenen np-info-card-Komponenten.
-  - Keine zusätzlichen Cyan-Bommeln in Philosophie oder Serverbereich.
-  - Server & Welt wird schlanker: Zugang groß, Status/Version kompakt, Restarts/Webmap darunter.
+  Konsolidierung:
+  - Server- und Philosophie-Boxen nutzen dieselben Kartenrollen.
+  - Keine abweichenden Emoji-Karten mehr.
+  - Radien, Rahmen, Hintergründe und Abstände orientieren sich an np-page-section / np-rule-block.
+  - Server-ECHO-Box wird in die bestehenden ECHO-Box-Regeln eingebunden.
 */
 
-.np-philosophy-intro-section {
-  margin-bottom: 1.1rem !important;
+.echo-page-box-server {
+  border-color: var(--np-system-border) !important;
+  background: var(--np-section-bg) !important;
 }
 
-.np-philosophy-intro-section .np-card-grid {
-  margin-top: 1rem !important;
+.echo-page-box-server p:not(.echo-page-kicker) {
+  font-family: var(--np-font-body) !important;
+  color: var(--np-type-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.62 !important;
 }
 
-.np-philosophy-intro-section .np-info-card {
-  min-height: auto !important;
-}
-
-.np-server-section .np-section-lead {
+.np-server-section .np-section-lead,
+.np-philosophy-intro-section .np-section-lead {
   max-width: 62rem;
   margin: 0.7rem 0 0 !important;
   color: var(--np-type-body) !important;
@@ -14795,147 +14797,503 @@ body.np-page-home .np-back-to-top {
   text-align: left !important;
 }
 
+.np-philosophy-intro-section .np-section-kicker,
+.np-rules-section .np-section-kicker,
 .np-server-kicker {
-  margin: 0 0 0.4rem !important;
+  margin: 0 0 0.45rem !important;
   color: var(--np-type-kicker) !important;
   font-family: var(--np-font-label) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.72rem !important;
   font-weight: 900 !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
 }
 
-.np-server-overview {
-  display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(18rem, 0.8fr);
-  gap: 1rem;
-  margin: 1.25rem 0 1rem !important;
-}
-
-.np-server-side-stack {
-  display: grid;
-  gap: 1rem;
-}
-
-.np-server-main-card,
-.np-server-mini-card,
-.np-server-info-card {
+.np-server-status-card,
+.np-server-card,
+.np-server-feature,
+.np-server-note,
+.np-philosophy-merge-card,
+.np-philosophy-rule-bridge {
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(64, 116, 138, 0.42) !important;
+  border: 1px solid rgba(72, 122, 146, 0.34) !important;
   border-radius: 0.78rem !important;
   background:
-    radial-gradient(circle at 8% 0%, rgba(0, 230, 246, 0.055), transparent 14rem),
-    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.04), transparent 13rem),
-    linear-gradient(180deg, rgba(8, 30, 38, 0.82), rgba(4, 18, 25, 0.9)) !important;
+    radial-gradient(circle at 0% 0%, rgba(0, 230, 246, 0.055), transparent 16rem),
+    linear-gradient(180deg, rgba(7, 28, 36, 0.78), rgba(5, 20, 27, 0.88)) !important;
   box-shadow:
-    0 16px 34px rgba(0, 0, 0, 0.22),
-    inset 0 0 28px rgba(0, 230, 246, 0.02) !important;
+    0 16px 34px rgba(0, 0, 0, 0.24),
+    inset 0 0 28px rgba(0, 230, 246, 0.025) !important;
 }
 
-.np-server-main-card,
-.np-server-info-card {
-  padding: 1.15rem 1.2rem !important;
-}
-
-.np-server-mini-card {
-  padding: 1rem 1.05rem !important;
-}
-
-.np-server-main-card::before,
-.np-server-mini-card::before,
-.np-server-info-card::before {
+.np-server-status-card::before,
+.np-server-card::before,
+.np-server-feature::before,
+.np-server-note::before,
+.np-philosophy-merge-card::before,
+.np-philosophy-rule-bridge::before {
   content: "";
   position: absolute;
   inset: 0 auto 0 0;
-  width: 1px;
-  background: linear-gradient(180deg, rgba(0, 230, 246, 0.54), rgba(236, 183, 110, 0.22), transparent);
-  opacity: 0.75;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(0, 230, 246, 0.72), rgba(236, 183, 110, 0.38), transparent);
+  opacity: 0.8;
 }
 
-.np-server-main-card h2,
-.np-server-info-card h2 {
-  margin: 0 0 0.5rem !important;
+.np-server-status-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin: 1.45rem 0 1.35rem !important;
+  padding: clamp(1rem, 1.45vw, 1.45rem) !important;
+}
+
+.np-server-grid,
+.np-philosophy-merge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.2rem 0 1.35rem !important;
+}
+
+.np-server-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.2rem 0 1.35rem !important;
+}
+
+.np-server-card,
+.np-server-feature,
+.np-server-note,
+.np-philosophy-merge-card,
+.np-philosophy-rule-bridge {
+  padding: 1rem !important;
+}
+
+.np-philosophy-rule-bridge,
+.np-server-note {
+  margin: 1.1rem 0 0 !important;
+}
+
+.np-server-card-icon,
+.np-philosophy-merge-icon {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 230, 246, 0.26);
+  border-radius: 0.62rem;
+  background:
+    radial-gradient(circle at 45% 35%, rgba(0, 230, 246, 0.28), transparent 46%),
+    rgba(0, 9, 15, 0.36);
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 207, 127, 0.06),
+    0 0 18px rgba(0, 230, 246, 0.08);
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.np-server-card-icon::after,
+.np-philosophy-merge-icon::after {
+  content: "";
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  background: var(--np-type-kicker);
+  box-shadow:
+    0 0 0 3px rgba(0, 230, 246, 0.12),
+    0 0 14px rgba(0, 230, 246, 0.42);
+}
+
+.np-server-card h2,
+.np-server-feature h2,
+.np-server-note h2,
+.np-server-status-card h2,
+.np-philosophy-merge-card h2,
+.np-philosophy-rule-bridge h2 {
+  margin: 0 0 0.45rem !important;
   color: var(--np-type-title) !important;
   font-family: var(--np-font-heading) !important;
-  font-size: clamp(1.08rem, 1.18vw, 1.28rem) !important;
+  font-size: clamp(1.08rem, 1.28vw, 1.35rem) !important;
   font-weight: 900 !important;
   line-height: 1.18 !important;
+  letter-spacing: -0.015em !important;
 }
 
-.np-server-main-card p,
-.np-server-info-card p,
-.np-server-mini-card span {
+.np-server-status-card p,
+.np-server-card p,
+.np-server-feature p,
+.np-server-note p,
+.np-philosophy-merge-card p,
+.np-philosophy-rule-bridge p {
   margin: 0 !important;
   color: var(--np-type-body) !important;
-  font-size: 0.93rem !important;
   line-height: 1.62 !important;
 }
 
-.np-server-mini-card strong {
-  display: block;
-  margin-bottom: 0.28rem;
-  color: var(--np-type-title);
-  font-family: var(--np-font-heading);
-  font-size: 1rem;
-  line-height: 1.18;
-}
-
-.np-server-main-card ul,
-.np-server-info-card ul {
+.np-server-card ul {
   margin: 0.85rem 0 0 !important;
   padding-left: 1.05rem !important;
   color: var(--np-type-body) !important;
-  font-size: 0.9rem !important;
   line-height: 1.55 !important;
 }
 
-.np-server-main-card li + li,
-.np-server-info-card li + li {
-  margin-top: 0.32rem !important;
+.np-server-card li + li {
+  margin-top: 0.32rem;
 }
 
-.np-server-info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 1rem 0 0 !important;
+.np-server-status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.2rem;
+  padding: 0.42rem 0.78rem;
+  border: 1px solid rgba(0, 230, 246, 0.34);
+  border-radius: 999px;
+  color: var(--np-type-kicker);
+  background: rgba(0, 9, 15, 0.42);
+  box-shadow: 0 0 1rem rgba(0, 230, 246, 0.12);
+  font-family: var(--np-font-label);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  white-space: nowrap;
 }
 
 .np-server-placeholder {
-  margin-top: 0.85rem !important;
-  padding: 0.72rem 0.9rem !important;
-  border: 1px dashed rgba(0, 230, 246, 0.28);
-  border-radius: 0.52rem;
+  margin-top: 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 1px dashed rgba(0, 230, 246, 0.34);
+  border-radius: 0.62rem;
   color: var(--np-type-title);
-  background: rgba(0, 9, 15, 0.22);
+  background: rgba(0, 9, 15, 0.30);
   font-family: var(--np-font-label);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 900;
   text-align: center;
 }
 
-.np-server-card-icon,
-.np-philosophy-merge-icon,
-.np-server-status-pill,
-.np-server-status-card,
-.np-server-grid,
-.np-server-feature-grid,
-.np-server-note,
-.np-philosophy-merge-grid,
-.np-philosophy-rule-bridge {
-  display: none !important;
+@media (max-width: 76rem) {
+  .np-server-grid,
+  .np-philosophy-merge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-@media (max-width: 56rem) {
-  .np-server-overview,
-  .np-server-info-grid {
+@media (max-width: 44rem) {
+  .np-server-status-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .np-server-grid,
+  .np-server-feature-grid,
+  .np-philosophy-merge-grid {
     grid-template-columns: 1fr;
   }
 
-  .np-server-main-card,
-  .np-server-mini-card,
-  .np-server-info-card {
+  .np-server-card,
+  .np-server-feature,
+  .np-server-note,
+  .np-philosophy-merge-card,
+  .np-philosophy-rule-bridge {
     padding: 1rem !important;
+  }
+}
+
+/* 86. Server-Seite visueller Feinschliff */
+
+/*
+  Nachschliff für /server.html:
+  - Karten wirken weniger wie fremde Dashboard-Widgets
+  - Abstände orientieren sich stärker am restlichen NewPath-Boxsystem
+  - Status-/Feature-Karten bekommen mehr ruhige Fläche und weniger harte Kanten
+  - kleine Cyan-Marker werden dezenter
+*/
+
+.np-server-section {
+  padding-top: clamp(1.35rem, 2.2vw, 2rem) !important;
+}
+
+.np-server-section > .np-section-header {
+  margin-bottom: 1.15rem !important;
+}
+
+.np-server-section > .np-section-header .np-title {
+  margin-bottom: 0.5rem !important;
+}
+
+.np-server-status-card,
+.np-server-card,
+.np-server-feature,
+.np-server-note {
+  border-color: rgba(64, 116, 138, 0.42) !important;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(0, 230, 246, 0.06), transparent 14rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.045), transparent 13rem),
+    linear-gradient(180deg, rgba(8, 30, 38, 0.82), rgba(4, 18, 25, 0.9)) !important;
+}
+
+.np-server-status-card {
+  min-height: 7.1rem !important;
+  margin-top: 1.15rem !important;
+  margin-bottom: 1.15rem !important;
+  padding: clamp(1rem, 1.35vw, 1.3rem) clamp(1.05rem, 1.7vw, 1.55rem) !important;
+}
+
+.np-server-status-card::before,
+.np-server-card::before,
+.np-server-feature::before,
+.np-server-note::before {
+  width: 1px !important;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 230, 246, 0.58),
+    rgba(236, 183, 110, 0.26),
+    rgba(0, 230, 246, 0)
+  ) !important;
+}
+
+.np-server-grid {
+  gap: 1rem !important;
+  margin-top: 1.05rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.np-server-card {
+  min-height: 16.2rem !important;
+  padding: 1.15rem 1.05rem 1.1rem !important;
+}
+
+.np-server-feature-grid {
+  gap: 1rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.np-server-feature {
+  min-height: 10.4rem !important;
+  padding: 1.15rem 1.2rem !important;
+}
+
+.np-server-note {
+  margin-top: 1rem !important;
+  padding: 1rem 1.2rem !important;
+}
+
+.np-server-card-icon,
+.np-philosophy-merge-icon {
+  width: 1.65rem !important;
+  height: 1.65rem !important;
+  margin-bottom: 0.78rem !important;
+  border-radius: 0.52rem !important;
+  opacity: 0.88 !important;
+  background:
+    radial-gradient(circle at 48% 42%, rgba(0, 230, 246, 0.22), transparent 46%),
+    rgba(0, 9, 15, 0.28) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(244, 207, 127, 0.035),
+    0 0 14px rgba(0, 230, 246, 0.055) !important;
+}
+
+.np-server-card-icon::after,
+.np-philosophy-merge-icon::after {
+  width: 0.48rem !important;
+  height: 0.48rem !important;
+  box-shadow:
+    0 0 0 2px rgba(0, 230, 246, 0.1),
+    0 0 12px rgba(0, 230, 246, 0.34) !important;
+}
+
+.np-server-card h2,
+.np-server-feature h2,
+.np-server-note h2,
+.np-server-status-card h2 {
+  font-size: clamp(1rem, 1.05vw, 1.18rem) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.np-server-card p,
+.np-server-feature p,
+.np-server-note p,
+.np-server-status-card p {
+  font-size: 0.93rem !important;
+  line-height: 1.6 !important;
+}
+
+.np-server-card ul {
+  margin-top: 0.78rem !important;
+  padding-left: 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+.np-server-card li + li {
+  margin-top: 0.34rem !important;
+}
+
+.np-server-status-pill {
+  min-width: 5.9rem !important;
+  padding: 0.36rem 0.72rem !important;
+  font-size: 0.66rem !important;
+  box-shadow: 0 0 0.85rem rgba(0, 230, 246, 0.09) !important;
+}
+
+.np-server-placeholder {
+  margin-top: 0.9rem !important;
+  padding: 0.75rem 0.9rem !important;
+  border-radius: 0.52rem !important;
+  background: rgba(0, 9, 15, 0.22) !important;
+  font-size: 0.72rem !important;
+}
+
+@media (min-width: 76.001rem) {
+  .np-server-card:nth-child(1),
+  .np-server-card:nth-child(2),
+  .np-server-card:nth-child(3),
+  .np-server-card:nth-child(4) {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 44rem) {
+  .np-server-section {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .np-server-status-card,
+  .np-server-card,
+  .np-server-feature,
+  .np-server-note {
+    min-height: auto !important;
+  }
+
+  .np-server-card {
+    padding: 1rem !important;
+  }
+}
+
+/* 86. Serverstatus Live-Modul */
+
+.np-server-live-card {
+  display: block !important;
+}
+
+.np-server-live-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+
+.np-server-live-dot {
+  flex: 0 0 auto;
+  width: 0.72rem;
+  height: 0.72rem;
+  margin-top: 0.2rem;
+  border-radius: 999px;
+  background: rgba(244, 207, 127, 0.65);
+  box-shadow: 0 0 0 3px rgba(244, 207, 127, 0.08);
+}
+
+.np-server-live-card.is-loading .np-server-live-dot {
+  background: rgba(0, 230, 246, 0.85);
+  box-shadow:
+    0 0 0 3px rgba(0, 230, 246, 0.10),
+    0 0 14px rgba(0, 230, 246, 0.38);
+}
+
+.np-server-live-card.is-online .np-server-live-dot {
+  background: #58d86d;
+  box-shadow:
+    0 0 0 3px rgba(88, 216, 109, 0.12),
+    0 0 14px rgba(88, 216, 109, 0.34);
+}
+
+.np-server-live-card.is-offline .np-server-live-dot,
+.np-server-live-card.is-error .np-server-live-dot {
+  background: #d85b58;
+  box-shadow:
+    0 0 0 3px rgba(216, 91, 88, 0.12),
+    0 0 14px rgba(216, 91, 88, 0.28);
+}
+
+.np-server-live-card.is-unconfigured .np-server-live-dot {
+  background: rgba(236, 183, 110, 0.72);
+  box-shadow:
+    0 0 0 3px rgba(236, 183, 110, 0.10),
+    0 0 14px rgba(236, 183, 110, 0.22);
+}
+
+.np-server-live-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+.np-server-live-stats span {
+  display: block;
+  padding: 0.58rem 0.65rem;
+  border: 1px solid rgba(64, 116, 138, 0.36);
+  border-radius: 0.52rem;
+  background: rgba(0, 9, 15, 0.22);
+}
+
+.np-server-live-stats small {
+  display: block;
+  margin-bottom: 0.18rem;
+  color: var(--np-type-muted, rgba(244, 231, 205, 0.62));
+  font-family: var(--np-font-label);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.np-server-live-stats strong {
+  display: block;
+  color: var(--np-type-title);
+  font-family: var(--np-font-heading);
+  font-size: 0.88rem;
+  line-height: 1.1;
+}
+
+.np-server-refresh {
+  width: 100%;
+  margin-top: 0.72rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(0, 230, 246, 0.28);
+  border-radius: 0.52rem;
+  color: var(--np-type-kicker);
+  background: rgba(0, 9, 15, 0.25);
+  font-family: var(--np-font-label);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.np-server-refresh:hover:not(:disabled) {
+  border-color: rgba(0, 230, 246, 0.52);
+  box-shadow: 0 0 16px rgba(0, 230, 246, 0.10);
+}
+
+.np-server-refresh:disabled {
+  cursor: progress;
+  opacity: 0.62;
+}
+
+@media (max-width: 44rem) {
+  .np-server-live-stats {
+    grid-template-columns: 1fr;
   }
 }

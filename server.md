@@ -55,10 +55,31 @@ permalink: /server.html
     </article>
 
     <aside class="np-server-side-stack">
-      <div class="np-server-mini-card">
-        <p class="np-server-kicker">Status</p>
-        <strong>Live-Anzeige geplant</strong>
-        <span>Online-Status und Spieleranzahl folgen später.</span>
+      <div class="np-server-mini-card np-server-live-card" data-np-server-status data-server-address="">
+        <div class="np-server-live-head">
+          <div>
+            <p class="np-server-kicker">Status</p>
+            <strong data-np-status-label>Wird geladen …</strong>
+          </div>
+          <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
+        </div>
+
+        <span data-np-status-detail>Serveradresse noch nicht konfiguriert.</span>
+
+        <div class="np-server-live-stats" aria-label="Serverstatus Details">
+          <span>
+            <small>Spieler</small>
+            <strong data-np-status-players>–</strong>
+          </span>
+          <span>
+            <small>Version</small>
+            <strong data-np-status-version>–</strong>
+          </span>
+        </div>
+
+        <button class="np-server-refresh" type="button" data-np-status-refresh>
+          Status aktualisieren
+        </button>
       </div>
 
       <div class="np-server-mini-card">
@@ -92,3 +113,6 @@ permalink: /server.html
     </article>
   </div>
 </section>
+
+
+<script src="{{ site.baseurl }}/assets/js/np-server-status.js" defer></script>
