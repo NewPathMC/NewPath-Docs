@@ -6,7 +6,11 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:44 Uhr</p>
+<<<<<<< HEAD
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
+=======
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:38 Uhr</p>
+>>>>>>> c70f4f5c73ece6b4b0831c9fe09c9cb9874227aa
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
@@ -36,34 +40,43 @@ permalink: /server.html
   </div>
 
   <div class="np-server-dashboard-main-grid">
-    <section class="np-server-status-hero" data-np-server-status data-server-address="newpath.minecraft.best" aria-label="Aktueller Serverstatus">
-      <div class="np-server-status-hero-main">
-        <p class="np-server-kicker">Live-Status</p>
-        <div class="np-server-status-titleline">
-          <h2 data-np-status-label>Wird geladen …</h2>
-          <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
+    <section class="np-server-status-hero np-server-status-discord" data-np-server-status data-server-address="newpath.minecraft.best" aria-label="Aktueller Serverstatus">
+      <div class="np-server-status-header">
+        <div>
+          <p class="np-server-kicker">Serverstatus</p>
+          <h2>NewPath Serverstatus</h2>
         </div>
-        <p data-np-status-detail>Serverstatus wird abgefragt.</p>
+        <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
       </div>
 
-      <div class="np-server-status-hero-stats">
-        <span>
+      <div class="np-server-status-values">
+        <div class="np-server-status-value">
+          <small>Status</small>
+          <strong data-np-status-label>Wird geladen …</strong>
+        </div>
+
+        <div class="np-server-status-value">
+          <small>Ping</small>
+          <strong data-np-status-ping>–</strong>
+        </div>
+
+        <div class="np-server-status-value">
           <small>Spieler</small>
           <strong data-np-status-players>–</strong>
-        </span>
-        <span>
-          <small>Serverantwort</small>
-          <strong data-np-status-version>–</strong>
-        </span>
-        <span>
-          <small>Modpack</small>
-          <strong>Minecraft 26.1.2</strong>
-        </span>
+        </div>
       </div>
 
-      <button class="np-server-refresh" type="button" data-np-status-refresh>
-        Status aktualisieren
-      </button>
+      <div class="np-server-address-line">
+        <small>IP-Adresse</small>
+        <code>newpath.minecraft.best</code>
+      </div>
+
+      <div class="np-server-status-footer">
+        <span data-np-status-updated>Letzte Aktualisierung: –</span>
+        <button class="np-server-refresh" type="button" data-np-status-refresh>
+          Aktualisieren
+        </button>
+      </div>
     </section>
 
     <article class="np-server-dashboard-card np-server-restart-card">

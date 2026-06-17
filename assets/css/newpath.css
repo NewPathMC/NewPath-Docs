@@ -15943,3 +15943,161 @@ body.np-page-home .np-back-to-top {
     height: 28rem;
   }
 }
+
+/* 92. Serverstatus Discord-Stil */
+
+/*
+  Statusbereich inspiriert vom Discord-Embed:
+  - klare Statuswerte statt MOTD/API-Version
+  - IP-Adresse als Badge
+  - letzte Aktualisierung sichtbar
+  - grüne Seitenlinie bei Online-Status
+*/
+
+.np-server-status-discord {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-areas:
+    "head"
+    "values"
+    "address"
+    "footer" !important;
+  gap: 0.9rem !important;
+  min-height: 0 !important;
+  padding: 1.15rem 1.2rem !important;
+  border-color: rgba(0, 230, 246, 0.42) !important;
+}
+
+.np-server-status-discord::before {
+  width: 4px !important;
+  background: linear-gradient(180deg, rgba(0, 230, 246, 0.9), rgba(0, 230, 246, 0.2)) !important;
+}
+
+.np-server-status-discord.is-online::before {
+  background: linear-gradient(180deg, #58d86d, rgba(88, 216, 109, 0.18)) !important;
+}
+
+.np-server-status-discord.is-offline::before,
+.np-server-status-discord.is-error::before {
+  background: linear-gradient(180deg, #d85b58, rgba(216, 91, 88, 0.18)) !important;
+}
+
+.np-server-status-header {
+  grid-area: head;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.np-server-status-header h2 {
+  margin: 0 !important;
+  color: var(--np-type-title) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.35rem, 1.7vw, 1.9rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+}
+
+.np-server-status-values {
+  grid-area: values;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.np-server-status-value {
+  padding: 0.62rem 0.7rem;
+  border: 1px solid rgba(64, 116, 138, 0.38);
+  border-radius: 0.58rem;
+  background: rgba(0, 9, 15, 0.25);
+}
+
+.np-server-status-value small,
+.np-server-address-line small {
+  display: block;
+  margin-bottom: 0.22rem;
+  color: var(--np-type-muted, rgba(244, 231, 205, 0.62));
+  font-family: var(--np-font-label);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.np-server-status-value strong {
+  display: block;
+  color: var(--np-type-title);
+  font-family: var(--np-font-heading);
+  font-size: 0.98rem;
+  line-height: 1.1;
+}
+
+.np-server-status-discord.is-online [data-np-status-label] {
+  color: #79f18b;
+}
+
+.np-server-status-discord.is-offline [data-np-status-label],
+.np-server-status-discord.is-error [data-np-status-label] {
+  color: #ff8b84;
+}
+
+.np-server-address-line {
+  grid-area: address;
+}
+
+.np-server-address-line code {
+  display: inline-flex;
+  max-width: 100%;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(0, 230, 246, 0.26);
+  border-radius: 0.45rem;
+  color: #f4cf7f;
+  background: rgba(0, 9, 15, 0.34);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.np-server-status-footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-top: 0.05rem;
+}
+
+.np-server-status-footer span {
+  color: var(--np-type-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.np-server-status-footer .np-server-refresh {
+  justify-self: auto;
+  align-self: auto;
+  min-width: 8.8rem;
+  padding: 0.5rem 0.68rem;
+}
+
+.np-server-status-hero-stats,
+.np-server-status-main,
+.np-server-status-hero-main {
+  display: none !important;
+}
+
+@media (max-width: 56rem) {
+  .np-server-status-values {
+    grid-template-columns: 1fr;
+  }
+
+  .np-server-status-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .np-server-status-footer .np-server-refresh {
+    width: 100%;
+  }
+}

@@ -9,14 +9,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const address = (card.dataset.serverAddress || FALLBACK_SERVER_ADDRESS || "").trim();
 
   const label = card.querySelector("[data-np-status-label]");
-  const detail = card.querySelector("[data-np-status-detail]");
   const players = card.querySelector("[data-np-status-players]");
-  const version = card.querySelector("[data-np-status-version]");
+  const ping = card.querySelector("[data-np-status-ping]");
+  const updated = card.querySelector("[data-np-status-updated]");
   const refreshButton = card.querySelector("[data-np-status-refresh]");
 
   function setState(state) {
     card.classList.remove("is-online", "is-offline", "is-loading", "is-error", "is-unconfigured");
     card.classList.add("is-" + state);
+  }
+
+  function formatTime(date) {
+    return new Intl.DateTimeFormat("de-DE", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit"
+    }).format(date).replace(",", " –");
+  }
+
+  function setUpdated() {
+    if (updated) {
+      updated.textContent = "Letzte Aktualisierung: " + formatTime(new Date());
+    }
   }
 
   function finishButton() {
@@ -25,45 +41,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     refreshButton.disabled = false;
-    refreshButton.textContent = "Status aktualisieren";
+    refreshButton.textContent = "Aktualisieren";
   }
 
   function setLoading() {
     setState("loading");
     label.textContent = "Wird geladen …";
-    detail.textContent = "Serverstatus wird abgefragt.";
     players.textContent = "–";
-    version.textContent = "–";
+    ping.textContent = "–";
 
     if (refreshButton) {
       refreshButton.disabled = true;
-      refreshButton.textContent = "Aktualisiere …";
+      refreshButton.textContent = "Lädt …";
     }
   }
 
   function setUnconfigured() {
     setState("unconfigured");
     label.textContent = "Nicht konfiguriert";
-    detail.textContent = "Es wurde keine Serveradresse für die Statusabfrage hinterlegt.";
     players.textContent = "–";
-    version.textContent = "–";
+    ping.textContent = "–";
+    setUpdated();
   }
 
-  function cleanText(value) {
-    if (Array.isArray(value)) {
-      return value.join(" ").trim();
-    }
-
-    return String(value || "").trim();
-  }
-
-  function renderStatus(data) {
+  function renderStatus(data, requestTime) {
     if (!data || data.online !== true) {
       setState("offline");
       label.textContent = "Offline";
-      detail.textContent = "Der Server ist aktuell nicht erreichbar oder antwortet nicht auf die Statusabfrage.";
       players.textContent = "0";
-      version.textContent = "–";
+      ping.textContent = "–";
+      setUpdated();
       return;
     }
 
@@ -75,22 +82,19 @@ document.addEventListener("DOMContentLoaded", function () {
       ? data.players.max
       : null;
 
-    const versionText = cleanText(data.version) || "Unbekannt";
-    const motdText = data.motd && data.motd.clean ? cleanText(data.motd.clean) : "";
-
     setState("online");
     label.textContent = "Online";
-    detail.textContent = motdText || "Der Server ist erreichbar.";
-    players.textContent = maxPlayers !== null ? onlinePlayers + " / " + maxPlayers : String(onlinePlayers);
-    version.textContent = versionText;
+    players.textContent = maxPlayers !== null ? onlinePlayers + "/" + maxPlayers : String(onlinePlayers);
+    ping.textContent = requestTime + " ms";
+    setUpdated();
   }
 
   function setError(error) {
     setState("error");
-    label.textContent = "Status unbekannt";
-    detail.textContent = "Die Statusabfrage konnte nicht geladen werden. Bitte später erneut versuchen.";
+    label.textContent = "Unbekannt";
     players.textContent = "–";
-    version.textContent = "–";
+    ping.textContent = "–";
+    setUpdated();
 
     if (error) {
       console.warn("NewPath Serverstatus:", error);
@@ -106,6 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setLoading();
 
+    const startedAt = performance.now();
+
     try {
       const endpoint = "https://api.mcsrvstat.us/3/" + encodeURIComponent(address);
       const response = await fetch(endpoint, {
@@ -115,12 +121,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
+      const requestTime = Math.max(1, Math.round(performance.now() - startedAt));
+
       if (!response.ok) {
         throw new Error("Status API antwortet mit HTTP " + response.status);
       }
 
       const data = await response.json();
-      renderStatus(data);
+      renderStatus(data, requestTime);
     } catch (error) {
       setError(error);
     } finally {
