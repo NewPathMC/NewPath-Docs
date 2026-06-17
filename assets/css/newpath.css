@@ -15527,13 +15527,13 @@ body.np-page-home .np-back-to-top {
   }
 }
 
-/* 89. Serverseite als Dashboard */
+/* 90. Server-Dashboard Balance-Fix */
 
 /*
-  Server & Welt ist jetzt ein Dashboard:
-  - kein Zugangs-/FAQ-Block
-  - Live-Status als Hauptmodul
-  - darunter nur Restarts und Weltkarte
+  Server & Welt:
+  - Status ist hervorgehoben, aber nicht mehr über die komplette Breite.
+  - Seite fokussiert nur noch auf Live-Status, Restart-Zeiten und spätere BlueMap.
+  - BlueMap bekommt eine eigene Kartenfläche für spätere iframe/link-Integration.
 */
 
 .np-server-dashboard .np-section-header {
@@ -15550,8 +15550,17 @@ body.np-page-home .np-back-to-top {
 .np-server-main-card,
 .np-server-mini-card,
 .np-server-status-panel,
-.np-server-info-grid {
+.np-server-info-grid,
+.np-server-dashboard-grid {
   display: none !important;
+}
+
+.np-server-dashboard-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.55fr);
+  gap: 1rem;
+  margin: 1.1rem 0 1rem !important;
+  align-items: stretch;
 }
 
 .np-server-status-hero,
@@ -15562,11 +15571,23 @@ body.np-page-home .np-back-to-top {
   border-radius: 0.9rem !important;
   background:
     radial-gradient(circle at 9% 0%, rgba(0, 230, 246, 0.095), transparent 18rem),
-    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.06), transparent 15rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.055), transparent 15rem),
     linear-gradient(180deg, rgba(8, 30, 38, 0.88), rgba(4, 18, 25, 0.94)) !important;
   box-shadow:
     0 18px 42px rgba(0, 0, 0, 0.26),
     inset 0 0 34px rgba(0, 230, 246, 0.026) !important;
+}
+
+.np-server-status-hero {
+  border-color: rgba(0, 230, 246, 0.46) !important;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(0, 230, 246, 0.16), transparent 18rem),
+    radial-gradient(circle at 92% 100%, rgba(236, 183, 110, 0.07), transparent 15rem),
+    linear-gradient(180deg, rgba(9, 35, 45, 0.94), rgba(4, 18, 25, 0.96)) !important;
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.31),
+    0 0 34px rgba(0, 230, 246, 0.075),
+    inset 0 0 34px rgba(0, 230, 246, 0.04) !important;
 }
 
 .np-server-status-hero::before,
@@ -15581,15 +15602,17 @@ body.np-page-home .np-back-to-top {
 
 .np-server-status-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(21rem, 0.85fr) auto;
-  align-items: center;
-  gap: 1.15rem;
-  min-height: 10rem;
-  margin: 1.2rem 0 1rem !important;
-  padding: clamp(1.15rem, 1.7vw, 1.55rem) !important;
+  grid-template-columns: minmax(0, 1fr) minmax(14.5rem, 0.56fr);
+  grid-template-areas:
+    "main stats"
+    "button stats";
+  gap: 1rem;
+  min-height: 13.2rem;
+  padding: clamp(1.2rem, 1.8vw, 1.65rem) !important;
 }
 
 .np-server-status-hero-main {
+  grid-area: main;
   min-width: 0;
 }
 
@@ -15603,14 +15626,14 @@ body.np-page-home .np-back-to-top {
   margin: 0 0 0.35rem !important;
   color: var(--np-type-title) !important;
   font-family: var(--np-font-heading) !important;
-  font-size: clamp(1.55rem, 2.2vw, 2.35rem) !important;
+  font-size: clamp(1.75rem, 2.4vw, 2.65rem) !important;
   font-weight: 900 !important;
-  line-height: 1.05 !important;
+  line-height: 1.02 !important;
 }
 
 .np-server-status-hero-main p:not(.np-server-kicker) {
-  max-width: 46rem;
-  margin: 0.35rem 0 0 !important;
+  max-width: 42rem;
+  margin: 0.45rem 0 0 !important;
   color: var(--np-type-body) !important;
   font-size: 0.98rem !important;
   line-height: 1.58 !important;
@@ -15618,8 +15641,8 @@ body.np-page-home .np-back-to-top {
 
 .np-server-live-dot {
   flex: 0 0 auto;
-  width: 0.78rem;
-  height: 0.78rem;
+  width: 0.82rem;
+  height: 0.82rem;
   border-radius: 999px;
   background: rgba(244, 207, 127, 0.7);
   box-shadow: 0 0 0 3px rgba(244, 207, 127, 0.08);
@@ -15642,6 +15665,7 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-server-status-hero-stats {
+  grid-area: stats;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.55rem;
@@ -15649,7 +15673,7 @@ body.np-page-home .np-back-to-top {
 
 .np-server-status-hero-stats span {
   display: block;
-  padding: 0.66rem 0.75rem;
+  padding: 0.68rem 0.78rem;
   border: 1px solid rgba(64, 116, 138, 0.38);
   border-radius: 0.58rem;
   background: rgba(0, 9, 15, 0.24);
@@ -15675,6 +15699,9 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-server-refresh {
+  grid-area: button;
+  justify-self: start;
+  align-self: end;
   min-width: 10.5rem;
   padding: 0.62rem 0.76rem;
   border: 1px solid rgba(0, 230, 246, 0.32);
@@ -15699,15 +15726,12 @@ body.np-page-home .np-back-to-top {
   opacity: 0.62;
 }
 
-.np-server-dashboard-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-  gap: 1rem;
-  margin: 1rem 0 0 !important;
-}
-
 .np-server-dashboard-card {
   padding: 1.15rem 1.2rem !important;
+}
+
+.np-server-restart-card {
+  min-height: 13.2rem;
 }
 
 .np-server-dashboard-card h2 {
@@ -15748,23 +15772,49 @@ body.np-page-home .np-back-to-top {
   font-weight: 900;
 }
 
-.np-server-placeholder {
+.np-server-map-card {
+  margin-top: 1rem;
+  min-height: 11rem;
+}
+
+.np-server-map-placeholder {
+  display: grid;
+  gap: 0.25rem;
   margin-top: 0.9rem !important;
-  padding: 0.78rem 0.9rem !important;
+  padding: 1rem;
   border: 1px dashed rgba(0, 230, 246, 0.3);
   border-radius: 0.58rem;
   color: var(--np-type-title);
   background: rgba(0, 9, 15, 0.22);
-  font-family: var(--np-font-label);
-  font-size: 0.74rem;
-  font-weight: 900;
   text-align: center;
 }
 
+.np-server-map-placeholder span {
+  font-family: var(--np-font-label);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.np-server-map-placeholder small {
+  color: var(--np-type-body);
+  font-size: 0.8rem;
+}
+
+.np-server-placeholder {
+  display: none !important;
+}
+
 @media (max-width: 76rem) {
+  .np-server-dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+
   .np-server-status-hero {
     grid-template-columns: 1fr;
-    align-items: stretch;
+    grid-template-areas:
+      "main"
+      "stats"
+      "button";
   }
 
   .np-server-status-hero-stats {
@@ -15773,11 +15823,15 @@ body.np-page-home .np-back-to-top {
 
   .np-server-refresh {
     width: 100%;
+    justify-self: stretch;
+  }
+
+  .np-server-restart-card {
+    min-height: auto;
   }
 }
 
 @media (max-width: 56rem) {
-  .np-server-dashboard-grid,
   .np-server-status-hero-stats {
     grid-template-columns: 1fr;
   }
