@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const label = card.querySelector("[data-np-status-label]");
   const players = card.querySelector("[data-np-status-players]");
-  const ping = card.querySelector("[data-np-status-ping]");
   const updated = card.querySelector("[data-np-status-updated]");
   const refreshButton = card.querySelector("[data-np-status-refresh]");
 
@@ -64,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function setLoading() {
     setState("loading");
     label.textContent = "Wird geprüft …";
-    ping.textContent = "–";
     setButtonLoading(true);
   }
 
@@ -72,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setState("unconfigured");
     label.textContent = "Nicht konfiguriert";
     players.textContent = "–";
-    ping.textContent = "–";
     setUpdated();
   }
 
@@ -80,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setState("offline");
     label.textContent = "Offline";
     players.textContent = "0/0";
-    ping.textContent = "–";
     setUpdated();
   }
 
@@ -88,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setState("error");
     label.textContent = "Unbekannt";
     players.textContent = "–";
-    ping.textContent = "–";
     setUpdated();
 
     if (error) {
@@ -96,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function readMcstatusIo(data, requestTime) {
+  function readMcstatusIo(data) {
     if (!data || data.online !== true) {
       return null;
     }
@@ -113,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return {
       online: true,
-      ping: requestTime,
       playersOnline: onlinePlayers,
       playersMax: maxPlayers
     };
@@ -122,13 +116,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderOnline(status) {
     setState("online");
     label.textContent = "Online";
-    ping.textContent = status.ping + " ms";
     players.textContent = status.playersOnline + "/" + status.playersMax;
     setUpdated();
   }
 
   async function fetchMcstatusIo() {
-    const startedAt = performance.now();
     const endpoint =
       "https://api.mcstatus.io/v2/status/java/" +
       encodeURIComponent(address) +
@@ -142,14 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const requestTime = Math.max(1, Math.round(performance.now() - startedAt));
-
     if (!response.ok) {
       throw new Error("mcstatus.io antwortet mit HTTP " + response.status);
     }
 
     const data = await response.json();
-    return readMcstatusIo(data, requestTime);
+    return readMcstatusIo(data);
   }
 
   async function loadStatus({ silent = false } = {}) {

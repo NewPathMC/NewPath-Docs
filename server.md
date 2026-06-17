@@ -52,11 +52,6 @@ permalink: /server.html
         </div>
 
         <div class="np-server-status-value">
-          <small>Ping</small>
-          <strong data-np-status-ping>–</strong>
-        </div>
-
-        <div class="np-server-status-value">
           <small>Spieler</small>
           <strong data-np-status-players>–</strong>
         </div>
