@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Regelwerk
+title: Regeln
 nav_order: 2
 permalink: /regelwerk.html
 ---
 
+
 <!-- AUTO_UPDATED_START -->
 <p class="np-last-updated">Zuletzt aktualisiert: 16.06.2026 21:26 Uhr</p>
 <!-- AUTO_UPDATED_END -->
+
 
 <section class="echo-page-box echo-page-box-rules">
   <div class="echo-page-image">
@@ -22,17 +24,78 @@ permalink: /regelwerk.html
 
   <div class="echo-page-content">
     <p class="echo-page-kicker">ECHO – Der Wegbegleiter</p>
-    <h2>Regeln geben der Welt eine klare Richtung.</h2>
+    <h2>Grundsätze geben der Welt Richtung – Regeln halten sie fair.</h2>
     <p>
-      Das Regelwerk schützt die Community, die Atmosphäre und den gemeinsamen Spielfluss.
-      Es soll nicht einschränken, sondern dafür sorgen, dass NewPath langfristig fair,
-      nachvollziehbar und angenehm bleibt.
+      Auf dieser Seite findest du zuerst die Grundidee von NewPath und danach das verbindliche
+      Serverregelwerk. So wird klar, warum wir bestimmte Regeln haben und wie sie das gemeinsame
+      Spielerlebnis schützen.
     </p>
   </div>
 </section>
 
-<section class="np-page-section np-rules-section">
+
+<section class="np-page-section np-philosophy-intro-section" id="philosophie">
   <div class="np-section-header">
+    <p class="np-section-kicker">Unsere Grundsätze</p>
+    <h1 class="np-title">Philosophie</h1>
+    <p class="np-section-lead">
+      NewPath ist kein Wettlauf, kein reines Technikpaket und kein Projekt, bei dem es nur darum geht,
+      möglichst schnell möglichst viel zu erreichen. Im Mittelpunkt stehen Atmosphäre, Entdeckung,
+      Gemeinschaft und eine Welt, die sich bewusst nach einem eigenen Abenteuer anfühlt.
+    </p>
+  </div>
+
+  <div class="np-philosophy-merge-grid">
+    <article class="np-philosophy-merge-card">
+      <span class="np-philosophy-merge-icon" aria-hidden="true">🌿</span>
+      <h2>Immersion vor Tempo</h2>
+      <p>
+        Fortschritt darf Zeit brauchen. NewPath soll zum Erkunden, Bauen, Verweilen und gemeinsamen
+        Erleben einladen, statt alles auf maximale Effizienz und schnellen Endgame-Fortschritt auszurichten.
+      </p>
+    </article>
+
+    <article class="np-philosophy-merge-card">
+      <span class="np-philosophy-merge-icon" aria-hidden="true">🤝</span>
+      <h2>Community vor Ego</h2>
+      <p>
+        Der Server lebt davon, dass Spieler fair miteinander umgehen, Rücksicht nehmen und die Welt
+        nicht nur für sich selbst, sondern auch für andere mitgestalten.
+      </p>
+    </article>
+
+    <article class="np-philosophy-merge-card">
+      <span class="np-philosophy-merge-icon" aria-hidden="true">⚙️</span>
+      <h2>Technik mit Verantwortung</h2>
+      <p>
+        Technik ist Teil von NewPath, aber nicht der alleinige Fokus. Automatisierung, Maschinen und
+        große Anlagen sollen sinnvoll eingesetzt werden, ohne Atmosphäre, Balance oder Performance zu zerstören.
+      </p>
+    </article>
+
+    <article class="np-philosophy-merge-card">
+      <span class="np-philosophy-merge-icon" aria-hidden="true">✨</span>
+      <h2>Qualität vor Quantität</h2>
+      <p>
+        NewPath soll nicht einfach möglichst viele Mods bündeln. Entscheidend ist, ob Inhalte zur Welt,
+        zur Performance, zur Balance und zum gemeinsamen Spielgefühl passen.
+      </p>
+    </article>
+  </div>
+
+  <div class="np-philosophy-rule-bridge">
+    <h2>Warum das Regelwerk dazugehört</h2>
+    <p>
+      Das Regelwerk ist die praktische Grundlage dieser Philosophie. Es schützt Fairness, Performance,
+      Bauprojekte, Community und die langfristige Spielbarkeit der Welt. Die folgenden Regeln sind daher
+      nicht als Einschränkung gedacht, sondern als Rahmen für ein stabiles und angenehmes Miteinander.
+    </p>
+  </div>
+</section>
+
+<section class="np-page-section np-rules-section" id="serverregelwerk">
+  <div class="np-section-header">
+    <p class="np-section-kicker">Verbindliche Regeln</p>
     <h1 class="np-title">Serverregelwerk</h1>
   </div>
 

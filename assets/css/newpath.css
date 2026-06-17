@@ -14951,3 +14951,117 @@ body.np-page-home .np-back-to-top {
     padding: 1rem;
   }
 }
+
+/* 86. Regeln und Philosophie zusammengeführt */
+
+.np-philosophy-intro-section .np-section-kicker,
+.np-rules-section .np-section-kicker {
+  margin: 0 0 0.45rem;
+  color: #00e6f6;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.np-philosophy-intro-section .np-section-lead {
+  max-width: 62rem;
+  margin: 0.7rem auto 0;
+  color: rgba(244, 231, 205, 0.82);
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  line-height: 1.75;
+  text-align: center;
+}
+
+.np-philosophy-merge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.65rem auto 1.35rem;
+}
+
+.np-philosophy-merge-card,
+.np-philosophy-rule-bridge {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(236, 183, 110, 0.2);
+  border-radius: 1rem;
+  background:
+    linear-gradient(180deg, rgba(17, 46, 64, 0.9), rgba(5, 27, 49, 0.86)),
+    radial-gradient(circle at 85% 8%, rgba(0, 230, 246, 0.09), transparent 34%);
+  box-shadow:
+    0 0.9rem 2rem rgba(0, 0, 0, 0.24),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+}
+
+.np-philosophy-merge-card {
+  padding: 1.15rem;
+}
+
+.np-philosophy-rule-bridge {
+  margin: 1.35rem auto 0;
+  padding: 1.2rem 1.35rem;
+  border-color: rgba(0, 230, 246, 0.22);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(0, 230, 246, 0.11), transparent 36%),
+    linear-gradient(135deg, rgba(5, 27, 49, 0.92), rgba(17, 46, 64, 0.78));
+}
+
+.np-philosophy-merge-card::before,
+.np-philosophy-rule-bridge::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(0, 230, 246, 0.85), rgba(236, 183, 110, 0.62), transparent);
+  opacity: 0.88;
+}
+
+.np-philosophy-merge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(0, 230, 246, 0.1);
+  border: 1px solid rgba(0, 230, 246, 0.2);
+  font-size: 1.12rem;
+}
+
+.np-philosophy-merge-card h2,
+.np-philosophy-rule-bridge h2 {
+  margin: 0 0 0.45rem;
+  color: #f4cf7f;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.01em;
+}
+
+.np-philosophy-merge-card p,
+.np-philosophy-rule-bridge p {
+  margin: 0;
+  color: rgba(244, 231, 205, 0.82);
+  line-height: 1.65;
+}
+
+@media (max-width: 76rem) {
+  .np-philosophy-merge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 44rem) {
+  .np-philosophy-intro-section .np-section-lead {
+    text-align: left;
+  }
+
+  .np-philosophy-merge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .np-philosophy-merge-card,
+  .np-philosophy-rule-bridge {
+    padding: 1rem;
+  }
+}
