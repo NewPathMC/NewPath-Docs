@@ -36,7 +36,7 @@ permalink: /regelwerk.html
 
 <section class="np-page-section np-story-section np-philosophy-intro-section" id="philosophie">
   <div class="np-section-header">
-    <h1 class="np-title">Projektphilosophie</h1>
+    <h1 class="np-title">Grundsätze</h1>
   </div>
 
   <div class="np-card-grid np-card-grid-1 np-philosophy-grid">
@@ -99,7 +99,7 @@ permalink: /regelwerk.html
     </header>
     <ol class="np-rule-list">
       <li><strong>1.1.</strong> Wir bauen eine immersive Welt, in der Erkunden, Bauen und Atmosphäre im Vordergrund stehen.</li>
-      <li><strong>1.2.</strong> Handelt bitte im Sinne unserer Philosophie – diese findet ihr auf unserem Discord.</li>
+      <li><strong>1.2.</strong> Handelt bitte im Sinne unserer Grundsätze.</li>
       <li><strong>1.3.</strong> Respektvoller Umgang miteinander ist Voraussetzung – kein toxisches Verhalten, keine Diskriminierung.</li>
       <li><strong>1.4.</strong> Änderungen am Regelwerk sind jederzeit möglich, werden aber transparent im Discord angekündigt.</li>
       <li><strong>1.5.</strong> Das Modpack „NewPath – Echoes of the Wild“ ist ein eigenständiges, von unserem Team zusammengestelltes Projekt und wird ausschließlich über CurseForge bereitgestellt.</li>
