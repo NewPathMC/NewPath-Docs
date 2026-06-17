@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Server & Welt
-nav_order: 4
+nav_order: 3
 permalink: /server.html
 ---
 
