@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:01 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
@@ -24,8 +24,8 @@ permalink: /server.html
     <p class="echo-page-kicker">ECHO – Der Wegbegleiter</p>
     <h2>Alles Wichtige zum laufenden Serverbetrieb.</h2>
     <p>
-      Hier findest du die wichtigsten Informationen rund um Zugang, Versionen,
-      Neustarts, Support und spätere Live-Funktionen wie Serverstatus oder Weltkarte.
+      Hier findest du die wichtigsten Informationen zum laufenden Serverbetrieb:
+      Zugang, Versionen, Neustarts und später auch Live-Status oder Weltkarte.
     </p>
   </div>
 </section>
@@ -33,104 +33,62 @@ permalink: /server.html
 <section class="np-page-section np-server-section">
   <div class="np-section-header">
     <h1 class="np-title">Server & Welt</h1>
+    <p class="np-section-lead">
+      Diese Seite bündelt die wichtigsten Informationen zum aktiven NewPath-Server.
+      Details zu Installation, RAM, Voice Chat und Fehlerbehebung findest du weiterhin in der Modpack Hilfe.
+    </p>
   </div>
 
-  <div class="np-server-status-card">
-    <div>
-      <p class="np-server-kicker">Serverstatus</p>
-      <h2>Live-Anzeige vorbereitet</h2>
+  <div class="np-server-overview">
+    <article class="np-server-main-card">
+      <p class="np-server-kicker">Zugang</p>
+      <h2>Whitelist-Projekt</h2>
       <p>
-        Der Live-Status wird später eingebunden, sobald feststeht, welche externe
-        Status-Abfrage oder welcher eigene Bot-/API-Weg genutzt wird.
-      </p>
-    </div>
-    <span class="np-server-status-pill np-server-status-planned">Geplant</span>
-  </div>
-
-  <div class="np-server-grid">
-    <article class="np-server-card">
-      <span class="np-server-card-icon" aria-hidden="true">🔐</span>
-      <h2>Zugang</h2>
-      <p>
-        NewPath ist ein Whitelist-Projekt. Die Server-IP wird nach erfolgreicher
-        Freischaltung im Discord bereitgestellt.
+        NewPath ist ein freigeschaltetes Community-Projekt. Die Server-IP wird nach erfolgreicher
+        Whitelist im Discord bereitgestellt.
       </p>
       <ul>
         <li>Whitelist über Discord</li>
         <li>Server-IP im freigeschalteten Bereich</li>
-        <li>Regelwerk wird mit der Whitelist akzeptiert</li>
+        <li>Regeln werden mit der Whitelist akzeptiert</li>
       </ul>
     </article>
 
-    <article class="np-server-card">
-      <span class="np-server-card-icon" aria-hidden="true">🧭</span>
-      <h2>Versionen</h2>
-      <p>
-        Für den Server muss die passende NewPath-Modpack-Version genutzt werden.
-        Abweichende eigene Mods sind grundsätzlich nicht vorgesehen.
-      </p>
-      <ul>
-        <li>Minecraft: 26.1.2</li>
-        <li>Loader: NeoForge</li>
-        <li>Modpack: NewPath – Echoes of the Wild</li>
-      </ul>
-    </article>
+    <aside class="np-server-side-stack">
+      <div class="np-server-mini-card">
+        <p class="np-server-kicker">Status</p>
+        <strong>Live-Anzeige geplant</strong>
+        <span>Online-Status und Spieleranzahl folgen später.</span>
+      </div>
 
-    <article class="np-server-card">
-      <span class="np-server-card-icon" aria-hidden="true">⏱️</span>
-      <h2>Neustarts</h2>
-      <p>
-        Geplante Neustarts helfen dabei, den Server langfristig stabil zu halten.
-      </p>
-      <ul>
-        <li>Automatischer Neustart: 05:00 Uhr</li>
-        <li>Automatischer Neustart: 17:00 Uhr</li>
-        <li>Kurz vor Neustarts kann es zu Unterbrechungen kommen</li>
-      </ul>
-    </article>
-
-    <article class="np-server-card">
-      <span class="np-server-card-icon" aria-hidden="true">🛠️</span>
-      <h2>Support</h2>
-      <p>
-        Probleme mit Verbindung, Performance, Abstürzen oder Mods sollten über die
-        vorgesehenen Discord-Kanäle oder Tickets gemeldet werden.
-      </p>
-      <ul>
-        <li>Crash-Reports und Logs bereithalten</li>
-        <li>Problem möglichst genau beschreiben</li>
-        <li>Screenshots oder kurze Clips helfen bei der Analyse</li>
-      </ul>
-    </article>
+      <div class="np-server-mini-card">
+        <p class="np-server-kicker">Version</p>
+        <strong>Minecraft 26.1.2</strong>
+        <span>NeoForge · NewPath – Echoes of the Wild</span>
+      </div>
+    </aside>
   </div>
 
-  <div class="np-server-feature-grid">
-    <article class="np-server-feature">
-      <p class="np-server-kicker">Live-Funktion</p>
-      <h2>Serverstatus</h2>
+  <div class="np-server-info-grid">
+    <article class="np-server-info-card">
+      <p class="np-server-kicker">Neustarts</p>
+      <h2>Automatische Restarts</h2>
       <p>
-        Geplant ist eine Anzeige für Online-/Offline-Status, Spieleranzahl,
-        Serverantwort und ggf. aktuelle Version.
+        Regelmäßige Neustarts helfen dabei, den Server langfristig stabil zu halten.
       </p>
-      <div class="np-server-placeholder">Status-Modul folgt</div>
+      <ul>
+        <li>05:00 Uhr</li>
+        <li>17:00 Uhr</li>
+      </ul>
     </article>
 
-    <article class="np-server-feature">
+    <article class="np-server-info-card">
       <p class="np-server-kicker">Weltkarte</p>
-      <h2>Webmap</h2>
+      <h2>Webmap vorbereitet</h2>
       <p>
-        Für später ist eine Weltkarte denkbar, zum Beispiel über eine geeignete
-        Webmap-Lösung wie BlueMap, sofern sie sauber zum Server-Setup passt.
+        Eine öffentliche Weltkarte ist später denkbar, zum Beispiel über eine geeignete Webmap-Lösung.
       </p>
       <div class="np-server-placeholder">Weltkarte folgt</div>
     </article>
-  </div>
-
-  <div class="np-server-note">
-    <h2>Hinweis</h2>
-    <p>
-      Verbindliche Informationen stehen weiterhin im Discord. Diese Seite dient als
-      öffentliche Übersicht und Einstiegspunkt für neue und bestehende Spieler.
-    </p>
   </div>
 </section>

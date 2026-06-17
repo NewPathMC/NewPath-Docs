@@ -7,7 +7,7 @@ permalink: /regelwerk.html
 
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:01 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 16.06.2026 21:26 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 
@@ -34,66 +34,67 @@ permalink: /regelwerk.html
 </section>
 
 
-<section class="np-page-section np-philosophy-intro-section" id="philosophie">
+<section class="np-page-section np-story-section np-philosophy-intro-section" id="philosophie">
   <div class="np-section-header">
-    <h1 class="np-title">Philosophie</h1>
-    <p class="np-section-lead">
-      NewPath ist kein Wettlauf, kein reines Technikpaket und kein Projekt, bei dem es nur darum geht,
-      möglichst schnell möglichst viel zu erreichen. Im Mittelpunkt stehen Atmosphäre, Entdeckung,
-      Gemeinschaft und eine Welt, die sich bewusst nach einem eigenen Abenteuer anfühlt.
-    </p>
+    <h1 class="np-title">Projektphilosophie</h1>
   </div>
 
-  <div class="np-philosophy-merge-grid">
-    <article class="np-philosophy-merge-card">
-      <span class="np-philosophy-merge-icon" aria-hidden="true">🌿</span>
-      <h2>Immersion vor Tempo</h2>
-      <p>
-        Fortschritt darf Zeit brauchen. NewPath soll zum Erkunden, Bauen, Verweilen und gemeinsamen
-        Erleben einladen, statt alles auf maximale Effizienz und schnellen Endgame-Fortschritt auszurichten.
+  <div class="np-card-grid np-card-grid-1 np-philosophy-grid">
+    <article class="np-info-card">
+      <span class="np-card-kicker">01</span>
+      <h2 class="np-card-title">Im eigenen Tempo</h2>
+      <p class="np-card-text">
+        NewPath ist eine Welt für Spieler, die Minecraft in ihrem eigenen Tempo erleben möchten.
       </p>
     </article>
 
-    <article class="np-philosophy-merge-card">
-      <span class="np-philosophy-merge-icon" aria-hidden="true">🤝</span>
-      <h2>Community vor Ego</h2>
-      <p>
-        Der Server lebt davon, dass Spieler fair miteinander umgehen, Rücksicht nehmen und die Welt
-        nicht nur für sich selbst, sondern auch für andere mitgestalten.
+    <article class="np-info-card">
+      <span class="np-card-kicker">02</span>
+      <h2 class="np-card-title">Entdeckung, Kreativität und Gemeinschaft</h2>
+      <p class="np-card-text">
+        Im Mittelpunkt stehen Entdeckung, Kreativität und Gemeinschaft. Ob allein oder im
+        Team, technisch oder kreativ – jeder soll die Freiheit haben, seinen eigenen Weg
+        zu gehen und Teil einer lebendigen Welt zu werden.
       </p>
     </article>
 
-    <article class="np-philosophy-merge-card">
-      <span class="np-philosophy-merge-icon" aria-hidden="true">⚙️</span>
-      <h2>Technik mit Verantwortung</h2>
-      <p>
-        Technik ist Teil von NewPath, aber nicht der alleinige Fokus. Automatisierung, Maschinen und
-        große Anlagen sollen sinnvoll eingesetzt werden, ohne Atmosphäre, Balance oder Performance zu zerstören.
+    <article class="np-info-card">
+      <span class="np-card-kicker">03</span>
+      <h2 class="np-card-title">Bewusst gestaltet</h2>
+      <p class="np-card-text">
+        NewPath ist bewusst gestaltet und unterscheidet sich deutlich von klassischen
+        „Alles-drin“-Ansätzen. Viele Inhalte sind speziell auf das Projekt abgestimmt,
+        um eine klare Identität und Wiedererkennbarkeit zu schaffen. Das Ziel ist kein
+        Übermaß an Funktionen, sondern ein stimmiges Gesamtbild, das sich wie aus einem
+        Guss anfühlt.
       </p>
     </article>
 
-    <article class="np-philosophy-merge-card">
-      <span class="np-philosophy-merge-icon" aria-hidden="true">✨</span>
-      <h2>Qualität vor Quantität</h2>
-      <p>
-        NewPath soll nicht einfach möglichst viele Mods bündeln. Entscheidend ist, ob Inhalte zur Welt,
-        zur Performance, zur Balance und zum gemeinsamen Spielgefühl passen.
+    <article class="np-info-card">
+      <span class="np-card-kicker">04</span>
+      <h2 class="np-card-title">Respektvolles Miteinander</h2>
+      <p class="np-card-text">
+        Respekt, Fairness und gegenseitige Rücksichtnahme bilden die Grundlage unserer
+        Community. Die Regeln dienen dabei nicht als Hindernis, sondern als Rahmen für
+        ein angenehmes Miteinander.
       </p>
     </article>
-  </div>
 
-  <div class="np-philosophy-rule-bridge">
-    <h2>Warum das Regelwerk dazugehört</h2>
-    <p>
-      Das Regelwerk ist die praktische Grundlage dieser Philosophie. Es schützt Fairness, Performance,
-      Bauprojekte, Community und die langfristige Spielbarkeit der Welt. Die folgenden Regeln sind daher
-      nicht als Einschränkung gedacht, sondern als Rahmen für ein stabiles und angenehmes Miteinander.
-    </p>
+    <article class="np-info-card">
+      <span class="np-card-kicker">05</span>
+      <h2 class="np-card-title">Gemeinsam weiterentwickeln</h2>
+      <p class="np-card-text">
+        NewPath entwickelt sich gemeinsam mit seiner Community weiter. Feedback, Ideen
+        und Vorschläge helfen dabei, das Projekt kontinuierlich zu verbessern und seinen
+        eigenen Charakter zu bewahren.
+      </p>
+    </article>
   </div>
 </section>
 
 <section class="np-page-section np-rules-section" id="serverregelwerk">
   <div class="np-section-header">
+    <p class="np-section-kicker">Verbindliche Regeln</p>
     <h1 class="np-title">Serverregelwerk</h1>
   </div>
 
