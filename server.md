@@ -6,7 +6,11 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
+<<<<<<< HEAD
 <p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
+=======
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:38 Uhr</p>
+>>>>>>> c70f4f5c73ece6b4b0831c9fe09c9cb9874227aa
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
