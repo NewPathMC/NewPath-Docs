@@ -2565,16 +2565,30 @@ body.np-page-sub .main-content > h3,
     max-width: min(1440px, var(--np-content-width)) !important;
   }
 
+  /* Desktop-Ausrichtung: ECHO-Boxen und Inhaltsboxen beginnen gleich breit im Hauptpanel. */
   .np-page-section,
   .np-content-box,
+  .np-story-section,
+  .np-origin-section,
+  .np-faq-section,
+  .np-team-section,
+  .np-streamer-section,
+  .np-help-section,
+  .np-gallery-page,
   .echo-page-box,
   .echo-page-box-team,
   .echo-page-box-philosophy,
   .echo-page-box-faq,
   .echo-page-box-rules,
   .echo-page-box-streamer,
-  .echo-page-box-help {
+  .echo-page-box-help,
+  .echo-page-box-server,
+  .echo-page-box-duck {
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .np-card-grid-4 {
@@ -2594,13 +2608,16 @@ body.np-page-sub .main-content > h3,
   .echo-page-box-streamer,
   .echo-page-box-help,
   .echo-page-box-server,
+  .echo-page-box-duck,
   .np-page-section,
   .np-content-box,
   .np-story-section,
   .np-origin-section,
   .np-faq-section,
   .np-team-section,
-  .np-streamer-section {
+  .np-streamer-section,
+  .np-help-section,
+  .np-gallery-page {
     margin-top: 0 !important;
     margin-bottom: var(--np-section-gap) !important;
     padding-top: var(--np-box-padding-y) !important;
@@ -2617,17 +2634,24 @@ body.np-page-sub .main-content > h3,
   .echo-page-box-streamer:last-child,
   .echo-page-box-help:last-child,
   .echo-page-box-server:last-child,
+  .echo-page-box-duck:last-child,
   .np-page-section:last-child,
   .np-content-box:last-child,
   .np-story-section:last-child,
   .np-origin-section:last-child,
   .np-faq-section:last-child,
   .np-team-section:last-child,
-  .np-streamer-section:last-child {
+  .np-streamer-section:last-child,
+  .np-help-section:last-child,
+  .np-gallery-page:last-child {
     margin-bottom: 0 !important;
   }
 
   .np-section-header {
+    width: 100% !important;
+    max-width: 62rem !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
     margin-bottom: var(--np-space-md) !important;
   }
 
@@ -14798,31 +14822,28 @@ body.np-page-home .np-back-to-top {
   - Server- und Philosophie-Boxen nutzen dieselben Kartenrollen.
   - Keine abweichenden Emoji-Karten mehr.
   - Radien, Rahmen, Hintergründe und Abstände orientieren sich an np-page-section / np-rule-block.
-  - Server-ECHO-Box wird in die bestehenden ECHO-Box-Regeln eingebunden.
+  - Die Server-ECHO-Box bleibt bewusst im allgemeinen ECHO-System und bekommt keine eigene Panel-Optik.
 */
-
-.echo-page-box-server {
-  border-color: var(--np-system-border) !important;
-  background: var(--np-section-bg) !important;
-}
 
 .echo-page-box-server,
 .echo-page-box-server:hover,
 .echo-page-box-server:focus-within {
+  border: 1px solid var(--np-ui-border, rgba(72, 122, 146, 0.34)) !important;
+  border-left: 3px solid rgba(0, 230, 246, 0.62) !important;
+  border-radius: var(--np-ui-panel-radius, 0.78rem) !important;
+  background:
+    radial-gradient(circle at 5% 45%, rgba(0, 230, 246, 0.10), transparent 14rem),
+    linear-gradient(180deg, rgba(3, 18, 25, 0.84), rgba(1, 12, 18, 0.91)) !important;
+  box-shadow: var(--np-ui-panel-shadow, 0 18px 38px rgba(0, 0, 0, 0.28)) !important;
   transform: none !important;
 }
 
-.echo-page-box-server:hover {
-  border-color: var(--np-system-border) !important;
-  background: var(--np-section-bg) !important;
-  box-shadow: var(--np-ui-panel-shadow, 0 18px 38px rgba(0, 0, 0, 0.28)) !important;
-}
-
 .echo-page-box-server p:not(.echo-page-kicker) {
+  color: var(--np-ui-text-color, rgba(247, 236, 220, 0.77)) !important;
   font-family: var(--np-font-body) !important;
-  color: var(--np-type-body) !important;
+  font-size: clamp(0.88rem, 0.90vw, 1rem) !important;
   font-weight: 400 !important;
-  line-height: 1.62 !important;
+  line-height: 1.56 !important;
 }
 
 .np-server-section .np-section-lead,
@@ -16138,40 +16159,4 @@ body.np-page-home .np-back-to-top {
   .np-server-status-footer .np-server-refresh {
     width: 100%;
   }
-}
-
-/* ------------------------------------------------------------
-   93. Hotfix: Server-ECHO-Box an das allgemeine ECHO-System angleichen
------------------------------------------------------------- */
-
-/*
-  Ursache:
-  Ein späterer Server/Philosophie-Block hat .echo-page-box-server erneut
-  mit var(--np-section-bg) und var(--np-system-border) überschrieben.
-  Dadurch wirkte die ECHO-Box auf der Seite "Server & Welt" links anders
-  als die anderen ECHO-Unterseitenboxen.
-
-  Dieser Hotfix setzt nur die Server-ECHO-Box wieder auf die gemeinsame
-  ECHO-Panel-Optik zurück. Die übrigen Server-Karten bleiben unverändert.
-*/
-
-.echo-page-box-server,
-.echo-page-box-server:hover,
-.echo-page-box-server:focus-within {
-  border: 1px solid var(--np-ui-border, rgba(72, 122, 146, 0.34)) !important;
-  border-left: 3px solid rgba(0, 230, 246, 0.62) !important;
-  border-radius: var(--np-ui-panel-radius, 0.78rem) !important;
-  background:
-    radial-gradient(circle at 5% 45%, rgba(0, 230, 246, 0.10), transparent 14rem),
-    linear-gradient(180deg, rgba(3, 18, 25, 0.84), rgba(1, 12, 18, 0.91)) !important;
-  box-shadow: var(--np-ui-panel-shadow, 0 18px 38px rgba(0, 0, 0, 0.28)) !important;
-  transform: none !important;
-}
-
-.echo-page-box-server p:not(.echo-page-kicker) {
-  color: var(--np-ui-text-color, rgba(247, 236, 220, 0.77)) !important;
-  font-family: var(--np-font-body) !important;
-  font-size: clamp(0.88rem, 0.90vw, 1rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.56 !important;
 }
