@@ -11,6 +11,7 @@ on:
       - "server.md"
       - "team.md"
       - "streamer.md"
+      - "galerie.md"
       - "ente.md"
 
 permissions:
@@ -43,6 +44,7 @@ jobs:
             server.md
             team.md
             streamer.md
+            galerie.md
             ente.md
           )
 

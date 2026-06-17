@@ -5,6 +5,10 @@ nav_order: 8
 permalink: /galerie.html
 ---
 
+<!-- AUTO_UPDATED_START -->
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 15:47 Uhr</p>
+<!-- AUTO_UPDATED_END -->
+
 <section class="echo-page-box echo-page-box-gallery">
   <div class="echo-page-image">
     <img src="{{ '/assets/images/echo/echo-galerie.png' | relative_url }}" alt="ECHO Galerie" width="512" height="512" loading="lazy" decoding="async">

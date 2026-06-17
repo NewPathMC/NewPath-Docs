@@ -4981,9 +4981,9 @@ img {
 
 .np-help-module-section {
   display: grid;
-  gap: 0.72rem;
-  padding-top: clamp(1.15rem, 1.65vw, 1.65rem) !important;
-  padding-bottom: clamp(1.15rem, 1.65vw, 1.65rem) !important;
+  gap: var(--np-space-md);
+  padding-top: var(--np-box-padding-y) !important;
+  padding-bottom: var(--np-box-padding-y) !important;
 }
 
 .np-help-module-section .np-section-header {
@@ -15077,7 +15077,7 @@ body.np-page-home .np-back-to-top {
 */
 
 .np-server-section {
-  padding-top: clamp(1.35rem, 2.2vw, 2rem) !important;
+  padding-top: var(--np-box-padding-y) !important;
 }
 
 .np-server-section > .np-section-header {
@@ -15596,7 +15596,7 @@ body.np-page-home .np-back-to-top {
 */
 
 .np-server-dashboard .np-section-header {
-  margin-bottom: 1.1rem !important;
+  margin-bottom: var(--np-space-md) !important;
 }
 
 .np-server-dashboard .np-section-lead,
