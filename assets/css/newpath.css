@@ -14764,3 +14764,290 @@ body.np-page-home .np-back-to-top {
     transform: none !important;
   }
 }
+
+/* 84. Mobile Startseite: ECHO, History und Logo-Evolution finalisieren */
+
+/*
+  Ziel:
+  - ECHO/Pfadfinder auf Mobile sauber zentrieren
+  - Startseitenbereiche nicht an den Boxrändern kleben lassen
+  - Entstehungsgeschichte und Logo-Evolution mobil luftiger darstellen
+*/
+
+@media (max-width: 66.499rem) {
+  body.np-page-home {
+    overflow-x: hidden !important;
+  }
+
+  body.np-page-home .main-content {
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+  }
+
+  .np-home,
+  .np-home-v2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  /* ECHO/Pfadfinder: Bild und Text wirklich mittig */
+  .np-home-v2 .np-pathfinder,
+  .np-pathfinder {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1.15rem auto 1.35rem !important;
+    padding: clamp(1.15rem, 5vw, 1.55rem) !important;
+    border-radius: 0.95rem !important;
+    overflow: hidden !important;
+  }
+
+  .np-home-v2 .np-pathfinder-echo,
+  .np-pathfinder-echo {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    align-items: center !important;
+    gap: 0.85rem !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .np-home-v2 .np-pathfinder-echo::before,
+  .np-pathfinder-echo::before {
+    display: none !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image,
+  .np-pathfinder-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    justify-self: center !important;
+    margin: 0 auto !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image img,
+  .np-pathfinder-image img {
+    width: clamp(8.6rem, 46vw, 12rem) !important;
+    height: auto !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy,
+  .np-pathfinder-copy {
+    width: min(100%, 21rem) !important;
+    max-width: 21rem !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy .np-kicker,
+  .np-home-v2 .np-pathfinder-copy h2,
+  .np-home-v2 .np-pathfinder-copy p,
+  .np-pathfinder-copy .np-kicker,
+  .np-pathfinder-copy h2,
+  .np-pathfinder-copy p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy h2,
+  .np-pathfinder-copy h2 {
+    max-width: 14rem !important;
+    line-height: 1.04 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-copy p,
+  .np-pathfinder-copy p {
+    max-width: 19rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .np-home-v2 .np-pathfinder-routes,
+  .np-pathfinder-routes {
+    width: 100% !important;
+    margin-top: 0.95rem !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .np-home-v2 .np-route-card,
+  .np-route-card {
+    min-height: auto !important;
+    padding: 0.95rem 1rem !important;
+  }
+
+  /* Entstehungsgeschichte: mehr Luft zur Boxkante */
+  .np-history-panel,
+  .np-history-panel-compact {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 1.25rem auto 0.95rem !important;
+    padding: clamp(1.2rem, 5.5vw, 1.65rem) !important;
+    overflow: hidden !important;
+  }
+
+  .np-history-panel > *,
+  .np-history-panel-compact > * {
+    max-width: 100% !important;
+  }
+
+  .np-history-intro,
+  .np-history-copy,
+  .np-history-text,
+  .np-history-summary {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  .np-history-panel h2,
+  .np-history-panel h3,
+  .np-history-panel .np-title,
+  .np-history-panel .np-home-section-heading {
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  .np-history-timeline,
+  .np-history-tabs,
+  .np-history-tab-list {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .np-history-tab,
+  .np-history-tab-button,
+  .np-history-item {
+    padding-left: clamp(0.85rem, 4vw, 1.05rem) !important;
+    padding-right: clamp(0.85rem, 4vw, 1.05rem) !important;
+  }
+
+  .np-history-detail,
+  .np-history-tab-content,
+  .np-history-tab-panel {
+    width: 100% !important;
+    padding-left: clamp(1rem, 4.5vw, 1.2rem) !important;
+    padding-right: clamp(1rem, 4.5vw, 1.2rem) !important;
+  }
+
+  /* Logo-Evolution: mobil nicht mehr als gequetschte Desktop-Linie */
+  .np-logo-evolution {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0.9rem !important;
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+  }
+
+  .np-logo-evolution-head {
+    margin-bottom: 0.85rem !important;
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+  }
+
+  .np-logo-evolution-title,
+  .np-logo-evolution-head .np-logo-evolution-title,
+  #logo-evolution {
+    max-width: 100% !important;
+    padding-left: 0.95rem !important;
+    font-size: clamp(1.45rem, 7.2vw, 2rem) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .np-logo-evolution-intro {
+    max-width: 100% !important;
+    margin-top: 0.25rem !important;
+    text-align: left !important;
+    transform: none !important;
+  }
+
+  .np-logo-evolution-track {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem 0.85rem !important;
+    overflow-x: visible !important;
+    padding: 0.4rem 0.15rem 0.25rem !important;
+  }
+
+  .np-logo-evolution-track::before {
+    display: none !important;
+  }
+
+  .np-logo-evolution-card,
+  .np-logo-evolution-card:nth-child(n),
+  .np-logo-evolution-card.is-current {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: auto !important;
+    flex: none !important;
+    display: grid !important;
+    grid-template-rows: minmax(5.8rem, auto) auto !important;
+    padding: 0.4rem 0.2rem 0.25rem !important;
+    transform: none !important;
+    opacity: 1 !important;
+    background: transparent !important;
+  }
+
+  .np-logo-evolution-card.is-current {
+    grid-column: 1 / -1 !important;
+    padding-top: 0.65rem !important;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(0, 230, 246, 0.12), transparent 58%),
+      radial-gradient(circle at 50% 75%, rgba(236, 183, 110, 0.08), transparent 62%) !important;
+  }
+
+  .np-logo-evolution-card::before,
+  .np-logo-evolution-card.is-current::before {
+    display: none !important;
+  }
+
+  .np-logo-evolution-image,
+  .np-logo-evolution-card.is-current .np-logo-evolution-image {
+    min-height: 5.9rem !important;
+    align-items: center !important;
+    transform: none !important;
+  }
+
+  .np-logo-evolution-image img {
+    max-width: min(100%, 7rem) !important;
+    max-height: 5.8rem !important;
+  }
+
+  .np-logo-evolution-card.is-current .np-logo-evolution-image img {
+    max-width: min(100%, 9.1rem) !important;
+    max-height: 7.4rem !important;
+  }
+
+  .np-logo-evolution-meta {
+    margin-top: 0 !important;
+    min-height: auto !important;
+  }
+
+  .np-logo-evolution-meta strong {
+    font-size: 0.76rem !important;
+  }
+
+  .np-logo-evolution-meta small {
+    font-size: 0.58rem !important;
+  }
+
+  .np-logo-evolution-badge {
+    top: 0.35rem !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+  }
+}
