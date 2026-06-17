@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 16.06.2026 21:26 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
@@ -33,10 +33,6 @@ permalink: /server.html
 <section class="np-page-section np-server-section">
   <div class="np-section-header">
     <h1 class="np-title">Server & Welt</h1>
-    <p class="np-section-lead">
-      Diese Seite bündelt alle Informationen, die direkt mit dem aktiven NewPath-Server
-      und der gemeinsamen Welt zusammenhängen.
-    </p>
   </div>
 
   <div class="np-server-status-card">

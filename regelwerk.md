@@ -36,7 +36,6 @@ permalink: /regelwerk.html
 
 <section class="np-page-section np-philosophy-intro-section" id="philosophie">
   <div class="np-section-header">
-    <p class="np-section-kicker">Unsere Grundsätze</p>
     <h1 class="np-title">Philosophie</h1>
     <p class="np-section-lead">
       NewPath ist kein Wettlauf, kein reines Technikpaket und kein Projekt, bei dem es nur darum geht,
@@ -95,7 +94,6 @@ permalink: /regelwerk.html
 
 <section class="np-page-section np-rules-section" id="serverregelwerk">
   <div class="np-section-header">
-    <p class="np-section-kicker">Verbindliche Regeln</p>
     <h1 class="np-title">Serverregelwerk</h1>
   </div>
 
