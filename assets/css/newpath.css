@@ -5666,6 +5666,31 @@ a.np-server-copy-hero-button::before {
   clip-path: none !important;
 }
 
+
+
+/* Discord-Button: Icon auf Startseite */
+.np-discord-hero-icon {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+}
+
+.np-discord-hero-icon::before {
+  content: "◖◗";
+  display: inline-block;
+  color: #ecb76e;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: -0.18rem;
+  transform: translateX(-0.04rem);
+  text-shadow: 0 0 0.45rem rgba(0, 230, 246, 0.42);
+}
 .np-home-v2 .np-hero-content .np-server-copy-hero-label,
 .main-content .np-hero-content .np-server-copy-hero-label,
 .np-server-copy-hero-button .np-server-copy-hero-label {
