@@ -6,7 +6,7 @@ permalink: /galerie.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 15:47 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 18:16 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-gallery">
