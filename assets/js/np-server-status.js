@@ -5,28 +5,27 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  /*
-    Hier später die öffentliche Serveradresse eintragen, z. B.:
-    const FALLBACK_SERVER_ADDRESS = "newpath.minecraft.best";
-
-    Hinweis:
-    Bei GitHub Pages läuft diese Abfrage direkt im Browser.
-    Die Adresse ist dadurch im Quellcode sichtbar.
-  */
-  const FALLBACK_SERVER_ADDRESS = "";
-
+  const FALLBACK_SERVER_ADDRESS = "newpath.minecraft.best";
   const address = (card.dataset.serverAddress || FALLBACK_SERVER_ADDRESS || "").trim();
 
   const label = card.querySelector("[data-np-status-label]");
   const detail = card.querySelector("[data-np-status-detail]");
   const players = card.querySelector("[data-np-status-players]");
   const version = card.querySelector("[data-np-status-version]");
-  const dot = card.querySelector("[data-np-status-dot]");
   const refreshButton = card.querySelector("[data-np-status-refresh]");
 
   function setState(state) {
     card.classList.remove("is-online", "is-offline", "is-loading", "is-error", "is-unconfigured");
     card.classList.add("is-" + state);
+  }
+
+  function finishButton() {
+    if (!refreshButton) {
+      return;
+    }
+
+    refreshButton.disabled = false;
+    refreshButton.textContent = "Status aktualisieren";
   }
 
   function setLoading() {
@@ -44,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setUnconfigured() {
     setState("unconfigured");
-    label.textContent = "Noch nicht verbunden";
-    detail.textContent = "Trage die Serveradresse in assets/js/np-server-status.js oder im data-server-address-Attribut ein.";
+    label.textContent = "Nicht konfiguriert";
+    detail.textContent = "Es wurde keine Serveradresse für die Statusabfrage hinterlegt.";
     players.textContent = "–";
     version.textContent = "–";
   }
@@ -89,22 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function setError(error) {
     setState("error");
     label.textContent = "Status unbekannt";
-    detail.textContent = "Die Statusabfrage konnte nicht geladen werden.";
+    detail.textContent = "Die Statusabfrage konnte nicht geladen werden. Bitte später erneut versuchen.";
     players.textContent = "–";
     version.textContent = "–";
 
     if (error) {
       console.warn("NewPath Serverstatus:", error);
     }
-  }
-
-  function finishButton() {
-    if (!refreshButton) {
-      return;
-    }
-
-    refreshButton.disabled = false;
-    refreshButton.textContent = "Status aktualisieren";
   }
 
   async function loadStatus() {

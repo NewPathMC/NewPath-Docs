@@ -6,7 +6,7 @@ permalink: /server.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 14:13 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-server">
@@ -39,8 +39,34 @@ permalink: /server.html
     </p>
   </div>
 
-  <div class="np-server-overview">
-    <article class="np-server-main-card">
+  <section class="np-server-status-panel" data-np-server-status data-server-address="newpath.minecraft.best" aria-label="Aktueller Serverstatus">
+    <div class="np-server-status-main">
+      <p class="np-server-kicker">Live-Status</p>
+      <div class="np-server-status-titleline">
+        <h2 data-np-status-label>Wird geladen …</h2>
+        <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
+      </div>
+      <p data-np-status-detail>Serverstatus wird abgefragt.</p>
+    </div>
+
+    <div class="np-server-status-stats">
+      <span>
+        <small>Spieler</small>
+        <strong data-np-status-players>–</strong>
+      </span>
+      <span>
+        <small>Version</small>
+        <strong data-np-status-version>–</strong>
+      </span>
+    </div>
+
+    <button class="np-server-refresh" type="button" data-np-status-refresh>
+      Status aktualisieren
+    </button>
+  </section>
+
+  <div class="np-server-info-grid np-server-info-grid-main">
+    <article class="np-server-info-card np-server-info-card-large">
       <p class="np-server-kicker">Zugang</p>
       <h2>Whitelist-Projekt</h2>
       <p>
@@ -54,40 +80,13 @@ permalink: /server.html
       </ul>
     </article>
 
-    <aside class="np-server-side-stack">
-      <div class="np-server-mini-card np-server-live-card" data-np-server-status data-server-address="">
-        <div class="np-server-live-head">
-          <div>
-            <p class="np-server-kicker">Status</p>
-            <strong data-np-status-label>Wird geladen …</strong>
-          </div>
-          <span class="np-server-live-dot" data-np-status-dot aria-hidden="true"></span>
-        </div>
-
-        <span data-np-status-detail>Serveradresse noch nicht konfiguriert.</span>
-
-        <div class="np-server-live-stats" aria-label="Serverstatus Details">
-          <span>
-            <small>Spieler</small>
-            <strong data-np-status-players>–</strong>
-          </span>
-          <span>
-            <small>Version</small>
-            <strong data-np-status-version>–</strong>
-          </span>
-        </div>
-
-        <button class="np-server-refresh" type="button" data-np-status-refresh>
-          Status aktualisieren
-        </button>
-      </div>
-
-      <div class="np-server-mini-card">
-        <p class="np-server-kicker">Version</p>
-        <strong>Minecraft 26.1.2</strong>
-        <span>NeoForge · NewPath – Echoes of the Wild</span>
-      </div>
-    </aside>
+    <article class="np-server-info-card">
+      <p class="np-server-kicker">Version</p>
+      <h2>Minecraft 26.1.2</h2>
+      <p>
+        NeoForge · NewPath – Echoes of the Wild
+      </p>
+    </article>
   </div>
 
   <div class="np-server-info-grid">
@@ -113,6 +112,5 @@ permalink: /server.html
     </article>
   </div>
 </section>
-
 
 <script src="{{ site.baseurl }}/assets/js/np-server-status.js" defer></script>
