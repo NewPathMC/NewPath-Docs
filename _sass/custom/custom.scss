@@ -1,63 +1,7 @@
-// NewPath – Echoes of the Wild Custom Styling
-
-.site-title {
-  font-weight: 700;
-}
-
-.main-content h1,
-.main-content h2,
-.main-content h3 {
-  letter-spacing: 0.02em;
-}
-
-.main-content a {
-  text-decoration-thickness: 2px;
-}
-
-.highlight-box {
-  padding: 1rem 1.25rem;
-  border: 1px solid #35657d;
-  border-left: 4px solid #00e6f6;
-  border-radius: 0.5rem;
-  background: #051b31;
-  color: #f4cf7f;
-}
-
-.np-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.np-card {
-  display: block;
-  padding: 1rem 1.15rem;
-  border: 1px solid #35657d;
-  border-radius: 0.75rem;
-  background: linear-gradient(145deg, #051b31, #112e40);
-  text-decoration: none;
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.np-card:hover {
-  transform: translateY(-2px);
-  border-color: #00e6f6;
-  box-shadow: 0 0 18px rgba(0, 230, 246, 0.18);
-  text-decoration: none;
-}
-
-.np-card-title {
-  display: block;
-  margin-bottom: 0.35rem;
-  color: #ecb76e;
-  font-weight: 700;
-  font-size: 1.05rem;
-}
-
-.np-card-text {
-  display: block;
-  color: #f4cf7f;
-  font-size: 0.9rem;
-  line-height: 1.45;
-}
+// NewPath – Echoes of the Wild
+// -----------------------------------------------------------------------------
+// Projekt-spezifische Layout- und Komponentenregeln liegen bewusst gesammelt in:
+// assets/css/newpath.css
+//
+// Diese Datei bleibt nahezu leer, damit Just-the-Docs keine alten NewPath-Regeln
+// vorlädt, die später wieder überschrieben werden müssten.
