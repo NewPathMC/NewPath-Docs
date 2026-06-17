@@ -7,7 +7,7 @@ permalink: /regelwerk.html
 
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 21:49 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 17.06.2026 22:00 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 
