@@ -273,12 +273,6 @@ permalink: /modpack-hilfe.html
           <li>Nach erfolgreicher Freischaltung kannst du dem Server beitreten.</li>
         </ol>
 
-        <!-- WICHTIGE HINWEISE -->
-        <div class="np-help-callout np-help-callout-warning">
-          <strong>!</strong>
-          <p>Für den Serverbeitritt brauchst du eine erfolgreiche Whitelist.</p>
-        </div>
-
         <!-- INHALT / ANLEITUNG -->
         <h3 class="np-help-subheading">Server betreten</h3>
         <ol class="np-help-checklist">
@@ -760,3 +754,4 @@ permalink: /modpack-hilfe.html
   </details>
 </section>
 
+<script src="{{ site.baseurl }}/assets/js/np-help-accordion.js" defer></script>

@@ -5107,6 +5107,10 @@ img {
   letter-spacing: -0.012em !important;
 }
 
+#whitelist-zugang {
+  scroll-margin-top: 7.5rem;
+}
+
 .np-help-module-media--stack {
   gap: 0.85rem !important;
 }
