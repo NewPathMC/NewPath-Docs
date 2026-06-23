@@ -246,47 +246,10 @@ permalink: /modpack-hilfe.html
       </aside>
     </div>
   </details>
-  <details id="server-betreten" class="np-accordion np-help-details np-help-module">
-    <summary>
-      <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Server betreten</span>
-    </summary>
-
-    <div class="np-help-module-content">
-      <div class="np-help-module-text">
-        <!-- TEXTBEREICH -->
-
-        <!-- WICHTIGE HINWEISE -->
-        <div class="np-help-callout np-help-callout-warning">
-          <strong>!</strong>
-          <p>Für den Serverbeitritt brauchst du eine erfolgreiche Whitelist.</p>
-        </div>
-
-        <!-- INHALT / ANLEITUNG -->
-        <ol class="np-help-checklist">
-          <li>Starte NewPath über CurseForge.</li>
-          <li>Klicke im Hauptmenü auf Mehrspieler.</li>
-          <li>Füge den NewPath-Server hinzu, falls er noch nicht eingetragen ist.</li>
-          <li>Trage die Server-IP aus dem Discord ein.</li>
-          <li>Wähle den Server aus.</li>
-          <li>Klicke auf Beitreten.</li>
-          <li>Falls du nicht verbinden kannst, prüfe Whitelist und Modpack-Version.</li>
-        </ol>
-      </div>
-
-      <aside class="np-help-module-media">
-        <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Screenshot: Server in Minecraft hinzufügen und betreten.</p>
-        </div>
-      </aside>
-    </div>
-  </details>
   <details id="whitelist-zugang" class="np-accordion np-help-details np-help-module">
     <summary>
       <span class="np-help-module-icon" aria-hidden="true"></span>
-      <span class="np-help-module-title">Whitelist und erster Zugang</span>
+      <span class="np-help-module-title">Whitelist, Zugang & Server betreten</span>
     </summary>
 
     <div class="np-help-module-content">
@@ -300,6 +263,7 @@ permalink: /modpack-hilfe.html
         </div>
 
         <!-- INHALT / ANLEITUNG -->
+        <h3 class="np-help-subheading">Whitelist und erster Zugang</h3>
         <ol class="np-help-checklist">
           <li>Öffne den NewPath-Discord.</li>
           <li>Gehe zum Whitelist-Bereich.</li>
@@ -308,13 +272,36 @@ permalink: /modpack-hilfe.html
           <li>Warte, bis das Team deine Anfrage bearbeitet hat.</li>
           <li>Nach erfolgreicher Freischaltung kannst du dem Server beitreten.</li>
         </ol>
+
+        <!-- WICHTIGE HINWEISE -->
+        <div class="np-help-callout np-help-callout-warning">
+          <strong>!</strong>
+          <p>Für den Serverbeitritt brauchst du eine erfolgreiche Whitelist.</p>
+        </div>
+
+        <!-- INHALT / ANLEITUNG -->
+        <h3 class="np-help-subheading">Server betreten</h3>
+        <ol class="np-help-checklist">
+          <li>Starte NewPath über CurseForge.</li>
+          <li>Klicke im Hauptmenü auf Mehrspieler.</li>
+          <li>Füge den NewPath-Server hinzu, falls er noch nicht eingetragen ist.</li>
+          <li>Trage die Server-IP aus dem Discord ein.</li>
+          <li>Wähle den Server aus.</li>
+          <li>Klicke auf Beitreten.</li>
+          <li>Falls du nicht verbinden kannst, prüfe Whitelist und Modpack-Version.</li>
+        </ol>
       </div>
 
-      <aside class="np-help-module-media">
+      <aside class="np-help-module-media np-help-module-media--stack">
         <!-- BILDBEREICH -->
         <div class="np-help-image-placeholder">
           <span>Bildplatzhalter</span>
           <p>Screenshot: Whitelist-Bereich im Discord.</p>
+        </div>
+
+        <div class="np-help-image-placeholder">
+          <span>Bildplatzhalter</span>
+          <p>Screenshot: Server in Minecraft hinzufügen und betreten.</p>
         </div>
       </aside>
     </div>

@@ -114,7 +114,7 @@ permalink: /
       <strong>Wobei brauchst du Hilfe?</strong>
     </div>
 
-    <a class="np-route-card np-route-card-primary np-route-card-featured" href="{{ site.baseurl }}/modpack-hilfe.html#installation-setup">
+    <a class="np-route-card np-route-card-primary np-route-card-featured" href="{{ site.baseurl }}/modpack-hilfe.html#whitelist-zugang">
       <span class="np-card-icon np-card-icon-green">▶</span>
       <span class="np-route-featured-content">
         <span class="np-route-badge">Empfohlen für neue Spieler</span>

@@ -5098,6 +5098,23 @@ img {
   color: var(--np-gold-soft);
 }
 
+.np-help-subheading {
+  margin: 0.2rem 0 0 !important;
+  color: var(--np-gold-soft) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.05rem, 1.05vw, 1.22rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.012em !important;
+}
+
+.np-help-module-media--stack {
+  gap: 0.85rem !important;
+}
+
+.np-help-module-media--stack .np-help-image-placeholder {
+  min-height: 9.1rem !important;
+}
+
 .np-help-module-section .np-help-checklist {
   margin: 0;
   padding-left: 1.25rem;
