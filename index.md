@@ -114,11 +114,19 @@ permalink: /
       <strong>Wobei brauchst du Hilfe?</strong>
     </div>
 
-    <a class="np-route-card np-route-card-primary" href="{{ site.baseurl }}/modpack-hilfe.html#installation-setup">
+    <a class="np-route-card np-route-card-primary np-route-card-featured" href="{{ site.baseurl }}/modpack-hilfe.html#installation-setup">
       <span class="np-card-icon np-card-icon-green">▶</span>
-      <span class="np-route-title">Mitspielen starten</span>
-      <span class="np-route-text">Installation und Zugang.</span>
-      <span class="np-route-link">Starten →</span>
+      <span class="np-route-featured-content">
+        <span class="np-route-badge">Empfohlen für neue Spieler</span>
+        <span class="np-route-title">Mitspielen starten</span>
+        <span class="np-route-text">Discord, Whitelist, Modpack und erster Login.</span>
+        <span class="np-route-steps" aria-hidden="true">
+          <span>Discord</span>
+          <span>Whitelist</span>
+          <span>Modpack</span>
+        </span>
+        <span class="np-route-link">Zum Einstieg →</span>
+      </span>
     </a>
 
     <a class="np-route-card" href="{{ site.baseurl }}/regelwerk.html">
@@ -142,7 +150,7 @@ permalink: /
       <span class="np-route-link">Hilfe öffnen →</span>
     </a>
 
-    <a class="np-route-card" href="{{ site.baseurl }}/philosophie.html">
+    <a class="np-route-card" href="{{ site.baseurl }}/regelwerk.html#philosophie">
       <span class="np-card-icon np-card-icon-purple">✦</span>
       <span class="np-route-title">NewPath verstehen</span>
       <span class="np-route-text">Atmosphäre und Projektidee.</span>
