@@ -149,13 +149,6 @@ permalink: /
       <span class="np-route-text">Crash, RAM, Logs und Support.</span>
       <span class="np-route-link">Hilfe öffnen →</span>
     </a>
-
-    <a class="np-route-card" href="{{ site.baseurl }}/regelwerk.html#philosophie">
-      <span class="np-card-icon np-card-icon-purple">✦</span>
-      <span class="np-route-title">NewPath verstehen</span>
-      <span class="np-route-text">Atmosphäre und Projektidee.</span>
-      <span class="np-route-link">Mehr →</span>
-    </a>
   </div>
 </section>
 
