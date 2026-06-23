@@ -16065,14 +16065,34 @@ body.np-page-home .np-back-to-top {
 
 
 
+
 /* 91.2 Startseite: ECHO-Kompass mit hervorgehobenem Mitspielen-Pfad */
 @media (min-width: 66.5rem) {
   .np-home-v2 .np-pathfinder-dashboard {
     align-items: stretch !important;
   }
 
+  .np-home-v2 .np-pathfinder-echo {
+    grid-template-columns: minmax(8.2rem, 0.72fr) minmax(15rem, 1.28fr) !important;
+    gap: clamp(1.15rem, 1.55vw, 1.65rem) !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image {
+    align-self: center !important;
+    justify-self: center !important;
+    width: clamp(7.4rem, 8.4vw, 10.25rem) !important;
+    max-width: none !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image img {
+    width: 100% !important;
+    max-width: none !important;
+    transform: scale(1.08) !important;
+    transform-origin: center center !important;
+  }
+
   .np-home-v2 .np-pathfinder-routes.np-echo-route-list {
-    grid-template-columns: minmax(24rem, 2.08fr) repeat(3, minmax(8.6rem, 1fr)) !important;
+    grid-template-columns: minmax(25.5rem, 2.14fr) repeat(3, minmax(8.7rem, 1fr)) !important;
     gap: 0.84rem !important;
     align-items: stretch !important;
   }
@@ -16124,17 +16144,17 @@ body.np-page-home .np-back-to-top {
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured {
     display: grid !important;
-    grid-template-columns: 4rem minmax(0, 1fr) !important;
+    grid-template-columns: 3.65rem minmax(0, 1fr) !important;
     grid-template-rows: 1fr !important;
     align-items: center !important;
     justify-items: stretch !important;
-    gap: 1.05rem !important;
+    gap: 0.9rem !important;
     min-height: 9.5rem !important;
-    padding: 1.02rem 1.12rem !important;
+    padding: 1.02rem 1.18rem !important;
     text-align: left !important;
     border-color: rgba(0, 230, 246, 0.70) !important;
     background:
-      radial-gradient(circle at 18% 16%, rgba(0, 230, 246, 0.24), transparent 7.2rem),
+      radial-gradient(circle at 16% 18%, rgba(0, 230, 246, 0.24), transparent 7.2rem),
       radial-gradient(circle at 90% 82%, rgba(244, 207, 127, 0.15), transparent 7.8rem),
       linear-gradient(135deg, rgba(18, 88, 94, 0.86), rgba(5, 23, 31, 0.95)) !important;
     box-shadow:
@@ -16149,10 +16169,10 @@ body.np-page-home .np-back-to-top {
     grid-row: 1 !important;
     align-self: center !important;
     justify-self: center !important;
-    width: 3.75rem !important;
-    height: 3.75rem !important;
+    width: 3.45rem !important;
+    height: 3.45rem !important;
     margin: 0 !important;
-    font-size: 1.38rem !important;
+    font-size: 1.32rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-featured-content {
@@ -16160,7 +16180,7 @@ body.np-page-home .np-back-to-top {
     z-index: 1 !important;
     display: grid !important;
     align-content: center !important;
-    gap: 0.3rem !important;
+    gap: 0.32rem !important;
     min-width: 0 !important;
   }
 
@@ -16168,34 +16188,34 @@ body.np-page-home .np-back-to-top {
     display: inline-flex !important;
     width: fit-content !important;
     max-width: 100% !important;
-    padding: 0.25rem 0.54rem !important;
-    border: 1px solid rgba(244, 207, 127, 0.44) !important;
+    padding: 0.28rem 0.62rem !important;
+    border: 1px solid rgba(244, 207, 127, 0.46) !important;
     border-radius: 999px !important;
     color: #f4cf7f !important;
-    background: rgba(0, 9, 15, 0.34) !important;
+    background: rgba(0, 9, 15, 0.36) !important;
     font-family: var(--np-font-label) !important;
-    font-size: 0.58rem !important;
+    font-size: 0.61rem !important;
     font-weight: 950 !important;
     line-height: 1 !important;
-    letter-spacing: 0.07em !important;
+    letter-spacing: 0.065em !important;
     text-transform: uppercase !important;
     white-space: nowrap !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured .np-route-title {
-    margin-top: 0.06rem !important;
+    margin-top: 0.04rem !important;
     color: #fff4dc !important;
-    font-size: clamp(1.28rem, 1.22vw, 1.5rem) !important;
+    font-size: clamp(1.34rem, 1.26vw, 1.56rem) !important;
     line-height: 1.02 !important;
     text-align: left !important;
     letter-spacing: -0.018em !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured .np-route-text {
-    max-width: 18rem !important;
+    max-width: 18.5rem !important;
     margin: 0 !important;
-    color: rgba(247, 236, 220, 0.86) !important;
-    font-size: 0.82rem !important;
+    color: rgba(247, 236, 220, 0.88) !important;
+    font-size: 0.86rem !important;
     line-height: 1.36 !important;
     text-align: left !important;
   }
@@ -16203,21 +16223,21 @@ body.np-page-home .np-back-to-top {
   .np-home-v2 .np-echo-route-list .np-route-steps {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 0.32rem !important;
-    margin-top: 0.14rem !important;
+    gap: 0.36rem !important;
+    margin-top: 0.15rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-steps span {
     display: inline-flex !important;
     align-items: center !important;
-    min-height: 1.22rem !important;
-    padding: 0.25rem 0.45rem !important;
-    border: 1px solid rgba(0, 230, 246, 0.23) !important;
+    min-height: 1.32rem !important;
+    padding: 0.28rem 0.54rem !important;
+    border: 1px solid rgba(0, 230, 246, 0.25) !important;
     border-radius: 999px !important;
-    color: rgba(245, 234, 220, 0.84) !important;
-    background: rgba(0, 230, 246, 0.06) !important;
+    color: rgba(245, 234, 220, 0.88) !important;
+    background: rgba(0, 230, 246, 0.07) !important;
     font-family: var(--np-font-label) !important;
-    font-size: 0.56rem !important;
+    font-size: 0.62rem !important;
     font-weight: 850 !important;
     line-height: 1 !important;
     white-space: nowrap !important;
@@ -16226,26 +16246,35 @@ body.np-page-home .np-back-to-top {
   .np-home-v2 .np-echo-route-list .np-route-card-featured .np-route-link {
     justify-self: start !important;
     align-self: auto !important;
-    margin-top: 0.18rem !important;
-    padding: 0.42rem 0.76rem !important;
+    margin-top: 0.22rem !important;
+    padding: 0.48rem 0.88rem !important;
     color: #f4cf7f !important;
-    border-color: rgba(244, 207, 127, 0.36) !important;
-    background: rgba(244, 207, 127, 0.08) !important;
-    font-size: 0.68rem !important;
+    border-color: rgba(244, 207, 127, 0.40) !important;
+    background: rgba(244, 207, 127, 0.09) !important;
+    font-size: 0.74rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured:hover {
     border-color: rgba(244, 207, 127, 0.60) !important;
     background:
-      radial-gradient(circle at 18% 16%, rgba(0, 230, 246, 0.31), transparent 7.4rem),
+      radial-gradient(circle at 16% 18%, rgba(0, 230, 246, 0.31), transparent 7.4rem),
       radial-gradient(circle at 88% 82%, rgba(244, 207, 127, 0.18), transparent 8rem),
       linear-gradient(135deg, rgba(23, 88, 96, 0.91), rgba(6, 26, 35, 0.96)) !important;
   }
 }
 
 @media (min-width: 66.5rem) and (max-width: 1320px) {
+  .np-home-v2 .np-pathfinder-echo {
+    grid-template-columns: minmax(7.1rem, 0.64fr) minmax(13rem, 1.36fr) !important;
+    gap: 1rem !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image {
+    width: clamp(6.8rem, 7.8vw, 8.8rem) !important;
+  }
+
   .np-home-v2 .np-pathfinder-routes.np-echo-route-list {
-    grid-template-columns: minmax(19rem, 1.78fr) repeat(3, minmax(7.15rem, 1fr)) !important;
+    grid-template-columns: minmax(19.5rem, 1.8fr) repeat(3, minmax(7.15rem, 1fr)) !important;
     gap: 0.68rem !important;
   }
 
@@ -16255,33 +16284,38 @@ body.np-page-home .np-back-to-top {
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured {
-    grid-template-columns: 3.35rem minmax(0, 1fr) !important;
-    gap: 0.78rem !important;
-    padding-inline: 0.88rem !important;
+    grid-template-columns: 3.25rem minmax(0, 1fr) !important;
+    gap: 0.72rem !important;
+    padding-inline: 0.92rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured .np-card-icon {
-    width: 3.15rem !important;
-    height: 3.15rem !important;
+    width: 3.05rem !important;
+    height: 3.05rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-badge {
-    font-size: 0.5rem !important;
-    padding-inline: 0.38rem !important;
+    font-size: 0.53rem !important;
+    padding-inline: 0.44rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured .np-route-title {
-    font-size: clamp(1.04rem, 1vw, 1.22rem) !important;
+    font-size: clamp(1.08rem, 1vw, 1.26rem) !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-card-featured .np-route-text {
-    font-size: 0.68rem !important;
+    font-size: 0.72rem !important;
     line-height: 1.3 !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-steps span {
-    font-size: 0.48rem !important;
-    padding-inline: 0.32rem !important;
+    font-size: 0.52rem !important;
+    padding-inline: 0.4rem !important;
+  }
+
+  .np-home-v2 .np-echo-route-list .np-route-card-featured .np-route-link {
+    font-size: 0.66rem !important;
+    padding-inline: 0.72rem !important;
   }
 
   .np-home-v2 .np-echo-route-list .np-route-title {
@@ -16298,6 +16332,17 @@ body.np-page-home .np-back-to-top {
 }
 
 @media (max-width: 66.499rem) {
+  .np-home-v2 .np-pathfinder-image {
+    width: clamp(7rem, 30vw, 9.2rem) !important;
+    margin-inline: auto !important;
+  }
+
+  .np-home-v2 .np-pathfinder-image img {
+    width: 100% !important;
+    transform: scale(1.04) !important;
+    transform-origin: center center !important;
+  }
+
   .np-home-v2 .np-echo-route-list .np-route-card-featured {
     min-height: auto !important;
     display: grid !important;
