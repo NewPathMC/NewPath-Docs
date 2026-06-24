@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v37
+   Konsolidierte CSS-Version v38 – vorsichtig bereinigt
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -5688,9 +5688,6 @@ a.np-server-copy-hero-button::before {
 }
 
 
-
-
-
 /* Discord-Button auf Startseite: Icon wie Header-CTA */
 .np-discord-hero-icon {
   width: 1.15rem !important;
@@ -10140,7 +10137,6 @@ body.np-page-sub .main-content > h1 {
 }
 
 
-
 /* 50. Finaler Design-Check: einheitliche Rollen für Überschriften, Boxen, Karten und ECHO */
 
 :root {
@@ -10276,8 +10272,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-streamer:hover,
 .echo-page-box-help:hover,
 .echo-page-box-server:hover,
-.echo-page-box-duck:hover,
-.np-home-v2 .np-pathfinder-dashboard:hover {
+.echo-page-box-duck:hover {
   border-color: rgba(0, 230, 246, 0.46) !important;
   border-left-color: rgba(0, 230, 246, 0.78) !important;
   box-shadow:
@@ -10343,8 +10338,7 @@ body.np-page-sub .np-section-header::after {
 .echo-page-box-streamer:hover .echo-page-image img,
 .echo-page-box-help:hover .echo-page-image img,
 .echo-page-box-server:hover .echo-page-image img,
-.echo-page-box-duck:hover .echo-page-image img,
-.np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
+.echo-page-box-duck:hover .echo-page-image img {
   transform: translateY(-1px) scale(1.012) !important;
   filter:
     drop-shadow(0 12px 18px rgba(0, 0, 0, 0.38))
@@ -10569,8 +10563,7 @@ body.np-page-home h3 .anchor-link {
 .echo-page-box-streamer:hover,
 .echo-page-box-help:hover,
 .echo-page-box-server:hover,
-.echo-page-box-duck:hover,
-.np-home-v2 .np-pathfinder-dashboard:hover {
+.echo-page-box-duck:hover {
   border-color: var(--np-ui-border) !important;
   border-left-color: rgba(0, 230, 246, 0.62) !important;
   box-shadow: var(--np-ui-panel-shadow) !important;
@@ -10625,8 +10618,7 @@ body.np-page-home h3 .anchor-link {
 .echo-page-box-streamer:hover .echo-page-image img,
 .echo-page-box-help:hover .echo-page-image img,
 .echo-page-box-server:hover .echo-page-image img,
-.echo-page-box-duck:hover .echo-page-image img,
-.np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
+.echo-page-box-duck:hover .echo-page-image img {
   transform: none !important;
   filter:
     drop-shadow(0 10px 16px rgba(0, 0, 0, 0.36))
@@ -10815,8 +10807,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-streamer:hover,
 .echo-page-box-help:hover,
 .echo-page-box-server:hover,
-.echo-page-box-duck:hover,
-.np-home-v2 .np-pathfinder-dashboard:hover {
+.echo-page-box-duck:hover {
   transform: none !important;
   border-color: var(--np-ui-border, rgba(72, 122, 146, 0.34)) !important;
   border-left-color: rgba(0, 230, 246, 0.62) !important;
@@ -10946,8 +10937,7 @@ header .np-header-brand-subtitle {
 .echo-page-box-streamer:hover .echo-page-image img,
 .echo-page-box-help:hover .echo-page-image img,
 .echo-page-box-server:hover .echo-page-image img,
-.echo-page-box-duck:hover .echo-page-image img,
-.np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
+.echo-page-box-duck:hover .echo-page-image img {
   transform: none !important;
   filter:
     drop-shadow(0 12px 18px rgba(0, 0, 0, 0.40))
@@ -16063,29 +16053,16 @@ body.np-page-home .np-back-to-top {
 }
 
 
-
-
-
-
 /* 91.2 Startseite: ECHO-Kompass mit hervorgehobenem Mitspielen-Pfad */
 @media (min-width: 66.5rem) {
   .np-home-v2 .np-pathfinder-dashboard {
     align-items: stretch !important;
+    transition: none !important;
   }
 
-  .np-home-v2 .np-pathfinder-dashboard:hover {
-    border-color: rgba(72, 122, 146, 0.34) !important;
-    border-left-color: rgba(0, 230, 246, 0.62) !important;
-    background:
-      radial-gradient(circle at 12% 58%, rgba(0, 230, 246, 0.13), transparent 16rem),
-      radial-gradient(circle at 88% 8%, rgba(236, 183, 110, 0.10), transparent 18rem),
-      linear-gradient(135deg, rgba(4, 18, 25, 0.82), rgba(7, 28, 36, 0.74)) !important;
-    box-shadow:
-      0 18px 38px rgba(0, 0, 0, 0.28),
-      inset 0 0 34px rgba(0, 230, 246, 0.025) !important;
-  }
-
-  .np-home-v2 .np-pathfinder-echo {
+  /* Wichtig: Kein Hover-Effekt auf der gesamten ECHO-Kompass-Box.
+     Nur die einzelnen Karten innerhalb des Kompasses dürfen weiterhin hovern. */
+.np-home-v2 .np-pathfinder-echo {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
@@ -16103,8 +16080,7 @@ body.np-page-home .np-back-to-top {
     justify-self: center !important;
   }
 
-  .np-home-v2 .np-pathfinder-image img,
-  .np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
+  .np-home-v2 .np-pathfinder-image img {
     width: 100% !important;
     height: auto !important;
     max-width: none !important;
@@ -16399,8 +16375,7 @@ body.np-page-home .np-back-to-top {
     justify-content: center !important;
   }
 
-  .np-home-v2 .np-pathfinder-image img,
-  .np-home-v2 .np-pathfinder-dashboard:hover .np-pathfinder-image img {
+  .np-home-v2 .np-pathfinder-image img {
     width: 100% !important;
     height: auto !important;
     transform: none !important;
@@ -16549,7 +16524,6 @@ body.np-page-home .np-back-to-top {
     margin-top: 0.45rem !important;
   }
 }
-
 
 
 /* 91.25 Mobile: Hintergrundbild deaktivieren */
