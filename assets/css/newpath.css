@@ -16551,6 +16551,21 @@ body.np-page-home .np-back-to-top {
 }
 
 
+
+/* 91.25 Mobile: Hintergrundbild deaktivieren */
+@media (max-width: 66.499rem) {
+  body {
+    background-image:
+      linear-gradient(180deg, rgba(0, 9, 15, 0.96), rgba(0, 18, 33, 0.94) 42%, rgba(0, 6, 10, 0.98) 100%),
+      radial-gradient(circle at 50% 0%, rgba(0, 230, 246, 0.08), transparent 18rem) !important;
+    background-color: #000915 !important;
+    background-attachment: scroll !important;
+    background-size: cover, auto !important;
+    background-position: center top, center top !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
 /* 91.3 Mobile: Entstehungsgeschichte und Logo-Evolution korrigieren */
 @media (max-width: 66.499rem) {
   .np-home-v2 .np-history-panel,
