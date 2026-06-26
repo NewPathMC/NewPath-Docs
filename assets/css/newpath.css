@@ -1,5 +1,5 @@
 /* NewPath – Echoes of the Wild
-   Konsolidierte CSS-Version v38 – vorsichtig bereinigt
+   Konsolidierte CSS-Version v39 – Grundsatzkarten optisch nachgeschärft
    Aufbau:
    1. Variablen & Grundlayout
    2. Just-the-Docs Reset
@@ -15114,6 +15114,161 @@ body.np-page-home .np-back-to-top {
     padding: 1rem !important;
   }
 }
+
+
+/* 85.5 Regelwerk: Grundsätze als hochwertige Leitsatz-Karten */
+.np-philosophy-intro-section .np-philosophy-grid {
+  counter-reset: np-principle-card !important;
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: clamp(0.78rem, 1vw, 1rem) !important;
+  align-items: stretch !important;
+}
+
+.np-philosophy-intro-section .np-philosophy-grid .np-info-card {
+  counter-increment: np-principle-card !important;
+  position: relative !important;
+  isolation: isolate !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: clamp(15.5rem, 18vw, 20rem) !important;
+  padding: clamp(1rem, 1.12vw, 1.25rem) clamp(0.95rem, 1.05vw, 1.2rem) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(72, 122, 146, 0.36) !important;
+  border-radius: 0.78rem !important;
+  background:
+    linear-gradient(90deg, rgba(0, 230, 246, 0.42), rgba(0, 230, 246, 0.06) 38%, transparent 72%) top left / 100% 2px no-repeat,
+    radial-gradient(circle at 18% 0%, rgba(0, 230, 246, 0.105), transparent 8rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.06), transparent 9rem),
+    linear-gradient(180deg, rgba(8, 30, 39, 0.88), rgba(2, 13, 19, 0.94)) !important;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    inset 0 0 24px rgba(0, 230, 246, 0.022) !important;
+  transform: none !important;
+}
+
+.np-philosophy-intro-section .np-philosophy-grid .np-info-card::before {
+  content: counter(np-principle-card, decimal-leading-zero);
+  width: fit-content;
+  min-width: 2.42rem;
+  min-height: 1.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0.82rem !important;
+  padding: 0.25rem 0.54rem;
+  color: var(--np-cyan) !important;
+  border: 1px solid rgba(0, 230, 246, 0.34);
+  border-radius: 999px;
+  background: rgba(0, 9, 15, 0.46);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 0 14px rgba(0, 230, 246, 0.06);
+  font-family: var(--np-font-label) !important;
+  font-size: 0.66rem !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.08em !important;
+}
+
+.np-philosophy-intro-section .np-philosophy-grid .np-info-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: -1;
+  height: 42%;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.10)),
+    radial-gradient(circle at 50% 100%, rgba(0, 230, 246, 0.045), transparent 72%);
+}
+
+.np-philosophy-intro-section .np-philosophy-grid .np-info-card:hover {
+  border-color: rgba(0, 230, 246, 0.48) !important;
+  background:
+    linear-gradient(90deg, rgba(244, 207, 127, 0.44), rgba(0, 230, 246, 0.10) 42%, transparent 74%) top left / 100% 2px no-repeat,
+    radial-gradient(circle at 18% 0%, rgba(0, 230, 246, 0.13), transparent 8rem),
+    radial-gradient(circle at 100% 100%, rgba(236, 183, 110, 0.075), transparent 9rem),
+    linear-gradient(180deg, rgba(10, 36, 45, 0.90), rgba(3, 15, 21, 0.95)) !important;
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.25),
+    0 0 18px rgba(0, 230, 246, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.065) !important;
+  transform: none !important;
+}
+
+.np-philosophy-intro-section .np-philosophy-grid .np-card-title {
+  margin: 0 0 0.62rem !important;
+  color: var(--np-gold-soft) !important;
+  font-family: var(--np-font-heading) !important;
+  font-size: clamp(1.02rem, 1.02vw, 1.18rem) !important;
+  font-weight: 950 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.012em !important;
+  text-wrap: balance;
+}
+
+.np-philosophy-intro-section .np-philosophy-grid .np-card-text {
+  margin: 0 !important;
+  color: rgba(247, 236, 220, 0.82) !important;
+  font-family: var(--np-font-body) !important;
+  font-size: clamp(0.84rem, 0.84vw, 0.94rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.56 !important;
+}
+
+@media (min-width: 66.5rem) and (max-width: 1350px) {
+  .np-philosophy-intro-section .np-philosophy-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-info-card {
+    min-height: 15.25rem !important;
+    padding-inline: 0.9rem !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-card-title {
+    font-size: clamp(0.94rem, 0.95vw, 1.06rem) !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-card-text {
+    font-size: clamp(0.78rem, 0.78vw, 0.86rem) !important;
+    line-height: 1.5 !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1120px) {
+  .np-philosophy-intro-section .np-philosophy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-info-card {
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 66.499rem) {
+  .np-philosophy-intro-section .np-philosophy-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.78rem !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-info-card {
+    min-height: auto !important;
+    padding: 1rem !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-card-title {
+    font-size: clamp(1.1rem, 5vw, 1.32rem) !important;
+  }
+
+  .np-philosophy-intro-section .np-philosophy-grid .np-card-text {
+    font-size: clamp(0.94rem, 4.2vw, 1.05rem) !important;
+    line-height: 1.55 !important;
+  }
+}
+
 
 /* 86. Server-Seite visueller Feinschliff */
 
