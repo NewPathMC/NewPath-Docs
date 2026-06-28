@@ -102,10 +102,14 @@ permalink: /modpack-hilfe.html
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Screenshot: RAM-Regler in den CurseForge-Minecraft-Einstellungen.</p>
-        </div>
+        <figure class="np-help-image">
+          <img
+            src="{{ site.baseurl }}/assets/images/modpack-hilfe/modpack_hilfe_ram_zuweisen.png"
+            alt="RAM-Zuweisung in den CurseForge-Minecraft-Einstellungen"
+            loading="lazy"
+            decoding="async">
+          <figcaption>RAM-Zuweisung in den CurseForge-Minecraft-Einstellungen.</figcaption>
+        </figure>
       </aside>
     </div>
   </details>
@@ -170,10 +174,14 @@ permalink: /modpack-hilfe.html
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Screenshot: Update-Schaltfläche im CurseForge-Profil.</p>
-        </div>
+        <figure class="np-help-image">
+          <img
+            src="{{ site.baseurl }}/assets/images/modpack-hilfe/modpackhilfe_aktualisieren.png"
+            alt="Modpack-Version über CurseForge aktualisieren"
+            loading="lazy"
+            decoding="async">
+          <figcaption>Modpack über CurseForge aktualisieren oder passende Version auswählen.</figcaption>
+        </figure>
       </aside>
     </div>
   </details>
@@ -202,10 +210,14 @@ permalink: /modpack-hilfe.html
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Screenshot: Profiloptionen / Reparaturfunktion in CurseForge.</p>
-        </div>
+        <figure class="np-help-image">
+          <img
+            src="{{ site.baseurl }}/assets/images/modpack-hilfe/Thema_Modpack_Reparieren_1.png"
+            alt="Modpack-Profil über CurseForge reparieren"
+            loading="lazy"
+            decoding="async">
+          <figcaption>Profiloptionen öffnen und das Modpack über CurseForge reparieren.</figcaption>
+        </figure>
       </aside>
     </div>
   </details>
@@ -239,10 +251,14 @@ permalink: /modpack-hilfe.html
 
       <aside class="np-help-module-media">
         <!-- BILDBEREICH -->
-        <div class="np-help-image-placeholder">
-          <span>Bildplatzhalter</span>
-          <p>Screenshot: Profil löschen und NewPath neu installieren.</p>
-        </div>
+        <figure class="np-help-image">
+          <img
+            src="{{ site.baseurl }}/assets/images/modpack-hilfe/Thema_Modpack_sauber_loschen.png"
+            alt="Modpack-Profil in CurseForge sauber löschen"
+            loading="lazy"
+            decoding="async">
+          <figcaption>Modpack-Profil sauber löschen und bei Bedarf Profil-Backups entfernen.</figcaption>
+        </figure>
       </aside>
     </div>
   </details>
