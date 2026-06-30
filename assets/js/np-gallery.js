@@ -13,17 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-gallery-image]")
   );
 
-  if (!categoryButtons.length || !categoryPanels.length || !galleryItems.length) {
+  if (!galleryItems.length) {
     return;
   }
+
+  const hasCategoryNavigation = categoryButtons.length && categoryPanels.length;
 
   const panelState = new Map();
 
   const getPanelItems = (panel) =>
     Array.from(panel.querySelectorAll("[data-gallery-image]"));
 
-  const getCategoryItems = (categoryId) =>
-    galleryItems.filter((item) => item.dataset.galleryCategory === categoryId);
+  const getCategoryItems = (categoryId) => {
+    const items = galleryItems.filter((item) => item.dataset.galleryCategory === categoryId);
+    return items.length ? items : galleryItems;
+  };
 
   const updatePanelPreview = (panel) => {
     const categoryId = panel.dataset.galleryCategoryPanel;
@@ -127,13 +131,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  setupCompactPanels();
+  if (hasCategoryNavigation) {
+    setupCompactPanels();
 
-  categoryButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setActiveCategory(button.dataset.galleryCategoryButton);
+    categoryButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setActiveCategory(button.dataset.galleryCategoryButton);
+      });
     });
-  });
+  }
 
   const lightbox = document.createElement("div");
   lightbox.className = "np-gallery-viewer";

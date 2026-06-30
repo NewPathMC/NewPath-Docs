@@ -16332,6 +16332,7 @@ body.np-page-home .np-back-to-top {
   background: transparent !important;
   border: 0 !important;
   border-radius: 0 !important;
+  box-shadow: none !important;
   text-decoration: none !important;
   cursor: zoom-in !important;
 }

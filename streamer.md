@@ -5,7 +5,7 @@ permalink: /streamer.html
 ---
 
 <!-- AUTO_UPDATED_START -->
-<p class="np-last-updated">Zuletzt aktualisiert: 30.06.2026 15:52 Uhr</p>
+<p class="np-last-updated">Zuletzt aktualisiert: 30.06.2026 15:45 Uhr</p>
 <!-- AUTO_UPDATED_END -->
 
 <section class="echo-page-box echo-page-box-streamer">
@@ -218,7 +218,7 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
   <div class="np-streamer-assets-grid np-streamer-assets-grid-compact">
     <article class="np-streamer-asset-card np-streamer-asset-card-logo">
       <button
-        class="np-gallery-item np-streamer-asset-preview-button"
+        class="np-streamer-asset-preview-button"
         type="button"
         data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-logo.png"
         data-gallery-category="streamer-assets"
@@ -237,9 +237,10 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-logo.png" download>Download</a>
         </div>
       </div>
-    </article>    <article class="np-streamer-asset-card np-streamer-asset-card-wide">
+    </article>
+    <article class="np-streamer-asset-card np-streamer-asset-card-wide">
       <button
-        class="np-gallery-item np-streamer-asset-preview-button"
+        class="np-streamer-asset-preview-button"
         type="button"
         data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png"
         data-gallery-category="streamer-assets"
@@ -258,9 +259,10 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png" download>Download</a>
         </div>
       </div>
-    </article>    <article class="np-streamer-asset-card np-streamer-asset-card-wide">
+    </article>
+    <article class="np-streamer-asset-card np-streamer-asset-card-wide">
       <button
-        class="np-gallery-item np-streamer-asset-preview-button"
+        class="np-streamer-asset-preview-button"
         type="button"
         data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png"
         data-gallery-category="streamer-assets"
@@ -279,10 +281,11 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png" download>Download</a>
         </div>
       </div>
-    </article>    <article class="np-streamer-asset-card np-streamer-asset-card-qr-set">
+    </article>
+    <article class="np-streamer-asset-card np-streamer-asset-card-qr-set">
       <div class="np-streamer-asset-preview-pair">
         <button
-          class="np-gallery-item np-streamer-asset-preview-button"
+          class="np-streamer-asset-preview-button"
           type="button"
           data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord.png"
           data-gallery-category="streamer-assets"
@@ -295,7 +298,7 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
             decoding="async">
         </button>
         <button
-          class="np-gallery-item np-streamer-asset-preview-button"
+          class="np-streamer-asset-preview-button"
           type="button"
           data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png"
           data-gallery-category="streamer-assets"
@@ -316,10 +319,11 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
           <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png" download>Transparent</a>
         </div>
       </div>
-    </article>    <article class="np-streamer-asset-card np-streamer-asset-card-qr-set">
+    </article>
+    <article class="np-streamer-asset-card np-streamer-asset-card-qr-set">
       <div class="np-streamer-asset-preview-pair">
         <button
-          class="np-gallery-item np-streamer-asset-preview-button"
+          class="np-streamer-asset-preview-button"
           type="button"
           data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website.png"
           data-gallery-category="streamer-assets"
@@ -332,7 +336,7 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
             decoding="async">
         </button>
         <button
-          class="np-gallery-item np-streamer-asset-preview-button"
+          class="np-streamer-asset-preview-button"
           type="button"
           data-gallery-image="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website-transparent.png"
           data-gallery-category="streamer-assets"
