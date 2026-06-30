@@ -210,60 +210,90 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
   <div class="np-streamer-assets-grid">
     <article class="np-streamer-asset-card">
       <img
-        src="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png"
-        alt="NewPath Streamer Banner"
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png"
+        alt="NewPath Twitch Banner mit Website- und Discord-QR-Code"
         loading="lazy"
         decoding="async">
       <div class="np-streamer-asset-content">
-        <h2>Streamer Banner</h2>
-        <p>Banner für Twitch, Discord-Ankündigungen oder Social Media.</p>
+        <h2>Twitch Banner</h2>
+        <p>Breites Banner für Twitch, Discord-Ankündigungen oder Social Media mit NewPath-Infos und QR-Codes.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-streamer-banner.png" download>Download</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png" download>Download</a>
         </div>
       </div>
     </article>
 
     <article class="np-streamer-asset-card">
       <img
-        src="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png"
-        alt="NewPath Twitch Panel"
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png"
+        alt="NewPath Twitch Panel mit Discord- und Website-QR-Code"
         loading="lazy"
         decoding="async">
       <div class="np-streamer-asset-content">
         <h2>Twitch Panel</h2>
-        <p>Panel-Grafik für Twitch-Kanalinformationen.</p>
+        <p>Panel-Grafik für Twitch-Kanalinformationen mit Kurzinfos, Discord-QR-Code und Website-QR-Code.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-panel.png" download>Download</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png" download>Download</a>
         </div>
       </div>
     </article>
 
     <article class="np-streamer-asset-card">
       <img
-        src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-code.png"
-        alt="NewPath QR-Code"
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord.png"
+        alt="NewPath Discord QR-Code auf hellem Hintergrund"
         loading="lazy"
         decoding="async">
       <div class="np-streamer-asset-content">
-        <h2>QR-Code</h2>
-        <p>Offizieller QR-Code für Panels, Overlays oder Info-Grafiken.</p>
+        <h2>Discord QR-Code</h2>
+        <p>Offizieller Discord-QR-Code für Panels, Overlays, Infografiken oder Stream-Szenen.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-code.png" download>Download</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord.png" download>Download</a>
         </div>
       </div>
     </article>
 
     <article class="np-streamer-asset-card">
       <img
-        src="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png"
-        alt="NewPath Overlay"
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png"
+        alt="NewPath Discord QR-Code mit transparentem Hintergrund"
         loading="lazy"
         decoding="async">
       <div class="np-streamer-asset-content">
-        <h2>Overlay / Szene</h2>
-        <p>Grafik für Stream-Szenen oder Overlay-Elemente.</p>
+        <h2>Discord QR-Code transparent</h2>
+        <p>Transparente Variante des Discord-QR-Codes für eigene Szenen, Overlays oder dunkle Hintergründe.</p>
         <div class="np-streamer-asset-actions">
-          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-overlay.png" download>Download</a>
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png" download>Download</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="np-streamer-asset-card">
+      <img
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website.png"
+        alt="NewPath Website QR-Code auf hellem Hintergrund"
+        loading="lazy"
+        decoding="async">
+      <div class="np-streamer-asset-content">
+        <h2>Website QR-Code</h2>
+        <p>Offizieller Website-QR-Code für Panels, Overlays, Infografiken oder Stream-Szenen.</p>
+        <div class="np-streamer-asset-actions">
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website.png" download>Download</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="np-streamer-asset-card">
+      <img
+        src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website-transparent.png"
+        alt="NewPath Website QR-Code mit transparentem Hintergrund"
+        loading="lazy"
+        decoding="async">
+      <div class="np-streamer-asset-content">
+        <h2>Website QR-Code transparent</h2>
+        <p>Transparente Variante des Website-QR-Codes für eigene Szenen, Overlays oder dunkle Hintergründe.</p>
+        <div class="np-streamer-asset-actions">
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website-transparent.png" download>Download</a>
         </div>
       </div>
     </article>
