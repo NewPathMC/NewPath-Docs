@@ -16219,6 +16219,7 @@ body.np-page-home .np-back-to-top {
 
 
 
+
 /* 90. Streamer-Seite: Asset-Downloads */
 .np-streamer-assets-section {
   overflow: hidden !important;
@@ -16281,15 +16282,16 @@ body.np-page-home .np-back-to-top {
 
 .np-streamer-assets-grid {
   display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 0.9rem !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 0.82rem !important;
   align-items: stretch !important;
 }
 
 .np-streamer-assets-grid-compact {
   grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(0, 1.05fr)
+    minmax(0, 0.86fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr)
     minmax(0, 0.95fr)
     minmax(0, 0.95fr) !important;
 }
@@ -16316,22 +16318,47 @@ body.np-page-home .np-back-to-top {
     linear-gradient(180deg, rgba(10, 36, 45, 0.90), rgba(3, 15, 21, 0.95)) !important;
 }
 
-.np-streamer-asset-card > img,
+.np-streamer-asset-preview-link,
+.np-streamer-asset-preview-pair a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  cursor: zoom-in !important;
+}
+
+.np-streamer-asset-card > .np-streamer-asset-preview-link,
 .np-streamer-asset-preview-pair {
   width: 100% !important;
-  height: clamp(8.4rem, 9.4vw, 10.2rem) !important;
-  min-height: clamp(8.4rem, 9.4vw, 10.2rem) !important;
+  height: clamp(7.6rem, 8vw, 9.4rem) !important;
+  min-height: clamp(7.6rem, 8vw, 9.4rem) !important;
   background: rgba(0, 9, 15, 0.26) !important;
   border-bottom: 1px solid rgba(72, 122, 146, 0.26) !important;
 }
 
-.np-streamer-asset-card > img {
+.np-streamer-asset-card > .np-streamer-asset-preview-link img {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
   object-fit: cover !important;
   object-position: center !important;
 }
 
-.np-streamer-asset-card-wide > img {
-  object-fit: cover !important;
+.np-streamer-asset-card-logo > .np-streamer-asset-preview-link {
+  display: grid !important;
+  place-items: center !important;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(0, 230, 246, 0.10), transparent 7rem),
+    rgba(0, 9, 15, 0.30) !important;
+}
+
+.np-streamer-asset-card-logo > .np-streamer-asset-preview-link img {
+  width: 72% !important;
+  height: 72% !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.35)) !important;
 }
 
 .np-streamer-asset-preview-pair {
@@ -16344,6 +16371,7 @@ body.np-page-home .np-back-to-top {
 .np-streamer-asset-preview-pair img {
   width: 100% !important;
   height: 100% !important;
+  display: block !important;
   object-fit: cover !important;
   object-position: center !important;
   border: 0 !important;
@@ -16351,48 +16379,53 @@ body.np-page-home .np-back-to-top {
   background: rgba(255, 255, 255, 0.04) !important;
 }
 
+.np-streamer-asset-preview-link:hover img,
+.np-streamer-asset-preview-pair a:hover img {
+  filter: brightness(1.08) contrast(1.03) !important;
+}
+
 .np-streamer-asset-content {
   flex: 1 1 auto !important;
   display: flex !important;
   flex-direction: column !important;
-  padding: 0.95rem 1rem 1rem !important;
+  padding: 0.88rem 0.9rem 0.95rem !important;
 }
 
 .np-streamer-asset-content h2 {
-  margin: 0 0 0.34rem !important;
+  margin: 0 0 0.32rem !important;
   color: var(--np-gold-soft) !important;
   font-family: var(--np-font-heading) !important;
-  font-size: clamp(1.08rem, 1.1vw, 1.28rem) !important;
+  font-size: clamp(0.98rem, 0.92vw, 1.18rem) !important;
   font-weight: 950 !important;
   line-height: 1.08 !important;
 }
 
 .np-streamer-asset-content p {
-  margin: 0 0 0.8rem !important;
+  margin: 0 0 0.75rem !important;
   color: rgba(247, 236, 220, 0.82) !important;
-  font-size: 0.82rem !important;
-  line-height: 1.42 !important;
+  font-size: 0.76rem !important;
+  line-height: 1.4 !important;
 }
 
 .np-streamer-asset-actions {
   margin-top: auto !important;
   display: flex !important;
-  gap: 0.45rem !important;
+  gap: 0.42rem !important;
 }
 
 .np-streamer-asset-actions a {
   flex: 1 1 auto !important;
-  min-height: 2.15rem !important;
+  min-height: 2.05rem !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 0.46rem 0.62rem !important;
+  padding: 0.44rem 0.54rem !important;
   border: 1px solid rgba(0, 230, 246, 0.42) !important;
   border-radius: 999px !important;
   color: var(--np-cyan) !important;
   background: rgba(0, 230, 246, 0.055) !important;
   font-family: var(--np-font-label) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.62rem !important;
   font-weight: 950 !important;
   letter-spacing: 0.02em !important;
   line-height: 1 !important;
@@ -16407,11 +16440,17 @@ body.np-page-home .np-back-to-top {
 }
 
 .np-streamer-asset-actions-split a {
-  font-size: 0.6rem !important;
-  padding-inline: 0.42rem !important;
+  font-size: 0.56rem !important;
+  padding-inline: 0.36rem !important;
 }
 
-@media (min-width: 66.5rem) and (max-width: 1250px) {
+@media (min-width: 66.5rem) and (max-width: 1380px) {
+  .np-streamer-assets-grid-compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (min-width: 66.5rem) and (max-width: 1120px) {
   .np-streamer-assets-grid-compact {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
@@ -16433,7 +16472,7 @@ body.np-page-home .np-back-to-top {
     grid-template-columns: 1fr !important;
   }
 
-  .np-streamer-asset-card > img,
+  .np-streamer-asset-card > .np-streamer-asset-preview-link,
   .np-streamer-asset-preview-pair {
     height: clamp(10rem, 48vw, 15rem) !important;
   }

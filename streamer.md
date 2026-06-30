@@ -210,18 +210,47 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
   <div class="np-streamer-assets-download-all">
     <div>
       <h2>Alle Streamer-Assets als Paket</h2>
-      <p>Enthält Twitch Banner, Twitch Panel sowie Discord- und Website-QR-Codes in normaler und transparenter Variante.</p>
+      <p>Enthält NewPath-Logo, Twitch Banner, Twitch Panel sowie Discord- und Website-QR-Codes in normaler und transparenter Variante.</p>
     </div>
     <a href="{{ site.baseurl }}/assets/downloads/newpath-streamer-assets.zip" download>Gesamtes Paket herunterladen</a>
   </div>
 
   <div class="np-streamer-assets-grid np-streamer-assets-grid-compact">
+    <article class="np-streamer-asset-card np-streamer-asset-card-logo">
+      <a
+        class="np-streamer-asset-preview-link"
+        href="{{ site.baseurl }}/assets/images/streamer/newpath-logo.png"
+        target="_blank"
+        rel="noopener"
+        aria-label="NewPath Logo groß öffnen">
+        <img
+          src="{{ site.baseurl }}/assets/images/streamer/newpath-logo.png"
+          alt="NewPath Echoes of the Wild Logo"
+          loading="lazy"
+          decoding="async">
+      </a>
+      <div class="np-streamer-asset-content">
+        <h2>NewPath Logo</h2>
+        <p>Offizielles Logo für Panels, Szenen, Infografiken oder Social-Media-Beiträge.</p>
+        <div class="np-streamer-asset-actions">
+          <a href="{{ site.baseurl }}/assets/images/streamer/newpath-logo.png" download>Download</a>
+        </div>
+      </div>
+    </article>
+
     <article class="np-streamer-asset-card np-streamer-asset-card-wide">
-      <img
-        src="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png"
-        alt="NewPath Twitch Banner mit Website- und Discord-QR-Code"
-        loading="lazy"
-        decoding="async">
+      <a
+        class="np-streamer-asset-preview-link"
+        href="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitch Banner groß öffnen">
+        <img
+          src="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-banner.png"
+          alt="NewPath Twitch Banner mit Website- und Discord-QR-Code"
+          loading="lazy"
+          decoding="async">
+      </a>
       <div class="np-streamer-asset-content">
         <h2>Twitch Banner</h2>
         <p>Breites Banner für Twitch, Discord-Ankündigungen oder Social Media.</p>
@@ -232,11 +261,18 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
     </article>
 
     <article class="np-streamer-asset-card np-streamer-asset-card-wide">
-      <img
-        src="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png"
-        alt="NewPath Twitch Panel mit Discord- und Website-QR-Code"
-        loading="lazy"
-        decoding="async">
+      <a
+        class="np-streamer-asset-preview-link"
+        href="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitch Panel groß öffnen">
+        <img
+          src="{{ site.baseurl }}/assets/images/streamer/newpath-twitch-panel.png"
+          alt="NewPath Twitch Panel mit Discord- und Website-QR-Code"
+          loading="lazy"
+          decoding="async">
+      </a>
       <div class="np-streamer-asset-content">
         <h2>Twitch Panel</h2>
         <p>Panel-Grafik für Twitch-Kanalinformationen mit Kurzinfos und QR-Codes.</p>
@@ -248,16 +284,28 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
 
     <article class="np-streamer-asset-card np-streamer-asset-card-qr-set">
       <div class="np-streamer-asset-preview-pair">
-        <img
-          src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord.png"
-          alt="NewPath Discord QR-Code auf hellem Hintergrund"
-          loading="lazy"
-          decoding="async">
-        <img
-          src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png"
-          alt="NewPath Discord QR-Code mit transparentem Hintergrund"
-          loading="lazy"
-          decoding="async">
+        <a
+          href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord.png"
+          target="_blank"
+          rel="noopener"
+          aria-label="Discord QR-Code normal groß öffnen">
+          <img
+            src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord.png"
+            alt="NewPath Discord QR-Code auf hellem Hintergrund"
+            loading="lazy"
+            decoding="async">
+        </a>
+        <a
+          href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png"
+          target="_blank"
+          rel="noopener"
+          aria-label="Discord QR-Code transparent groß öffnen">
+          <img
+            src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-discord-transparent.png"
+            alt="NewPath Discord QR-Code mit transparentem Hintergrund"
+            loading="lazy"
+            decoding="async">
+        </a>
       </div>
       <div class="np-streamer-asset-content">
         <h2>Discord QR-Codes</h2>
@@ -271,16 +319,28 @@ https://discord.gg/R4HwKRbZ5e</code></pre>
 
     <article class="np-streamer-asset-card np-streamer-asset-card-qr-set">
       <div class="np-streamer-asset-preview-pair">
-        <img
-          src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website.png"
-          alt="NewPath Website QR-Code auf hellem Hintergrund"
-          loading="lazy"
-          decoding="async">
-        <img
-          src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website-transparent.png"
-          alt="NewPath Website QR-Code mit transparentem Hintergrund"
-          loading="lazy"
-          decoding="async">
+        <a
+          href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website.png"
+          target="_blank"
+          rel="noopener"
+          aria-label="Website QR-Code normal groß öffnen">
+          <img
+            src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website.png"
+            alt="NewPath Website QR-Code auf hellem Hintergrund"
+            loading="lazy"
+            decoding="async">
+        </a>
+        <a
+          href="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website-transparent.png"
+          target="_blank"
+          rel="noopener"
+          aria-label="Website QR-Code transparent groß öffnen">
+          <img
+            src="{{ site.baseurl }}/assets/images/streamer/newpath-qr-website-transparent.png"
+            alt="NewPath Website QR-Code mit transparentem Hintergrund"
+            loading="lazy"
+            decoding="async">
+        </a>
       </div>
       <div class="np-streamer-asset-content">
         <h2>Website QR-Codes</h2>
