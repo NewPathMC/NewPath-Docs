@@ -16220,6 +16220,7 @@ body.np-page-home .np-back-to-top {
 
 
 
+
 /* 90. Streamer-Seite: Asset-Downloads */
 .np-streamer-assets-section {
   overflow: hidden !important;
@@ -16318,18 +16319,24 @@ body.np-page-home .np-back-to-top {
     linear-gradient(180deg, rgba(10, 36, 45, 0.90), rgba(3, 15, 21, 0.95)) !important;
 }
 
-.np-streamer-asset-preview-link,
-.np-streamer-asset-preview-pair a {
-  display: block !important;
+.np-streamer-asset-preview-button {
   width: 100% !important;
   height: 100% !important;
   min-width: 0 !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
   color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
   text-decoration: none !important;
   cursor: zoom-in !important;
 }
 
-.np-streamer-asset-card > .np-streamer-asset-preview-link,
+.np-streamer-asset-card > .np-streamer-asset-preview-button,
 .np-streamer-asset-preview-pair {
   width: 100% !important;
   height: clamp(7.6rem, 8vw, 9.4rem) !important;
@@ -16338,7 +16345,7 @@ body.np-page-home .np-back-to-top {
   border-bottom: 1px solid rgba(72, 122, 146, 0.26) !important;
 }
 
-.np-streamer-asset-card > .np-streamer-asset-preview-link img {
+.np-streamer-asset-card > .np-streamer-asset-preview-button img {
   width: 100% !important;
   height: 100% !important;
   display: block !important;
@@ -16346,7 +16353,7 @@ body.np-page-home .np-back-to-top {
   object-position: center !important;
 }
 
-.np-streamer-asset-card-logo > .np-streamer-asset-preview-link {
+.np-streamer-asset-card-logo > .np-streamer-asset-preview-button {
   display: grid !important;
   place-items: center !important;
   background:
@@ -16354,7 +16361,7 @@ body.np-page-home .np-back-to-top {
     rgba(0, 9, 15, 0.30) !important;
 }
 
-.np-streamer-asset-card-logo > .np-streamer-asset-preview-link img {
+.np-streamer-asset-card-logo > .np-streamer-asset-preview-button img {
   width: 72% !important;
   height: 72% !important;
   object-fit: contain !important;
@@ -16368,6 +16375,11 @@ body.np-page-home .np-back-to-top {
   overflow: hidden !important;
 }
 
+.np-streamer-asset-preview-pair .np-streamer-asset-preview-button {
+  height: 100% !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
 .np-streamer-asset-preview-pair img {
   width: 100% !important;
   height: 100% !important;
@@ -16376,11 +16388,9 @@ body.np-page-home .np-back-to-top {
   object-position: center !important;
   border: 0 !important;
   border-radius: 0 !important;
-  background: rgba(255, 255, 255, 0.04) !important;
 }
 
-.np-streamer-asset-preview-link:hover img,
-.np-streamer-asset-preview-pair a:hover img {
+.np-streamer-asset-preview-button:hover img {
   filter: brightness(1.08) contrast(1.03) !important;
 }
 
@@ -16472,7 +16482,7 @@ body.np-page-home .np-back-to-top {
     grid-template-columns: 1fr !important;
   }
 
-  .np-streamer-asset-card > .np-streamer-asset-preview-link,
+  .np-streamer-asset-card > .np-streamer-asset-preview-button,
   .np-streamer-asset-preview-pair {
     height: clamp(10rem, 48vw, 15rem) !important;
   }
