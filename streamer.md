@@ -76,8 +76,8 @@ permalink: /streamer.html
             <h3>So lässt du dich registrieren</h3>
             <ol>
               <li>Öffne den NewPath-Discord.</li>
-              <li>Melde dich beim Team oder nutze den vorgesehenen Supportweg.</li>
-              <li>Teile deinen Twitch-Kanal mit.</li>
+              <li>Öffne ein Support Ticket.</li>
+              <li>Teile deinen Twitch-Kanal mit und das du dich als Streamer eintragen lassen möchtest.</li>
               <li>Warte, bis das Team deine Streamerrolle eingerichtet hat.</li>
               <li>Prüfe vor dem Stream, ob Spiel und Titel korrekt gesetzt sind.</li>
             </ol>

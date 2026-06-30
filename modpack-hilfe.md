@@ -340,7 +340,6 @@ permalink: /modpack-hilfe.html
           <li>Lies die wichtigsten Hinweise und Regeln.</li>
           <li>Prüfe, ob deine Steuerung funktioniert.</li>
           <li>Prüfe, ob der Voice Chat korrekt eingestellt ist.</li>
-          <li>Setze dir einen Wegpunkt am Spawn.</li>
           <li>Suche dir anschließend einen passenden Ort für deinen Start.</li>
         </ol>
 
@@ -404,6 +403,7 @@ permalink: /modpack-hilfe.html
           <li>Prüfe, ob deine Base, dein Lager und wichtige Eingänge vollständig im Claim liegen.</li>
           <li>Mit Rechtsklick auf einen bereits geclaimten Chunk kannst du den Claim wieder entfernen.</li>
           <li>Halte Rechtsklick gedrückt und ziehe über mehrere Chunks, wenn du mehrere Claims wieder entfernen möchtest.</li>
+          <li>Mit Shift + Linksklick kannst Chunks forceloaden.</li>
         </ol>
 
         <p>
@@ -488,6 +488,20 @@ permalink: /modpack-hilfe.html
             <li>Prüfe, ob eure Claims korrekt angezeigt werden.</li>
             <li>Sprecht im Team ab, wer welche Bereiche nutzt.</li>
             <li>Vergib Rechte und Zugriff nur an Spieler, denen du vertraust.</li>
+          </ol>
+        </div>
+
+        <div class="np-help-step-group">
+          <p><strong>Ally-System nutzen:</strong></p>
+          <ol class="np-help-checklist">
+            <li>Öffne dein FTB-Teams-Menü.</li>
+            <li>Wähle dein Team aus.</li>
+            <li>Öffne den Bereich für Allies, Verbündete oder Team-Beziehungen.</li>
+            <li>Füge den gewünschten Spieler oder das gewünschte Team als Ally hinzu.</li>
+            <li>Öffne anschließend die FTB-Chunks-Karte.</li>
+            <li>Prüfe bei euren Claims, welche Rechte Allies dort haben.</li>
+            <li>Erlaube Allies nur Zugriff auf Bereiche, bei denen du dir sicher bist.</li>
+            <li>Entferne Allies wieder, wenn die Zusammenarbeit nicht mehr benötigt wird.</li>
           </ol>
         </div>
       </div>

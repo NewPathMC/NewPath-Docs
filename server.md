@@ -82,7 +82,7 @@ permalink: /server.html
     <article class="np-server-dashboard-card np-server-restart-card">
       <h2>Automatische Restarts</h2>
       <p>
-        Regelmäßige Neustarts helfen dabei, den Server langfristig stabil zu halten.
+        Regelmäßige Neustarts helfen dabei, den Server langfristig stabil zu halten. Alle Zeiten in deutscher Zeit (MEZ/MESZ).
       </p>
 
       <div class="np-server-time-list">
